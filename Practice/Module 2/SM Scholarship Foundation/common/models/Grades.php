@@ -1,0 +1,66 @@
+<?php
+
+namespace common\models;
+
+use Yii;
+
+/**
+ * This is the model class for table "grades".
+ *
+ * @property integer $grade_id
+ * @property integer $grade_schoolYear
+ * @property integer $grade_Term
+ * @property integer $grade_scholar_id
+ * @property string $grade_scholar_lastName
+ * @property string $grade_scholar_firstName
+ * @property string $grade_scholar_middleName
+ * @property string $grade_value
+ *
+ * @property Scholars $gradeScholar
+ */
+class Grades extends \yii\db\ActiveRecord
+{
+    /**
+     * @inheritdoc
+     */
+    public static function tableName()
+    {
+        return 'grades';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function rules()
+    {
+        return [
+            [['grade_schoolYear', 'grade_Term', 'grade_scholar_id'], 'integer'],
+            [['grade_scholar_lastName', 'grade_scholar_firstName', 'grade_scholar_middleName', 'grade_value'], 'string', 'max' => 100]
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+        return [
+            'grade_id' => 'Grade ID',
+            'grade_schoolYear' => 'Grade School Year',
+            'grade_Term' => 'Grade  Term',
+            'grade_scholar_id' => 'Grade Scholar ID',
+            'grade_scholar_lastName' => 'Grade Scholar Last Name',
+            'grade_scholar_firstName' => 'Grade Scholar First Name',
+            'grade_scholar_middleName' => 'Grade Scholar Middle Name',
+            'grade_value' => 'Grade Value',
+        ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getGradeScholar()
+    {
+        return $this->hasOne(Scholars::className(), ['scholar_id' => 'grade_scholar_id']);
+    }
+}
