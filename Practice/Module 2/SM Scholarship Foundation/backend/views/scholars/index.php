@@ -18,10 +18,24 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Create Scholars', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
+    <br>
+	<p><b><font color=orange>Orange</font> rows are scholars from NCR Areas</p>
+	<p><font color=blue>Blue</font> rows are scholars from Provincial Areas</b>
+	</p>
+    
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+    	'rowOptions'=>function($model){
+    		if($model->scholar_school_area=='Provincial')
+    		{
+    			return['class'=>'alert-info'];
+    		}
+    		else if($model->scholar_school_area=='NCR')
+    		{
+    			return['class'=>'alert-warning'];
+    		}
+    	},
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
@@ -31,12 +45,16 @@ $this->params['breadcrumbs'][] = $this->title;
             'scholar_middleName',
             'scholar_gender',
             'scholar_address',
-            'scholar_school_id',
+            [
+            	'attribute'=>'scholar_school_id',
+            	'value'=>'scholarSchool.school_name',
+            ],
             'scholar_course',
             'scholar_yearLevel',
             'scholar_email:email',
             'scholar_contactNum',
             'scholar_cashCardNum',
+   //       'scholar_school_area',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

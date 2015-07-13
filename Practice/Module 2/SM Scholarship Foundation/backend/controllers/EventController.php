@@ -3,8 +3,8 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\Event;
-use common\models\EventSearch;
+use backend\models\Event;
+use backend\models\EventSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -32,14 +32,15 @@ class EventController extends Controller
      */
     public function actionIndex()
     {
-       $events = Event::find()->all();
+        $events = Event::find()->all();
 		$tasks = [];
 		foreach($events as $eve)
 		{
 			$event = new \yii2fullcalendar\models\Event();
 			$event->id = $eve->id;
 			$event->title = $eve->title;
-			$event->start = $eve->created_date;
+			$event->start = $eve->start_date;
+			$event->end = $eve->end_date;
 			$tasks[] = $event;
 		}
 		
@@ -65,14 +66,14 @@ class EventController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($date)
     {
         $model = new Event();
-
+		$model->start_date = $date;
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         } else {
-            return $this->render('create', [
+            return $this->renderAjax('create', [
                 'model' => $model,
             ]);
         }

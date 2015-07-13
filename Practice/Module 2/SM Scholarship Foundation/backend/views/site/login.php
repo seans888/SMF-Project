@@ -39,6 +39,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="form-group">
                     <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
                 </div>
+                Not an Admin?<br>
+                <a href="#">Register</a> as a Scholar<br>
+                <a href="http://localhost/SM%20Scholarship%20Foundation/frontend/web/index.php?r=site%2Flogin">Login</a> as a Scholar
             <?php ActiveForm::end(); ?>
         </div>
     </div>

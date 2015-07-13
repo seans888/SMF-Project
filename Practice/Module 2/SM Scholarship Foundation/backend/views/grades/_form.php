@@ -1,9 +1,9 @@
 <?php
-
 use yii\helpers\ArrayHelper;
-use yii\helpers\Html;
-use yii\widgets\ActiveForm;
 use common\models\Scholars;
+use yii\helpers\Html;
+use dosamigos\fileinput\FileInput;
+use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Grades */
@@ -12,33 +12,30 @@ use common\models\Scholars;
 
 <div class="grades-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
+    <?= $form->field($model, 'file')->widget(\dosamigos\fileinput\BootstrapFileInput::className(), [
+    'options' => ['multiple' => true],
+    'clientOptions' => [
+        'previewFileType' => 'text',
+        'browseClass' => 'btn btn-success',
+        'uploadClass' => 'btn btn-info',
+        'removeClass' => 'btn btn-danger',
+        'removeIcon' => '<i class="glyphicon glyphicon-trash"></i> '
+    ],
+	
+])->label('Upload Grades Form')?>
 
     <?= $form->field($model, 'grade_schoolYear')->textInput() ?>
 
     <?= $form->field($model, 'grade_Term')->textInput() ?>
 
     <?= $form->field($model, 'grade_scholar_id')->dropDownList(
-		ArrayHelper::map(Scholars::find()->all(),'scholar_id','scholar_id'),
-		['prompt'=>'Select Scholar ID']
-	) ?>
-	
-    <?= $form->field($model, 'grade_scholar_lastName')->dropDownList(
-		ArrayHelper::map(Scholars::find()->all(),'scholar_lastName','scholar_lastName'),
-		['prompt'=>'Select Scholar Last Name']
-	) ?>
-	
-    <?= $form->field($model, 'grade_scholar_firstName')->dropDownList(
-		ArrayHelper::map(Scholars::find()->all(),'scholar_firstName','scholar_firstName'),
-		['prompt'=>'Select Scholar First Name']
-	) ?>
-	
-    <?= $form->field($model, 'grade_scholar_middleName')->dropDownList(
-		ArrayHelper::map(Scholars::find()->all(),'scholar_middleName','scholar_middleName'),
-		['prompt'=>'Select Scholar Middle Name']
-	) ?>
-	
+    		ArrayHelper::map(Scholars::find()->all(),'scholar_id','scholar_id','scholar_lastName'),
+    		['prompt'=>'Select Scholar ID']
+    		) ?>
+
     <?= $form->field($model, 'grade_value')->textInput(['maxlength' => true]) ?>
+
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

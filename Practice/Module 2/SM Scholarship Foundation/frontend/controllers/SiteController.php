@@ -12,6 +12,11 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use common\models\Scholars;
+use common\models\Schools;
+use common\models\User;
+use common\models\Grades;
+use frontend\models\Tuition;
 
 /**
  * Site controller
@@ -23,18 +28,16 @@ class SiteController extends Controller
      */
     public function behaviors()
     {
-        return [
+         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup', 'contact'],
                 'rules' => [
                     [
-                        'actions' => ['signup'],
+                        'actions' => ['login','signup', 'error'],
                         'allow' => true,
-                        'roles' => ['?'],
                     ],
                     [
-                        'actions' => ['logout'],
+                        'actions' => ['logout', 'index'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -67,11 +70,17 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+		$grades = Grades::find()->all();
+		$schools = Schools::find()->all();
+		$users = User::find()->all();
+		$scholars = Scholars::find()->all();
+		$tuitions = Tuition::find()->all();
+		return $this->render('index',array('users'=>$users,'scholars'=>$scholars,'schools'=>$schools,'grades'=>$grades,'tuition'=>$tuitions));
     }
 
     public function actionLogin()
     {
+		$this->layout = 'loginLayout';
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
         }

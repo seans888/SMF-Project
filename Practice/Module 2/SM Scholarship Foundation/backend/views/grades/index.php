@@ -24,14 +24,23 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
+       		'grade_scholar_id',
+        	[
+        		'attribute'=>'grade_scholar_firstName',
+        		'value'=>'gradeScholar.scholar_firstName',	
+    		],
+        	[
+       			'attribute'=>'grade_scholar_lastName',
+     			'value'=>'gradeScholar.scholar_lastName',
+       		],
+        	[
+       			'attribute'=>'grade_scholar_middleName',
+     			'value'=>'gradeScholar.scholar_middleName',
+       		],
             'grade_schoolYear',
             'grade_Term',
-            'grade_scholar_id',
-            'grade_scholar_lastName',
-            'grade_scholar_firstName',
-            'grade_scholar_middleName',
             'grade_value',
+            'grade_grade_form',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

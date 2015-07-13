@@ -14,6 +14,7 @@ use Yii;
  * @property string $school_contactEmail
  * @property integer $school_contactNumber
  *
+ * @property Compile[] $compiles
  * @property Scholars[] $scholars
  */
 class Schools extends \yii\db\ActiveRecord
@@ -32,6 +33,8 @@ class Schools extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['school_name', 'school_area', 'school_contactNumber'], 'required'],
+			[['school_contactEmail'],'email'],
             [['school_area'], 'string'],
             [['school_contactNumber'], 'integer'],
             [['school_name', 'school_address', 'school_contactEmail'], 'string', 'max' => 100]
@@ -46,11 +49,19 @@ class Schools extends \yii\db\ActiveRecord
         return [
             'school_id' => 'School ID',
             'school_name' => 'School Name',
-            'school_area' => 'School Area',
-            'school_address' => 'School Address',
-            'school_contactEmail' => 'School Contact Email',
-            'school_contactNumber' => 'School Contact Number',
+            'school_area' => 'Area',
+            'school_address' => 'Address',
+            'school_contactEmail' => 'Contact Email',
+            'school_contactNumber' => 'Contact Number',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCompiles()
+    {
+        return $this->hasMany(Compile::className(), ['compile_school_id' => 'school_id']);
     }
 
     /**

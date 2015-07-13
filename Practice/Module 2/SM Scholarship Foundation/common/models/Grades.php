@@ -15,7 +15,9 @@ use Yii;
  * @property string $grade_scholar_firstName
  * @property string $grade_scholar_middleName
  * @property string $grade_value
+ * @property string $grade_grade_form
  *
+ * @property Compile[] $compiles
  * @property Scholars $gradeScholar
  */
 class Grades extends \yii\db\ActiveRecord
@@ -23,6 +25,9 @@ class Grades extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+	
+	public $file;
+	
     public static function tableName()
     {
         return 'grades';
@@ -35,7 +40,9 @@ class Grades extends \yii\db\ActiveRecord
     {
         return [
             [['grade_schoolYear', 'grade_Term', 'grade_scholar_id'], 'integer'],
-            [['grade_scholar_lastName', 'grade_scholar_firstName', 'grade_scholar_middleName', 'grade_value'], 'string', 'max' => 100]
+            [['grade_scholar_id','grade_value','grade_schoolYear','grade_Term'], 'required'],
+        	[['file'],'file'],
+            [['grade_scholar_lastName', 'grade_scholar_firstName', 'grade_scholar_middleName', 'grade_value', 'grade_grade_form'], 'string', 'max' => 100]
         ];
     }
 
@@ -46,14 +53,23 @@ class Grades extends \yii\db\ActiveRecord
     {
         return [
             'grade_id' => 'Grade ID',
-            'grade_schoolYear' => 'Grade School Year',
-            'grade_Term' => 'Grade  Term',
-            'grade_scholar_id' => 'Grade Scholar ID',
-            'grade_scholar_lastName' => 'Grade Scholar Last Name',
-            'grade_scholar_firstName' => 'Grade Scholar First Name',
-            'grade_scholar_middleName' => 'Grade Scholar Middle Name',
+            'grade_schoolYear' => 'School Year',
+            'grade_Term' => 'Term',
+            'grade_scholar_id' => 'Scholar ID',
+            'grade_scholar_lastName' => 'Last Name',
+            'grade_scholar_firstName' => 'First Name',
+            'grade_scholar_middleName' => 'Middle Name',
             'grade_value' => 'Grade Value',
+            'grade_grade_form' => 'Grade Form',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCompiles()
+    {
+        return $this->hasMany(Compile::className(), ['compile_grade_id' => 'grade_id']);
     }
 
     /**

@@ -9,6 +9,7 @@ use common\models\TuitionfeesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * TuitionfeesController implements the CRUD actions for Tuitionfees model.
@@ -63,6 +64,15 @@ class TuitionfeesController extends Controller
     {
         $model = new Tuitionfees();
         if ($model->load(Yii::$app->request->post())) {
+
+			$fileName = $model->tuitionfee_scholar_id."regform";
+			$model->file = UploadedFile::getInstance($model,'file');
+			if($model->file != null)
+			{
+				$model->file->saveAs('RegForm/'.$fileName.'.'.$model->file->extension);	
+				$model->tuitionfee_registrationForm = 'RegForm/'.$fileName.'.'.$model->file->extension;	
+			}	
+						
 			$model->save();
             return $this->redirect(['view', 'id' => $model->tuitionfee_id]);
         } else {

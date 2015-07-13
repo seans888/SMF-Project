@@ -28,12 +28,13 @@ class DashboardAsset extends AssetBundle
     ];
     public $js = [
 		'js/bootstrap.min.js',
-	//	'//code.jquery.com/ui/1.11.2/jquery-ui.min.js',
 		'//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js',
 		'plugins/sparkLine/jquery.sparkline.min.js',
 		'plugins/slimScroll/jquery.slimscroll.min.js',
 		'plugins/fastclick/fastclick.min.js',
 		'js/app.min.js',
+		'js/main.js',
+	//	'//code.jquery.com/ui/1.11.2/jquery-ui.min.js',
 	//	'js/dashboard.js',
     ];
     public $depends = [

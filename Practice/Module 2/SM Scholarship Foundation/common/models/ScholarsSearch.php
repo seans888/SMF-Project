@@ -18,8 +18,8 @@ class ScholarsSearch extends Scholars
     public function rules()
     {
         return [
-            [['scholar_id', 'scholar_school_id', 'scholar_yearLevel', 'scholar_contactNum', 'scholar_cashCardNum'], 'integer'],
-            [['scholar_firstName', 'scholar_lastName', 'scholar_middleName', 'scholar_gender', 'scholar_address', 'scholar_course', 'scholar_email'], 'safe'],
+            [['scholar_id', 'scholar_yearLevel', 'scholar_contactNum', 'scholar_cashCardNum'], 'integer'],
+            [['scholar_school_id','scholar_firstName', 'scholar_lastName', 'scholar_middleName', 'scholar_gender', 'scholar_address', 'scholar_course', 'scholar_email', 'scholar_school_area'], 'safe'],
         ];
     }
 
@@ -54,10 +54,11 @@ class ScholarsSearch extends Scholars
             // $query->where('0=1');
             return $dataProvider;
         }
-
+        
+        $query->joinWith('scholarSchool');
         $query->andFilterWhere([
             'scholar_id' => $this->scholar_id,
-            'scholar_school_id' => $this->scholar_school_id,
+      //    'scholar_school_id' => $this->scholar_school_id,
             'scholar_yearLevel' => $this->scholar_yearLevel,
             'scholar_contactNum' => $this->scholar_contactNum,
             'scholar_cashCardNum' => $this->scholar_cashCardNum,
@@ -69,7 +70,9 @@ class ScholarsSearch extends Scholars
             ->andFilterWhere(['like', 'scholar_gender', $this->scholar_gender])
             ->andFilterWhere(['like', 'scholar_address', $this->scholar_address])
             ->andFilterWhere(['like', 'scholar_course', $this->scholar_course])
-            ->andFilterWhere(['like', 'scholar_email', $this->scholar_email]);
+            ->andFilterWhere(['like', 'scholar_email', $this->scholar_email])
+            ->andFilterWhere(['like', 'scholar_school_area', $this->scholar_school_area])
+      		->andFilterWhere(['like', 'schools.school_name', $this->scholar_school_id]);
 
         return $dataProvider;
     }

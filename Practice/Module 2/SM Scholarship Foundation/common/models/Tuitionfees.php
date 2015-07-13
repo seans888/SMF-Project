@@ -24,6 +24,9 @@ class Tuitionfees extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+	 
+	public $file;
+	
     public static function tableName()
     {
         return 'tuitionfees';
@@ -35,10 +38,12 @@ class Tuitionfees extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['tuitionfee_scholar_id', 'tuitionfee_amount'], 'integer'],
+            [['tuitionfee_scholar_id', 'tuitionfee_amount'], 'integer','message'=>'Only numbers are allowed'],
             [['tuitionfee_dateOfEnrollment', 'tuitionfee_dateOfPayment'], 'safe'],
+			[['file'],'file'],
+			[['tuitionfee_scholar_id','tuitionfee_amount','tuitionfee_paidStatus'],'required'],
             [['tuitionfee_paidStatus'], 'string'],
-            [['tuitionfee_scholar_lastName', 'tuitionfee_scholar_firstName', 'tuitionfee_scholar_middleName'], 'string', 'max' => 100]
+            [['tuitionfee_registrationForm','tuitionfee_scholar_lastName', 'tuitionfee_scholar_firstName', 'tuitionfee_scholar_middleName'], 'string', 'max' => 100]
         ];
     }
 
@@ -49,14 +54,14 @@ class Tuitionfees extends \yii\db\ActiveRecord
     {
         return [
             'tuitionfee_id' => 'Tuitionfee ID',
-            'tuitionfee_scholar_id' => 'Tuitionfee Scholar ID',
-            'tuitionfee_scholar_lastName' => 'Tuitionfee Scholar Last Name',
-            'tuitionfee_scholar_firstName' => 'Tuitionfee Scholar First Name',
-            'tuitionfee_scholar_middleName' => 'Tuitionfee Scholar Middle Name',
-            'tuitionfee_amount' => 'Tuitionfee Amount',
-            'tuitionfee_dateOfEnrollment' => 'Tuitionfee Date Of Enrollment',
-            'tuitionfee_dateOfPayment' => 'Tuitionfee Date Of Payment',
-            'tuitionfee_paidStatus' => 'Tuitionfee Paid Status',
+            'tuitionfee_scholar_id' => 'Scholar ID',
+            'tuitionfee_scholar_lastName' => 'Last Name',
+            'tuitionfee_scholar_firstName' => 'First Name',
+            'tuitionfee_scholar_middleName' => 'Middle Name',
+            'tuitionfee_amount' => 'Tuition Amount',
+            'tuitionfee_dateOfEnrollment' => 'Date Of Enrollment',
+            'tuitionfee_dateOfPayment' => 'Date Of Payment',
+            'tuitionfee_paidStatus' => 'Payment Status',
         ];
     }
 

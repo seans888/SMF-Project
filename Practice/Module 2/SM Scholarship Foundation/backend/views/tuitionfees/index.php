@@ -22,11 +22,24 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Create Tuitionfees', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-	
+	<br>
+	<p><b><font color=red>Red</font> rows have unsettled tuition fee payments</p>
+	<p><font color=green>Green</font> rows have paid tuition fees</b>
+	</p>
 	<?php Pjax::begin(); ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+		'rowOptions'=>function($model){
+			if($model->tuitionfee_paidStatus=='not paid')
+			{
+				return['class'=>'danger'];
+			}
+			else if($model->tuitionfee_paidStatus=='paid')
+			{
+				return['class'=>'success'];
+			}
+		},
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
@@ -53,7 +66,7 @@ $this->params['breadcrumbs'][] = $this->title;
 					'attribute' => 'tuitionfee_dateOfEnrollment',
 						'clientOptions' => [
 							'autoclose' => true,
-							'format' => 'dd-M-yyyy',
+							'format' => 'yyyy-mm-dd',
 						]
 				]),
 			],
@@ -66,11 +79,10 @@ $this->params['breadcrumbs'][] = $this->title;
 					'attribute' => 'tuitionfee_dateOfPayment',
 						'clientOptions' => [
 							'autoclose' => true,
-							'format' => 'dd-M-yyyy',
+							'format' => 'yyyy-mm-dd',
 						]
 				]),
 			],
-			'tuitionfee_paidStatus',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

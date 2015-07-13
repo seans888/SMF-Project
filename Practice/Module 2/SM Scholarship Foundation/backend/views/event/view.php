@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Event */
+/* @var $model backend\models\Event */
 
 $this->title = $model->title;
 $this->params['breadcrumbs'][] = ['label' => 'Events', 'url' => ['index']];
@@ -31,7 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'title',
             'description',
-            'created_date',
+            'start_date',
+            'end_date',
         ],
     ]) ?>
 

@@ -8,7 +8,7 @@ use common\models\GradesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\web\UploadedFile;
 /**
  * GradesController implements the CRUD actions for Grades model.
  */
@@ -62,7 +62,15 @@ class GradesController extends Controller
     {
         $model = new Grades();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+        	$fileName = $model->grade_id."gradeform";
+        	$model->file = UploadedFile::getInstance($model,'file');
+        	if($model->file != null)
+        	{
+        		$model->file->saveAs('GradeForm/'.$fileName.'.'.$model->file->extension);
+        		$model->grade_grade_form = 'GradeForm/'.$fileName.'.'.$model->file->extension;
+        	}
+        	$model->save();
             return $this->redirect(['view', 'id' => $model->grade_id]);
         } else {
             return $this->render('create', [

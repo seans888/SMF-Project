@@ -1,10 +1,10 @@
 <?php
-use yii\helpers\ArrayHelper;
+use dosamigos\datepicker\DatePicker;
 use common\models\Scholars;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use dosamigos\datepicker\DatePicker;
-
+use dosamigos\fileinput\FileInput;
 /* @var $this yii\web\View */
 /* @var $model common\models\Tuitionfees */
 /* @var $form yii\widgets\ActiveForm */
@@ -12,18 +12,29 @@ use dosamigos\datepicker\DatePicker;
 
 <div class="tuitionfees-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
+	
+<?= $form->field($model, 'file')->widget(\dosamigos\fileinput\BootstrapFileInput::className(), [
+    'options' => ['multiple' => true],
+    'clientOptions' => [
+        'previewFileType' => 'text',
+        'browseClass' => 'btn btn-success',
+        'uploadClass' => 'btn btn-info',
+        'removeClass' => 'btn btn-danger',
+        'removeIcon' => '<i class="glyphicon glyphicon-trash"></i> '
+    ],
+	
+])->label('Upload Registration Form')?>
+	
 
     <?= $form->field($model, 'tuitionfee_scholar_id')->dropDownList(
 		ArrayHelper::map(Scholars::find()->all(),'scholar_id','scholar_id','scholar_lastName'),
 		['prompt'=>'Select Scholar ID']
-	) ?>
-	
+	)->label('Scholar ID') ?>
 
+    <?= $form->field($model, 'tuitionfee_amount')->textInput()->label('Tuition Fee Amount') ?>
 
-    <?= $form->field($model, 'tuitionfee_amount')->textInput() ?>
-	
-	<?= $form->field($model, 'tuitionfee_dateOfEnrollment')->widget(
+    <?= $form->field($model, 'tuitionfee_dateOfEnrollment')->widget(
 			DatePicker::className(), [
 				// inline too, not bad
 				 'inline' => false, 
@@ -34,8 +45,8 @@ use dosamigos\datepicker\DatePicker;
 					'format' => 'yyyy-mm-dd'
 				]
 			]);?>
-	
-	<?= $form->field($model, 'tuitionfee_dateOfPayment')->widget(
+
+    <?= $form->field($model, 'tuitionfee_dateOfPayment')->widget(
 			DatePicker::className(), [
 				// inline too, not bad
 				 'inline' => false, 
@@ -46,9 +57,9 @@ use dosamigos\datepicker\DatePicker;
 					'format' => 'yyyy-mm-dd'
 				]
 			]);?>
-	
+
     <?= $form->field($model, 'tuitionfee_paidStatus')->dropDownList([ 'paid' => 'Paid', 'not paid' => 'Not paid', ], ['prompt' => '']) ?>
-	
+
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
