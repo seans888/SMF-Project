@@ -63,13 +63,6 @@ class GradesController extends Controller
         $model = new Grades();
 
         if ($model->load(Yii::$app->request->post())) {
-        	$fileName = $model->grade_id."gradeform";
-        	$model->file = UploadedFile::getInstance($model,'file');
-        	if($model->file != null)
-        	{
-        		$model->file->saveAs('GradeForm/'.$fileName.'.'.$model->file->extension);
-        		$model->grade_grade_form = 'GradeForm/'.$fileName.'.'.$model->file->extension;
-        	}
         	$model->save();
             return $this->redirect(['view', 'id' => $model->grade_id]);
         } else {
