@@ -44,6 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
 //          'allowance_payStatus',
 //          'benefit_allowance_id',
 //          'allowance_remark',
+			'allowanceSchool.school_area',
             'allowance_amount',
             'allowance_scholar_id',
         	[
