@@ -4,6 +4,7 @@ use common\models\Scholars;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use kartik\select2\Select2;
 /* @var $this yii\web\View */
 /* @var $model common\models\Tuitionfees */
 /* @var $form yii\widgets\ActiveForm */
@@ -13,10 +14,13 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
 
-    <?= $form->field($model, 'tuitionfee_scholar_id')->dropDownList(
-		ArrayHelper::map(Scholars::find()->all(),'scholar_id','scholar_id','scholar_lastName'),
-		['prompt'=>'Select Scholar ID']
-	)->label('Scholar ID') ?>
+	<?= $form->field($model,'tuitionfee_scholar_id')->widget(Select2::classname(),
+		[
+			'data'=>ArrayHelper::map(Scholars::find()->all(),'scholar_id','scholar_id','scholar_lastName'),
+			'language'=>'en',
+			'options'=>['placeholder'=>'Select Scholar ID'],
+			'pluginOptions'=>['allowClear'=>true],
+		]) ?>
 
     <?= $form->field($model, 'tuitionfee_amount')->textInput()->label('Tuition Fee Amount') ?>
 
