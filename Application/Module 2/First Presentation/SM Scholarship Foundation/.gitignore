@@ -1,5 +1,5 @@
 # yii console command
-/yii
+
 
 # phpstorm project files
 .idea
@@ -9,14 +9,14 @@ nbproject
 
 # zend studio for eclipse project files
 .buildpath
-.project
+
 .settings
 
 # windows thumbnail cache
 Thumbs.db
 
 # composer vendor dir
-/vendor
+
 
 # composer itself is not needed
 composer.phar
