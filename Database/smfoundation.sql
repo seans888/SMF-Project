@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2015 at 06:08 PM
--- Server version: 5.6.21
--- PHP Version: 5.5.19
+-- Generation Time: Jul 16, 2015 at 11:26 AM
+-- Server version: 5.5.32
+-- PHP Version: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `smfoundation`
 --
+CREATE DATABASE IF NOT EXISTS `smfoundation` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `smfoundation`;
 
 -- --------------------------------------------------------
 
@@ -27,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `admin` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `auth_key` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   `password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -35,8 +37,12 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `status` smallint(6) NOT NULL DEFAULT '10',
   `created_at` int(11) NOT NULL,
-  `updated_at` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `updated_at` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_3` (`id`),
+  KEY `id` (`id`),
+  KEY `id_2` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `admin`
@@ -52,7 +58,7 @@ INSERT INTO `admin` (`id`, `username`, `auth_key`, `password_hash`, `password_re
 --
 
 CREATE TABLE IF NOT EXISTS `allowance` (
-`allowance_id` int(11) NOT NULL,
+  `allowance_id` int(11) NOT NULL AUTO_INCREMENT,
   `allowance_amount` int(11) DEFAULT NULL,
   `allowance_remark` varchar(255) DEFAULT NULL,
   `allowance_scholar_id` int(11) DEFAULT NULL,
@@ -62,8 +68,14 @@ CREATE TABLE IF NOT EXISTS `allowance` (
   `allowance_scholar_lastName` varchar(100) DEFAULT NULL,
   `allowance_scholar_firstName` varchar(100) DEFAULT NULL,
   `allowance_scholar_middleName` varchar(100) DEFAULT NULL,
-  `allowance_paidDate` date DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  `allowance_paidDate` date DEFAULT NULL,
+  PRIMARY KEY (`allowance_id`),
+  KEY `Scholar_Num` (`allowance_scholar_id`),
+  KEY `School_Num` (`allowance_school_id`),
+  KEY `allowance_scholar_id` (`allowance_scholar_id`),
+  KEY `allowance_school_id` (`allowance_school_id`),
+  KEY `benefit_allowance_id` (`benefit_allowance_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `allowance`
@@ -76,11 +88,52 @@ INSERT INTO `allowance` (`allowance_id`, `allowance_amount`, `allowance_remark`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `applicantform`
+--
+
+CREATE TABLE IF NOT EXISTS `applicantform` (
+  `id` int(11) NOT NULL,
+  `last_name` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `first_name` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `middle_name` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
+  `city_address` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `telephone_no` int(11) NOT NULL,
+  `email` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `cellphone_no` int(11) NOT NULL,
+  `birthday` date NOT NULL,
+  `status` enum('Single','Married','Widowed','Separated') CHARACTER SET utf8 NOT NULL,
+  `sex` enum('Male','Female','','') CHARACTER SET utf8 NOT NULL,
+  `birth_place` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `nationality` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `height` int(11) NOT NULL,
+  `weight` int(11) NOT NULL,
+  `religion` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `name_of_public_high_school_graduating_from` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `section` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `complete_address_of_school` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `name_of_principal` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `telephone_numbers` int(11) NOT NULL,
+  `org_1` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `position_held1` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `school_you_want_to_enroll_in` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `course_you_plan_to_take` varchar(45) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `applicantform`
+--
+
+INSERT INTO `applicantform` (`id`, `last_name`, `first_name`, `middle_name`, `city_address`, `telephone_no`, `email`, `cellphone_no`, `birthday`, `status`, `sex`, `birth_place`, `nationality`, `height`, `weight`, `religion`, `name_of_public_high_school_graduating_from`, `section`, `complete_address_of_school`, `name_of_principal`, `telephone_numbers`, `org_1`, `position_held1`, `school_you_want_to_enroll_in`, `course_you_plan_to_take`) VALUES
+(1, 'bisbal', 'bisbal', 'bisbal', '241', 231312, 'bisbal@yahoo.com', 1312414, '0000-00-00', 'Single', 'Female', 'sdfwqwefqfw', 'asdgeg2', 32, 32, 'wgwrgb', 'ergr4g2g2b', '4bv24bvvdfbd', 'fbt4b4', 'tb2442bb', 121414, 'sdvdgsd', 'wgrwewretew', 'weqqwerqwe', 'qwetewt');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `benefit`
 --
 
 CREATE TABLE IF NOT EXISTS `benefit` (
-`benefit_id` int(11) NOT NULL,
+  `benefit_id` int(11) NOT NULL AUTO_INCREMENT,
   `benefit_amount` int(11) DEFAULT NULL,
   `benefit_scholarShare` int(11) DEFAULT NULL,
   `benefit_tuitionfee_id` int(11) DEFAULT NULL,
@@ -88,8 +141,12 @@ CREATE TABLE IF NOT EXISTS `benefit` (
   `benefit_school_id` int(11) DEFAULT NULL,
   `benefit_scholar_lastName` varchar(100) DEFAULT NULL,
   `benefit_scholar_firstName` varchar(100) DEFAULT NULL,
-  `benefit_scholar_middleName` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  `benefit_scholar_middleName` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`benefit_id`),
+  KEY `Tuition_Num` (`benefit_tuitionfee_id`),
+  KEY `Scholar_Num` (`benefit_scholar_id`),
+  KEY `School_Num` (`benefit_school_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `benefit`
@@ -97,7 +154,7 @@ CREATE TABLE IF NOT EXISTS `benefit` (
 
 INSERT INTO `benefit` (`benefit_id`, `benefit_amount`, `benefit_scholarShare`, `benefit_tuitionfee_id`, `benefit_scholar_id`, `benefit_school_id`, `benefit_scholar_lastName`, `benefit_scholar_firstName`, `benefit_scholar_middleName`) VALUES
 (1, 10000, 5000, NULL, 2, 2, NULL, NULL, NULL),
-(2, 20000, 10000, 3, 3, 2, NULL, NULL, NULL);
+(2, 20000, 10000, 5, 3, 2, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -106,7 +163,7 @@ INSERT INTO `benefit` (`benefit_id`, `benefit_amount`, `benefit_scholarShare`, `
 --
 
 CREATE TABLE IF NOT EXISTS `compile` (
-`compile_id` int(11) NOT NULL,
+  `compile_id` int(11) NOT NULL AUTO_INCREMENT,
   `compile_scholar_id` int(11) DEFAULT NULL,
   `compile_school_id` int(11) DEFAULT NULL,
   `compile_tuitionfee_id` int(11) DEFAULT NULL,
@@ -117,8 +174,14 @@ CREATE TABLE IF NOT EXISTS `compile` (
   `compile_school_name` varchar(100) DEFAULT NULL,
   `compile_school_area` varchar(100) DEFAULT NULL,
   `compile_pendingPaymentToSchool` enum('Yes','No') DEFAULT NULL,
-  `compile_pendingPaymentToStudent` enum('Yes','No') DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `compile_pendingPaymentToStudent` enum('Yes','No') DEFAULT NULL,
+  PRIMARY KEY (`compile_id`),
+  KEY `compile_scholar_id` (`compile_scholar_id`,`compile_school_id`,`compile_tuitionfee_id`,`compile_grade_id`),
+  KEY `compile_school_id` (`compile_school_id`),
+  KEY `compile_tuitionfee_id` (`compile_tuitionfee_id`),
+  KEY `compile_grade_id` (`compile_grade_id`),
+  KEY `compile_school_id_2` (`compile_school_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -127,13 +190,15 @@ CREATE TABLE IF NOT EXISTS `compile` (
 --
 
 CREATE TABLE IF NOT EXISTS `event` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(100) NOT NULL,
   `description` varchar(100) NOT NULL,
   `start_date` date DEFAULT NULL,
   `end_date` date DEFAULT NULL,
-  `event_scholar_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  `event_scholar_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `event_scholar_id` (`event_scholar_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `event`
@@ -150,15 +215,18 @@ INSERT INTO `event` (`id`, `title`, `description`, `start_date`, `end_date`, `ev
 --
 
 CREATE TABLE IF NOT EXISTS `failures` (
-`fail_id` int(11) NOT NULL,
+  `fail_id` int(11) NOT NULL AUTO_INCREMENT,
   `fail_subject` varchar(45) DEFAULT NULL,
   `fail_units` int(11) DEFAULT NULL,
   `fail_scholar_id` int(11) DEFAULT NULL,
   `fail_school_id` int(11) DEFAULT NULL,
   `failures_scholar_lastName` varchar(100) DEFAULT NULL,
   `failures_scholar_firstName` varchar(100) DEFAULT NULL,
-  `failures_scholar_middleName` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `failures_scholar_middleName` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`fail_id`),
+  KEY `Scholar_Num` (`fail_scholar_id`),
+  KEY `School_Num` (`fail_school_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -167,7 +235,7 @@ CREATE TABLE IF NOT EXISTS `failures` (
 --
 
 CREATE TABLE IF NOT EXISTS `grades` (
-`grade_id` int(11) NOT NULL,
+  `grade_id` int(11) NOT NULL AUTO_INCREMENT,
   `grade_schoolYear` int(11) DEFAULT NULL,
   `grade_Term` int(11) DEFAULT NULL,
   `grade_scholar_id` int(11) DEFAULT NULL,
@@ -175,16 +243,17 @@ CREATE TABLE IF NOT EXISTS `grades` (
   `grade_scholar_firstName` varchar(100) DEFAULT NULL,
   `grade_scholar_middleName` varchar(100) DEFAULT NULL,
   `grade_value` varchar(100) DEFAULT NULL,
-  `grade_grade_form` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`grade_id`),
+  KEY `grade_scholar_id` (`grade_scholar_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `grades`
 --
 
-INSERT INTO `grades` (`grade_id`, `grade_schoolYear`, `grade_Term`, `grade_scholar_id`, `grade_scholar_lastName`, `grade_scholar_firstName`, `grade_scholar_middleName`, `grade_value`, `grade_grade_form`) VALUES
-(15, 2015, 3, 2, '', '', '', '4.0', 'GradeForm/15gradeform.jpg'),
-(16, 2015, 2, 3, NULL, NULL, NULL, '4.0', 'GradeForm/16gradeform.png');
+INSERT INTO `grades` (`grade_id`, `grade_schoolYear`, `grade_Term`, `grade_scholar_id`, `grade_scholar_lastName`, `grade_scholar_firstName`, `grade_scholar_middleName`, `grade_value`) VALUES
+(15, 2015, 3, 2, '', '', '', '4.0'),
+(16, 2015, 2, 3, NULL, NULL, NULL, '4.0');
 
 -- --------------------------------------------------------
 
@@ -194,7 +263,8 @@ INSERT INTO `grades` (`grade_id`, `grade_schoolYear`, `grade_Term`, `grade_schol
 
 CREATE TABLE IF NOT EXISTS `migration` (
   `version` varchar(180) NOT NULL,
-  `apply_time` int(11) DEFAULT NULL
+  `apply_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`version`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -212,7 +282,7 @@ INSERT INTO `migration` (`version`, `apply_time`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `scholars` (
-`scholar_id` int(11) NOT NULL,
+  `scholar_id` int(11) NOT NULL AUTO_INCREMENT,
   `scholar_firstName` varchar(100) NOT NULL,
   `scholar_lastName` varchar(100) NOT NULL,
   `scholar_middleName` varchar(100) DEFAULT NULL,
@@ -225,8 +295,11 @@ CREATE TABLE IF NOT EXISTS `scholars` (
   `scholar_contactNum` int(100) NOT NULL,
   `scholar_cashCardNum` int(100) DEFAULT NULL,
   `scholar_school_area` enum('Provincial','NCR') NOT NULL,
-  `scholar_user_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `scholar_user_id` int(11) NOT NULL,
+  PRIMARY KEY (`scholar_id`),
+  KEY `scholar_school_id` (`scholar_school_id`),
+  KEY `scholar_user_id` (`scholar_user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `scholars`
@@ -243,13 +316,14 @@ INSERT INTO `scholars` (`scholar_id`, `scholar_firstName`, `scholar_lastName`, `
 --
 
 CREATE TABLE IF NOT EXISTS `schools` (
-`school_id` int(11) NOT NULL,
+  `school_id` int(11) NOT NULL AUTO_INCREMENT,
   `school_name` varchar(100) NOT NULL,
   `school_area` enum('Provincial','NCR') NOT NULL,
   `school_address` varchar(100) DEFAULT NULL,
   `school_contactEmail` varchar(100) DEFAULT NULL,
-  `school_contactNumber` int(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `school_contactNumber` int(100) NOT NULL,
+  PRIMARY KEY (`school_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `schools`
@@ -266,7 +340,7 @@ INSERT INTO `schools` (`school_id`, `school_name`, `school_area`, `school_addres
 --
 
 CREATE TABLE IF NOT EXISTS `tuitionfees` (
-`tuitionfee_id` int(11) NOT NULL,
+  `tuitionfee_id` int(11) NOT NULL AUTO_INCREMENT,
   `tuitionfee_scholar_id` int(11) DEFAULT NULL,
   `tuitionfee_scholar_lastName` varchar(100) DEFAULT NULL,
   `tuitionfee_scholar_firstName` varchar(100) DEFAULT NULL,
@@ -275,16 +349,34 @@ CREATE TABLE IF NOT EXISTS `tuitionfees` (
   `tuitionfee_dateOfEnrollment` date DEFAULT NULL,
   `tuitionfee_dateOfPayment` date DEFAULT NULL,
   `tuitionfee_paidStatus` enum('paid','not paid') DEFAULT NULL,
-  `tuitionfee_registrationForm` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`tuitionfee_id`),
+  KEY `tuitionfee_scholar_id` (`tuitionfee_scholar_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `tuitionfees`
 --
 
-INSERT INTO `tuitionfees` (`tuitionfee_id`, `tuitionfee_scholar_id`, `tuitionfee_scholar_lastName`, `tuitionfee_scholar_firstName`, `tuitionfee_scholar_middleName`, `tuitionfee_amount`, `tuitionfee_dateOfEnrollment`, `tuitionfee_dateOfPayment`, `tuitionfee_paidStatus`, `tuitionfee_registrationForm`) VALUES
-(2, 2, NULL, NULL, NULL, 20000, '2015-07-24', '2015-07-24', 'paid', 'uploads/2regform.jpg'),
-(3, 3, NULL, NULL, NULL, 20000, '2015-07-01', '2015-07-29', 'paid', 'RegForm/2regform.php');
+INSERT INTO `tuitionfees` (`tuitionfee_id`, `tuitionfee_scholar_id`, `tuitionfee_scholar_lastName`, `tuitionfee_scholar_firstName`, `tuitionfee_scholar_middleName`, `tuitionfee_amount`, `tuitionfee_dateOfEnrollment`, `tuitionfee_dateOfPayment`, `tuitionfee_paidStatus`) VALUES
+(4, 2, NULL, NULL, NULL, 20000, NULL, NULL, 'paid'),
+(5, 3, NULL, NULL, NULL, 20000, '2015-07-01', '2015-07-29', 'paid');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `uploadedforms`
+--
+
+CREATE TABLE IF NOT EXISTS `uploadedforms` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `scholar_lastName` varchar(100) NOT NULL,
+  `scholar_firstName` varchar(100) NOT NULL,
+  `scholar_middleName` varchar(100) NOT NULL,
+  `uploadedForm` varchar(100) NOT NULL,
+  `scholar_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `scholar_id` (`scholar_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -293,7 +385,7 @@ INSERT INTO `tuitionfees` (`tuitionfee_id`, `tuitionfee_scholar_id`, `tuitionfee
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `auth_key` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   `password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -301,8 +393,12 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `status` smallint(6) NOT NULL DEFAULT '10',
   `created_at` int(11) NOT NULL,
-  `updated_at` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `updated_at` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_3` (`id`),
+  KEY `id` (`id`),
+  KEY `id_2` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `user`
@@ -313,141 +409,6 @@ INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_res
 (3, 'scholar2', 'kgJz_-7RaOwWQpjrUrV1QsenhrKAgFr8', '$2y$13$RRQyqJjUYmqZ2H2vtiNNouPE5pD04UQ3h6x2so6vIqOXtxOPuXGDO', NULL, 'scholar@email.com', 10, 1436766072, 1436766072);
 
 --
--- Indexes for dumped tables
---
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id_3` (`id`), ADD KEY `id` (`id`), ADD KEY `id_2` (`id`);
-
---
--- Indexes for table `allowance`
---
-ALTER TABLE `allowance`
- ADD PRIMARY KEY (`allowance_id`), ADD KEY `Scholar_Num` (`allowance_scholar_id`), ADD KEY `School_Num` (`allowance_school_id`), ADD KEY `allowance_scholar_id` (`allowance_scholar_id`), ADD KEY `allowance_school_id` (`allowance_school_id`), ADD KEY `benefit_allowance_id` (`benefit_allowance_id`);
-
---
--- Indexes for table `benefit`
---
-ALTER TABLE `benefit`
- ADD PRIMARY KEY (`benefit_id`), ADD KEY `Tuition_Num` (`benefit_tuitionfee_id`), ADD KEY `Scholar_Num` (`benefit_scholar_id`), ADD KEY `School_Num` (`benefit_school_id`);
-
---
--- Indexes for table `compile`
---
-ALTER TABLE `compile`
- ADD PRIMARY KEY (`compile_id`), ADD KEY `compile_scholar_id` (`compile_scholar_id`,`compile_school_id`,`compile_tuitionfee_id`,`compile_grade_id`), ADD KEY `compile_school_id` (`compile_school_id`), ADD KEY `compile_tuitionfee_id` (`compile_tuitionfee_id`), ADD KEY `compile_grade_id` (`compile_grade_id`), ADD KEY `compile_school_id_2` (`compile_school_id`);
-
---
--- Indexes for table `event`
---
-ALTER TABLE `event`
- ADD PRIMARY KEY (`id`), ADD KEY `event_scholar_id` (`event_scholar_id`);
-
---
--- Indexes for table `failures`
---
-ALTER TABLE `failures`
- ADD PRIMARY KEY (`fail_id`), ADD KEY `Scholar_Num` (`fail_scholar_id`), ADD KEY `School_Num` (`fail_school_id`);
-
---
--- Indexes for table `grades`
---
-ALTER TABLE `grades`
- ADD PRIMARY KEY (`grade_id`), ADD KEY `grade_scholar_id` (`grade_scholar_id`);
-
---
--- Indexes for table `migration`
---
-ALTER TABLE `migration`
- ADD PRIMARY KEY (`version`);
-
---
--- Indexes for table `scholars`
---
-ALTER TABLE `scholars`
- ADD PRIMARY KEY (`scholar_id`), ADD KEY `scholar_school_id` (`scholar_school_id`), ADD KEY `scholar_user_id` (`scholar_user_id`);
-
---
--- Indexes for table `schools`
---
-ALTER TABLE `schools`
- ADD PRIMARY KEY (`school_id`);
-
---
--- Indexes for table `tuitionfees`
---
-ALTER TABLE `tuitionfees`
- ADD PRIMARY KEY (`tuitionfee_id`), ADD KEY `tuitionfee_scholar_id` (`tuitionfee_scholar_id`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id_3` (`id`), ADD KEY `id` (`id`), ADD KEY `id_2` (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `allowance`
---
-ALTER TABLE `allowance`
-MODIFY `allowance_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `benefit`
---
-ALTER TABLE `benefit`
-MODIFY `benefit_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `compile`
---
-ALTER TABLE `compile`
-MODIFY `compile_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `event`
---
-ALTER TABLE `event`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `failures`
---
-ALTER TABLE `failures`
-MODIFY `fail_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `grades`
---
-ALTER TABLE `grades`
-MODIFY `grade_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
---
--- AUTO_INCREMENT for table `scholars`
---
-ALTER TABLE `scholars`
-MODIFY `scholar_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `schools`
---
-ALTER TABLE `schools`
-MODIFY `school_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `tuitionfees`
---
-ALTER TABLE `tuitionfees`
-MODIFY `tuitionfee_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
---
 -- Constraints for dumped tables
 --
 
@@ -455,51 +416,57 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 -- Constraints for table `allowance`
 --
 ALTER TABLE `allowance`
-ADD CONSTRAINT `allowance_ibfk_1` FOREIGN KEY (`allowance_scholar_id`) REFERENCES `scholars` (`scholar_id`) ON UPDATE CASCADE,
-ADD CONSTRAINT `allowance_ibfk_2` FOREIGN KEY (`allowance_school_id`) REFERENCES `schools` (`school_id`) ON UPDATE CASCADE,
-ADD CONSTRAINT `allowance_ibfk_3` FOREIGN KEY (`benefit_allowance_id`) REFERENCES `benefit` (`benefit_id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `allowance_ibfk_1` FOREIGN KEY (`allowance_scholar_id`) REFERENCES `scholars` (`scholar_id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `allowance_ibfk_2` FOREIGN KEY (`allowance_school_id`) REFERENCES `schools` (`school_id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `allowance_ibfk_3` FOREIGN KEY (`benefit_allowance_id`) REFERENCES `benefit` (`benefit_id`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `benefit`
 --
 ALTER TABLE `benefit`
-ADD CONSTRAINT `benefit_ibfk_1` FOREIGN KEY (`benefit_tuitionfee_id`) REFERENCES `tuitionfees` (`tuitionfee_id`) ON UPDATE CASCADE,
-ADD CONSTRAINT `benefit_ibfk_2` FOREIGN KEY (`benefit_scholar_id`) REFERENCES `scholars` (`scholar_id`) ON UPDATE CASCADE,
-ADD CONSTRAINT `benefit_ibfk_3` FOREIGN KEY (`benefit_school_id`) REFERENCES `schools` (`school_id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `benefit_ibfk_1` FOREIGN KEY (`benefit_tuitionfee_id`) REFERENCES `tuitionfees` (`tuitionfee_id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `benefit_ibfk_2` FOREIGN KEY (`benefit_scholar_id`) REFERENCES `scholars` (`scholar_id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `benefit_ibfk_3` FOREIGN KEY (`benefit_school_id`) REFERENCES `schools` (`school_id`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `compile`
 --
 ALTER TABLE `compile`
-ADD CONSTRAINT `compile_ibfk_1` FOREIGN KEY (`compile_scholar_id`) REFERENCES `scholars` (`scholar_id`) ON DELETE SET NULL ON UPDATE CASCADE,
-ADD CONSTRAINT `compile_ibfk_2` FOREIGN KEY (`compile_school_id`) REFERENCES `schools` (`school_id`) ON DELETE SET NULL ON UPDATE CASCADE,
-ADD CONSTRAINT `compile_ibfk_3` FOREIGN KEY (`compile_tuitionfee_id`) REFERENCES `tuitionfees` (`tuitionfee_id`) ON DELETE SET NULL ON UPDATE CASCADE,
-ADD CONSTRAINT `compile_ibfk_4` FOREIGN KEY (`compile_grade_id`) REFERENCES `grades` (`grade_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+  ADD CONSTRAINT `compile_ibfk_1` FOREIGN KEY (`compile_scholar_id`) REFERENCES `scholars` (`scholar_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `compile_ibfk_2` FOREIGN KEY (`compile_school_id`) REFERENCES `schools` (`school_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `compile_ibfk_3` FOREIGN KEY (`compile_tuitionfee_id`) REFERENCES `tuitionfees` (`tuitionfee_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `compile_ibfk_4` FOREIGN KEY (`compile_grade_id`) REFERENCES `grades` (`grade_id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `failures`
 --
 ALTER TABLE `failures`
-ADD CONSTRAINT `failures_ibfk_1` FOREIGN KEY (`fail_scholar_id`) REFERENCES `scholars` (`scholar_id`) ON UPDATE CASCADE,
-ADD CONSTRAINT `failures_ibfk_2` FOREIGN KEY (`fail_school_id`) REFERENCES `schools` (`school_id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `failures_ibfk_1` FOREIGN KEY (`fail_scholar_id`) REFERENCES `scholars` (`scholar_id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `failures_ibfk_2` FOREIGN KEY (`fail_school_id`) REFERENCES `schools` (`school_id`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `grades`
 --
 ALTER TABLE `grades`
-ADD CONSTRAINT `grades_ibfk_1` FOREIGN KEY (`grade_scholar_id`) REFERENCES `scholars` (`scholar_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+  ADD CONSTRAINT `grades_ibfk_1` FOREIGN KEY (`grade_scholar_id`) REFERENCES `scholars` (`scholar_id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `scholars`
 --
 ALTER TABLE `scholars`
-ADD CONSTRAINT `scholars_ibfk_1` FOREIGN KEY (`scholar_school_id`) REFERENCES `schools` (`school_id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `scholars_ibfk_1` FOREIGN KEY (`scholar_school_id`) REFERENCES `schools` (`school_id`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `tuitionfees`
 --
 ALTER TABLE `tuitionfees`
-ADD CONSTRAINT `tuitionfees_ibfk_1` FOREIGN KEY (`tuitionfee_scholar_id`) REFERENCES `scholars` (`scholar_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+  ADD CONSTRAINT `tuitionfees_ibfk_1` FOREIGN KEY (`tuitionfee_scholar_id`) REFERENCES `scholars` (`scholar_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `uploadedforms`
+--
+ALTER TABLE `uploadedforms`
+  ADD CONSTRAINT `uploadedforms_ibfk_1` FOREIGN KEY (`scholar_id`) REFERENCES `scholars` (`scholar_id`) ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
