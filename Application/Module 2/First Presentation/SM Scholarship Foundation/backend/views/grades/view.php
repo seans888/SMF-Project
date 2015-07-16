@@ -37,7 +37,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'grade_scholar_firstName',
             'grade_scholar_middleName',
             'grade_value',
-            'grade_grade_form',
         ],
     ]) ?>
 
