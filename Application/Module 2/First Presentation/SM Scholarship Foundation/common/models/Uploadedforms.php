@@ -36,7 +36,7 @@ class Uploadedforms extends \yii\db\ActiveRecord
             [['scholar_lastName', 'scholar_firstName', 'scholar_middleName', 'uploadedForm', 'scholar_id'], 'required'],
             [['scholar_id'], 'integer'],
 			[['file'],'file'],
-            [['scholar_lastName', 'scholar_firstName', 'scholar_middleName', 'uploadedForm'], 'string', 'max' => 100]
+            [['fileName','scholar_lastName', 'scholar_firstName', 'scholar_middleName', 'uploadedForm'], 'string', 'max' => 100]
         ];
     }
 
@@ -52,6 +52,7 @@ class Uploadedforms extends \yii\db\ActiveRecord
             'scholar_middleName' => 'Scholar Middle Name',
             'uploadedForm' => 'Uploaded Form',
             'scholar_id' => 'Scholar ID',
+			'fileName' => 'File Name',
         ];
     }
 
