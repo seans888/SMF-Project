@@ -21,6 +21,7 @@ class Uploadedforms extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+	public $file;
     public static function tableName()
     {
         return 'uploadedforms';
@@ -34,6 +35,7 @@ class Uploadedforms extends \yii\db\ActiveRecord
         return [
             [['scholar_lastName', 'scholar_firstName', 'scholar_middleName', 'uploadedForm', 'scholar_id'], 'required'],
             [['scholar_id'], 'integer'],
+			[['file'],'file'],
             [['scholar_lastName', 'scholar_firstName', 'scholar_middleName', 'uploadedForm'], 'string', 'max' => 100]
         ];
     }
