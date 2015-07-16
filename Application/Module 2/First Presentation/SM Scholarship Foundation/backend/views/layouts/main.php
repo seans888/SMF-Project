@@ -350,6 +350,7 @@ DashboardAsset::register($this);
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/tuitionfees/index'); ?>"><i class="fa fa-circle-o"></i> Tuition Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/allowance/index'); ?>"><i class="fa fa-circle-o"></i> Allowance Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/benefit/index'); ?>"><i class="fa fa-circle-o"></i> Benefits Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/uploadedforms/index'); ?>"><i class="fa fa-circle-o"></i> Upload Forms</a></li>
               </ul>
             </li>
             <li>
