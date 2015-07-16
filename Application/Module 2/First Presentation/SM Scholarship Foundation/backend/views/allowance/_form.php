@@ -5,6 +5,7 @@ use yii\widgets\ActiveForm;
 use common\models\Scholars;
 use common\models\Schools;
 use yii\helpers\ArrayHelper;
+use kartik\select2\Select2;
 /* @var $this yii\web\View */
 /* @var $model common\models\Allowance */
 /* @var $form yii\widgets\ActiveForm */
@@ -14,14 +15,17 @@ use yii\helpers\ArrayHelper;
 
     <?php $form = ActiveForm::begin(); ?>
 
+	<?= $form->field($model,'allowance_scholar_id')->widget(Select2::classname(),
+		[
+			'data'=>ArrayHelper::map(Scholars::find()->all(),'scholar_id','scholar_id','scholar_lastName'),
+			'language'=>'en',
+			'options'=>['placeholder'=>'Select Scholar ID'],
+			'pluginOptions'=>['allowClear'=>true],
+		]) ?>
+	
     <?= $form->field($model, 'allowance_amount')->textInput() ?>
 
     <?= $form->field($model, 'allowance_remark')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'allowance_scholar_id')->dropDownList(
-    		ArrayHelper::map(Scholars::find()->all(),'scholar_id','scholar_id','scholar_lastName'),
-    		['prompt'=>'Select Scholar ID']
-    		) ?>
 
     <?= $form->field($model, 'allowance_school_id')->dropDownList(
     		ArrayHelper::map(Schools::find()->all(),'school_id','school_name'),
