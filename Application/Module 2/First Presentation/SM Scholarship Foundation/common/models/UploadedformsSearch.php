@@ -19,7 +19,7 @@ class UploadedformsSearch extends Uploadedforms
     {
         return [
             [['id', 'scholar_id'], 'integer'],
-            [['scholar_lastName', 'scholar_firstName', 'scholar_middleName', 'uploadedForm'], 'safe'],
+            [['scholar_lastName', 'scholar_firstName', 'scholar_middleName', 'uploadedForm', 'fileName'], 'safe'],
         ];
     }
 
@@ -63,7 +63,8 @@ class UploadedformsSearch extends Uploadedforms
         $query->andFilterWhere(['like', 'scholar_lastName', $this->scholar_lastName])
             ->andFilterWhere(['like', 'scholar_firstName', $this->scholar_firstName])
             ->andFilterWhere(['like', 'scholar_middleName', $this->scholar_middleName])
-            ->andFilterWhere(['like', 'uploadedForm', $this->uploadedForm]);
+            ->andFilterWhere(['like', 'uploadedForm', $this->uploadedForm])
+            ->andFilterWhere(['like', 'fileName', $this->fileName]);
 
         return $dataProvider;
     }

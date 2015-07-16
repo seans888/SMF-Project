@@ -13,6 +13,7 @@ use Yii;
  * @property string $scholar_middleName
  * @property string $uploadedForm
  * @property integer $scholar_id
+ * @property string $fileName
  *
  * @property Scholars $scholar
  */
@@ -33,10 +34,10 @@ class Uploadedforms extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['scholar_lastName', 'scholar_firstName', 'scholar_middleName', 'uploadedForm', 'scholar_id'], 'required'],
+            [['scholar_id'], 'required'],
             [['scholar_id'], 'integer'],
-			[['file'],'file'],
-            [['fileName','scholar_lastName', 'scholar_firstName', 'scholar_middleName', 'uploadedForm'], 'string', 'max' => 100]
+			[['file'], 'file'],
+            [['scholar_lastName', 'scholar_firstName', 'scholar_middleName', 'uploadedForm', 'fileName'], 'string', 'max' => 100]
         ];
     }
 
@@ -52,7 +53,7 @@ class Uploadedforms extends \yii\db\ActiveRecord
             'scholar_middleName' => 'Scholar Middle Name',
             'uploadedForm' => 'Uploaded Form',
             'scholar_id' => 'Scholar ID',
-			'fileName' => 'File Name',
+            'fileName' => 'File Name',
         ];
     }
 
