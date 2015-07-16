@@ -4,6 +4,7 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use dosamigos\fileinput\FileInput;
+use kartik\select2\Select2;
 /* @var $this yii\web\View */
 /* @var $model common\models\Uploadedforms */
 /* @var $form yii\widgets\ActiveForm */
@@ -13,10 +14,13 @@ use dosamigos\fileinput\FileInput;
 
     <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
 	
-    <?= $form->field($model, 'scholar_id')->dropDownList(
-		ArrayHelper::map(Scholars::find()->all(),'scholar_id','scholar_id','scholar_lastName'),
-		['prompt'=>'Select Scholar ID']
-	)->label('Scholar ID') ?>
+	<?= $form->field($model,'scholar_id')->widget(Select2::classname(),
+		[
+			'data'=>ArrayHelper::map(Scholars::find()->all(),'scholar_id','scholar_id','scholar_lastName'),
+			'language'=>'en',
+			'options'=>['placeholder'=>'Select a state...'],
+			'pluginOptions'=>['allowClear'=>true],
+		]) ?>
 	
 	<?= $form->field($model, 'fileName')->dropDownList(['Registration Form'=>'Registration Form','Grades Form'=>'Grades Form'],
 			['prompt'=>'Select File Type']) ?>
