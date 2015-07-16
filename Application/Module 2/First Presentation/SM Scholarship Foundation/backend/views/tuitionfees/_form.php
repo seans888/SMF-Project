@@ -4,7 +4,6 @@ use common\models\Scholars;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use dosamigos\fileinput\FileInput;
 /* @var $this yii\web\View */
 /* @var $model common\models\Tuitionfees */
 /* @var $form yii\widgets\ActiveForm */
@@ -13,19 +12,6 @@ use dosamigos\fileinput\FileInput;
 <div class="tuitionfees-form">
 
     <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
-	
-<?= $form->field($model, 'file')->widget(\dosamigos\fileinput\BootstrapFileInput::className(), [
-    'options' => ['multiple' => true],
-    'clientOptions' => [
-        'previewFileType' => 'text',
-        'browseClass' => 'btn btn-success',
-        'uploadClass' => 'btn btn-info',
-        'removeClass' => 'btn btn-danger',
-        'removeIcon' => '<i class="glyphicon glyphicon-trash"></i> '
-    ],
-	
-])->label('Upload Registration Form')?>
-	
 
     <?= $form->field($model, 'tuitionfee_scholar_id')->dropDownList(
 		ArrayHelper::map(Scholars::find()->all(),'scholar_id','scholar_id','scholar_lastName'),
