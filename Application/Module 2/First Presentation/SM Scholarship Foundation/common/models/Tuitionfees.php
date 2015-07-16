@@ -25,7 +25,6 @@ class Tuitionfees extends \yii\db\ActiveRecord
      * @inheritdoc
      */
 	 
-	public $file;
 	
     public static function tableName()
     {
@@ -40,10 +39,9 @@ class Tuitionfees extends \yii\db\ActiveRecord
         return [
             [['tuitionfee_scholar_id', 'tuitionfee_amount'], 'integer','message'=>'Only numbers are allowed'],
             [['tuitionfee_dateOfEnrollment', 'tuitionfee_dateOfPayment'], 'safe'],
-			[['file'],'file'],
 			[['tuitionfee_scholar_id','tuitionfee_amount','tuitionfee_paidStatus'],'required'],
             [['tuitionfee_paidStatus'], 'string'],
-            [['tuitionfee_registrationForm','tuitionfee_scholar_lastName', 'tuitionfee_scholar_firstName', 'tuitionfee_scholar_middleName'], 'string', 'max' => 100]
+            [['tuitionfee_scholar_lastName', 'tuitionfee_scholar_firstName', 'tuitionfee_scholar_middleName'], 'string', 'max' => 100]
         ];
     }
 

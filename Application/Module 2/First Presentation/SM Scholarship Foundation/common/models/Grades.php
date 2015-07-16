@@ -26,8 +26,6 @@ class Grades extends \yii\db\ActiveRecord
      * @inheritdoc
      */
 	
-	public $file;
-	
     public static function tableName()
     {
         return 'grades';
@@ -41,8 +39,7 @@ class Grades extends \yii\db\ActiveRecord
         return [
             [['grade_schoolYear', 'grade_Term', 'grade_scholar_id'], 'integer'],
             [['grade_scholar_id','grade_value','grade_schoolYear','grade_Term'], 'required'],
-        	[['file'],'file'],
-            [['grade_scholar_lastName', 'grade_scholar_firstName', 'grade_scholar_middleName', 'grade_value', 'grade_grade_form'], 'string', 'max' => 100]
+            [['grade_scholar_lastName', 'grade_scholar_firstName', 'grade_scholar_middleName', 'grade_value'], 'string', 'max' => 100]
         ];
     }
 
@@ -60,7 +57,6 @@ class Grades extends \yii\db\ActiveRecord
             'grade_scholar_firstName' => 'First Name',
             'grade_scholar_middleName' => 'Middle Name',
             'grade_value' => 'Grade Value',
-            'grade_grade_form' => 'Grade Form',
         ];
     }
 
