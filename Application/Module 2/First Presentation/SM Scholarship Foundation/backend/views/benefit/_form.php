@@ -22,11 +22,15 @@ use kartik\select2\Select2;
 			'options'=>['placeholder'=>'Select Scholar ID'],
 			'pluginOptions'=>['allowClear'=>true],
 		]) ?>
-    		
-    <?= $form->field($model, 'benefit_school_id')->dropDownList(
-    		ArrayHelper::map(Schools::find()->all(), 'school_id','school_name'),
-    		['prompt'=>'Select School']
-    		) ?>
+
+	<?= $form->field($model,'benefit_school_id')->widget(Select2::classname(),
+		[
+			'data'=>ArrayHelper::map(Schools::find()->all(), 'school_id','school_name'),
+			'language'=>'en',
+			'options'=>['placeholder'=>'Select School Name'],
+			'pluginOptions'=>['allowClear'=>true],
+		]) ?>
+
     <?= $form->field($model, 'benefit_amount')->textInput() ?>
 
     <?= $form->field($model, 'benefit_scholarShare')->textInput() ?>
