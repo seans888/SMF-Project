@@ -2,7 +2,6 @@
 use yii\helpers\ArrayHelper;
 use common\models\Scholars;
 use yii\helpers\Html;
-use dosamigos\fileinput\FileInput;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
@@ -13,17 +12,6 @@ use yii\widgets\ActiveForm;
 <div class="grades-form">
 
     <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
-    <?= $form->field($model, 'file')->widget(\dosamigos\fileinput\BootstrapFileInput::className(), [
-    'options' => ['multiple' => true],
-    'clientOptions' => [
-        'previewFileType' => 'text',
-        'browseClass' => 'btn btn-success',
-        'uploadClass' => 'btn btn-info',
-        'removeClass' => 'btn btn-danger',
-        'removeIcon' => '<i class="glyphicon glyphicon-trash"></i> '
-    ],
-	
-])->label('Upload Grades Form')?>
 
     <?= $form->field($model, 'grade_schoolYear')->textInput() ?>
 

@@ -40,7 +40,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'grade_schoolYear',
             'grade_Term',
             'grade_value',
-            'grade_grade_form',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
