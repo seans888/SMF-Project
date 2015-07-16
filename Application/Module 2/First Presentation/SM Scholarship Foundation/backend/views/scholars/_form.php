@@ -3,7 +3,7 @@ use common\models\Schools;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
-
+use kartik\select2\Select2;
 /* @var $this yii\web\View */
 /* @var $model common\models\Scholars */
 /* @var $form yii\widgets\ActiveForm */
@@ -23,10 +23,13 @@ use yii\helpers\ArrayHelper;
 
     <?= $form->field($model, 'scholar_address')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'scholar_school_id')->dropDownList(
-    		ArrayHelper::map(Schools::find()->all(),'school_id','school_name'),
-    		['prompt'=>'Select School']
-    		) ?>
+	<?= $form->field($model,'scholar_school_id')->widget(Select2::classname(),
+		[
+			'data'=>ArrayHelper::map(Schools::find()->all(),'school_id','school_name'),
+			'language'=>'en',
+			'options'=>['placeholder'=>'Select School Name'],
+			'pluginOptions'=>['allowClear'=>true],
+		]) ?>
 
     <?= $form->field($model, 'scholar_course')->textInput(['maxlength' => true]) ?>
 
