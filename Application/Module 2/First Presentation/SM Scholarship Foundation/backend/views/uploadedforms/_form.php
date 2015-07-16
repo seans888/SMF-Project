@@ -20,22 +20,10 @@ use kartik\typeahead\Typeahead;
 		[
 			'data'=>ArrayHelper::map(Scholars::find()->all(),'scholar_id','scholar_id','scholar_lastName'),
 			'language'=>'en',
-			'options'=>['placeholder'=>'Select a state...'],
+			'options'=>['placeholder'=>'Select Scholar ID'],
 			'pluginOptions'=>['allowClear'=>true],
 		]) ?>
 	
-	<?= $form->field($model,'scholar_lastName')->widget(Typeahead::classname(),
-		[
-			'dataset'=>[
-				[
-					'local'=>$data,
-					'limit'=>10
-				]
-			],
-			'pluginOptions' => ['highlight'=>true],
-			'options'=>['placeholder'=>'Filter as you type...'],
-		]
-	) ?>
 	
 	<?= $form->field($model, 'fileName')->dropDownList(['Registration Form'=>'Registration Form','Grades Form'=>'Grades Form'],
 			['prompt'=>'Select File Type']) ?>
