@@ -347,6 +347,7 @@ DashboardAsset::register($this);
                 <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/scholars/index'); ?>"><i class="fa fa-circle-o"></i> Scholar Records</a></li>
                 <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/schools/index'); ?>"><i class="fa fa-circle-o"></i> School Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/grades/index'); ?>"><i class="fa fa-circle-o"></i> Grade Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/grades/index'); ?>"><i class="fa fa-circle-o"></i> Reports</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/tuitionfees/index'); ?>"><i class="fa fa-circle-o"></i> Tuition Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/allowance/index'); ?>"><i class="fa fa-circle-o"></i> Allowance Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/benefit/index'); ?>"><i class="fa fa-circle-o"></i> Benefits Records</a></li>
