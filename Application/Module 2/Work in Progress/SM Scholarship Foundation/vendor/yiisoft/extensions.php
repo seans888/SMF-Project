@@ -129,4 +129,13 @@ return array (
       '@kartik/typeahead' => $vendorDir . '/kartik-v/yii2-widget-typeahead',
     ),
   ),
+  'reportico/yii2-reportico' => 
+  array (
+    'name' => 'reportico/yii2-reportico',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@reportico/reportico' => $vendorDir . '/reportico/yii2-reportico',
+    ),
+  ),
 );

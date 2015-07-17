@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\ArrayHelper;
 use common\models\Scholars;
+use common\models\Schools;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\select2\Select2;
@@ -18,6 +19,14 @@ use kartik\select2\Select2;
 			'data'=>ArrayHelper::map(Scholars::find()->all(),'scholar_id','scholar_id','scholar_lastName'),
 			'language'=>'en',
 			'options'=>['placeholder'=>'Select Scholar ID'],
+			'pluginOptions'=>['allowClear'=>true],
+		]) ?>
+		
+	<?= $form->field($model,'School_id')->widget(Select2::classname(),
+		[
+			'data'=>ArrayHelper::map(Schools::find()->all(),'school_id','school_id','school_name'),
+			'language'=>'en',
+			'options'=>['placeholder'=>'Select School ID'],
 			'pluginOptions'=>['allowClear'=>true],
 		]) ?>
 	

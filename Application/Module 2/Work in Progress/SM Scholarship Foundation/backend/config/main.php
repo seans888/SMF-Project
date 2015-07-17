@@ -11,7 +11,14 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [
+    'modules' => ['reportico' => [
+            'class' => 'reportico\reportico\Module' ,
+            'controllerMap' => [
+                            'reportico' => 'reportico\reportico\controllers\ReporticoController',
+                            'mode' => 'reportico\reportico\controllers\ModeController',
+                            'ajax' => 'reportico\reportico\controllers\AjaxController',
+                        ]
+            ],
 	],
     'components' => [
         'user' => [
