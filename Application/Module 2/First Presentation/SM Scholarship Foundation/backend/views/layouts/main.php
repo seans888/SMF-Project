@@ -347,11 +347,19 @@ DashboardAsset::register($this);
                 <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/scholars/index'); ?>"><i class="fa fa-circle-o"></i> Scholar Records</a></li>
                 <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/schools/index'); ?>"><i class="fa fa-circle-o"></i> School Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/grades/index'); ?>"><i class="fa fa-circle-o"></i> Grade Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/grades/index'); ?>"><i class="fa fa-circle-o"></i> Reports</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/tuitionfees/index'); ?>"><i class="fa fa-circle-o"></i> Tuition Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/allowance/index'); ?>"><i class="fa fa-circle-o"></i> Allowance Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/benefit/index'); ?>"><i class="fa fa-circle-o"></i> Benefits Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/uploadedforms/index'); ?>"><i class="fa fa-circle-o"></i> Upload Forms</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-edit"></i> <span>Reports</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Grade Reports</a></li>
               </ul>
             </li>
             <li>
