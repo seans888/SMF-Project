@@ -1,0 +1,21 @@
+Benefit/Allowance - Indicate if monthly (label)
+Allowance - 2K (NCR)
+1K (Provincial)
+** form of cash cards given every 10th of the month regardless if they have class or not; max is 16K**
+Admin - Give flags if they're going to withhold allowance of the scholar if he/she fails to submit requirements; manual
+Benefit - indicate what kind of benefit
+If dean's Lister (depending upon school) - SMF will be the one to compute the 50%; twice a year only - December to June
+System monitor if semestral or trisemester
+Part-time jobs - indicate when they're available and where they prefer to work (Christmas and Summer only)
+No need for feedback for part-time jobs - it's just a financial aid
+**Indicate location of the DEPARTMENT STORE only either drop down or field with suggested locations only**
+SMF - roles: user, sysadd, operations
+School may upload grades but not access the system (grades per subject is needed)
+For excel format - Name of subject, Units, Grade
+Sysad of SMF encodes the grades
+GPA Grade - with and without failing grade, school equivalent (indicate highest)
+Regular reports, additional reports - category for sponsored scholars to know how much they actually provide vs. those that are sponsored
+Notifications - 2 weeks before; reminder is once a week every Mondays
+The stipend must be manually inputted
+Encode deductions SPECIFICALLY and let the scholar see the deductions and why
+For payment - give flag if the payment should be given to school instead of student (ex. PUP, PLM)
