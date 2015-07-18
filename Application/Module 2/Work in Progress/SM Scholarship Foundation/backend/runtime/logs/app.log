@@ -8295,3 +8295,175 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1437212152.357
     'REQUEST_TIME' => 1437212152
 ]
+2015-07-18 18:49:57 [::1][-][5ji6mjskh6eh7qiugffcm3k817][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'count' (T_STRING)' in C:\Users\Alphabet\Documents\GitHub\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\reportico\yii2-reportico\components\reportico.php(4578) : eval()'d code:1
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-07-18 18:49:56 [::1][-][5ji6mjskh6eh7qiugffcm3k817][info][application] $_GET = [
+    'r' => 'reportico/reportico/ajax'
+]
+
+$_POST = [
+    'reportico_session_name' => 'NS_'
+    'debug_mode' => '0'
+    'target_format' => 'HTML'
+    'target_style' => 'TABLE'
+    'user_criteria_entered' => '1'
+    'target_show_criteria' => '1'
+    'target_show_group_headers' => '1'
+    'target_show_detail' => '1'
+    'target_show_group_trailers' => '1'
+    'target_show_column_headers' => '1'
+    'target_show_graph' => '1'
+    'execute_mode' => 'EXECUTE'
+    'submitPrepare' => '1'
+    'reportico_ajax_called' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '6b961994c9cdc18299df361e5df8d2de6f64a47c556df5bdc3568860ec22ffeda:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"vrsn-BdoqelW0U36kAADPNya5tPcFWAW\";}'
+    'PHPSESSID' => '5ji6mjskh6eh7qiugffcm3k817'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/smfoundation/SMF-Project/Application/Module%202/Work%20in%20Progress/SM%20Scholarship%20Foundation/backend/web/'
+    'reportico' => [
+        'awaiting_initial_defaults' => false
+        'firsttimeIn' => true
+        'execute_mode' => 'EXECUTE'
+        'project' => 'foundationreports'
+        'target_menu' => false
+        'project_path' => 'C:\\Users\\Alphabet\\Documents\\GitHub\\SMF-Project\\Application\\Module 2\\Work in Progress\\SM Scholarship Foundation\\backend\\runtime/reportico/projects/foundationreports'
+        'reportico_language' => 'en_gb'
+        'external_user' => 'guest'
+        'external_param1' => false
+        'external_param2' => false
+        'external_param3' => false
+        'user_parameters' => []
+        'dropdown_menu' => false
+        'static_menu' => false
+        'charting_engine' => 'PCHART'
+        'charting_engine_html' => 'NVD3'
+        'output_template_parameters' => [
+            'show_hide_navigation_menu' => 'show'
+            'show_hide_dropdown_menu' => 'show'
+            'show_hide_report_output_title' => 'show'
+            'show_hide_prepare_section_boxes' => 'show'
+            'show_hide_prepare_pdf_button' => 'show'
+            'show_hide_prepare_html_button' => 'show'
+            'show_hide_prepare_print_html_button' => 'show'
+            'show_hide_prepare_csv_button' => 'show'
+            'show_hide_prepare_page_style' => 'show'
+        ]
+        'dynamic_grids' => false
+        'dynamic_grids_sortable' => true
+        'dynamic_grids_searchable' => true
+        'dynamic_grids_paging' => false
+        'dynamic_grids_page_size' => 10
+        'framework_parent' => 'yii'
+        'access_mode' => 'FULL'
+        'firstTimeIn' => false
+        'latestRequest' => [
+            'r' => 'reportico/reportico/ajax'
+            'reportico_session_name' => 'NS_'
+            'debug_mode' => '0'
+            'target_format' => 'HTML'
+            'target_style' => 'TABLE'
+            'user_criteria_entered' => '1'
+            'target_show_criteria' => '1'
+            'target_show_group_headers' => '1'
+            'target_show_detail' => '1'
+            'target_show_group_trailers' => '1'
+            'target_show_column_headers' => '1'
+            'target_show_graph' => '1'
+            'execute_mode' => 'EXECUTE'
+            'submitPrepare' => '1'
+            'reportico_ajax_called' => '1'
+        ]
+        'reporticourl' => '../../vendor/reportico/yii2-reportico/components'
+        'reportico_ajax_script_url' => '/smfoundation/SMF-Project/Application/Module 2/Work in Progress/SM Scholarship Foundation/backend/web/index.php'
+        'reportico_template' => false
+        'forward_url_get_parameters' => 'r=reportico/reportico/ajax'
+        'forward_url_get_parameters_graph' => 'reportico/graph'
+        'forward_url_get_parameters_dbimage' => 'reportico/dbimage'
+        'bootstrap_styles' => '3'
+        'force_reportico_mini_maintains' => false
+        'url_path_to_assets' => '/smfoundation/SMF-Project/Application/Module 2/Work in Progress/SM Scholarship Foundation/backend/web/assets/4baa2d05'
+        'jquery_preloaded' => false
+        'bootstrap_preloaded' => false
+        'loggedin' => true
+        'admin_password' => '1'
+        'database' => null
+        'hostname' => null
+        'driver' => 'mysql'
+        'server' => null
+        'protocol' => null
+        'progress_text' => 'Ready'
+        'progress_status' => 'READY'
+        'target_format' => 'HTML'
+        'xmlout' => 'Summary_Report'
+        'show_print_button' => true
+        'target_show_detail' => '1'
+        'target_show_graph' => '1'
+        'target_show_group_headers' => '1'
+        'target_show_group_trailers' => '1'
+        'target_show_column_headers' => '1'
+        'target_show_criteria' => '1'
+        'target_style' => 'TABLE'
+        'xmlin' => 'Summary_Report'
+        'xmlintext' => '<?xml version=\"1.0\"?><Report><ReportQuery><Format><ReportTitle>Summary Report</ReportTitle><ReportDescription></ReportDescription><PageSize>.DEFAULT</PageSize><PageOrientation>.DEFAULT</PageOrientation><TopMargin></TopMargin><BottomMargin></BottomMargin><RightMargin></RightMargin><LeftMargin></LeftMargin><pdfFont></pdfFont><pdfFontSize></pdfFontSize><PreExecuteCode>select count (distinct scholars_scholar_id) number_of_scholars from scholars</PreExecuteCode><formBetweenRows>solidline</formBetweenRows><gridDisplay>.DEFAULT</gridDisplay><gridSortable>.DEFAULT</gridSortable><gridSearchable>.DEFAULT</gridSearchable><gridPageable>.DEFAULT</gridPageable><gridPageSize>.DEFAULT</gridPageSize></Format><Datasource><SourceType>database</SourceType><SourceConnection><DatabaseType>mysql</DatabaseType><DatabaseName></DatabaseName><HostName></HostName><ServiceName></ServiceName><UserName></UserName><Password></Password></SourceConnection></Datasource><EntryForm><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection>all</RowSelection><SQL><QuerySql></QuerySql><SQLRaw>select schools.school_name, scholars.scholar_id
+from schools
+inner join scholars
+on scholars.scholar_school_id=schools.school_id</SQLRaw></SQL><QueryColumns><QueryColumn><Name>scholar_id</Name><TableName>scholars</TableName><ColumnName>scholar_id</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>school_name</Name><TableName>schools</TableName><ColumnName>school_name</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>number_of_scholars</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><PreSQLS></PreSQLS></Query><Assignments></Assignments><Criteria></Criteria><Output><PageHeaders><PageHeader><LineNumber>1</LineNumber><HeaderText>{REPORT_TITLE}{STYLE border-width: 1 0 1 0; margin: 15px 0px 0px 0px; border-color: #000000; font-size: 18; border-style: solid;padding:5px 0px 5px 0px; height:1cm; background-color: #000000; color: #ffffff; text-align: center}</HeaderText><Format><ColumnStartPDF></ColumnStartPDF><justify>center</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageHeader><PageHeader><LineNumber>1</LineNumber><HeaderText>Time: date(\'Y-m-d H:i:s\'){STYLE font-size: 10; text-align: right; font-style: italic;}</HeaderText><Format><ColumnStartPDF></ColumnStartPDF><justify>right</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageHeader></PageHeaders><PageFooters><PageFooter><LineNumber>2</LineNumber><FooterText>Page: {PAGE}{STYLE border-width: 1 0 0 0; margin: 40 0 0 0; font-style: italic; }</FooterText><Format><ColumnStartPDF></ColumnStartPDF><justify>center</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageFooter></PageFooters><DisplayOrders><DisplayOrder><ColumnName>scholar_id</ColumnName><OrderNumber>1</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>school_name</ColumnName><OrderNumber>2</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>number_of_scholars</ColumnName><OrderNumber>3</OrderNumber></DisplayOrder></DisplayOrders><Groups><Group><GroupName>school_name</GroupName><BeforeGroupHeader>solidline</BeforeGroupHeader><AfterGroupHeader>blankline</AfterGroupHeader><BeforeGroupTrailer>blankline</BeforeGroupTrailer><AfterGroupTrailer>blankline</AfterGroupTrailer><GroupHeaders></GroupHeaders><GroupTrailers></GroupTrailers></Group></Groups><Graphs><Graph><GraphColumn>school_name</GraphColumn><GraphColor>.DEFAULT</GraphColor><Title>Number of Scholars</Title><GraphWidth>.DEFAULT</GraphWidth><GraphHeight>.DEFAULT</GraphHeight><GraphWidthPDF>.DEFAULT</GraphWidthPDF><GraphHeightPDF>.DEFAULT</GraphHeightPDF><XTitle>School</XTitle><YTitle>Scholar</YTitle><GridPosition>.DEFAULT</GridPosition><XGridDisplay>.DEFAULT</XGridDisplay><XGridColor>.DEFAULT</XGridColor><YGridDisplay>.DEFAULT</YGridDisplay><YGridColor>.DEFAULT</YGridColor><XLabelColumn>number_of_scholars</XLabelColumn><TitleFont>.DEFAULT</TitleFont><TitleFontStyle>.DEFAULT</TitleFontStyle><TitleFontSize>.DEFAULT</TitleFontSize><TitleColor>.DEFAULT</TitleColor><XTitleFont>.DEFAULT</XTitleFont><XTitleFontStyle>.DEFAULT</XTitleFontStyle><XTitleFontSize>.DEFAULT</XTitleFontSize><XTitleColor>.DEFAULT</XTitleColor><YTitleFont>.DEFAULT</YTitleFont><YTitleFontStyle>.DEFAULT</YTitleFontStyle><YTitleFontSize>.DEFAULT</YTitleFontSize><YTitleColor>.DEFAULT</YTitleColor><XAxisColor>.DEFAULT</XAxisColor><XAxisFont>.DEFAULT</XAxisFont><XAxisFontStyle>.DEFAULT</XAxisFontStyle><XAxisFontSize>.DEFAULT</XAxisFontSize><XAxisFontColor>.DEFAULT</XAxisFontColor><YAxisColor>.DEFAULT</YAxisColor><YAxisFont>.DEFAULT</YAxisFont><YAxisFontStyle>.DEFAULT</YAxisFontStyle><YAxisFontSize>.DEFAULT</YAxisFontSize><YAxisFontColor>.DEFAULT</YAxisFontColor><XTickInterval>.DEFAULT</XTickInterval><YTickInterval>.DEFAULT</YTickInterval><XTickLabelInterval>.DEFAULT</XTickLabelInterval><YTickLabelInterval>.DEFAULT</YTickLabelInterval><MarginColor>.DEFAULT</MarginColor><MarginLeft>.DEFAULT</MarginLeft><MarginRight>.DEFAULT</MarginRight><MarginTop>.DEFAULT</MarginTop><MarginBottom>.DEFAULT</MarginBottom><Plots><Plot><PlotColumn>number_of_scholars</PlotColumn><PlotType>BAR</PlotType><LineColor>#000</LineColor><DataType>number</DataType><Legend></Legend><FillColor></FillColor></Plot></Plots></Graph></Graphs></Output></EntryForm></ReportQuery></Report>'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '312'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://localhost/smfoundation/SMF-Project/Application/Module%202/Work%20in%20Progress/SM%20Scholarship%20Foundation/backend/web/index.php?r=reportico'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=6b961994c9cdc18299df361e5df8d2de6f64a47c556df5bdc3568860ec22ffeda%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22vrsn-BdoqelW0U36kAADPNya5tPcFWAW%22%3B%7D; PHPSESSID=5ji6mjskh6eh7qiugffcm3k817'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Skype\\Phone\\'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/smfoundation/SMF-Project/Application/Module 2/Work in Progress/SM Scholarship Foundation/backend/web/index.php'
+    'REMOTE_PORT' => '53977'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=reportico/reportico/ajax'
+    'REQUEST_URI' => '/smfoundation/SMF-Project/Application/Module%202/Work%20in%20Progress/SM%20Scholarship%20Foundation/backend/web/index.php?r=reportico/reportico/ajax'
+    'SCRIPT_NAME' => '/smfoundation/SMF-Project/Application/Module 2/Work in Progress/SM Scholarship Foundation/backend/web/index.php'
+    'PHP_SELF' => '/smfoundation/SMF-Project/Application/Module 2/Work in Progress/SM Scholarship Foundation/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1437238196.749
+    'REQUEST_TIME' => 1437238196
+]
