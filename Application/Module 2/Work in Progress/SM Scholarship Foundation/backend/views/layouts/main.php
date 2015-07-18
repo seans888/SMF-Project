@@ -359,7 +359,10 @@ DashboardAsset::register($this);
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/reports/index'); ?>"><i class="fa fa-circle-o"></i> Grade Reports</a></li>
+                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/grade_report/index'); ?>"><i class="fa fa-circle-o"></i> Grade Report</a></li>
+              </ul>
+			  <ul class="treeview-menu">
+                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/gpa_report/index'); ?>"><i class="fa fa-circle-o"></i> GPA Report</a></li>
               </ul>
             </li>
             <li>
