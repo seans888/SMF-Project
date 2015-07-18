@@ -6955,3 +6955,1343 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1437206515.917
     'REQUEST_TIME' => 1437206515
 ]
+2015-07-18 11:35:20 [127.0.0.1][2][eetskhqiu99i2n268urjt2fkh2][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ','' in C:\xampp\htdocs\SM Scholarship Foundation\vendor\reportico\yii2-reportico\components\reportico.php(4877) : eval()'d code:1
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-07-18 11:35:20 [127.0.0.1][2][eetskhqiu99i2n268urjt2fkh2][info][application] $_GET = [
+    'r' => 'reportico/reportico/ajax'
+]
+
+$_POST = [
+    'reportico_session_name' => 'NS_'
+    'debug_mode' => '0'
+    'target_format' => 'HTML'
+    'target_style' => 'TABLE'
+    'user_criteria_entered' => '1'
+    'target_show_criteria' => '1'
+    'target_show_group_headers' => '1'
+    'target_show_detail' => '1'
+    'target_show_group_trailers' => '1'
+    'target_show_column_headers' => '1'
+    'MANUAL_scholar_select' => ''
+    'schoolyear_select' => ''
+    'schoolterm_select' => ''
+    'execute_mode' => 'EXECUTE'
+    'submitPrepare' => '1'
+    'reportico_ajax_called' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'dd27abe5f5710165021e2490eb882176a4ce8d089efc746b85cbaf15647960e3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7b5wbPegfPELvm3YONHD_K8pU1yj2I3j\";}'
+    'PHPSESSID' => 'eetskhqiu99i2n268urjt2fkh2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'reportico' => [
+        'awaiting_initial_defaults' => false
+        'firsttimeIn' => true
+        'execute_mode' => 'EXECUTE'
+        'project' => 'foundationreports'
+        'target_menu' => false
+        'project_path' => 'C:\\xampp\\htdocs\\SM Scholarship Foundation\\backend\\runtime/reportico/projects/foundationreports'
+        'reportico_language' => 'en_gb'
+        'external_user' => 2
+        'external_param1' => false
+        'external_param2' => false
+        'external_param3' => false
+        'user_parameters' => []
+        'dropdown_menu' => false
+        'static_menu' => false
+        'charting_engine' => 'PCHART'
+        'charting_engine_html' => 'NVD3'
+        'output_template_parameters' => [
+            'show_hide_navigation_menu' => 'show'
+            'show_hide_dropdown_menu' => 'show'
+            'show_hide_report_output_title' => 'show'
+            'show_hide_prepare_section_boxes' => 'show'
+            'show_hide_prepare_pdf_button' => 'show'
+            'show_hide_prepare_html_button' => 'show'
+            'show_hide_prepare_print_html_button' => 'show'
+            'show_hide_prepare_csv_button' => 'show'
+            'show_hide_prepare_page_style' => 'show'
+        ]
+        'dynamic_grids' => false
+        'dynamic_grids_sortable' => true
+        'dynamic_grids_searchable' => true
+        'dynamic_grids_paging' => false
+        'dynamic_grids_page_size' => 10
+        'framework_parent' => 'yii'
+        'access_mode' => 'FULL'
+        'firstTimeIn' => false
+        'latestRequest' => [
+            'r' => 'reportico/reportico/ajax'
+            'reportico_session_name' => 'NS_'
+            'debug_mode' => '0'
+            'target_format' => 'HTML'
+            'target_style' => 'TABLE'
+            'user_criteria_entered' => '1'
+            'target_show_criteria' => '1'
+            'target_show_group_headers' => '1'
+            'target_show_detail' => '1'
+            'target_show_group_trailers' => '1'
+            'target_show_column_headers' => '1'
+            'MANUAL_scholar_select' => ''
+            'schoolyear_select' => ''
+            'schoolterm_select' => ''
+            'execute_mode' => 'EXECUTE'
+            'submitPrepare' => '1'
+            'reportico_ajax_called' => '1'
+        ]
+        'reporticourl' => '../../vendor/reportico/yii2-reportico/components'
+        'reportico_ajax_script_url' => '/SM Scholarship Foundation/backend/web/index.php'
+        'reportico_template' => false
+        'forward_url_get_parameters' => 'r=reportico/reportico/ajax'
+        'forward_url_get_parameters_graph' => 'reportico/graph'
+        'forward_url_get_parameters_dbimage' => 'reportico/dbimage'
+        'bootstrap_styles' => '3'
+        'force_reportico_mini_maintains' => false
+        'url_path_to_assets' => '/SM Scholarship Foundation/backend/web/assets/f2c366c7'
+        'jquery_preloaded' => false
+        'bootstrap_preloaded' => false
+        'loggedin' => true
+        'admin_password' => '1'
+        'database' => null
+        'hostname' => null
+        'driver' => 'mysql'
+        'server' => null
+        'protocol' => null
+        'progress_text' => 'Ready'
+        'progress_status' => 'READY'
+        'target_format' => 'HTML'
+        'xmlin' => 'GPA_Report'
+        'xmlout' => 'GPA_Report'
+        'show_print_button' => true
+        'target_show_detail' => '1'
+        'target_show_graph' => false
+        'target_show_group_headers' => '1'
+        'target_show_group_trailers' => '1'
+        'target_show_column_headers' => '1'
+        'target_show_criteria' => '1'
+        'target_style' => 'TABLE'
+        'xmlintext' => '<?xml version=\"1.0\"?><Report><ReportQuery><Format><ReportTitle>GPA Report</ReportTitle><ReportDescription>Displays Scholar GPA based on entered criteria</ReportDescription><PageSize>.DEFAULT</PageSize><PageOrientation>.DEFAULT</PageOrientation><TopMargin></TopMargin><BottomMargin></BottomMargin><RightMargin></RightMargin><LeftMargin></LeftMargin><pdfFont></pdfFont><pdfFontSize></pdfFontSize><PreExecuteCode>NONE</PreExecuteCode><formBetweenRows>solidline</formBetweenRows><gridDisplay>.DEFAULT</gridDisplay><gridSortable>.DEFAULT</gridSortable><gridSearchable>.DEFAULT</gridSearchable><gridPageable>.DEFAULT</gridPageable><gridPageSize>.DEFAULT</gridPageSize></Format><Datasource><SourceType>database</SourceType><SourceConnection><DatabaseType>mysql</DatabaseType><DatabaseName></DatabaseName><HostName></HostName><ServiceName></ServiceName><UserName></UserName><Password></Password></SourceConnection></Datasource><EntryForm><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection>all</RowSelection><SQL><QuerySql></QuerySql><SQLRaw>SELECT 
+grade_scholar_id Scholar_ID,
+(SELECT n.scholar_lastName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id) Scholar_Last_Name,
+(SELECT n.scholar_firstName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id) Scholar_First_Name,
+(SELECT s.school_name
+FROM schools s
+WHERE s.school_id = grades.School_id) School_Name,
+grade_SchoolYear School_Year,
+grade_Term Term,
+grade_subject Subject,
+grade_units Units,
+grade_value Raw_Grade,
+equivalence.Equivalent_upper Percentile_Equivalent,
+equivalence.Numerical_Grade,
+equivalence.Letter_Grade Letter_Grade,
+equivalence.Foundation_Rating Foundation_Rating,
+equivalence.School_Rating School_Rating
+FROM grades
+JOIN equivalence on (grades.grade_value = equivalence.Numerical_Grade OR grades.grade_value = equivalence.Letter_Grade) AND grades.School_id = equivalence.School_id
+WHERE 1 = 1
+[AND grade_scholar_id IN ( {scholar_select, VALUE} ) ]
+[AND grade_SchoolYear IN ( {schoolyear_select, VALUE})]
+[AND grade_Term IN ( {schoolterm_select, VALUE})]
+[AND equivalence.Foundation_Rating IN ({foundationrating_select, VALUE})]
+ORDER BY grade_scholar_lastName, grade_schoolYear, grade_Term</SQLRaw></SQL><QueryColumns><QueryColumn><Name>Scholar_ID</Name><TableName></TableName><ColumnName>grade_scholar_id</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Scholar_Last_Name</Name><TableName></TableName><ColumnName>(SELECT n.scholar_lastName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Scholar_First_Name</Name><TableName></TableName><ColumnName>(SELECT n.scholar_firstName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Name</Name><TableName></TableName><ColumnName>(SELECT s.school_name
+FROM schools s
+WHERE s.school_id = grades.School_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Year</Name><TableName></TableName><ColumnName>grade_SchoolYear</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Term</Name><TableName></TableName><ColumnName>grade_Term</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Subject</Name><TableName></TableName><ColumnName>grade_subject</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Units</Name><TableName></TableName><ColumnName>grade_units</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Raw_Grade</Name><TableName></TableName><ColumnName>grade_value</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Percentile_Equivalent</Name><TableName>equivalence</TableName><ColumnName>Equivalent_upper</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Numerical_Grade</Name><TableName>equivalence</TableName><ColumnName>Numerical_Grade</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Letter_Grade</Name><TableName>equivalence</TableName><ColumnName>Letter_Grade</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Foundation_Rating</Name><TableName>equivalence</TableName><ColumnName>Foundation_Rating</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Rating</Name><TableName>equivalence</TableName><ColumnName>School_Rating</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>GPA</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>mult</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>sum_mult</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><PreSQLS></PreSQLS></Query><Assignments><Assignment><AssignName>GPA</AssignName><AssignNameNew></AssignNameNew><Expression>round({sum_mult}/sum({Units},{Scholar_ID})), 2)</Expression><Condition></Condition></Assignment><Assignment><AssignName>mult</AssignName><AssignNameNew></AssignNameNew><Expression>{Numerical_Grade}*{Units}</Expression><Condition></Condition></Assignment><Assignment><AssignName>sum_mult</AssignName><AssignNameNew></AssignNameNew><Expression>sum({mult},{Scholar_ID})</Expression><Condition></Condition></Assignment></Assignments><Criteria><CriteriaItem><Name>scholar_select</Name><Title>Scholar ID</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>TEXTFIELD</CriteriaDisplay><ExpandDisplay>MULTI</ExpandDisplay><ReturnColumn>grade_scholar_id</ReturnColumn><DisplayColumn>grade_scholar_id</DisplayColumn><OverviewColumn>grade_scholar_id</OverviewColumn><MatchColumn>grade_scholar_id</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_scholar_id
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_scholar_id</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>schoolyear_select</Name><Title>School Year</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>DROPDOWN</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>grade_SchoolYear</ReturnColumn><DisplayColumn>grade_SchoolYear</DisplayColumn><OverviewColumn>grade_SchoolYear</OverviewColumn><MatchColumn>grade_SchoolYear</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_SchoolYear
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_SchoolYear</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>schoolterm_select</Name><Title>Term</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>DROPDOWN</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>grade_Term</ReturnColumn><DisplayColumn>grade_Term</DisplayColumn><OverviewColumn>grade_Term</OverviewColumn><MatchColumn>grade_Term</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_Term
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_Term</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>foundationrating_select</Name><Title>Foundation Rating</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>CHECKBOX</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>Foundation_Rating</ReturnColumn><DisplayColumn>Foundation_Rating</DisplayColumn><OverviewColumn>Foundation_Rating</OverviewColumn><MatchColumn>Foundation_Rating</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT Foundation_Rating
+FROM  equivalence
+WHERE 1 = 1
+AND Foundation_Rating&lt;&gt;&quot;&quot;</SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>Foundation_Rating</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem></Criteria><Output><PageHeaders><PageHeader><LineNumber>1</LineNumber><HeaderText>{REPORT_TITLE}{STYLE border-width: 1 0 1 0; margin: 15px 0px 0px 0px; border-color: #000000; font-size: 18; border-style: solid;padding:5px 0px 5px 0px; height:1cm; background-color: #000000; color: #ffffff; text-align: center}</HeaderText><Format><ColumnStartPDF></ColumnStartPDF><justify>center</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageHeader><PageHeader><LineNumber>1</LineNumber><HeaderText>Time: date(\'Y-m-d H:i:s\'){STYLE font-size: 10; text-align: right; font-style: italic;}</HeaderText><Format><ColumnStartPDF></ColumnStartPDF><justify>right</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageHeader></PageHeaders><PageFooters><PageFooter><LineNumber>2</LineNumber><FooterText>Page: {PAGE}{STYLE border-width: 1 0 0 0; margin: 40 0 0 0; font-style: italic; }</FooterText><Format><ColumnStartPDF></ColumnStartPDF><justify>center</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageFooter></PageFooters><DisplayOrders><DisplayOrder><ColumnName>Scholar_ID</ColumnName><OrderNumber>1</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Scholar_Last_Name</ColumnName><OrderNumber>2</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Scholar_First_Name</ColumnName><OrderNumber>3</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Name</ColumnName><OrderNumber>4</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Year</ColumnName><OrderNumber>5</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Term</ColumnName><OrderNumber>6</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Subject</ColumnName><OrderNumber>7</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Units</ColumnName><OrderNumber>8</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Raw_Grade</ColumnName><OrderNumber>9</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Percentile_Equivalent</ColumnName><OrderNumber>10</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Numerical_Grade</ColumnName><OrderNumber>11</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Letter_Grade</ColumnName><OrderNumber>12</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Foundation_Rating</ColumnName><OrderNumber>13</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Rating</ColumnName><OrderNumber>14</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>GPA</ColumnName><OrderNumber>15</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>mult</ColumnName><OrderNumber>16</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>sum_mult</ColumnName><OrderNumber>17</OrderNumber></DisplayOrder></DisplayOrders><Groups><Group><GroupName>Scholar_ID</GroupName><BeforeGroupHeader>solidline</BeforeGroupHeader><AfterGroupHeader>blankline</AfterGroupHeader><BeforeGroupTrailer>blankline</BeforeGroupTrailer><AfterGroupTrailer>blankline</AfterGroupTrailer><GroupHeaders><GroupHeader><GroupHeaderColumn>Scholar_ID</GroupHeaderColumn><GroupHeaderCustom></GroupHeaderCustom></GroupHeader></GroupHeaders><GroupTrailers><GroupTrailer><GroupTrailerDisplayColumn>Numerical_Grade</GroupTrailerDisplayColumn><GroupTrailerValueColumn>GPA</GroupTrailerValueColumn><GroupTrailerCustom></GroupTrailerCustom></GroupTrailer></GroupTrailers></Group></Groups><Graphs></Graphs></Output></EntryForm></ReportQuery></Report>'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '353'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://127.0.0.1/SM%20Scholarship%20Foundation/backend/web/index.php?r=reportico'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf=dd27abe5f5710165021e2490eb882176a4ce8d089efc746b85cbaf15647960e3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227b5wbPegfPELvm3YONHD_K8pU1yj2I3j%22%3B%7D; PHPSESSID=eetskhqiu99i2n268urjt2fkh2'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;c:\\Program Files\\Microsoft SQL Server\\100\\Tools\\Binn\\;c:\\Program Files\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Users\\amirc_000\\Documents\\School\\Sana IDE\\apache-ant-1.9.4\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/SM Scholarship Foundation/backend/web/index.php'
+    'REMOTE_PORT' => '63750'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=reportico/reportico/ajax'
+    'REQUEST_URI' => '/SM%20Scholarship%20Foundation/backend/web/index.php?r=reportico/reportico/ajax'
+    'SCRIPT_NAME' => '/SM Scholarship Foundation/backend/web/index.php'
+    'PHP_SELF' => '/SM Scholarship Foundation/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1437212120.064
+    'REQUEST_TIME' => 1437212120
+]
+2015-07-18 11:35:40 [127.0.0.1][2][eetskhqiu99i2n268urjt2fkh2][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ','' in C:\xampp\htdocs\SM Scholarship Foundation\vendor\reportico\yii2-reportico\components\reportico.php(4877) : eval()'d code:1
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-07-18 11:35:39 [127.0.0.1][2][eetskhqiu99i2n268urjt2fkh2][info][application] $_GET = [
+    'r' => 'reportico/reportico/ajax'
+]
+
+$_POST = [
+    'reportico_session_name' => 'NS_'
+    'debug_mode' => '0'
+    'target_format' => 'HTML'
+    'target_style' => 'TABLE'
+    'user_criteria_entered' => '1'
+    'target_show_criteria' => '1'
+    'target_show_group_headers' => '1'
+    'target_show_detail' => '1'
+    'target_show_group_trailers' => '1'
+    'target_show_column_headers' => '1'
+    'HIDDEN_scholar_select' => [
+        0 => '4'
+    ]
+    'MANUAL_scholar_select' => '4'
+    'schoolyear_select' => '2015'
+    'schoolterm_select' => '1'
+    'foundationrating_select' => [
+        0 => 'PASS'
+        1 => 'FAIL'
+    ]
+    'execute_mode' => 'EXECUTE'
+    'submitPrepare' => '1'
+    'reportico_ajax_called' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'dd27abe5f5710165021e2490eb882176a4ce8d089efc746b85cbaf15647960e3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7b5wbPegfPELvm3YONHD_K8pU1yj2I3j\";}'
+    'PHPSESSID' => 'eetskhqiu99i2n268urjt2fkh2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'reportico' => [
+        'awaiting_initial_defaults' => false
+        'firsttimeIn' => true
+        'execute_mode' => 'EXECUTE'
+        'project' => 'foundationreports'
+        'target_menu' => false
+        'project_path' => 'C:\\xampp\\htdocs\\SM Scholarship Foundation\\backend\\runtime/reportico/projects/foundationreports'
+        'reportico_language' => 'en_gb'
+        'external_user' => 2
+        'external_param1' => false
+        'external_param2' => false
+        'external_param3' => false
+        'user_parameters' => []
+        'dropdown_menu' => false
+        'static_menu' => false
+        'charting_engine' => 'PCHART'
+        'charting_engine_html' => 'NVD3'
+        'output_template_parameters' => [
+            'show_hide_navigation_menu' => 'show'
+            'show_hide_dropdown_menu' => 'show'
+            'show_hide_report_output_title' => 'show'
+            'show_hide_prepare_section_boxes' => 'show'
+            'show_hide_prepare_pdf_button' => 'show'
+            'show_hide_prepare_html_button' => 'show'
+            'show_hide_prepare_print_html_button' => 'show'
+            'show_hide_prepare_csv_button' => 'show'
+            'show_hide_prepare_page_style' => 'show'
+        ]
+        'dynamic_grids' => false
+        'dynamic_grids_sortable' => true
+        'dynamic_grids_searchable' => true
+        'dynamic_grids_paging' => false
+        'dynamic_grids_page_size' => 10
+        'framework_parent' => 'yii'
+        'access_mode' => 'FULL'
+        'firstTimeIn' => false
+        'latestRequest' => [
+            'r' => 'reportico/reportico/ajax'
+            'reportico_session_name' => 'NS_'
+            'debug_mode' => '0'
+            'target_format' => 'HTML'
+            'target_style' => 'TABLE'
+            'user_criteria_entered' => '1'
+            'target_show_criteria' => '1'
+            'target_show_group_headers' => '1'
+            'target_show_detail' => '1'
+            'target_show_group_trailers' => '1'
+            'target_show_column_headers' => '1'
+            'HIDDEN_scholar_select' => [
+                0 => '4'
+            ]
+            'MANUAL_scholar_select' => '4'
+            'schoolyear_select' => '2015'
+            'schoolterm_select' => '1'
+            'foundationrating_select' => [
+                0 => 'PASS'
+                1 => 'FAIL'
+            ]
+            'execute_mode' => 'EXECUTE'
+            'submitPrepare' => '1'
+            'reportico_ajax_called' => '1'
+        ]
+        'reporticourl' => '../../vendor/reportico/yii2-reportico/components'
+        'reportico_ajax_script_url' => '/SM Scholarship Foundation/backend/web/index.php'
+        'reportico_template' => false
+        'forward_url_get_parameters' => 'r=reportico/reportico/ajax'
+        'forward_url_get_parameters_graph' => 'reportico/graph'
+        'forward_url_get_parameters_dbimage' => 'reportico/dbimage'
+        'bootstrap_styles' => '3'
+        'force_reportico_mini_maintains' => false
+        'url_path_to_assets' => '/SM Scholarship Foundation/backend/web/assets/f2c366c7'
+        'jquery_preloaded' => false
+        'bootstrap_preloaded' => false
+        'loggedin' => true
+        'admin_password' => '1'
+        'database' => null
+        'hostname' => null
+        'driver' => 'mysql'
+        'server' => null
+        'protocol' => null
+        'progress_text' => 'Ready'
+        'progress_status' => 'READY'
+        'target_format' => 'HTML'
+        'xmlin' => 'GPA_Report'
+        'xmlout' => 'GPA_Report'
+        'show_print_button' => true
+        'target_show_detail' => '1'
+        'target_show_graph' => false
+        'target_show_group_headers' => '1'
+        'target_show_group_trailers' => '1'
+        'target_show_column_headers' => '1'
+        'target_show_criteria' => '1'
+        'target_style' => 'TABLE'
+        'xmlintext' => '<?xml version=\"1.0\"?><Report><ReportQuery><Format><ReportTitle>GPA Report</ReportTitle><ReportDescription>Displays Scholar GPA based on entered criteria</ReportDescription><PageSize>.DEFAULT</PageSize><PageOrientation>.DEFAULT</PageOrientation><TopMargin></TopMargin><BottomMargin></BottomMargin><RightMargin></RightMargin><LeftMargin></LeftMargin><pdfFont></pdfFont><pdfFontSize></pdfFontSize><PreExecuteCode>NONE</PreExecuteCode><formBetweenRows>solidline</formBetweenRows><gridDisplay>.DEFAULT</gridDisplay><gridSortable>.DEFAULT</gridSortable><gridSearchable>.DEFAULT</gridSearchable><gridPageable>.DEFAULT</gridPageable><gridPageSize>.DEFAULT</gridPageSize></Format><Datasource><SourceType>database</SourceType><SourceConnection><DatabaseType>mysql</DatabaseType><DatabaseName></DatabaseName><HostName></HostName><ServiceName></ServiceName><UserName></UserName><Password></Password></SourceConnection></Datasource><EntryForm><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection>all</RowSelection><SQL><QuerySql></QuerySql><SQLRaw>SELECT 
+grade_scholar_id Scholar_ID,
+(SELECT n.scholar_lastName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id) Scholar_Last_Name,
+(SELECT n.scholar_firstName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id) Scholar_First_Name,
+(SELECT s.school_name
+FROM schools s
+WHERE s.school_id = grades.School_id) School_Name,
+grade_SchoolYear School_Year,
+grade_Term Term,
+grade_subject Subject,
+grade_units Units,
+grade_value Raw_Grade,
+equivalence.Equivalent_upper Percentile_Equivalent,
+equivalence.Numerical_Grade,
+equivalence.Letter_Grade Letter_Grade,
+equivalence.Foundation_Rating Foundation_Rating,
+equivalence.School_Rating School_Rating
+FROM grades
+JOIN equivalence on (grades.grade_value = equivalence.Numerical_Grade OR grades.grade_value = equivalence.Letter_Grade) AND grades.School_id = equivalence.School_id
+WHERE 1 = 1
+[AND grade_scholar_id IN ( {scholar_select, VALUE} ) ]
+[AND grade_SchoolYear IN ( {schoolyear_select, VALUE})]
+[AND grade_Term IN ( {schoolterm_select, VALUE})]
+[AND equivalence.Foundation_Rating IN ({foundationrating_select, VALUE})]
+ORDER BY grade_scholar_lastName, grade_schoolYear, grade_Term</SQLRaw></SQL><QueryColumns><QueryColumn><Name>Scholar_ID</Name><TableName></TableName><ColumnName>grade_scholar_id</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Scholar_Last_Name</Name><TableName></TableName><ColumnName>(SELECT n.scholar_lastName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Scholar_First_Name</Name><TableName></TableName><ColumnName>(SELECT n.scholar_firstName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Name</Name><TableName></TableName><ColumnName>(SELECT s.school_name
+FROM schools s
+WHERE s.school_id = grades.School_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Year</Name><TableName></TableName><ColumnName>grade_SchoolYear</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Term</Name><TableName></TableName><ColumnName>grade_Term</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Subject</Name><TableName></TableName><ColumnName>grade_subject</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Units</Name><TableName></TableName><ColumnName>grade_units</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Raw_Grade</Name><TableName></TableName><ColumnName>grade_value</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Percentile_Equivalent</Name><TableName>equivalence</TableName><ColumnName>Equivalent_upper</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Numerical_Grade</Name><TableName>equivalence</TableName><ColumnName>Numerical_Grade</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Letter_Grade</Name><TableName>equivalence</TableName><ColumnName>Letter_Grade</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Foundation_Rating</Name><TableName>equivalence</TableName><ColumnName>Foundation_Rating</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Rating</Name><TableName>equivalence</TableName><ColumnName>School_Rating</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>GPA</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>mult</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>sum_mult</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><PreSQLS></PreSQLS></Query><Assignments><Assignment><AssignName>GPA</AssignName><AssignNameNew></AssignNameNew><Expression>round({sum_mult}/sum({Units},{Scholar_ID})), 2)</Expression><Condition></Condition></Assignment><Assignment><AssignName>mult</AssignName><AssignNameNew></AssignNameNew><Expression>{Numerical_Grade}*{Units}</Expression><Condition></Condition></Assignment><Assignment><AssignName>sum_mult</AssignName><AssignNameNew></AssignNameNew><Expression>sum({mult},{Scholar_ID})</Expression><Condition></Condition></Assignment></Assignments><Criteria><CriteriaItem><Name>scholar_select</Name><Title>Scholar ID</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>TEXTFIELD</CriteriaDisplay><ExpandDisplay>MULTI</ExpandDisplay><ReturnColumn>grade_scholar_id</ReturnColumn><DisplayColumn>grade_scholar_id</DisplayColumn><OverviewColumn>grade_scholar_id</OverviewColumn><MatchColumn>grade_scholar_id</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_scholar_id
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_scholar_id</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>schoolyear_select</Name><Title>School Year</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>DROPDOWN</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>grade_SchoolYear</ReturnColumn><DisplayColumn>grade_SchoolYear</DisplayColumn><OverviewColumn>grade_SchoolYear</OverviewColumn><MatchColumn>grade_SchoolYear</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_SchoolYear
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_SchoolYear</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>schoolterm_select</Name><Title>Term</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>DROPDOWN</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>grade_Term</ReturnColumn><DisplayColumn>grade_Term</DisplayColumn><OverviewColumn>grade_Term</OverviewColumn><MatchColumn>grade_Term</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_Term
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_Term</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>foundationrating_select</Name><Title>Foundation Rating</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>CHECKBOX</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>Foundation_Rating</ReturnColumn><DisplayColumn>Foundation_Rating</DisplayColumn><OverviewColumn>Foundation_Rating</OverviewColumn><MatchColumn>Foundation_Rating</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT Foundation_Rating
+FROM  equivalence
+WHERE 1 = 1
+AND Foundation_Rating&lt;&gt;&quot;&quot;</SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>Foundation_Rating</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem></Criteria><Output><PageHeaders><PageHeader><LineNumber>1</LineNumber><HeaderText>{REPORT_TITLE}{STYLE border-width: 1 0 1 0; margin: 15px 0px 0px 0px; border-color: #000000; font-size: 18; border-style: solid;padding:5px 0px 5px 0px; height:1cm; background-color: #000000; color: #ffffff; text-align: center}</HeaderText><Format><ColumnStartPDF></ColumnStartPDF><justify>center</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageHeader><PageHeader><LineNumber>1</LineNumber><HeaderText>Time: date(\'Y-m-d H:i:s\'){STYLE font-size: 10; text-align: right; font-style: italic;}</HeaderText><Format><ColumnStartPDF></ColumnStartPDF><justify>right</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageHeader></PageHeaders><PageFooters><PageFooter><LineNumber>2</LineNumber><FooterText>Page: {PAGE}{STYLE border-width: 1 0 0 0; margin: 40 0 0 0; font-style: italic; }</FooterText><Format><ColumnStartPDF></ColumnStartPDF><justify>center</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageFooter></PageFooters><DisplayOrders><DisplayOrder><ColumnName>Scholar_ID</ColumnName><OrderNumber>1</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Scholar_Last_Name</ColumnName><OrderNumber>2</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Scholar_First_Name</ColumnName><OrderNumber>3</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Name</ColumnName><OrderNumber>4</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Year</ColumnName><OrderNumber>5</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Term</ColumnName><OrderNumber>6</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Subject</ColumnName><OrderNumber>7</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Units</ColumnName><OrderNumber>8</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Raw_Grade</ColumnName><OrderNumber>9</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Percentile_Equivalent</ColumnName><OrderNumber>10</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Numerical_Grade</ColumnName><OrderNumber>11</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Letter_Grade</ColumnName><OrderNumber>12</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Foundation_Rating</ColumnName><OrderNumber>13</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Rating</ColumnName><OrderNumber>14</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>GPA</ColumnName><OrderNumber>15</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>mult</ColumnName><OrderNumber>16</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>sum_mult</ColumnName><OrderNumber>17</OrderNumber></DisplayOrder></DisplayOrders><Groups><Group><GroupName>Scholar_ID</GroupName><BeforeGroupHeader>solidline</BeforeGroupHeader><AfterGroupHeader>blankline</AfterGroupHeader><BeforeGroupTrailer>blankline</BeforeGroupTrailer><AfterGroupTrailer>blankline</AfterGroupTrailer><GroupHeaders><GroupHeader><GroupHeaderColumn>Scholar_ID</GroupHeaderColumn><GroupHeaderCustom></GroupHeaderCustom></GroupHeader></GroupHeaders><GroupTrailers><GroupTrailer><GroupTrailerDisplayColumn>Numerical_Grade</GroupTrailerDisplayColumn><GroupTrailerValueColumn>GPA</GroupTrailerValueColumn><GroupTrailerCustom></GroupTrailerCustom></GroupTrailer></GroupTrailers></Group></Groups><Graphs></Graphs></Output></EntryForm></ReportQuery></Report>'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '459'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://127.0.0.1/SM%20Scholarship%20Foundation/backend/web/index.php?r=reportico'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf=dd27abe5f5710165021e2490eb882176a4ce8d089efc746b85cbaf15647960e3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227b5wbPegfPELvm3YONHD_K8pU1yj2I3j%22%3B%7D; PHPSESSID=eetskhqiu99i2n268urjt2fkh2'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;c:\\Program Files\\Microsoft SQL Server\\100\\Tools\\Binn\\;c:\\Program Files\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Users\\amirc_000\\Documents\\School\\Sana IDE\\apache-ant-1.9.4\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/SM Scholarship Foundation/backend/web/index.php'
+    'REMOTE_PORT' => '63750'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=reportico/reportico/ajax'
+    'REQUEST_URI' => '/SM%20Scholarship%20Foundation/backend/web/index.php?r=reportico/reportico/ajax'
+    'SCRIPT_NAME' => '/SM Scholarship Foundation/backend/web/index.php'
+    'PHP_SELF' => '/SM Scholarship Foundation/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1437212139.898
+    'REQUEST_TIME' => 1437212139
+]
+2015-07-18 11:35:44 [127.0.0.1][2][eetskhqiu99i2n268urjt2fkh2][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ','' in C:\xampp\htdocs\SM Scholarship Foundation\vendor\reportico\yii2-reportico\components\reportico.php(4877) : eval()'d code:1
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-07-18 11:35:44 [127.0.0.1][2][eetskhqiu99i2n268urjt2fkh2][info][application] $_GET = [
+    'r' => 'reportico/reportico/ajax'
+]
+
+$_POST = [
+    'reportico_session_name' => 'NS_'
+    'debug_mode' => '0'
+    'target_format' => 'HTML'
+    'target_style' => 'TABLE'
+    'user_criteria_entered' => '1'
+    'target_show_criteria' => '1'
+    'target_show_group_headers' => '1'
+    'target_show_detail' => '1'
+    'target_show_group_trailers' => '1'
+    'target_show_column_headers' => '1'
+    'HIDDEN_scholar_select' => [
+        0 => '4'
+    ]
+    'MANUAL_scholar_select' => '4'
+    'schoolyear_select' => '2015'
+    'schoolterm_select' => '1'
+    'foundationrating_select' => [
+        0 => 'PASS'
+    ]
+    'execute_mode' => 'EXECUTE'
+    'submitPrepare' => '1'
+    'reportico_ajax_called' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'dd27abe5f5710165021e2490eb882176a4ce8d089efc746b85cbaf15647960e3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7b5wbPegfPELvm3YONHD_K8pU1yj2I3j\";}'
+    'PHPSESSID' => 'eetskhqiu99i2n268urjt2fkh2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'reportico' => [
+        'awaiting_initial_defaults' => false
+        'firsttimeIn' => true
+        'execute_mode' => 'EXECUTE'
+        'project' => 'foundationreports'
+        'target_menu' => false
+        'project_path' => 'C:\\xampp\\htdocs\\SM Scholarship Foundation\\backend\\runtime/reportico/projects/foundationreports'
+        'reportico_language' => 'en_gb'
+        'external_user' => 2
+        'external_param1' => false
+        'external_param2' => false
+        'external_param3' => false
+        'user_parameters' => []
+        'dropdown_menu' => false
+        'static_menu' => false
+        'charting_engine' => 'PCHART'
+        'charting_engine_html' => 'NVD3'
+        'output_template_parameters' => [
+            'show_hide_navigation_menu' => 'show'
+            'show_hide_dropdown_menu' => 'show'
+            'show_hide_report_output_title' => 'show'
+            'show_hide_prepare_section_boxes' => 'show'
+            'show_hide_prepare_pdf_button' => 'show'
+            'show_hide_prepare_html_button' => 'show'
+            'show_hide_prepare_print_html_button' => 'show'
+            'show_hide_prepare_csv_button' => 'show'
+            'show_hide_prepare_page_style' => 'show'
+        ]
+        'dynamic_grids' => false
+        'dynamic_grids_sortable' => true
+        'dynamic_grids_searchable' => true
+        'dynamic_grids_paging' => false
+        'dynamic_grids_page_size' => 10
+        'framework_parent' => 'yii'
+        'access_mode' => 'FULL'
+        'firstTimeIn' => false
+        'latestRequest' => [
+            'r' => 'reportico/reportico/ajax'
+            'reportico_session_name' => 'NS_'
+            'debug_mode' => '0'
+            'target_format' => 'HTML'
+            'target_style' => 'TABLE'
+            'user_criteria_entered' => '1'
+            'target_show_criteria' => '1'
+            'target_show_group_headers' => '1'
+            'target_show_detail' => '1'
+            'target_show_group_trailers' => '1'
+            'target_show_column_headers' => '1'
+            'HIDDEN_scholar_select' => [
+                0 => '4'
+            ]
+            'MANUAL_scholar_select' => '4'
+            'schoolyear_select' => '2015'
+            'schoolterm_select' => '1'
+            'foundationrating_select' => [
+                0 => 'PASS'
+            ]
+            'execute_mode' => 'EXECUTE'
+            'submitPrepare' => '1'
+            'reportico_ajax_called' => '1'
+        ]
+        'reporticourl' => '../../vendor/reportico/yii2-reportico/components'
+        'reportico_ajax_script_url' => '/SM Scholarship Foundation/backend/web/index.php'
+        'reportico_template' => false
+        'forward_url_get_parameters' => 'r=reportico/reportico/ajax'
+        'forward_url_get_parameters_graph' => 'reportico/graph'
+        'forward_url_get_parameters_dbimage' => 'reportico/dbimage'
+        'bootstrap_styles' => '3'
+        'force_reportico_mini_maintains' => false
+        'url_path_to_assets' => '/SM Scholarship Foundation/backend/web/assets/f2c366c7'
+        'jquery_preloaded' => false
+        'bootstrap_preloaded' => false
+        'loggedin' => true
+        'admin_password' => '1'
+        'database' => null
+        'hostname' => null
+        'driver' => 'mysql'
+        'server' => null
+        'protocol' => null
+        'progress_text' => 'Ready'
+        'progress_status' => 'READY'
+        'target_format' => 'HTML'
+        'xmlin' => 'GPA_Report'
+        'xmlout' => 'GPA_Report'
+        'show_print_button' => true
+        'target_show_detail' => '1'
+        'target_show_graph' => false
+        'target_show_group_headers' => '1'
+        'target_show_group_trailers' => '1'
+        'target_show_column_headers' => '1'
+        'target_show_criteria' => '1'
+        'target_style' => 'TABLE'
+        'xmlintext' => '<?xml version=\"1.0\"?><Report><ReportQuery><Format><ReportTitle>GPA Report</ReportTitle><ReportDescription>Displays Scholar GPA based on entered criteria</ReportDescription><PageSize>.DEFAULT</PageSize><PageOrientation>.DEFAULT</PageOrientation><TopMargin></TopMargin><BottomMargin></BottomMargin><RightMargin></RightMargin><LeftMargin></LeftMargin><pdfFont></pdfFont><pdfFontSize></pdfFontSize><PreExecuteCode>NONE</PreExecuteCode><formBetweenRows>solidline</formBetweenRows><gridDisplay>.DEFAULT</gridDisplay><gridSortable>.DEFAULT</gridSortable><gridSearchable>.DEFAULT</gridSearchable><gridPageable>.DEFAULT</gridPageable><gridPageSize>.DEFAULT</gridPageSize></Format><Datasource><SourceType>database</SourceType><SourceConnection><DatabaseType>mysql</DatabaseType><DatabaseName></DatabaseName><HostName></HostName><ServiceName></ServiceName><UserName></UserName><Password></Password></SourceConnection></Datasource><EntryForm><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection>all</RowSelection><SQL><QuerySql></QuerySql><SQLRaw>SELECT 
+grade_scholar_id Scholar_ID,
+(SELECT n.scholar_lastName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id) Scholar_Last_Name,
+(SELECT n.scholar_firstName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id) Scholar_First_Name,
+(SELECT s.school_name
+FROM schools s
+WHERE s.school_id = grades.School_id) School_Name,
+grade_SchoolYear School_Year,
+grade_Term Term,
+grade_subject Subject,
+grade_units Units,
+grade_value Raw_Grade,
+equivalence.Equivalent_upper Percentile_Equivalent,
+equivalence.Numerical_Grade,
+equivalence.Letter_Grade Letter_Grade,
+equivalence.Foundation_Rating Foundation_Rating,
+equivalence.School_Rating School_Rating
+FROM grades
+JOIN equivalence on (grades.grade_value = equivalence.Numerical_Grade OR grades.grade_value = equivalence.Letter_Grade) AND grades.School_id = equivalence.School_id
+WHERE 1 = 1
+[AND grade_scholar_id IN ( {scholar_select, VALUE} ) ]
+[AND grade_SchoolYear IN ( {schoolyear_select, VALUE})]
+[AND grade_Term IN ( {schoolterm_select, VALUE})]
+[AND equivalence.Foundation_Rating IN ({foundationrating_select, VALUE})]
+ORDER BY grade_scholar_lastName, grade_schoolYear, grade_Term</SQLRaw></SQL><QueryColumns><QueryColumn><Name>Scholar_ID</Name><TableName></TableName><ColumnName>grade_scholar_id</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Scholar_Last_Name</Name><TableName></TableName><ColumnName>(SELECT n.scholar_lastName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Scholar_First_Name</Name><TableName></TableName><ColumnName>(SELECT n.scholar_firstName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Name</Name><TableName></TableName><ColumnName>(SELECT s.school_name
+FROM schools s
+WHERE s.school_id = grades.School_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Year</Name><TableName></TableName><ColumnName>grade_SchoolYear</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Term</Name><TableName></TableName><ColumnName>grade_Term</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Subject</Name><TableName></TableName><ColumnName>grade_subject</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Units</Name><TableName></TableName><ColumnName>grade_units</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Raw_Grade</Name><TableName></TableName><ColumnName>grade_value</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Percentile_Equivalent</Name><TableName>equivalence</TableName><ColumnName>Equivalent_upper</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Numerical_Grade</Name><TableName>equivalence</TableName><ColumnName>Numerical_Grade</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Letter_Grade</Name><TableName>equivalence</TableName><ColumnName>Letter_Grade</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Foundation_Rating</Name><TableName>equivalence</TableName><ColumnName>Foundation_Rating</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Rating</Name><TableName>equivalence</TableName><ColumnName>School_Rating</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>GPA</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>mult</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>sum_mult</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><PreSQLS></PreSQLS></Query><Assignments><Assignment><AssignName>GPA</AssignName><AssignNameNew></AssignNameNew><Expression>round({sum_mult}/sum({Units},{Scholar_ID})), 2)</Expression><Condition></Condition></Assignment><Assignment><AssignName>mult</AssignName><AssignNameNew></AssignNameNew><Expression>{Numerical_Grade}*{Units}</Expression><Condition></Condition></Assignment><Assignment><AssignName>sum_mult</AssignName><AssignNameNew></AssignNameNew><Expression>sum({mult},{Scholar_ID})</Expression><Condition></Condition></Assignment></Assignments><Criteria><CriteriaItem><Name>scholar_select</Name><Title>Scholar ID</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>TEXTFIELD</CriteriaDisplay><ExpandDisplay>MULTI</ExpandDisplay><ReturnColumn>grade_scholar_id</ReturnColumn><DisplayColumn>grade_scholar_id</DisplayColumn><OverviewColumn>grade_scholar_id</OverviewColumn><MatchColumn>grade_scholar_id</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_scholar_id
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_scholar_id</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>schoolyear_select</Name><Title>School Year</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>DROPDOWN</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>grade_SchoolYear</ReturnColumn><DisplayColumn>grade_SchoolYear</DisplayColumn><OverviewColumn>grade_SchoolYear</OverviewColumn><MatchColumn>grade_SchoolYear</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_SchoolYear
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_SchoolYear</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>schoolterm_select</Name><Title>Term</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>DROPDOWN</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>grade_Term</ReturnColumn><DisplayColumn>grade_Term</DisplayColumn><OverviewColumn>grade_Term</OverviewColumn><MatchColumn>grade_Term</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_Term
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_Term</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>foundationrating_select</Name><Title>Foundation Rating</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>CHECKBOX</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>Foundation_Rating</ReturnColumn><DisplayColumn>Foundation_Rating</DisplayColumn><OverviewColumn>Foundation_Rating</OverviewColumn><MatchColumn>Foundation_Rating</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT Foundation_Rating
+FROM  equivalence
+WHERE 1 = 1
+AND Foundation_Rating&lt;&gt;&quot;&quot;</SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>Foundation_Rating</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem></Criteria><Output><PageHeaders><PageHeader><LineNumber>1</LineNumber><HeaderText>{REPORT_TITLE}{STYLE border-width: 1 0 1 0; margin: 15px 0px 0px 0px; border-color: #000000; font-size: 18; border-style: solid;padding:5px 0px 5px 0px; height:1cm; background-color: #000000; color: #ffffff; text-align: center}</HeaderText><Format><ColumnStartPDF></ColumnStartPDF><justify>center</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageHeader><PageHeader><LineNumber>1</LineNumber><HeaderText>Time: date(\'Y-m-d H:i:s\'){STYLE font-size: 10; text-align: right; font-style: italic;}</HeaderText><Format><ColumnStartPDF></ColumnStartPDF><justify>right</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageHeader></PageHeaders><PageFooters><PageFooter><LineNumber>2</LineNumber><FooterText>Page: {PAGE}{STYLE border-width: 1 0 0 0; margin: 40 0 0 0; font-style: italic; }</FooterText><Format><ColumnStartPDF></ColumnStartPDF><justify>center</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageFooter></PageFooters><DisplayOrders><DisplayOrder><ColumnName>Scholar_ID</ColumnName><OrderNumber>1</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Scholar_Last_Name</ColumnName><OrderNumber>2</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Scholar_First_Name</ColumnName><OrderNumber>3</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Name</ColumnName><OrderNumber>4</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Year</ColumnName><OrderNumber>5</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Term</ColumnName><OrderNumber>6</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Subject</ColumnName><OrderNumber>7</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Units</ColumnName><OrderNumber>8</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Raw_Grade</ColumnName><OrderNumber>9</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Percentile_Equivalent</ColumnName><OrderNumber>10</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Numerical_Grade</ColumnName><OrderNumber>11</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Letter_Grade</ColumnName><OrderNumber>12</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Foundation_Rating</ColumnName><OrderNumber>13</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Rating</ColumnName><OrderNumber>14</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>GPA</ColumnName><OrderNumber>15</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>mult</ColumnName><OrderNumber>16</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>sum_mult</ColumnName><OrderNumber>17</OrderNumber></DisplayOrder></DisplayOrders><Groups><Group><GroupName>Scholar_ID</GroupName><BeforeGroupHeader>solidline</BeforeGroupHeader><AfterGroupHeader>blankline</AfterGroupHeader><BeforeGroupTrailer>blankline</BeforeGroupTrailer><AfterGroupTrailer>blankline</AfterGroupTrailer><GroupHeaders><GroupHeader><GroupHeaderColumn>Scholar_ID</GroupHeaderColumn><GroupHeaderCustom></GroupHeaderCustom></GroupHeader></GroupHeaders><GroupTrailers><GroupTrailer><GroupTrailerDisplayColumn>Numerical_Grade</GroupTrailerDisplayColumn><GroupTrailerValueColumn>GPA</GroupTrailerValueColumn><GroupTrailerCustom></GroupTrailerCustom></GroupTrailer></GroupTrailers></Group></Groups><Graphs></Graphs></Output></EntryForm></ReportQuery></Report>'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '424'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://127.0.0.1/SM%20Scholarship%20Foundation/backend/web/index.php?r=reportico'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf=dd27abe5f5710165021e2490eb882176a4ce8d089efc746b85cbaf15647960e3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227b5wbPegfPELvm3YONHD_K8pU1yj2I3j%22%3B%7D; PHPSESSID=eetskhqiu99i2n268urjt2fkh2'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;c:\\Program Files\\Microsoft SQL Server\\100\\Tools\\Binn\\;c:\\Program Files\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Users\\amirc_000\\Documents\\School\\Sana IDE\\apache-ant-1.9.4\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/SM Scholarship Foundation/backend/web/index.php'
+    'REMOTE_PORT' => '63780'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=reportico/reportico/ajax'
+    'REQUEST_URI' => '/SM%20Scholarship%20Foundation/backend/web/index.php?r=reportico/reportico/ajax'
+    'SCRIPT_NAME' => '/SM Scholarship Foundation/backend/web/index.php'
+    'PHP_SELF' => '/SM Scholarship Foundation/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1437212144.623
+    'REQUEST_TIME' => 1437212144
+]
+2015-07-18 11:35:48 [127.0.0.1][2][eetskhqiu99i2n268urjt2fkh2][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ','' in C:\xampp\htdocs\SM Scholarship Foundation\vendor\reportico\yii2-reportico\components\reportico.php(4877) : eval()'d code:1
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-07-18 11:35:48 [127.0.0.1][2][eetskhqiu99i2n268urjt2fkh2][info][application] $_GET = [
+    'r' => 'reportico/reportico/ajax'
+]
+
+$_POST = [
+    'reportico_session_name' => 'NS_'
+    'debug_mode' => '0'
+    'target_format' => 'HTML'
+    'target_style' => 'TABLE'
+    'user_criteria_entered' => '1'
+    'target_show_criteria' => '1'
+    'target_show_group_headers' => '1'
+    'target_show_detail' => '1'
+    'target_show_group_trailers' => '1'
+    'target_show_column_headers' => '1'
+    'HIDDEN_scholar_select' => [
+        0 => '4'
+    ]
+    'MANUAL_scholar_select' => '4'
+    'schoolyear_select' => '2015'
+    'schoolterm_select' => '1'
+    'execute_mode' => 'EXECUTE'
+    'submitPrepare' => '1'
+    'reportico_ajax_called' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'dd27abe5f5710165021e2490eb882176a4ce8d089efc746b85cbaf15647960e3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7b5wbPegfPELvm3YONHD_K8pU1yj2I3j\";}'
+    'PHPSESSID' => 'eetskhqiu99i2n268urjt2fkh2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'reportico' => [
+        'awaiting_initial_defaults' => false
+        'firsttimeIn' => true
+        'execute_mode' => 'EXECUTE'
+        'project' => 'foundationreports'
+        'target_menu' => false
+        'project_path' => 'C:\\xampp\\htdocs\\SM Scholarship Foundation\\backend\\runtime/reportico/projects/foundationreports'
+        'reportico_language' => 'en_gb'
+        'external_user' => 2
+        'external_param1' => false
+        'external_param2' => false
+        'external_param3' => false
+        'user_parameters' => []
+        'dropdown_menu' => false
+        'static_menu' => false
+        'charting_engine' => 'PCHART'
+        'charting_engine_html' => 'NVD3'
+        'output_template_parameters' => [
+            'show_hide_navigation_menu' => 'show'
+            'show_hide_dropdown_menu' => 'show'
+            'show_hide_report_output_title' => 'show'
+            'show_hide_prepare_section_boxes' => 'show'
+            'show_hide_prepare_pdf_button' => 'show'
+            'show_hide_prepare_html_button' => 'show'
+            'show_hide_prepare_print_html_button' => 'show'
+            'show_hide_prepare_csv_button' => 'show'
+            'show_hide_prepare_page_style' => 'show'
+        ]
+        'dynamic_grids' => false
+        'dynamic_grids_sortable' => true
+        'dynamic_grids_searchable' => true
+        'dynamic_grids_paging' => false
+        'dynamic_grids_page_size' => 10
+        'framework_parent' => 'yii'
+        'access_mode' => 'FULL'
+        'firstTimeIn' => false
+        'latestRequest' => [
+            'r' => 'reportico/reportico/ajax'
+            'reportico_session_name' => 'NS_'
+            'debug_mode' => '0'
+            'target_format' => 'HTML'
+            'target_style' => 'TABLE'
+            'user_criteria_entered' => '1'
+            'target_show_criteria' => '1'
+            'target_show_group_headers' => '1'
+            'target_show_detail' => '1'
+            'target_show_group_trailers' => '1'
+            'target_show_column_headers' => '1'
+            'HIDDEN_scholar_select' => [
+                0 => '4'
+            ]
+            'MANUAL_scholar_select' => '4'
+            'schoolyear_select' => '2015'
+            'schoolterm_select' => '1'
+            'execute_mode' => 'EXECUTE'
+            'submitPrepare' => '1'
+            'reportico_ajax_called' => '1'
+        ]
+        'reporticourl' => '../../vendor/reportico/yii2-reportico/components'
+        'reportico_ajax_script_url' => '/SM Scholarship Foundation/backend/web/index.php'
+        'reportico_template' => false
+        'forward_url_get_parameters' => 'r=reportico/reportico/ajax'
+        'forward_url_get_parameters_graph' => 'reportico/graph'
+        'forward_url_get_parameters_dbimage' => 'reportico/dbimage'
+        'bootstrap_styles' => '3'
+        'force_reportico_mini_maintains' => false
+        'url_path_to_assets' => '/SM Scholarship Foundation/backend/web/assets/f2c366c7'
+        'jquery_preloaded' => false
+        'bootstrap_preloaded' => false
+        'loggedin' => true
+        'admin_password' => '1'
+        'database' => null
+        'hostname' => null
+        'driver' => 'mysql'
+        'server' => null
+        'protocol' => null
+        'progress_text' => 'Ready'
+        'progress_status' => 'READY'
+        'target_format' => 'HTML'
+        'xmlin' => 'GPA_Report'
+        'xmlout' => 'GPA_Report'
+        'show_print_button' => true
+        'target_show_detail' => '1'
+        'target_show_graph' => false
+        'target_show_group_headers' => '1'
+        'target_show_group_trailers' => '1'
+        'target_show_column_headers' => '1'
+        'target_show_criteria' => '1'
+        'target_style' => 'TABLE'
+        'xmlintext' => '<?xml version=\"1.0\"?><Report><ReportQuery><Format><ReportTitle>GPA Report</ReportTitle><ReportDescription>Displays Scholar GPA based on entered criteria</ReportDescription><PageSize>.DEFAULT</PageSize><PageOrientation>.DEFAULT</PageOrientation><TopMargin></TopMargin><BottomMargin></BottomMargin><RightMargin></RightMargin><LeftMargin></LeftMargin><pdfFont></pdfFont><pdfFontSize></pdfFontSize><PreExecuteCode>NONE</PreExecuteCode><formBetweenRows>solidline</formBetweenRows><gridDisplay>.DEFAULT</gridDisplay><gridSortable>.DEFAULT</gridSortable><gridSearchable>.DEFAULT</gridSearchable><gridPageable>.DEFAULT</gridPageable><gridPageSize>.DEFAULT</gridPageSize></Format><Datasource><SourceType>database</SourceType><SourceConnection><DatabaseType>mysql</DatabaseType><DatabaseName></DatabaseName><HostName></HostName><ServiceName></ServiceName><UserName></UserName><Password></Password></SourceConnection></Datasource><EntryForm><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection>all</RowSelection><SQL><QuerySql></QuerySql><SQLRaw>SELECT 
+grade_scholar_id Scholar_ID,
+(SELECT n.scholar_lastName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id) Scholar_Last_Name,
+(SELECT n.scholar_firstName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id) Scholar_First_Name,
+(SELECT s.school_name
+FROM schools s
+WHERE s.school_id = grades.School_id) School_Name,
+grade_SchoolYear School_Year,
+grade_Term Term,
+grade_subject Subject,
+grade_units Units,
+grade_value Raw_Grade,
+equivalence.Equivalent_upper Percentile_Equivalent,
+equivalence.Numerical_Grade,
+equivalence.Letter_Grade Letter_Grade,
+equivalence.Foundation_Rating Foundation_Rating,
+equivalence.School_Rating School_Rating
+FROM grades
+JOIN equivalence on (grades.grade_value = equivalence.Numerical_Grade OR grades.grade_value = equivalence.Letter_Grade) AND grades.School_id = equivalence.School_id
+WHERE 1 = 1
+[AND grade_scholar_id IN ( {scholar_select, VALUE} ) ]
+[AND grade_SchoolYear IN ( {schoolyear_select, VALUE})]
+[AND grade_Term IN ( {schoolterm_select, VALUE})]
+[AND equivalence.Foundation_Rating IN ({foundationrating_select, VALUE})]
+ORDER BY grade_scholar_lastName, grade_schoolYear, grade_Term</SQLRaw></SQL><QueryColumns><QueryColumn><Name>Scholar_ID</Name><TableName></TableName><ColumnName>grade_scholar_id</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Scholar_Last_Name</Name><TableName></TableName><ColumnName>(SELECT n.scholar_lastName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Scholar_First_Name</Name><TableName></TableName><ColumnName>(SELECT n.scholar_firstName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Name</Name><TableName></TableName><ColumnName>(SELECT s.school_name
+FROM schools s
+WHERE s.school_id = grades.School_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Year</Name><TableName></TableName><ColumnName>grade_SchoolYear</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Term</Name><TableName></TableName><ColumnName>grade_Term</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Subject</Name><TableName></TableName><ColumnName>grade_subject</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Units</Name><TableName></TableName><ColumnName>grade_units</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Raw_Grade</Name><TableName></TableName><ColumnName>grade_value</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Percentile_Equivalent</Name><TableName>equivalence</TableName><ColumnName>Equivalent_upper</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Numerical_Grade</Name><TableName>equivalence</TableName><ColumnName>Numerical_Grade</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Letter_Grade</Name><TableName>equivalence</TableName><ColumnName>Letter_Grade</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Foundation_Rating</Name><TableName>equivalence</TableName><ColumnName>Foundation_Rating</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Rating</Name><TableName>equivalence</TableName><ColumnName>School_Rating</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>GPA</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>mult</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>sum_mult</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><PreSQLS></PreSQLS></Query><Assignments><Assignment><AssignName>GPA</AssignName><AssignNameNew></AssignNameNew><Expression>round({sum_mult}/sum({Units},{Scholar_ID})), 2)</Expression><Condition></Condition></Assignment><Assignment><AssignName>mult</AssignName><AssignNameNew></AssignNameNew><Expression>{Numerical_Grade}*{Units}</Expression><Condition></Condition></Assignment><Assignment><AssignName>sum_mult</AssignName><AssignNameNew></AssignNameNew><Expression>sum({mult},{Scholar_ID})</Expression><Condition></Condition></Assignment></Assignments><Criteria><CriteriaItem><Name>scholar_select</Name><Title>Scholar ID</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>TEXTFIELD</CriteriaDisplay><ExpandDisplay>MULTI</ExpandDisplay><ReturnColumn>grade_scholar_id</ReturnColumn><DisplayColumn>grade_scholar_id</DisplayColumn><OverviewColumn>grade_scholar_id</OverviewColumn><MatchColumn>grade_scholar_id</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_scholar_id
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_scholar_id</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>schoolyear_select</Name><Title>School Year</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>DROPDOWN</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>grade_SchoolYear</ReturnColumn><DisplayColumn>grade_SchoolYear</DisplayColumn><OverviewColumn>grade_SchoolYear</OverviewColumn><MatchColumn>grade_SchoolYear</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_SchoolYear
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_SchoolYear</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>schoolterm_select</Name><Title>Term</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>DROPDOWN</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>grade_Term</ReturnColumn><DisplayColumn>grade_Term</DisplayColumn><OverviewColumn>grade_Term</OverviewColumn><MatchColumn>grade_Term</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_Term
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_Term</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>foundationrating_select</Name><Title>Foundation Rating</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>CHECKBOX</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>Foundation_Rating</ReturnColumn><DisplayColumn>Foundation_Rating</DisplayColumn><OverviewColumn>Foundation_Rating</OverviewColumn><MatchColumn>Foundation_Rating</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT Foundation_Rating
+FROM  equivalence
+WHERE 1 = 1
+AND Foundation_Rating&lt;&gt;&quot;&quot;</SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>Foundation_Rating</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem></Criteria><Output><PageHeaders><PageHeader><LineNumber>1</LineNumber><HeaderText>{REPORT_TITLE}{STYLE border-width: 1 0 1 0; margin: 15px 0px 0px 0px; border-color: #000000; font-size: 18; border-style: solid;padding:5px 0px 5px 0px; height:1cm; background-color: #000000; color: #ffffff; text-align: center}</HeaderText><Format><ColumnStartPDF></ColumnStartPDF><justify>center</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageHeader><PageHeader><LineNumber>1</LineNumber><HeaderText>Time: date(\'Y-m-d H:i:s\'){STYLE font-size: 10; text-align: right; font-style: italic;}</HeaderText><Format><ColumnStartPDF></ColumnStartPDF><justify>right</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageHeader></PageHeaders><PageFooters><PageFooter><LineNumber>2</LineNumber><FooterText>Page: {PAGE}{STYLE border-width: 1 0 0 0; margin: 40 0 0 0; font-style: italic; }</FooterText><Format><ColumnStartPDF></ColumnStartPDF><justify>center</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageFooter></PageFooters><DisplayOrders><DisplayOrder><ColumnName>Scholar_ID</ColumnName><OrderNumber>1</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Scholar_Last_Name</ColumnName><OrderNumber>2</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Scholar_First_Name</ColumnName><OrderNumber>3</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Name</ColumnName><OrderNumber>4</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Year</ColumnName><OrderNumber>5</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Term</ColumnName><OrderNumber>6</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Subject</ColumnName><OrderNumber>7</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Units</ColumnName><OrderNumber>8</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Raw_Grade</ColumnName><OrderNumber>9</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Percentile_Equivalent</ColumnName><OrderNumber>10</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Numerical_Grade</ColumnName><OrderNumber>11</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Letter_Grade</ColumnName><OrderNumber>12</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Foundation_Rating</ColumnName><OrderNumber>13</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Rating</ColumnName><OrderNumber>14</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>GPA</ColumnName><OrderNumber>15</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>mult</ColumnName><OrderNumber>16</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>sum_mult</ColumnName><OrderNumber>17</OrderNumber></DisplayOrder></DisplayOrders><Groups><Group><GroupName>Scholar_ID</GroupName><BeforeGroupHeader>solidline</BeforeGroupHeader><AfterGroupHeader>blankline</AfterGroupHeader><BeforeGroupTrailer>blankline</BeforeGroupTrailer><AfterGroupTrailer>blankline</AfterGroupTrailer><GroupHeaders><GroupHeader><GroupHeaderColumn>Scholar_ID</GroupHeaderColumn><GroupHeaderCustom></GroupHeaderCustom></GroupHeader></GroupHeaders><GroupTrailers><GroupTrailer><GroupTrailerDisplayColumn>Numerical_Grade</GroupTrailerDisplayColumn><GroupTrailerValueColumn>GPA</GroupTrailerValueColumn><GroupTrailerCustom></GroupTrailerCustom></GroupTrailer></GroupTrailers></Group></Groups><Graphs></Graphs></Output></EntryForm></ReportQuery></Report>'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '389'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://127.0.0.1/SM%20Scholarship%20Foundation/backend/web/index.php?r=reportico'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf=dd27abe5f5710165021e2490eb882176a4ce8d089efc746b85cbaf15647960e3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227b5wbPegfPELvm3YONHD_K8pU1yj2I3j%22%3B%7D; PHPSESSID=eetskhqiu99i2n268urjt2fkh2'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;c:\\Program Files\\Microsoft SQL Server\\100\\Tools\\Binn\\;c:\\Program Files\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Users\\amirc_000\\Documents\\School\\Sana IDE\\apache-ant-1.9.4\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/SM Scholarship Foundation/backend/web/index.php'
+    'REMOTE_PORT' => '63793'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=reportico/reportico/ajax'
+    'REQUEST_URI' => '/SM%20Scholarship%20Foundation/backend/web/index.php?r=reportico/reportico/ajax'
+    'SCRIPT_NAME' => '/SM Scholarship Foundation/backend/web/index.php'
+    'PHP_SELF' => '/SM Scholarship Foundation/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1437212148.051
+    'REQUEST_TIME' => 1437212148
+]
+2015-07-18 11:35:49 [127.0.0.1][2][eetskhqiu99i2n268urjt2fkh2][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ','' in C:\xampp\htdocs\SM Scholarship Foundation\vendor\reportico\yii2-reportico\components\reportico.php(4877) : eval()'d code:1
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-07-18 11:35:49 [127.0.0.1][2][eetskhqiu99i2n268urjt2fkh2][info][application] $_GET = [
+    'r' => 'reportico/reportico/ajax'
+]
+
+$_POST = [
+    'reportico_session_name' => 'NS_'
+    'debug_mode' => '0'
+    'target_format' => 'HTML'
+    'target_style' => 'TABLE'
+    'user_criteria_entered' => '1'
+    'target_show_criteria' => '1'
+    'target_show_group_headers' => '1'
+    'target_show_detail' => '1'
+    'target_show_group_trailers' => '1'
+    'target_show_column_headers' => '1'
+    'HIDDEN_scholar_select' => [
+        0 => '4'
+    ]
+    'MANUAL_scholar_select' => '4'
+    'schoolyear_select' => '2015'
+    'schoolterm_select' => '1'
+    'execute_mode' => 'EXECUTE'
+    'submitPrepare' => '1'
+    'reportico_ajax_called' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'dd27abe5f5710165021e2490eb882176a4ce8d089efc746b85cbaf15647960e3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7b5wbPegfPELvm3YONHD_K8pU1yj2I3j\";}'
+    'PHPSESSID' => 'eetskhqiu99i2n268urjt2fkh2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'reportico' => [
+        'awaiting_initial_defaults' => false
+        'firsttimeIn' => true
+        'execute_mode' => 'EXECUTE'
+        'project' => 'foundationreports'
+        'target_menu' => false
+        'project_path' => 'C:\\xampp\\htdocs\\SM Scholarship Foundation\\backend\\runtime/reportico/projects/foundationreports'
+        'reportico_language' => 'en_gb'
+        'external_user' => 2
+        'external_param1' => false
+        'external_param2' => false
+        'external_param3' => false
+        'user_parameters' => []
+        'dropdown_menu' => false
+        'static_menu' => false
+        'charting_engine' => 'PCHART'
+        'charting_engine_html' => 'NVD3'
+        'output_template_parameters' => [
+            'show_hide_navigation_menu' => 'show'
+            'show_hide_dropdown_menu' => 'show'
+            'show_hide_report_output_title' => 'show'
+            'show_hide_prepare_section_boxes' => 'show'
+            'show_hide_prepare_pdf_button' => 'show'
+            'show_hide_prepare_html_button' => 'show'
+            'show_hide_prepare_print_html_button' => 'show'
+            'show_hide_prepare_csv_button' => 'show'
+            'show_hide_prepare_page_style' => 'show'
+        ]
+        'dynamic_grids' => false
+        'dynamic_grids_sortable' => true
+        'dynamic_grids_searchable' => true
+        'dynamic_grids_paging' => false
+        'dynamic_grids_page_size' => 10
+        'framework_parent' => 'yii'
+        'access_mode' => 'FULL'
+        'firstTimeIn' => false
+        'latestRequest' => [
+            'r' => 'reportico/reportico/ajax'
+            'reportico_session_name' => 'NS_'
+            'debug_mode' => '0'
+            'target_format' => 'HTML'
+            'target_style' => 'TABLE'
+            'user_criteria_entered' => '1'
+            'target_show_criteria' => '1'
+            'target_show_group_headers' => '1'
+            'target_show_detail' => '1'
+            'target_show_group_trailers' => '1'
+            'target_show_column_headers' => '1'
+            'HIDDEN_scholar_select' => [
+                0 => '4'
+            ]
+            'MANUAL_scholar_select' => '4'
+            'schoolyear_select' => '2015'
+            'schoolterm_select' => '1'
+            'execute_mode' => 'EXECUTE'
+            'submitPrepare' => '1'
+            'reportico_ajax_called' => '1'
+        ]
+        'reporticourl' => '../../vendor/reportico/yii2-reportico/components'
+        'reportico_ajax_script_url' => '/SM Scholarship Foundation/backend/web/index.php'
+        'reportico_template' => false
+        'forward_url_get_parameters' => 'r=reportico/reportico/ajax'
+        'forward_url_get_parameters_graph' => 'reportico/graph'
+        'forward_url_get_parameters_dbimage' => 'reportico/dbimage'
+        'bootstrap_styles' => '3'
+        'force_reportico_mini_maintains' => false
+        'url_path_to_assets' => '/SM Scholarship Foundation/backend/web/assets/f2c366c7'
+        'jquery_preloaded' => false
+        'bootstrap_preloaded' => false
+        'loggedin' => true
+        'admin_password' => '1'
+        'database' => null
+        'hostname' => null
+        'driver' => 'mysql'
+        'server' => null
+        'protocol' => null
+        'progress_text' => 'Ready'
+        'progress_status' => 'READY'
+        'target_format' => 'HTML'
+        'xmlin' => 'GPA_Report'
+        'xmlout' => 'GPA_Report'
+        'show_print_button' => true
+        'target_show_detail' => '1'
+        'target_show_graph' => false
+        'target_show_group_headers' => '1'
+        'target_show_group_trailers' => '1'
+        'target_show_column_headers' => '1'
+        'target_show_criteria' => '1'
+        'target_style' => 'TABLE'
+        'xmlintext' => '<?xml version=\"1.0\"?><Report><ReportQuery><Format><ReportTitle>GPA Report</ReportTitle><ReportDescription>Displays Scholar GPA based on entered criteria</ReportDescription><PageSize>.DEFAULT</PageSize><PageOrientation>.DEFAULT</PageOrientation><TopMargin></TopMargin><BottomMargin></BottomMargin><RightMargin></RightMargin><LeftMargin></LeftMargin><pdfFont></pdfFont><pdfFontSize></pdfFontSize><PreExecuteCode>NONE</PreExecuteCode><formBetweenRows>solidline</formBetweenRows><gridDisplay>.DEFAULT</gridDisplay><gridSortable>.DEFAULT</gridSortable><gridSearchable>.DEFAULT</gridSearchable><gridPageable>.DEFAULT</gridPageable><gridPageSize>.DEFAULT</gridPageSize></Format><Datasource><SourceType>database</SourceType><SourceConnection><DatabaseType>mysql</DatabaseType><DatabaseName></DatabaseName><HostName></HostName><ServiceName></ServiceName><UserName></UserName><Password></Password></SourceConnection></Datasource><EntryForm><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection>all</RowSelection><SQL><QuerySql></QuerySql><SQLRaw>SELECT 
+grade_scholar_id Scholar_ID,
+(SELECT n.scholar_lastName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id) Scholar_Last_Name,
+(SELECT n.scholar_firstName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id) Scholar_First_Name,
+(SELECT s.school_name
+FROM schools s
+WHERE s.school_id = grades.School_id) School_Name,
+grade_SchoolYear School_Year,
+grade_Term Term,
+grade_subject Subject,
+grade_units Units,
+grade_value Raw_Grade,
+equivalence.Equivalent_upper Percentile_Equivalent,
+equivalence.Numerical_Grade,
+equivalence.Letter_Grade Letter_Grade,
+equivalence.Foundation_Rating Foundation_Rating,
+equivalence.School_Rating School_Rating
+FROM grades
+JOIN equivalence on (grades.grade_value = equivalence.Numerical_Grade OR grades.grade_value = equivalence.Letter_Grade) AND grades.School_id = equivalence.School_id
+WHERE 1 = 1
+[AND grade_scholar_id IN ( {scholar_select, VALUE} ) ]
+[AND grade_SchoolYear IN ( {schoolyear_select, VALUE})]
+[AND grade_Term IN ( {schoolterm_select, VALUE})]
+[AND equivalence.Foundation_Rating IN ({foundationrating_select, VALUE})]
+ORDER BY grade_scholar_lastName, grade_schoolYear, grade_Term</SQLRaw></SQL><QueryColumns><QueryColumn><Name>Scholar_ID</Name><TableName></TableName><ColumnName>grade_scholar_id</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Scholar_Last_Name</Name><TableName></TableName><ColumnName>(SELECT n.scholar_lastName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Scholar_First_Name</Name><TableName></TableName><ColumnName>(SELECT n.scholar_firstName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Name</Name><TableName></TableName><ColumnName>(SELECT s.school_name
+FROM schools s
+WHERE s.school_id = grades.School_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Year</Name><TableName></TableName><ColumnName>grade_SchoolYear</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Term</Name><TableName></TableName><ColumnName>grade_Term</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Subject</Name><TableName></TableName><ColumnName>grade_subject</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Units</Name><TableName></TableName><ColumnName>grade_units</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Raw_Grade</Name><TableName></TableName><ColumnName>grade_value</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Percentile_Equivalent</Name><TableName>equivalence</TableName><ColumnName>Equivalent_upper</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Numerical_Grade</Name><TableName>equivalence</TableName><ColumnName>Numerical_Grade</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Letter_Grade</Name><TableName>equivalence</TableName><ColumnName>Letter_Grade</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Foundation_Rating</Name><TableName>equivalence</TableName><ColumnName>Foundation_Rating</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Rating</Name><TableName>equivalence</TableName><ColumnName>School_Rating</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>GPA</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>mult</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>sum_mult</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><PreSQLS></PreSQLS></Query><Assignments><Assignment><AssignName>GPA</AssignName><AssignNameNew></AssignNameNew><Expression>round({sum_mult}/sum({Units},{Scholar_ID})), 2)</Expression><Condition></Condition></Assignment><Assignment><AssignName>mult</AssignName><AssignNameNew></AssignNameNew><Expression>{Numerical_Grade}*{Units}</Expression><Condition></Condition></Assignment><Assignment><AssignName>sum_mult</AssignName><AssignNameNew></AssignNameNew><Expression>sum({mult},{Scholar_ID})</Expression><Condition></Condition></Assignment></Assignments><Criteria><CriteriaItem><Name>scholar_select</Name><Title>Scholar ID</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>TEXTFIELD</CriteriaDisplay><ExpandDisplay>MULTI</ExpandDisplay><ReturnColumn>grade_scholar_id</ReturnColumn><DisplayColumn>grade_scholar_id</DisplayColumn><OverviewColumn>grade_scholar_id</OverviewColumn><MatchColumn>grade_scholar_id</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_scholar_id
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_scholar_id</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>schoolyear_select</Name><Title>School Year</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>DROPDOWN</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>grade_SchoolYear</ReturnColumn><DisplayColumn>grade_SchoolYear</DisplayColumn><OverviewColumn>grade_SchoolYear</OverviewColumn><MatchColumn>grade_SchoolYear</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_SchoolYear
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_SchoolYear</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>schoolterm_select</Name><Title>Term</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>DROPDOWN</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>grade_Term</ReturnColumn><DisplayColumn>grade_Term</DisplayColumn><OverviewColumn>grade_Term</OverviewColumn><MatchColumn>grade_Term</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_Term
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_Term</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>foundationrating_select</Name><Title>Foundation Rating</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>CHECKBOX</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>Foundation_Rating</ReturnColumn><DisplayColumn>Foundation_Rating</DisplayColumn><OverviewColumn>Foundation_Rating</OverviewColumn><MatchColumn>Foundation_Rating</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT Foundation_Rating
+FROM  equivalence
+WHERE 1 = 1
+AND Foundation_Rating&lt;&gt;&quot;&quot;</SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>Foundation_Rating</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem></Criteria><Output><PageHeaders><PageHeader><LineNumber>1</LineNumber><HeaderText>{REPORT_TITLE}{STYLE border-width: 1 0 1 0; margin: 15px 0px 0px 0px; border-color: #000000; font-size: 18; border-style: solid;padding:5px 0px 5px 0px; height:1cm; background-color: #000000; color: #ffffff; text-align: center}</HeaderText><Format><ColumnStartPDF></ColumnStartPDF><justify>center</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageHeader><PageHeader><LineNumber>1</LineNumber><HeaderText>Time: date(\'Y-m-d H:i:s\'){STYLE font-size: 10; text-align: right; font-style: italic;}</HeaderText><Format><ColumnStartPDF></ColumnStartPDF><justify>right</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageHeader></PageHeaders><PageFooters><PageFooter><LineNumber>2</LineNumber><FooterText>Page: {PAGE}{STYLE border-width: 1 0 0 0; margin: 40 0 0 0; font-style: italic; }</FooterText><Format><ColumnStartPDF></ColumnStartPDF><justify>center</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageFooter></PageFooters><DisplayOrders><DisplayOrder><ColumnName>Scholar_ID</ColumnName><OrderNumber>1</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Scholar_Last_Name</ColumnName><OrderNumber>2</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Scholar_First_Name</ColumnName><OrderNumber>3</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Name</ColumnName><OrderNumber>4</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Year</ColumnName><OrderNumber>5</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Term</ColumnName><OrderNumber>6</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Subject</ColumnName><OrderNumber>7</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Units</ColumnName><OrderNumber>8</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Raw_Grade</ColumnName><OrderNumber>9</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Percentile_Equivalent</ColumnName><OrderNumber>10</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Numerical_Grade</ColumnName><OrderNumber>11</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Letter_Grade</ColumnName><OrderNumber>12</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Foundation_Rating</ColumnName><OrderNumber>13</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Rating</ColumnName><OrderNumber>14</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>GPA</ColumnName><OrderNumber>15</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>mult</ColumnName><OrderNumber>16</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>sum_mult</ColumnName><OrderNumber>17</OrderNumber></DisplayOrder></DisplayOrders><Groups><Group><GroupName>Scholar_ID</GroupName><BeforeGroupHeader>solidline</BeforeGroupHeader><AfterGroupHeader>blankline</AfterGroupHeader><BeforeGroupTrailer>blankline</BeforeGroupTrailer><AfterGroupTrailer>blankline</AfterGroupTrailer><GroupHeaders><GroupHeader><GroupHeaderColumn>Scholar_ID</GroupHeaderColumn><GroupHeaderCustom></GroupHeaderCustom></GroupHeader></GroupHeaders><GroupTrailers><GroupTrailer><GroupTrailerDisplayColumn>Numerical_Grade</GroupTrailerDisplayColumn><GroupTrailerValueColumn>GPA</GroupTrailerValueColumn><GroupTrailerCustom></GroupTrailerCustom></GroupTrailer></GroupTrailers></Group></Groups><Graphs></Graphs></Output></EntryForm></ReportQuery></Report>'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '389'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://127.0.0.1/SM%20Scholarship%20Foundation/backend/web/index.php?r=reportico'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf=dd27abe5f5710165021e2490eb882176a4ce8d089efc746b85cbaf15647960e3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227b5wbPegfPELvm3YONHD_K8pU1yj2I3j%22%3B%7D; PHPSESSID=eetskhqiu99i2n268urjt2fkh2'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;c:\\Program Files\\Microsoft SQL Server\\100\\Tools\\Binn\\;c:\\Program Files\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Users\\amirc_000\\Documents\\School\\Sana IDE\\apache-ant-1.9.4\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/SM Scholarship Foundation/backend/web/index.php'
+    'REMOTE_PORT' => '63797'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=reportico/reportico/ajax'
+    'REQUEST_URI' => '/SM%20Scholarship%20Foundation/backend/web/index.php?r=reportico/reportico/ajax'
+    'SCRIPT_NAME' => '/SM Scholarship Foundation/backend/web/index.php'
+    'PHP_SELF' => '/SM Scholarship Foundation/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1437212149.139
+    'REQUEST_TIME' => 1437212149
+]
+2015-07-18 11:35:52 [127.0.0.1][2][eetskhqiu99i2n268urjt2fkh2][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ','' in C:\xampp\htdocs\SM Scholarship Foundation\vendor\reportico\yii2-reportico\components\reportico.php(4877) : eval()'d code:1
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-07-18 11:35:52 [127.0.0.1][2][eetskhqiu99i2n268urjt2fkh2][info][application] $_GET = [
+    'r' => 'reportico/reportico/ajax'
+]
+
+$_POST = [
+    'reportico_session_name' => 'NS_'
+    'debug_mode' => '0'
+    'target_format' => 'HTML'
+    'target_style' => 'TABLE'
+    'user_criteria_entered' => '1'
+    'target_show_criteria' => '1'
+    'target_show_group_headers' => '1'
+    'target_show_detail' => '1'
+    'target_show_group_trailers' => '1'
+    'target_show_column_headers' => '1'
+    'HIDDEN_scholar_select' => [
+        0 => '4'
+    ]
+    'MANUAL_scholar_select' => '4'
+    'schoolyear_select' => '2015'
+    'schoolterm_select' => '2'
+    'execute_mode' => 'EXECUTE'
+    'submitPrepare' => '1'
+    'reportico_ajax_called' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'dd27abe5f5710165021e2490eb882176a4ce8d089efc746b85cbaf15647960e3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7b5wbPegfPELvm3YONHD_K8pU1yj2I3j\";}'
+    'PHPSESSID' => 'eetskhqiu99i2n268urjt2fkh2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'reportico' => [
+        'awaiting_initial_defaults' => false
+        'firsttimeIn' => true
+        'execute_mode' => 'EXECUTE'
+        'project' => 'foundationreports'
+        'target_menu' => false
+        'project_path' => 'C:\\xampp\\htdocs\\SM Scholarship Foundation\\backend\\runtime/reportico/projects/foundationreports'
+        'reportico_language' => 'en_gb'
+        'external_user' => 2
+        'external_param1' => false
+        'external_param2' => false
+        'external_param3' => false
+        'user_parameters' => []
+        'dropdown_menu' => false
+        'static_menu' => false
+        'charting_engine' => 'PCHART'
+        'charting_engine_html' => 'NVD3'
+        'output_template_parameters' => [
+            'show_hide_navigation_menu' => 'show'
+            'show_hide_dropdown_menu' => 'show'
+            'show_hide_report_output_title' => 'show'
+            'show_hide_prepare_section_boxes' => 'show'
+            'show_hide_prepare_pdf_button' => 'show'
+            'show_hide_prepare_html_button' => 'show'
+            'show_hide_prepare_print_html_button' => 'show'
+            'show_hide_prepare_csv_button' => 'show'
+            'show_hide_prepare_page_style' => 'show'
+        ]
+        'dynamic_grids' => false
+        'dynamic_grids_sortable' => true
+        'dynamic_grids_searchable' => true
+        'dynamic_grids_paging' => false
+        'dynamic_grids_page_size' => 10
+        'framework_parent' => 'yii'
+        'access_mode' => 'FULL'
+        'firstTimeIn' => false
+        'latestRequest' => [
+            'r' => 'reportico/reportico/ajax'
+            'reportico_session_name' => 'NS_'
+            'debug_mode' => '0'
+            'target_format' => 'HTML'
+            'target_style' => 'TABLE'
+            'user_criteria_entered' => '1'
+            'target_show_criteria' => '1'
+            'target_show_group_headers' => '1'
+            'target_show_detail' => '1'
+            'target_show_group_trailers' => '1'
+            'target_show_column_headers' => '1'
+            'HIDDEN_scholar_select' => [
+                0 => '4'
+            ]
+            'MANUAL_scholar_select' => '4'
+            'schoolyear_select' => '2015'
+            'schoolterm_select' => '2'
+            'execute_mode' => 'EXECUTE'
+            'submitPrepare' => '1'
+            'reportico_ajax_called' => '1'
+        ]
+        'reporticourl' => '../../vendor/reportico/yii2-reportico/components'
+        'reportico_ajax_script_url' => '/SM Scholarship Foundation/backend/web/index.php'
+        'reportico_template' => false
+        'forward_url_get_parameters' => 'r=reportico/reportico/ajax'
+        'forward_url_get_parameters_graph' => 'reportico/graph'
+        'forward_url_get_parameters_dbimage' => 'reportico/dbimage'
+        'bootstrap_styles' => '3'
+        'force_reportico_mini_maintains' => false
+        'url_path_to_assets' => '/SM Scholarship Foundation/backend/web/assets/f2c366c7'
+        'jquery_preloaded' => false
+        'bootstrap_preloaded' => false
+        'loggedin' => true
+        'admin_password' => '1'
+        'database' => null
+        'hostname' => null
+        'driver' => 'mysql'
+        'server' => null
+        'protocol' => null
+        'progress_text' => 'Ready'
+        'progress_status' => 'READY'
+        'target_format' => 'HTML'
+        'xmlin' => 'GPA_Report'
+        'xmlout' => 'GPA_Report'
+        'show_print_button' => true
+        'target_show_detail' => '1'
+        'target_show_graph' => false
+        'target_show_group_headers' => '1'
+        'target_show_group_trailers' => '1'
+        'target_show_column_headers' => '1'
+        'target_show_criteria' => '1'
+        'target_style' => 'TABLE'
+        'xmlintext' => '<?xml version=\"1.0\"?><Report><ReportQuery><Format><ReportTitle>GPA Report</ReportTitle><ReportDescription>Displays Scholar GPA based on entered criteria</ReportDescription><PageSize>.DEFAULT</PageSize><PageOrientation>.DEFAULT</PageOrientation><TopMargin></TopMargin><BottomMargin></BottomMargin><RightMargin></RightMargin><LeftMargin></LeftMargin><pdfFont></pdfFont><pdfFontSize></pdfFontSize><PreExecuteCode>NONE</PreExecuteCode><formBetweenRows>solidline</formBetweenRows><gridDisplay>.DEFAULT</gridDisplay><gridSortable>.DEFAULT</gridSortable><gridSearchable>.DEFAULT</gridSearchable><gridPageable>.DEFAULT</gridPageable><gridPageSize>.DEFAULT</gridPageSize></Format><Datasource><SourceType>database</SourceType><SourceConnection><DatabaseType>mysql</DatabaseType><DatabaseName></DatabaseName><HostName></HostName><ServiceName></ServiceName><UserName></UserName><Password></Password></SourceConnection></Datasource><EntryForm><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection>all</RowSelection><SQL><QuerySql></QuerySql><SQLRaw>SELECT 
+grade_scholar_id Scholar_ID,
+(SELECT n.scholar_lastName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id) Scholar_Last_Name,
+(SELECT n.scholar_firstName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id) Scholar_First_Name,
+(SELECT s.school_name
+FROM schools s
+WHERE s.school_id = grades.School_id) School_Name,
+grade_SchoolYear School_Year,
+grade_Term Term,
+grade_subject Subject,
+grade_units Units,
+grade_value Raw_Grade,
+equivalence.Equivalent_upper Percentile_Equivalent,
+equivalence.Numerical_Grade,
+equivalence.Letter_Grade Letter_Grade,
+equivalence.Foundation_Rating Foundation_Rating,
+equivalence.School_Rating School_Rating
+FROM grades
+JOIN equivalence on (grades.grade_value = equivalence.Numerical_Grade OR grades.grade_value = equivalence.Letter_Grade) AND grades.School_id = equivalence.School_id
+WHERE 1 = 1
+[AND grade_scholar_id IN ( {scholar_select, VALUE} ) ]
+[AND grade_SchoolYear IN ( {schoolyear_select, VALUE})]
+[AND grade_Term IN ( {schoolterm_select, VALUE})]
+[AND equivalence.Foundation_Rating IN ({foundationrating_select, VALUE})]
+ORDER BY grade_scholar_lastName, grade_schoolYear, grade_Term</SQLRaw></SQL><QueryColumns><QueryColumn><Name>Scholar_ID</Name><TableName></TableName><ColumnName>grade_scholar_id</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Scholar_Last_Name</Name><TableName></TableName><ColumnName>(SELECT n.scholar_lastName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Scholar_First_Name</Name><TableName></TableName><ColumnName>(SELECT n.scholar_firstName
+FROM scholars n
+WHERE n.scholar_id= grades.grade_scholar_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Name</Name><TableName></TableName><ColumnName>(SELECT s.school_name
+FROM schools s
+WHERE s.school_id = grades.School_id)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Year</Name><TableName></TableName><ColumnName>grade_SchoolYear</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Term</Name><TableName></TableName><ColumnName>grade_Term</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Subject</Name><TableName></TableName><ColumnName>grade_subject</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Units</Name><TableName></TableName><ColumnName>grade_units</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Raw_Grade</Name><TableName></TableName><ColumnName>grade_value</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Percentile_Equivalent</Name><TableName>equivalence</TableName><ColumnName>Equivalent_upper</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Numerical_Grade</Name><TableName>equivalence</TableName><ColumnName>Numerical_Grade</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Letter_Grade</Name><TableName>equivalence</TableName><ColumnName>Letter_Grade</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Foundation_Rating</Name><TableName>equivalence</TableName><ColumnName>Foundation_Rating</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>School_Rating</Name><TableName>equivalence</TableName><ColumnName>School_Rating</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>GPA</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>mult</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>sum_mult</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><PreSQLS></PreSQLS></Query><Assignments><Assignment><AssignName>GPA</AssignName><AssignNameNew></AssignNameNew><Expression>round({sum_mult}/sum({Units},{Scholar_ID})), 2)</Expression><Condition></Condition></Assignment><Assignment><AssignName>mult</AssignName><AssignNameNew></AssignNameNew><Expression>{Numerical_Grade}*{Units}</Expression><Condition></Condition></Assignment><Assignment><AssignName>sum_mult</AssignName><AssignNameNew></AssignNameNew><Expression>sum({mult},{Scholar_ID})</Expression><Condition></Condition></Assignment></Assignments><Criteria><CriteriaItem><Name>scholar_select</Name><Title>Scholar ID</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>TEXTFIELD</CriteriaDisplay><ExpandDisplay>MULTI</ExpandDisplay><ReturnColumn>grade_scholar_id</ReturnColumn><DisplayColumn>grade_scholar_id</DisplayColumn><OverviewColumn>grade_scholar_id</OverviewColumn><MatchColumn>grade_scholar_id</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_scholar_id
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_scholar_id</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>schoolyear_select</Name><Title>School Year</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>DROPDOWN</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>grade_SchoolYear</ReturnColumn><DisplayColumn>grade_SchoolYear</DisplayColumn><OverviewColumn>grade_SchoolYear</OverviewColumn><MatchColumn>grade_SchoolYear</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_SchoolYear
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_SchoolYear</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>schoolterm_select</Name><Title>Term</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>DROPDOWN</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>grade_Term</ReturnColumn><DisplayColumn>grade_Term</DisplayColumn><OverviewColumn>grade_Term</OverviewColumn><MatchColumn>grade_Term</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT grade_Term
+FROM  grades
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>grade_Term</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>foundationrating_select</Name><Title>Foundation Rating</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>CHECKBOX</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>Foundation_Rating</ReturnColumn><DisplayColumn>Foundation_Rating</DisplayColumn><OverviewColumn>Foundation_Rating</OverviewColumn><MatchColumn>Foundation_Rating</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT Foundation_Rating
+FROM  equivalence
+WHERE 1 = 1
+AND Foundation_Rating&lt;&gt;&quot;&quot;</SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>Foundation_Rating</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem></Criteria><Output><PageHeaders><PageHeader><LineNumber>1</LineNumber><HeaderText>{REPORT_TITLE}{STYLE border-width: 1 0 1 0; margin: 15px 0px 0px 0px; border-color: #000000; font-size: 18; border-style: solid;padding:5px 0px 5px 0px; height:1cm; background-color: #000000; color: #ffffff; text-align: center}</HeaderText><Format><ColumnStartPDF></ColumnStartPDF><justify>center</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageHeader><PageHeader><LineNumber>1</LineNumber><HeaderText>Time: date(\'Y-m-d H:i:s\'){STYLE font-size: 10; text-align: right; font-style: italic;}</HeaderText><Format><ColumnStartPDF></ColumnStartPDF><justify>right</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageHeader></PageHeaders><PageFooters><PageFooter><LineNumber>2</LineNumber><FooterText>Page: {PAGE}{STYLE border-width: 1 0 0 0; margin: 40 0 0 0; font-style: italic; }</FooterText><Format><ColumnStartPDF></ColumnStartPDF><justify>center</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageFooter></PageFooters><DisplayOrders><DisplayOrder><ColumnName>Scholar_ID</ColumnName><OrderNumber>1</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Scholar_Last_Name</ColumnName><OrderNumber>2</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Scholar_First_Name</ColumnName><OrderNumber>3</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Name</ColumnName><OrderNumber>4</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Year</ColumnName><OrderNumber>5</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Term</ColumnName><OrderNumber>6</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Subject</ColumnName><OrderNumber>7</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Units</ColumnName><OrderNumber>8</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Raw_Grade</ColumnName><OrderNumber>9</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Percentile_Equivalent</ColumnName><OrderNumber>10</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Numerical_Grade</ColumnName><OrderNumber>11</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Letter_Grade</ColumnName><OrderNumber>12</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Foundation_Rating</ColumnName><OrderNumber>13</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>School_Rating</ColumnName><OrderNumber>14</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>GPA</ColumnName><OrderNumber>15</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>mult</ColumnName><OrderNumber>16</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>sum_mult</ColumnName><OrderNumber>17</OrderNumber></DisplayOrder></DisplayOrders><Groups><Group><GroupName>Scholar_ID</GroupName><BeforeGroupHeader>solidline</BeforeGroupHeader><AfterGroupHeader>blankline</AfterGroupHeader><BeforeGroupTrailer>blankline</BeforeGroupTrailer><AfterGroupTrailer>blankline</AfterGroupTrailer><GroupHeaders><GroupHeader><GroupHeaderColumn>Scholar_ID</GroupHeaderColumn><GroupHeaderCustom></GroupHeaderCustom></GroupHeader></GroupHeaders><GroupTrailers><GroupTrailer><GroupTrailerDisplayColumn>Numerical_Grade</GroupTrailerDisplayColumn><GroupTrailerValueColumn>GPA</GroupTrailerValueColumn><GroupTrailerCustom></GroupTrailerCustom></GroupTrailer></GroupTrailers></Group></Groups><Graphs></Graphs></Output></EntryForm></ReportQuery></Report>'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '389'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://127.0.0.1/SM%20Scholarship%20Foundation/backend/web/index.php?r=reportico'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf=dd27abe5f5710165021e2490eb882176a4ce8d089efc746b85cbaf15647960e3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227b5wbPegfPELvm3YONHD_K8pU1yj2I3j%22%3B%7D; PHPSESSID=eetskhqiu99i2n268urjt2fkh2'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;c:\\Program Files\\Microsoft SQL Server\\100\\Tools\\Binn\\;c:\\Program Files\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Users\\amirc_000\\Documents\\School\\Sana IDE\\apache-ant-1.9.4\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/SM Scholarship Foundation/backend/web/index.php'
+    'REMOTE_PORT' => '63804'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=reportico/reportico/ajax'
+    'REQUEST_URI' => '/SM%20Scholarship%20Foundation/backend/web/index.php?r=reportico/reportico/ajax'
+    'SCRIPT_NAME' => '/SM Scholarship Foundation/backend/web/index.php'
+    'PHP_SELF' => '/SM Scholarship Foundation/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1437212152.357
+    'REQUEST_TIME' => 1437212152
+]
