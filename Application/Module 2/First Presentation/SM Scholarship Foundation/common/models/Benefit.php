@@ -43,7 +43,8 @@ class Benefit extends \yii\db\ActiveRecord
             [['benefit_amount', 'benefit_scholarShare', 'benefit_tuitionfee_id',
 			'benefit_scholar_id', 'benefit_school_id'], 'integer'],
 			[['benefit_scholar_lastName', 'benefit_scholar_firstName', 
-			'benefit_scholar_middleName'], 'string', 'max' => 100]
+			'benefit_scholar_middleName'], 'string', 'max' => 100],
+			[['benefit_description'], 'string', 'max'=>255]
         ];
     }
 
