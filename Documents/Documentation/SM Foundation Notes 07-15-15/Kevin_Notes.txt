@@ -1,0 +1,27 @@
+FrontEnd ( I removed some of my notes for it was already stated in JLs )
+
+1 upload for any files to be submitted by the scholars
+2 Indicate the specific type of benefits the scholar have (for example, allowance is also a benefit)
+3 View Benefit Deductions
+4 For Part time Jobs
+	a.) When is he/she available for work
+	b.) where do he/she wants to work 
+		the location should be suggested by a dropdown list
+			ex. Select Region : (dropdown), Select City (dropdown), Select company(dropdown)
+5 Regular Reports (I think this will be included in the documents we requested)
+
+6 Nice to have: Scholars could input details regarding their OJT (so SMF could see the standing of the Scholars)
+	(I think they could just ask the school regarding this)
+7 Calendar Notification (Nice to have)
+	-sent by email or text???
+	-2 week notice
+	if the scholar is late for the requirement
+	-every monday alert
+
+Backend
+	According to Sir JoeGene
+	if the allowance has changed
+	-dont edit the record
+	-insert another record
+		-change the status from passive-active
+End
