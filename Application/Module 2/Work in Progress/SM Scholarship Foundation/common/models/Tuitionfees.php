@@ -25,6 +25,9 @@ class Tuitionfees extends \yii\db\ActiveRecord
      * @inheritdoc
      */
 	 
+	public $tuitionfee_scholar_lastName;
+	public $tuitionfee_scholar_firstName;
+	public $tuitionfee_scholar_middleName;
 	
     public static function tableName()
     {

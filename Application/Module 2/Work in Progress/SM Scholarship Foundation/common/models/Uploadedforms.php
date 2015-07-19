@@ -23,6 +23,9 @@ class Uploadedforms extends \yii\db\ActiveRecord
      * @inheritdoc
      */
 	public $file;
+	public $scholar_lastName;
+	public $scholar_firstName;
+	public $scholar_middleName;
     public static function tableName()
     {
         return 'uploadedforms';
@@ -34,8 +37,8 @@ class Uploadedforms extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['scholar_id'], 'required'],
-            [['scholar_id'], 'integer'],
+            [['uploaded_scholar_id','file','fileName'], 'required'],
+            [['uploaded_scholar_id'], 'integer'],
 			[['file'], 'file'],
             [['scholar_lastName', 'scholar_firstName', 'scholar_middleName', 'uploadedForm', 'fileName'], 'string', 'max' => 100]
         ];
@@ -52,8 +55,8 @@ class Uploadedforms extends \yii\db\ActiveRecord
             'scholar_firstName' => 'Scholar First Name',
             'scholar_middleName' => 'Scholar Middle Name',
             'uploadedForm' => 'Uploaded Form',
-            'scholar_id' => 'Scholar ID',
-            'fileName' => 'File Name',
+            'uploaded_scholar_id' => 'Scholar ID',
+            'fileName' => 'File Type',
         ];
     }
 
@@ -62,6 +65,6 @@ class Uploadedforms extends \yii\db\ActiveRecord
      */
     public function getScholar()
     {
-        return $this->hasOne(Scholars::className(), ['scholar_id' => 'scholar_id']);
+        return $this->hasOne(Scholars::className(), ['scholar_id' => 'uploaded_scholar_id']);
     }
 }
