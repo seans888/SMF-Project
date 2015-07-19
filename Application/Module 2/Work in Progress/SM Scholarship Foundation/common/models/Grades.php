@@ -41,9 +41,9 @@ class Grades extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['grade_schoolYear', 'grade_Term', 'grade_scholar_id','grade_school_id'], 'integer'],
+            [['grade_schoolYear', 'grade_Term', 'grade_scholar_id'], 'integer'],
             [['grade_scholar_id','grade_value','grade_schoolYear','grade_Term','grade_subject', 'grade_units'], 'required'],
-            [['grade_scholar_lastName', 'grade_scholar_firstName', 'grade_scholar_middleName', 'grade_subject', 'grade_units', 'grade_value'], 'string', 'max' => 100]
+            [['grade_school_name','grade_scholar_lastName', 'grade_scholar_firstName', 'grade_scholar_middleName', 'grade_subject', 'grade_units', 'grade_value'], 'string', 'max' => 100]
         ];
     }
 
@@ -60,7 +60,7 @@ class Grades extends \yii\db\ActiveRecord
             'grade_scholar_lastName' => 'Last Name',
             'grade_scholar_firstName' => 'First Name',
             'grade_scholar_middleName' => 'Middle Name',
-			'grade_school_id' => 'School',
+			'grade_school_name' => 'School',
 			'grade_subject' => 'Subject',
 			'grade_units' => 'Units',
             'grade_value' => 'Grade Value',
