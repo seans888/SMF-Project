@@ -23,6 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+		<?= Html::a('View List', ['index'],['class' => 'btn btn-success']) ?>
     </p>
 
     <?= DetailView::widget([
@@ -34,9 +35,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'benefit_tuitionfee_id',
             'benefit_scholar_id',
             'benefit_school_id',
-            'benefit_scholar_lastName',
-            'benefit_scholar_firstName',
-            'benefit_scholar_middleName',
+			'benefit_description',
+            'benefitScholar.scholar_lastName',
+            'benefitScholar.scholar_firstName',
+            'benefitScholar.scholar_middleName',
         ],
     ]) ?>
 

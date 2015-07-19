@@ -32,7 +32,9 @@ use kartik\select2\Select2;
 		]) ?>
 
     <?= $form->field($model, 'benefit_amount')->textInput() ?>
-
+	
+	<?= $form->field($model, 'benefit_description')->textInput()->label('Benefit Description/Type') ?>
+	
     <?= $form->field($model, 'benefit_scholarShare')->textInput() ?>
 
 

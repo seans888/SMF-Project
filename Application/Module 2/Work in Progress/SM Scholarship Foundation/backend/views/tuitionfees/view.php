@@ -30,9 +30,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'tuitionfee_id',
             'tuitionfee_scholar_id',
-            // 'tuitionfee_scholar_lastName',
-            // 'tuitionfee_scholar_firstName',
-            // 'tuitionfee_scholar_middleName',
+            'tuitionfeeScholar.scholar_lastName',
+            'tuitionfeeScholar.scholar_firstName',
+            'tuitionfeeScholar.scholar_middleName',
             'tuitionfee_amount',
             'tuitionfee_dateOfEnrollment',
             'tuitionfee_dateOfPayment',

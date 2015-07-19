@@ -22,7 +22,7 @@ use kartik\select2\Select2;
 			'pluginOptions'=>['allowClear'=>true],
 		]) ?>
 		
-	<?= $form->field($model,'School_id')->widget(Select2::classname(),
+	<?= $form->field($model,'grade_school_id')->widget(Select2::classname(),
 		[
 			'data'=>ArrayHelper::map(Schools::find()->all(),'school_id','school_id','school_name'),
 			'language'=>'en',
