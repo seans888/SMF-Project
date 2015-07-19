@@ -9,6 +9,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
+use yii\helpers\ArrayHelper;
+use common\models\Scholars;
 /**
  * GradesController implements the CRUD actions for Grades model.
  */
@@ -61,8 +63,14 @@ class GradesController extends Controller
     public function actionCreate()
     {
         $model = new Grades();
+		// $test = ArrayHelper::map(Scholars::findBySql('SELECT * FROM scholars WHERE scholar_id=2')->all(),'scholar_id','scholar_lastName');
+		// $test2 = ArrayHelper::map(Scholars::findBySql('SELECT * FROM scholars WHERE scholar_id=3')->all(),'scholar_id','scholar_lastName');
+		// $test3 = array_values($test2)[0].' '.array_values($test)[0];
 
         if ($model->load(Yii::$app->request->post())) {
+			// $test4 = ArrayHelper::map(Scholars::find()->joinWith('grades')->where(['scholar_id'=>$model->grade_scholar_id])->all(),'scholar_id','scholar_lastName');
+			// $test5 = array_values($test4)[0];
+			// $model->grade_scholar_lastName = $test5;
         	$model->save();
             return $this->redirect(['view', 'id' => $model->grade_id]);
         } else {
