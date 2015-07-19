@@ -37,10 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
        			'attribute'=>'grade_scholar_middleName',
      			'value'=>'gradeScholar.scholar_middleName',
        		],
-			[
-       			'attribute'=>'School_id',
-     			'value'=>'gradeSchool.school_name',
-       		],
+			'grade_school_name',
             'grade_schoolYear',
             'grade_Term',
 			'grade_subject',
