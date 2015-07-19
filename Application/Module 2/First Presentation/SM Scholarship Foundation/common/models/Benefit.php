@@ -24,6 +24,11 @@ class Benefit extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+	
+	public $benefit_scholar_lastName;
+	public $benefit_scholar_firstName;
+	public $benefit_scholar_middleName;
+	
     public static function tableName()
     {
         return 'benefit';
@@ -35,7 +40,10 @@ class Benefit extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['benefit_amount', 'benefit_scholarShare', 'benefit_tuitionfee_id', 'benefit_scholar_id', 'benefit_school_id'], 'integer']
+            [['benefit_amount', 'benefit_scholarShare', 'benefit_tuitionfee_id',
+			'benefit_scholar_id', 'benefit_school_id'], 'integer'],
+			[['benefit_scholar_lastName', 'benefit_scholar_firstName', 
+			'benefit_scholar_middleName'], 'string', 'max' => 100]
         ];
     }
 
@@ -51,6 +59,9 @@ class Benefit extends \yii\db\ActiveRecord
             'benefit_tuitionfee_id' => 'Benefit Tuitionfee ID',
             'benefit_scholar_id' => 'Scholar ID',
             'benefit_school_id' => 'School Name',
+			'benefit_scholar_lastName' => 'Last Name',
+			'benefit_scholar_firstName' => 'First Name',
+			'benefit_scholar_middleName' => 'Middle Name',
         ];
     }
 
