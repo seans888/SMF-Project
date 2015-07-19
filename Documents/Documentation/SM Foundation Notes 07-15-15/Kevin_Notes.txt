@@ -1,4 +1,4 @@
-FrontEnd ( I removed some of my notes for it was already stated in JLs )
+FrontEnd 
 
 1 upload for any files to be submitted by the scholars
 2 Indicate the specific type of benefits the scholar have (for example, allowance is also a benefit)
