@@ -29,11 +29,12 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'allowance_id',
             'allowance_amount',
-            'allowance_remark',
             'allowance_scholar_id',
             'allowance_school_id',
+			'allowanceScholar.scholar_lastName',
+			'allowanceScholar.scholar_firstName',
+			'allowanceScholar.scholar_middleName',
             'allowance_payStatus',
             'allowance_paidDate',
         ],

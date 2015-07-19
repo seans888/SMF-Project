@@ -28,6 +28,11 @@ class Allowance extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+	 
+	public $allowance_scholar_lastName;
+	public $allowance_scholar_firstName;
+	public $allowance_scholar_middleName;
+	
     public static function tableName()
     {
         return 'allowance';
