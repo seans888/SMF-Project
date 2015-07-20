@@ -63,7 +63,7 @@ class UploadedformsController extends Controller
         $model = new Uploadedforms();
 
         if ($model->load(Yii::$app->request->post())) {
-			$fileName = $model->fileName.$model->scholar_id;
+			$fileName = $model->fileName.$model->uploaded_scholar_id;
 			$model->file = UploadedFile::getInstance($model,'file');
 			if($model->file != null)
 			{
