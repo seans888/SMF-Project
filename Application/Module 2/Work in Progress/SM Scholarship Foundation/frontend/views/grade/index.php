@@ -23,7 +23,7 @@ foreach($users as $ctr){
 					$year=$grade->grade_schoolYear;
 					$term=$grade->grade_Term;
 					$gradeval = $grade->grade_value;
-					$gradefile=$grade->grade_grade_form;
+					
 				}
 				}
 			}
@@ -46,7 +46,7 @@ foreach($users as $ctr){
     'items' => [
         [
             'label' => 'Current Grades',
-            'content' => 'Name:<b> '.$name.'</b><br><br>School Year:<b> '.$year.'</b><br><br>Term:<b> '.$term.'</b><br><br>Grade Value (GPA/GWA):<b> '.$gradeval.'</b><div style="float:right;">Uploaded Grade Sheet (filename):<b> '.$gradefile.'</b></div>'
+            'content' => 'Name:<b> '.$name.'</b><br><br>School Year:<b> '.$year.'</b><br><br>Term:<b> '.$term.'</b><br><br>Grade Value (GPA/GWA):<b> '.$gradeval.'</b><div style="float:right;"></div>'
         ],
         [
             'label' => 'Approved Grades',

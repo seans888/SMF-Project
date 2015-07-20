@@ -27,7 +27,7 @@ foreach($users as $ctr){
 					$tuitionamount = $tuition->tuitionfee_amount;
 					$tuitionenrol=$tuition->tuitionfee_dateOfEnrollment;
 					$tuitionpay=$tuition->tuitionfee_dateOfPayment;
-					$tuitionfile=$tuition->tuitionfee_registrationForm;
+					
 				}
 					}
 				}
@@ -44,7 +44,7 @@ foreach($users as $ctr){
 		'items' => [
         [
             'label' => 'Actual Tuition Fees',
-            'content' => '<table><tr><td width=50%>Name:<b> '.$name.'</b><br><br>School:<b> '.$schoolname.'</b><br><br>School Year:<b> '.$year.'</b><br><br>Term:<b> '.$term.'</b><br><br>Total Tuition Fee for Term No. '.$term.':<b> '.$tuitionamount.'</b></td><td>Date of Enrollment:<b> '.$tuitionenrol.'</b><br><br>Date of Payment:<b> '.$tuitionpay.'</b><br><br>Uploaded Registration Form (filename):<b> '.$tuitionfile.'</b></td></tr></table>',
+            'content' => '<table><tr><td width=50%>Name:<b> '.$name.'</b><br><br>School:<b> '.$schoolname.'</b><br><br>School Year:<b> '.$year.'</b><br><br>Term:<b> '.$term.'</b><br><br>Total Tuition Fee for Term No. '.$term.':<b> '.$tuitionamount.'</b></td><td>Date of Enrollment:<b> '.$tuitionenrol.'</b><br><br>Date of Payment:<b> '.$tuitionpay.'</b></td></tr></table>',
         ],
         [
             'label' => 'Past Tuition Fees',

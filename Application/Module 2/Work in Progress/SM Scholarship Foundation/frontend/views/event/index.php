@@ -10,7 +10,7 @@ use yii\bootstrap\Modal;
 $this->title = 'Events';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="event-index">
+<div class="event-index" style="color:black;">
 
     <h1 style="margin-top:100px;"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

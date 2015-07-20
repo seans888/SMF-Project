@@ -39,7 +39,7 @@ DashboardAsset::register($this);
 			
 		
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
                         <a href="#page-top"></a>
@@ -63,32 +63,23 @@ DashboardAsset::register($this);
                         <a class="page-scroll" href="#contact"><font style="color:#e6e600">Contact</font></a>
                     </li>
 					<li>
-					
 					 <?php
-					
 					if (Yii::$app->user->isGuest) {
 					$menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
 					$menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-					
 					} else {
 					$menuItems[] = [
                     'label' => 'Logout ('. Yii::$app->user->identity->username.')',
                     'url' => ['/site/logout'],
                     'linkOptions' => ['data-method' => 'post']
 					];
-					
 					}
 					
-					
 					echo Nav::widget([
-					'options' => ['class' => 'navbar-nav navbar-right'],
 					'items' => $menuItems,
+					'options' => ['class' => 'page-scroll'],
 					]);
-					
 					?>
-					
-					
-					
 					</li>
 					 
                    
@@ -105,23 +96,23 @@ DashboardAsset::register($this);
             <?= $content ?>
 			</div>
          
-			<section id="records" class="bg-light-gray">
+			<section id="records" class="bg-light-gray" style="background-color:#fff">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="color:black;">Records</h2>
-                    <h3 class="section-subheading text-muted" style="color:red;">*Please review the documents submitted to know if you are qualified for the scholarship</h3>
+                    <h3 class="section-subheading text-muted" style="color:#005ab2;">*Please review the documents submitted to know if you are qualified for the scholarship</h3>
                 </div>
             </div>
              <div class="row">
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="<?php echo'index.php?r=grade/index'?>" class="portfolio-link" data-toggle="modal">
                         
-                        <img src="img/portfolio/d.png" class="img-responsive" alt="" style="height:250px">
+                        <img src="img/portfolio/c.png" class="img-responsive" alt="" style="height:250px">
                     </a>
                     <div class="portfolio-caption">
                         <h4 style="color:black;">View Grades</h4>
-						 <p class="text-muted">Past-Present</p>
+						 <p class="text-muted" style="color:#005ab2;">Past-Present</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -131,7 +122,7 @@ DashboardAsset::register($this);
                     </a>
                     <div class="portfolio-caption">
                         <h4 style="color:black;">View Tuition Fees </h4>
-						<p class="text-muted">Actual Tuition and Shouldered by SM</p>
+						<p class="text-muted" style="color:#005ab2;">Actual Tuition and Shouldered by SM</p>
                     </div>
                 </div>
 				 <div class="col-md-4 col-sm-6 portfolio-item" >
@@ -141,7 +132,7 @@ DashboardAsset::register($this);
                     </a>
                     <div class="portfolio-caption">
                         <h4 style="color:black;">View Stipend and Benefits</h4>
-                        <p class="text-muted">Past-Present</p>
+                        <p class="text-muted" style="color:#005ab2;">Past-Present</p>
                     </div>
                 </div>
 				 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -151,88 +142,77 @@ DashboardAsset::register($this);
                </div>
     </section>
 		
-   <section id="forms" class="bg-light-gray">
+   <section id="forms" class="bg-light-gray" style="background-color:#fff">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="color:black;">Forms</h2>
-                    <h3 class="section-subheading text-muted" style="color:red;">*this section lets you upload and edit documents that will be needed for maintaining the scholarship.<br> Please be advised that forms should also be submitted through SM Foundation itself.</h3>
+                    <h3 class="section-subheading text-muted" style="color:#005ab2;">*this section lets you upload and edit documents that will be needed for maintaining the scholarship.<br> Please be advised that forms should also be submitted through SM Foundation itself.</h3>
                 </div>
             </div>
-             <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
+             <div class="row" >
+                <div class="col-md-4 col-sm-6 portfolio-item" style="margin-left:160px;">
                     <a href="<?php echo'index.php?r=compile/index'?>" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                                <center><i class="fa fa-plus fa-3x"></i></center>
                             </div>
                         </div>
-                        <img src="img/portfolio/g.png" class="img-responsive" alt="" style="height:250px">
+                        <img src="img/portfolio/parttime.jpg" class="img-responsive" alt="" style="height:250px">
                     </a>
                     <div class="portfolio-caption">
                         <h4 style="color:black;">Part Time Jobs</h4>
-                        <p class="text-muted">Fill Up Form</p>
+                        <p class="text-muted" style="color:#005ab2;">Fill Up Form</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                <div class="col-md-4 col-sm-6 portfolio-item" style="margin-left:80px;">
                     <a href="<?php echo 'index.php?r=tuition/update'?>" class="portfolio-link" data-toggle="modal" >
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                                <center><i class="fa fa-plus fa-3x"></i></center>
                             </div>
                         </div>
-                        <img src="img/portfolio/b.png" class="img-responsive" alt="" style="height:250px;width:400px;">
+                        <img src="img/portfolio/upload.png" class="img-responsive" alt="" style="height:250px;width:400px;">
                     </a>
                     <div class="portfolio-caption">
                         <h4 style="color:black;">Upload </h4>
-                        <p class="text-muted">Registration Form</p>
+                        <p class="text-muted" style="color:#005ab2;">Files to be Submitted for Requirements</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="<?php echo 'index.php?r=grade/update'?>" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/c.png" class="img-responsive" alt="" style="height:250px;width:400px;">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4 style="color:black;">Upload</h4>
-                        <p class="text-muted">Current Grades</p>
-                    </div>
-                </div>
+               
                </div>
     </section>
 	
     <!-- About Section -->
-    <section id="calendar">
+    <section id="calendar" style="background-color:#fff">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="color:black;">Calendar</h2>
-                    <h3 class="section-subheading text-muted">View your schedules for submitting forms and grades to SM Foundation</h3>
+                    <h3 class="section-subheading text-muted" style="color:#005ab2;">View your schedules for submitting forms and grades to SM Foundation</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <img src="img/portfolio/calendar.jpg" style="float:left;"></img>
+                    <img src="img/portfolio/calendarnew.jpg" style="float:left;height:500px;width:500px;"></img>
 					<div style="float:right;margin-right:200px;">
 						<a href="index.php?r=event/index" class="btn btn-primary" style="margin-top:50px;">Show Calendar</a>
 						
 					</div><br><br><br><br><br>
-					<p style="color:blue; text-align:center;">In this calendar, you could see different schedules of form submissions to the SM Foundation. You could upload your Grade Sheet and Registration Form here but notice that it will only be used as a record and backup only. It will not be verified until the hard copy of the forms were submitted. </p>
+					<p style="color:#005ab2; text-align:center;">In this calendar, you could see different schedules of form submissions to the SM Foundation. You could upload your Grade Sheet and Registration Form here but notice that it will only be used as a record and backup only. It will not be verified until the hard copy of the forms were submitted. </p>
 					
                 </div>
             </div>
         </div>
     </section>
-    <section id="contact">
+    <section id="contact" style="background-color:#fff">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">All inquiries will be properly managed by SM Foundation</h3>
+				
+                    <h2 class="section-heading" style="color:black;">Contact Us</h2>
+                   
+					<img  src="img/portfolio/icon.jpg" style="height:110px;width:110px;" ></img>
                 </div>
             </div>
             <div class="row">
@@ -262,7 +242,7 @@ DashboardAsset::register($this);
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Send Message</button>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
                             </div>
                         </div>
                     </form>
