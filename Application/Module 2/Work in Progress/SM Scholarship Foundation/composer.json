@@ -25,7 +25,8 @@
 		"yiisoft/yii2-jui": "~2.0.0",
         "kartik-v/yii2-widget-select2": "@dev",
         "kartik-v/yii2-widget-typeahead": "*",
-        "reportico/yii2-reportico": "dev-master"
+        "reportico/yii2-reportico": "dev-master",
+		
 		
     },
     "require-dev": {

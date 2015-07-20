@@ -195,7 +195,7 @@ DashboardAsset::register($this);
             <div class="row">
                 <div class="col-lg-12">
                     <img src="img/portfolio/calendarnew.jpg" style="float:left;height:500px;width:500px;"></img>
-					<div style="float:right;margin-right:200px;">
+					<div style="float:right;margin-right:230px;">
 						<a href="index.php?r=event/index" class="btn btn-primary" style="margin-top:50px;">Show Calendar</a>
 						
 					</div><br><br><br><br><br>

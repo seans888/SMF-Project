@@ -49,7 +49,7 @@ foreach($users as $ctr){
             'content' => 'Name:<b> '.$name.'</b><br><br>School Year:<b> '.$year.'</b><br><br>Term:<b> '.$term.'</b><br><br>Grade Value (GPA/GWA):<b> '.$gradeval.'</b><div style="float:right;"></div>'
         ],
         [
-            'label' => 'Approved Grades',
+            'label' => 'Grade History',
             'content' => 'No data to be seen yet',
             
         ],
