@@ -84,15 +84,6 @@ return array (
       '@dosamigos/datepicker' => $vendorDir . '/2amigos/yii2-date-picker-widget/src',
     ),
   ),
-  '2amigos/yii2-type-ahead-widget' => 
-  array (
-    'name' => '2amigos/yii2-type-ahead-widget',
-    'version' => '1.0.0.0',
-    'alias' => 
-    array (
-      '@dosamigos/typeahead' => $vendorDir . '/2amigos/yii2-type-ahead-widget/src',
-    ),
-  ),
   '2amigos/yii2-file-input-widget' => 
   array (
     'name' => '2amigos/yii2-file-input-widget',
@@ -100,24 +91,6 @@ return array (
     'alias' => 
     array (
       '@dosamigos/fileinput' => $vendorDir . '/2amigos/yii2-file-input-widget/src',
-    ),
-  ),
-  'kartik-v/yii2-krajee-base' => 
-  array (
-    'name' => 'kartik-v/yii2-krajee-base',
-    'version' => '1.7.7.0',
-    'alias' => 
-    array (
-      '@kartik/base' => $vendorDir . '/kartik-v/yii2-krajee-base',
-    ),
-  ),
-  'kartik-v/yii2-widget-select2' => 
-  array (
-    'name' => 'kartik-v/yii2-widget-select2',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@kartik/select2' => $vendorDir . '/kartik-v/yii2-widget-select2',
     ),
   ),
   'kartik-v/yii2-widget-typeahead' => 
@@ -136,6 +109,42 @@ return array (
     'alias' => 
     array (
       '@reportico/reportico' => $vendorDir . '/reportico/yii2-reportico',
+    ),
+  ),
+  'kartik-v/yii2-krajee-base' => 
+  array (
+    'name' => 'kartik-v/yii2-krajee-base',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@kartik/base' => $vendorDir . '/kartik-v/yii2-krajee-base',
+    ),
+  ),
+  'kartik-v/yii2-widget-select2' => 
+  array (
+    'name' => 'kartik-v/yii2-widget-select2',
+    'version' => '2.0.0.0',
+    'alias' => 
+    array (
+      '@kartik/select2' => $vendorDir . '/kartik-v/yii2-widget-select2',
+    ),
+  ),
+  'kartik-v/yii2-grid' => 
+  array (
+    'name' => 'kartik-v/yii2-grid',
+    'version' => '3.0.2.0',
+    'alias' => 
+    array (
+      '@kartik/grid' => $vendorDir . '/kartik-v/yii2-grid',
+    ),
+  ),
+  'kartik-v/yii2-mpdf' => 
+  array (
+    'name' => 'kartik-v/yii2-mpdf',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@kartik/mpdf' => $vendorDir . '/kartik-v/yii2-mpdf',
     ),
   ),
 );
