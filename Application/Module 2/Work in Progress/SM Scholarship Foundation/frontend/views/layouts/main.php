@@ -24,61 +24,74 @@ DashboardAsset::register($this);
 </head>
 <body id="page-top" class="index" >
 	
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top" style=" background-color: #005ab2;">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <div class="navbar-header page-scroll" >
+                <button type="button"   class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">SM Foundation</a>
+                <a class="navbar-brand page-scroll" href="#page-top"><font style="color:#fff">SM Foundation</font></a>
             </div>
 			
 		
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
 					<li>
-                        <a class="page-scroll" href="<?php echo 'index.php'?>">Home</a>
+                        <a class="page-scroll" href="<?php echo 'index.php'?>"><font style="color:#e6e600">Home</font></a>
                     </li>
 					 <li>
-                        <a class="page-scroll" href="#records">Records</a>
+                        <a class="page-scroll" href="<?php echo 'index.php?r=compile/index'?>"><font style="color:#e6e600">Profile</font></a>
+                    </li>
+					 <li>
+                        <a class="page-scroll" href="#records"><font style="color:#e6e600">Records</font></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#forms">Forms</a>
+                        <a class="page-scroll" href="#forms"><font style="color:#e6e600">Forms</font></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#calendar">Calendar</a>
+                        <a class="page-scroll" href="#calendar"><font style="color:#e6e600">Calendar</font></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact"><font style="color:#e6e600">Contact</font></a>
                     </li>
-					 
-                    <?php
+					<li>
+					
+					 <?php
+					
 					if (Yii::$app->user->isGuest) {
 					$menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
 					$menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+					
 					} else {
 					$menuItems[] = [
-					
-                    'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+                    'label' => 'Logout ('. Yii::$app->user->identity->username.')',
                     'url' => ['/site/logout'],
                     'linkOptions' => ['data-method' => 'post']
 					];
+					
 					}
-			
+					
+					
 					echo Nav::widget([
 					'options' => ['class' => 'navbar-nav navbar-right'],
 					'items' => $menuItems,
 					]);
-            
+					
 					?>
+					
+					
+					
+					</li>
+					 
+                   
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -88,14 +101,15 @@ DashboardAsset::register($this);
 	
     
      <div class="container">
+			
             <?= $content ?>
-            
-        </div>
+			</div>
+         
 			<section id="records" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Records</h2>
+                    <h2 class="section-heading" style="color:black;">Records</h2>
                     <h3 class="section-subheading text-muted" style="color:red;">*Please review the documents submitted to know if you are qualified for the scholarship</h3>
                 </div>
             </div>
@@ -106,7 +120,7 @@ DashboardAsset::register($this);
                         <img src="img/portfolio/d.png" class="img-responsive" alt="" style="height:250px">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>View Grades</h4>
+                        <h4 style="color:black;">View Grades</h4>
 						 <p class="text-muted">Past-Present</p>
                     </div>
                 </div>
@@ -116,7 +130,7 @@ DashboardAsset::register($this);
                         <img src="img/portfolio/e.png" class="img-responsive" alt="" style="height:250px;width:400px;">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>View Tuition Fees </h4>
+                        <h4 style="color:black;">View Tuition Fees </h4>
 						<p class="text-muted">Actual Tuition and Shouldered by SM</p>
                     </div>
                 </div>
@@ -126,24 +140,14 @@ DashboardAsset::register($this);
                         <img src="img/portfolio/f.png" class="img-responsive" alt="" style="height:250px;width:400px;">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>View Stipend and Benefits</h4>
+                        <h4 style="color:black;">View Stipend and Benefits</h4>
                         <p class="text-muted">Past-Present</p>
                     </div>
                 </div>
 				 <div class="col-md-4 col-sm-6 portfolio-item">
                    
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                       
-                        <img src="img/portfolio/g.png" class="img-responsive" alt="" style="height:250px;width:400px;">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Part Time Jobs</h4>
-						<p class="text-muted">New Jobs - Taken</p>
-                    </div>
-                </div>
-				
+
                </div>
     </section>
 		
@@ -151,7 +155,7 @@ DashboardAsset::register($this);
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Forms</h2>
+                    <h2 class="section-heading" style="color:black;">Forms</h2>
                     <h3 class="section-subheading text-muted" style="color:red;">*this section lets you upload and edit documents that will be needed for maintaining the scholarship.<br> Please be advised that forms should also be submitted through SM Foundation itself.</h3>
                 </div>
             </div>
@@ -163,11 +167,11 @@ DashboardAsset::register($this);
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/h.png" class="img-responsive" alt="" style="height:250px">
+                        <img src="img/portfolio/g.png" class="img-responsive" alt="" style="height:250px">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>View Profile and Information</h4>
-                        <p class="text-muted">Scholarship Details, Personal Information, School ,etc.</p>
+                        <h4 style="color:black;">Part Time Jobs</h4>
+                        <p class="text-muted">Fill Up Form</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -180,7 +184,7 @@ DashboardAsset::register($this);
                         <img src="img/portfolio/b.png" class="img-responsive" alt="" style="height:250px;width:400px;">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Upload </h4>
+                        <h4 style="color:black;">Upload </h4>
                         <p class="text-muted">Registration Form</p>
                     </div>
                 </div>
@@ -194,7 +198,7 @@ DashboardAsset::register($this);
                         <img src="img/portfolio/c.png" class="img-responsive" alt="" style="height:250px;width:400px;">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Upload</h4>
+                        <h4 style="color:black;">Upload</h4>
                         <p class="text-muted">Current Grades</p>
                     </div>
                 </div>
@@ -206,13 +210,13 @@ DashboardAsset::register($this);
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Calendar</h2>
+                    <h2 class="section-heading" style="color:black;">Calendar</h2>
                     <h3 class="section-subheading text-muted">View your schedules for submitting forms and grades to SM Foundation</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <img src="http://www.aiche.org/sites/default/files/styles/aiche_content/public/images/page/lead/edit_calendar_ssk_47433454.jpg?itok=GOEK7rfr" style="float:left;"></img>
+                    <img src="img/portfolio/calendar.jpg" style="float:left;"></img>
 					<div style="float:right;margin-right:200px;">
 						<a href="index.php?r=event/index" class="btn btn-primary" style="margin-top:50px;">Show Calendar</a>
 						
