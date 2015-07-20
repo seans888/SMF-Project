@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'school_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'school_area')->dropDownList([ 'Provincial' => 'Provincial', 'NCR' => 'NCR', ], ['prompt' => 'Select Area']) ?>
+    <?= $form->field($model, 'school_area')->dropDownList([ 'Provincial' => 'Provincial', 'NCR' => 'NCR', ], ['prompt' => '']) ?>
 
     <?= $form->field($model, 'school_address')->textInput(['maxlength' => true]) ?>
 
