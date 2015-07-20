@@ -9,6 +9,10 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
+use common\models\Scholars;
+use common\models\Schools;
+use yii\helpers\ArrayHelper;
+
 /**
  * GradesController implements the CRUD actions for Grades model.
  */

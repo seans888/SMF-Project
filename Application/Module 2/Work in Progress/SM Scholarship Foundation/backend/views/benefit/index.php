@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
         		],        
             'benefit_amount',
             'benefit_scholarShare',
-
+			'benefit_description',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

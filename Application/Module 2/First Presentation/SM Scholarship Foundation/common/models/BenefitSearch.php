@@ -19,7 +19,7 @@ class BenefitSearch extends Benefit
     {
         return [
             [['benefit_id', 'benefit_amount', 'benefit_scholarShare', 'benefit_tuitionfee_id', 'benefit_scholar_id', 'benefit_school_id'], 'integer'],
-            [['benefit_scholar_lastName', 'benefit_scholar_firstName', 'benefit_scholar_middleName'], 'safe'],
+            [['benefit_scholar_lastName', 'benefit_scholar_firstName', 'benefit_scholar_middleName','benefit_description'], 'safe'],
         ];
     }
 
@@ -68,7 +68,8 @@ class BenefitSearch extends Benefit
 
         $query->andFilterWhere(['like', 'scholars.scholar_lastName', $this->benefit_scholar_lastName])
             ->andFilterWhere(['like', 'scholars.scholar_firstName', $this->benefit_scholar_firstName])
-            ->andFilterWhere(['like', 'scholars.scholar_middleName', $this->benefit_scholar_middleName]);
+            ->andFilterWhere(['like', 'scholars.scholar_middleName', $this->benefit_scholar_middleName])
+			->andFilterWhere(['like', 'benefit_description', $this->benefit_description]);
 
         return $dataProvider;
     }

@@ -16,7 +16,7 @@ use kartik\typeahead\Typeahead;
 
     <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
 	
-	<?= $form->field($model,'scholar_id')->widget(Select2::classname(),
+	<?= $form->field($model,'uploaded_scholar_id')->widget(Select2::classname(),
 		[
 			'data'=>ArrayHelper::map(Scholars::find()->all(),'scholar_id','scholar_id','scholar_lastName'),
 			'language'=>'en',

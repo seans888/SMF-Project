@@ -35,6 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'benefit_tuitionfee_id',
             'benefit_scholar_id',
             'benefit_school_id',
+			'benefit_description',
             'benefitScholar.scholar_lastName',
             'benefitScholar.scholar_firstName',
             'benefitScholar.scholar_middleName',

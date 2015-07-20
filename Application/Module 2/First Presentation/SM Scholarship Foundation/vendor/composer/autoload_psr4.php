@@ -19,6 +19,7 @@ return array(
     'kartik\\typeahead\\' => array($vendorDir . '/kartik-v/yii2-widget-typeahead'),
     'kartik\\select2\\' => array($vendorDir . '/kartik-v/yii2-widget-select2'),
     'kartik\\plugins\\fileinput\\' => array($vendorDir . '/kartik-v/bootstrap-fileinput'),
+    'kartik\\grid\\' => array($vendorDir . '/kartik-v/yii2-grid'),
     'kartik\\base\\' => array($vendorDir . '/kartik-v/yii2-krajee-base'),
     'dosamigos\\typeahead\\' => array($vendorDir . '/2amigos/yii2-type-ahead-widget/src'),
     'dosamigos\\fileinput\\' => array($vendorDir . '/2amigos/yii2-file-input-widget/src'),

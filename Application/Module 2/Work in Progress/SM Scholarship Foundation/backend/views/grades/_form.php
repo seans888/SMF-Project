@@ -29,7 +29,6 @@ use kartik\select2\Select2;
 			'options'=>['placeholder'=>'Select School ID'],
 			'pluginOptions'=>['allowClear'=>true],
 		]) ?>
-	
 	<?= $form->field($model, 'grade_schoolYear')->textInput() ?>
 
     <?= $form->field($model, 'grade_Term')->textInput() ?>

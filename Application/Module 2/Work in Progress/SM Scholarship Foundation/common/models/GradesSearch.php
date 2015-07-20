@@ -18,8 +18,8 @@ class GradesSearch extends Grades
     public function rules()
     {
         return [
-            [['grade_id', 'grade_schoolYear', 'grade_Term', 'grade_scholar_id'], 'integer'],
-            [['grade_scholar_lastName', 'grade_scholar_firstName', 'grade_scholar_middleName', 'grade_value'], 'safe'],
+            [['School_id','grade_id', 'grade_schoolYear', 'grade_Term', 'grade_scholar_id'], 'integer'],
+            [['grade_subject', 'grade_units','grade_scholar_lastName', 'grade_scholar_firstName', 'grade_scholar_middleName', 'grade_value'], 'safe'],
         ];
     }
 
@@ -56,17 +56,22 @@ class GradesSearch extends Grades
         }
         
         $query->joinWith('gradeScholar');
+		$query->joinWith('gradeSchool');
         $query->andFilterWhere([
             'grade_id' => $this->grade_id,
             'grade_schoolYear' => $this->grade_schoolYear,
             'grade_Term' => $this->grade_Term,
             'grade_scholar_id' => $this->grade_scholar_id,
+	//		'School_id'=>$this->School_id,
         ]);
 
         $query->andFilterWhere(['like', 'scholars.scholar_lastName', $this->grade_scholar_lastName])
             ->andFilterWhere(['like', 'scholars.scholar_firstName', $this->grade_scholar_firstName])
             ->andFilterWhere(['like', 'scholars.scholar_middleName', $this->grade_scholar_middleName])
-            ->andFilterWhere(['like', 'grade_value', $this->grade_value]);
+            ->andFilterWhere(['like', 'grade_value', $this->grade_value])
+			->andFilterWhere(['like', 'grade_subject', $this->grade_subject])
+			->andFilterWhere(['like', 'grade_units', $this->grade_units])
+			->andFilterWhere(['like', 'schools.school_name', $this->School_id]);
 
         return $dataProvider;
     }

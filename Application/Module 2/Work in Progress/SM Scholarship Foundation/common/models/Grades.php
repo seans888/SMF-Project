@@ -37,8 +37,8 @@ class Grades extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['grade_schoolYear', 'grade_Term', 'grade_scholar_id', 'School_id'], 'integer'],
-            [['grade_scholar_id','grade_value','grade_schoolYear','grade_Term', 'grade_subject', 'grade_units'], 'required'],
+            [['grade_schoolYear', 'grade_Term', 'grade_scholar_id','School_id'], 'integer'],
+            [['grade_scholar_id','grade_value','grade_schoolYear','grade_Term','grade_subject', 'grade_units'], 'required'],
             [['grade_scholar_lastName', 'grade_scholar_firstName', 'grade_scholar_middleName', 'grade_subject', 'grade_units', 'grade_value'], 'string', 'max' => 100]
         ];
     }
@@ -80,18 +80,7 @@ class Grades extends \yii\db\ActiveRecord
         return $this->hasOne(Scholars::className(), ['scholar_id' => 'grade_scholar_id']);
     }
 	
-	/**
-     * @return \yii\db\ActiveQuery
-     */
-/*     public function getGradeEquivalence()
-    {
-        return $this->hasOne(equivalence::className(), ['equivalence_grade_rule' => 'equivalence_grade_rule']);
-    } */
-	
-	/**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getGradeSchool()
+	public function getGradeSchool()
     {
         return $this->hasOne(Schools::className(), ['School_id' => 'School_id']);
     }
