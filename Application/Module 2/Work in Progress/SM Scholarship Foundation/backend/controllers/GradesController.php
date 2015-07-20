@@ -67,16 +67,6 @@ class GradesController extends Controller
         $model = new Grades();
 
         if ($model->load(Yii::$app->request->post())) {
-			$schoolID = ArrayHelper::map(Scholars::find()
-			->where(['scholar_id'=>$model->grade_scholar_id])
-			->all(),
-			'scholar_id','scholar_school_id');
-			
-			$schoolName = ArrayHelper::map(Schools::find()
-			->where(['school_id'=>array_values($schoolID)[0]])
-			->all(),'school_id','school_name');
-			
-			$model->grade_school_name = array_values($schoolName)[0];
         	$model->save();
             return $this->redirect(['view', 'id' => $model->grade_id]);
         } else {
