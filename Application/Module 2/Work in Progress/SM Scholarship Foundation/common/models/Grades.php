@@ -26,10 +26,6 @@ class Grades extends \yii\db\ActiveRecord
      * @inheritdoc
      */
 	
-	public $grade_scholar_lastName;
-	public $grade_scholar_firstName;
-	public $grade_scholar_middleName;
-	
     public static function tableName()
     {
         return 'grades';
@@ -41,9 +37,9 @@ class Grades extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['grade_schoolYear', 'grade_Term', 'grade_scholar_id'], 'integer'],
+            [['grade_schoolYear', 'grade_Term', 'grade_scholar_id','School_id'], 'integer'],
             [['grade_scholar_id','grade_value','grade_schoolYear','grade_Term','grade_subject', 'grade_units'], 'required'],
-            [['grade_school_name','grade_scholar_lastName', 'grade_scholar_firstName', 'grade_scholar_middleName', 'grade_subject', 'grade_units', 'grade_value'], 'string', 'max' => 100]
+            [['grade_scholar_lastName', 'grade_scholar_firstName', 'grade_scholar_middleName', 'grade_subject', 'grade_units', 'grade_value'], 'string', 'max' => 100]
         ];
     }
 
@@ -60,7 +56,7 @@ class Grades extends \yii\db\ActiveRecord
             'grade_scholar_lastName' => 'Last Name',
             'grade_scholar_firstName' => 'First Name',
             'grade_scholar_middleName' => 'Middle Name',
-			'grade_school_name' => 'School',
+			'School_id' => 'School',
 			'grade_subject' => 'Subject',
 			'grade_units' => 'Units',
             'grade_value' => 'Grade Value',
@@ -82,5 +78,10 @@ class Grades extends \yii\db\ActiveRecord
     public function getGradeScholar()
     {
         return $this->hasOne(Scholars::className(), ['scholar_id' => 'grade_scholar_id']);
+    }
+	
+	public function getGradeSchool()
+    {
+        return $this->hasOne(Schools::className(), ['School_id' => 'School_id']);
     }
 }
