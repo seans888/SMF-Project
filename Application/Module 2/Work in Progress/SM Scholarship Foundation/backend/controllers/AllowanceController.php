@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
+use common\models\ScholarsSearch;
 use common\models\Allowance;
 use common\models\AllowanceSearch;
 use yii\web\Controller;
@@ -32,7 +33,7 @@ class AllowanceController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new AllowanceSearch();
+        $searchModel = new ScholarsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
