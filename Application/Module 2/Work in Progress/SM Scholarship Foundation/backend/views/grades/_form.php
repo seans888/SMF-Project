@@ -21,7 +21,14 @@ use kartik\select2\Select2;
 			'options'=>['placeholder'=>'Select Scholar ID'],
 			'pluginOptions'=>['allowClear'=>true],
 		]) ?>
-	
+		
+	<?= $form->field($model,'School_id')->widget(Select2::classname(),
+		[
+			'data'=>ArrayHelper::map(Schools::find()->all(),'school_id','school_id','school_name'),
+			'language'=>'en',
+			'options'=>['placeholder'=>'Select School ID'],
+			'pluginOptions'=>['allowClear'=>true],
+		]) ?>
 	<?= $form->field($model, 'grade_schoolYear')->textInput() ?>
 
     <?= $form->field($model, 'grade_Term')->textInput() ?>
