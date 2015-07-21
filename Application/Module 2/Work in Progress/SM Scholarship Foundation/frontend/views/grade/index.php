@@ -18,12 +18,12 @@ foreach($users as $ctr){
 		foreach($scholars as $scholarctr){
 			foreach($schools as $school){
 				foreach($grades as $grade){
-				if($scholarctr->scholar_user_id==$ctr->id && $scholarctr->scholar_school_id==$school->school_id && $grade->grade_scholar_id==$scholarctr->scholar_user_id){
+				if($scholarctr->scholar_user_id==$ctr->id && $scholarctr->scholar_school_id==$school->School_id && $grade->grade_scholar_id==$scholarctr->scholar_user_id){
 					$name=$scholarctr->scholar_firstName." ".$scholarctr->scholar_lastName;
 					$year=$grade->grade_schoolYear;
 					$term=$grade->grade_Term;
 					$gradeval = $grade->grade_value;
-					$gradefile=$grade->grade_grade_form;
+					
 				}
 				}
 			}
@@ -46,10 +46,10 @@ foreach($users as $ctr){
     'items' => [
         [
             'label' => 'Current Grades',
-            'content' => 'Name:<b> '.$name.'</b><br><br>School Year:<b> '.$year.'</b><br><br>Term:<b> '.$term.'</b><br><br>Grade Value (GPA/GWA):<b> '.$gradeval.'</b><div style="float:right;">Uploaded Grade Sheet (filename):<b> '.$gradefile.'</b></div>'
+            'content' => 'Name:<b> '.$name.'</b><br><br>School Year:<b> '.$year.'</b><br><br>Term:<b> '.$term.'</b><br><br>Grade Value (GPA/GWA):<b> '.$gradeval.'</b><div style="float:right;"></div>'
         ],
         [
-            'label' => 'Approved Grades',
+            'label' => 'Grade History',
             'content' => 'No data to be seen yet',
             
         ],

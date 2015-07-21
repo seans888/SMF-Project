@@ -80,7 +80,7 @@ class Schools extends \yii\db\ActiveRecord
      */
     public function getCompiles()
     {
-        return $this->hasMany(Compile::className(), ['compile_school_id' => 'school_id']);
+        return $this->hasMany(Compile::className(), ['compile_school_id' => 'School_id']);
     }
 
     /**
@@ -104,6 +104,6 @@ class Schools extends \yii\db\ActiveRecord
      */
     public function getScholars()
     {
-        return $this->hasMany(Scholars::className(), ['scholar_school_id' => 'school_id']);
+        return $this->hasMany(Scholars::className(), ['scholar_school_id' => 'School_id']);
     }
 }
