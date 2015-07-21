@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
+use common\models\ScholarsSearch;
 use common\models\Uploadedforms;
 use common\models\UploadedformsSearch;
 use yii\web\Controller;
@@ -32,7 +33,7 @@ class UploadedformsController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new UploadedformsSearch();
+        $searchModel = new ScholarsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -89,7 +90,15 @@ class UploadedformsController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+			$fileName = $model->fileName.$model->uploaded_scholar_id;
+			$model->file = UploadedFile::getInstance($model,'file');
+			if($model->file != null)
+			{
+				$model->file->saveAs('Forms/'.$fileName.'.'.$model->file->extension);	
+				$model->uploadedForm = 'Forms/'.$fileName.'.'.$model->file->extension;	
+			}			
+			$model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [

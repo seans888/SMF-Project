@@ -85,7 +85,7 @@ class Allowance extends \yii\db\ActiveRecord
      */
     public function getAllowanceSchool()
     {
-        return $this->hasOne(Schools::className(), ['school_id' => 'allowance_school_id']);
+        return $this->hasOne(Schools::className(), ['School_id' => 'allowance_school_id']);
     }
 
     /**

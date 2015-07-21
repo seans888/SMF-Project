@@ -166,7 +166,7 @@ DashboardAsset::register($this);
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item" style="margin-left:80px;">
-                    <a href="<?php echo 'index.php?r=tuition/update'?>" class="portfolio-link" data-toggle="modal" >
+                    <a href="<?php echo 'index.php?r=uploadedforms/create'?>" class="portfolio-link" data-toggle="modal" >
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <center><i class="fa fa-plus fa-3x"></i></center>

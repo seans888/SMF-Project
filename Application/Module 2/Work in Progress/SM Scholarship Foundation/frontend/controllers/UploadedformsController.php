@@ -8,6 +8,9 @@ use common\models\UploadedformsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use common\models\User;
+use common\models\Scholars;
+use yii\web\UploadedFile;
 
 /**
  * UploadedformsController implements the CRUD actions for Uploadedforms model.
@@ -59,16 +62,37 @@ class UploadedformsController extends Controller
      * @return mixed
      */
     public function actionCreate()
-    {
-        $model = new Uploadedforms();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+    {	
+		$username=Yii::$app->user->identity->username;
+		$users = User::find()->all();
+		$scholars = Scholars::find()->all();
+		$model = new Uploadedforms();
+		foreach($users as $user){
+		foreach($scholars as $scholar){
+			if($user->username==$username&&$user->id==$scholar->scholar_id){
+			$model->uploaded_scholar_id=$scholar->scholar_id;
+			if ($model->load(Yii::$app->request->post())) {
+			$fileName = $model->fileName.$model->uploaded_scholar_id;
+			$model->file = UploadedFile::getInstance($model,'file');
+			if($model->file != null)
+			{
+				$model->file->saveAs('uploads/'.$fileName.'.'.$model->file->extension);	
+				$model->uploadedForm = 'uploads/'.$fileName.'.'.$model->file->extension;	
+			}			
+			$model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
             ]);
         }
+			}
+			
+			}
+				
+		}
+			
+		
     }
 
     /**
@@ -78,10 +102,11 @@ class UploadedformsController extends Controller
      * @return mixed
      */
     public function actionUpdate($id)
-    {
-        $model = $this->findModel($id);
-
+    {	 
+		$model = $this->findModel($id);
+	
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+			
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [

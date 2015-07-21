@@ -26,6 +26,10 @@ class Grades extends \yii\db\ActiveRecord
      * @inheritdoc
      */
 	
+	public $grade_scholar_lastName;
+	public $grade_scholar_firstName;
+	public $grade_scholar_middleName;
+	
     public static function tableName()
     {
         return 'grades';

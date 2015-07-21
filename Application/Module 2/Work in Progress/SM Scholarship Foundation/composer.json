@@ -20,13 +20,19 @@
 		"philippfrenzel/yii2fullcalendar":"*",
         "yiisoft/yii2-swiftmailer": "*",
         "2amigos/yii2-date-picker-widget": "~1.0",
-        "2amigos/yii2-type-ahead-widget": "~1.0",
         "2amigos/yii2-file-input-widget": "~1.0",
 		"yiisoft/yii2-jui": "~2.0.0",
         "kartik-v/yii2-widget-select2": "@dev",
+<<<<<<< HEAD
+        "reportico/yii2-reportico": "dev-master",
+        "kartik-v/yii2-grid": "@dev",
+		"kartik-v/yii2-krajee-base": "dev-master",
+        "kartik-v/yii2-mpdf": "dev-master"
+=======
         "kartik-v/yii2-widget-typeahead": "*",
         "reportico/yii2-reportico": "dev-master",
 		
+>>>>>>> 29fb229c19f8bb2a9261d8533aaff2237ddeb402
 		
     },
     "require-dev": {

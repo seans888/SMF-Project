@@ -7,7 +7,7 @@ foreach($users as $ctr){
 		foreach($scholars as $scholarctr){
 			foreach($schools as $school){
 				
-		if($scholarctr->scholar_user_id==$ctr->id && $scholarctr->scholar_school_id==$school->school_id ){
+		if($scholarctr->scholar_user_id==$ctr->id && $scholarctr->scholar_school_id==$school->School_id ){
 			echo '
 			<img style="float:right;margin-right:430px; margin-top:150px;" src="img/portfolio/logo.jpg" ></img>
 			<div class="site-index">

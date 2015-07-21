@@ -79,7 +79,7 @@ class Benefit extends \yii\db\ActiveRecord
      */
     public function getBenefitSchool()
     {
-        return $this->hasOne(Schools::className(), ['school_id' => 'benefit_school_id']);
+        return $this->hasOne(Schools::className(), ['School_id' => 'benefit_school_id']);
     }
 
     /**

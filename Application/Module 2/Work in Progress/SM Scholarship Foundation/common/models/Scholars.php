@@ -119,7 +119,7 @@ class Scholars extends \yii\db\ActiveRecord
      */
     public function getScholarSchool()
     {
-        return $this->hasOne(Schools::className(), ['school_id' => 'scholar_school_id']);
+        return $this->hasOne(Schools::className(), ['School_id' => 'scholar_school_id']);
     }
 
     /**

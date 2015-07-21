@@ -1,51 +1,75 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
-
+use kartik\grid\GridView;
+use common\models\GradesSearch;
 /* @var $this yii\web\View */
-/* @var $searchModel common\models\GradesSearch */
+/* @var $searchModel common\models\ScholarsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Grades';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="grades-index">
+<div class="scholars-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Grades', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Input Grades', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
+    <br>
+	<p><b><font color=orange>Orange</font> rows are scholars from NCR Areas</p>
+	<p><font color=blue>Blue</font> rows are scholars from Provincial Areas</b>
+	</p>
+    
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+    	'rowOptions'=>function($model){
+    		if($model->scholar_school_area=='Provincial')
+    		{
+    			return['class'=>'alert-info'];
+    		}
+    		else if($model->scholar_school_area=='NCR')
+    		{
+    			return['class'=>'alert-warning'];
+    		}
+    	},
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-       		'grade_scholar_id',
-        	[
-        		'attribute'=>'grade_scholar_firstName',
-        		'value'=>'gradeScholar.scholar_firstName',	
-    		],
-        	[
-       			'attribute'=>'grade_scholar_lastName',
-     			'value'=>'gradeScholar.scholar_lastName',
-       		],
-        	[
-       			'attribute'=>'grade_scholar_middleName',
-     			'value'=>'gradeScholar.scholar_middleName',
-       		],
-        	[
-       			'attribute'=>'School_id',
-     			'value'=>'gradeSchool.school_name',
-       		],
-            'grade_schoolYear',
-            'grade_Term',
-			'grade_subject',
-			'grade_units',
-            'grade_value',
+            [
+				'class' => 'kartik\grid\ExpandRowColumn',
+				'value' => function($model, $key, $index, $column){
+					return GridView::ROW_COLLAPSED;
+				},
+				'detail' => function ($model, $key, $index, $column){
+					$searchModel = new GradesSearch();
+					$searchModel -> grade_scholar_id = $model->scholar_id;
+					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+					
+					return Yii::$app->controller->renderPartial('_graderecords',[
+						'searchModel' => $searchModel,
+						'dataProvider' => $dataProvider,
+					]);
+				},
+			],
+
+            'scholar_id',
+            'scholar_firstName',
+            'scholar_lastName',
+            'scholar_middleName',
+            // 'scholar_gender',
+            // 'scholar_address',
+            [
+            	'attribute'=>'scholar_school_id',
+            	'value'=>'scholarSchool.school_name',
+            ],
+            'scholar_course',
+            'scholar_yearLevel',
+            // 'scholar_email:email',
+            // 'scholar_contactNum',
+            // 'scholar_cashCardNum',
+         // 'scholar_school_area',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
