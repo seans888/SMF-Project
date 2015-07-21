@@ -36,19 +36,19 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'tuitionfee_scholar_id',
-            [
-				'attribute'=>'tuitionfee_scholar_lastName',
-				'value'=>'tuitionfeeScholar.scholar_lastName',
-			],
-            [
-				'attribute'=>'tuitionfee_scholar_firstName',
-				'value'=>'tuitionfeeScholar.scholar_firstName',
-			],
-            [
-				'attribute'=>'tuitionfee_scholar_middleName',
-				'value'=>'tuitionfeeScholar.scholar_middleName',
-			],
+         //   'tuitionfee_scholar_id',
+            // [
+				// 'attribute'=>'tuitionfee_scholar_lastName',
+				// 'value'=>'tuitionfeeScholar.scholar_lastName',
+			// ],
+            // [
+				// 'attribute'=>'tuitionfee_scholar_firstName',
+				// 'value'=>'tuitionfeeScholar.scholar_firstName',
+			// ],
+            // [
+				// 'attribute'=>'tuitionfee_scholar_middleName',
+				// 'value'=>'tuitionfeeScholar.scholar_middleName',
+			// ],
             'tuitionfee_amount',
             [
 				'attribute'=>'tuitionfee_dateOfEnrollment',

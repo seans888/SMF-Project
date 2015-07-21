@@ -18,18 +18,18 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
   //          'uploaded_scholar_id',
-			[
-				'attribute'=>'scholar_lastName',
-				'value'=>'scholar.scholar_lastName',
-			],
-			[
-				'attribute'=>'scholar_firstName',
-				'value'=>'scholar.scholar_firstName',
-			],
-			[
-				'attribute'=>'scholar_middleName',
-				'value'=>'scholar.scholar_middleName',
-			],
+			// [
+				// 'attribute'=>'scholar_lastName',
+				// 'value'=>'scholar.scholar_lastName',
+			// ],
+			// [
+				// 'attribute'=>'scholar_firstName',
+				// 'value'=>'scholar.scholar_firstName',
+			// ],
+			// [
+				// 'attribute'=>'scholar_middleName',
+				// 'value'=>'scholar.scholar_middleName',
+			// ],
             'uploadedForm',
             'fileName',
 
