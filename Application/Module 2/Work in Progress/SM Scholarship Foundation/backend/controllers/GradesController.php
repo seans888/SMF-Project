@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
+use common\models\ScholarsSearch;
 use common\models\Grades;
 use common\models\GradesSearch;
 use yii\web\Controller;
@@ -36,7 +37,7 @@ class GradesController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new GradesSearch();
+        $searchModel = new ScholarsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
