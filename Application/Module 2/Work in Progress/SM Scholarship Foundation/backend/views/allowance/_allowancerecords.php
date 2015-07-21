@@ -37,18 +37,18 @@ $this->params['breadcrumbs'][] = $this->title;
 //			'allowanceSchool.school_area',
             'allowance_amount',
 //            'allowance_scholar_id',
-        	[
-        		'attribute'=>'allowance_scholar_lastName',
-        		'value'=>'allowanceScholar.scholar_lastName',
-        	],
-        	[
-        	'attribute'=>'allowance_scholar_firstName',
-        	'value'=>'allowanceScholar.scholar_firstName',
-        	],
-        	[
-        	'attribute'=>'allowance_scholar_middleName',
-        	'value'=>'allowanceScholar.scholar_middleName',
-        	],     		
+        	// [
+        		// 'attribute'=>'allowance_scholar_lastName',
+        		// 'value'=>'allowanceScholar.scholar_lastName',
+        	// ],
+        	// [
+        	// 'attribute'=>'allowance_scholar_firstName',
+        	// 'value'=>'allowanceScholar.scholar_firstName',
+        	// ],
+        	// [
+        	// 'attribute'=>'allowance_scholar_middleName',
+        	// 'value'=>'allowanceScholar.scholar_middleName',
+        	// ],     		
 [
 				'attribute'=>'allowance_paidDate',
 				'value'=>'allowance_paidDate',
