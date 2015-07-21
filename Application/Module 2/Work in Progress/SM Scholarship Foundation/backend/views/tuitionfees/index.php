@@ -7,7 +7,7 @@ use common\models\TuitionfeesSearch;
 /* @var $searchModel common\models\ScholarsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Grades';
+$this->title = 'Tuition Fees';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="scholars-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Input Grades', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Input Tuition Records', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <br>
 	<p><b><font color=orange>Orange</font> rows are scholars from NCR Areas</p>
