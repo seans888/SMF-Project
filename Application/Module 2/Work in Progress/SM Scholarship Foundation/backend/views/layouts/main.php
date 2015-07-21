@@ -287,7 +287,7 @@ DashboardAsset::register($this);
               <img src="dist/img/avatar5.png" class="img-circle" alt="User Image" />
             </div>
             <div class="pull-left info">
-              <p><?= Yii::$app->user->identity->username?></p>
+              <p>Admin</p>
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>
@@ -313,45 +313,32 @@ DashboardAsset::register($this);
                 <li class="active"><a href="<?= Yii::$app->getUrlManager()->createUrl('/site/index'); ?>"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
               </ul>
             </li>
-
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-pie-chart"></i>
-                <span>Charts</span>
-                <i class="fa fa-angle-left pull-right"></i>
+			<li class="treeview">
+              <a href="<?= Yii::$app->getUrlManager()->createUrl('/scholars/index'); ?>">
+                <i class="fa fa-group"></i> <span>Scholars</span></i>
               </a>
-              <ul class="treeview-menu">
-                <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-                <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-                <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-                <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
-              </ul>
+            </li>
+			<li class="treeview">
+              <a href="<?= Yii::$app->getUrlManager()->createUrl('/schools/index'); ?>">
+                <i class="fa fa-institution"></i> <span>Schools</span>
+              </a> 
             </li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-edit"></i> <span>Forms</span>
+                <i class="fa fa-list-ol"></i> <span>Records</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-                <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-                <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/grades/index'); ?>"><i class="fa fa-graduation-cap"></i> Grade Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/tuitionfees/index'); ?>"><i class="fa fa-money"></i> Tuition Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/allowance/index'); ?>"><i class="fa fa-credit-card"></i> Allowance Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/benefit/index'); ?>"><i class="fa fa-thumbs-up"></i> Benefits Records</a></li>
               </ul>
             </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-table"></i> <span>Records</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/scholars/index'); ?>"><i class="fa fa-circle-o"></i> Scholar Records</a></li>
-                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/schools/index'); ?>"><i class="fa fa-circle-o"></i> School Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/grades/index'); ?>"><i class="fa fa-circle-o"></i> Grade Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/tuitionfees/index'); ?>"><i class="fa fa-circle-o"></i> Tuition Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/allowance/index'); ?>"><i class="fa fa-circle-o"></i> Allowance Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/benefit/index'); ?>"><i class="fa fa-circle-o"></i> Benefits Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/uploadedforms/index'); ?>"><i class="fa fa-circle-o"></i> Upload Forms</a></li>
-              </ul>
+			<li class="treeview">
+              <a href="<?= Yii::$app->getUrlManager()->createUrl('/uploadedforms/index'); ?>">
+                <i class="fa fa-upload"></i> <span>Upload Forms</span>
+              </a> 
             </li>
             <li class="treeview">
               <a href="#">
@@ -359,30 +346,24 @@ DashboardAsset::register($this);
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/grade_report/index'); ?>"><i class="fa fa-circle-o"></i> Grade Report</a></li>
+                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/grade_report/index'); ?>"><i class="fa fa-file-text-o"></i> Grade Report</a></li>
               </ul>
 			  <ul class="treeview-menu">
-                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/gpa_report/index'); ?>"><i class="fa fa-circle-o"></i> GPA Report</a></li>
+                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/gpa_report/index'); ?>"><i class="fa fa-bar-chart"></i> GPA Report</a></li>
               </ul>
             </li>
             <li>
               <a href="<?= Yii::$app->getUrlManager()->createUrl('/event/index'); ?>">
                 <i class="fa fa-calendar"></i> <span>Calendar</span>
-                <small class="label pull-right bg-red">3</small>
               </a>
             </li>
-            <li>
-              <a href="pages/mailbox/mailbox.html">
-                <i class="fa fa-envelope"></i> <span>Mailbox</span>
-                <small class="label pull-right bg-yellow">12</small>
-              </a>
-            </li>
-            
             <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
-            <li class="header">LABELS</li>
-            <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+            <li class="header">Area(legend)</li>
+            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>NCR</span></a></li>
+            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Provincial</span></a></li>
+            <li class="header">Payment(legend)</li>
+            <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Unpayed</span></a></li>
+            <li><a href="#"><i class="fa fa-circle-o text-green"></i> <span>Payed</span></a></li>
 			<li></li>
 			<li><</li>
           </ul>
