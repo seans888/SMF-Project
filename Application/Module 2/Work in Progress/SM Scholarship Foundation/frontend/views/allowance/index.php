@@ -19,7 +19,7 @@ foreach($users as $ctr){
 			foreach($schools as $school){
 				foreach($allowances as $allowance){
 					foreach($benefits as $benefit){
-				if($scholarctr->scholar_user_id==$ctr->id && $scholarctr->scholar_school_id==$school->school_id && $allowance->allowance_scholar_id == $benefit->benefit_scholar_id &&$benefit->benefit_scholar_id==$scholarctr->scholar_user_id){
+				if($scholarctr->scholar_user_id==$ctr->id && $scholarctr->scholar_school_id==$school->School_id && $allowance->allowance_scholar_id == $benefit->benefit_scholar_id &&$benefit->benefit_scholar_id==$scholarctr->scholar_user_id){
 					$name=$scholarctr->scholar_firstName." ".$scholarctr->scholar_lastName;
 					$schoolname=$school->school_name;
 					$year=$scholarctr->scholar_yearLevel;
