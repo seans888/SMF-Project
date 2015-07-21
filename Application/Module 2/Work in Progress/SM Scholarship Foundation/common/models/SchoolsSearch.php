@@ -18,7 +18,7 @@ class SchoolsSearch extends Schools
     public function rules()
     {
         return [
-            [['school_id', 'school_contactNumber'], 'integer'],
+            [['School_id', 'school_contactNumber'], 'integer'],
             [['school_name', 'school_area', 'school_address', 'school_contactEmail'], 'safe'],
         ];
     }
@@ -56,7 +56,7 @@ class SchoolsSearch extends Schools
         }
 
         $query->andFilterWhere([
-            'school_id' => $this->school_id,
+            'School_id' => $this->School_id,
             'school_contactNumber' => $this->school_contactNumber,
         ]);
 
