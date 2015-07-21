@@ -12,7 +12,8 @@ $this->title = 'Allowances';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="allowance-index">
-
+<font color=red>Red</font> means the allowance is unsettled<br>
+<font color=Blue>Blue</font> means the allowance is settled
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -33,9 +34,9 @@ $this->params['breadcrumbs'][] = $this->title;
 //          'allowance_payStatus',
 //          'benefit_allowance_id',
 //          'allowance_remark',
-			'allowanceSchool.school_area',
+//			'allowanceSchool.school_area',
             'allowance_amount',
-            'allowance_scholar_id',
+//            'allowance_scholar_id',
         	[
         		'attribute'=>'allowance_scholar_lastName',
         		'value'=>'allowanceScholar.scholar_lastName',
