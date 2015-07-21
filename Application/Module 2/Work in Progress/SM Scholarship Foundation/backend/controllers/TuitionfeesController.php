@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
+use common\models\ScholarsSearch;
 use common\models\Scholars;
 use common\models\Tuitionfees;
 use common\models\TuitionfeesSearch;
@@ -34,7 +35,7 @@ class TuitionfeesController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new TuitionfeesSearch();
+        $searchModel = new ScholarsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
