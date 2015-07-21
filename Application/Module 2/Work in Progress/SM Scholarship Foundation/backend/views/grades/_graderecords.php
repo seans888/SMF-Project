@@ -17,22 +17,22 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
        		// 'grade_scholar_id',
-        	[
-        		'attribute'=>'grade_scholar_firstName',
-        		'value'=>'gradeScholar.scholar_firstName',	
-    		],
-        	[
-       			'attribute'=>'grade_scholar_lastName',
-     			'value'=>'gradeScholar.scholar_lastName',
-       		],
-        	[
-       			'attribute'=>'grade_scholar_middleName',
-     			'value'=>'gradeScholar.scholar_middleName',
-       		],
-        	[
-       			'attribute'=>'School_id',
-     			'value'=>'gradeSchool.school_name',
-       		],
+        	// [
+        		// 'attribute'=>'grade_scholar_firstName',
+        		// 'value'=>'gradeScholar.scholar_firstName',	
+    		// ],
+        	// [
+       			// 'attribute'=>'grade_scholar_lastName',
+     			// 'value'=>'gradeScholar.scholar_lastName',
+       		// ],
+        	// [
+       			// 'attribute'=>'grade_scholar_middleName',
+     			// 'value'=>'gradeScholar.scholar_middleName',
+       		// ],
+        	// [
+       			// 'attribute'=>'School_id',
+     			// 'value'=>'gradeSchool.school_name',
+       		// ],
             'grade_schoolYear',
             'grade_Term',
 			'grade_subject',
