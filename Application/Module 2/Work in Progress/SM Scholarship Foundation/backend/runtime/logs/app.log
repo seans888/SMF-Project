@@ -14200,6 +14200,7 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1437475682.173
     'REQUEST_TIME' => 1437475682
 ]
+<<<<<<< HEAD
 2015-07-21 13:16:32 [::1][2][6ijhng6nrivts0ajo89rh81ok3][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 37202 bytes' 
 
 in C:\Users\Syam\smGithub\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2-debug\LogTarget.php:86
@@ -14382,11 +14383,37 @@ $_COOKIE = [
     '_csrf' => '2480ffb460320d3f347c0c0812737d7411a52769a193f20b2e99230045a85e8ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dDg0gmI3M1bDRdnisTjzFPwgNZGhktgQ\";}'
     'PHPSESSID' => '6ijhng6nrivts0ajo89rh81ok3'
     '_identity' => '145635aa09a94f66427831b1881d27c7b0f3648ec87614f5ddf5ee6f9440a1e9a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld\",2592000]\";}'
+=======
+2015-07-21 16:53:08 [::1][2][qqtepc17nphkd2ueo9tst67de4][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 37202 bytes' 
+
+in D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\SMF Project ...', 86, Array)
+#1 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\SMF Project ...', Array)
+#3 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-07-21 16:53:07 [::1][2][qqtepc17nphkd2ueo9tst67de4][info][application] $_GET = [
+    'r' => 'uploadedforms/create'
+]
+
+$_COOKIE = [
+    '_backendUser' => 'ae6084bf5c25cbfd8ba92985179a42f1f373b77bd598fe078f2f27161043deb2a:2:{i:0;s:12:\"_backendUser\";i:1;s:46:\"[2,\"Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld\",2592000]\";}'
+    '_identity' => '145635aa09a94f66427831b1881d27c7b0f3648ec87614f5ddf5ee6f9440a1e9a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld\",2592000]\";}'
+    'PHPFRONTSESSID' => '6ijd8u3i8p86p764qqeqlpulh3'
+    '_frontendCSRF' => 'ad9e6e3be92dd9fa904a7d907f45f79952cf8e8e1f2b045ac4ad39d0eac01cc2a:2:{i:0;s:13:\"_frontendCSRF\";i:1;s:32:\"KUzIA1bWVid8O7UoeT-k2pzpv0LZWow4\";}'
+    '_frontendUser' => '0ddae66bf49577e63a11503d4dc2db6387e47980518a9b6ccc3320681fcf66f7a:2:{i:0;s:13:\"_frontendUser\";i:1;s:46:\"[3,\"kgJz_-7RaOwWQpjrUrV1QsenhrKAgFr8\",2592000]\";}'
+>>>>>>> 113b4d237fae8f8ab3e055f62671d05daeba47d1
 ]
 
 $_SESSION = [
     '__flash' => []
     '__id' => 2
+<<<<<<< HEAD
     'reportico' => [
         'awaiting_initial_defaults' => false
         'firsttimeIn' => true
@@ -14475,6 +14502,8 @@ $_SESSION = [
         'target_show_criteria' => '1'
         'target_style' => 'TABLE'
     ]
+=======
+>>>>>>> 113b4d237fae8f8ab3e055f62671d05daeba47d1
 ]
 
 $_SERVER = [
@@ -14486,6 +14515,7 @@ $_SERVER = [
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
+<<<<<<< HEAD
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36'
@@ -14494,13 +14524,27 @@ $_SERVER = [
     'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
     'HTTP_COOKIE' => '_csrf=2480ffb460320d3f347c0c0812737d7411a52769a193f20b2e99230045a85e8ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dDg0gmI3M1bDRdnisTjzFPwgNZGhktgQ%22%3B%7D; PHPSESSID=6ijhng6nrivts0ajo89rh81ok3; _identity=145635aa09a94f66427831b1881d27c7b0f3648ec87614f5ddf5ee6f9440a1e9a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin'
+=======
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.130 Safari/537.36 OPR/30.0.1835.125'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, lzma, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_backendUser=ae6084bf5c25cbfd8ba92985179a42f1f373b77bd598fe078f2f27161043deb2a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_backendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D; _identity=145635aa09a94f66427831b1881d27c7b0f3648ec87614f5ddf5ee6f9440a1e9a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D; PHPFRONTSESSID=6ijd8u3i8p86p764qqeqlpulh3; _frontendCSRF=ad9e6e3be92dd9fa904a7d907f45f79952cf8e8e1f2b045ac4ad39d0eac01cc2a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendCSRF%22%3Bi%3A1%3Bs%3A32%3A%22KUzIA1bWVid8O7UoeT-k2pzpv0LZWow4%22%3B%7D; _frontendUser=0ddae66bf49577e63a11503d4dc2db6387e47980518a9b6ccc3320681fcf66f7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kgJz_-7RaOwWQpjrUrV1QsenhrKAgFr8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\HaxeToolkit\\haxe\\;C:\\HaxeToolkit\\neko;C:\\Program Files\\nodejs\\;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Users\\WIN7\\AppData\\Roaming\\npm;C:\\adb;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;'
+>>>>>>> 113b4d237fae8f8ab3e055f62671d05daeba47d1
     'SystemRoot' => 'C:\\Windows'
     'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\Windows'
+<<<<<<< HEAD
     'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+=======
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+>>>>>>> 113b4d237fae8f8ab3e055f62671d05daeba47d1
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
@@ -14510,6 +14554,7 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'SERVER_ADMIN' => 'postmaster@localhost'
+<<<<<<< HEAD
     'SCRIPT_FILENAME' => 'C:/xampp/htdocs/wip/backend/web/index.php'
     'REMOTE_PORT' => '53649'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
@@ -15278,6 +15323,76 @@ $_SESSION = [
     ]
 ]
 
+=======
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/jgvillacorta/SM Scholarship Foundation/backend/web/index.php'
+    'REMOTE_PORT' => '59651'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=uploadedforms/create'
+    'REQUEST_URI' => '/jgvillacorta/SM%20Scholarship%20Foundation/backend/web/index.php?r=uploadedforms/create'
+    'SCRIPT_NAME' => '/jgvillacorta/SM Scholarship Foundation/backend/web/index.php'
+    'PHP_SELF' => '/jgvillacorta/SM Scholarship Foundation/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1437490387.329
+    'REQUEST_TIME' => 1437490387
+]
+2015-07-21 16:53:35 [::1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 37202 bytes' 
+
+in D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\SMF Project ...', 86, Array)
+#1 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\SMF Project ...', Array)
+#3 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-07-21 16:53:35 [::1][-][-][info][application] $_GET = [
+    'r' => 'uploadedforms/create'
+]
+
+$_POST = [
+    '_csrf' => 'NC5MUXdKVW0ZbDQ6DQIbIkdvAwI5eGMmVUAdN0MZZl1Hd3xiMxo4Gg=='
+    'Uploadedforms' => [
+        'uploaded_scholar_id' => '3'
+        'fileName' => 'Registration Form'
+        'file' => ''
+    ]
+]
+
+$_FILES = [
+    'Uploadedforms' => [
+        'name' => [
+            'file' => 'a.png'
+        ]
+        'type' => [
+            'file' => 'image/png'
+        ]
+        'tmp_name' => [
+            'file' => 'C:\\xampp\\tmp\\phpA621.tmp'
+        ]
+        'error' => [
+            'file' => 0
+        ]
+        'size' => [
+            'file' => 71381
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_backendUser' => 'ae6084bf5c25cbfd8ba92985179a42f1f373b77bd598fe078f2f27161043deb2a:2:{i:0;s:12:\"_backendUser\";i:1;s:46:\"[2,\"Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld\",2592000]\";}'
+    'PHPFRONTSESSID' => '6ijd8u3i8p86p764qqeqlpulh3'
+    '_frontendCSRF' => 'ad9e6e3be92dd9fa904a7d907f45f79952cf8e8e1f2b045ac4ad39d0eac01cc2a:2:{i:0;s:13:\"_frontendCSRF\";i:1;s:32:\"KUzIA1bWVid8O7UoeT-k2pzpv0LZWow4\";}'
+    '_frontendUser' => '0ddae66bf49577e63a11503d4dc2db6387e47980518a9b6ccc3320681fcf66f7a:2:{i:0;s:13:\"_frontendUser\";i:1;s:46:\"[3,\"kgJz_-7RaOwWQpjrUrV1QsenhrKAgFr8\",2592000]\";}'
+    'PHPSESSID' => 'qqtepc17nphkd2ueo9tst67de4'
+    '_csrf' => '5c9a645a37feb8da9cd4d8407ddfc860ac057c5d766513e8c10a5b28dec15b22a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"-BxkzHNOsAOSN26KanQf4S30sY03DPmw\";}'
+    '_identity' => '145635aa09a94f66427831b1881d27c7b0f3648ec87614f5ddf5ee6f9440a1e9a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld\",2592000]\";}'
+]
+
+>>>>>>> 113b4d237fae8f8ab3e055f62671d05daeba47d1
 $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
@@ -15287,6 +15402,7 @@ $_SERVER = [
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
+<<<<<<< HEAD
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36'
@@ -15295,13 +15411,32 @@ $_SERVER = [
     'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
     'HTTP_COOKIE' => '_csrf=2480ffb460320d3f347c0c0812737d7411a52769a193f20b2e99230045a85e8ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dDg0gmI3M1bDRdnisTjzFPwgNZGhktgQ%22%3B%7D; PHPSESSID=6ijhng6nrivts0ajo89rh81ok3; _identity=145635aa09a94f66427831b1881d27c7b0f3648ec87614f5ddf5ee6f9440a1e9a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin'
+=======
+    'CONTENT_LENGTH' => '72077'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.130 Safari/537.36 OPR/30.0.1835.125'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryltU5eQx6Xssr2aZa'
+    'HTTP_REFERER' => 'http://localhost/jgvillacorta/SM%20Scholarship%20Foundation/backend/web/index.php?r=uploadedforms/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, lzma'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_backendUser=ae6084bf5c25cbfd8ba92985179a42f1f373b77bd598fe078f2f27161043deb2a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_backendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D; PHPFRONTSESSID=6ijd8u3i8p86p764qqeqlpulh3; _frontendCSRF=ad9e6e3be92dd9fa904a7d907f45f79952cf8e8e1f2b045ac4ad39d0eac01cc2a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendCSRF%22%3Bi%3A1%3Bs%3A32%3A%22KUzIA1bWVid8O7UoeT-k2pzpv0LZWow4%22%3B%7D; _frontendUser=0ddae66bf49577e63a11503d4dc2db6387e47980518a9b6ccc3320681fcf66f7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kgJz_-7RaOwWQpjrUrV1QsenhrKAgFr8%22%2C2592000%5D%22%3B%7D; PHPSESSID=qqtepc17nphkd2ueo9tst67de4; _csrf=5c9a645a37feb8da9cd4d8407ddfc860ac057c5d766513e8c10a5b28dec15b22a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-BxkzHNOsAOSN26KanQf4S30sY03DPmw%22%3B%7D; _identity=145635aa09a94f66427831b1881d27c7b0f3648ec87614f5ddf5ee6f9440a1e9a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\HaxeToolkit\\haxe\\;C:\\HaxeToolkit\\neko;C:\\Program Files\\nodejs\\;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Users\\WIN7\\AppData\\Roaming\\npm;C:\\adb;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;'
+>>>>>>> 113b4d237fae8f8ab3e055f62671d05daeba47d1
     'SystemRoot' => 'C:\\Windows'
     'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\Windows'
+<<<<<<< HEAD
     'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+=======
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+>>>>>>> 113b4d237fae8f8ab3e055f62671d05daeba47d1
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
@@ -15311,6 +15446,7 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'SERVER_ADMIN' => 'postmaster@localhost'
+<<<<<<< HEAD
     'SCRIPT_FILENAME' => 'C:/xampp/htdocs/wip/backend/web/index.php'
     'REMOTE_PORT' => '56789'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
@@ -15343,12 +15479,52 @@ Stack trace:
 $_COOKIE = [
     '_csrf' => '2480ffb460320d3f347c0c0812737d7411a52769a193f20b2e99230045a85e8ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dDg0gmI3M1bDRdnisTjzFPwgNZGhktgQ\";}'
     'PHPSESSID' => '6ijhng6nrivts0ajo89rh81ok3'
+=======
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/jgvillacorta/SM Scholarship Foundation/backend/web/index.php'
+    'REMOTE_PORT' => '59724'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=uploadedforms/create'
+    'REQUEST_URI' => '/jgvillacorta/SM%20Scholarship%20Foundation/backend/web/index.php?r=uploadedforms/create'
+    'SCRIPT_NAME' => '/jgvillacorta/SM Scholarship Foundation/backend/web/index.php'
+    'PHP_SELF' => '/jgvillacorta/SM Scholarship Foundation/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1437490415.147
+    'REQUEST_TIME' => 1437490415
+]
+2015-07-21 16:53:35 [::1][2][qqtepc17nphkd2ueo9tst67de4][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 37202 bytes' 
+
+in D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\SMF Project ...', 86, Array)
+#1 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\SMF Project ...', Array)
+#3 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-07-21 16:53:35 [::1][2][qqtepc17nphkd2ueo9tst67de4][info][application] $_GET = [
+    'r' => 'uploadedforms/view'
+    'id' => '2'
+]
+
+$_COOKIE = [
+    '_backendUser' => 'ae6084bf5c25cbfd8ba92985179a42f1f373b77bd598fe078f2f27161043deb2a:2:{i:0;s:12:\"_backendUser\";i:1;s:46:\"[2,\"Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld\",2592000]\";}'
+    'PHPFRONTSESSID' => '6ijd8u3i8p86p764qqeqlpulh3'
+    '_frontendCSRF' => 'ad9e6e3be92dd9fa904a7d907f45f79952cf8e8e1f2b045ac4ad39d0eac01cc2a:2:{i:0;s:13:\"_frontendCSRF\";i:1;s:32:\"KUzIA1bWVid8O7UoeT-k2pzpv0LZWow4\";}'
+    '_frontendUser' => '0ddae66bf49577e63a11503d4dc2db6387e47980518a9b6ccc3320681fcf66f7a:2:{i:0;s:13:\"_frontendUser\";i:1;s:46:\"[3,\"kgJz_-7RaOwWQpjrUrV1QsenhrKAgFr8\",2592000]\";}'
+    'PHPSESSID' => 'qqtepc17nphkd2ueo9tst67de4'
+    '_csrf' => '5c9a645a37feb8da9cd4d8407ddfc860ac057c5d766513e8c10a5b28dec15b22a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"-BxkzHNOsAOSN26KanQf4S30sY03DPmw\";}'
+>>>>>>> 113b4d237fae8f8ab3e055f62671d05daeba47d1
     '_identity' => '145635aa09a94f66427831b1881d27c7b0f3648ec87614f5ddf5ee6f9440a1e9a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld\",2592000]\";}'
 ]
 
 $_SESSION = [
     '__flash' => []
     '__id' => 2
+<<<<<<< HEAD
     'reportico' => [
         'awaiting_initial_defaults' => false
         'firsttimeIn' => true
@@ -15437,6 +15613,8 @@ $_SESSION = [
         'target_show_criteria' => '1'
         'target_style' => 'TABLE'
     ]
+=======
+>>>>>>> 113b4d237fae8f8ab3e055f62671d05daeba47d1
 ]
 
 $_SERVER = [
@@ -15448,6 +15626,7 @@ $_SERVER = [
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
+<<<<<<< HEAD
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36'
     'HTTP_REFERER' => 'http://localhost/wip/backend/web/index.php?r=scholars%2Findex'
@@ -15455,13 +15634,29 @@ $_SERVER = [
     'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
     'HTTP_COOKIE' => '_csrf=2480ffb460320d3f347c0c0812737d7411a52769a193f20b2e99230045a85e8ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dDg0gmI3M1bDRdnisTjzFPwgNZGhktgQ%22%3B%7D; PHPSESSID=6ijhng6nrivts0ajo89rh81ok3; _identity=145635aa09a94f66427831b1881d27c7b0f3648ec87614f5ddf5ee6f9440a1e9a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin'
+=======
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.130 Safari/537.36 OPR/30.0.1835.125'
+    'HTTP_REFERER' => 'http://localhost/jgvillacorta/SM%20Scholarship%20Foundation/backend/web/index.php?r=uploadedforms/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, lzma, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_backendUser=ae6084bf5c25cbfd8ba92985179a42f1f373b77bd598fe078f2f27161043deb2a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_backendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D; PHPFRONTSESSID=6ijd8u3i8p86p764qqeqlpulh3; _frontendCSRF=ad9e6e3be92dd9fa904a7d907f45f79952cf8e8e1f2b045ac4ad39d0eac01cc2a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendCSRF%22%3Bi%3A1%3Bs%3A32%3A%22KUzIA1bWVid8O7UoeT-k2pzpv0LZWow4%22%3B%7D; _frontendUser=0ddae66bf49577e63a11503d4dc2db6387e47980518a9b6ccc3320681fcf66f7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kgJz_-7RaOwWQpjrUrV1QsenhrKAgFr8%22%2C2592000%5D%22%3B%7D; PHPSESSID=qqtepc17nphkd2ueo9tst67de4; _csrf=5c9a645a37feb8da9cd4d8407ddfc860ac057c5d766513e8c10a5b28dec15b22a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-BxkzHNOsAOSN26KanQf4S30sY03DPmw%22%3B%7D; _identity=145635aa09a94f66427831b1881d27c7b0f3648ec87614f5ddf5ee6f9440a1e9a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\HaxeToolkit\\haxe\\;C:\\HaxeToolkit\\neko;C:\\Program Files\\nodejs\\;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Users\\WIN7\\AppData\\Roaming\\npm;C:\\adb;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;'
+>>>>>>> 113b4d237fae8f8ab3e055f62671d05daeba47d1
     'SystemRoot' => 'C:\\Windows'
     'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\Windows'
+<<<<<<< HEAD
     'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+=======
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+>>>>>>> 113b4d237fae8f8ab3e055f62671d05daeba47d1
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
@@ -15471,6 +15666,7 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'SERVER_ADMIN' => 'postmaster@localhost'
+<<<<<<< HEAD
     'SCRIPT_FILENAME' => 'C:/xampp/htdocs/wip/backend/web/index.php'
     'REMOTE_PORT' => '56790'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
@@ -15503,12 +15699,52 @@ Stack trace:
 $_COOKIE = [
     '_csrf' => '2480ffb460320d3f347c0c0812737d7411a52769a193f20b2e99230045a85e8ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dDg0gmI3M1bDRdnisTjzFPwgNZGhktgQ\";}'
     'PHPSESSID' => '6ijhng6nrivts0ajo89rh81ok3'
+=======
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/jgvillacorta/SM Scholarship Foundation/backend/web/index.php'
+    'REMOTE_PORT' => '59724'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=uploadedforms%2Fview&id=2'
+    'REQUEST_URI' => '/jgvillacorta/SM%20Scholarship%20Foundation/backend/web/index.php?r=uploadedforms%2Fview&id=2'
+    'SCRIPT_NAME' => '/jgvillacorta/SM Scholarship Foundation/backend/web/index.php'
+    'PHP_SELF' => '/jgvillacorta/SM Scholarship Foundation/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1437490415.303
+    'REQUEST_TIME' => 1437490415
+]
+2015-07-21 16:54:21 [::1][2][qqtepc17nphkd2ueo9tst67de4][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 37202 bytes' 
+
+in D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\SMF Project ...', 86, Array)
+#1 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\SMF Project ...', Array)
+#3 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-07-21 16:54:20 [::1][2][qqtepc17nphkd2ueo9tst67de4][info][application] $_GET = [
+    'r' => 'uploadedforms/index'
+    'id' => '2'
+]
+
+$_COOKIE = [
+    '_backendUser' => 'ae6084bf5c25cbfd8ba92985179a42f1f373b77bd598fe078f2f27161043deb2a:2:{i:0;s:12:\"_backendUser\";i:1;s:46:\"[2,\"Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld\",2592000]\";}'
+    'PHPFRONTSESSID' => '6ijd8u3i8p86p764qqeqlpulh3'
+    '_frontendCSRF' => 'ad9e6e3be92dd9fa904a7d907f45f79952cf8e8e1f2b045ac4ad39d0eac01cc2a:2:{i:0;s:13:\"_frontendCSRF\";i:1;s:32:\"KUzIA1bWVid8O7UoeT-k2pzpv0LZWow4\";}'
+    '_frontendUser' => '0ddae66bf49577e63a11503d4dc2db6387e47980518a9b6ccc3320681fcf66f7a:2:{i:0;s:13:\"_frontendUser\";i:1;s:46:\"[3,\"kgJz_-7RaOwWQpjrUrV1QsenhrKAgFr8\",2592000]\";}'
+    'PHPSESSID' => 'qqtepc17nphkd2ueo9tst67de4'
+    '_csrf' => '5c9a645a37feb8da9cd4d8407ddfc860ac057c5d766513e8c10a5b28dec15b22a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"-BxkzHNOsAOSN26KanQf4S30sY03DPmw\";}'
+>>>>>>> 113b4d237fae8f8ab3e055f62671d05daeba47d1
     '_identity' => '145635aa09a94f66427831b1881d27c7b0f3648ec87614f5ddf5ee6f9440a1e9a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld\",2592000]\";}'
 ]
 
 $_SESSION = [
     '__flash' => []
     '__id' => 2
+<<<<<<< HEAD
     'reportico' => [
         'awaiting_initial_defaults' => false
         'firsttimeIn' => true
@@ -15597,6 +15833,8 @@ $_SESSION = [
         'target_show_criteria' => '1'
         'target_style' => 'TABLE'
     ]
+=======
+>>>>>>> 113b4d237fae8f8ab3e055f62671d05daeba47d1
 ]
 
 $_SERVER = [
@@ -15609,6 +15847,7 @@ $_SERVER = [
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+<<<<<<< HEAD
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36'
     'HTTP_REFERER' => 'http://localhost/wip/backend/web/index.php?r=schools%2Findex'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
@@ -17342,13 +17581,27 @@ $_SERVER = [
     'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
     'HTTP_COOKIE' => '_csrf=2480ffb460320d3f347c0c0812737d7411a52769a193f20b2e99230045a85e8ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dDg0gmI3M1bDRdnisTjzFPwgNZGhktgQ%22%3B%7D; PHPSESSID=6ijhng6nrivts0ajo89rh81ok3; _identity=145635aa09a94f66427831b1881d27c7b0f3648ec87614f5ddf5ee6f9440a1e9a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin'
+=======
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.130 Safari/537.36 OPR/30.0.1835.125'
+    'HTTP_REFERER' => 'http://localhost/jgvillacorta/SM%20Scholarship%20Foundation/backend/web/index.php?r=uploadedforms%2Fview&id=2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, lzma, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_backendUser=ae6084bf5c25cbfd8ba92985179a42f1f373b77bd598fe078f2f27161043deb2a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_backendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D; PHPFRONTSESSID=6ijd8u3i8p86p764qqeqlpulh3; _frontendCSRF=ad9e6e3be92dd9fa904a7d907f45f79952cf8e8e1f2b045ac4ad39d0eac01cc2a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendCSRF%22%3Bi%3A1%3Bs%3A32%3A%22KUzIA1bWVid8O7UoeT-k2pzpv0LZWow4%22%3B%7D; _frontendUser=0ddae66bf49577e63a11503d4dc2db6387e47980518a9b6ccc3320681fcf66f7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22kgJz_-7RaOwWQpjrUrV1QsenhrKAgFr8%22%2C2592000%5D%22%3B%7D; PHPSESSID=qqtepc17nphkd2ueo9tst67de4; _csrf=5c9a645a37feb8da9cd4d8407ddfc860ac057c5d766513e8c10a5b28dec15b22a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-BxkzHNOsAOSN26KanQf4S30sY03DPmw%22%3B%7D; _identity=145635aa09a94f66427831b1881d27c7b0f3648ec87614f5ddf5ee6f9440a1e9a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\HaxeToolkit\\haxe\\;C:\\HaxeToolkit\\neko;C:\\Program Files\\nodejs\\;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Users\\WIN7\\AppData\\Roaming\\npm;C:\\adb;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;'
+>>>>>>> 113b4d237fae8f8ab3e055f62671d05daeba47d1
     'SystemRoot' => 'C:\\Windows'
     'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\Windows'
+<<<<<<< HEAD
     'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+=======
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+>>>>>>> 113b4d237fae8f8ab3e055f62671d05daeba47d1
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
@@ -17358,6 +17611,7 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'SERVER_ADMIN' => 'postmaster@localhost'
+<<<<<<< HEAD
     'SCRIPT_FILENAME' => 'C:/xampp/htdocs/wip/backend/web/index.php'
     'REMOTE_PORT' => '58764'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
@@ -17369,4 +17623,17 @@ $_SERVER = [
     'PHP_SELF' => '/wip/backend/web/index.php'
     'REQUEST_TIME_FLOAT' => 1437483345.142
     'REQUEST_TIME' => 1437483345
+=======
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/jgvillacorta/SM Scholarship Foundation/backend/web/index.php'
+    'REMOTE_PORT' => '59894'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=uploadedforms%2Findex&id=2'
+    'REQUEST_URI' => '/jgvillacorta/SM%20Scholarship%20Foundation/backend/web/index.php?r=uploadedforms%2Findex&id=2'
+    'SCRIPT_NAME' => '/jgvillacorta/SM Scholarship Foundation/backend/web/index.php'
+    'PHP_SELF' => '/jgvillacorta/SM Scholarship Foundation/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1437490460.824
+    'REQUEST_TIME' => 1437490460
+>>>>>>> 113b4d237fae8f8ab3e055f62671d05daeba47d1
 ]
