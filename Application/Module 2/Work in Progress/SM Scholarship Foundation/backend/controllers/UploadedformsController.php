@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
+use common\models\ScholarsSearch;
 use common\models\Uploadedforms;
 use common\models\UploadedformsSearch;
 use yii\web\Controller;
@@ -32,7 +33,7 @@ class UploadedformsController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new UploadedformsSearch();
+        $searchModel = new ScholarsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
