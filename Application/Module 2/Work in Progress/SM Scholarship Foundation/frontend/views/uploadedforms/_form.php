@@ -12,6 +12,7 @@ use dosamigos\fileinput\FileInput;
 <div class="uploadedforms-form" style="margin-top:50px;">
 
      <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
+	 
 	<?= $form->field($model, 'fileName')->dropDownList(['Registration Form'=>'Registration Form','Grades Form'=>'Grades Form'],
 			['prompt'=>'Select File Type']) ?>
 	
@@ -25,7 +26,7 @@ use dosamigos\fileinput\FileInput;
         'removeIcon' => '<i class="glyphicon glyphicon-trash"></i> '
     ],
 	
-])->label('Upload Form')?>
+	])->label('Upload Form')?>
 	
 
     <div class="form-group">
