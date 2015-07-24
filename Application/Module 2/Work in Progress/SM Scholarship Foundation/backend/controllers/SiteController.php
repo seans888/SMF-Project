@@ -1,6 +1,7 @@
 <?php
 namespace backend\controllers;
-
+use backend\models\Event;
+use backend\models\EventSearch;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -55,7 +56,19 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+        $events = Event::find()->all();
+		$tasks = [];
+		foreach($events as $eve)
+		{
+			$event = new \yii2fullcalendar\models\Event();
+			$event->id = $eve->id;
+			$event->title = $eve->title;
+			$event->start = $eve->start_date;
+			$event->end = $eve->end_date;
+			$tasks[] = $event;
+		}
+        return $this->render('index',[
+            'events' => $tasks,]);
     }
 
     public function actionLogin()

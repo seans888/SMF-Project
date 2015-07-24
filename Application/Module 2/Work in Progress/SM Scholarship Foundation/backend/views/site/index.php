@@ -1,6 +1,8 @@
 <?php
 /* @var $this yii\web\View */
-
+use yii\helpers\Html;
+use yii\grid\GridView;
+use yii\bootstrap\Modal;
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
@@ -55,6 +57,26 @@ $this->title = 'My Yii Application';
           </div><!-- /.row -->
 	
             </section><!-- /.Left col -->
+<div class="event-index">
 
+    <h1>Calendar of Events</h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+
+   <?php
+		Modal::begin([
+			'header'=>'<h4>Event</h4>',
+			'id'=>'modal',
+			'size'=>'modal-lg',
+		]);
+		echo "<div id='modalContent'></div>";
+		Modal::end();
+   ?>
+
+    <?= \yii2fullcalendar\yii2fullcalendar::widget(array(
+      'events'=> $events,
+  ));
+?>
+
+</div>
     </div>
 </div>
