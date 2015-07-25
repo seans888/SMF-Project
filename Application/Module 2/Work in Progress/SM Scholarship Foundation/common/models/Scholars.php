@@ -48,7 +48,8 @@ class Scholars extends \yii\db\ActiveRecord
             [['scholar_firstName', 'scholar_lastName', 'scholar_gender', 'scholar_school_id', 'scholar_contactNum', 'scholar_school_area'], 'required'],
             [['scholar_gender', 'scholar_school_area'], 'string'],
             [['scholar_school_id', 'scholar_yearLevel', 'scholar_contactNum', 'scholar_cashCardNum'], 'integer'],
-            [['scholar_firstName', 'scholar_lastName', 'scholar_middleName', 'scholar_address', 'scholar_course', 'scholar_email'], 'string', 'max' => 100]
+			[['scholar_email'], 'email'],
+            [['scholar_sponsors','scholar_firstName', 'scholar_lastName', 'scholar_middleName', 'scholar_address', 'scholar_course', 'scholar_email'], 'string', 'max' => 100]
         ];
     }
 
