@@ -42,7 +42,9 @@ use kartik\select2\Select2;
     <?= $form->field($model, 'scholar_cashCardNum')->textInput() ?>
 
     <?= $form->field($model, 'scholar_school_area')->dropDownList([ 'Provincial' => 'Provincial', 'NCR' => 'NCR', ], ['prompt' => 'Select School Area']) ?>
-
+	
+	<?= $form->field($model, 'scholar_sponsors')->textInput() ?>
+	
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
