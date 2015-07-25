@@ -54,6 +54,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'scholar_email:email',
             'scholar_contactNum',
             'scholar_cashCardNum',
+			'scholar_sponsors',
    //       'scholar_school_area',
 
             ['class' => 'yii\grid\ActionColumn'],
