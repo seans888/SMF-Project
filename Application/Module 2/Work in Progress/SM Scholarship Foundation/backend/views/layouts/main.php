@@ -139,8 +139,9 @@ DashboardAsset::register($this);
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/grades/index'); ?>"><i class="fa fa-graduation-cap"></i> Grade Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/tuitionfees/index'); ?>"><i class="fa fa-money"></i> Tuition Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/allowance/index'); ?>"><i class="fa fa-credit-card"></i> Allowance Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/benefit/index'); ?>"><i class="fa fa-thumbs-up"></i> Benefits Records</a></li>
-              </ul>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/refunds/index'); ?>"><i class="fa fa-thumbs-up"></i> Refund Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/deductions/index'); ?>"><i class="fa fa-thumbs-down"></i> Deduction Records</a></li>           
+				</ul>
             </li>
 			<li class="treeview">
               <a href="<?= Yii::$app->getUrlManager()->createUrl('/uploadedforms/index'); ?>">
