@@ -31,28 +31,40 @@ $this->title = 'My Yii Application';
               <div class="small-box bg-green">
                 <div class="inner">
                   <h3>Make Report</h3>
-                  <p>GPA Report</p>
+                  <p>List of Reports</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="<?= Yii::$app->getUrlManager()->createUrl('/gpa_report/index'); ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="<?= Yii::$app->getUrlManager()->createUrl('/gpa_report/index'); ?>" class="small-box-footer">Select a Report to Create<i class="fa fa-arrow-circle-right"></i></a>
               </div>
             </div><!-- ./col -->
             <div class="col-lg-3 col-xs-6">
               <!-- small box -->
               <div class="small-box bg-yellow">
                 <div class="inner">
-                  <h3>Create</h3>
-                  <p>Create scholar</p>
+                  <h3>Add</h3>
+                  <p>Add scholar</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-person-add"></i>
                 </div>
-                <a href="<?= Yii::$app->getUrlManager()->createUrl('/scholars/create'); ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="<?= Yii::$app->getUrlManager()->createUrl('/scholars/create'); ?>" class="small-box-footer">Add a Scholar Record Now<i class="fa fa-arrow-circle-right"></i></a>
               </div>
             </div><!-- ./col -->
-            
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-red">
+                <div class="inner">
+                  <h3>Check Calendar</h3>
+                  <p>Check the Calendar of events</p>
+                </div>
+                <div class="icon">
+                  <i class="fa fa-calendar"></i>
+                </div>
+                <a href="<?= Yii::$app->getUrlManager()->createUrl('/event/index'); ?>" class="small-box-footer">Check Calendar Now<i class="fa fa-arrow-circle-right"></i></a>
+              </div>
+            </div><!-- ./col -->
           </div><!-- /.row -->
 	
             </section><!-- /.Left col -->
