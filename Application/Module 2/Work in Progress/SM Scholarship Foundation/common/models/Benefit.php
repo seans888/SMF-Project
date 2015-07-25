@@ -8,27 +8,16 @@ use Yii;
  * This is the model class for table "benefit".
  *
  * @property integer $benefit_id
- * @property integer $benefit_amount
- * @property integer $benefit_scholarShare
- * @property integer $benefit_tuitionfee_id
  * @property integer $benefit_scholar_id
- * @property integer $benefit_school_id
- *
- * @property Allowance[] $allowances
- * @property Schools $benefitSchool
- * @property Tuitionfees $benefitTuitionfee
- * @property Scholars $benefitScholar
+ * @property integer $benefit_allowance_id
+ * @property integer $benefit_refund_id
+ * @property integer $benefit_deduction_id
  */
 class Benefit extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
-	
-	public $benefit_scholar_lastName;
-	public $benefit_scholar_firstName;
-	public $benefit_scholar_middleName;
-	
     public static function tableName()
     {
         return 'benefit';
@@ -40,11 +29,8 @@ class Benefit extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['benefit_amount', 'benefit_scholarShare', 'benefit_tuitionfee_id',
-			'benefit_scholar_id', 'benefit_school_id'], 'integer'],
-			[['benefit_scholar_lastName', 'benefit_scholar_firstName', 
-			'benefit_scholar_middleName'], 'string', 'max' => 100],
-			[['benefit_description'], 'string', 'max'=>255]
+            [['benefit_scholar_id'], 'required'],
+            [['benefit_scholar_id', 'benefit_allowance_id', 'benefit_refund_id', 'benefit_deduction_id'], 'integer']
         ];
     }
 
@@ -55,46 +41,10 @@ class Benefit extends \yii\db\ActiveRecord
     {
         return [
             'benefit_id' => 'Benefit ID',
-            'benefit_amount' => 'Amount',
-            'benefit_scholarShare' => 'Scholar Share',
-            'benefit_tuitionfee_id' => 'Benefit Tuitionfee ID',
-            'benefit_scholar_id' => 'Scholar ID',
-            'benefit_school_id' => 'School Name',
-			'benefit_scholar_lastName' => 'Last Name',
-			'benefit_scholar_firstName' => 'First Name',
-			'benefit_scholar_middleName' => 'Middle Name',
+            'benefit_scholar_id' => 'Benefit Scholar ID',
+            'benefit_allowance_id' => 'Benefit Allowance ID',
+            'benefit_refund_id' => 'Benefit Refund ID',
+            'benefit_deduction_id' => 'Benefit Deduction ID',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getAllowances()
-    {
-        return $this->hasMany(Allowance::className(), ['benefit_allowance_id' => 'benefit_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getBenefitSchool()
-    {
-        return $this->hasOne(Schools::className(), ['School_id' => 'benefit_school_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getBenefitTuitionfee()
-    {
-        return $this->hasOne(Tuitionfees::className(), ['tuitionfee_id' => 'benefit_tuitionfee_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getBenefitScholar()
-    {
-        return $this->hasOne(Scholars::className(), ['scholar_id' => 'benefit_scholar_id']);
     }
 }
