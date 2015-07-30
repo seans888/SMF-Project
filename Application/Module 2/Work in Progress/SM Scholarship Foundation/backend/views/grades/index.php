@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use kartik\grid\GridView;
 use common\models\GradesSearch;
+use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\ScholarsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -16,24 +17,24 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Input Grades', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Input Grades', ['create'], ['class' => 'btn btn-primary']) ?>
     </p>
     <br>
-	<p><b><font color=orange>Orange</font> rows are scholars from NCR Areas</p>
-	<p><font color=blue>Blue</font> rows are scholars from Provincial Areas</b>
+	<p><b><font color=e7bd58>Orange</font> rows are scholars from NCR Areas</p>
+	<p><font color=988db2>Purple</font> rows are scholars from Provincial Areas</b>
 	</p>
-    
+    <?php Pjax::begin(['timeout' => 2000]); ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
     	'rowOptions'=>function($model){
     		if($model->scholar_school_area=='Provincial')
     		{
-    			return['class'=>'alert-info'];
+    			return['class'=>'provincial-row'];
     		}
     		else if($model->scholar_school_area=='NCR')
     		{
-    			return['class'=>'alert-warning'];
+    			return['class'=>'ncr-row'];
     		}
     	},
         'columns' => [
@@ -74,5 +75,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
+    <?php Pjax::end(); ?>
 </div>
