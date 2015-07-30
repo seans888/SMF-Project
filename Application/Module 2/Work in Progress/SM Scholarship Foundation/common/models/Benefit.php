@@ -12,6 +12,11 @@ use Yii;
  * @property integer $benefit_allowance_id
  * @property integer $benefit_refund_id
  * @property integer $benefit_deduction_id
+ *
+ * @property Deductions $benefitDeduction
+ * @property Scholars $benefitScholar
+ * @property Allowance $benefitAllowance
+ * @property Refunds $benefitRefund
  */
 class Benefit extends \yii\db\ActiveRecord
 {
@@ -46,5 +51,37 @@ class Benefit extends \yii\db\ActiveRecord
             'benefit_refund_id' => 'Benefit Refund ID',
             'benefit_deduction_id' => 'Benefit Deduction ID',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getBenefitDeduction()
+    {
+        return $this->hasOne(Deductions::className(), ['deduction_id' => 'benefit_deduction_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getBenefitScholar()
+    {
+        return $this->hasOne(Scholars::className(), ['scholar_id' => 'benefit_scholar_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getBenefitAllowance()
+    {
+        return $this->hasOne(Allowance::className(), ['allowance_id' => 'benefit_allowance_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getBenefitRefund()
+    {
+        return $this->hasOne(Refunds::className(), ['refund_id' => 'benefit_refund_id']);
     }
 }
