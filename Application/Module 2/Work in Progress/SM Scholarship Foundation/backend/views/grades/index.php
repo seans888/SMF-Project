@@ -23,10 +23,11 @@ $this->params['breadcrumbs'][] = $this->title;
 	<p><b><font color=e7bd58>Orange</font> rows are scholars from NCR Areas</p>
 	<p><font color=988db2>Purple</font> rows are scholars from Provincial Areas</b>
 	</p>
-    <?php Pjax::begin(['timeout' => 2000]); ?>
+	<?php Pjax::begin(['timeout'=>10000]); ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+		
     	'rowOptions'=>function($model){
     		if($model->scholar_school_area=='Provincial')
     		{
@@ -43,6 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
 				'value' => function($model, $key, $index, $column){
 					return GridView::ROW_COLLAPSED;
 				},
+				
 				'detail' => function ($model, $key, $index, $column){
 					$searchModel = new GradesSearch();
 					$searchModel -> grade_scholar_id = $model->scholar_id;
@@ -75,5 +77,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-    <?php Pjax::end(); ?>
+	<?php Pjax::end(); ?>
 </div>
