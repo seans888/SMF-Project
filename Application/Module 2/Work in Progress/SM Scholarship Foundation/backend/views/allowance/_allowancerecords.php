@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use dosamigos\datepicker\DatePicker;
 use common\models\ScholarsSearch;
+use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\AllowanceSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -14,6 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="allowance-index">
 <font color=red>Red</font> means the allowance is unsettled<br>
 <font color=Blue>Blue</font> means the allowance is settled
+<?php Pjax::begin(['timeout'=>10000]); ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -66,5 +68,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
+<?php Pjax::end(); ?>
 </div>
