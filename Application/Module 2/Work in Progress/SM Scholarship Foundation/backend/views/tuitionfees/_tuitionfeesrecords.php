@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	<p><b><font color=red>Red</font> rows have unsettled tuition fee payments</p>
 	<p><font color=green>Green</font> rows have paid tuition fees</b>
 	</p>
-	<?php Pjax::begin(); ?>
+	<?php Pjax::begin(['timeout'=>10000]); ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
