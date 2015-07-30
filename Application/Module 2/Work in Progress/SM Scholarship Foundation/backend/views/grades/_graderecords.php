@@ -11,10 +11,11 @@ $this->title = 'Grades';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="grades-index">
-    <?php Pjax::begin(['timeout' => 2000]); ?>
+<?php Pjax::begin(['timeout'=>10000]); ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+		
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
        		// 'grade_scholar_id',
@@ -43,5 +44,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-    <?php Pjax::end(); ?>
+	<?php Pjax::end(); ?>
 </div>
