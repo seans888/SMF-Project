@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 01, 2015 at 04:05 PM
+-- Generation Time: Aug 01, 2015 at 04:31 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -208,7 +208,7 @@ INSERT INTO `equivalence` (`equivalence_grade_rule`, `School_id`, `Numerical_Gra
 (5, 1, '2.0', 'B-', '79.00', '82.00', 'SATISFACTORY', 'PASS'),
 (6, 1, '1.5', 'C', '75.00', '78.00', 'FAIR', 'PASS'),
 (7, 1, '1.0', 'D', '70.00', '74.00', 'PASS', 'PASS'),
-(8, 1, 'R', 'R', '0.00', '69.00', 'REPEAT', 'FAIL'),
+(8, 1, NULL, 'R', '0.00', '69.00', 'REPEAT', 'FAIL'),
 (9, 1, '0.0', 'F', '0.00', '0.00', 'FAIL', 'FAIL'),
 (10, 1, NULL, 'N.G', '0.00', '0.00', 'NO GRADE', 'FAIL'),
 (11, 1, NULL, 'A.W', '0.00', '0.00', 'AUTHORIZED WITHDRAWAL', 'FAIL'),
