@@ -160,13 +160,13 @@ DashboardAsset::register($this);
                 <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/gpa_report/index'); ?>"><i class="fa fa-bar-chart"></i> GPA Report</a></li>
               </ul>
 			  <ul class="treeview-menu">
-                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/gender_summary/index'); ?>"><i class="fa fa-bar-chart"></i> Gender Summary Report</a></li>
+                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/gender_summary/index'); ?>"><i class="fa fa-bar-chart"></i> Gender Demographics</a></li>
               </ul>
 			  <ul class="treeview-menu">
                 <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/passfail_report/index'); ?>"><i class="fa fa-bar-chart"></i>Pass/Fail Report</a></li>
               </ul>
 			  <ul class="treeview-menu">
-                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/summary_report/index'); ?>"><i class="fa fa-bar-chart"></i>Summary Report</a></li>
+                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/summary_report/index'); ?>"><i class="fa fa-bar-chart"></i>Scholars Per School</a></li>
               </ul>
             </li>
             <li>
