@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 01, 2015 at 03:51 PM
+-- Generation Time: Aug 01, 2015 at 04:05 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -298,7 +298,7 @@ CREATE TABLE IF NOT EXISTS `grades` (
 
 INSERT INTO `grades` (`grade_id`, `grade_schoolYear`, `grade_Term`, `grade_scholar_id`, `grade_subject`, `grade_units`, `grade_value`, `equivalence_grade_rule`, `School_id`) VALUES
 (15, 2015, 1, 2, 'SOFTDEV', '3.00', '4.0', NULL, 1),
-(16, 2015, 2, 3, 'MINSYS', '3.00', '4.0', NULL, 4),
+(16, 2015, 2, 3, 'MINSYS', '3.00', '4.0', NULL, 1),
 (17, 2015, 1, 4, 'Subject 1', '3.00', '4.0', 1, 1),
 (18, 2015, 1, 4, 'Subject 2', '3.00', '4.0', 1, 1),
 (19, 2015, 1, 4, 'Subject 3', '3.00', '4.0', 1, 1),
