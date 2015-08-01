@@ -18,7 +18,7 @@ class AllowanceSearch extends Allowance
     public function rules()
     {
         return [
-            [['allowance_id', 'allowance_amount', 'allowance_scholar_id', 'allowance_school_id'], 'integer'],
+            [['allowance_id', 'allowance_amount', 'allowance_scholar_id', 'allowance_school_id', 'benefit_allowance_id'], 'integer'],
             [['allowance_remark', 'allowance_payStatus', 'allowance_scholar_lastName', 'allowance_scholar_firstName', 'allowance_scholar_middleName', 'allowance_paidDate'], 'safe'],
         ];
     }
@@ -62,6 +62,7 @@ class AllowanceSearch extends Allowance
             'allowance_amount' => $this->allowance_amount,
             'allowance_scholar_id' => $this->allowance_scholar_id,
             'allowance_school_id' => $this->allowance_school_id,
+            'benefit_allowance_id' => $this->benefit_allowance_id,
             'allowance_paidDate' => $this->allowance_paidDate,
         ]);
 

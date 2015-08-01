@@ -28,8 +28,8 @@ foreach($users as $ctr){
 					$remark=$allowance->allowance_remark;
 					$status=$allowance->allowance_payStatus;
 					$date = $allowance->allowance_paidDate;
-					$ben = $benefit->benefit_id;
-					$share = $benefit->benefit_id;
+					$ben = $benefit->benefit_amount;
+					$share = $benefit->benefit_scholarShare;
 					
 				}
 					}
@@ -47,20 +47,12 @@ foreach($users as $ctr){
      <?= Tabs::widget([
     'items' => [
         [
-            'label' => 'Actual Stipend',
-            'content' => '<table><tr><td width=40% >STIPEND:<br><br><br></td></tr><tr><td>Name:<b> '.$name.'</b><br><br>School:<b> '.$schoolname.'</b><br><br>School Year Level:<b> '.$year.'</b><br><br>School Area:<b> '.$term.'</b><br><br>Allowance Amount:<b> '.$amount.'</b></td><td style="text-align:right;">Remark:<b> '.$remark.'</b><br><br>Allowance Status:<b> '.$status.'</b><br><br>Allowance Payment Date:<b> '.$date.'</b></td></tr></table>',
+            'label' => 'Actual Stipend and Benefits',
+            'content' => '<table><tr><td width=40% >STIPEND:<br><br><br></td></tr><tr><td>Name:<b> '.$name.'</b><br><br>School:<b> '.$schoolname.'</b><br><br>School Year Level:<b> '.$year.'</b><br><br>School Area:<b> '.$term.'</b><br><br>Allowance Amount:<b> '.$amount.'</b></td><td style="text-align:right;">Remark:<b> '.$remark.'</b><br><br>Allowance Status:<b> '.$status.'</b><br><br>Allowance Payment Date:<b> '.$date.'</b><br><br><br>BENEFITS<br><br>Benefit Amount: <b>'.$ben.'</b><br><br>Scholar Share:<b> '.$share.'</td></tr></table>',
         ],
         [
-            'label' => 'Past Stipend',
+            'label' => 'Past Stipend and Benefits',
             'content' => 'No data received.',
-        ],
-		 [
-            'label' => 'Actual Benefits',
-            'content' => 'No data yet',
-        ],
-		 [
-            'label' => 'Past Benefits',
-            'content' => 'No data yet',
         ],
     ],
     'options' => ['tag' => 'div'],

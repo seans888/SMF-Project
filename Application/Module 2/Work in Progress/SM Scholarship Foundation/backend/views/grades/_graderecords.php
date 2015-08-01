@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use yii\widgets\Pjax;
+
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\GradesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -11,11 +11,9 @@ $this->title = 'Grades';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="grades-index">
-<?php Pjax::begin(['timeout'=>10000]); ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-		
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
        		// 'grade_scholar_id',
@@ -44,5 +42,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-	<?php Pjax::end(); ?>
+
 </div>
