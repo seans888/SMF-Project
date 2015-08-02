@@ -9,7 +9,7 @@ use yii\filters\VerbFilter;
 /**
  * Site controller
  */
-class Allowance_reportController extends Controller
+class Masterlist_of_scholarsController extends Controller
 {
     public function actionIndex()
     {
