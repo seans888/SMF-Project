@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use kartik\select2\Select2;
 /* @var $this yii\web\View */
 /* @var $model common\models\Schools */
 /* @var $form yii\widgets\ActiveForm */
@@ -14,7 +14,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'school_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'school_area')->dropDownList([ 'Provincial' => 'Provincial', 'NCR' => 'NCR', ], ['prompt' => '']) ?>
+	<?= $form->field($model,'school_area')->widget(Select2::classname(),
+		[
+			'data'=>['NCR','Davao'],
+			'language'=>'en',
+			'options'=>['placeholder'=>'Select School Area'],
+			'pluginOptions'=>['allowClear'=>true],
+		]) ?>
 
     <?= $form->field($model, 'school_address')->textInput(['maxlength' => true]) ?>
 
