@@ -3,6 +3,8 @@
 namespace backend\controllers;
 
 use Yii;
+use yii\helpers\ArrayHelper;
+use common\models\Schools;
 use common\models\Scholars;
 use common\models\ScholarsSearch;
 use yii\web\Controller;
@@ -61,8 +63,12 @@ class ScholarsController extends Controller
     public function actionCreate()
     {
         $model = new Scholars();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+		
+        if ($model->load(Yii::$app->request->post())) {
+			$test2 = ArrayHelper::map(Schools::find()->joinWith('scholars')->where(['School_id'=>$model->scholar_school_id])->all(),'School_id','school_area');
+			$test = array_values($test2)[0];
+			$model->scholar_school_area = $test;
+			$model->save();
             return $this->redirect(['view', 'id' => $model->scholar_id]);
         } else {
             return $this->render('create', [
@@ -81,7 +87,11 @@ class ScholarsController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+			$test2 = ArrayHelper::map(Schools::find()->joinWith('scholars')->where(['School_id'=>$model->scholar_school_id])->all(),'School_id','school_area');
+			$test = array_values($test2)[0];
+			$model->scholar_school_area = $test;
+			$model->save();
             return $this->redirect(['view', 'id' => $model->scholar_id]);
         } else {
             return $this->render('update', [
