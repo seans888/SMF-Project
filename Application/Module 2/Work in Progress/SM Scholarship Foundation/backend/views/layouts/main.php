@@ -51,15 +51,14 @@ DashboardAsset::register($this);
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="dist/img/avatar5.png" class="user-image" alt="User Image"/>
-                  <span class="hidden-xs">Admin</span>
+                  <span class="hidden-xs"><?= Yii::$app->user->identity->username ?></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
                     <img src="dist/img/avatar5.png" class="img-circle" alt="User Image" />
                     <p>
-                      Admin Name - Web Developer
-                      <small>Member since Nov. 2012</small>
+                      <?= Yii::$app->user->identity->username ?>
                     </p>
                   </li>
                   <!-- Menu Footer-->
@@ -94,7 +93,7 @@ DashboardAsset::register($this);
               <img src="dist/img/avatar5.png" class="img-circle" alt="User Image" />
             </div>
             <div class="pull-left info">
-              <p>Admin</p>
+              <p><?= Yii::$app->user->identity->username ?></p>
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>
