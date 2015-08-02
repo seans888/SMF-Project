@@ -45,7 +45,7 @@ class Scholars extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['scholar_firstName', 'scholar_lastName', 'scholar_gender', 'scholar_school_id', 'scholar_contactNum', 'scholar_school_area'], 'required'],
+            [['scholar_firstName', 'scholar_lastName', 'scholar_gender', 'scholar_school_id', 'scholar_contactNum'], 'required'],
             [['scholar_gender', 'scholar_school_area'], 'string'],
             [['scholar_school_id', 'scholar_yearLevel', 'scholar_contactNum', 'scholar_cashCardNum'], 'integer'],
 			[['scholar_email'], 'email'],
