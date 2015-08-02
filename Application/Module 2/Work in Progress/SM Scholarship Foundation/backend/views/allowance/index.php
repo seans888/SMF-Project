@@ -19,21 +19,21 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Create Allowance', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <br>
-	<p><b><font color=orange>Orange</font> rows are scholars from NCR Areas</p>
-	<p><font color=blue>Blue</font> rows are scholars from Provincial Areas</b>
+	<p><b><font color=#988db2>Orange</font> rows are schools from NCR Areas</p>
+	<p><font color=#e7bd58>Purple</font> rows are schools from Provincial Areas</b>
 	</p>
     
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
     	'rowOptions'=>function($model){
-    		if($model->scholar_school_area=='Provincial')
+    		if(strcasecmp($model->scholar_school_area, 'NCR') != 0)
     		{
-    			return['class'=>'alert-info'];
+    			return['class'=>'provincial-row'];
     		}
-    		else if($model->scholar_school_area=='NCR')
+    		else if(strcasecmp($model->scholar_school_area, 'NCR') == 0)
     		{
-    			return['class'=>'alert-warning'];
+    			return['class'=>'ncr-row'];
     		}
     	},
         'columns' => [
