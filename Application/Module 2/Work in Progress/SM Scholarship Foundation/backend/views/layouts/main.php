@@ -140,7 +140,7 @@ DashboardAsset::register($this);
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/tuitionfees/index'); ?>"><i class="fa fa-money"></i> Tuition Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/allowance/index'); ?>"><i class="fa fa-credit-card"></i> Allowance Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/refunds/index'); ?>"><i class="fa fa-thumbs-up"></i> Refund Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/deductions/index'); ?>"><i class="fa fa-thumbs-down"></i> Deduction Records</a></li>           
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/deductions/index'); ?>"><i class="fa fa-thumbs-down"></i> Deduction Records</a></li>		
 				</ul>
             </li>
 			<li class="treeview">
@@ -167,6 +167,21 @@ DashboardAsset::register($this);
               </ul>
 			  <ul class="treeview-menu">
                 <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/summary_report/index'); ?>"><i class="fa fa-bar-chart"></i>Scholars Per School</a></li>
+              </ul>
+			  <ul class="treeview-menu">
+                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/allowance_report/index'); ?>"><i class="fa fa-bar-chart"></i>Allowance Report</a></li>
+              </ul>
+			  <ul class="treeview-menu">
+                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/deduction_report/index'); ?>"><i class="fa fa-bar-chart"></i>Deduction Report</a></li>
+              </ul>
+			  <ul class="treeview-menu">
+                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/graduates_report/index'); ?>"><i class="fa fa-bar-chart"></i>Graduates Report</a></li>
+              </ul>
+			  <ul class="treeview-menu">
+                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/masterlist_of_scholars/index'); ?>"><i class="fa fa-bar-chart"></i>Masterlist of Scholars</a></li>
+              </ul>
+			  <ul class="treeview-menu">
+                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/tuitionfee_report/index'); ?>"><i class="fa fa-bar-chart"></i>Tuition Fees Report</a></li>
               </ul>
             </li>
             <li>
