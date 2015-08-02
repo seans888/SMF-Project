@@ -28,7 +28,7 @@ return [
 	],
     'components' => [
         'user' => [
-            'identityClass' => 'common\models\User',
+            'identityClass' => 'common\models\Admin',
             'enableAutoLogin' => true,
         ],
         'log' => [
