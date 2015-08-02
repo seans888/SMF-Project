@@ -44,7 +44,7 @@ class Allowance extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['allowance_amount', 'allowance_scholar_id', 'allowance_school_id', 'benefit_allowance_id'], 'integer'],
+            [['allowance_amount', 'allowance_scholar_id', 'allowance_school_id'], 'integer'],
             [['allowance_payStatus'], 'string'],
             [['allowance_paidDate'], 'safe'],
             [['allowance_remark'], 'string', 'max' => 255],
@@ -64,7 +64,6 @@ class Allowance extends \yii\db\ActiveRecord
             'allowance_scholar_id' => 'Scholar ID',
             'allowance_school_id' => 'School Name',
             'allowance_payStatus' => 'Pay Status',
-            'benefit_allowance_id' => 'Benefit Allowance ID',
             'allowance_scholar_lastName' => 'Last Name',
             'allowance_scholar_firstName' => 'First Name',
             'allowance_scholar_middleName' => 'Middle Name',
@@ -91,8 +90,4 @@ class Allowance extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getBenefitAllowance()
-    {
-        return $this->hasOne(Benefit::className(), ['benefit_id' => 'benefit_allowance_id']);
-    }
 }
