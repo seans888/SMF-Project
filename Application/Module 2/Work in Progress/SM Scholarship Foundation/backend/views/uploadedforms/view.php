@@ -24,6 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
         <?= Html::a('View List', ['index', 'id' => $model->id], ['class' => 'btn btn-success']) ?>
+		<?= Html::a('Download', ['download','id' => $model->id], ['class' => 'btn btn-alert']) ?>
     </p>
 
     <?= DetailView::widget([
