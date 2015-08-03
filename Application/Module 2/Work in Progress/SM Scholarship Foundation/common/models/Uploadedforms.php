@@ -56,7 +56,8 @@ class Uploadedforms extends \yii\db\ActiveRecord
 			'scholar_middleName'=>'Middle Name',
             'uploadedForm' => 'Uploaded Form',
             'uploaded_scholar_id' => 'Scholar ID',
-            'fileName' => 'File Name',
+			'file' => 'File',
+            'fileName' => 'Form Type',
         ];
     }
 
