@@ -10,6 +10,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
+use yii\web\request;
 /**
  * UploadedformsController implements the CRUD actions for Uploadedforms model.
  */
@@ -62,16 +63,19 @@ class UploadedformsController extends Controller
     public function actionCreate()
     {
         $model = new Uploadedforms();
-
+		
         if ($model->load(Yii::$app->request->post())) {
-			$fileName = $model->fileName.$model->uploaded_scholar_id;
+			
 			$model->file = UploadedFile::getInstance($model,'file');
 			if($model->file != null)
 			{
-				$model->file->saveAs('Forms/'.$fileName.'.'.$model->file->extension);	
-				$model->uploadedForm = 'Forms/'.$fileName.'.'.$model->file->extension;	
+				$fileName = md5(time()).$model->fileName." ofScholarID ".$model->uploaded_scholar_id." FileName ".$model->file->name;
+				$model->file->saveAs('Forms/'.$fileName);	
+				$model->uploadedForm = 'Forms/'.$fileName;
+		//		$filePath = 'Forms'.'\'.$fileName.'.'.$model->file->extension;
 			}			
 			$model->save();
+			// return $this->redirect($model->uploadedForm)->send();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -91,12 +95,12 @@ class UploadedformsController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post())) {
-			$fileName = $model->fileName.$model->uploaded_scholar_id;
 			$model->file = UploadedFile::getInstance($model,'file');
 			if($model->file != null)
 			{
-				$model->file->saveAs('Forms/'.$fileName.'.'.$model->file->extension);	
-				$model->uploadedForm = 'Forms/'.$fileName.'.'.$model->file->extension;	
+				$fileName = $model->id.$model->fileName." ofScholarID ".$model->uploaded_scholar_id." FileName ".$model->file->name;
+				$model->file->saveAs('Forms/'.$fileName);	
+				$model->uploadedForm = 'Forms/'.$fileName;	
 			}			
 			$model->save();
             return $this->redirect(['view', 'id' => $model->id]);
@@ -106,7 +110,15 @@ class UploadedformsController extends Controller
             ]);
         }
     }
+	
+	public function actionDownload($id)
+    {
+        $model = $this->findModel($id);
 
+		return $this->redirect($model->uploadedForm)->send();			
+
+    }
+	
     /**
      * Deletes an existing Uploadedforms model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
