@@ -28,6 +28,14 @@ use kartik\typeahead\Typeahead;
 	<?= $form->field($model, 'fileName')->dropDownList(['Registration Form'=>'Registration Form','Grades Form'=>'Grades Form'],
 			['prompt'=>'Select File Type']) ?>
 	
+
+<?php
+if ($model->uploadedForm) {
+    echo 'Overwrite Previous File?<br>'.$model->uploadedForm.'&nbsp;&nbsp;&nbsp;<img src="'.\Yii::$app->request->BaseUrl.'/'.$model->uploadedForm.'" width="90px">&nbsp;&nbsp;&nbsp;';
+    
+}
+
+?>
 	<?= $form->field($model, 'file')->widget(\dosamigos\fileinput\BootstrapFileInput::className(), [
     'options' => ['multiple' => true],
     'clientOptions' => [
@@ -41,7 +49,7 @@ use kartik\typeahead\Typeahead;
 ])->label('Upload Form')?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']); ?>
     </div>
 
     <?php ActiveForm::end(); ?>
