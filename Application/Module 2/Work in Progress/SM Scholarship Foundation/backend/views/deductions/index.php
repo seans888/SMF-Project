@@ -19,8 +19,8 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Input Deductions', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <br>
-	<p><b><font color=#988db2>Orange</font> rows are schools from NCR Areas</p>
-	<p><font color=#e7bd58>Purple</font> rows are schools from Provincial Areas</b>
+	<p><b><font color=#e7bd58>Orange</font> rows are schools from NCR Areas</p>
+	<p><font color=#988db2>Purple</font> rows are schools from Provincial Areas</b>
 	</p>
     
     <?= GridView::widget([
