@@ -30,6 +30,14 @@ $this->params['breadcrumbs'][] = $this->title;
 				// 'attribute'=>'scholar_middleName',
 				// 'value'=>'scholar.scholar_middleName',
 			// ],
+[
+        'attribute' => 'file',
+        'format' => 'html',    
+        'value' => function ($data) {
+            return Html::img(Yii::getAlias('@web').'/'. $data['uploadedForm'],
+                ['width' => '70px']);
+        },
+    ],
             'uploadedForm',
             'fileName',
 
