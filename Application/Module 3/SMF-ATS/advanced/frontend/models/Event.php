@@ -48,7 +48,7 @@ class Event extends \yii\db\ActiveRecord
         return [
             'event_id' => 'Event ID',
             'event_title' => 'Event Title',
-            'event_descript' => 'Event Descript',
+            'event_descript' => 'Event Description',
             'event_date' => 'Event Date',
             'event_place' => 'Event Place',
             'employee_employee_id' => 'Employee Employee ID',
