@@ -51,6 +51,7 @@ AppAsset::register($this);
 				['label' => 'Logs', 'url' => ['/logs/index']],
 				['label' => 'Migration', 'url' => ['/migration/index']],
 				['label' => 'Testimonials', 'url' => ['/testimonials/index']],
+				['label' => 'Users', 'url' => ['/user/index']],
 				[ 
                     'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
                     'url' => ['/site/logout'],
