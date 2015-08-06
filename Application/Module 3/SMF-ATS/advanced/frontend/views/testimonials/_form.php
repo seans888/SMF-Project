@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
 	
 	<?= $form->field($model, 'file')->fileInput(); ?>
 
-    <?= $form->field($model, 'testimonial_description')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'testimonial_description')->textArea(['maxlength' => true, 'style' => 'height:200px; margin:0px auto;']); ?>
 
     <?= $form->field($model, 'testiomonial_date')->textInput() ?>
 
