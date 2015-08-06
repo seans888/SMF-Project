@@ -43,6 +43,7 @@ AppAsset::register($this);
                 $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
                 $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
             } else {
+
                 $menuItems =[
 				['label' => 'Home', 'url' => ['/site/index']],
 				['label' => 'Alumni', 'url' => ['/alumni/index']],

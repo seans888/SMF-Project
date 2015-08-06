@@ -3,14 +3,14 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Applicantform */
+/* @var $model frontend\models\Fileserver */
 
-$this->title = 'Update Applicantform: ' . ' ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Applicantforms', 'url' => ['index']];
+$this->title = 'Update Fileserver: ' . ' ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Fileservers', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="applicantform-update">
+<div class="fileserver-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
