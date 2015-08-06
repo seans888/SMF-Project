@@ -44,9 +44,9 @@ class CompileController extends Controller
 		$users = User::find()->all();
 		$scholars = Scholars::find()->all();
 		$allowances = Allowance::find()->all();
-		$benefits = Benefit::find()->all();
+		
 		$grades = Grades::find()->all();
-		return $this->render('index',array('users'=>$users,'scholars'=>$scholars,'schools'=>$schools,'allowances'=>$allowances,'benefits'=>$benefits,'grades'=>$grades));
+		return $this->render('index',array('users'=>$users,'scholars'=>$scholars,'schools'=>$schools,'allowances'=>$allowances,'grades'=>$grades));
 		
     }
 

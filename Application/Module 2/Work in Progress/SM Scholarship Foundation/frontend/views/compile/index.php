@@ -18,9 +18,9 @@ foreach($users as $ctr){
 		foreach($scholars as $scholarctr){
 			foreach($schools as $school){
 				foreach($allowances as $allowance){
-					foreach($benefits as $benefit){
+					
 						foreach($grades as $grade){
-						if($scholarctr->scholar_user_id==$ctr->id && $scholarctr->scholar_school_id==$school->School_id && $allowance->allowance_scholar_id == $benefit->benefit_scholar_id &&$benefit->benefit_scholar_id==$scholarctr->scholar_user_id){
+						if($scholarctr->scholar_user_id==$ctr->id && $scholarctr->scholar_school_id==$school->School_id){
 						$name=$scholarctr->scholar_firstName." ".$scholarctr->scholar_middleName." ".$scholarctr->scholar_lastName;
 						$gender=$scholarctr->scholar_gender;
 						$address=$scholarctr->scholar_address;
@@ -37,7 +37,7 @@ foreach($users as $ctr){
 						$schoolnum=$school->school_contactNumber;
 						
 					
-				}
+				
 						}
 					}
 				}
