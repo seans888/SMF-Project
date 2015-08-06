@@ -89,11 +89,48 @@ DashboardAsset::register($this);
     </nav>
 	
     
-     <div class="container">
-			
-            <?= $content ?>
-			</div>
-         
+    	
+   <section id="forms" class="bg-light-gray" style="background-color:#fff">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading" style="color:black;">Forms</h2>
+                   
+                </div>
+            </div>
+             <div class="row" >
+                <div class="col-md-4 col-sm-6 portfolio-item" style="margin-left:160px;">
+                    <a href="<?php echo'index.php?r=compile/index'?>" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                
+                            </div>
+                        </div>
+                        <img src="img/portfolio/parttime.jpg" class="img-responsive" alt="" style="height:250px">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4 style="color:black;">Part Time Jobs</h4>
+                        <p class="text-muted" style="color:#005ab2;">Fill Up Form</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item" style="margin-left:80px;">
+                    <a href="<?php echo 'index.php?r=uploadedforms/create'?>" class="portfolio-link" data-toggle="modal" >
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                
+                            </div>
+                        </div>
+                        <img src="img/portfolio/upload.png" class="img-responsive" alt="" style="height:250px;width:400px;">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4 style="color:black;">Upload </h4>
+                        <p class="text-muted" style="color:#005ab2;">Files to be Submitted for Requirements</p>
+                    </div>
+                </div>
+               
+               </div>
+    </section>
+	
 		
     <footer>
         <div class="container">

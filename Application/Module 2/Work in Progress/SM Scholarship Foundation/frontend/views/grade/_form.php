@@ -21,17 +21,7 @@ use dosamigos\fileinput\FileInput;
     <?= $form->field($model, 'grade_Term')->textInput() ?>
 
   
-	<?= $form->field($model, 'file')->widget(\dosamigos\fileinput\BootstrapFileInput::className(), [
-    'options' => ['multiple' => true],
-    'clientOptions' => [
-        'previewFileType' => 'text',
-        'browseClass' => 'btn btn-success',
-        'uploadClass' => 'btn btn-info',
-        'removeClass' => 'btn btn-danger',
-        'removeIcon' => '<i class="glyphicon glyphicon-trash"></i> '
-    ],
 	
-])->label('Upload Grade Sheet')?>
 	
 	  
 

@@ -88,12 +88,28 @@ DashboardAsset::register($this);
         <!-- /.container-fluid -->
     </nav>
 	
-    
-     <div class="container">
-			
-            <?= $content ?>
-			</div>
-         
+	
+     <section id="calendar" style="background-color:#fff">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading" style="color:black;">Calendar</h2>
+                   
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <img src="img/portfolio/calendarnew.jpg" style="float:left;height:500px;width:500px;"></img>
+					<div style="float:right;margin-right:230px;">
+						<a href="index.php?r=event/index" class="btn btn-primary" style="margin-top:50px;">Show Calendar</a>
+						
+					</div><br><br><br><br><br>
+					<p style="color:#005ab2; text-align:center;">In this calendar, you could see different schedules of form submissions to the SM Foundation. You could upload your Grade Sheet and Registration Form here but notice that it will only be used as a record and backup only. It will not be verified until the hard copy of the forms were submitted. </p>
+					
+                </div>
+            </div>
+        </div>
+    </section>
 		
     <footer>
         <div class="container">

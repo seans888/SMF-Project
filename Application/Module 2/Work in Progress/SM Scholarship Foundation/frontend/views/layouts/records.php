@@ -87,12 +87,53 @@ DashboardAsset::register($this);
 		</div>
         <!-- /.container-fluid -->
     </nav>
-	
+		
     
-     <div class="container">
-			
-            <?= $content ?>
-			</div>
+     <section id="records" class="bg-light-gray" style="background-color:#fff">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading" style="color:black;">Records</h2>
+                    
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="<?php echo'index.php?r=grade/index'?>" class="portfolio-link" data-toggle="modal">
+                        
+                        <img src="img/portfolio/c.png" class="img-responsive" alt="" style="height:250px">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4 style="color:black;">View Grades</h4>
+						 <p class="text-muted" style="color:#005ab2;">Past-Present</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="<?php echo'index.php?r=tuition/index'?>" class="portfolio-link" data-toggle="modal" >
+                        
+                        <img src="img/portfolio/e.png" class="img-responsive" alt="" style="height:250px;width:400px;">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4 style="color:black;">View Tuition Fees </h4>
+						<p class="text-muted" style="color:#005ab2;">Actual Tuition and Shouldered by SM</p>
+                    </div>
+                </div>
+				 <div class="col-md-4 col-sm-6 portfolio-item" >
+                    <a href="<?php echo 'index.php?r=allowance/index';?>" class="portfolio-link" data-toggle="modal">
+                   
+                        <img src="img/portfolio/f.png" class="img-responsive" alt="" style="height:250px;width:400px;">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4 style="color:black;">View Stipend and Benefits</h4>
+                        <p class="text-muted" style="color:#005ab2;">Past-Present</p>
+                    </div>
+                </div>
+				 <div class="col-md-4 col-sm-6 portfolio-item">
+                   
+                </div>
+
+               </div>
+    </section>
          
 		
     <footer>

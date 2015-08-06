@@ -39,6 +39,7 @@ class CompileController extends Controller
      */
     public function actionIndex()
     {
+		
 		$schools = Schools::find()->all();
 		$users = User::find()->all();
 		$scholars = Scholars::find()->all();
@@ -68,6 +69,7 @@ class CompileController extends Controller
      */
     public function actionCreate()
     {
+		$this->layout = 'calendar';
         $model = new Compile();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
