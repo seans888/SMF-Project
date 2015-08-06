@@ -12,7 +12,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'event_id')->textInput() ?>
+
 
     <?= $form->field($model, 'event_title')->textInput(['maxlength' => true]) ?>
 
@@ -22,9 +22,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'event_place')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'employee_employee_id')->textInput() ?>
 
-    <?= $form->field($model, 'employee_user_user_id')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

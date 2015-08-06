@@ -5,7 +5,7 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "user".
+ * This is the model class for table "User".
  *
  * @property integer $id
  * @property string $username
@@ -13,12 +13,10 @@ use Yii;
  * @property string $password_hash
  * @property string $password_reset_token
  * @property string $email
+ * @property string $user_type
  * @property integer $status
  * @property integer $created_at
  * @property integer $updated_at
- *
- * @property Alumni[] $alumnis
- * @property Employee[] $employees
  */
 class User extends \yii\db\ActiveRecord
 {
@@ -27,7 +25,7 @@ class User extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'user';
+        return 'User';
     }
 
     /**
@@ -36,10 +34,11 @@ class User extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['username', 'auth_key', 'password_hash', 'email', 'created_at', 'updated_at'], 'required'],
+            [['username', 'auth_key', 'password_hash', 'email', 'user_type', 'created_at', 'updated_at'], 'required'],
             [['status', 'created_at', 'updated_at'], 'integer'],
             [['username', 'password_hash', 'password_reset_token', 'email'], 'string', 'max' => 255],
-            [['auth_key'], 'string', 'max' => 32]
+            [['auth_key'], 'string', 'max' => 32],
+            [['user_type'], 'string', 'max' => 10]
         ];
     }
 
@@ -55,25 +54,10 @@ class User extends \yii\db\ActiveRecord
             'password_hash' => 'Password Hash',
             'password_reset_token' => 'Password Reset Token',
             'email' => 'Email',
+            'user_type' => 'User Type',
             'status' => 'Status',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getAlumnis()
-    {
-        return $this->hasMany(Alumni::className(), ['user_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getEmployees()
-    {
-        return $this->hasMany(Employee::className(), ['user_id' => 'id']);
     }
 }
