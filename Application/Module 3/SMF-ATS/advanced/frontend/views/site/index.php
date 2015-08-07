@@ -5,7 +5,7 @@ $this->title = 'SM Foundation Alumni Tracking System';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Welcome to SM Foundation - Alumni Tracking System!</h1>
+        <h1><b>Welcome to SM Foundation Alumni Tracking System</b></h1>
 
         <p class="lead">Welcome User</p>
 
