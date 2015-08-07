@@ -33,8 +33,8 @@ class Event extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['event_id', 'event_title', 'event_descript', 'event_date', 'event_place', 'employee_employee_id', 'employee_user_user_id'], 'required'],
-            [['event_id', 'employee_employee_id', 'employee_user_user_id'], 'integer'],
+            [[ 'event_title', 'event_descript', 'event_date', 'event_place', 'employee_employee_id', 'employee_user_user_id'], 'required'],
+            [[ 'employee_employee_id', 'employee_user_user_id'], 'integer'],
             [['event_date'], 'safe'],
             [['event_title', 'event_descript', 'event_place'], 'string', 'max' => 45]
         ];
