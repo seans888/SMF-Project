@@ -123,6 +123,11 @@ class SiteController extends Controller
             ]);
         }
     }
+	
+	public function actionOperations()
+	{
+		return $this->render('operations');
+	}
 
     public function actionAbout()
     {

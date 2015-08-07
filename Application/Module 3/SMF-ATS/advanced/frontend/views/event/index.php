@@ -17,11 +17,31 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('Create Event', ['create'], ['class' => 'btn btn-success']) ?>
+		<?= Html::a('View Event', ['calendar'], ['class' => 'btn btn-success']) ?>
     </p>
+	
+	<p>
+        
+    </p>
+	
+	<?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
 
-<?= \yii2fullcalendar\yii2fullcalendar::widget(array(
-      'events'=> $events,
-  ));
-  ?>
+            'event_id',
+            'event_title',
+            'event_descript',
+            'event_date',
+            'event_place',
+			'employee_employee_id',
+            'employee_user_user_id',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
+
+
 
 </div>

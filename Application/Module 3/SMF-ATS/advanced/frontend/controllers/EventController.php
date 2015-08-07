@@ -30,10 +30,32 @@ class EventController extends Controller
      * Lists all Event models.
      * @return mixed
      */
-    public function actionIndex()
+	public function actionIndex()
     {
-		
-		$events = Event::find()->all();
+        $searchModel = new EventSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
+     * Displays a single Event model.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionView($id)
+    {
+        return $this->render('view', [
+            'model' => $this->findModel($id),
+        ]);
+    }
+	
+	public function actionCalendar()
+    {
+        $events = Event::find()->all();
 		
 		
 		$tasks = [];
@@ -48,20 +70,8 @@ class EventController extends Controller
 		$tasks[] = $event;
 		}
 
-        return $this->render('index', [
+        return $this->render('calendar', [
             'events' => $tasks,
-        ]);
-    }
-
-    /**
-     * Displays a single Event model.
-     * @param integer $id
-     * @return mixed
-     */
-    public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
         ]);
     }
 
