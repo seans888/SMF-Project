@@ -46,6 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'tuitionfee_dateOfEnrollment',
             'tuitionfee_dateOfPayment',
             'tuitionfee_paidStatus',
+			'tuitionfee_status',
 			'uploaded_by',
 			'updated_by',
 			'checked_by',
