@@ -64,7 +64,10 @@ class RefundsController extends Controller
     {
         $model = new Refunds();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) 
+		{
+			$model->uploaded_by = Yii::$app->user->identity->username;
+			$model->save();
             return $this->redirect(['view', 'id' => $model->refund_id]);
         } else {
             return $this->render('create', [
@@ -83,7 +86,10 @@ class RefundsController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) 
+		{
+			$model->updated_by = Yii::$app->user->identity->username;
+			$model->save();
             return $this->redirect(['view', 'id' => $model->refund_id]);
         } else {
             return $this->render('update', [
