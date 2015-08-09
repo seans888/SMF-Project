@@ -34,13 +34,21 @@ class GradeController extends Controller
      * Lists all Grades models.
      * @return mixed
      */
-    public function actionIndex()
-    {
-      $grades = Grades::find()->all();
-		$schools = Schools::find()->all();
+	 public function actionGradestab(){
+		$grades = Grades::find()->all();
 		$users = User::find()->all();
 		$scholars = Scholars::find()->all();
-		return $this->render('index',array('users'=>$users,'scholars'=>$scholars,'schools'=>$schools,'grades'=>$grades));
+		
+		return $this->render('gradestab',['users'=>$users,'scholars'=>$scholars,'grades'=>$grades]);
+	 }
+    public function actionIndex()
+    {
+		$grades = Grades::find()->all();
+		$users = User::find()->all();
+		$scholars = Scholars::find()->all();
+	
+	
+		return $this->render('index',array('users'=>$users,'scholars'=>$scholars,'grades'=>$grades));
     }
 
     /**

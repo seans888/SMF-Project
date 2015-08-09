@@ -124,7 +124,7 @@ DashboardAsset::register($this);
                         <img src="img/portfolio/f.png" class="img-responsive" alt="" style="height:250px;width:400px;">
                     </a>
                     <div class="portfolio-caption">
-                        <h4 style="color:black;">View Stipend and Benefits</h4>
+                        <h4 style="color:black;">View Stipend, Deductions, and Refunds</h4>
                         <p class="text-muted" style="color:#005ab2;">Past-Present</p>
                     </div>
                 </div>
