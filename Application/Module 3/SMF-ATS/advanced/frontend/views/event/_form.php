@@ -12,7 +12,7 @@ use dosamigos\datepicker\DatePicker;
 
     <?php $form = ActiveForm::begin(); ?>
 
-
+  
 
     <?= $form->field($model, 'event_title')->textInput(['maxlength' => true]) ?>
 
@@ -31,7 +31,8 @@ use dosamigos\datepicker\DatePicker;
 ]);?>
 
     <?= $form->field($model, 'event_place')->textInput(['maxlength' => true]) ?>
-
+ <?= $form->field($model, 'employee_employee_id')->textInput(['maxlength' => true]) ?>
+  <?= $form->field($model, 'employee_user_user_id')->textInput(['maxlength' => true]) ?>
 
 
     <div class="form-group">

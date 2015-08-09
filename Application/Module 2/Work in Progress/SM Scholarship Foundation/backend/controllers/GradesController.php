@@ -68,7 +68,8 @@ class GradesController extends Controller
         $model = new Grades();
 
         if ($model->load(Yii::$app->request->post())) {
-        	$model->save();
+			$model->uploaded_by = Yii::$app->user->identity->username;
+			$model->save();
             return $this->redirect(['view', 'id' => $model->grade_id]);
         } else {
             return $this->render('create', [
@@ -87,7 +88,9 @@ class GradesController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+			$model->updated_by = Yii::$app->user->identity->username;
+			$model->save();
             return $this->redirect(['view', 'id' => $model->grade_id]);
         } else {
             return $this->render('update', [
@@ -107,6 +110,28 @@ class GradesController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+	
+	public function actionCheck($id)
+    {
+        $model = $this->findModel($id);
+
+        if ($model->load(Yii::$app->request->post())) {
+			if($model->checked_by=='1')
+			{
+				$model->checked_by = Yii::$app->user->identity->username;		
+			}
+			else
+			{
+				$model->checked_by = null;
+			}
+			$model->save();
+            return $this->redirect(['view', 'id' => $model->grade_id]);
+        } else {
+            return $this->render('check', [
+                'model' => $model,
+            ]);
+        }	
     }
 
     /**

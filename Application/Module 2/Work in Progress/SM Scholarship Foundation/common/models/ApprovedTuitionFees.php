@@ -5,7 +5,7 @@ namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "tuitionfees".
+ * This is the model class for table "ApprovedTuitionFees".
  *
  * @property integer $tuitionfee_id
  * @property integer $tuitionfee_scholar_id
@@ -19,7 +19,7 @@ use Yii;
  *
  * @property Scholars $tuitionfeeScholar
  */
-class Tuitionfees extends \yii\db\ActiveRecord
+class ApprovedTuitionFees extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -31,7 +31,7 @@ class Tuitionfees extends \yii\db\ActiveRecord
 	
     public static function tableName()
     {
-        return 'tuitionfees';
+        return 'approved_tuitionfees';
     }
 
     /**
@@ -44,9 +44,9 @@ class Tuitionfees extends \yii\db\ActiveRecord
 			[['tuitionfee_amount'], 'number','message'=>'Only numbers are allowed'],
             [['tuitionfee_dateOfEnrollment', 'tuitionfee_dateOfPayment'], 'safe'],
 			[['tuitionfee_scholar_id','tuitionfee_amount','tuitionfee_paidStatus'],'required'],
-            [['tuitionfee_paidStatus'], 'string'],
-            [['tuitionfee_scholar_lastName', 'tuitionfee_scholar_firstName', 'tuitionfee_scholar_middleName','uploaded_by',
-			'checked_by','checked_remark','updated_by'], 'string', 'max' => 100]
+            [['tuitionfee_term','tuitionfee_paidStatus'], 'string'],
+            [['tuitionfee_scholar_lastName', 'tuitionfee_scholar_firstName', 'tuitionfee_scholar_middleName','approved_by',
+			'approval_status'], 'string', 'max' => 100]
         ];
     }
 
@@ -62,13 +62,12 @@ class Tuitionfees extends \yii\db\ActiveRecord
             'tuitionfee_scholar_firstName' => 'First Name',
             'tuitionfee_scholar_middleName' => 'Middle Name',
             'tuitionfee_amount' => 'Tuition Amount',
+			'tuitionfee_term' => 'Term',
             'tuitionfee_dateOfEnrollment' => 'Date Of Enrollment',
             'tuitionfee_dateOfPayment' => 'Date Of Payment',
             'tuitionfee_paidStatus' => 'Payment Status',
-			'uploaded_by' => 'Uploaded By',
-			'checked_by' => 'Checked By',
-			'checked_remark' => 'Remark',
-			'updated_by' => 'Updated By',
+			'approved_by' => 'Approved By',
+			'approval_status' => 'Approved Status',
         ];
     }
 

@@ -5,11 +5,11 @@ $this->title = 'SM Foundation Alumni Tracking System';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Welcome to SM Foundation - Alumni Tracking System!</h1>
+        <h1><b>Welcome to SM Foundation Alumni Tracking System</b></h1>
 
         <p class="lead">Welcome User</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+  
     </div>
 
     <div class="body-content">
@@ -17,17 +17,17 @@ $this->title = 'SM Foundation Alumni Tracking System';
         <div class="row">
             <div class="col-lg-4">
                 <h2>Alumni</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+				<img src = "images/alumni.jpg" height="150px" width="250px">
+                <p>An alumnus or alumna is a former student and most often a graduate of an educational institution (school, college, university).
+                    An alumnus (masculine, plural alumni) or alumna (feminine, plural alumnae) is a former student or pupil of a school, college, 
+					or university. Commonly, but not always, the word refers to a graduate of the educational institute in question. An alumnus can 
+					also be a former member, employee, contributor, or inmate, as well as a former student.</p>
 
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Alumni News</h2>
-
+				<img src = "images/news.jpg" height="150px" width="250px">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
@@ -37,9 +37,9 @@ $this->title = 'SM Foundation Alumni Tracking System';
             </div>
             <div class="col-lg-4">
                 <h2>Events</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+				<img src = "images/calendar.jpg" height="150px" width="250px">
+                <p> The incoming and current events that will happen for SM Foundation students and alumni. It displays
+                   every events in the current month and year. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                     fugiat nulla pariatur.</p>
 

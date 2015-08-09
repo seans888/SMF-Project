@@ -24,6 +24,14 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
         <?= Html::a('View List', ['index'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Check', ['check', 'id' => $model->grade_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Send for Approval', ['send', 'id' => $model->grade_id], [
+            'class' => 'btn btn-danger',
+            'data' => [
+                'confirm' => 'Are you sure you want to send this for approval?',
+                'method' => 'post',
+            ],
+        ]) ?>
     </p>
 
     <?= DetailView::widget([
@@ -40,6 +48,11 @@ $this->params['breadcrumbs'][] = $this->title;
 			'grade_subject',
 			'grade_units',
             'grade_value',
+			'equivalence_grade_rule',
+            'uploaded_by',
+            'updated_by',
+            'checked_by',
+            'checked_remark',
         ],
     ]) ?>
 
