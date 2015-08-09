@@ -43,8 +43,8 @@ class AllowanceController extends Controller
 		$users = User::find()->all();
 		$scholars = Scholars::find()->all();
 		$allowances = Allowance::find()->all();
-		$benefits = Benefit::find()->all();
-		return $this->render('index',array('users'=>$users,'scholars'=>$scholars,'schools'=>$schools,'allowances'=>$allowances,'benefits'=>$benefits));
+		
+		return $this->render('index',array('users'=>$users,'scholars'=>$scholars,'schools'=>$schools,'allowances'=>$allowances));
     }
 
     /**
