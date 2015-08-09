@@ -68,7 +68,8 @@ class GradesController extends Controller
         $model = new Grades();
 
         if ($model->load(Yii::$app->request->post())) {
-        	$model->save();
+			$model->uploaded_by = Yii::$app->user->identity->username;
+			$model->save();
             return $this->redirect(['view', 'id' => $model->grade_id]);
         } else {
             return $this->render('create', [
@@ -123,7 +124,7 @@ class GradesController extends Controller
 				$model->checked_by = null;
 			}
 			$model->save();
-            return $this->redirect(['view', 'id' => $model->refund_id]);
+            return $this->redirect(['view', 'id' => $model->grade_id]);
         } else {
             return $this->render('check', [
                 'model' => $model,
