@@ -43,7 +43,8 @@ class Grades extends \yii\db\ActiveRecord
         return [
             [['grade_schoolYear', 'grade_Term', 'grade_scholar_id','School_id'], 'integer'],
             [['grade_scholar_id','grade_value','grade_schoolYear','grade_Term','grade_subject', 'grade_units'], 'required'],
-            [['grade_scholar_lastName', 'grade_scholar_firstName', 'grade_scholar_middleName', 'grade_subject', 'grade_units', 'grade_value'], 'string', 'max' => 100]
+            [['grade_scholar_lastName', 'grade_scholar_firstName', 'grade_scholar_middleName', 'grade_subject',
+			'grade_units', 'grade_value','uploaded_by','updated_by','checked_by','checked_remark'], 'string', 'max' => 100]
         ];
     }
 
@@ -64,6 +65,10 @@ class Grades extends \yii\db\ActiveRecord
 			'grade_subject' => 'Subject',
 			'grade_units' => 'Units',
             'grade_value' => 'Grade Value',
+			'uploaded_by' => 'Uploaded By',
+			'updated_by' => 'Updated By',
+			'checked_by' => 'Checked By',
+			'checked_remark' => 'Remarks',
 /* 			'equivalence_grade_rule' => 'Percentile Equivalent', */
         ];
     }
