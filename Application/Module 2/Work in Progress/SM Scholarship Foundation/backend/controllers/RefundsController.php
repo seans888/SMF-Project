@@ -9,6 +9,7 @@ use common\models\RefundsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\db\IntegrityException;
 
 /**
  * RefundsController implements the CRUD actions for Refunds model.
@@ -118,7 +119,7 @@ class RefundsController extends Controller
 				$model->checked_by = null;
 			}
 			$model->save();
-            return $this->redirect(['view', 'id' => $model->tuitionfee_id]);
+            return $this->redirect(['view', 'id' => $model->refund_id]);
         } else {
             return $this->render('check', [
                 'model' => $model,
@@ -132,11 +133,11 @@ class RefundsController extends Controller
 		if($model->checked_by!=null)
 		{
 			try{
-			$sql = "INSERT INTO approved_tuitionfees (tuitionfee_id, tuitionfee_scholar_id,
-			tuitionfee_term,tuitionfee_amount,tuitionfee_dateOfEnrollment,
-			tuitionfee_dateOfPayment,tuitionfee_paidStatus) VALUES(".$model->tuitionfee_id.",".$model->tuitionfee_scholar_id.",'".$model->tuitionfees_term."',".
-			$model->tuitionfee_amount.",".$model->tuitionfee_dateOfEnrollment.",'2015-03-03','".
-			$model->tuitionfee_paidStatus."')";
+			$sql = "INSERT INTO approved_refunds (refund_id, refund_scholar_id,
+			refund_amount,refund_smShare,refund_scholarShare,
+			refund_tuitionfee_id,refund_description,refund_date) VALUES(".$model->refund_id.",".$model->refund_scholar_id.",".$model->refund_amount.",".
+			$model->refund_smShare.",".$model->refund_scholarShare.",".$model->refund_tuitionfee_id.",'".
+			$model->refund_description."','".$model->refund_date."')";
 			
 			Yii::$app->db->createCommand($sql)->execute();
 			
