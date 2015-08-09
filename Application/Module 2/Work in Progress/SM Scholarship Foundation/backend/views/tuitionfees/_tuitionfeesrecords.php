@@ -80,6 +80,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			'uploaded_by',
 			'checked_by',
 			'checked_remark',
+			'tuitionfee_paidStatus',
                         ['class' => 'kartik\grid\ActionColumn',
                           'template'=>'{view} {update} {check} {delete}',
                             'buttons'=>[
