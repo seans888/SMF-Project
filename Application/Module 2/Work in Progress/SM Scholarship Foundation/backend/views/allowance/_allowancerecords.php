@@ -62,6 +62,7 @@ $this->params['breadcrumbs'][] = $this->title;
 						]
 				]),
 			],
+			'allowance_status',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
