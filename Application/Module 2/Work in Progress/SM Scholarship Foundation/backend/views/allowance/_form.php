@@ -36,7 +36,9 @@ use kartik\select2\Select2;
 		]) ?>
 
     <?= $form->field($model, 'allowance_payStatus')->dropDownList([ 'paid' => 'Paid', 'not paid' => 'Not paid', ], ['prompt' => 'Select Payment Status']) ?>
-
+	
+	<?= $form->field($model, 'allowance_status')->dropDownList(['PRESENT','PAST'])?>
+	
     <?= $form->field($model, 'allowance_paidDate')->widget(
 			DatePicker::className(), [
 				// inline too, not bad
