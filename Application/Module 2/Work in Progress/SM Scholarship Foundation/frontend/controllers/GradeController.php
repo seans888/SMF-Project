@@ -36,7 +36,7 @@ class GradeController extends Controller
      */
     public function actionIndex()
     {
-       $grades = Grades::find()->all();
+      $grades = Grades::find()->all();
 		$schools = Schools::find()->all();
 		$users = User::find()->all();
 		$scholars = Scholars::find()->all();
@@ -62,8 +62,10 @@ class GradeController extends Controller
      */
     public function actionCreate()
     {
-       
-        if ($model->load(Yii::$app->request->post())) {
+		$this->layout = 'records';
+        $model = new Grades();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->grade_id]);
         } else {
             return $this->render('create', [
@@ -78,9 +80,9 @@ class GradeController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate()
+    public function actionUpdate($id)
     {
-		$username=Yii::$app->user->identity->username;
+       $username=Yii::$app->user->identity->username;
 		$users= User::find()->all();
 		$grades = Grades::find()->all();
 		$model = new Grades();
@@ -108,14 +110,7 @@ class GradeController extends Controller
 				}
 			}
 		}
-		 
-        
     }
-		public function actionAgreement()
-	{
-		return $this->render('index1');
-		
-	}
 
     /**
      * Deletes an existing Grades model.

@@ -43,13 +43,16 @@ AppAsset::register($this);
                 $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
                 $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
             } else {
+
                 $menuItems =[
+				['label' => 'Home', 'url' => ['/site/index']],
 				['label' => 'Alumni', 'url' => ['/alumni/index']],
 				['label' => 'Employee', 'url' => ['/employee/index']],
                 ['label' => 'Event', 'url' => ['/event/index']],
 				['label' => 'Logs', 'url' => ['/logs/index']],
 				['label' => 'Migration', 'url' => ['/migration/index']],
 				['label' => 'Testimonials', 'url' => ['/testimonials/index']],
+				['label' => 'Users', 'url' => ['/user/index']],
 				[ 
                     'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
                     'url' => ['/site/logout'],

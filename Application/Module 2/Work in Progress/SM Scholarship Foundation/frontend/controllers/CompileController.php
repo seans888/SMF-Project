@@ -39,13 +39,14 @@ class CompileController extends Controller
      */
     public function actionIndex()
     {
+		
 		$schools = Schools::find()->all();
 		$users = User::find()->all();
 		$scholars = Scholars::find()->all();
 		$allowances = Allowance::find()->all();
-		$benefits = Benefit::find()->all();
+		
 		$grades = Grades::find()->all();
-		return $this->render('index',array('users'=>$users,'scholars'=>$scholars,'schools'=>$schools,'allowances'=>$allowances,'benefits'=>$benefits,'grades'=>$grades));
+		return $this->render('index',array('users'=>$users,'scholars'=>$scholars,'schools'=>$schools,'allowances'=>$allowances,'grades'=>$grades));
 		
     }
 
@@ -68,6 +69,7 @@ class CompileController extends Controller
      */
     public function actionCreate()
     {
+		$this->layout = 'calendar';
         $model = new Compile();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {

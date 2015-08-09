@@ -38,6 +38,7 @@ class AllowanceController extends Controller
      */
     public function actionIndex()
     {
+		
 		$schools = Schools::find()->all();
 		$users = User::find()->all();
 		$scholars = Scholars::find()->all();
@@ -65,6 +66,7 @@ class AllowanceController extends Controller
      */
     public function actionCreate()
     {
+		$this->layout = 'forms';
         $model = new Allowance();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {

@@ -70,6 +70,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+		
 		$grades = Grades::find()->all();
 		$schools = Schools::find()->all();
 		$users = User::find()->all();

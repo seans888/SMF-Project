@@ -22,7 +22,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'allowance_payStatus')->dropDownList([ 'paid' => 'Paid', 'not paid' => 'Not paid', ], ['prompt' => '']) ?>
 
-    <?= $form->field($model, 'benefit_allowance_id')->textInput() ?>
+   
 
     <?= $form->field($model, 'allowance_scholar_lastName')->textInput(['maxlength' => true]) ?>
 

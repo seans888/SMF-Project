@@ -26,18 +26,17 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'My Company',
+                'brandLabel' => 'SM Foundation',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
                 ],
             ]);
-            $menuItems = [
+ /*           $menuItems = [
                 ['label' => 'Home', 'url' => ['/site/index']],
                 ['label' => 'About', 'url' => ['/site/about']],
                 ['label' => 'Contact', 'url' => ['/site/contact']],
-                ['label' => 'Application Form', 'url' => ['/site/application']],
-                
+                ['label' => 'Application', 'url' => ['/personal/index']],
             ];
             if (Yii::$app->user->isGuest) {
                 $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
@@ -54,6 +53,32 @@ AppAsset::register($this);
                 'items' => $menuItems,
             ]);
             NavBar::end();
+*/
+        echo Nav::widget([
+                'options' => ['class' => 'navbar-nav navbar-right'],
+                'items' => [
+                    ['label' => 'Home', 'url' => ['/site/index']],                 
+                    ['label' => 'About', 'url' => ['/site/about']],
+                    ['label' => 'Contact', 'url' => ['/site/contact']],
+                    [
+                       'label' => 'Application Forms',
+                       'items' => [
+                            ['label' => 'Personal Background', 'url' => ['/personal/create']],
+                            ['label' => 'Academic Background', 'url' => ['/academic/create']],
+                            ['label' => 'College Plan', 'url' => ['/college/create']],
+                            ['label' => 'Family Background', 'url' => ['/family/create']],
+                            ['label' => 'Other Requirements', 'url' => ['/fileserver/create']],
+                        ],
+                    ],   
+                    Yii::$app->user->isGuest ?
+   //                     ['label' => 'Signup', 'url' => ['/site/signup']];
+                        ['label' => 'Login', 'url' => ['/site/login']] :
+                        ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+                            'url' => ['/site/logout'],
+                            'linkOptions' => ['data-method' => 'post']],
+                ],
+            ]);
+            NavBar::end();
         ?>
 
         <div class="container">
@@ -67,7 +92,7 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; SM Foundation <?= date('Y') ?></p>
         <p class="pull-right"><?= Yii::powered() ?></p>
         </div>
     </footer>

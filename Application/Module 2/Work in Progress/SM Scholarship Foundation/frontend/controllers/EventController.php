@@ -68,6 +68,7 @@ class EventController extends Controller
      */
     public function actionCreate()
     {
+		$this->layout = 'contact';
         $model = new Event();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {

@@ -32,4 +32,8 @@ foreach($users as $ctr){
 	}
 }
 ?>
+	
+	
+    <!-- About Section -->
+   
 
