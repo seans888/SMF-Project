@@ -3344,3 +3344,76 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1438495347.517
     'REQUEST_TIME' => 1438495347
 ]
+2015-08-09 16:09:30 [::1][2][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "grade/index".' in D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('grade/index', Array)
+#1 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\SMF Project JGVILLACORTA\SMF-Project\Application\Module 2\Work in Progress\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-08-09 16:09:30 [::1][2][-][info][application] $_GET = [
+    'r' => 'grade/index'
+]
+
+$_COOKIE = [
+    '_backendUser' => 'ae6084bf5c25cbfd8ba92985179a42f1f373b77bd598fe078f2f27161043deb2a:2:{i:0;s:12:\"_backendUser\";i:1;s:46:\"[2,\"Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld\",2592000]\";}'
+    '_identity' => '145635aa09a94f66427831b1881d27c7b0f3648ec87614f5ddf5ee6f9440a1e9a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld\",2592000]\";}'
+    'PHPFRONTSESSID' => '1p782217ndtu9df9t1b96lpp11'
+    '_frontendCSRF' => '661b679b492415ea79f028556169f717e3a5f480b77897a2e072b8675c4b5e8ca:2:{i:0;s:13:\"_frontendCSRF\";i:1;s:32:\"b0aMxvKg6DuKg5ZAINAL0g1ra4k6XBgt\";}'
+    '_frontendUser' => '112a5250b12624fa4595b3293b7f191f515827574e4feb216daad1ab6b4972f1a:2:{i:0;s:13:\"_frontendUser\";i:1;s:46:\"[2,\"Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36 OPR/31.0.1889.99'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, lzma, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_backendUser=ae6084bf5c25cbfd8ba92985179a42f1f373b77bd598fe078f2f27161043deb2a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_backendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D; _identity=145635aa09a94f66427831b1881d27c7b0f3648ec87614f5ddf5ee6f9440a1e9a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D; PHPFRONTSESSID=1p782217ndtu9df9t1b96lpp11; _frontendCSRF=661b679b492415ea79f028556169f717e3a5f480b77897a2e072b8675c4b5e8ca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendCSRF%22%3Bi%3A1%3Bs%3A32%3A%22b0aMxvKg6DuKg5ZAINAL0g1ra4k6XBgt%22%3B%7D; _frontendUser=112a5250b12624fa4595b3293b7f191f515827574e4feb216daad1ab6b4972f1a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\HaxeToolkit\\haxe\\;C:\\HaxeToolkit\\neko;C:\\Program Files\\nodejs\\;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Users\\WIN7\\AppData\\Roaming\\npm;C:\\adb;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/jgvillacorta/SM Scholarship Foundation/backend/web/index.php'
+    'REMOTE_PORT' => '62002'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=grade/index'
+    'REQUEST_URI' => '/jgvillacorta/SM%20Scholarship%20Foundation/backend/web/index.php?r=grade/index'
+    'SCRIPT_NAME' => '/jgvillacorta/SM Scholarship Foundation/backend/web/index.php'
+    'PHP_SELF' => '/jgvillacorta/SM Scholarship Foundation/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439129370.017
+    'REQUEST_TIME' => 1439129370
+]
