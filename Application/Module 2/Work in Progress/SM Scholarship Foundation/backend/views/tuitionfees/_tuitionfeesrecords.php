@@ -76,7 +76,7 @@ $this->params['breadcrumbs'][] = $this->title;
 						]
 				]),
 			],
-			
+			'tuitionfee_status',
 			'uploaded_by',
 			'checked_by',
 			'checked_remark',
