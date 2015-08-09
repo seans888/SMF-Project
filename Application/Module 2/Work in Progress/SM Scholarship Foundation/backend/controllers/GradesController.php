@@ -108,6 +108,28 @@ class GradesController extends Controller
 
         return $this->redirect(['index']);
     }
+	
+	public function actionCheck($id)
+    {
+        $model = $this->findModel($id);
+
+        if ($model->load(Yii::$app->request->post())) {
+			if($model->checked_by=='1')
+			{
+				$model->checked_by = Yii::$app->user->identity->username;		
+			}
+			else
+			{
+				$model->checked_by = null;
+			}
+			$model->save();
+            return $this->redirect(['view', 'id' => $model->refund_id]);
+        } else {
+            return $this->render('check', [
+                'model' => $model,
+            ]);
+        }	
+    }
 
     /**
      * Finds the Grades model based on its primary key value.
