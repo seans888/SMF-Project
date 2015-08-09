@@ -24,9 +24,9 @@ use kartik\select2\Select2;
 
     <?= $form->field($model, 'refund_tuitionfee_id')->textInput(['readonly'=>true]) ?>
 	
-	<?= $form->field($model, 'refund_description')->textInput()?>
+	<?= $form->field($model, 'refund_description')->textInput(['readonly'=>true])?>
 	
-	<?= $form->field($model, 'refund_date')->textInput()?>
+	<?= $form->field($model, 'refund_date')->textInput(['readonly'=>true])?>
 	
     <?= $form->field($model, 'checked_by')->checkBox(['label'=> 'Checked By '.Yii::$app->user->identity->username])?>
 	
