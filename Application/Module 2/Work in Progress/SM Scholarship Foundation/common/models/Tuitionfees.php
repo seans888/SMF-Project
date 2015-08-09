@@ -40,11 +40,13 @@ class Tuitionfees extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['tuitionfee_scholar_id', 'tuitionfee_amount'], 'integer','message'=>'Only numbers are allowed'],
+            [['tuitionfee_scholar_id'], 'integer','message'=>'Only numbers are allowed'],
+			[['tuitionfee_amount'], 'number','message'=>'Only numbers are allowed'],
             [['tuitionfee_dateOfEnrollment', 'tuitionfee_dateOfPayment'], 'safe'],
 			[['tuitionfee_scholar_id','tuitionfee_amount','tuitionfee_paidStatus'],'required'],
             [['tuitionfee_paidStatus'], 'string'],
-            [['tuitionfee_scholar_lastName', 'tuitionfee_scholar_firstName', 'tuitionfee_scholar_middleName'], 'string', 'max' => 100]
+            [['tuitionfee_scholar_lastName', 'tuitionfee_scholar_firstName', 'tuitionfee_scholar_middleName','uploaded_by',
+			'checked_by','checked_remark','updated_by'], 'string', 'max' => 100]
         ];
     }
 
@@ -63,6 +65,10 @@ class Tuitionfees extends \yii\db\ActiveRecord
             'tuitionfee_dateOfEnrollment' => 'Date Of Enrollment',
             'tuitionfee_dateOfPayment' => 'Date Of Payment',
             'tuitionfee_paidStatus' => 'Payment Status',
+			'uploaded_by' => 'Uploaded By',
+			'checked_by' => 'Checked By',
+			'checked_remark' => 'Remark',
+			'updated_by' => 'Updated By',
         ];
     }
 

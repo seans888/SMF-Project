@@ -18,8 +18,8 @@ class TuitionfeesSearch extends Tuitionfees
     public function rules()
     {
         return [
-            [['tuitionfee_id', 'tuitionfee_amount','tuitionfee_scholar_id'], 'integer'],
-            [['tuitionfee_scholar_lastName', 'tuitionfee_scholar_firstName', 'tuitionfee_scholar_middleName', 'tuitionfee_dateOfEnrollment', 'tuitionfee_dateOfPayment', 'tuitionfee_paidStatus'], 'safe'],
+       //     [['tuitionfee_id', 'tuitionfee_amount','tuitionfee_scholar_id'], 'integer'],
+            [['tuitionfee_id', 'tuitionfee_amount','tuitionfee_scholar_id','uploaded_by','checked_by','checked_remark','tuitionfee_scholar_lastName', 'tuitionfee_scholar_firstName', 'tuitionfee_scholar_middleName', 'tuitionfee_dateOfEnrollment', 'tuitionfee_dateOfPayment', 'tuitionfee_paidStatus'], 'safe'],
         ];
     }
 
@@ -68,7 +68,10 @@ class TuitionfeesSearch extends Tuitionfees
         $query->andFilterWhere(['like', 'scholars.scholar_lastName', $this->tuitionfee_scholar_lastName])
             ->andFilterWhere(['like', 'scholars.scholar_firstName', $this->tuitionfee_scholar_firstName])
             ->andFilterWhere(['like', 'scholars.scholar_middleName', $this->tuitionfee_scholar_middleName])
-            ->andFilterWhere(['like', 'tuitionfee_paidStatus', $this->tuitionfee_paidStatus]);
+            ->andFilterWhere(['like', 'tuitionfee_paidStatus', $this->tuitionfee_paidStatus])
+			->andFilterWhere(['like', 'uploaded_by', $this->uploaded_by])
+			->andFilterWhere(['like', 'checked_by', $this->checked_by])
+			->andFilterWhere(['like', 'checked_remark', $this->checked_remark]);
 
         return $dataProvider;
     }
