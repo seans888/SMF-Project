@@ -40,6 +40,11 @@ $this->params['breadcrumbs'][] = $this->title;
 			'grade_subject',
 			'grade_units',
             'grade_value',
+			'equivalence_grade_rule',
+            'uploaded_by',
+            'updated_by',
+            'checked_by',
+            'checked_remark',
         ],
     ]) ?>
 
