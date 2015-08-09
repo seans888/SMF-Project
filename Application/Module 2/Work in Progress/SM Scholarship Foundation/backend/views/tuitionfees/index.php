@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use kartik\grid\GridView;
 use common\models\TuitionfeesSearch;
+use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\ScholarsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -22,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	<p><b><font color=#e7bd58>Orange</font> rows are schools from NCR Areas</p>
 	<p><font color=#988db2>Purple</font> rows are schools from Provincial Areas</b>
 	</p>
-    
+    <?php Pjax::begin(['timeout'=>10000]); ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -70,9 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'scholar_contactNum',
             // 'scholar_cashCardNum',
          // 'scholar_school_area',
-
-            ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
+<?php Pjax::end(); ?>
 </div>
