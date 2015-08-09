@@ -36,6 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			'allowanceScholar.scholar_firstName',
 			'allowanceScholar.scholar_middleName',
             'allowance_payStatus',
+			'allowance_status',
             'allowance_paidDate',
         ],
     ]) ?>
