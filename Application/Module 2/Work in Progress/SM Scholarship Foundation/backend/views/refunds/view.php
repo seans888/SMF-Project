@@ -23,6 +23,15 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+        <?= Html::a('View List', ['index'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Check', ['check', 'id' => $model->refund_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Send for Approval', ['send', 'id' => $model->refund_id], [
+            'class' => 'btn btn-danger',
+            'data' => [
+                'confirm' => 'Are you sure you want to send this for approval?',
+                'method' => 'post',
+            ],
+        ]) ?>
     </p>
 
     <?= DetailView::widget([
