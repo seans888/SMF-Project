@@ -38,8 +38,9 @@ use kartik\select2\Select2;
 	<?= $form->field($model, 'grade_units')->textInput() ?>
 
     <?= $form->field($model, 'grade_value')->textInput(['maxlength' => true]) ?>
-
-
+	
+	<?= $form->field($model, 'grade_status')->dropDownList(['PAST','PRESENT']) ?>
+	
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
