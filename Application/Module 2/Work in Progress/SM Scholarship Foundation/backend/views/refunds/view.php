@@ -36,6 +36,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'refund_tuitionfee_id',
             'refund_description',
             'refund_date',
+            'uploaded_by',
+            'updated_by',
+            'checked_by',
+            'checked_remark',
         ],
     ]) ?>
 
