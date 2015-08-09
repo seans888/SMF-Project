@@ -36,7 +36,8 @@ class Refunds extends \yii\db\ActiveRecord
             [['refund_amount', 'refund_smShare', 'refund_scholarShare'], 'number'],
             [['refund_scholar_id', 'refund_tuitionfee_id'], 'integer'],
             [['refund_date'], 'safe'],
-            [['refund_description'], 'string', 'max' => 100]
+            [['refund_description','uploaded_by',
+			'checked_by','checked_remark','updated_by'], 'string', 'max' => 100]
         ];
     }
 
