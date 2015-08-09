@@ -133,6 +133,33 @@ class GradesController extends Controller
             ]);
         }	
     }
+	
+	public function actionSend($id)
+	{
+		$model = $this->findModel($id);
+		if($model->checked_by!=null)
+		{
+			try{
+			$sql = "INSERT INTO approved_grades (grade_id, grade_scholar_id,
+			grade_schoolYear,grade_Term,grade_subject,
+			grade_units,grade_value,equivalence_grade_rule,School_id) VALUES(".$model->grade_id.",".$model->grade_scholar_id.",".$model->grade_schoolYear.",".
+			$model->grade_Term.",'".$model->grade_subject."',".$model->grade_units.",'".
+			$model->grade_value."',".$model->equivalence_grade_rule.",".$model->School_id.")";
+			
+			Yii::$app->db->createCommand($sql)->execute();
+			
+			return $this->redirect(['index']);
+			
+			}catch(IntegrityException $e)
+			{
+				return $this->redirect('index.php?r=error/error');
+			}
+		}
+		else
+		{
+			return $this->redirect('index.php?r=error/error2');
+		}
+	}
 
     /**
      * Finds the Grades model based on its primary key value.
