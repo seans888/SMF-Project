@@ -4,7 +4,7 @@ use yii\helpers\ArrayHelper;
 use common\models\Tuitionfees;
 use yii\widgets\Pjax;
 use yii\helpers\Html;
-use yii\grid\GridView;
+use kartik\grid\GridView;
 use dosamigos\datepicker\DatePicker;
 
 /* @var $this yii\web\View */
@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	<p><b><font color=red>Red</font> rows have unsettled tuition fee payments</p>
 	<p><font color=green>Green</font> rows have paid tuition fees</b>
 	</p>
-	<?php Pjax::begin(); ?>
+	<?php Pjax::begin(['timeout'=>10000]); ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			}
 		},
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            ['class' => 'kartik\grid\SerialColumn'],
 
          //   'tuitionfee_scholar_id',
             // [
@@ -76,8 +76,36 @@ $this->params['breadcrumbs'][] = $this->title;
 						]
 				]),
 			],
-
-            ['class' => 'yii\grid\ActionColumn'],
+			
+			'uploaded_by',
+			'checked_by',
+			'checked_remark',
+                        ['class' => 'kartik\grid\ActionColumn',
+                          'template'=>'{view} {update} {check} {delete}',
+                            'buttons'=>[
+                              'update' => function ($url, $model) {     
+                                return Html::a('<span class="glyphicon glyphicon-pencil"></span>', $url, [
+                                        'title' => Yii::t('yii', 'Update'),
+                                ]);                                
+            
+                              },
+							  'check' => function ($url, $model) {     
+                                return Html::a('<span class="glyphicon glyphicon-check"></span>', $url, [
+                                        'title' => Yii::t('yii', 'Check'),
+                                ]);                                
+            
+                              },
+							  'delete' => function ($url, $model) {     
+                                return Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
+                                        'title' => Yii::t('yii', 'Delete'),
+										'data-confirm' => Yii::t('kvgrid', 'Are you sure to delete this item?'),
+										'data-method' => 'post',
+										'data-pjax' => '0'
+                                ]);                                
+            
+                              },
+                          ]                            
+                            ],
         ],
     ]); ?>
 	<?php Pjax::end(); ?>
