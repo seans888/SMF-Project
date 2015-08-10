@@ -44,7 +44,8 @@ class Allowance extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['allowance_amount', 'allowance_scholar_id', 'allowance_school_id'], 'integer'],
+            [['allowance_scholar_id', 'allowance_school_id'], 'integer'],
+			[['allowance_amount'], 'number'],
             [['allowance_payStatus'], 'string'],
             [['allowance_paidDate'], 'safe'],
             [['allowance_remark'], 'string', 'max' => 255],
