@@ -34,6 +34,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'deduction_amount',
             'deduction_remark',
             'deduction_scholar_id',
+			'uploaded_by',
+			'updated_by',
+			'checked_by',
+			'checked_remark',
         ],
     ]) ?>
 
