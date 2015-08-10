@@ -142,6 +142,19 @@ DashboardAsset::register($this);
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/deductions/index'); ?>"><i class="fa fa-thumbs-down"></i> Deduction Records</a></li>		
 				</ul>
             </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-check"></i> <span>Approved Records</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-grades/index'); ?>"><i class="fa fa-graduation-cap"></i> Grade Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-tuitionfees/index'); ?>"><i class="fa fa-money"></i> Tuition Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-allowance/index'); ?>"><i class="fa fa-credit-card"></i> Allowance Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-refunds/index'); ?>"><i class="fa fa-thumbs-up"></i> Refund Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-deductions/index'); ?>"><i class="fa fa-thumbs-down"></i> Deduction Records</a></li>		
+				</ul>
+            </li>
 			<li class="treeview">
               <a href="<?= Yii::$app->getUrlManager()->createUrl('/uploadedforms/index'); ?>">
                 <i class="fa fa-upload"></i> <span>Upload Forms</span>
