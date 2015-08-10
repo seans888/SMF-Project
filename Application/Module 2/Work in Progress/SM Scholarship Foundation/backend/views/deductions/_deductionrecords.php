@@ -22,6 +22,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'deduction_date',
             'deduction_amount',
             'deduction_remark',
+			'uploaded_by',
+			'updated_by',
+			'checked_by',
+			'checked_remark',
 //            'deduction_scholar_id',
 
             ['class' => 'kartik\grid\ActionColumn',
