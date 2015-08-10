@@ -2,7 +2,9 @@
 
 use yii\helpers\Html;
 use kartik\grid\GridView;
-
+use yii\helpers\ArrayHelper;
+use common\models\Grades;
+use kartik\select2\Select2;
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\SchoolsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -36,11 +38,27 @@ $this->params['breadcrumbs'][] = $this->title;
     		}
     	},
         'columns' => [
-
+			['class' => 'kartik\grid\SerialColumn'],
  //           'School_id',
-            'school_name',
-            'school_area',
-            'school_address',
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'school_name',
+			],
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'school_area',
+				'editableOptions' => [
+					'inputType' => '\kartik\select2\Select2',
+					'options'=>
+					[
+						'data' => ['NCR'=>'NCR','Davao'=>'Davao'],
+					],
+				],
+			],
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'school_address',
+			],
             'school_contactEmail:email',
             // 'school_contactNumber',
 
