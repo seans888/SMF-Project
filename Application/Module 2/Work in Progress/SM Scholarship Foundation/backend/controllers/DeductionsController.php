@@ -63,7 +63,9 @@ class DeductionsController extends Controller
     {
         $model = new Deductions();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+			$model->uploaded_by = Yii::$app->user->identity->username;
+			$model->save();
             return $this->redirect(['view', 'id' => $model->deduction_id]);
         } else {
             return $this->render('create', [
