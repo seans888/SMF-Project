@@ -26,6 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+		'pjax'=>true,
     	'rowOptions'=>function($model){
     		if(strcasecmp($model->scholar_school_area, 'NCR') != 0)
     		{
