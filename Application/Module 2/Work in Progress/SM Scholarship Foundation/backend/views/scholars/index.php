@@ -59,7 +59,9 @@ $this->params['breadcrumbs'][] = $this->title;
 				'attribute' => 'scholar_gender',
 				'editableOptions' => [
 					'inputType' => 'dropDownList',
+					'pluginOptions'=>['allowClear'=>true],
 					'data' => ["Male"=>"Male","Female"=>"Female"],
+					'widgetClass'=> 'kartik\select2\Select2',
 				],
 			],
             [
@@ -70,8 +72,11 @@ $this->params['breadcrumbs'][] = $this->title;
 				'class' => 'kartik\grid\EditableColumn',
             	'attribute'=>'scholar_school_id',
 				'editableOptions' => [
-					'inputType' => 'dropDownList',
-					'data' => ArrayHelper::map(Schools::find()->all(),'School_id','school_name'),
+					'inputType' => '\kartik\select2\Select2',
+					'options'=>
+					[
+						'data' => ArrayHelper::map(Schools::find()->all(),'School_id','school_name'),
+					],
 				],
             	'value'=>'scholarSchool.school_name',
             ],
