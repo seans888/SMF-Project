@@ -73,7 +73,8 @@ class UploadedformsController extends Controller
 				$model->file->saveAs('Forms/'.$fileName);	
 				$model->uploadedForm = 'Forms/'.$fileName;
 		//		$filePath = 'Forms'.'\'.$fileName.'.'.$model->file->extension;
-			}			
+			}
+			$model->uploaded_by = Yii::$app->user->identity->username;			
 			$model->save();
 			// return $this->redirect($model->uploadedForm)->send();
             return $this->redirect(['view', 'id' => $model->id]);
