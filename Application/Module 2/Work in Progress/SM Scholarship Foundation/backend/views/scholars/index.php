@@ -2,7 +2,8 @@
 
 use yii\helpers\Html;
 use kartik\grid\GridView;
-
+use yii\helpers\ArrayHelper;
+use common\models\Schools;
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\ScholarsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -20,12 +21,14 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
     <br>
 	<p><b><font color=#e7bd58>Orange</font> rows are schools from NCR Areas</p>
-	<p><font color=#988db2>Purple</font> rows are schools from Provincial Areas</b>
+	<p><font color=#6a267c>Purple</font> rows are schools from Provincial Areas</b>
 	</p>
     
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+		'pjax'=>true,
+		'export'=>false,
     	'rowOptions'=>function($model){
     		if(strcasecmp($model->scholar_school_area, 'NCR') != 0)
     		{
@@ -37,27 +40,68 @@ $this->params['breadcrumbs'][] = $this->title;
     		}
     	},
         'columns' => [
-            
-
+			['class' => 'kartik\grid\SerialColumn'],
             'scholar_id',
-            'scholar_firstName',
-            'scholar_lastName',
-            'scholar_middleName',
-            'scholar_gender',
-            'scholar_address',
             [
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'scholar_firstName',
+			],
+            [
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'scholar_lastName',
+			],
+            [
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'scholar_middleName',
+			],
+            [
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'scholar_gender',
+				'editableOptions' => [
+					'inputType' => 'dropDownList',
+					'data' => ["Male"=>"Male","Female"=>"Female"],
+				],
+			],
+            [
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'scholar_address',
+			],
+            [
+				'class' => 'kartik\grid\EditableColumn',
             	'attribute'=>'scholar_school_id',
+				'editableOptions' => [
+					'inputType' => 'dropDownList',
+					'data' => ArrayHelper::map(Schools::find()->all(),'School_id','school_name'),
+				],
             	'value'=>'scholarSchool.school_name',
             ],
-            'scholar_course',
-            'scholar_yearLevel',
-            'scholar_email:email',
-            'scholar_contactNum',
-            'scholar_cashCardNum',
-			'scholar_sponsors',
+            [
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'scholar_course',
+			],
+            [
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'scholar_yearLevel',
+			],
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'scholar_email',
+			],
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'scholar_contactNum',
+			],
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'scholar_cashCardNum',
+			],
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'scholar_sponsors',
+			],
    //       'scholar_school_area',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'kartik\grid\ActionColumn'],
         ],
     ]); ?>
 
