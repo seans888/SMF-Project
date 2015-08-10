@@ -159,28 +159,35 @@ class TuitionfeesController extends Controller
 	
 	public function actionSend($id)
 	{
-		$model = $this->findModel($id);
-		if($model->checked_by!=null)
+		if(Yii::$app->user->can('check-tuitionfees'))
 		{
-			try{
-			$sql = "INSERT INTO approved_tuitionfees (tuitionfee_id, tuitionfee_scholar_id,
-			tuitionfee_term,tuitionfee_amount,tuitionfee_dateOfEnrollment,
-			tuitionfee_dateOfPayment,tuitionfee_paidStatus) VALUES(".$model->tuitionfee_id.",".$model->tuitionfee_scholar_id.",'".$model->tuitionfees_term."',".
-			$model->tuitionfee_amount.",".$model->tuitionfee_dateOfEnrollment.",'2015-03-03','".
-			$model->tuitionfee_paidStatus."')";
-			
-			Yii::$app->db->createCommand($sql)->execute();
-			
-			return $this->redirect(['index']);
-			
-			}catch(IntegrityException $e)
+			$model = $this->findModel($id);
+			if($model->checked_by!=null)
 			{
-				return $this->redirect('index.php?r=error/error');
+				try{
+				$sql = "INSERT INTO approved_tuitionfees (tuitionfee_id, tuitionfee_scholar_id,
+				tuitionfee_term,tuitionfee_amount,tuitionfee_dateOfEnrollment,
+				tuitionfee_dateOfPayment,tuitionfee_paidStatus) VALUES(".$model->tuitionfee_id.",".$model->tuitionfee_scholar_id.",'".$model->tuitionfees_term."',".
+				$model->tuitionfee_amount.",".$model->tuitionfee_dateOfEnrollment.",'2015-03-03','".
+				$model->tuitionfee_paidStatus."')";
+				
+				Yii::$app->db->createCommand($sql)->execute();
+				
+				return $this->redirect(['index']);
+				
+				}catch(IntegrityException $e)
+				{
+					return $this->redirect('index.php?r=error/error');
+				}
+			}
+			else
+			{
+				return $this->redirect('index.php?r=error/error2');
 			}
 		}
 		else
 		{
-			return $this->redirect('index.php?r=error/error2');
+			throw new ForbiddenHttpException;
 		}
 	}
 
