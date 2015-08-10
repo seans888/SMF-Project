@@ -8,6 +8,7 @@ use common\models\Allowance;
 use common\models\AllowanceSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\web\ForbiddenHttpException;
 use yii\db\IntegrityException;
 use yii\filters\VerbFilter;
 
@@ -62,17 +63,24 @@ class AllowanceController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Allowance();
+		if(Yii::$app->user->can('create-allowance'))
+		{		
+			$model = new Allowance();
 
-        if ($model->load(Yii::$app->request->post())) {
-			$model->uploaded_by = Yii::$app->user->identity->username;
-			$model->save();
-            return $this->redirect(['view', 'id' => $model->allowance_id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
+			if ($model->load(Yii::$app->request->post())) {
+				$model->uploaded_by = Yii::$app->user->identity->username;
+				$model->save();
+				return $this->redirect(['view', 'id' => $model->allowance_id]);
+			} else {
+				return $this->render('create', [
+					'model' => $model,
+				]);
+			}
+		}
+		else
+		{
+			throw new ForbiddenHttpException;
+		}
     }
 
     /**
@@ -83,17 +91,24 @@ class AllowanceController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
+		if(Yii::$app->user->can('update-allowance'))
+		{
+			$model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post())) {
-			$model->updated_by = Yii::$app->user->identity->username;
-			$model->save();
-            return $this->redirect(['view', 'id' => $model->allowance_id]);
-        } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
-        }
+			if ($model->load(Yii::$app->request->post())) {
+				$model->updated_by = Yii::$app->user->identity->username;
+				$model->save();
+				return $this->redirect(['view', 'id' => $model->allowance_id]);
+			} else {
+				return $this->render('update', [
+					'model' => $model,
+				]);
+			}
+		}
+		else
+		{
+			throw new ForbiddenHttpException;
+		}
     }
 
     /**
@@ -111,50 +126,64 @@ class AllowanceController extends Controller
 	
 	public function actionCheck($id)
     {
-        $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post())) {
-			if($model->checked_by=='1')
-			{
-				$model->checked_by = Yii::$app->user->identity->username;		
-			}
-			else
-			{
-				$model->checked_by = null;
-			}
-			$model->save();
-            return $this->redirect(['view', 'id' => $model->allowance_id]);
-        } else {
-            return $this->render('check', [
-                'model' => $model,
-            ]);
-        }	
-    }
-	
-	public function actionSend($id)
-	{
-		$model = $this->findModel($id);
-		if($model->checked_by!=null)
+		if(Yii::$app->user->can('check-allowance'))
 		{
-			try{
-			$sql = "INSERT INTO approved_allowance (allowance_id, allowance_scholar_id,
-			allowance_amount,allowance_remark,allowance_school_id,
-			allowance_payStatus,allowance_paidDate,allowance_status) VALUES(".$model->allowance_id.",".$model->allowance_scholar_id.",".$model->allowance_amount.",'".
-			$model->allowance_remark."',".$model->allowance_school_id.",'".$model->allowance_payStatus."','".
-			$model->allowance_paidDate."','".$model->allowance_status."')";
-			
-			Yii::$app->db->createCommand($sql)->execute();
-			
-			return $this->redirect(['index']);
-			
-			}catch(IntegrityException $e)
-			{
-				return $this->redirect('index.php?r=error/error');
+			$model = $this->findModel($id);
+
+			if ($model->load(Yii::$app->request->post())) {
+				if($model->checked_by=='1')
+				{
+					$model->checked_by = Yii::$app->user->identity->username;		
+				}
+				else
+				{
+					$model->checked_by = null;
+				}
+				$model->save();
+				return $this->redirect(['view', 'id' => $model->allowance_id]);
+			} else {
+				return $this->render('check', [
+					'model' => $model,
+				]);
 			}
 		}
 		else
 		{
-			return $this->redirect('index.php?r=error/error2');
+			throw new ForbiddenHttpException;
+		}
+    }
+	
+	public function actionSend($id)
+	{
+		if(Yii::$app->user->can('check-allowance'))
+		{
+			$model = $this->findModel($id);
+			if($model->checked_by!=null)
+			{
+				try{
+				$sql = "INSERT INTO approved_allowance (allowance_id, allowance_scholar_id,
+				allowance_amount,allowance_remark,allowance_school_id,
+				allowance_payStatus,allowance_paidDate,allowance_status) VALUES(".$model->allowance_id.",".$model->allowance_scholar_id.",".$model->allowance_amount.",'".
+				$model->allowance_remark."',".$model->allowance_school_id.",'".$model->allowance_payStatus."','".
+				$model->allowance_paidDate."','".$model->allowance_status."')";
+				
+				Yii::$app->db->createCommand($sql)->execute();
+				
+				return $this->redirect(['index']);
+				
+				}catch(IntegrityException $e)
+				{
+					return $this->redirect('index.php?r=error/error');
+				}
+			}
+			else
+			{
+				return $this->redirect('index.php?r=error/error2');
+			}
+		}
+		else
+		{
+			throw new ForbiddenHttpException;
 		}
 	}
 
