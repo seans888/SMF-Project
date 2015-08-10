@@ -38,6 +38,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'allowance_payStatus',
 			'allowance_status',
             'allowance_paidDate',
+			'uploaded_by',
+			'updated_by',
+			'checked_by',
+			'checked_remark',
         ],
     ]) ?>
 
