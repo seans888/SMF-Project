@@ -129,6 +129,33 @@ class AllowanceController extends Controller
             ]);
         }	
     }
+	
+	public function actionSend($id)
+	{
+		$model = $this->findModel($id);
+		if($model->checked_by!=null)
+		{
+			try{
+			$sql = "INSERT INTO approved_allowance (allowance_id, allowance_scholar_id,
+			allowance_amount,allowance_remark,allowance_school_id,
+			allowance_payStatus,allowance_paidDate,allowance_status) VALUES(".$model->allowance_id.",".$model->allowance_scholar_id.",".$model->allowance_amount.",'".
+			$model->allowance_remark."',".$model->allowance_school_id.",'".$model->allowance_payStatus."','".
+			$model->allowance_paidDate."','".$model->allowance_status."')";
+			
+			Yii::$app->db->createCommand($sql)->execute();
+			
+			return $this->redirect(['index']);
+			
+			}catch(IntegrityException $e)
+			{
+				return $this->redirect('index.php?r=error/error');
+			}
+		}
+		else
+		{
+			return $this->redirect('index.php?r=error/error2');
+		}
+	}
 
     /**
      * Finds the Allowance model based on its primary key value.
