@@ -35,8 +35,7 @@ $username=Yii::$app->user->identity->username;
 					if ($grade->grade_status == 'PRESENT'){
 						$present=$grade;
 						echo'<tr><td><h4><center>'.$present->grade_subject.'<br></center></h4></td><td><h4><center>'.$present->grade_value.'</center></h4></td><td><h4><center>'.$present->grade_units.'</center></h4></td><td><h4><center>'.$present->grade_schoolYear.'</center></h4></td><td><h4><center>'.$present->grade_Term.'</center></h4></td></tr>';
-						$gpa1 += $present->grade_value * $present->grade_units ;
-						$gpa2 += $present->grade_units;
+					
 						
 						
 					
@@ -47,7 +46,7 @@ $username=Yii::$app->user->identity->username;
 				}
 			}
 		}
-		echo '<tr><td><h3>GPA/GWA = <font color=red>'.$gpa1/$gpa2.'</font></h3></td></tr></table>';
+		echo '</table>';
 ?>
 	
 
