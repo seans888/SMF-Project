@@ -8,8 +8,10 @@ use common\models\Schools;
 use common\models\Scholars;
 use common\models\ScholarsSearch;
 use yii\web\Controller;
+use yii\helpers\Json;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\ForbiddenHttpException;
 
 /**
  * ScholarsController implements the CRUD actions for Scholars model.
@@ -36,7 +38,32 @@ class ScholarsController extends Controller
     {
         $searchModel = new ScholarsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$scholarId = Yii::$app->request->post('editableKey');
+			$scholar = Scholars::findOne($scholarId);
+			// if(Yii::$app->user->can('update-scholar'))
+			// {
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Scholars']);
+			$post['Scholars'] = $posted;
+			
+			if($scholar->load($post))
+			{
+				$scholar->save();
+			}
+			echo $out;
+			return;
+			}
+			// else
+			// {
+				// throw new ForbiddenHttpException;
+			// }
+			
+		// }
+		
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
