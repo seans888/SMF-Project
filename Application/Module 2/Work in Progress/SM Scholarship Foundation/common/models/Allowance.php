@@ -48,7 +48,8 @@ class Allowance extends \yii\db\ActiveRecord
             [['allowance_payStatus'], 'string'],
             [['allowance_paidDate'], 'safe'],
             [['allowance_remark'], 'string', 'max' => 255],
-            [['allowance_scholar_lastName', 'allowance_scholar_firstName', 'allowance_scholar_middleName'], 'string', 'max' => 100]
+            [['allowance_scholar_lastName', 'allowance_scholar_firstName', 'allowance_scholar_middleName',
+			'uploaded_by', 'checked_by','checked_remark','updated_by'], 'string', 'max' => 100]
         ];
     }
 
@@ -68,6 +69,10 @@ class Allowance extends \yii\db\ActiveRecord
             'allowance_scholar_firstName' => 'First Name',
             'allowance_scholar_middleName' => 'Middle Name',
             'allowance_paidDate' => 'Paid Date',
+            'uploaded_by' => 'Created By',
+            'checked_by' => 'Checked By',
+            'checked_remark' => 'Remark',
+            'updated_by' => 'Updated By',
         ];
     }
 
