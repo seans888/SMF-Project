@@ -63,6 +63,10 @@ $this->params['breadcrumbs'][] = $this->title;
 				]),
 			],
 			'allowance_status',
+			'uploaded_by',
+			'updated_by',
+			'checked_by',
+			'checked_remark',
 
             ['class' => 'kartik\grid\ActionColumn',
                           'template'=>'{view} {update} {check} {delete}',
