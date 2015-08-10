@@ -67,17 +67,24 @@ class TuitionfeesController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Tuitionfees();
-        if ($model->load(Yii::$app->request->post())) 
+		if(Yii::$app->user->can('create-tuitionfees'))
 		{
-			$model->uploaded_by = Yii::$app->user->identity->username;
-			$model->save();
-            return $this->redirect(['view', 'id' => $model->tuitionfee_id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
+			$model = new Tuitionfees();
+			if ($model->load(Yii::$app->request->post())) 
+			{
+				$model->uploaded_by = Yii::$app->user->identity->username;
+				$model->save();
+				return $this->redirect(['view', 'id' => $model->tuitionfee_id]);
+			} else {
+				return $this->render('create', [
+					'model' => $model,
+				]);
+			}
+		}
+		else
+		{
+			throw new ForbiddenHttpException;
+		}
     }
 
     /**
@@ -88,17 +95,24 @@ class TuitionfeesController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
+		if(Yii::$app->user->can('update-tuitionfees'))
+		{		
+			$model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post())) {
-			$model->updated_by = Yii::$app->user->identity->username;
-			$model->save();
-            return $this->redirect(['view', 'id' => $model->tuitionfee_id]);
-        } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
-        }
+			if ($model->load(Yii::$app->request->post())) {
+				$model->updated_by = Yii::$app->user->identity->username;
+				$model->save();
+				return $this->redirect(['view', 'id' => $model->tuitionfee_id]);
+			} else {
+				return $this->render('update', [
+					'model' => $model,
+				]);
+			}
+		}
+		else
+		{
+			throw new ForbiddenHttpException;
+		}
     }
 
     /**
@@ -116,24 +130,31 @@ class TuitionfeesController extends Controller
 	
     public function actionCheck($id)
     {
-        $model = $this->findModel($id);
+		if(Yii::$app->user->can('check-tuitionfees'))
+		{	
+			$model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post())) {
-			if($model->checked_by=='1')
-			{
-				$model->checked_by = Yii::$app->user->identity->username;		
+			if ($model->load(Yii::$app->request->post())) {
+				if($model->checked_by=='1')
+				{
+					$model->checked_by = Yii::$app->user->identity->username;		
+				}
+				else
+				{
+					$model->checked_by = null;
+				}
+				$model->save();
+				return $this->redirect(['view', 'id' => $model->tuitionfee_id]);
+			} else {
+				return $this->render('check', [
+					'model' => $model,
+				]);
 			}
-			else
-			{
-				$model->checked_by = null;
-			}
-			$model->save();
-            return $this->redirect(['view', 'id' => $model->tuitionfee_id]);
-        } else {
-            return $this->render('check', [
-                'model' => $model,
-            ]);
-        }	
+		}
+		else
+		{
+			throw new ForbiddenHttpException;
+		}
     }
 	
 	public function actionSend($id)
