@@ -8,6 +8,7 @@ use common\models\SchoolsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\Json;
 
 /**
  * SchoolsController implements the CRUD actions for Schools model.
@@ -34,7 +35,26 @@ class SchoolsController extends Controller
     {
         $searchModel = new SchoolsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$schoolId = Yii::$app->request->post('editableKey');
+			$school = Schools::findOne($schoolId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Schools']);
+			$post['Schools'] = $posted;
+			
+			if($school->load($post))
+			{
+				$school->save();
+			}
+			echo $out;
+			return;
+		}
+
+		
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
