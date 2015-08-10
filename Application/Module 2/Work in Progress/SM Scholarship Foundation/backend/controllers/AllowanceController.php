@@ -8,6 +8,7 @@ use common\models\Allowance;
 use common\models\AllowanceSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\db\IntegrityException;
 use yii\filters\VerbFilter;
 
 /**
