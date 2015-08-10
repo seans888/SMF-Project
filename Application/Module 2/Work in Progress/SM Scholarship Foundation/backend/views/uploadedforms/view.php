@@ -36,6 +36,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'uploadedForm',
             'uploaded_scholar_id',
             'fileName',
+			'uploaded_by',
+			'updated_by',
+			'checked_by',
+			'checked_remark',
         ],
     ]) ?>
 

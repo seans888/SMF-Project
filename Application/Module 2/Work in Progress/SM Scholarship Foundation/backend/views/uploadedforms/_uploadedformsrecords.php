@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+use kartik\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\UploadedformsSearch */
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            ['class' => 'kartik\grid\SerialColumn'],
   //          'uploaded_scholar_id',
 			// [
 				// 'attribute'=>'scholar_lastName',
@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
 				// 'attribute'=>'scholar_middleName',
 				// 'value'=>'scholar.scholar_middleName',
 			// ],
-[
+	[
         'attribute' => 'file',
         'format' => 'html',    
         'value' => function ($data) {
@@ -40,8 +40,37 @@ $this->params['breadcrumbs'][] = $this->title;
     ],
             'uploadedForm',
             'fileName',
+			'uploaded_by',
+			'updated_by',
+			'checked_by',
+			'checked_remark',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'kartik\grid\ActionColumn',
+                          'template'=>'{view} {update} {check} {delete}',
+                            'buttons'=>[
+                              'update' => function ($url, $model) {     
+                                return Html::a('<span class="glyphicon glyphicon-pencil"></span>', $url, [
+                                        'title' => Yii::t('yii', 'Update'),
+                                ]);                                
+            
+                              },
+							  'check' => function ($url, $model) {     
+                                return Html::a('<span class="glyphicon glyphicon-check"></span>', $url, [
+                                        'title' => Yii::t('yii', 'Check'),
+                                ]);                                
+            
+                              },
+							  'delete' => function ($url, $model) {     
+                                return Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
+                                        'title' => Yii::t('yii', 'Delete'),
+										'data-confirm' => Yii::t('kvgrid', 'Are you sure to delete this item?'),
+										'data-method' => 'post',
+										'data-pjax' => '0'
+                                ]);                                
+            
+                              },
+                          ]                            
+			],
         ],
     ]); ?>
 
