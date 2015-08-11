@@ -32,14 +32,14 @@ $username=Yii::$app->user->identity->username;
 		foreach($scholars as $scholarctr){
 				foreach($grades as $grade){
 				if($scholarctr->scholar_user_id==$ctr->id && $grade->grade_scholar_id==$scholarctr->scholar_user_id){
-					if ($grade->grade_status == 'PRESENT'){
+					
 						$present=$grade;
 						echo'<tr><td><h4><center>'.$present->grade_subject.'<br></center></h4></td><td><h4><center>'.$present->grade_value.'</center></h4></td><td><h4><center>'.$present->grade_units.'</center></h4></td><td><h4><center>'.$present->grade_schoolYear.'</center></h4></td><td><h4><center>'.$present->grade_Term.'</center></h4></td></tr>';
 					
 						
 						
 					
-					}
+					
 					
 				}
 				}
