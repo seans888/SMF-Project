@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
 				'value' => function($model){
 					$url = $model->uploadedForm;
 					
-					return Html::a(Html::img($url, ['width'=>'500']),$url);
+					return Html::a(Html::img($url, ['width'=>'300']),$url);
 				}
         ],
 
