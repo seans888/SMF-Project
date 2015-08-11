@@ -30,7 +30,12 @@
         "kartik-v/yii2-widget-typeahead": "*",
         "reportico/yii2-reportico": "dev-master",
 		"kartik-v/yii2-editable": "*",
+<<<<<<< HEAD
 		"yiisoft/yii2-swiftmailer": "^2.0"
+=======
+		
+		
+>>>>>>> acc7aea6b3c712e192d26af29855726d878f4308
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

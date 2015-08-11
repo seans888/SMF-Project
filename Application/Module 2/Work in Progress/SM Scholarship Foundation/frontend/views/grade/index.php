@@ -5,33 +5,23 @@ use yii\grid\GridView;
 use yii\jui\Tabs;
 
 /* @var $this yii\web\View */
-/* @var $searchModel frontend\models\GradeSearch */
+/* @var $searchModel common\models\GradesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Grades';
 $this->params['breadcrumbs'][] = $this->title;
- 
 ?>
 <div class="grades-index">
 
     <h1 style="margin-top:100px;"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <?=
-
-	Tabs::widget([
-	
+ <?= Tabs::widget([
     'items' => [
         [
-            'label' => 'Current Grades',
+            'label' => 'Grade Records',
             'content' => $this->render('gradestab'),
-            'active' => true
-        ],
-        [
-            'label' => 'Grade History',
-            'content' => $this->render('pastgradestab'),
-            'active' => true
-            
+			'active'=>true
         ],
         [
             'label' => 'Low Grades',
@@ -39,12 +29,11 @@ $this->params['breadcrumbs'][] = $this->title;
 			<button class="btn btn-success" style="margin-bottom:40px;">Submit</button><br><br><h5><i>The explanation will be reviewed by the SM Foundation. <br>We will inform you for any updates regarding the case. Thank You! </i></h5>'
             ,
         ],
-    
     ],
     'options' => ['tag' => 'div'],
     'itemOptions' => ['tag' => 'div'],
     'headerOptions' => ['class' => 'my-class'],
     'clientOptions' => ['collapsible' => false],
-]); ?>
+	]); ?>
 
 </div>

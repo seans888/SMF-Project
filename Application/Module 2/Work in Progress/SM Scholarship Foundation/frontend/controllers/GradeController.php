@@ -4,7 +4,7 @@ namespace frontend\controllers;
 
 use Yii;
 use common\models\Grades;
-use frontend\models\GradeSearch;
+use common\models\GradesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -34,16 +34,10 @@ class GradeController extends Controller
      * Lists all Grades models.
      * @return mixed
      */
-	 public function actionGradestab(){
-		$grades = Grades::find()->all();
-		$users = User::find()->all();
-		$scholars = Scholars::find()->all();
-		
-		return $this->render('gradestab',['users'=>$users,'scholars'=>$scholars,'grades'=>$grades]);
-	 }
+	
     public function actionIndex()
     {
-		$grades = Grades::find()->all();
+	$grades = Grades::find()->all();
 		$users = User::find()->all();
 		$scholars = Scholars::find()->all();
 	
@@ -68,6 +62,7 @@ class GradeController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
+	
     public function actionCreate()
     {
 		$this->layout = 'records';

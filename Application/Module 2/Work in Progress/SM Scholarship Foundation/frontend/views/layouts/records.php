@@ -55,10 +55,10 @@ DashboardAsset::register($this);
                         <a class="page-scroll" href="<?php echo 'index.php?r=allowance/create'?>"><font style="color:#e6e600">Forms</font></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="<?php echo 'index.php?r=compile/create'?>"><font style="color:#e6e600">Calendar</font></a>
+                        <a class="page-scroll" href="<?php echo 'index.php?r=event/index'?>"><font style="color:#e6e600">Calendar</font></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="<?php echo 'index.php?r=event/create'?>"><font style="color:#e6e600">Contact</font></a>
+                        <a class="page-scroll" href="<?php echo 'index.php?r=emails/create'?>"><font style="color:#e6e600">Contact</font></a>
                     </li>
 					<li>
 					 <?php
