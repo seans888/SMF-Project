@@ -18,7 +18,7 @@
         "yiisoft/yii2": ">=2.0.4",
         "yiisoft/yii2-bootstrap": "^2.0",
 		"philippfrenzel/yii2fullcalendar":"*",
-        "yiisoft/yii2-swiftmailer": "*",
+        "yiisoft/yii2-swiftmailer": "^2.0",
         "2amigos/yii2-date-picker-widget": "~1.0",
         "2amigos/yii2-file-input-widget": "~1.0",
 		"yiisoft/yii2-jui": "~2.0.0",
@@ -29,7 +29,8 @@
         "kartik-v/yii2-mpdf": "dev-master",
         "kartik-v/yii2-widget-typeahead": "*",
         "reportico/yii2-reportico": "dev-master",
-		"kartik-v/yii2-editable": "*"
+		"kartik-v/yii2-editable": "*",
+		"yiisoft/yii2-swiftmailer": "^2.0"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
