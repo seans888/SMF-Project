@@ -29,7 +29,9 @@
         "kartik-v/yii2-mpdf": "dev-master",
         "kartik-v/yii2-widget-typeahead": "*",
         "reportico/yii2-reportico": "dev-master",
-		"kartik-v/yii2-editable": "*"
+		"kartik-v/yii2-editable": "*",
+		
+		
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
