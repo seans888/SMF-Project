@@ -19,7 +19,7 @@ class EmailsSearch extends Emails
     {
         return [
             [['id'], 'integer'],
-            [['receiver_name', 'receiver_email', 'subject', 'content'], 'safe'],
+            [['writer_name', 'writer_email', 'subject', 'content'], 'safe'],
         ];
     }
 
@@ -59,8 +59,8 @@ class EmailsSearch extends Emails
             'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'receiver_name', $this->receiver_name])
-            ->andFilterWhere(['like', 'receiver_email', $this->receiver_email])
+        $query->andFilterWhere(['like', 'writer_name', $this->writer_name])
+            ->andFilterWhere(['like', 'writer_email', $this->writer_email])
             ->andFilterWhere(['like', 'subject', $this->subject])
             ->andFilterWhere(['like', 'content', $this->content]);
 
