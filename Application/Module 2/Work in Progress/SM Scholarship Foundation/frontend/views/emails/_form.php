@@ -21,9 +21,9 @@ use yii\widgets\ActiveForm;
 
 								<?php $form = ActiveForm::begin(); ?>
 								<table width=48% align=left><tr><td>
-								<?= $form->field($model, 'receiver_name')->textInput(['maxlength' => true]) ?>
+								<?= $form->field($model, 'writer_name')->textInput(['maxlength' => true]) ?>
 
-								<?= $form->field($model, 'receiver_email')->textInput(['maxlength' => true]) ?>
+								<?= $form->field($model, 'writer_email')->textInput(['maxlength' => true]) ?>
 
 								<?= $form->field($model, 'subject')->textInput(['maxlength' => true]) ?>
 								</td></tr><table><table width=48% align=right><tr><td>

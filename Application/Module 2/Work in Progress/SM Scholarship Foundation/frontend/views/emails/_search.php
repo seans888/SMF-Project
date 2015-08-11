@@ -17,9 +17,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'receiver_name') ?>
+    <?= $form->field($model, 'writer_name') ?>
 
-    <?= $form->field($model, 'receiver_email') ?>
+    <?= $form->field($model, 'writer_email') ?>
 
     <?= $form->field($model, 'subject') ?>
 
