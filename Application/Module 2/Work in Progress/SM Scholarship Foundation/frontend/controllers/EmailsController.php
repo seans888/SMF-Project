@@ -64,14 +64,14 @@ class EmailsController extends Controller
         $model = new Emails();
 
         if ($model->load(Yii::$app->request->post())) {
-			Yii::$app->mailer->compose('emails/create')
-			->setFrom($model->receiver_email)
+			Yii::$app->mailer->compose()
+			->setFrom($model->writer_email)
 			->setTo('kevintvillacorta@gmail.com')
 			->setSubject($model->subject)
 			->setHtmlBody($model->content)
 			->send();
 			 $model->save();
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['create', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
