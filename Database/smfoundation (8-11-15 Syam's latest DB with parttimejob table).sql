@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 11, 2015 at 10:03 AM
+-- Generation Time: Aug 11, 2015 at 01:23 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.5.19
 
@@ -66,7 +66,6 @@ CREATE TABLE IF NOT EXISTS `allowance` (
   `allowance_school_id` int(11) DEFAULT NULL,
   `allowance_payStatus` enum('paid','not paid') DEFAULT NULL,
   `allowance_paidDate` date DEFAULT NULL,
-  `allowance_status` enum('PAST','PRESENT','','') NOT NULL,
   `uploaded_by` varchar(100) DEFAULT NULL,
   `updated_by` varchar(100) DEFAULT NULL,
   `checked_by` varchar(100) DEFAULT NULL,
@@ -77,12 +76,12 @@ CREATE TABLE IF NOT EXISTS `allowance` (
 -- Dumping data for table `allowance`
 --
 
-INSERT INTO `allowance` (`allowance_id`, `allowance_amount`, `allowance_remark`, `allowance_scholar_id`, `allowance_school_id`, `allowance_payStatus`, `allowance_paidDate`, `allowance_status`, `uploaded_by`, `updated_by`, `checked_by`, `checked_remark`) VALUES
-(1, '2000.00', 'Allowance', 2, 1, 'not paid', '2015-07-25', 'PAST', NULL, NULL, 'Cath', 'l'),
-(2, '1000.00', 'test', 13, 5, 'paid', '2015-07-14', 'PAST', NULL, NULL, NULL, NULL),
-(3, '2000.00', 'remark1', 5, 1, 'paid', '2015-07-29', 'PAST', NULL, NULL, NULL, NULL),
-(4, '2000.00', NULL, 4, 1, 'not paid', NULL, 'PAST', NULL, NULL, NULL, NULL),
-(5, '20000.00', 'test', 2, 1, 'paid', '2015-08-03', 'PAST', 'Linda', 'Linda', 'Linda', 'l');
+INSERT INTO `allowance` (`allowance_id`, `allowance_amount`, `allowance_remark`, `allowance_scholar_id`, `allowance_school_id`, `allowance_payStatus`, `allowance_paidDate`, `uploaded_by`, `updated_by`, `checked_by`, `checked_remark`) VALUES
+(1, '2000.00', 'Allowance', 2, 1, 'not paid', '2015-07-25', NULL, NULL, 'Cath', 'l'),
+(2, '1000.00', 'test', 13, 5, 'paid', '2015-07-14', NULL, NULL, NULL, NULL),
+(3, '2000.00', 'remark1', 5, 1, 'paid', '2015-07-29', NULL, NULL, NULL, NULL),
+(4, '2000.00', NULL, 4, 1, 'not paid', NULL, NULL, NULL, NULL, NULL),
+(5, '20000.00', 'test', 2, 1, 'paid', '2015-08-03', 'Linda', 'Linda', 'Linda', 'l');
 
 -- --------------------------------------------------------
 
@@ -416,6 +415,20 @@ INSERT INTO `deductions` (`deduction_id`, `deduction_date`, `deduction_amount`, 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `emails`
+--
+
+CREATE TABLE IF NOT EXISTS `emails` (
+`id` int(11) NOT NULL,
+  `receiver_name` varchar(100) NOT NULL,
+  `receiver_email` varchar(200) NOT NULL,
+  `subject` varchar(255) NOT NULL,
+  `content` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `equivalence`
 --
 
@@ -523,7 +536,6 @@ CREATE TABLE IF NOT EXISTS `grades` (
   `grade_units` decimal(3,2) DEFAULT NULL,
   `grade_value` varchar(100) DEFAULT NULL,
   `equivalence_grade_rule` int(11) DEFAULT NULL,
-  `grade_status` enum('PAST','PRESENT','','') NOT NULL,
   `School_id` int(11) DEFAULT NULL,
   `uploaded_by` varchar(100) DEFAULT NULL,
   `updated_by` varchar(100) DEFAULT NULL,
@@ -535,89 +547,89 @@ CREATE TABLE IF NOT EXISTS `grades` (
 -- Dumping data for table `grades`
 --
 
-INSERT INTO `grades` (`grade_id`, `grade_schoolYear`, `grade_Term`, `grade_scholar_id`, `grade_subject`, `grade_units`, `grade_value`, `equivalence_grade_rule`, `grade_status`, `School_id`, `uploaded_by`, `updated_by`, `checked_by`, `checked_remark`) VALUES
-(15, 2015, 1, 2, 'SOFTDEV', '3.00', '4.0', 1, 'PAST', 1, NULL, NULL, 'Linda', 'a'),
-(16, 2015, 2, 3, 'MINSYS', '3.00', '4.0', 1, 'PAST', 1, NULL, NULL, NULL, NULL),
-(17, 2015, 1, 4, 'Subject 1', '3.00', '4.0', 1, 'PAST', 1, NULL, NULL, NULL, NULL),
-(18, 2015, 1, 4, 'Subject 2', '3.00', '4.0', 1, 'PAST', 1, NULL, NULL, NULL, NULL),
-(19, 2015, 1, 4, 'Subject 3', '3.00', '4.0', 1, 'PAST', 1, NULL, NULL, NULL, NULL),
-(20, 2015, 1, 4, 'subject 4', '3.00', '4.0', 1, 'PAST', 1, NULL, NULL, NULL, NULL),
-(21, 2015, 2, 4, 'Subject 5', '3.00', '3.5', 2, 'PAST', 1, NULL, NULL, NULL, NULL),
-(22, 2015, 2, 4, 'Subject 6', '3.00', '3.0', 3, 'PAST', 1, NULL, NULL, NULL, NULL),
-(23, 2015, 2, 4, 'Subject 7', '3.00', '2.5', 4, 'PAST', 1, NULL, NULL, NULL, NULL),
-(24, 2015, 2, 4, 'Subject 8', '3.00', '2.0', 5, 'PAST', 1, NULL, NULL, NULL, NULL),
-(25, 2015, 1, 5, 'Subject 1', '3.00', '4.0', 1, 'PAST', 1, NULL, NULL, NULL, NULL),
-(26, 2015, 1, 5, 'Subject 2', '3.00', '4.0', 1, 'PAST', 1, NULL, NULL, NULL, NULL),
-(27, 2015, 1, 5, 'Subject 3', '3.00', '4.0', 1, 'PAST', 1, NULL, NULL, NULL, NULL),
-(28, 2015, 1, 5, 'Subject 4', '3.00', '4.0', 1, 'PAST', 1, NULL, NULL, NULL, NULL),
-(29, 2015, 2, 5, 'subject 5', '3.00', '3.5', 2, 'PAST', 1, NULL, NULL, NULL, NULL),
-(30, 2015, 2, 5, 'Subject 6', '3.00', '3.0', 3, 'PAST', 1, NULL, NULL, NULL, NULL),
-(31, 2015, 2, 5, 'Subject 7', '3.00', '2.5', 4, 'PAST', 1, NULL, NULL, NULL, NULL),
-(32, 2015, 2, 5, 'Subject 8', '3.00', 'R', 8, 'PAST', 1, NULL, NULL, NULL, NULL),
-(33, 2015, 1, 6, 'Subject 1', '3.00', '4.0', 12, 'PAST', 2, NULL, NULL, NULL, NULL),
-(34, 2015, 1, 6, 'Subject 2', '3.00', '4.0', 12, 'PAST', 2, NULL, NULL, NULL, NULL),
-(35, 2015, 1, 6, 'Subject 3', '3.00', '4.0', 12, 'PAST', 2, NULL, NULL, NULL, NULL),
-(36, 2015, 1, 6, 'Subject 4', '3.00', '4.0', 12, 'PAST', 2, NULL, NULL, NULL, NULL),
-(37, 2015, 2, 6, 'Subject 5', '3.00', '3.5', 13, 'PAST', 2, NULL, NULL, NULL, NULL),
-(38, 2015, 2, 6, 'Subject 6', '3.00', '3.5', 13, 'PAST', 2, NULL, NULL, NULL, NULL),
-(39, 2015, 2, 6, 'Subject 7', '3.00', '3.0', 14, 'PAST', 2, NULL, NULL, NULL, NULL),
-(40, 2015, 2, 6, 'Subject 8', '3.00', '3.0', 14, 'PAST', 2, NULL, NULL, NULL, NULL),
-(41, 2015, 1, 7, 'Subject 1', '3.00', '4.0', 12, 'PAST', 2, NULL, NULL, NULL, NULL),
-(42, 2015, 1, 7, 'Subject 2', '3.00', '4.0', 12, 'PAST', 2, NULL, NULL, NULL, NULL),
-(43, 2015, 1, 7, 'Subject 3', '3.00', '4.0', 12, 'PAST', 2, NULL, NULL, NULL, NULL),
-(44, 2015, 1, 7, 'Subject 4', '3.00', '4.0', 12, 'PAST', 2, NULL, NULL, NULL, NULL),
-(45, 2015, 2, 7, 'Subject 5', '3.00', '3.5', 13, 'PAST', 2, NULL, NULL, NULL, NULL),
-(46, 2015, 2, 7, 'Subject 6', '3.00', '3.5', 13, 'PAST', 2, NULL, NULL, NULL, NULL),
-(47, 2015, 2, 7, 'Subject 7', '3.00', '3.0', 14, 'PAST', 2, NULL, NULL, NULL, NULL),
-(48, 2015, 2, 7, 'Subject 8', '3.00', '3.0', 14, 'PAST', 2, NULL, NULL, NULL, NULL),
-(49, 2015, 1, 8, 'Subject 1', '3.00', '1.00', 24, 'PAST', 3, NULL, NULL, NULL, NULL),
-(50, 2015, 1, 8, 'Subject 2', '3.00', '1.00', 24, 'PAST', 3, NULL, NULL, NULL, NULL),
-(51, 2015, 1, 8, 'Subject 3', '3.00', '1.00', 24, 'PAST', 3, NULL, NULL, NULL, NULL),
-(52, 2015, 1, 8, 'Subject 4', '3.00', '1.00', 24, 'PAST', 3, NULL, NULL, NULL, NULL),
-(53, 2015, 2, 8, 'Subject 5', '3.00', '1.25', 25, 'PAST', 3, NULL, NULL, NULL, NULL),
-(54, 2015, 2, 8, 'Subject 6', '3.00', '1.25', 25, 'PAST', 3, NULL, NULL, NULL, NULL),
-(55, 2015, 2, 8, 'Subject 7', '3.00', '1.50', 26, 'PAST', 3, NULL, NULL, NULL, NULL),
-(56, 2015, 2, 8, 'Subject 8', '3.00', '1.50', 26, 'PAST', 3, NULL, NULL, NULL, NULL),
-(57, 2015, 1, 9, 'Subject 1', '3.00', '1.00', 24, 'PAST', 3, NULL, NULL, NULL, NULL),
-(58, 2015, 1, 9, 'Subject 2', '3.00', '1.00', 24, 'PAST', 3, NULL, NULL, NULL, NULL),
-(59, 2015, 1, 9, 'Subject 3', '3.00', '1.00', 24, 'PAST', 3, NULL, NULL, NULL, NULL),
-(60, 2015, 1, 9, 'Subject 4', '3.00', '1.00', 24, 'PAST', 3, NULL, NULL, NULL, NULL),
-(61, 2015, 2, 9, 'Subject 5', '3.00', '1.25', 25, 'PAST', 3, NULL, NULL, NULL, NULL),
-(62, 2015, 2, 9, 'Subject 6', '3.00', '1.25', 25, 'PAST', 3, NULL, NULL, NULL, NULL),
-(63, 2015, 2, 9, 'Subject 7', '3.00', '1.50', 26, 'PAST', 3, NULL, NULL, NULL, NULL),
-(64, 2015, 2, 9, 'Subject 8', '3.00', '1.50', 26, 'PAST', 3, NULL, NULL, NULL, NULL),
-(65, 2015, 1, 10, 'Subject 1', '3.00', '4.0', 37, 'PAST', 4, NULL, NULL, NULL, NULL),
-(66, 2015, 1, 10, 'Subject 2', '3.00', '4.0', 37, 'PAST', 4, NULL, NULL, NULL, NULL),
-(67, 2015, 1, 10, 'Subject 3', '3.00', '4.0', 37, 'PAST', 4, NULL, NULL, NULL, NULL),
-(68, 2015, 1, 10, 'Subject 4', '3.00', '4.0', 37, 'PAST', 4, NULL, NULL, NULL, NULL),
-(69, 2015, 2, 10, 'Subject 5', '3.00', '3.5', 38, 'PAST', 4, NULL, NULL, NULL, NULL),
-(70, 2015, 2, 10, 'Subject 6', '3.00', '3.5', 38, 'PAST', 4, NULL, NULL, NULL, NULL),
-(71, 2015, 2, 10, 'Subject 6', '3.00', '3.0', 39, 'PAST', 4, NULL, NULL, NULL, NULL),
-(72, 2015, 2, 10, 'Subject 8', '3.00', '3.0', 39, 'PAST', 4, NULL, NULL, NULL, NULL),
-(73, 2015, 1, 11, 'Subject 1', '3.00', '4.0', 37, 'PAST', 4, NULL, NULL, NULL, NULL),
-(74, 2015, 1, 11, 'Subject 2', '3.00', '4.0', 37, 'PAST', 4, NULL, NULL, NULL, NULL),
-(75, 2015, 1, 11, 'Subject 3', '3.00', '4.0', 37, 'PAST', 4, NULL, NULL, NULL, NULL),
-(76, 2015, 1, 11, 'Subject 4', '3.00', '4.0', 37, 'PAST', 4, NULL, NULL, NULL, NULL),
-(77, 2015, 2, 11, 'Subject 5', '3.00', '3.5', 38, 'PAST', 4, NULL, NULL, NULL, NULL),
-(78, 2015, 2, 11, 'Subject 6', '3.00', '3.5', 38, 'PAST', 4, NULL, NULL, NULL, NULL),
-(79, 2015, 2, 11, 'Subject 7', '3.00', '3.0', 39, 'PAST', 4, NULL, NULL, NULL, NULL),
-(80, 2015, 2, 11, 'Subject 8', '3.00', '3.0', 39, 'PAST', 4, NULL, NULL, NULL, NULL),
-(81, 2015, 1, 12, 'Subject 1', '3.00', '1.00', 46, 'PAST', 5, NULL, NULL, NULL, NULL),
-(82, 2015, 1, 12, 'Subject 2', '3.00', '1.00', 46, 'PAST', 5, NULL, NULL, NULL, NULL),
-(83, 2015, 1, 12, 'Subject 3', '3.00', '1.00', 46, 'PAST', 5, NULL, NULL, NULL, NULL),
-(84, 2015, 1, 12, 'Subject 4', '3.00', '1.00', 46, 'PAST', 5, NULL, NULL, NULL, NULL),
-(85, 2015, 2, 12, 'Subject 5', '3.00', '1.25', 47, 'PAST', 5, NULL, NULL, NULL, NULL),
-(86, 2015, 2, 12, 'Subject 6', '3.00', '1.25', 47, 'PAST', 5, NULL, NULL, NULL, NULL),
-(87, 2015, 2, 12, 'Subject 7', '3.00', '1.50', 48, 'PAST', 5, NULL, NULL, NULL, NULL),
-(88, 2015, 2, 12, 'Subject 8', '3.00', '1.50', 48, 'PAST', 5, NULL, NULL, NULL, NULL),
-(89, 2015, 1, 13, 'Subject 1', '3.00', '1.00', 46, 'PAST', 5, NULL, NULL, NULL, NULL),
-(90, 2015, 1, 13, 'Subject 2', '3.00', '1.00', 46, 'PAST', 5, NULL, NULL, NULL, NULL),
-(91, 2015, 1, 13, 'Subject 3', '3.00', '1.00', 46, 'PAST', 5, NULL, NULL, NULL, NULL),
-(92, 2015, 1, 13, 'Subject 4', '3.00', '1.00', 46, 'PAST', 5, NULL, NULL, NULL, NULL),
-(93, 2015, 2, 13, 'Subject 5', '3.00', '1.25', 47, 'PAST', 5, NULL, NULL, NULL, NULL),
-(94, 2015, 2, 13, 'Subject 6', '3.00', '1.25', 47, 'PAST', 5, NULL, NULL, NULL, NULL),
-(95, 2015, 2, 13, 'Subject 7', '3.00', '1.50', 48, 'PAST', 5, NULL, NULL, NULL, NULL),
-(96, 2015, 2, 13, 'Subject 8', '3.00', '1.50', 48, 'PAST', 5, NULL, NULL, NULL, NULL);
+INSERT INTO `grades` (`grade_id`, `grade_schoolYear`, `grade_Term`, `grade_scholar_id`, `grade_subject`, `grade_units`, `grade_value`, `equivalence_grade_rule`, `School_id`, `uploaded_by`, `updated_by`, `checked_by`, `checked_remark`) VALUES
+(15, 2015, 1, 2, 'SOFTDEV', '3.00', '4.0', 1, 1, NULL, NULL, 'Linda', 'a'),
+(16, 2015, 2, 3, 'MINSYS', '3.00', '4.0', 1, 1, NULL, NULL, NULL, NULL),
+(17, 2015, 1, 4, 'Subject 1', '3.00', '4.0', 1, 1, NULL, NULL, NULL, NULL),
+(18, 2015, 1, 4, 'Subject 2', '3.00', '4.0', 1, 1, NULL, NULL, NULL, NULL),
+(19, 2015, 1, 4, 'Subject 3', '3.00', '4.0', 1, 1, NULL, NULL, NULL, NULL),
+(20, 2015, 1, 4, 'subject 4', '3.00', '4.0', 1, 1, NULL, NULL, NULL, NULL),
+(21, 2015, 2, 4, 'Subject 5', '3.00', '3.5', 2, 1, NULL, NULL, NULL, NULL),
+(22, 2015, 2, 4, 'Subject 6', '3.00', '3.0', 3, 1, NULL, NULL, NULL, NULL),
+(23, 2015, 2, 4, 'Subject 7', '3.00', '2.5', 4, 1, NULL, NULL, NULL, NULL),
+(24, 2015, 2, 4, 'Subject 8', '3.00', '2.0', 5, 1, NULL, NULL, NULL, NULL),
+(25, 2015, 1, 5, 'Subject 1', '3.00', '4.0', 1, 1, NULL, NULL, NULL, NULL),
+(26, 2015, 1, 5, 'Subject 2', '3.00', '4.0', 1, 1, NULL, NULL, NULL, NULL),
+(27, 2015, 1, 5, 'Subject 3', '3.00', '4.0', 1, 1, NULL, NULL, NULL, NULL),
+(28, 2015, 1, 5, 'Subject 4', '3.00', '4.0', 1, 1, NULL, NULL, NULL, NULL),
+(29, 2015, 2, 5, 'subject 5', '3.00', '3.5', 2, 1, NULL, NULL, NULL, NULL),
+(30, 2015, 2, 5, 'Subject 6', '3.00', '3.0', 3, 1, NULL, NULL, NULL, NULL),
+(31, 2015, 2, 5, 'Subject 7', '3.00', '2.5', 4, 1, NULL, NULL, NULL, NULL),
+(32, 2015, 2, 5, 'Subject 8', '3.00', 'R', 8, 1, NULL, NULL, NULL, NULL),
+(33, 2015, 1, 6, 'Subject 1', '3.00', '4.0', 12, 2, NULL, NULL, NULL, NULL),
+(34, 2015, 1, 6, 'Subject 2', '3.00', '4.0', 12, 2, NULL, NULL, NULL, NULL),
+(35, 2015, 1, 6, 'Subject 3', '3.00', '4.0', 12, 2, NULL, NULL, NULL, NULL),
+(36, 2015, 1, 6, 'Subject 4', '3.00', '4.0', 12, 2, NULL, NULL, NULL, NULL),
+(37, 2015, 2, 6, 'Subject 5', '3.00', '3.5', 13, 2, NULL, NULL, NULL, NULL),
+(38, 2015, 2, 6, 'Subject 6', '3.00', '3.5', 13, 2, NULL, NULL, NULL, NULL),
+(39, 2015, 2, 6, 'Subject 7', '3.00', '3.0', 14, 2, NULL, NULL, NULL, NULL),
+(40, 2015, 2, 6, 'Subject 8', '3.00', '3.0', 14, 2, NULL, NULL, NULL, NULL),
+(41, 2015, 1, 7, 'Subject 1', '3.00', '4.0', 12, 2, NULL, NULL, NULL, NULL),
+(42, 2015, 1, 7, 'Subject 2', '3.00', '4.0', 12, 2, NULL, NULL, NULL, NULL),
+(43, 2015, 1, 7, 'Subject 3', '3.00', '4.0', 12, 2, NULL, NULL, NULL, NULL),
+(44, 2015, 1, 7, 'Subject 4', '3.00', '4.0', 12, 2, NULL, NULL, NULL, NULL),
+(45, 2015, 2, 7, 'Subject 5', '3.00', '3.5', 13, 2, NULL, NULL, NULL, NULL),
+(46, 2015, 2, 7, 'Subject 6', '3.00', '3.5', 13, 2, NULL, NULL, NULL, NULL),
+(47, 2015, 2, 7, 'Subject 7', '3.00', '3.0', 14, 2, NULL, NULL, NULL, NULL),
+(48, 2015, 2, 7, 'Subject 8', '3.00', '3.0', 14, 2, NULL, NULL, NULL, NULL),
+(49, 2015, 1, 8, 'Subject 1', '3.00', '1.00', 24, 3, NULL, NULL, NULL, NULL),
+(50, 2015, 1, 8, 'Subject 2', '3.00', '1.00', 24, 3, NULL, NULL, NULL, NULL),
+(51, 2015, 1, 8, 'Subject 3', '3.00', '1.00', 24, 3, NULL, NULL, NULL, NULL),
+(52, 2015, 1, 8, 'Subject 4', '3.00', '1.00', 24, 3, NULL, NULL, NULL, NULL),
+(53, 2015, 2, 8, 'Subject 5', '3.00', '1.25', 25, 3, NULL, NULL, NULL, NULL),
+(54, 2015, 2, 8, 'Subject 6', '3.00', '1.25', 25, 3, NULL, NULL, NULL, NULL),
+(55, 2015, 2, 8, 'Subject 7', '3.00', '1.50', 26, 3, NULL, NULL, NULL, NULL),
+(56, 2015, 2, 8, 'Subject 8', '3.00', '1.50', 26, 3, NULL, NULL, NULL, NULL),
+(57, 2015, 1, 9, 'Subject 1', '3.00', '1.00', 24, 3, NULL, NULL, NULL, NULL),
+(58, 2015, 1, 9, 'Subject 2', '3.00', '1.00', 24, 3, NULL, NULL, NULL, NULL),
+(59, 2015, 1, 9, 'Subject 3', '3.00', '1.00', 24, 3, NULL, NULL, NULL, NULL),
+(60, 2015, 1, 9, 'Subject 4', '3.00', '1.00', 24, 3, NULL, NULL, NULL, NULL),
+(61, 2015, 2, 9, 'Subject 5', '3.00', '1.25', 25, 3, NULL, NULL, NULL, NULL),
+(62, 2015, 2, 9, 'Subject 6', '3.00', '1.25', 25, 3, NULL, NULL, NULL, NULL),
+(63, 2015, 2, 9, 'Subject 7', '3.00', '1.50', 26, 3, NULL, NULL, NULL, NULL),
+(64, 2015, 2, 9, 'Subject 8', '3.00', '1.50', 26, 3, NULL, NULL, NULL, NULL),
+(65, 2015, 1, 10, 'Subject 1', '3.00', '4.0', 37, 4, NULL, NULL, NULL, NULL),
+(66, 2015, 1, 10, 'Subject 2', '3.00', '4.0', 37, 4, NULL, NULL, NULL, NULL),
+(67, 2015, 1, 10, 'Subject 3', '3.00', '4.0', 37, 4, NULL, NULL, NULL, NULL),
+(68, 2015, 1, 10, 'Subject 4', '3.00', '4.0', 37, 4, NULL, NULL, NULL, NULL),
+(69, 2015, 2, 10, 'Subject 5', '3.00', '3.5', 38, 4, NULL, NULL, NULL, NULL),
+(70, 2015, 2, 10, 'Subject 6', '3.00', '3.5', 38, 4, NULL, NULL, NULL, NULL),
+(71, 2015, 2, 10, 'Subject 6', '3.00', '3.0', 39, 4, NULL, NULL, NULL, NULL),
+(72, 2015, 2, 10, 'Subject 8', '3.00', '3.0', 39, 4, NULL, NULL, NULL, NULL),
+(73, 2015, 1, 11, 'Subject 1', '3.00', '4.0', 37, 4, NULL, NULL, NULL, NULL),
+(74, 2015, 1, 11, 'Subject 2', '3.00', '4.0', 37, 4, NULL, NULL, NULL, NULL),
+(75, 2015, 1, 11, 'Subject 3', '3.00', '4.0', 37, 4, NULL, NULL, NULL, NULL),
+(76, 2015, 1, 11, 'Subject 4', '3.00', '4.0', 37, 4, NULL, NULL, NULL, NULL),
+(77, 2015, 2, 11, 'Subject 5', '3.00', '3.5', 38, 4, NULL, NULL, NULL, NULL),
+(78, 2015, 2, 11, 'Subject 6', '3.00', '3.5', 38, 4, NULL, NULL, NULL, NULL),
+(79, 2015, 2, 11, 'Subject 7', '3.00', '3.0', 39, 4, NULL, NULL, NULL, NULL),
+(80, 2015, 2, 11, 'Subject 8', '3.00', '3.0', 39, 4, NULL, NULL, NULL, NULL),
+(81, 2015, 1, 12, 'Subject 1', '3.00', '1.00', 46, 5, NULL, NULL, NULL, NULL),
+(82, 2015, 1, 12, 'Subject 2', '3.00', '1.00', 46, 5, NULL, NULL, NULL, NULL),
+(83, 2015, 1, 12, 'Subject 3', '3.00', '1.00', 46, 5, NULL, NULL, NULL, NULL),
+(84, 2015, 1, 12, 'Subject 4', '3.00', '1.00', 46, 5, NULL, NULL, NULL, NULL),
+(85, 2015, 2, 12, 'Subject 5', '3.00', '1.25', 47, 5, NULL, NULL, NULL, NULL),
+(86, 2015, 2, 12, 'Subject 6', '3.00', '1.25', 47, 5, NULL, NULL, NULL, NULL),
+(87, 2015, 2, 12, 'Subject 7', '3.00', '1.50', 48, 5, NULL, NULL, NULL, NULL),
+(88, 2015, 2, 12, 'Subject 8', '3.00', '1.50', 48, 5, NULL, NULL, NULL, NULL),
+(89, 2015, 1, 13, 'Subject 1', '3.00', '1.00', 46, 5, NULL, NULL, NULL, NULL),
+(90, 2015, 1, 13, 'Subject 2', '3.00', '1.00', 46, 5, NULL, NULL, NULL, NULL),
+(91, 2015, 1, 13, 'Subject 3', '3.00', '1.00', 46, 5, NULL, NULL, NULL, NULL),
+(92, 2015, 1, 13, 'Subject 4', '3.00', '1.00', 46, 5, NULL, NULL, NULL, NULL),
+(93, 2015, 2, 13, 'Subject 5', '3.00', '1.25', 47, 5, NULL, NULL, NULL, NULL),
+(94, 2015, 2, 13, 'Subject 6', '3.00', '1.25', 47, 5, NULL, NULL, NULL, NULL),
+(95, 2015, 2, 13, 'Subject 7', '3.00', '1.50', 48, 5, NULL, NULL, NULL, NULL),
+(96, 2015, 2, 13, 'Subject 8', '3.00', '1.50', 48, 5, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -778,7 +790,6 @@ CREATE TABLE IF NOT EXISTS `tuitionfees` (
   `tuitionfee_dateOfEnrollment` date DEFAULT NULL,
   `tuitionfee_dateOfPayment` date DEFAULT NULL,
   `tuitionfee_paidStatus` enum('paid','not paid') DEFAULT NULL,
-  `tuitionfee_status` enum('PAST','PRESENT','','') NOT NULL,
   `uploaded_by` varchar(100) DEFAULT NULL,
   `checked_by` varchar(100) DEFAULT NULL,
   `checked_remark` varchar(100) DEFAULT NULL,
@@ -789,11 +800,11 @@ CREATE TABLE IF NOT EXISTS `tuitionfees` (
 -- Dumping data for table `tuitionfees`
 --
 
-INSERT INTO `tuitionfees` (`tuitionfee_id`, `tuitionfee_scholar_id`, `tuitionfees_term`, `tuitionfee_amount`, `tuitionfee_dateOfEnrollment`, `tuitionfee_dateOfPayment`, `tuitionfee_paidStatus`, `tuitionfee_status`, `uploaded_by`, `checked_by`, `checked_remark`, `updated_by`) VALUES
-(4, 2, '1', '20000.00', '2015-06-01', NULL, 'not paid', 'PAST', NULL, 'Linda', 'Send for Approval', NULL),
-(5, 3, '2', '20000.00', '2015-07-01', '2015-07-29', 'paid', 'PAST', NULL, NULL, NULL, NULL),
-(7, 2, '', '10000.00', '2015-07-28', '2015-08-05', 'paid', 'PAST', 'Linda', 'Linda', NULL, 'Linda'),
-(8, 4, '', '20000.00', '2015-08-12', '2015-08-12', 'paid', 'PAST', 'Linda', 'Linda', 'Send for Approval', 'Linda');
+INSERT INTO `tuitionfees` (`tuitionfee_id`, `tuitionfee_scholar_id`, `tuitionfees_term`, `tuitionfee_amount`, `tuitionfee_dateOfEnrollment`, `tuitionfee_dateOfPayment`, `tuitionfee_paidStatus`, `uploaded_by`, `checked_by`, `checked_remark`, `updated_by`) VALUES
+(4, 2, '1', '20000.00', '2015-06-01', NULL, 'not paid', NULL, 'Linda', 'Send for Approval', NULL),
+(5, 3, '2', '20000.00', '2015-07-01', '2015-07-29', 'paid', NULL, NULL, NULL, NULL),
+(7, 2, '', '10000.00', '2015-07-28', '2015-08-05', 'paid', 'Linda', 'Linda', NULL, 'Linda'),
+(8, 4, '', '20000.00', '2015-08-12', '2015-08-12', 'paid', 'Linda', 'Linda', 'Send for Approval', 'Linda');
 
 -- --------------------------------------------------------
 
@@ -810,14 +821,16 @@ CREATE TABLE IF NOT EXISTS `uploadedforms` (
   `uploadedForm` varchar(100) NOT NULL,
   `uploaded_scholar_id` int(11) NOT NULL,
   `fileName` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `uploadedforms`
 --
 
 INSERT INTO `uploadedforms` (`id`, `uploaded_by`, `updated_by`, `checked_by`, `checked_remark`, `uploadedForm`, `uploaded_scholar_id`, `fileName`) VALUES
-(1, 'Thess', 'Thess', 'Thess', 'as', 'Forms/dc926df99f32377a2cab63a6426e067a1Registration Form ofScholarID 2 FileName Hydrangeas.jpg', 2, 'Registration Form');
+(1, 'Thess', 'Thess', 'Thess', 'as', 'Forms/dc926df99f32377a2cab63a6426e067a1Registration Form ofScholarID 2 FileName Hydrangeas.jpg', 2, 'Registration Form'),
+(2, NULL, NULL, NULL, NULL, 'uploads/Grades Form3.pdf', 3, 'Grades Form'),
+(3, NULL, NULL, NULL, NULL, 'uploads/Grades Form3.jpg', 3, 'Grades Form');
 
 -- --------------------------------------------------------
 
@@ -944,6 +957,12 @@ ALTER TABLE `deductions`
  ADD PRIMARY KEY (`deduction_id`), ADD KEY `deduction_scholar_id` (`deduction_scholar_id`);
 
 --
+-- Indexes for table `emails`
+--
+ALTER TABLE `emails`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `equivalence`
 --
 ALTER TABLE `equivalence`
@@ -1064,6 +1083,11 @@ MODIFY `compile_id` int(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `deductions`
 MODIFY `deduction_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
+-- AUTO_INCREMENT for table `emails`
+--
+ALTER TABLE `emails`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `equivalence`
 --
 ALTER TABLE `equivalence`
@@ -1107,7 +1131,7 @@ MODIFY `tuitionfee_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 -- AUTO_INCREMENT for table `uploadedforms`
 --
 ALTER TABLE `uploadedforms`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `user`
 --
