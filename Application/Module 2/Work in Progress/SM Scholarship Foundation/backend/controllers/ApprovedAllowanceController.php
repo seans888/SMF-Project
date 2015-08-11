@@ -7,6 +7,7 @@ use common\models\ApprovedAllowance;
 use common\models\ApprovedAllowanceSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\web\ForbiddenHttpException;
 use yii\filters\VerbFilter;
 
 /**
@@ -32,13 +33,20 @@ class ApprovedAllowanceController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new ApprovedAllowanceSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		if(Yii::$app->user->can('index-approved-allowance'))
+		{	
+			$searchModel = new ApprovedAllowanceSearch();
+			$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+			return $this->render('index', [
+				'searchModel' => $searchModel,
+				'dataProvider' => $dataProvider,
+			]);
+		}
+		else
+		{
+			throw new ForbiddenHttpException;
+		}
     }
 
     /**
