@@ -35,13 +35,26 @@ class UploadedformsController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new UploadedformsSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+       	$username=Yii::$app->user->identity->username;
+		$users = User::find()->all();
+		$scholars = Scholars::find()->all();
+		$model = new Uploadedforms();
+		
+		foreach($users as $user){
+			foreach($scholars as $scholar){
+				if($user->username==$username&&$user->id==$scholar->scholar_id){
+					$model->uploaded_scholar_id=$scholar->scholar_id;
+					$searchModel = new UploadedformsSearch($model);
+					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+					return $this->render('index', [
+					'searchModel' => $searchModel,
+					'dataProvider' => $dataProvider,
+					]);
+				}
+			}
+		}
+        
     }
 
     /**
