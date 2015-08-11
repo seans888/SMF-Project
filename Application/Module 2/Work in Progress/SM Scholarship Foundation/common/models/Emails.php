@@ -29,10 +29,10 @@ class Emails extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['receiver_name', 'receiver_email', 'subject', 'content'], 'required'],
+            [['writer_name', 'writer_email', 'subject', 'content'], 'required'],
             [['content'], 'string'],
-            [['receiver_name'], 'string', 'max' => 100],
-            [['receiver_email'], 'string', 'max' => 200],
+            [['writer_name'], 'string', 'max' => 100],
+            [['writer_email'], 'string', 'max' => 200],
             [['subject'], 'string', 'max' => 255]
         ];
     }
@@ -44,8 +44,8 @@ class Emails extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'receiver_name' => 'Receiver Name',
-            'receiver_email' => 'Receiver Email',
+            'writer_name' => 'Writer Name',
+            'writer_email' => 'Writer Email',
             'subject' => 'Subject',
             'content' => 'Content',
         ];
