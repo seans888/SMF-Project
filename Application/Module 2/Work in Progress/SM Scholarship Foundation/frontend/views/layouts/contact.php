@@ -134,16 +134,7 @@ DashboardAsset::register($this);
             </div>
         </div>
     </section>
-    <footer  style="position: absolute; bottom: 0px; width: 100%; height: 60px">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; SM Foundation 2015</span>
-                </div>
-             
-            </div>
-        </div>
-    </footer>
+  
 	
 
     <?php $this->endBody() ?>
