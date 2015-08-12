@@ -47,10 +47,16 @@ DashboardAsset::register($this);
                 <ul class="dropdown-menu">
                 </ul>
               </li>
+			  						<a href="<?php
+						if(!\Yii::$app->user->isGuest)
+						{
+							echo Yii::$app->getUrlManager()->createUrl('/site/logout');
+						}
+
+						?>" class="btn btn-default btn-primary">Sign Out</a>
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="dist/img/avatar5.png" class="user-image" alt="User Image"/>
                   <span class="hidden-xs"><?= Yii::$app->user->identity->username ?></span>
                 </a>
                 <ul class="dropdown-menu">
@@ -87,26 +93,6 @@ DashboardAsset::register($this);
 	        <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
-          <!-- Sidebar user panel -->
-          <div class="user-panel">
-            <div class="pull-left image">
-              <img src="dist/img/avatar5.png" class="img-circle" alt="User Image" />
-            </div>
-            <div class="pull-left info">
-              <p><?= Yii::$app->user->identity->username ?></p>
-              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-            </div>
-          </div>
-          <!-- search form -->
-          <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-              <input type="text" name="q" class="form-control" placeholder="Search..."/>
-              <span class="input-group-btn">
-                <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
-              </span>
-            </div>
-          </form>
-          <!-- /.search form -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
