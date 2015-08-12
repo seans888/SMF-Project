@@ -96,15 +96,7 @@ DashboardAsset::register($this);
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="active treeview">
-              <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
-              </a>
-			 
-              <ul class="treeview-menu">
-                <li class="active"><a href="<?= Yii::$app->getUrlManager()->createUrl('/site/index'); ?>"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-              </ul>
-            </li>
+
 			<li class="treeview">
               <a href="<?= Yii::$app->getUrlManager()->createUrl('/scholars/index'); ?>">
                 <i class="fa fa-group"></i> <span>Scholars</span></i>
@@ -125,7 +117,8 @@ DashboardAsset::register($this);
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/tuitionfees/index'); ?>"><i class="fa fa-money"></i> Tuition Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/allowance/index'); ?>"><i class="fa fa-credit-card"></i> Allowance Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/refunds/index'); ?>"><i class="fa fa-thumbs-up"></i> Refund Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/deductions/index'); ?>"><i class="fa fa-thumbs-down"></i> Deduction Records</a></li>		
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/deductions/index'); ?>"><i class="fa fa-thumbs-down"></i> Deduction Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/parttimejobs/index'); ?>"><i class="fa fa-desktop"></i> Part Time Jobs</a></li>
 				</ul>
             </li>
             <li class="treeview">
