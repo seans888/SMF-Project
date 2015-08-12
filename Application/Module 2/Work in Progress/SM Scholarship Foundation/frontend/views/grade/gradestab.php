@@ -7,6 +7,8 @@ use common\models\User;
 use common\models\Scholars;
 use common\models\Schools;
 use common\models\Grades;
+use kartik\tabs\TabsX;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\models\GradeSearch */
@@ -19,34 +21,30 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1 style="margin-top:100px;"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-     <?= Tabs::widget([
-    'items' => [
-        [
-            'label' => 'Grade Records',
-            'content' =>  $this->render('index'),
-            'active' => true
-        ],
-        [
-            'label' => 'Past Stipend',
-            'content' => $this->render('paststipendtab'),
-            'active' => true
-        ],
-		 [
-            'label' => 'Deductions',
-            'content' => $this->render('deductions'),
-            'active' => true
-        ],
-		 [
-            'label' => 'Refunds',
-            'content' => $this->render('refund'),
-            'active' => true
-        ],
+<?php 
+   $items = [
+    [
+        'label'=>'<i class="glyphicon glyphicon-user"></i> Grade Records',
+        'content'=>$this->render('index'),
+        'active'=>true,
+       
     ],
-    'options' => ['tag' => 'div'],
-    'itemOptions' => ['tag' => 'div'],
-    'headerOptions' => ['class' => 'my-class'],
-    'clientOptions' => ['collapsible' => false],
-	]); ?>
+    [
+        'label'=>'<i class="glyphicon glyphicon-home"></i> Low Grade Explanation Form',
+        'content'=>'no',
+        
+    ],
+    
+];
+// Ajax Tabs Above
+echo TabsX::widget([
+    'items'=>$items,
+    'position'=>TabsX::POS_ABOVE,
+	
+    'encodeLabels'=>false
+]);   
+   
+   ?>
+    
 
 </div>

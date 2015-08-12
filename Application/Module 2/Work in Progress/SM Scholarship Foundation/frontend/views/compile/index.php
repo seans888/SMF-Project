@@ -3,6 +3,8 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\jui\Tabs;
+use kartik\tabs\TabsX;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\CompileSearch */
@@ -15,27 +17,33 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="compile-index">
 
-    <h1 style="margin-top:100px;"><?= Html::encode($this->title) ?></h1>
+    <center><h1 style="margin-top:100px;"><?= Html::encode($this->title) ?></h1></center><br>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-   
-     <?= Tabs::widget([
-    'items' => [
-        [
-            'label' => 'Scholar Details',
-            'content' => $this->render('scholartab'),
-			'active'=>true
-        ],
-        [
-            'label' => 'School Details',
-            'content' => $this->render('schooltab'),
-			'active'=>true
-        ],
+   <?php 
+   $items = [
+    [
+        'label'=>'<i class="glyphicon glyphicon-user"></i> Scholar Details',
+        'content'=>$this->render('scholartab'),
+        'active'=>true,
+       
     ],
-    'options' => ['tag' => 'div'],
-    'itemOptions' => ['tag' => 'div'],
-    'headerOptions' => ['class' => 'my-class'],
-    'clientOptions' => ['collapsible' => false],
-	]); ?>
+    [
+        'label'=>'<i class="glyphicon glyphicon-home"></i> School Details',
+        'content'=>$this->render('schooltab'),
+        
+    ],
+    
+];
+// Ajax Tabs Above
+echo TabsX::widget([
+    'items'=>$items,
+    'position'=>TabsX::POS_ABOVE,
+	
+    'encodeLabels'=>false
+]);   
+   
+   ?>
+     
 
 </div>

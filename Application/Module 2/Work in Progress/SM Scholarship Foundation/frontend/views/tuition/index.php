@@ -1,8 +1,10 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+use kartik\grid\GridView;
 use yii\jui\Tabs;
+use kartik\tabs\TabsX;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\models\TuitionSearch */
@@ -16,8 +18,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <center><h1 style="margin-top:100px;"><?= Html::encode($this->title) ?></h1></center><br>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
- <?= GridView::widget([
+ <?php 
+   $items = [
+    [
+        'label'=>'<i class="glyphicon glyphicon-user"></i> Tuition Fee Records',
+        'content'=> GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
 		'showOnEmpty' => false,
@@ -29,5 +34,21 @@ $this->params['breadcrumbs'][] = $this->title;
             'tuitionfee_dateOfPayment',
 			'tuitionfee_paidStatus',
         ],
-    ]); ?>
+    ]),
+                   'active' => true,
+       
+    ],
+  
+    
+];
+// Ajax Tabs Above
+echo TabsX::widget([
+    'items'=>$items,
+    'position'=>TabsX::POS_ABOVE,
+	
+    'encodeLabels'=>false
+]);   
+   
+   ?>
+
 </div>

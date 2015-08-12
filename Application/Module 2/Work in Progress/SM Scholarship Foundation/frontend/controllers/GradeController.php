@@ -59,6 +59,7 @@ class GradeController extends Controller
 		}
     }
 
+
     /**
      * Displays a single Grades model.
      * @param integer $id
