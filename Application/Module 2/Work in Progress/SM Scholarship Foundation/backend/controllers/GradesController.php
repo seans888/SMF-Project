@@ -42,7 +42,7 @@ class GradesController extends Controller
         $searchModel = new ScholarsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 		
-				if(Yii::$app->request->post('hasEditable'))
+		if(Yii::$app->request->post('hasEditable'))
 		{
 			$gradeId = Yii::$app->request->post('editableKey');
 			$grade = Grades::findOne($gradeId);
