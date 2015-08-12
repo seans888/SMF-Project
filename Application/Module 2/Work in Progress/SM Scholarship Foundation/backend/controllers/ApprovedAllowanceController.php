@@ -80,15 +80,27 @@ class ApprovedAllowanceController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
+		if(Yii::$app->user->can('approve-allowance'))
+		{
+			$model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->allowance_id]);
-        } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
-        }
+			if ($model->load(Yii::$app->request->post())) {
+				if($model->approval_status=='Approved')
+				{
+					$model->approved_by = Yii::$app->user->identity->username;
+				}
+				$model->save();
+				return $this->redirect(['view', 'id' => $model->allowance_id]);
+			} else {
+				return $this->render('update', [
+					'model' => $model,
+				]);
+			}
+		}
+		else
+		{
+			throw new ForbiddenHttpException;
+		}
     }
 
     /**

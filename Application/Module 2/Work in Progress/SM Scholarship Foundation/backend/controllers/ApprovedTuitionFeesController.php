@@ -7,6 +7,7 @@ use common\models\ApprovedTuitionFees;
 use common\models\ApprovedTuitionFeesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\web\ForbiddenHttpException;
 use yii\filters\VerbFilter;
 
 /**
@@ -79,15 +80,27 @@ class ApprovedTuitionFeesController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
+		if(Yii::$app->user->can('approve-tuitionfees'))
+		{
+			$model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->tuitionfee_id]);
-        } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
-        }
+			if ($model->load(Yii::$app->request->post()) && $model->save()) {
+					if($model->approval_status=='Approved')
+					{
+						$model->approved_by = Yii::$app->user->identity->username;
+					}
+					$model->save();
+				return $this->redirect(['view', 'id' => $model->tuitionfee_id]);
+			} else {
+				return $this->render('update', [
+					'model' => $model,
+				]);
+			}
+		}
+		else
+		{
+			throw new ForbiddenHttpException;
+		}
     }
 
     /**
