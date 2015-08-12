@@ -24,7 +24,7 @@ use kartik\select2\Select2;
 		
 	<?= $form->field($model,'School_id')->widget(Select2::classname(),
 		[
-			'data'=>ArrayHelper::map(Schools::find()->all(),'School_id','school_name','School_id'),
+			'data'=>ArrayHelper::map(Schools::find()->all(),'School_id','school_name'),
 			'language'=>'en',
 			'options'=>['placeholder'=>'Select School ID'],
 			'pluginOptions'=>['allowClear'=>true],
@@ -38,8 +38,6 @@ use kartik\select2\Select2;
 	<?= $form->field($model, 'grade_units')->textInput() ?>
 
     <?= $form->field($model, 'grade_value')->textInput(['maxlength' => true]) ?>
-	
-	<?= $form->field($model, 'grade_status')->dropDownList(['PAST','PRESENT']) ?>
 	
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
