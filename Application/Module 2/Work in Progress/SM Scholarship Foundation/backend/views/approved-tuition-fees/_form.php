@@ -12,21 +12,19 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'tuitionfee_scholar_id')->textInput() ?>
+    <?= $form->field($model, 'tuitionfee_scholar_id')->textInput(['readonly'=>true]) ?>
 
-    <?= $form->field($model, 'tuitionfees_term')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'tuitionfees_term')->textInput(['readonly'=>true]) ?>
 
-    <?= $form->field($model, 'tuitionfee_amount')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'tuitionfee_amount')->textInput(['readonly'=>true]) ?>
 
-    <?= $form->field($model, 'tuitionfee_dateOfEnrollment')->textInput() ?>
+    <?= $form->field($model, 'tuitionfee_dateOfEnrollment')->textInput(['readonly'=>true]) ?>
 
-    <?= $form->field($model, 'tuitionfee_dateOfPayment')->textInput() ?>
+    <?= $form->field($model, 'tuitionfee_dateOfPayment')->textInput(['readonly'=>true]) ?>
 
-    <?= $form->field($model, 'tuitionfee_paidStatus')->dropDownList([ 'paid' => 'Paid', 'not paid' => 'Not paid', '' => '', ], ['prompt' => '']) ?>
+    <?= $form->field($model, 'tuitionfee_paidStatus')->textInput(['readonly'=>true]) ?>
 
-    <?= $form->field($model, 'approval_status')->dropDownList([ 'Approved' => 'Approved', 'Not Approved' => 'Not Approved', '' => '', ], ['prompt' => '']) ?>
-
-    <?= $form->field($model, 'approved_by')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'approval_status')->dropDownList([ 'Approved' => 'Approved', 'Not Approved' => 'Not Approved']) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
