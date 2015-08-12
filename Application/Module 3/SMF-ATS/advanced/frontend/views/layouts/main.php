@@ -40,11 +40,15 @@ AppAsset::register($this);
 				
             ];
             if (Yii::$app->user->isGuest) {
-                $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
+               // $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
                 $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
             } else {
 
-                $menuItems =[
+
+			$roles = Yii::$app->user->identity->user_type;
+			if ($roles == 'admin' || $roles == 'employee'){
+			
+			 $menuItems =[
 				['label' => 'Home', 'url' => ['/site/index']],
 				['label' => 'Alumni', 'url' => ['/alumni/index']],
 				['label' => 'Employee', 'url' => ['/employee/index']],
@@ -62,7 +66,27 @@ AppAsset::register($this);
 					
 					
                 ];
-            }
+				
+			}else{
+
+
+			
+                $menuItems =[
+				['label' => 'Home', 'url' => ['/site/index']],
+				['label' => 'Alumni', 'url' => ['/alumni/index']],
+                ['label' => 'Event', 'url' => ['/event/index']],
+				['label' => 'Testimonials', 'url' => ['/testimonials/index']],
+				[ 
+                    'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+                    'url' => ['/site/logout'],
+                    'linkOptions' => ['data-method' => 'post']],
+					
+               
+					
+					
+                ];
+				}
+			}
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => $menuItems,
