@@ -26,8 +26,6 @@ use kartik\select2\Select2;
 	
 	<?= $form->field($model, 'allowance_paidDate')->textInput(['readonly'=>true])?>
 	
-	<?= $form->field($model, 'allowance_status')->textInput(['readonly'=>true])?>
-	
     <?= $form->field($model, 'checked_by')->checkBox(['label'=> 'Checked By '.Yii::$app->user->identity->username])?>
 	
 	<?= $form->field($model, 'checked_remark')->textInput()?>
