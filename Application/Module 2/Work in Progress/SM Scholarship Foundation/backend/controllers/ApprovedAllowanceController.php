@@ -33,20 +33,13 @@ class ApprovedAllowanceController extends Controller
      */
     public function actionIndex()
     {
-		if(Yii::$app->user->can('index-approved-allowance'))
-		{	
-			$searchModel = new ApprovedAllowanceSearch();
-			$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		$searchModel = new ApprovedAllowanceSearch();
+		$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-			return $this->render('index', [
-				'searchModel' => $searchModel,
-				'dataProvider' => $dataProvider,
-			]);
-		}
-		else
-		{
-			throw new ForbiddenHttpException;
-		}
+		return $this->render('index', [
+			'searchModel' => $searchModel,
+			'dataProvider' => $dataProvider,
+		]);
     }
 
     /**

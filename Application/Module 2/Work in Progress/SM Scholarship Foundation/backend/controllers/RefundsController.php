@@ -9,8 +9,9 @@ use common\models\RefundsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\web\ForbiddenHttpException;
-use yii\filters\VerbFilter;
 use yii\db\IntegrityException;
+use yii\filters\VerbFilter;
+
 
 /**
  * RefundsController implements the CRUD actions for Refunds model.
@@ -165,8 +166,8 @@ class RefundsController extends Controller
 				try{
 				$sql = "INSERT INTO approved_refunds (refund_id, refund_scholar_id,
 				refund_amount,refund_smShare,refund_scholarShare,
-				refund_tuitionfee_id,refund_description,refund_date) VALUES(".$model->refund_id.",".$model->refund_scholar_id.",".$model->refund_amount.",".
-				$model->refund_smShare.",".$model->refund_scholarShare.",".$model->refund_tuitionfee_id.",'".
+				refund_description,refund_date) VALUES(".$model->refund_id.",".$model->refund_scholar_id.",".$model->refund_amount.",".
+				$model->refund_smShare.",".$model->refund_scholarShare.",'".
 				$model->refund_description."','".$model->refund_date."')";
 				
 				Yii::$app->db->createCommand($sql)->execute();
