@@ -192,9 +192,9 @@ class TuitionfeesController extends Controller
 			{
 				try{
 				$sql = "INSERT INTO approved_tuitionfees (tuitionfee_id, tuitionfee_scholar_id,
-				tuitionfee_term,tuitionfee_amount,tuitionfee_dateOfEnrollment,
+				tuitionfees_term,tuitionfee_amount,tuitionfee_dateOfEnrollment,
 				tuitionfee_dateOfPayment,tuitionfee_paidStatus) VALUES(".$model->tuitionfee_id.",".$model->tuitionfee_scholar_id.",'".$model->tuitionfees_term."',".
-				$model->tuitionfee_amount.",".$model->tuitionfee_dateOfEnrollment.",'2015-03-03','".
+				$model->tuitionfee_amount.",'".$model->tuitionfee_dateOfEnrollment."','".$model->tuitionfee_dateOfPayment."','".
 				$model->tuitionfee_paidStatus."')";
 				
 				Yii::$app->db->createCommand($sql)->execute();
