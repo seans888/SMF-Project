@@ -19,9 +19,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Create Scholars', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-    <br>
-	<p><b><font color=#e7bd58>Orange</font> rows are schools from NCR Areas</p>
-	<p><font color=#6a267c>Purple</font> rows are schools from Provincial Areas</b>
+        <br>
+	<p><h3><span style="background-color: #e7bd58"><b>Orange</b> rows are schools from NCR Areas</p></span>
+	<p><h3><span style="background-color: #57dbee"><b>Blue</b> rows are schools from Provincial Areas</span></h3>
 	</p>
     
     <?= GridView::widget([
@@ -66,10 +66,6 @@ $this->params['breadcrumbs'][] = $this->title;
 			],
             [
 				'class' => 'kartik\grid\EditableColumn',
-				'attribute' => 'scholar_address',
-			],
-            [
-				'class' => 'kartik\grid\EditableColumn',
             	'attribute'=>'scholar_school_id',
 				'editableOptions' => [
 					'inputType' => '\kartik\select2\Select2',
@@ -95,14 +91,6 @@ $this->params['breadcrumbs'][] = $this->title;
 			[
 				'class' => 'kartik\grid\EditableColumn',
 				'attribute' => 'scholar_contactNum',
-			],
-			[
-				'class' => 'kartik\grid\EditableColumn',
-				'attribute' => 'scholar_cashCardNum',
-			],
-			[
-				'class' => 'kartik\grid\EditableColumn',
-				'attribute' => 'scholar_sponsors',
 			],
    //       'scholar_school_area',
 
