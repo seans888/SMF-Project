@@ -134,7 +134,7 @@ DashboardAsset::register($this);
             </div>
         </div>
     </section>
-    <footer>
+    <footer  style="position: absolute; bottom: 0px; width: 100%; height: 60px">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
