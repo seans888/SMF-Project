@@ -52,12 +52,12 @@ class ApprovedTuitionfees extends \yii\db\ActiveRecord
     {
         return [
             'tuitionfee_id' => 'Tuitionfee ID',
-            'tuitionfee_scholar_id' => 'Tuitionfee Scholar ID',
-            'tuitionfees_term' => 'Tuitionfees Term',
-            'tuitionfee_amount' => 'Tuitionfee Amount',
-            'tuitionfee_dateOfEnrollment' => 'Tuitionfee Date Of Enrollment',
-            'tuitionfee_dateOfPayment' => 'Tuitionfee Date Of Payment',
-            'tuitionfee_paidStatus' => 'Tuitionfee Paid Status',
+            'tuitionfee_scholar_id' => 'Scholar ID',
+            'tuitionfees_term' => 'Term',
+            'tuitionfee_amount' => 'Amount',
+            'tuitionfee_dateOfEnrollment' => 'Date Of Enrollment',
+            'tuitionfee_dateOfPayment' => 'Date Of Payment',
+            'tuitionfee_paidStatus' => 'Paid Status',
             'approval_status' => 'Approval Status',
             'approved_by' => 'Approved By',
         ];

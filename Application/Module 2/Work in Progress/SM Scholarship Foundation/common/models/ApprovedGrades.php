@@ -53,12 +53,12 @@ class ApprovedGrades extends \yii\db\ActiveRecord
     {
         return [
             'grade_id' => 'Grade ID',
-            'grade_schoolYear' => 'Grade School Year',
-            'grade_Term' => 'Grade  Term',
-            'grade_scholar_id' => 'Grade Scholar ID',
-            'grade_subject' => 'Grade Subject',
-            'grade_units' => 'Grade Units',
-            'grade_value' => 'Grade Value',
+            'grade_schoolYear' => 'School Year',
+            'grade_Term' => 'Term',
+            'grade_scholar_id' => 'Scholar ID',
+            'grade_subject' => 'Subject',
+            'grade_units' => 'Units',
+            'grade_value' => 'Value',
             'School_id' => 'School ID',
             'approval_status' => 'Approval Status',
             'approved_by' => 'Approved By',
