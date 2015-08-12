@@ -34,12 +34,26 @@ $this->params['breadcrumbs'][] = $this->title;
        			// 'attribute'=>'School_id',
      			// 'value'=>'gradeSchool.school_name',
        		// ],
-            'grade_schoolYear',
-            'grade_Term',
-			'grade_subject',
-			'grade_units',
-            'grade_value',
-			'grade_status',
+            [
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'grade_schoolYear',
+			],
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'grade_Term',
+			],
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'grade_subject',
+			],
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'grade_units',
+			],
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'grade_value',
+			],
 			'uploaded_by',
 			'checked_by',
 			'updated_by',
