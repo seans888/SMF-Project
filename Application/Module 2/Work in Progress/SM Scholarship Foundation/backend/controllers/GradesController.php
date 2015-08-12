@@ -13,6 +13,7 @@ use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
 use common\models\Scholars;
 use common\models\Schools;
+use yii\helpers\Json;
 use yii\helpers\ArrayHelper;
 
 /**
@@ -40,7 +41,32 @@ class GradesController extends Controller
     {
         $searchModel = new ScholarsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+		
+				if(Yii::$app->request->post('hasEditable'))
+		{
+			$gradeId = Yii::$app->request->post('editableKey');
+			$grade = Grades::findOne($gradeId);
+			if(Yii::$app->user->can('update-grades'))
+			{
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Grades']);
+			$post['Grades'] = $posted;
+			
+			if($grade->load($post))
+			{
+				$grade->save();
+			}
+			echo $out;
+			return;
+			}
+			else
+			{
+				throw new ForbiddenHttpException;
+			}
+			
+		}
+		
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
