@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'tuitionfee_scholar_id')->textInput() ?>
 
-    <?= $form->field($model, 'tuitionfee_term')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'tuitionfees_term')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'tuitionfee_amount')->textInput(['maxlength' => true]) ?>
 
