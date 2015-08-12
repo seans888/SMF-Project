@@ -16,6 +16,7 @@ use yii\base\ErrorException;
 use yii\db\IntegrityException;
 use yii\web\ForbiddenHttpException;
 use yii\bootstrap\Alert;
+use yii\helpers\Json;
 /**
  * TuitionfeesController implements the CRUD actions for Tuitionfees model.
  */
@@ -41,7 +42,32 @@ class TuitionfeesController extends Controller
     {
         $searchModel = new ScholarsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$tuitionfeeId = Yii::$app->request->post('editableKey');
+			$tuitionfee = Tuitionfees::findOne($tuitionfeeId);
+			if(Yii::$app->user->can('update-tuitionfees'))
+			{
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Tuitionfees']);
+			$post['Tuitionfees'] = $posted;
+			
+			if($tuitionfee->load($post))
+			{
+				$tuitionfee->save();
+			}
+			echo $out;
+			return;
+			}
+			else
+			{
+				throw new ForbiddenHttpException;
+			}
+			
+		}
+		
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
