@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
     <br>
 	<p><b><font color=#e7bd58>Orange</font> rows are schools from NCR Areas</p>
-	<p><font color=#6a267c>Purple</font> rows are schools from Provincial Areas</b>
+	<p><font color=#57dbee>Blue</font> rows are schools from Provincial Areas</b>
 	</p>
     
     <?= GridView::widget([
