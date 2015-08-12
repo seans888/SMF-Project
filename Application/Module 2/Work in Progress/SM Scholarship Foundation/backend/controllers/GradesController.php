@@ -15,7 +15,7 @@ use common\models\Scholars;
 use common\models\Schools;
 use yii\helpers\Json;
 use yii\helpers\ArrayHelper;
-
+use yii\db\IntegrityException;
 /**
  * GradesController implements the CRUD actions for Grades model.
  */
@@ -192,9 +192,9 @@ class GradesController extends Controller
 				try{
 				$sql = "INSERT INTO approved_grades (grade_id, grade_scholar_id,
 				grade_schoolYear,grade_Term,grade_subject,
-				grade_units,grade_value,equivalence_grade_rule,School_id) VALUES(".$model->grade_id.",".$model->grade_scholar_id.",".$model->grade_schoolYear.",".
+				grade_units,grade_value,School_id) VALUES(".$model->grade_id.",".$model->grade_scholar_id.",".$model->grade_schoolYear.",".
 				$model->grade_Term.",'".$model->grade_subject."',".$model->grade_units.",'".
-				$model->grade_value."',".$model->equivalence_grade_rule.",".$model->School_id.")";
+				$model->grade_value."',".$model->School_id.")";
 				
 				Yii::$app->db->createCommand($sql)->execute();
 				
