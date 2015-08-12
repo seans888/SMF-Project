@@ -2,39 +2,45 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use common\models\User;
+use common\models\Scholars;
+use common\models\Uploadedforms;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\UploadedformsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Uploadedforms';
+$this->title = 'Uploaded Forms';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="uploadedforms-index">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Uploadedforms', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+<center style="margin-top:100px;"><h1>Uploaded Forms</h1><br> <p>
+        <?= Html::a('Upload a Form', ['create'], ['class' => 'btn btn-success']) ?>
+    </p></center>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+		'showOnEmpty'=> false,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'scholar_lastName',
-            'scholar_firstName',
-            'scholar_middleName',
+			'fileName',
             'uploadedForm',
             // 'scholar_id',
-
-            ['class' => 'yii\grid\ActionColumn'],
+			[
+            'label'=>'Scanned Document',
+            'format'=>'raw',
+				'value' => function($model){
+					$url = $model->uploadedForm;
+					
+					return Html::a(Html::img($url, ['width'=>'300']),$url);
+				}
         ],
+
+        ],
+		
+
     ]); ?>
 
 </div>

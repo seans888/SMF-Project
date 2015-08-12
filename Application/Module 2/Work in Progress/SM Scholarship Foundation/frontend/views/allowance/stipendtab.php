@@ -31,7 +31,7 @@ $username=Yii::$app->user->identity->username;
 		if($ctr->username==$username){
 		foreach($scholars as $scholarctr){
 				foreach($allowances as $allowance){
-				if($scholarctr->scholar_user_id==$ctr->id && $allowance->allowance_scholar_id==$scholarctr->scholar_user_id&&$allowance->allowance_status == 'PRESENT'){
+				if($scholarctr->scholar_user_id==$ctr->id && $allowance->allowance_scholar_id==$scholarctr->scholar_user_id){
 						echo'<tr><td><h4><center>'.$allowance->allowance_amount.'<br></center></h4></td><td><h4><center>'.$allowance->allowance_remark.'</center></h4></td><td><h4><center>'.$allowance->allowance_payStatus.'</center></h4></td><td><h4><center>'.$allowance->allowance_paidDate.'</center></h4></td></tr>';
 						
 					

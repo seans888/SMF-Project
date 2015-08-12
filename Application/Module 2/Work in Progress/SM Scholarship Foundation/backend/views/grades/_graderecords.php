@@ -14,6 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+		'pjax'=>true,
         'columns' => [
             ['class' => 'kartik\grid\SerialColumn'],
        		// 'grade_scholar_id',

@@ -71,7 +71,6 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'scholar_cashCardNum',
          // 'scholar_school_area',
 
-            ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 

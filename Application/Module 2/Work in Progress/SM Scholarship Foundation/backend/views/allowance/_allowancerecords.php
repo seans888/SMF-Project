@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+use kartik\grid\GridView;
 use dosamigos\datepicker\DatePicker;
 use common\models\ScholarsSearch;
 /* @var $this yii\web\View */
@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
     		}
     	},
         'columns' => [
-
+		['class' => 'kartik\grid\SerialColumn'],
 //          'allowance_id',
 //          'allowance_school_id',
 //          'allowance_payStatus',
@@ -63,8 +63,37 @@ $this->params['breadcrumbs'][] = $this->title;
 				]),
 			],
 			'allowance_status',
+			'uploaded_by',
+			'updated_by',
+			'checked_by',
+			'checked_remark',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'kartik\grid\ActionColumn',
+                          'template'=>'{view} {update} {check} {delete}',
+                            'buttons'=>[
+                              'update' => function ($url, $model) {     
+                                return Html::a('<span class="glyphicon glyphicon-pencil"></span>', $url, [
+                                        'title' => Yii::t('yii', 'Update'),
+                                ]);                                
+            
+                              },
+							  'check' => function ($url, $model) {     
+                                return Html::a('<span class="glyphicon glyphicon-check"></span>', $url, [
+                                        'title' => Yii::t('yii', 'Check'),
+                                ]);                                
+            
+                              },
+							  'delete' => function ($url, $model) {     
+                                return Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
+                                        'title' => Yii::t('yii', 'Delete'),
+										'data-confirm' => Yii::t('kvgrid', 'Are you sure to delete this item?'),
+										'data-method' => 'post',
+										'data-pjax' => '0'
+                                ]);                                
+            
+                              },
+                          ]                            
+			],
         ],
     ]); ?>
 

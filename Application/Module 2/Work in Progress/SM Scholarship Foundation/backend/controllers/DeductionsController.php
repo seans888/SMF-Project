@@ -63,7 +63,9 @@ class DeductionsController extends Controller
     {
         $model = new Deductions();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+			$model->uploaded_by = Yii::$app->user->identity->username;
+			$model->save();
             return $this->redirect(['view', 'id' => $model->deduction_id]);
         } else {
             return $this->render('create', [
@@ -82,7 +84,9 @@ class DeductionsController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+			$model->updated_by = Yii::$app->user->identity->username;
+			$model->save();
             return $this->redirect(['view', 'id' => $model->deduction_id]);
         } else {
             return $this->render('update', [
@@ -104,6 +108,53 @@ class DeductionsController extends Controller
         return $this->redirect(['index']);
     }
 
+	public function actionCheck($id)
+    {
+        $model = $this->findModel($id);
+
+        if ($model->load(Yii::$app->request->post())) {
+			if($model->checked_by=='1')
+			{
+				$model->checked_by = Yii::$app->user->identity->username;		
+			}
+			else
+			{
+				$model->checked_by = null;
+			}
+			$model->save();
+            return $this->redirect(['view', 'id' => $model->deduction_id]);
+        } else {
+            return $this->render('check', [
+                'model' => $model,
+            ]);
+        }	
+    }
+	
+	public function actionSend($id)
+	{
+		$model = $this->findModel($id);
+		if($model->checked_by!=null)
+		{
+			try{
+			$sql = "INSERT INTO approved_deductions (deduction_id, deduction_scholar_id,
+			deduction_date,deduction_amount,deduction_remark) VALUES(".$model->deduction_id.",".$model->deduction_scholar_id.",'".$model->deduction_date."',".
+			$model->deduction_amount.",'".$model->deduction_remark."')";
+			
+			Yii::$app->db->createCommand($sql)->execute();
+			
+			return $this->redirect(['index']);
+			
+			}catch(IntegrityException $e)
+			{
+				return $this->redirect('index.php?r=error/error');
+			}
+		}
+		else
+		{
+			return $this->redirect('index.php?r=error/error2');
+		}
+	}
+	
     /**
      * Finds the Deductions model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

@@ -8,6 +8,7 @@ use common\models\Grades;
 use common\models\GradesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\web\ForbiddenHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
 use common\models\Scholars;
@@ -65,17 +66,24 @@ class GradesController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Grades();
+		if(Yii::$app->user->can('create-grades'))
+		{
+			$model = new Grades();
 
-        if ($model->load(Yii::$app->request->post())) {
-			$model->uploaded_by = Yii::$app->user->identity->username;
-			$model->save();
-            return $this->redirect(['view', 'id' => $model->grade_id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
+			if ($model->load(Yii::$app->request->post())) {
+				$model->uploaded_by = Yii::$app->user->identity->username;
+				$model->save();
+				return $this->redirect(['view', 'id' => $model->grade_id]);
+			} else {
+				return $this->render('create', [
+					'model' => $model,
+				]);
+			}
+		}
+		else
+		{
+			throw new ForbiddenHttpException;
+		}
     }
 
     /**
@@ -86,17 +94,24 @@ class GradesController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
+		if(Yii::$app->user->can('update-grades'))
+		{
+			$model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post())) {
-			$model->updated_by = Yii::$app->user->identity->username;
-			$model->save();
-            return $this->redirect(['view', 'id' => $model->grade_id]);
-        } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
-        }
+			if ($model->load(Yii::$app->request->post())) {
+				$model->updated_by = Yii::$app->user->identity->username;
+				$model->save();
+				return $this->redirect(['view', 'id' => $model->grade_id]);
+			} else {
+				return $this->render('update', [
+					'model' => $model,
+				]);
+			}
+		}
+		else
+		{
+			throw new ForbiddenHttpException;
+		}
     }
 
     /**
@@ -114,50 +129,64 @@ class GradesController extends Controller
 	
 	public function actionCheck($id)
     {
-        $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post())) {
-			if($model->checked_by=='1')
-			{
-				$model->checked_by = Yii::$app->user->identity->username;		
-			}
-			else
-			{
-				$model->checked_by = null;
-			}
-			$model->save();
-            return $this->redirect(['view', 'id' => $model->grade_id]);
-        } else {
-            return $this->render('check', [
-                'model' => $model,
-            ]);
-        }	
-    }
-	
-	public function actionSend($id)
-	{
-		$model = $this->findModel($id);
-		if($model->checked_by!=null)
+		if(Yii::$app->user->can('create-grades'))
 		{
-			try{
-			$sql = "INSERT INTO approved_grades (grade_id, grade_scholar_id,
-			grade_schoolYear,grade_Term,grade_subject,
-			grade_units,grade_value,equivalence_grade_rule,School_id) VALUES(".$model->grade_id.",".$model->grade_scholar_id.",".$model->grade_schoolYear.",".
-			$model->grade_Term.",'".$model->grade_subject."',".$model->grade_units.",'".
-			$model->grade_value."',".$model->equivalence_grade_rule.",".$model->School_id.")";
-			
-			Yii::$app->db->createCommand($sql)->execute();
-			
-			return $this->redirect(['index']);
-			
-			}catch(IntegrityException $e)
-			{
-				return $this->redirect('index.php?r=error/error');
+			$model = $this->findModel($id);
+
+			if ($model->load(Yii::$app->request->post())) {
+				if($model->checked_by=='1')
+				{
+					$model->checked_by = Yii::$app->user->identity->username;		
+				}
+				else
+				{
+					$model->checked_by = null;
+				}
+				$model->save();
+				return $this->redirect(['view', 'id' => $model->grade_id]);
+			} else {
+				return $this->render('check', [
+					'model' => $model,
+				]);
 			}
 		}
 		else
 		{
-			return $this->redirect('index.php?r=error/error2');
+			throw new ForbiddenHttpException;
+		}
+    }
+	
+	public function actionSend($id)
+	{
+		if(Yii::$app->user->can('check-grades'))
+		{
+			$model = $this->findModel($id);
+			if($model->checked_by!=null)
+			{
+				try{
+				$sql = "INSERT INTO approved_grades (grade_id, grade_scholar_id,
+				grade_schoolYear,grade_Term,grade_subject,
+				grade_units,grade_value,equivalence_grade_rule,School_id) VALUES(".$model->grade_id.",".$model->grade_scholar_id.",".$model->grade_schoolYear.",".
+				$model->grade_Term.",'".$model->grade_subject."',".$model->grade_units.",'".
+				$model->grade_value."',".$model->equivalence_grade_rule.",".$model->School_id.")";
+				
+				Yii::$app->db->createCommand($sql)->execute();
+				
+				return $this->redirect(['index']);
+				
+				}catch(IntegrityException $e)
+				{
+					return $this->redirect('index.php?r=error/error');
+				}
+			}
+			else
+			{
+				return $this->redirect('index.php?r=error/error2');
+			}
+		}
+		else
+		{
+			throw new ForbiddenHttpException;
 		}
 	}
 

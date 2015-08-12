@@ -30,7 +30,7 @@ $username=Yii::$app->user->identity->username;
 		if($ctr->username==$username){
 		foreach($scholars as $scholarctr){
 				foreach($tuitions as $tuition){
-				if($scholarctr->scholar_user_id==$ctr->id && $tuition->tuitionfee_scholar_id==$scholarctr->scholar_user_id && $tuition->tuitionfee_status=='PAST'){
+				if($scholarctr->scholar_user_id==$ctr->id && $tuition->tuitionfee_scholar_id==$scholarctr->scholar_user_id){
 						echo'<tr><td><h4><center>'.$tuition->tuitionfee_amount.'<br></center></h4></td><td><h4><center>'.$tuition->tuitionfees_term.'<br></center></h4></td><td><h4><center>'.$tuition->tuitionfee_dateOfEnrollment.'</center></h4></td><td><h4><center>'.$tuition->tuitionfee_dateOfPayment.'</center></h4></td><td><h4><center>'.$tuition->tuitionfee_paidStatus.'</center></h4></td></tr>';
 						
 						

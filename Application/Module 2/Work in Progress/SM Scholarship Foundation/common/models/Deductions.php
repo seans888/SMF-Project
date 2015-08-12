@@ -35,7 +35,8 @@ class Deductions extends \yii\db\ActiveRecord
             [['deduction_date'], 'safe'],
             [['deduction_amount'], 'number'],
             [['deduction_scholar_id'], 'integer'],
-            [['deduction_remark'], 'string', 'max' => 100]
+            [['deduction_remark','uploaded_by',
+			'checked_by','checked_remark','updated_by'], 'string', 'max' => 100]
         ];
     }
 
@@ -50,6 +51,10 @@ class Deductions extends \yii\db\ActiveRecord
             'deduction_amount' => 'Deduction Amount',
             'deduction_remark' => 'Deduction Remark',
             'deduction_scholar_id' => 'Deduction Scholar ID',
+            'uploaded_by' => 'Created By',
+            'checked_by' => 'Checked By',
+            'checked_remark' => 'Remark',
+            'updated_by' => 'Updated By',
         ];
     }
 

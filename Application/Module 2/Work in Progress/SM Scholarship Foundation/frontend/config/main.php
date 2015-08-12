@@ -19,6 +19,9 @@ return [
                 'name' => '_frontendUser', // unique for frontend
             ]
         ],
+		   'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+        ],
         'session' => [
             'name' => 'PHPFRONTSESSID',
             'savePath' => sys_get_temp_dir(),

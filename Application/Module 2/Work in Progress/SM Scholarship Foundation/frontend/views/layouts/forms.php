@@ -55,10 +55,10 @@ DashboardAsset::register($this);
                         <a class="page-scroll" href="<?php echo 'index.php?r=allowance/create'?>"><font style="color:#e6e600">Forms</font></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="<?php echo 'index.php?r=compile/create'?>"><font style="color:#e6e600">Calendar</font></a>
+                        <a class="page-scroll" href="<?php echo 'index.php?r=event/index'?>"><font style="color:#e6e600">Calendar</font></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="<?php echo 'index.php?r=event/create'?>"><font style="color:#e6e600">Contact</font></a>
+                        <a class="page-scroll" href="<?php echo 'index.php?r=emails/create'?>"><font style="color:#e6e600">Contact</font></a>
                     </li>
 					<li>
 					 <?php
@@ -100,7 +100,7 @@ DashboardAsset::register($this);
             </div>
              <div class="row" >
                 <div class="col-md-4 col-sm-6 portfolio-item" style="margin-left:160px;">
-                    <a href="<?php echo'index.php?r=compile/index'?>" class="portfolio-link" data-toggle="modal">
+                    <a href="<?php echo'index.php?r=parttimejobs/index'?>" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 
@@ -114,7 +114,7 @@ DashboardAsset::register($this);
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item" style="margin-left:80px;">
-                    <a href="<?php echo 'index.php?r=uploadedforms/create'?>" class="portfolio-link" data-toggle="modal" >
+                    <a href="<?php echo 'index.php?r=uploadedforms/index'?>" class="portfolio-link" data-toggle="modal" >
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 
