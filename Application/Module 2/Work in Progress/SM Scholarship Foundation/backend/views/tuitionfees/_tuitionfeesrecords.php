@@ -55,6 +55,10 @@ $this->params['breadcrumbs'][] = $this->title;
 			],
             [
 				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'tuitionfees_term',
+			],
+            [
+				'class' => 'kartik\grid\EditableColumn',
             	'attribute'=>'tuitionfee_dateOfEnrollment',
 				'editableOptions' => [
 					'inputType' => 'widget',
