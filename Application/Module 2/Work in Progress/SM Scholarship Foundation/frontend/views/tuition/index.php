@@ -14,30 +14,20 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="tuition-index">
 
-    <h1 style="margin-top:100px;"><?= Html::encode($this->title) ?></h1>
+    <center><h1 style="margin-top:100px;"><?= Html::encode($this->title) ?></h1></center><br>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-	<?= Tabs::widget([
-		'items' => [
-        [
-            'label' => 'Actual Tuition Fees',
-            'content' => $this->render('tuitiontab'),
-            'active' => true
+
+ <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+		'showOnEmpty' => false,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+            'tuitionfee_amount',
+            'tuitionfees_term',
+            'tuitionfee_dateOfEnrollment',
+            'tuitionfee_dateOfPayment',
+			'tuitionfee_paidStatus',
         ],
-        [
-            'label' => 'Past Tuition Fees',
-            'content' =>$this->render('pasttuitiontab'),
-            'active' => true
-        ],
-        [
-            'label' => 'Fees Shouldered by SM',
-            'content' => 'No Details of this yet.'
-            ,
-        ],
-    
-    ],
-    'options' => ['tag' => 'div'],
-    'itemOptions' => ['tag' => 'div'],
-    'headerOptions' => ['class' => 'my-class'],
-    'clientOptions' => ['collapsible' => false],
-]); ?>
+    ]); ?>
 </div>

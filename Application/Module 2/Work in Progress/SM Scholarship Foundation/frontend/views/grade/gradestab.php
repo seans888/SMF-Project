@@ -15,40 +15,38 @@ use common\models\Grades;
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-
 <div class="grades-index">
 
+    <h1 style="margin-top:100px;"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-	<?php 
-	echo'<table width=100% border=2><tr><td><h3><center>Grade Subject</center></h3></td><td><h3><center>Grade Value</center></h3></td><td><h3><center>No.of Units</center></h3></td><td><h3><center>School Year</center></h3></td><td><h3><center>Term</center></h3></td></tr>';
-$users = User::find()->all();
-$grades = Grades::find()->all();
-$scholars = Scholars::find()->all();
-$gpa1=0;$gpa2=0;
-$username=Yii::$app->user->identity->username;
 
-		foreach($users as $ctr){
-		if($ctr->username==$username){
-		foreach($scholars as $scholarctr){
-				foreach($grades as $grade){
-				if($scholarctr->scholar_user_id==$ctr->id && $grade->grade_scholar_id==$scholarctr->scholar_user_id){
-					
-						$present=$grade;
-						echo'<tr><td><h4><center>'.$present->grade_subject.'<br></center></h4></td><td><h4><center>'.$present->grade_value.'</center></h4></td><td><h4><center>'.$present->grade_units.'</center></h4></td><td><h4><center>'.$present->grade_schoolYear.'</center></h4></td><td><h4><center>'.$present->grade_Term.'</center></h4></td></tr>';
-					
-						
-						
-					
-					
-					
-				}
-				}
-				}
-			}
-		}
-		echo '</table>';
-?>
-	
-
+     <?= Tabs::widget([
+    'items' => [
+        [
+            'label' => 'Grade Records',
+            'content' =>  $this->render('index'),
+            'active' => true
+        ],
+        [
+            'label' => 'Past Stipend',
+            'content' => $this->render('paststipendtab'),
+            'active' => true
+        ],
+		 [
+            'label' => 'Deductions',
+            'content' => $this->render('deductions'),
+            'active' => true
+        ],
+		 [
+            'label' => 'Refunds',
+            'content' => $this->render('refund'),
+            'active' => true
+        ],
+    ],
+    'options' => ['tag' => 'div'],
+    'itemOptions' => ['tag' => 'div'],
+    'headerOptions' => ['class' => 'my-class'],
+    'clientOptions' => ['collapsible' => false],
+	]); ?>
 
 </div>

@@ -37,12 +37,26 @@ class GradeController extends Controller
 	
     public function actionIndex()
     {
-	$grades = Grades::find()->all();
+		$username=Yii::$app->user->identity->username;
 		$users = User::find()->all();
 		$scholars = Scholars::find()->all();
-	
-	
-		return $this->render('index',array('users'=>$users,'scholars'=>$scholars,'grades'=>$grades));
+		$model = new Grades();
+		
+		foreach($users as $user){
+			foreach($scholars as $scholar){
+				if($user->username==$username&&$user->id==$scholar->scholar_id){
+					$model->grade_scholar_id=$scholar->scholar_id;
+					
+					$searchModel = new GradesSearch($model);
+					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+					return $this->render('index', [
+					'searchModel' => $searchModel,
+					'dataProvider' => $dataProvider,
+					]);
+				}
+
+			}
+		}
     }
 
     /**
@@ -65,13 +79,13 @@ class GradeController extends Controller
 	
     public function actionCreate()
     {
-		$this->layout = 'records';
+	
         $model = new Grades();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->grade_id]);
         } else {
-            return $this->render('create', [
+            return $this->render('gradestab', [
                 'model' => $model,
             ]);
         }
@@ -85,33 +99,24 @@ class GradeController extends Controller
      */
     public function actionUpdate($id)
     {
-       $username=Yii::$app->user->identity->username;
-		$users= User::find()->all();
-		$grades = Grades::find()->all();
-		$model = new Grades();
-		foreach($users as $user){
-			foreach($grades as $grade){
-				if($user->username==$username&&$user->id==$grade->grade_scholar_id){
-					$id=$grade->grade_id;
-					$model = $this->findModel($id);
-					if ($model->load(Yii::$app->request->post()) && $model->save()) {
-						$fileName = $model->grade_id."gradeform";
-						$model->file = UploadedFile::getInstance($model,'file');
-						if($model->file != null)
-						{
-						$model->file->saveAs('GradeForm/'.$fileName.'.'.$model->file->extension);
-						$model->grade_grade_form = 'GradeForm/'.$fileName.'.'.$model->file->extension;
-						}
-						$model->save();
-						return $this->redirect(['view', 'id' => $model->grade_id]);
-					return $this->redirect(['view', 'id' => $model->grade_id]);
-					} else {
-					return $this->render('update', [
+
+			if(Yii::$app->user->can('update-grades'))
+		{
+			$model = $this->findModel($id);
+
+			if ($model->load(Yii::$app->request->post())) {
+				$model->updated_by = Yii::$app->user->identity->username;
+				$model->save();
+				return $this->redirect(['view', 'id' => $model->grade_id]);
+			} else {
+				return $this->render('update', [
 					'model' => $model,
-					]);
-					}
-				}
+				]);
 			}
+		}
+		else
+		{
+			throw new ForbiddenHttpException;
 		}
     }
 
