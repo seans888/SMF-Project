@@ -149,7 +149,7 @@ DashboardAsset::register($this);
               </a>
               <ul class="treeview-menu">
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-grades/index'); ?>"><i class="fa fa-graduation-cap"></i> Grade Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-tuitionfees/index'); ?>"><i class="fa fa-money"></i> Tuition Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-tuition-fees/index'); ?>"><i class="fa fa-money"></i> Tuition Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-allowance/index'); ?>"><i class="fa fa-credit-card"></i> Allowance Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-refunds/index'); ?>"><i class="fa fa-thumbs-up"></i> Refund Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-deductions/index'); ?>"><i class="fa fa-thumbs-down"></i> Deduction Records</a></li>		
