@@ -28,8 +28,6 @@ use kartik\select2\Select2;
 	
 	<?= $form->field($model, 'grade_value')->textInput(['readonly'=>true]) ?>
 	
-	<?= $form->field($model, 'equivalence_grade_rule')->textInput(['readonly'=>true]) ?>
-	
 	<?= $form->field($model, 'School_id')->textInput(['readonly'=>true]) ?>
 	
     <?= $form->field($model, 'checked_by')->checkBox(['label'=> 'Checked By '.Yii::$app->user->identity->username])?>

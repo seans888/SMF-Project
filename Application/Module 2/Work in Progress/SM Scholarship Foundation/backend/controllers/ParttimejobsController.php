@@ -3,17 +3,19 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\ApprovedAllowance;
-use common\models\ApprovedAllowanceSearch;
+use common\models\ScholarsSearch;
+use common\models\Parttimejobs;
+use common\models\ParttimejobsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\web\ForbiddenHttpException;
 use yii\filters\VerbFilter;
+use common\models\Scholars;
+use common\models\User;
 
 /**
- * ApprovedAllowanceController implements the CRUD actions for ApprovedAllowance model.
+ * ParttimejobsController implements the CRUD actions for Parttimejobs model.
  */
-class ApprovedAllowanceController extends Controller
+class ParttimejobsController extends Controller
 {
     public function behaviors()
     {
@@ -28,22 +30,22 @@ class ApprovedAllowanceController extends Controller
     }
 
     /**
-     * Lists all ApprovedAllowance models.
+     * Lists all Parttimejobs models.
      * @return mixed
      */
     public function actionIndex()
     {
-		$searchModel = new ApprovedAllowanceSearch();
-		$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $searchModel = new ScholarsSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-		return $this->render('index', [
-			'searchModel' => $searchModel,
-			'dataProvider' => $dataProvider,
-		]);
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);		
     }
 
     /**
-     * Displays a single ApprovedAllowance model.
+     * Displays a single Parttimejobs model.
      * @param integer $id
      * @return mixed
      */
@@ -55,25 +57,38 @@ class ApprovedAllowanceController extends Controller
     }
 
     /**
-     * Creates a new ApprovedAllowance model.
+     * Creates a new Parttimejobs model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new ApprovedAllowance();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->allowance_id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
+		$username=Yii::$app->user->identity->username;
+		$users = User::find()->all();
+		$scholars = Scholars::find()->all();
+		$model = new Parttimejobs();
+		
+		foreach($users as $user){
+			foreach($scholars as $scholar){
+				if($user->username==$username&&$user->id==$scholar->scholar_id){
+					$model->job_scholar_id=$scholar->scholar_id;
+	
+					if ($model->load(Yii::$app->request->post()) && $model->save()) {
+					return $this->redirect(['index', 'id' => $model->id]);
+					} else {
+					return $this->render('create', [
+					'model' => $model,
+					]);
+					}
+				}
+			}
+		}
+      
+		
     }
 
     /**
-     * Updates an existing ApprovedAllowance model.
+     * Updates an existing Parttimejobs model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -83,7 +98,7 @@ class ApprovedAllowanceController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->allowance_id]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -92,7 +107,7 @@ class ApprovedAllowanceController extends Controller
     }
 
     /**
-     * Deletes an existing ApprovedAllowance model.
+     * Deletes an existing Parttimejobs model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -105,15 +120,15 @@ class ApprovedAllowanceController extends Controller
     }
 
     /**
-     * Finds the ApprovedAllowance model based on its primary key value.
+     * Finds the Parttimejobs model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return ApprovedAllowance the loaded model
+     * @return Parttimejobs the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = ApprovedAllowance::findOne($id)) !== null) {
+        if (($model = Parttimejobs::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

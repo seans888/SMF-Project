@@ -41,7 +41,7 @@ class Tuitionfees extends \yii\db\ActiveRecord
     {
         return [
             [['tuitionfee_scholar_id'], 'integer','message'=>'Only numbers are allowed'],
-			[['tuitionfee_amount'], 'number','message'=>'Only numbers are allowed'],
+			[['tuitionfee_amount','tuitionfees_term'], 'number','message'=>'Only numbers are allowed'],
             [['tuitionfee_dateOfEnrollment', 'tuitionfee_dateOfPayment'], 'safe'],
 			[['tuitionfee_scholar_id','tuitionfee_amount','tuitionfee_paidStatus'],'required'],
             [['tuitionfee_paidStatus'], 'string'],
@@ -62,6 +62,7 @@ class Tuitionfees extends \yii\db\ActiveRecord
             'tuitionfee_scholar_firstName' => 'First Name',
             'tuitionfee_scholar_middleName' => 'Middle Name',
             'tuitionfee_amount' => 'Tuition Amount',
+			'tuitionfees_term' => 'Term',
             'tuitionfee_dateOfEnrollment' => 'Date Of Enrollment',
             'tuitionfee_dateOfPayment' => 'Date Of Payment',
             'tuitionfee_paidStatus' => 'Payment Status',
