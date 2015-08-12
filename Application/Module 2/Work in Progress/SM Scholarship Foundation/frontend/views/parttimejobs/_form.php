@@ -14,7 +14,7 @@ use dosamigos\datepicker\DatePicker;
     <?php $form = ActiveForm::begin(); ?>
 
 	
-    <?= $form->field($model, 'job_location')->dropDownList(['Sample Company 1'=>'Sample Company 1','Sample Company 2'=>'Sample Company 2','Sample Company 3'=>'Sample Company 3','Sample Company 4'=>'Sample Company 4'],['prompt' => 'Select Location']) ?>
+    <?= $form->field($model, 'job_location')->textInput() ?>
 
     <?= $form->field($model, 'job_startDate')->widget(
 			DatePicker::className(), [

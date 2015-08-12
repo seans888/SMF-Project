@@ -37,6 +37,18 @@ $this->params['breadcrumbs'][] = $this->title;
 					return Html::a(Html::img($url, ['width'=>'300']),$url);
 				}
         ],
+		[
+
+            'class' => 'yii\grid\ActionColumn',
+
+            'header'=>'Action',
+
+            'headerOptions' => ['width' => '80'],
+
+            'template' => '{update} {delete}',
+
+        ],
+
 
         ],
 		
