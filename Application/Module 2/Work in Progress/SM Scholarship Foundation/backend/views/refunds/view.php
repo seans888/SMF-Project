@@ -42,7 +42,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'refund_smShare',
             'refund_scholarShare',
             'refund_scholar_id',
-            'refund_tuitionfee_id',
             'refund_description',
             'refund_date',
             'uploaded_by',
