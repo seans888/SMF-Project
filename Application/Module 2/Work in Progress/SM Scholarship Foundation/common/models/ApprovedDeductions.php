@@ -15,6 +15,8 @@ use Yii;
  * @property string $approval_status
  * @property string $approved_by
  * @property string $approved_remark
+ *
+ * @property Scholars $deductionScholar
  */
 class ApprovedDeductions extends \yii\db\ActiveRecord
 {
@@ -56,5 +58,13 @@ class ApprovedDeductions extends \yii\db\ActiveRecord
             'approved_by' => 'Approved By',
             'approved_remark' => 'Approved Remark',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDeductionScholar()
+    {
+        return $this->hasOne(Scholars::className(), ['scholar_id' => 'deduction_scholar_id']);
     }
 }

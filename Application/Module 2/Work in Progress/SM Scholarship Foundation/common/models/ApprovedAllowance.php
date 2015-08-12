@@ -18,6 +18,9 @@ use Yii;
  * @property string $approval_status
  * @property string $approved_by
  * @property string $approved_remark
+ *
+ * @property Scholars $allowanceScholar
+ * @property Schools $allowanceSchool
  */
 class ApprovedAllowance extends \yii\db\ActiveRecord
 {
@@ -63,5 +66,21 @@ class ApprovedAllowance extends \yii\db\ActiveRecord
             'approved_by' => 'Approved By',
             'approved_remark' => 'Approved Remark',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getAllowanceScholar()
+    {
+        return $this->hasOne(Scholars::className(), ['scholar_id' => 'allowance_scholar_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getAllowanceSchool()
+    {
+        return $this->hasOne(Schools::className(), ['School_id' => 'allowance_school_id']);
     }
 }
