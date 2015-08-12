@@ -23,8 +23,11 @@ body {
 
 .jumbotron {
     text-align: center;
-    background-color: cyan;
-	border: 5px blue ridge;
+	background-color:transparent;
+	color:white;
+	width:1100px;
+	height: 300px;
+	
 }
 
 .jumbotron .btn {
