@@ -66,10 +66,6 @@ $this->params['breadcrumbs'][] = $this->title;
 			],
             [
 				'class' => 'kartik\grid\EditableColumn',
-				'attribute' => 'scholar_address',
-			],
-            [
-				'class' => 'kartik\grid\EditableColumn',
             	'attribute'=>'scholar_school_id',
 				'editableOptions' => [
 					'inputType' => '\kartik\select2\Select2',
@@ -95,14 +91,6 @@ $this->params['breadcrumbs'][] = $this->title;
 			[
 				'class' => 'kartik\grid\EditableColumn',
 				'attribute' => 'scholar_contactNum',
-			],
-			[
-				'class' => 'kartik\grid\EditableColumn',
-				'attribute' => 'scholar_cashCardNum',
-			],
-			[
-				'class' => 'kartik\grid\EditableColumn',
-				'attribute' => 'scholar_sponsors',
 			],
    //       'scholar_school_area',
 
