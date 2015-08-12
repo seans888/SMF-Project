@@ -18,6 +18,7 @@ $this->title = 'SM Foundation Alumni Tracking System';
             <div class="col-lg-4">
                 <h2>Alumni</h2>
 				<img src = "images/alumni.jpg" height="150px" width="250px">
+				<a href = "http://localhost/SMF_Alumni/SMF-Project/Application/Module%203/SMF-ATS/advanced/frontend/web/index.php?r=alumni%2Findex"> ALUMNI </a>
                 <p>An alumnus or alumna is a former student and most often a graduate of an educational institution (school, college, university).
                     An alumnus (masculine, plural alumni) or alumna (feminine, plural alumnae) is a former student or pupil of a school, college, 
 					or university. Commonly, but not always, the word refers to a graduate of the educational institute in question. An alumnus can 

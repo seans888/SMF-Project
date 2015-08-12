@@ -31,7 +31,7 @@ class SiteController extends Controller
                     [
                         'actions' => ['signup'],
                         'allow' => true,
-                        'roles' => ['?'],
+                        'roles' => ['@'],
                     ],
                     [
                         'actions' => ['logout'],
@@ -139,9 +139,9 @@ class SiteController extends Controller
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
-                if (Yii::$app->getUser()->login($user)) {
-                    return $this->goHome();
-                }
+            
+                    return $this->redirect(['/user/index']);
+                
             }
         }
 
