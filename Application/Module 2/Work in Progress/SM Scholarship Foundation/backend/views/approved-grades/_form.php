@@ -12,23 +12,19 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'grade_schoolYear')->textInput() ?>
+    <?= $form->field($model, 'grade_schoolYear')->textInput(['readonly'=>true]) ?>
 
-    <?= $form->field($model, 'grade_Term')->textInput() ?>
+    <?= $form->field($model, 'grade_Term')->textInput(['readonly'=>true]) ?>
 
-    <?= $form->field($model, 'grade_scholar_id')->textInput() ?>
+    <?= $form->field($model, 'grade_scholar_id')->textInput(['readonly'=>true]) ?>
 
-    <?= $form->field($model, 'grade_subject')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'grade_subject')->textInput(['readonly'=>true]) ?>
 
-    <?= $form->field($model, 'grade_units')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'grade_units')->textInput(['readonly'=>true]) ?>
 
-    <?= $form->field($model, 'grade_value')->textInput() ?>
+    <?= $form->field($model, 'grade_value')->textInput(['readonly'=>true]) ?>
 
-    <?= $form->field($model, 'equivalence_grade_rule')->textInput() ?>
-
-    <?= $form->field($model, 'School_id')->textInput() ?>
-
-    <?= $form->field($model, 'approval_status')->dropDownList([ 'Approved' => 'Approved', 'Not Approved' => 'Not Approved', '' => '', ], ['prompt' => '']) ?>
+    <?= $form->field($model, 'approval_status')->dropDownList([ 'Approved' => 'Approved', 'Not Approved' => 'Not Approved' ]) ?>
 
     <?= $form->field($model, 'approved_by')->textInput(['maxlength' => true]) ?>
 

@@ -8,8 +8,10 @@ use common\models\Refunds;
 use common\models\RefundsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
+use yii\web\ForbiddenHttpException;
 use yii\db\IntegrityException;
+use yii\filters\VerbFilter;
+
 
 /**
  * RefundsController implements the CRUD actions for Refunds model.
@@ -62,18 +64,25 @@ class RefundsController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Refunds();
-
-        if ($model->load(Yii::$app->request->post())) 
+		if(Yii::$app->user->can('create-allowance'))
 		{
-			$model->uploaded_by = Yii::$app->user->identity->username;
-			$model->save();
-            return $this->redirect(['view', 'id' => $model->refund_id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
+			$model = new Refunds();
+
+			if ($model->load(Yii::$app->request->post())) 
+			{
+				$model->uploaded_by = Yii::$app->user->identity->username;
+				$model->save();
+				return $this->redirect(['view', 'id' => $model->refund_id]);
+			} else {
+				return $this->render('create', [
+					'model' => $model,
+				]);
+			}
+		}
+		else
+		{
+			throw new ForbiddenHttpException;
+		}
     }
 
     /**
@@ -84,18 +93,25 @@ class RefundsController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post())) 
+		if(Yii::$app->user->can('update-allowance'))
 		{
-			$model->updated_by = Yii::$app->user->identity->username;
-			$model->save();
-            return $this->redirect(['view', 'id' => $model->refund_id]);
-        } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
-        }
+			$model = $this->findModel($id);
+
+			if ($model->load(Yii::$app->request->post())) 
+			{
+				$model->updated_by = Yii::$app->user->identity->username;
+				$model->save();
+				return $this->redirect(['view', 'id' => $model->refund_id]);
+			} else {
+				return $this->render('update', [
+					'model' => $model,
+				]);
+			}
+		}
+		else
+		{
+			throw new ForbiddenHttpException;
+		}
     }
 
     /**
@@ -113,50 +129,64 @@ class RefundsController extends Controller
 	
     public function actionCheck($id)
     {
-        $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post())) {
-			if($model->checked_by=='1')
-			{
-				$model->checked_by = Yii::$app->user->identity->username;		
-			}
-			else
-			{
-				$model->checked_by = null;
-			}
-			$model->save();
-            return $this->redirect(['view', 'id' => $model->refund_id]);
-        } else {
-            return $this->render('check', [
-                'model' => $model,
-            ]);
-        }	
-    }
-	
-	public function actionSend($id)
-	{
-		$model = $this->findModel($id);
-		if($model->checked_by!=null)
+		if(Yii::$app->user->can('check-allowance'))
 		{
-			try{
-			$sql = "INSERT INTO approved_refunds (refund_id, refund_scholar_id,
-			refund_amount,refund_smShare,refund_scholarShare,
-			refund_tuitionfee_id,refund_description,refund_date) VALUES(".$model->refund_id.",".$model->refund_scholar_id.",".$model->refund_amount.",".
-			$model->refund_smShare.",".$model->refund_scholarShare.",".$model->refund_tuitionfee_id.",'".
-			$model->refund_description."','".$model->refund_date."')";
-			
-			Yii::$app->db->createCommand($sql)->execute();
-			
-			return $this->redirect(['index']);
-			
-			}catch(IntegrityException $e)
-			{
-				return $this->redirect('index.php?r=error/error');
+			$model = $this->findModel($id);
+
+			if ($model->load(Yii::$app->request->post())) {
+				if($model->checked_by=='1')
+				{
+					$model->checked_by = Yii::$app->user->identity->username;		
+				}
+				else
+				{
+					$model->checked_by = null;
+				}
+				$model->save();
+				return $this->redirect(['view', 'id' => $model->refund_id]);
+			} else {
+				return $this->render('check', [
+					'model' => $model,
+				]);
 			}
 		}
 		else
 		{
-			return $this->redirect('index.php?r=error/error2');
+			throw new ForbiddenHttpException;
+		}
+    }
+	
+	public function actionSend($id)
+	{
+		if(Yii::$app->user->can('check-allowance'))
+		{
+			$model = $this->findModel($id);
+			if($model->checked_by!=null)
+			{
+				try{
+				$sql = "INSERT INTO approved_refunds (refund_id, refund_scholar_id,
+				refund_amount,refund_smShare,refund_scholarShare,
+				refund_description,refund_date) VALUES(".$model->refund_id.",".$model->refund_scholar_id.",".$model->refund_amount.",".
+				$model->refund_smShare.",".$model->refund_scholarShare.",'".
+				$model->refund_description."','".$model->refund_date."')";
+				
+				Yii::$app->db->createCommand($sql)->execute();
+				
+				return $this->redirect(['index']);
+				
+				}catch(IntegrityException $e)
+				{
+					return $this->redirect('index.php?r=error/error');
+				}
+			}
+			else
+			{
+				return $this->redirect('index.php?r=error/error2');
+			}
+		}
+		else
+		{
+			throw new ForbiddenHttpException;
 		}
 	}
 

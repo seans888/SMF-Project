@@ -49,34 +49,48 @@ $this->params['breadcrumbs'][] = $this->title;
 				// 'attribute'=>'tuitionfee_scholar_middleName',
 				// 'value'=>'tuitionfeeScholar.scholar_middleName',
 			// ],
-            'tuitionfee_amount',
             [
-				'attribute'=>'tuitionfee_dateOfEnrollment',
-				'value'=>'tuitionfee_dateOfEnrollment',
-				'format'=>'raw',
-				'filter'=>DatePicker::widget([
-					'model' => $searchModel,
-					'attribute' => 'tuitionfee_dateOfEnrollment',
-						'clientOptions' => [
-							'autoclose' => true,
-							'format' => 'yyyy-mm-dd',
-						]
-				]),
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'tuitionfee_amount',
 			],
-             [
-				'attribute'=>'tuitionfee_dateOfPayment',
-				'value'=>'tuitionfee_dateOfPayment',
-				'format'=>'raw',
-				'filter'=>DatePicker::widget([
-					'model' => $searchModel,
-					'attribute' => 'tuitionfee_dateOfPayment',
-						'clientOptions' => [
-							'autoclose' => true,
-							'format' => 'yyyy-mm-dd',
-						]
-				]),
+            [
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'tuitionfees_term',
 			],
-			'tuitionfee_status',
+            [
+				'class' => 'kartik\grid\EditableColumn',
+            	'attribute'=>'tuitionfee_dateOfEnrollment',
+				'editableOptions' => [
+					'inputType' => 'widget',
+					'options'=>
+					[
+						'model' => $searchModel,
+
+							'clientOptions' => [
+								'autoclose' => true,
+								'format' => 'yyyy-mm-dd',
+							]
+					],
+					'widgetClass'=>'dosamigos\datepicker\DatePicker'
+				],
+            ],
+            [
+				'class' => 'kartik\grid\EditableColumn',
+            	'attribute'=>'tuitionfee_dateOfPayment',
+				'editableOptions' => [
+					'inputType' => 'widget',
+					'options'=>
+					[
+						'model' => $searchModel,
+
+							'clientOptions' => [
+								'autoclose' => true,
+								'format' => 'yyyy-mm-dd',
+							]
+					],
+					'widgetClass'=>'dosamigos\datepicker\DatePicker'
+				],
+            ],
 			'uploaded_by',
 			'checked_by',
 			'checked_remark',

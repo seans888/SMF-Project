@@ -18,6 +18,8 @@ use Yii;
  * @property string $approval_status
  * @property string $approved_by
  * @property string $approved_remark
+ *
+ * @property Scholars $refundScholar
  */
 class ApprovedRefunds extends \yii\db\ActiveRecord
 {
@@ -35,7 +37,7 @@ class ApprovedRefunds extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['refund_amount', 'refund_smShare', 'refund_scholarShare', 'refund_scholar_id', 'refund_tuitionfee_id', 'refund_description', 'refund_date'], 'required'],
+            [['refund_amount', 'refund_smShare', 'refund_scholarShare', 'refund_scholar_id', 'refund_description', 'refund_date'], 'required'],
             [['refund_amount', 'refund_smShare', 'refund_scholarShare'], 'number'],
             [['refund_scholar_id', 'refund_tuitionfee_id'], 'integer'],
             [['refund_date'], 'safe'],
@@ -62,5 +64,13 @@ class ApprovedRefunds extends \yii\db\ActiveRecord
             'approved_by' => 'Approved By',
             'approved_remark' => 'Approved Remark',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getRefundScholar()
+    {
+        return $this->hasOne(Scholars::className(), ['scholar_id' => 'refund_scholar_id']);
     }
 }

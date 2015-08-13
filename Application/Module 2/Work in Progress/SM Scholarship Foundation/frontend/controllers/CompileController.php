@@ -69,11 +69,11 @@ class CompileController extends Controller
      */
     public function actionCreate()
     {
-		$this->layout = 'calendar';
+		$this->layout = 'records';
         $model = new Compile();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->compile_id]);
+            return $this->redirect(['grades', 'id' => $model->compile_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,

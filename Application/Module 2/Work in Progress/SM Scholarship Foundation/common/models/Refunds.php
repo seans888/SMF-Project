@@ -32,7 +32,7 @@ class Refunds extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['refund_amount', 'refund_smShare', 'refund_scholarShare', 'refund_scholar_id', 'refund_tuitionfee_id', 
+            [['refund_amount', 'refund_smShare', 'refund_scholarShare', 'refund_scholar_id', 
 			'refund_description', 'refund_date'], 'required'],
             [['refund_amount', 'refund_smShare', 'refund_scholarShare'], 'number'],
             [['refund_scholar_id', 'refund_tuitionfee_id'], 'integer'],

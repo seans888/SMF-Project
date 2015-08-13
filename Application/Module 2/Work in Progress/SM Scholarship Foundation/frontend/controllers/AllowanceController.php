@@ -12,7 +12,8 @@ use common\models\User;
 use common\models\Scholars;
 use common\models\Schools;
 use frontend\models\Tuition;
-
+use common\models\Deductions;
+use common\models\Refunds;
 use common\models\Benefit;
 
 /**
@@ -39,12 +40,32 @@ class AllowanceController extends Controller
     public function actionIndex()
     {
 		
-		$schools = Schools::find()->all();
+		$username=Yii::$app->user->identity->username;
 		$users = User::find()->all();
 		$scholars = Scholars::find()->all();
-		$allowances = Allowance::find()->all();
+		$deductions = Deductions::find()->all();
+		$refunds = Refunds::find()->all();
+		$model = new Allowance();
 		
-		return $this->render('index',array('users'=>$users,'scholars'=>$scholars,'schools'=>$schools,'allowances'=>$allowances));
+		foreach($users as $user){
+			foreach($scholars as $scholar){
+				foreach($deductions as $deduction){
+					foreach($refunds as $refund){
+				if($user->username==$username&&$user->id==$scholar->scholar_id){
+					$model->allowance_scholar_id=$scholar->scholar_id;
+					
+					$searchModel = new AllowanceSearch($model);
+					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+					return $this->render('index', [
+					'searchModel' => $searchModel,
+					'dataProvider' => $dataProvider,
+					]);
+				}
+				}
+				}
+
+			}
+		}
     }
 
     /**

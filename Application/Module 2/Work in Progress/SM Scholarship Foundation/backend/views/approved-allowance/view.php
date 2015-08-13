@@ -35,7 +35,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'allowance_school_id',
             'allowance_payStatus',
             'allowance_paidDate',
-            'allowance_status',
             'approval_status',
             'approved_by',
             'approved_remark',

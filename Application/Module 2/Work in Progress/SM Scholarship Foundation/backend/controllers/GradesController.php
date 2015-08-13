@@ -13,8 +13,9 @@ use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
 use common\models\Scholars;
 use common\models\Schools;
+use yii\helpers\Json;
 use yii\helpers\ArrayHelper;
-
+use yii\db\IntegrityException;
 /**
  * GradesController implements the CRUD actions for Grades model.
  */
@@ -40,7 +41,32 @@ class GradesController extends Controller
     {
         $searchModel = new ScholarsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$gradeId = Yii::$app->request->post('editableKey');
+			$grade = Grades::findOne($gradeId);
+			if(Yii::$app->user->can('update-grades'))
+			{
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Grades']);
+			$post['Grades'] = $posted;
+			
+			if($grade->load($post))
+			{
+				$grade->save();
+			}
+			echo $out;
+			return;
+			}
+			else
+			{
+				throw new ForbiddenHttpException;
+			}
+			
+		}
+		
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -166,9 +192,9 @@ class GradesController extends Controller
 				try{
 				$sql = "INSERT INTO approved_grades (grade_id, grade_scholar_id,
 				grade_schoolYear,grade_Term,grade_subject,
-				grade_units,grade_value,equivalence_grade_rule,School_id) VALUES(".$model->grade_id.",".$model->grade_scholar_id.",".$model->grade_schoolYear.",".
+				grade_units,grade_value,School_id) VALUES(".$model->grade_id.",".$model->grade_scholar_id.",".$model->grade_schoolYear.",".
 				$model->grade_Term.",'".$model->grade_subject."',".$model->grade_units.",'".
-				$model->grade_value."',".$model->equivalence_grade_rule.",".$model->School_id.")";
+				$model->grade_value."',".$model->School_id.")";
 				
 				Yii::$app->db->createCommand($sql)->execute();
 				

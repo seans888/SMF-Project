@@ -18,7 +18,7 @@ class ApprovedGradesSearch extends ApprovedGrades
     public function rules()
     {
         return [
-            [['grade_id', 'grade_schoolYear', 'grade_Term', 'grade_scholar_id', 'grade_value', 'equivalence_grade_rule', 'School_id'], 'integer'],
+            [['grade_id', 'grade_schoolYear', 'grade_Term', 'grade_scholar_id', 'grade_value', 'School_id'], 'integer'],
             [['grade_subject', 'approval_status', 'approved_by', 'approved_remark'], 'safe'],
             [['grade_units'], 'number'],
         ];
@@ -63,7 +63,6 @@ class ApprovedGradesSearch extends ApprovedGrades
             'grade_scholar_id' => $this->grade_scholar_id,
             'grade_units' => $this->grade_units,
             'grade_value' => $this->grade_value,
-            'equivalence_grade_rule' => $this->equivalence_grade_rule,
             'School_id' => $this->School_id,
         ]);
 

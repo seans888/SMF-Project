@@ -69,7 +69,7 @@ class Grades extends \yii\db\ActiveRecord
 			'updated_by' => 'Updated By',
 			'checked_by' => 'Checked By',
 			'checked_remark' => 'Remarks',
-/* 			'equivalence_grade_rule' => 'Percentile Equivalent', */
+
         ];
     }
 
