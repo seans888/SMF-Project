@@ -92,23 +92,16 @@ class GradesController extends Controller
      */
     public function actionCreate()
     {
-		if(Yii::$app->user->can('create-grades'))
-		{
-			$model = new Grades();
+		$model = new Grades();
 
-			if ($model->load(Yii::$app->request->post())) {
-				$model->uploaded_by = Yii::$app->user->identity->username;
-				$model->save();
-				return $this->redirect(['view', 'id' => $model->grade_id]);
-			} else {
-				return $this->render('create', [
-					'model' => $model,
-				]);
-			}
-		}
-		else
-		{
-			throw new ForbiddenHttpException;
+		if ($model->load(Yii::$app->request->post())) {
+			$model->uploaded_by = Yii::$app->user->identity->username;
+			$model->save();
+			return $this->redirect(['view', 'id' => $model->grade_id]);
+		} else {
+			return $this->render('create', [
+				'model' => $model,
+			]);
 		}
     }
 
@@ -120,23 +113,16 @@ class GradesController extends Controller
      */
     public function actionUpdate($id)
     {
-		if(Yii::$app->user->can('update-grades'))
-		{
-			$model = $this->findModel($id);
+		$model = $this->findModel($id);
 
-			if ($model->load(Yii::$app->request->post())) {
-				$model->updated_by = Yii::$app->user->identity->username;
-				$model->save();
-				return $this->redirect(['view', 'id' => $model->grade_id]);
-			} else {
-				return $this->render('update', [
-					'model' => $model,
-				]);
-			}
-		}
-		else
-		{
-			throw new ForbiddenHttpException;
+		if ($model->load(Yii::$app->request->post())) {
+			$model->updated_by = Yii::$app->user->identity->username;
+			$model->save();
+			return $this->redirect(['view', 'id' => $model->grade_id]);
+		} else {
+			return $this->render('update', [
+				'model' => $model,
+			]);
 		}
     }
 
@@ -155,64 +141,50 @@ class GradesController extends Controller
 	
 	public function actionCheck($id)
     {
-		if(Yii::$app->user->can('create-grades'))
-		{
-			$model = $this->findModel($id);
+		$model = $this->findModel($id);
 
-			if ($model->load(Yii::$app->request->post())) {
-				if($model->checked_by=='1')
-				{
-					$model->checked_by = Yii::$app->user->identity->username;		
-				}
-				else
-				{
-					$model->checked_by = null;
-				}
-				$model->save();
-				return $this->redirect(['view', 'id' => $model->grade_id]);
-			} else {
-				return $this->render('check', [
-					'model' => $model,
-				]);
+		if ($model->load(Yii::$app->request->post())) {
+			if($model->checked_by=='1')
+			{
+				$model->checked_by = Yii::$app->user->identity->username;		
 			}
-		}
-		else
-		{
-			throw new ForbiddenHttpException;
+			else
+			{
+				$model->checked_by = null;
+			}
+			$model->save();
+			return $this->redirect(['view', 'id' => $model->grade_id]);
+		} else {
+			return $this->render('check', [
+				'model' => $model,
+			]);
 		}
     }
 	
 	public function actionSend($id)
 	{
-		if(Yii::$app->user->can('check-grades'))
+		$model = $this->findModel($id);
+		if($model->checked_by!=null)
 		{
-			$model = $this->findModel($id);
-			if($model->checked_by!=null)
+			try{
+			$sql = "INSERT INTO approved_grades (grade_id, grade_scholar_id,
+			grade_schoolYear,grade_Term,grade_subject,
+			grade_units,grade_value,School_id) VALUES(".$model->grade_id.",".$model->grade_scholar_id.",".$model->grade_schoolYear.",".
+			$model->grade_Term.",'".$model->grade_subject."',".$model->grade_units.",'".
+			$model->grade_value."',".$model->School_id.")";
+			
+			Yii::$app->db->createCommand($sql)->execute();
+			
+			return $this->redirect(['index']);
+			
+			}catch(IntegrityException $e)
 			{
-				try{
-				$sql = "INSERT INTO approved_grades (grade_id, grade_scholar_id,
-				grade_schoolYear,grade_Term,grade_subject,
-				grade_units,grade_value,School_id) VALUES(".$model->grade_id.",".$model->grade_scholar_id.",".$model->grade_schoolYear.",".
-				$model->grade_Term.",'".$model->grade_subject."',".$model->grade_units.",'".
-				$model->grade_value."',".$model->School_id.")";
-				
-				Yii::$app->db->createCommand($sql)->execute();
-				
-				return $this->redirect(['index']);
-				
-				}catch(IntegrityException $e)
-				{
-					return $this->redirect('index.php?r=error/error');
-				}
-			}
-			else
-			{
-				return $this->redirect('index.php?r=error/error2');
+				return $this->redirect('index.php?r=error/error');
 			}
 		}
 		else
 		{
-			throw new ForbiddenHttpException;
+			return $this->redirect('index.php?r=error/error2');
 		}
 	}
 

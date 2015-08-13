@@ -63,33 +63,26 @@ class UploadedformsController extends Controller
      */
     public function actionCreate()
     {
-		if(Yii::$app->user->can('create-uploadedforms'))
-		{
-			$model = new Uploadedforms();
+		$model = new Uploadedforms();
+		
+		if ($model->load(Yii::$app->request->post())) {
 			
-			if ($model->load(Yii::$app->request->post())) {
-				
-				$model->file = UploadedFile::getInstance($model,'file');
-				if($model->file != null)
-				{
-					$fileName = md5(time()).$model->fileName." ofScholarID ".$model->uploaded_scholar_id." FileName ".$model->file->name;
-					$model->file->saveAs('Forms/'.$fileName);	
-					$model->uploadedForm = 'Forms/'.$fileName;
-			//		$filePath = 'Forms'.'\'.$fileName.'.'.$model->file->extension;
-				}
-				$model->uploaded_by = Yii::$app->user->identity->username;			
-				$model->save();
-				// return $this->redirect($model->uploadedForm)->send();
-				return $this->redirect(['view', 'id' => $model->id]);
-			} else {
-				return $this->render('create', [
-					'model' => $model,
-				]);
+			$model->file = UploadedFile::getInstance($model,'file');
+			if($model->file != null)
+			{
+				$fileName = md5(time()).$model->fileName." ofScholarID ".$model->uploaded_scholar_id." FileName ".$model->file->name;
+				$model->file->saveAs('Forms/'.$fileName);	
+				$model->uploadedForm = 'Forms/'.$fileName;
+		//		$filePath = 'Forms'.'\'.$fileName.'.'.$model->file->extension;
 			}
-		}
-		else
-		{
-			throw new ForbiddenHttpException;
+			$model->uploaded_by = Yii::$app->user->identity->username;			
+			$model->save();
+			// return $this->redirect($model->uploadedForm)->send();
+			return $this->redirect(['view', 'id' => $model->id]);
+		} else {
+			return $this->render('create', [
+				'model' => $model,
+			]);
 		}
     }
 
@@ -101,30 +94,23 @@ class UploadedformsController extends Controller
      */
     public function actionUpdate($id)
     {
-		if(Yii::$app->user->can('update-uploadedforms'))
-		{
-			$model = $this->findModel($id);
+		$model = $this->findModel($id);
 
-			if ($model->load(Yii::$app->request->post())) {
-				$model->file = UploadedFile::getInstance($model,'file');
-				if($model->file != null)
-				{
-					$fileName = md5(time()).$model->id.$model->fileName." ofScholarID ".$model->uploaded_scholar_id." FileName ".$model->file->name;
-					$model->file->saveAs('Forms/'.$fileName);	
-					$model->uploadedForm = 'Forms/'.$fileName;	
-				}		
-				$model->updated_by = Yii::$app->user->identity->username;			
-				$model->save();
-				return $this->redirect(['view', 'id' => $model->id]);
-			} else {
-				return $this->render('update', [
-					'model' => $model,
-				]);
-			}
-		}
-		else
-		{
-			throw new ForbiddenHttpException;
+		if ($model->load(Yii::$app->request->post())) {
+			$model->file = UploadedFile::getInstance($model,'file');
+			if($model->file != null)
+			{
+				$fileName = md5(time()).$model->id.$model->fileName." ofScholarID ".$model->uploaded_scholar_id." FileName ".$model->file->name;
+				$model->file->saveAs('Forms/'.$fileName);	
+				$model->uploadedForm = 'Forms/'.$fileName;	
+			}		
+			$model->updated_by = Yii::$app->user->identity->username;			
+			$model->save();
+			return $this->redirect(['view', 'id' => $model->id]);
+		} else {
+			return $this->render('update', [
+				'model' => $model,
+			]);
 		}
     }
 	
@@ -151,31 +137,24 @@ class UploadedformsController extends Controller
 	
 	public function actionCheck($id)
     {
-		if(Yii::$app->user->can('check-uploadedforms'))
-		{
-			$model = $this->findModel($id);
+		$model = $this->findModel($id);
 
-				if ($model->load(Yii::$app->request->post())) {
-					if($model->checked_by=='1')
-					{
-						$model->checked_by = Yii::$app->user->identity->username;		
-					}
-					else
-					{
-						$model->checked_by = null;
-					}
-					$model->save();
-					return $this->redirect(['view', 'id' => $model->id]);
-				} else {
-					return $this->render('check', [
-						'model' => $model,
-					]);
+			if ($model->load(Yii::$app->request->post())) {
+				if($model->checked_by=='1')
+				{
+					$model->checked_by = Yii::$app->user->identity->username;		
 				}
-		}
-		else
-		{
-			throw new ForbiddenHttpException;
-		}
+				else
+				{
+					$model->checked_by = null;
+				}
+				$model->save();
+				return $this->redirect(['view', 'id' => $model->id]);
+			} else {
+				return $this->render('check', [
+					'model' => $model,
+				]);
+			}
     }
 	
 	public function actionSend($id)

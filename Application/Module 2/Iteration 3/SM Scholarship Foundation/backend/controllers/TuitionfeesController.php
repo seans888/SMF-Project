@@ -93,23 +93,16 @@ class TuitionfeesController extends Controller
      */
     public function actionCreate()
     {
-		if(Yii::$app->user->can('create-tuitionfees'))
+		$model = new Tuitionfees();
+		if ($model->load(Yii::$app->request->post())) 
 		{
-			$model = new Tuitionfees();
-			if ($model->load(Yii::$app->request->post())) 
-			{
-				$model->uploaded_by = Yii::$app->user->identity->username;
-				$model->save();
-				return $this->redirect(['view', 'id' => $model->tuitionfee_id]);
-			} else {
-				return $this->render('create', [
-					'model' => $model,
-				]);
-			}
-		}
-		else
-		{
-			throw new ForbiddenHttpException;
+			$model->uploaded_by = Yii::$app->user->identity->username;
+			$model->save();
+			return $this->redirect(['view', 'id' => $model->tuitionfee_id]);
+		} else {
+			return $this->render('create', [
+				'model' => $model,
+			]);
 		}
     }
 
@@ -120,24 +113,17 @@ class TuitionfeesController extends Controller
      * @return mixed
      */
     public function actionUpdate($id)
-    {
-		if(Yii::$app->user->can('update-tuitionfees'))
-		{		
-			$model = $this->findModel($id);
+    {		
+		$model = $this->findModel($id);
 
-			if ($model->load(Yii::$app->request->post())) {
-				$model->updated_by = Yii::$app->user->identity->username;
-				$model->save();
-				return $this->redirect(['view', 'id' => $model->tuitionfee_id]);
-			} else {
-				return $this->render('update', [
-					'model' => $model,
-				]);
-			}
-		}
-		else
-		{
-			throw new ForbiddenHttpException;
+		if ($model->load(Yii::$app->request->post())) {
+			$model->updated_by = Yii::$app->user->identity->username;
+			$model->save();
+			return $this->redirect(['view', 'id' => $model->tuitionfee_id]);
+		} else {
+			return $this->render('update', [
+				'model' => $model,
+			]);
 		}
     }
 
@@ -156,64 +142,50 @@ class TuitionfeesController extends Controller
 	
     public function actionCheck($id)
     {
-		if(Yii::$app->user->can('check-tuitionfees'))
-		{	
-			$model = $this->findModel($id);
+		$model = $this->findModel($id);
 
-			if ($model->load(Yii::$app->request->post())) {
-				if($model->checked_by=='1')
-				{
-					$model->checked_by = Yii::$app->user->identity->username;		
-				}
-				else
-				{
-					$model->checked_by = null;
-				}
-				$model->save();
-				return $this->redirect(['view', 'id' => $model->tuitionfee_id]);
-			} else {
-				return $this->render('check', [
-					'model' => $model,
-				]);
+		if ($model->load(Yii::$app->request->post())) {
+			if($model->checked_by=='1')
+			{
+				$model->checked_by = Yii::$app->user->identity->username;		
 			}
-		}
-		else
-		{
-			throw new ForbiddenHttpException;
+			else
+			{
+				$model->checked_by = null;
+			}
+			$model->save();
+			return $this->redirect(['view', 'id' => $model->tuitionfee_id]);
+		} else {
+			return $this->render('check', [
+				'model' => $model,
+			]);
 		}
     }
 	
 	public function actionSend($id)
 	{
-		if(Yii::$app->user->can('check-tuitionfees'))
+		$model = $this->findModel($id);
+		if($model->checked_by!=null)
 		{
-			$model = $this->findModel($id);
-			if($model->checked_by!=null)
+			try{
+			$sql = "INSERT INTO approved_tuitionfees (tuitionfee_id, tuitionfee_scholar_id,
+			tuitionfees_term,tuitionfee_amount,tuitionfee_dateOfEnrollment,
+			tuitionfee_dateOfPayment,tuitionfee_paidStatus) VALUES(".$model->tuitionfee_id.",".$model->tuitionfee_scholar_id.",'".$model->tuitionfees_term."',".
+			$model->tuitionfee_amount.",'".$model->tuitionfee_dateOfEnrollment."','".$model->tuitionfee_dateOfPayment."','".
+			$model->tuitionfee_paidStatus."')";
+			
+			Yii::$app->db->createCommand($sql)->execute();
+			
+			return $this->redirect(['index']);
+			
+			}catch(IntegrityException $e)
 			{
-				try{
-				$sql = "INSERT INTO approved_tuitionfees (tuitionfee_id, tuitionfee_scholar_id,
-				tuitionfees_term,tuitionfee_amount,tuitionfee_dateOfEnrollment,
-				tuitionfee_dateOfPayment,tuitionfee_paidStatus) VALUES(".$model->tuitionfee_id.",".$model->tuitionfee_scholar_id.",'".$model->tuitionfees_term."',".
-				$model->tuitionfee_amount.",'".$model->tuitionfee_dateOfEnrollment."','".$model->tuitionfee_dateOfPayment."','".
-				$model->tuitionfee_paidStatus."')";
-				
-				Yii::$app->db->createCommand($sql)->execute();
-				
-				return $this->redirect(['index']);
-				
-				}catch(IntegrityException $e)
-				{
-					return $this->redirect('index.php?r=error/error');
-				}
-			}
-			else
-			{
-				return $this->redirect('index.php?r=error/error2');
+				return $this->redirect('index.php?r=error/error');
 			}
 		}
 		else
 		{
-			throw new ForbiddenHttpException;
+			return $this->redirect('index.php?r=error/error2');
 		}
 	}
 

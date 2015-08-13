@@ -63,23 +63,16 @@ class DeductionsController extends Controller
      */
     public function actionCreate()
     {
-		if(Yii::$app->user->can('create-allowance'))
-		{
-			$model = new Deductions();
+		$model = new Deductions();
 
-			if ($model->load(Yii::$app->request->post())) {
-				$model->uploaded_by = Yii::$app->user->identity->username;
-				$model->save();
-				return $this->redirect(['view', 'id' => $model->deduction_id]);
-			} else {
-				return $this->render('create', [
-					'model' => $model,
-				]);
-			}
-		}
-		else
-		{
-			throw new ForbiddenHttpException;
+		if ($model->load(Yii::$app->request->post())) {
+			$model->uploaded_by = Yii::$app->user->identity->username;
+			$model->save();
+			return $this->redirect(['view', 'id' => $model->deduction_id]);
+		} else {
+			return $this->render('create', [
+				'model' => $model,
+			]);
 		}
     }
 
@@ -91,23 +84,16 @@ class DeductionsController extends Controller
      */
     public function actionUpdate($id)
     {
-		if(Yii::$app->user->can('update-allowance'))
-		{
-			$model = $this->findModel($id);
+		$model = $this->findModel($id);
 
-			if ($model->load(Yii::$app->request->post())) {
-				$model->updated_by = Yii::$app->user->identity->username;
-				$model->save();
-				return $this->redirect(['view', 'id' => $model->deduction_id]);
-			} else {
-				return $this->render('update', [
-					'model' => $model,
-				]);
-			}
-		}
-		else
-		{
-			throw new ForbiddenHttpException;
+		if ($model->load(Yii::$app->request->post())) {
+			$model->updated_by = Yii::$app->user->identity->username;
+			$model->save();
+			return $this->redirect(['view', 'id' => $model->deduction_id]);
+		} else {
+			return $this->render('update', [
+				'model' => $model,
+			]);
 		}
     }
 
@@ -126,62 +112,48 @@ class DeductionsController extends Controller
 
 	public function actionCheck($id)
     {
-		if(Yii::$app->user->can('check-allowance'))
-		{
-			$model = $this->findModel($id);
+		$model = $this->findModel($id);
 
-			if ($model->load(Yii::$app->request->post())) {
-				if($model->checked_by=='1')
-				{
-					$model->checked_by = Yii::$app->user->identity->username;		
-				}
-				else
-				{
-					$model->checked_by = null;
-				}
-				$model->save();
-				return $this->redirect(['view', 'id' => $model->deduction_id]);
-			} else {
-				return $this->render('check', [
-					'model' => $model,
-				]);
+		if ($model->load(Yii::$app->request->post())) {
+			if($model->checked_by=='1')
+			{
+				$model->checked_by = Yii::$app->user->identity->username;		
 			}
-		}
-		else
-		{
-			throw new ForbiddenHttpException;
+			else
+			{
+				$model->checked_by = null;
+			}
+			$model->save();
+			return $this->redirect(['view', 'id' => $model->deduction_id]);
+		} else {
+			return $this->render('check', [
+				'model' => $model,
+			]);
 		}
     }
 	
 	public function actionSend($id)
 	{
-		if(Yii::$app->user->can('check-allowance'))
+		$model = $this->findModel($id);
+		if($model->checked_by!=null)
 		{
-			$model = $this->findModel($id);
-			if($model->checked_by!=null)
+			try{
+			$sql = "INSERT INTO approved_deductions (deduction_id, deduction_scholar_id,
+			deduction_date,deduction_amount,deduction_remark) VALUES(".$model->deduction_id.",".$model->deduction_scholar_id.",'".$model->deduction_date."',".
+			$model->deduction_amount.",'".$model->deduction_remark."')";
+			
+			Yii::$app->db->createCommand($sql)->execute();
+			
+			return $this->redirect(['index']);
+			
+			}catch(IntegrityException $e)
 			{
-				try{
-				$sql = "INSERT INTO approved_deductions (deduction_id, deduction_scholar_id,
-				deduction_date,deduction_amount,deduction_remark) VALUES(".$model->deduction_id.",".$model->deduction_scholar_id.",'".$model->deduction_date."',".
-				$model->deduction_amount.",'".$model->deduction_remark."')";
-				
-				Yii::$app->db->createCommand($sql)->execute();
-				
-				return $this->redirect(['index']);
-				
-				}catch(IntegrityException $e)
-				{
-					return $this->redirect('index.php?r=error/error');
-				}
-			}
-			else
-			{
-				return $this->redirect('index.php?r=error/error2');
+				return $this->redirect('index.php?r=error/error');
 			}
 		}
 		else
 		{
-			throw new ForbiddenHttpException;
+			return $this->redirect('index.php?r=error/error2');
 		}
 	}
 	
