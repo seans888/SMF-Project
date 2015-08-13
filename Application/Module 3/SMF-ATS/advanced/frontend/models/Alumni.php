@@ -56,7 +56,7 @@ class Alumni extends \yii\db\ActiveRecord
             'alumni_id' => 'Alumni ID',
             'alumni_firstname' => 'Alumni Firstname',
             'alumni_lastname' => 'Alumni Lastname',
-            'alumni_midname' => 'Alumni Midlename',
+            'alumni_midname' => 'Alumni Middlename',
             'alumni_course' => 'Alumni Course',
             'alumni_school' => 'Alumni School',
             'alumni_year_graduated' => 'Alumni Year Graduated',

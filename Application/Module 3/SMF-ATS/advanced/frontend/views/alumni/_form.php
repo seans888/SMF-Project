@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'alumni_midname')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'alumni_course')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'alumni_course')->textInput(['maxlength' => true]) ?>																	
 
     <?= $form->field($model, 'alumni_school')->textInput(['maxlength' => true]) ?>
 
