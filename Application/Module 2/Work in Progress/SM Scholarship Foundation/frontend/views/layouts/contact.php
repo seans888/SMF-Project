@@ -49,7 +49,7 @@ DashboardAsset::register($this);
                         <a class="page-scroll" href="<?php echo 'index.php?r=compile/index'?>"><font style="color:#e6e600">Profile</font></a>
                     </li>
 					 <li>
-                        <a class="page-scroll" href="<?php echo 'index.php?r=grade/create'?>"><font style="color:#e6e600">Records</font></a>
+                        <a class="page-scroll" href="<?php echo 'index.php?r=compile/create'?>"><font style="color:#e6e600">Records</font></a>
                     </li>
                     <li>
                         <a class="page-scroll" href="<?php echo 'index.php?r=allowance/create'?>"><font style="color:#e6e600">Forms</font></a>
@@ -134,16 +134,7 @@ DashboardAsset::register($this);
             </div>
         </div>
     </section>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; SM Foundation 2015</span>
-                </div>
-             
-            </div>
-        </div>
-    </footer>
+  
 	
 
     <?php $this->endBody() ?>

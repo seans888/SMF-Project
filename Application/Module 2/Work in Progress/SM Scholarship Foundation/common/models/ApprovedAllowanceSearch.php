@@ -20,7 +20,7 @@ class ApprovedAllowanceSearch extends ApprovedAllowance
         return [
             [['allowance_id', 'allowance_scholar_id', 'allowance_school_id'], 'integer'],
             [['allowance_amount'], 'number'],
-            [['allowance_remark', 'allowance_payStatus', 'allowance_paidDate', 'allowance_status', 'approval_status', 'approved_by', 'approved_remark'], 'safe'],
+            [['allowance_remark', 'allowance_payStatus', 'allowance_paidDate', 'approval_status', 'approved_by', 'approved_remark'], 'safe'],
         ];
     }
 
@@ -66,7 +66,6 @@ class ApprovedAllowanceSearch extends ApprovedAllowance
 
         $query->andFilterWhere(['like', 'allowance_remark', $this->allowance_remark])
             ->andFilterWhere(['like', 'allowance_payStatus', $this->allowance_payStatus])
-            ->andFilterWhere(['like', 'allowance_status', $this->allowance_status])
             ->andFilterWhere(['like', 'approval_status', $this->approval_status])
             ->andFilterWhere(['like', 'approved_by', $this->approved_by])
             ->andFilterWhere(['like', 'approved_remark', $this->approved_remark]);

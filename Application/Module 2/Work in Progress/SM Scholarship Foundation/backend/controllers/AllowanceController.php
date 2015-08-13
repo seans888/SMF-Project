@@ -163,9 +163,9 @@ class AllowanceController extends Controller
 				try{
 				$sql = "INSERT INTO approved_allowance (allowance_id, allowance_scholar_id,
 				allowance_amount,allowance_remark,allowance_school_id,
-				allowance_payStatus,allowance_paidDate,allowance_status) VALUES(".$model->allowance_id.",".$model->allowance_scholar_id.",".$model->allowance_amount.",'".
+				allowance_payStatus,allowance_paidDate) VALUES(".$model->allowance_id.",".$model->allowance_scholar_id.",".$model->allowance_amount.",'".
 				$model->allowance_remark."',".$model->allowance_school_id.",'".$model->allowance_payStatus."','".
-				$model->allowance_paidDate."','".$model->allowance_status."')";
+				$model->allowance_paidDate."')";
 				
 				Yii::$app->db->createCommand($sql)->execute();
 				

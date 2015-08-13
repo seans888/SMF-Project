@@ -56,14 +56,14 @@ class Alumni extends \yii\db\ActiveRecord
             'alumni_id' => 'Alumni ID',
             'alumni_firstname' => 'Alumni Firstname',
             'alumni_lastname' => 'Alumni Lastname',
-            'alumni_midname' => 'Alumni Midname',
+            'alumni_midname' => 'Alumni Midlename',
             'alumni_course' => 'Alumni Course',
             'alumni_school' => 'Alumni School',
             'alumni_year_graduated' => 'Alumni Year Graduated',
             'alumni_status' => 'Alumni Status',
             'alumni_email' => 'Alumni Email',
-            'alumni_cur_work' => 'Alumni Cur Work',
-            'alumni_prev_work' => 'Alumni Prev Work',
+            'alumni_cur_work' => 'Alumni Current Work',
+            'alumni_prev_work' => 'Alumni Previous Work',
             'alumni_further_study' => 'Alumni Further Study',
             'user_user_id' => 'User User ID',
             'user_id' => 'User ID',
@@ -77,4 +77,10 @@ class Alumni extends \yii\db\ActiveRecord
     {
         return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
+	
+	
+	public function getFullName()
+	{
+	   return $this->alumni_lastname . ", " . $this->alumni_firstname;
+	}
 }

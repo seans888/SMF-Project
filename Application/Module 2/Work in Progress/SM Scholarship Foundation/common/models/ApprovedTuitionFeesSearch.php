@@ -19,7 +19,7 @@ class ApprovedTuitionFeesSearch extends ApprovedTuitionFees
     {
         return [
             [['tuitionfee_id', 'tuitionfee_scholar_id'], 'integer'],
-            [['tuitionfee_term', 'tuitionfee_dateOfEnrollment', 'tuitionfee_dateOfPayment', 'tuitionfee_paidStatus', 'approval_status', 'approved_by'], 'safe'],
+            [['tuitionfees_term', 'tuitionfee_dateOfEnrollment', 'tuitionfee_dateOfPayment', 'tuitionfee_paidStatus', 'approval_status', 'approved_by'], 'safe'],
             [['tuitionfee_amount'], 'number'],
         ];
     }
@@ -64,7 +64,7 @@ class ApprovedTuitionFeesSearch extends ApprovedTuitionFees
             'tuitionfee_dateOfPayment' => $this->tuitionfee_dateOfPayment,
         ]);
 
-        $query->andFilterWhere(['like', 'tuitionfee_term', $this->tuitionfee_term])
+        $query->andFilterWhere(['like', 'tuitionfees_term', $this->tuitionfees_term])
             ->andFilterWhere(['like', 'tuitionfee_paidStatus', $this->tuitionfee_paidStatus])
             ->andFilterWhere(['like', 'approval_status', $this->approval_status])
             ->andFilterWhere(['like', 'approved_by', $this->approved_by]);

@@ -93,4 +93,9 @@ class Employee extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Migration::className(), ['employee_employee_id' => 'employee_id', 'employee_user_user_id' => 'user_user_id']);
     }
+	
+	public function getEmpFullName()
+	{
+	   return $this->emp_lastname . ", " . $this->emp_firstname;
+	}
 }

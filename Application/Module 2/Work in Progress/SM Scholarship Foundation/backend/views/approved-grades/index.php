@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+use kartik\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\ApprovedGradesSearch */
@@ -16,29 +16,26 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Approved Grades', ['create'], ['class' => 'btn btn-success']) ?>
+
     </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'grade_id',
+            ['class' => 'kartik\grid\SerialColumn'],
+			'grade_scholar_id',
             'grade_schoolYear',
             'grade_Term',
-            'grade_scholar_id',
             'grade_subject',
-            // 'grade_units',
-            // 'grade_value',
-            // 'equivalence_grade_rule',
-            // 'School_id',
-            // 'approval_status',
-            // 'approved_by',
-            // 'approved_remark',
+            'grade_units',
+            'grade_value',
+        //    'school.school_name',
+            'approval_status',
+            'approved_by',
+            'approved_remark',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'kartik\grid\ActionColumn'],
         ],
     ]); ?>
 

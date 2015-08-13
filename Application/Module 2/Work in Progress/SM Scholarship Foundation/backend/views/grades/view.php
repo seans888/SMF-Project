@@ -48,8 +48,6 @@ $this->params['breadcrumbs'][] = $this->title;
 			'grade_subject',
 			'grade_units',
             'grade_value',
-			'grade_status',
-			'equivalence_grade_rule',
             'uploaded_by',
             'updated_by',
             'checked_by',

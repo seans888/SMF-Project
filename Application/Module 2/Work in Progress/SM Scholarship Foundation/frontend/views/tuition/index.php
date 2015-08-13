@@ -1,8 +1,10 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+use kartik\grid\GridView;
 use yii\jui\Tabs;
+use kartik\tabs\TabsX;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\models\TuitionSearch */
@@ -14,30 +16,39 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="tuition-index">
 
-    <h1 style="margin-top:100px;"><?= Html::encode($this->title) ?></h1>
+    <center><h1 style="margin-top:100px;"><?= Html::encode($this->title) ?></h1></center><br>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-	<?= Tabs::widget([
-		'items' => [
-        [
-            'label' => 'Actual Tuition Fees',
-            'content' => $this->render('tuitiontab'),
-            'active' => true
+ <?php 
+   $items = [
+    [
+        'label'=>'<i class="glyphicon glyphicon-list-alt"></i> Tuition Fee Records',
+        'content'=> GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+		'showOnEmpty' => false,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+            'tuitionfee_amount',
+            'tuitionfees_term',
+            'tuitionfee_dateOfEnrollment',
+            'tuitionfee_dateOfPayment',
+			'tuitionfee_paidStatus',
         ],
-        [
-            'label' => 'Past Tuition Fees',
-            'content' =>$this->render('pasttuitiontab'),
-            'active' => true
-        ],
-        [
-            'label' => 'Fees Shouldered by SM',
-            'content' => 'No Details of this yet.'
-            ,
-        ],
-    
+    ]),
+                   'active' => true,
+       
     ],
-    'options' => ['tag' => 'div'],
-    'itemOptions' => ['tag' => 'div'],
-    'headerOptions' => ['class' => 'my-class'],
-    'clientOptions' => ['collapsible' => false],
-]); ?>
+  
+    
+];
+// Ajax Tabs Above
+echo TabsX::widget([
+    'items'=>$items,
+    'position'=>TabsX::POS_ABOVE,
+	
+    'encodeLabels'=>false
+]);   
+   
+   ?>
+
 </div>

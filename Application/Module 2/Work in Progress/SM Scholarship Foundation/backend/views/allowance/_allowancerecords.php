@@ -62,7 +62,6 @@ $this->params['breadcrumbs'][] = $this->title;
 						]
 				]),
 			],
-			'allowance_status',
 			'uploaded_by',
 			'updated_by',
 			'checked_by',

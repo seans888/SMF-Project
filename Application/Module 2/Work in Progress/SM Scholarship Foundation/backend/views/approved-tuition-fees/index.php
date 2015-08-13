@@ -16,7 +16,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Approved Tuition Fees', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -25,15 +24,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'tuitionfee_id',
             'tuitionfee_scholar_id',
-            'tuitionfee_term',
+            'tuitionfees_term',
             'tuitionfee_amount',
             'tuitionfee_dateOfEnrollment',
-            // 'tuitionfee_dateOfPayment',
-            // 'tuitionfee_paidStatus',
-            // 'approval_status',
-            // 'approved_by',
+            'tuitionfee_dateOfPayment',
+            'tuitionfee_paidStatus',
+            'approval_status',
+            'approved_by',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

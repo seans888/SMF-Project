@@ -4,7 +4,7 @@ namespace frontend\controllers;
 
 use Yii;
 use common\models\Tuitionfees;
-use frontend\models\TuitionSearch;
+use common\models\TuitionfeesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -37,12 +37,26 @@ class TuitionController extends Controller
      */
     public function actionIndex()
     {
-       $grades = Grades::find()->all();
-		$schools = Schools::find()->all();
+		$username=Yii::$app->user->identity->username;
 		$users = User::find()->all();
 		$scholars = Scholars::find()->all();
-		$tuitions = Tuitionfees::find()->all();
-		return $this->render('index',array('users'=>$users,'scholars'=>$scholars,'schools'=>$schools,'grades'=>$grades,'tuitions'=>$tuitions));
+		$model = new Tuitionfees();
+		
+		foreach($users as $user){
+			foreach($scholars as $scholar){
+				if($user->username==$username&&$user->id==$scholar->scholar_id){
+					$model->tuitionfee_scholar_id=$scholar->scholar_id;
+					
+					$searchModel = new TuitionfeesSearch($model);
+					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+					return $this->render('index', [
+					'searchModel' => $searchModel,
+					'dataProvider' => $dataProvider,
+					]);
+				}
+
+			}
+		}
     }
 
     /**

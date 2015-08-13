@@ -47,10 +47,16 @@ DashboardAsset::register($this);
                 <ul class="dropdown-menu">
                 </ul>
               </li>
+			  						<a href="<?php
+						if(!\Yii::$app->user->isGuest)
+						{
+							echo Yii::$app->getUrlManager()->createUrl('/site/logout');
+						}
+
+						?>" class="btn btn-default btn-primary">Sign Out</a>
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="dist/img/avatar5.png" class="user-image" alt="User Image"/>
                   <span class="hidden-xs"><?= Yii::$app->user->identity->username ?></span>
                 </a>
                 <ul class="dropdown-menu">
@@ -87,38 +93,10 @@ DashboardAsset::register($this);
 	        <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
-          <!-- Sidebar user panel -->
-          <div class="user-panel">
-            <div class="pull-left image">
-              <img src="dist/img/avatar5.png" class="img-circle" alt="User Image" />
-            </div>
-            <div class="pull-left info">
-              <p><?= Yii::$app->user->identity->username ?></p>
-              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-            </div>
-          </div>
-          <!-- search form -->
-          <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-              <input type="text" name="q" class="form-control" placeholder="Search..."/>
-              <span class="input-group-btn">
-                <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
-              </span>
-            </div>
-          </form>
-          <!-- /.search form -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="active treeview">
-              <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
-              </a>
-			 
-              <ul class="treeview-menu">
-                <li class="active"><a href="<?= Yii::$app->getUrlManager()->createUrl('/site/index'); ?>"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-              </ul>
-            </li>
+
 			<li class="treeview">
               <a href="<?= Yii::$app->getUrlManager()->createUrl('/scholars/index'); ?>">
                 <i class="fa fa-group"></i> <span>Scholars</span></i>
@@ -139,7 +117,8 @@ DashboardAsset::register($this);
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/tuitionfees/index'); ?>"><i class="fa fa-money"></i> Tuition Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/allowance/index'); ?>"><i class="fa fa-credit-card"></i> Allowance Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/refunds/index'); ?>"><i class="fa fa-thumbs-up"></i> Refund Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/deductions/index'); ?>"><i class="fa fa-thumbs-down"></i> Deduction Records</a></li>		
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/deductions/index'); ?>"><i class="fa fa-thumbs-down"></i> Deduction Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/parttimejobs/index'); ?>"><i class="fa fa-desktop"></i> Part Time Jobs</a></li>
 				</ul>
             </li>
             <li class="treeview">
@@ -149,7 +128,7 @@ DashboardAsset::register($this);
               </a>
               <ul class="treeview-menu">
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-grades/index'); ?>"><i class="fa fa-graduation-cap"></i> Grade Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-tuitionfees/index'); ?>"><i class="fa fa-money"></i> Tuition Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-tuition-fees/index'); ?>"><i class="fa fa-money"></i> Tuition Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-allowance/index'); ?>"><i class="fa fa-credit-card"></i> Allowance Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-refunds/index'); ?>"><i class="fa fa-thumbs-up"></i> Refund Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-deductions/index'); ?>"><i class="fa fa-thumbs-down"></i> Deduction Records</a></li>		
