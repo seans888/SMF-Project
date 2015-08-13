@@ -7,10 +7,8 @@ $this->title = 'SM Foundation Alumni Tracking System';
 		<center><img src = "images/smf.jpg" height="250px" width="250px"></center>
     <div class="jumbotron">
 <img src = "images/alumni.jpg" height="250px" width="1050px">
+</div>
 
-
-  
-    </div>
 <center>
     <div class="body-content">
 
