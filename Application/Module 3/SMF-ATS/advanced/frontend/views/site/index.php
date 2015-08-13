@@ -4,7 +4,7 @@ $this->title = 'SM Foundation Alumni Tracking System';
 ?>
 <div class="site-index">
         <center><h1><b>Welcome to SM Foundation Alumni Tracking System</b></h1></center>
-		
+		<center><img src = "images/smf.jpg" height="250px" width="250px"></center>
     <div class="jumbotron">
 <img src = "images/alumni.jpg" height="250px" width="1050px">
 
@@ -23,7 +23,7 @@ $this->title = 'SM Foundation Alumni Tracking System';
 					or university. Commonly, but not always, the word refers to a graduate of the educational institute in question. An alumnus can 
 					also be a former member, employee, contributor, or inmate, as well as a former student.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+                <p><a class="btn btn-default" href="http://localhost/SMF_Alumni/SMF-Project/Application/Module%203/SMF-ATS/advanced/frontend/web/index.php?r=alumni%2Findex">View Details &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Alumni News</h2>
@@ -32,7 +32,7 @@ $this->title = 'SM Foundation Alumni Tracking System';
 				was newes, like the French nouvelles and the German neues. Similar developments are found in the Slavic languages—the Czech and Slovak noviny (from nový, "new"), 
 				the cognate Polish nowiny and Russian novosti—and in the Celtic languages: the Welsh newyddion (from newydd) and the Cornish nowodhow (from nowydh)</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
+                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">View Details &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Events</h2>
@@ -42,7 +42,7 @@ $this->title = 'SM Foundation Alumni Tracking System';
 				   or without the participation of human agents. It may be a part of a chain of occurrences as an effect of a 
 				   preceding occurrence and as the cause of a succeeding occurrence.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+                <p><a class="btn btn-default" href="http://localhost/SMF_Alumni/SMF-Project/Application/Module%203/SMF-ATS/advanced/frontend/web/index.php?r=event%2Findex">View Details &raquo;</a></p>
             </div>
         </div>
 
