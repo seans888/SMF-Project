@@ -78,7 +78,7 @@ class SiteController extends Controller
     public function actionLogin()
     {
 	
-	$usertype = Yii::$app->user->identity->user_type ;
+	$usertype = Yii::$app->user->id;
 			if($usertype == 'admin'){
 
 			 // return $this->goHome();

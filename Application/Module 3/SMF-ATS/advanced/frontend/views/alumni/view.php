@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Alumni */
 
 $this->title = $model->FullName;
-$this->params['breadcrumbs'][] = ['label' => 'Alumnis', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Alumnae', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="alumni-view">
@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'alumni_cur_work',
             'alumni_prev_work',
             'alumni_further_study',
-            'user_user_id',
+           // 'user_user_id',
             'user_id',
         ],
     ]) ?>
