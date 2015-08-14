@@ -30,6 +30,14 @@ class EmployeeController extends Controller
      * Lists all Employee models.
      * @return mixed
      */
+	 
+	
+
+	/**
+	 * Displays a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	 
     public function actionIndex()
     {
         $searchModel = new EmployeeSearch();
