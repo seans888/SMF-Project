@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\Allowance */
 
-$this->title = $model->allowance_id;
+$this->title = $model->allowance_area;
 $this->params['breadcrumbs'][] = ['label' => 'Allowances', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -15,20 +15,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->allowance_id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->allowance_id], [
+        <?= Html::a('Update', ['update', 'id' => $model->allowance_area], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->allowance_area], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
-        <?= Html::a('View List', ['index'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('Check', ['check', 'id' => $model->allowance_id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Send for Approval', ['send', 'id' => $model->allowance_id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to send this for approval?',
                 'method' => 'post',
             ],
         ]) ?>
@@ -37,18 +28,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
+            'allowance_area',
             'allowance_amount',
-            'allowance_scholar_id',
-            'allowance_school_id',
-			'allowanceScholar.scholar_lastName',
-			'allowanceScholar.scholar_firstName',
-			'allowanceScholar.scholar_middleName',
-            'allowance_payStatus',
-            'allowance_paidDate',
-			'uploaded_by',
-			'updated_by',
-			'checked_by',
-			'checked_remark',
         ],
     ]) ?>
 

@@ -31,7 +31,8 @@
         "reportico/yii2-reportico": "dev-master",
 		"kartik-v/yii2-editable": "*",
 		"yiisoft/yii2-swiftmailer": "^2.0",
-        "kartik-v/yii2-tabs-x": "*"
+        "kartik-v/yii2-tabs-x": "*",
+        "kartik-v/yii2-export": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

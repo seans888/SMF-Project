@@ -56,19 +56,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        $events = Event::find()->all();
-		$tasks = [];
-		foreach($events as $eve)
-		{
-			$event = new \yii2fullcalendar\models\Event();
-			$event->id = $eve->id;
-			$event->title = $eve->title;
-			$event->start = $eve->start_date;
-			$event->end = $eve->end_date;
-			$tasks[] = $event;
-		}
-        return $this->render('index',[
-            'events' => $tasks,]);
+		return $this->render('index');
     }
 
     public function actionLogin()

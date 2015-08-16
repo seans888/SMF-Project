@@ -62,7 +62,7 @@ $this->title = 'My Yii Application';
                 <div class="icon">
                   <i class="fa fa-calendar"></i>
                 </div>
-                <a href="<?= Yii::$app->getUrlManager()->createUrl('/event/index'); ?>" class="small-box-footer">Check Calendar Now<i class="fa fa-arrow-circle-right"></i></a>
+                <a href="<?= Yii::$app->getUrlManager()->createUrl('#'); ?>" class="small-box-footer">Check Calendar Now<i class="fa fa-arrow-circle-right"></i></a>
               </div>
             </div><!-- ./col -->
           </div><!-- /.row -->

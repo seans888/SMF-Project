@@ -18,8 +18,8 @@ class AllowanceSearch extends Allowance
     public function rules()
     {
         return [
-            [['allowance_id', 'allowance_amount', 'allowance_scholar_id', 'allowance_school_id'], 'integer'],
-            [['allowance_remark', 'allowance_payStatus', 'allowance_scholar_lastName', 'allowance_scholar_firstName', 'allowance_scholar_middleName', 'allowance_paidDate'], 'safe'],
+            [['allowance_area'], 'safe'],
+            [['allowance_amount'], 'number'],
         ];
     }
 
@@ -54,22 +54,12 @@ class AllowanceSearch extends Allowance
             // $query->where('0=1');
             return $dataProvider;
         }
-        
-        $query->joinWith('allowanceScholar');
-        
+
         $query->andFilterWhere([
-            'allowance_id' => $this->allowance_id,
             'allowance_amount' => $this->allowance_amount,
-            'allowance_scholar_id' => $this->allowance_scholar_id,
-            'allowance_school_id' => $this->allowance_school_id,
-            'allowance_paidDate' => $this->allowance_paidDate,
         ]);
 
-        $query->andFilterWhere(['like', 'allowance_remark', $this->allowance_remark])
-            ->andFilterWhere(['like', 'allowance_payStatus', $this->allowance_payStatus])
-            ->andFilterWhere(['like', 'scholars.scholar_lastName', $this->allowance_scholar_lastName])
-            ->andFilterWhere(['like', 'scholars.scholar_firstName', $this->allowance_scholar_firstName])
-            ->andFilterWhere(['like', 'scholars.scholar_middleName', $this->allowance_scholar_middleName]);
+        $query->andFilterWhere(['like', 'allowance_area', $this->allowance_area]);
 
         return $dataProvider;
     }

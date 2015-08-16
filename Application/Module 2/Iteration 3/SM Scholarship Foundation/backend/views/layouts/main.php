@@ -98,12 +98,12 @@ DashboardAsset::register($this);
             <li class="header">MAIN NAVIGATION</li>
 
 			<li class="treeview">
-              <a href="<?= Yii::$app->getUrlManager()->createUrl('/scholars/index'); ?>">
+              <a href="<?= Yii::$app->getUrlManager()->createUrl('/scholar/index'); ?>">
                 <i class="fa fa-group"></i> <span>Scholars</span></i>
               </a>
             </li>
 			<li class="treeview">
-              <a href="<?= Yii::$app->getUrlManager()->createUrl('/schools/index'); ?>">
+              <a href="<?= Yii::$app->getUrlManager()->createUrl('/school/index'); ?>">
                 <i class="fa fa-institution"></i> <span>Schools</span>
               </a> 
             </li>
@@ -113,29 +113,16 @@ DashboardAsset::register($this);
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/grades/index'); ?>"><i class="fa fa-graduation-cap"></i> Grade Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/tuitionfees/index'); ?>"><i class="fa fa-money"></i> Tuition Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/grade/index'); ?>"><i class="fa fa-graduation-cap"></i> Grade Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/tuition/index'); ?>"><i class="fa fa-money"></i> Tuition Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/allowance/index'); ?>"><i class="fa fa-credit-card"></i> Allowance Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/refunds/index'); ?>"><i class="fa fa-thumbs-up"></i> Refund Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/deductions/index'); ?>"><i class="fa fa-thumbs-down"></i> Deduction Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/parttimejobs/index'); ?>"><i class="fa fa-desktop"></i> Part Time Jobs</a></li>
-				</ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-check"></i> <span>Approved Records</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-grades/index'); ?>"><i class="fa fa-graduation-cap"></i> Grade Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-tuition-fees/index'); ?>"><i class="fa fa-money"></i> Tuition Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-allowance/index'); ?>"><i class="fa fa-credit-card"></i> Allowance Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-refunds/index'); ?>"><i class="fa fa-thumbs-up"></i> Refund Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/approved-deductions/index'); ?>"><i class="fa fa-thumbs-down"></i> Deduction Records</a></li>		
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/incentive/index'); ?>"><i class="fa fa-thumbs-up"></i> Incentive Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/deduction/index'); ?>"><i class="fa fa-thumbs-down"></i> Deduction Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/optionalwork/index'); ?>"><i class="fa fa-desktop"></i> Part Time Jobs</a></li>
 				</ul>
             </li>
 			<li class="treeview">
-              <a href="<?= Yii::$app->getUrlManager()->createUrl('/uploadedforms/index'); ?>">
+              <a href="<?= Yii::$app->getUrlManager()->createUrl('/upload/index'); ?>">
                 <i class="fa fa-upload"></i> <span>Upload Forms</span>
               </a> 
             </li>
@@ -176,7 +163,7 @@ DashboardAsset::register($this);
               </ul>
             </li>
             <li>
-              <a href="<?= Yii::$app->getUrlManager()->createUrl('/event/index'); ?>">
+              <a href="<?= Yii::$app->getUrlManager()->createUrl('#'); ?>">
                 <i class="fa fa-calendar"></i> <span>Calendar</span>
               </a>
             </li>
