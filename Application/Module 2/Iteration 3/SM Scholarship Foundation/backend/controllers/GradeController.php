@@ -9,6 +9,7 @@ use common\models\GradeSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use common\models\GroupGrade;
 
 /**
  * GradeController implements the CRUD actions for Grade model.
@@ -85,7 +86,57 @@ class GradeController extends Controller
             ]);
         }
     }
+	
+	public function actionGroupcreate()
+    {
+        // $modelCustomer = new Customer;
+        $modelsAddress = [new Grade];
+        // if ($modelAddress->load(Yii::$app->request->post())) {
 
+            $modelsAddress = GroupGrade::createMultiple(Grade::classname());
+            GroupGrade::loadMultiple($modelsAddress, Yii::$app->request->post());
+
+            // ajax validation
+            if (Yii::$app->request->isAjax) {
+                Yii::$app->response->format = Response::FORMAT_JSON;
+                return ArrayHelper::merge(
+                    ActiveForm::validateMultiple($modelsAddress),
+                    ActiveForm::validate($modelCustomer)
+                );
+            }
+
+            // validate all models
+            // $valid = $modelCustomer->validate();
+            // $valid = GroupGrade::validateMultiple($modelsAddress) && $valid;
+
+            // if ($valid) {
+                // $transaction = \Yii::$app->db->beginTransaction();
+                // try {
+                    // if ($flag = $modelAddress->save(false)) {
+                        // foreach ($modelsAddress as $modelAddress) {
+                            // $modelAddress->customer_id = $modelCustomer->id;
+                            // if (! ($flag = $modelAddress->save(false))) {
+                                // $transaction->rollBack();
+                                // break;
+                            // }
+                        // }
+                    // }
+                    // if ($flag) {
+                        // $transaction->commit();
+                        // return $this->redirect(['view', 'id' => $modelCustomer->id]);
+                    // }
+                // } catch (Exception $e) {
+                    // $transaction->rollBack();
+                // }
+            // }
+        // }
+
+        return $this->render('groupcreate', [
+            // 'modelCustomer' => $modelCustomer,
+            'modelsAddress' => (empty($modelAddress)) ? [new Grade] : $modelsAddres
+        ]);
+    }
+	
     /**
      * Updates an existing Grade model.
      * If update is successful, the browser will be redirected to the 'view' page.
