@@ -74,6 +74,8 @@ $export = ExportMenu::widget([
 $this->title = 'Grades';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?= Html::a('Group By School', ['index'], ['class' => 'btn btn-success']) ?>
+<?= Html::a('Show Only Grade Records', ['index2'], ['class' => 'btn btn-success']) ?>
 	<?= GridView::widget([
     'dataProvider' => $dataProvider,
     'filterModel' => $searchModel,
