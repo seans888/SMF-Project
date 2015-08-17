@@ -1,15 +1,28 @@
 <?php
-
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use wbraganca\dynamicform\DynamicFormWidget;
-
-/* @var $this yii\web\View */
-/* @var $model common\models\Grade */
-/* @var $form yii\widgets\ActiveForm */
 ?>
-<?php $form = ActiveForm::begin(['id' => 'dynamic-form']); ?>
-<?php DynamicFormWidget::begin([
+
+<div class="grade-form">
+
+    <?php $form = ActiveForm::begin(['id' => 'dynamic-form']); ?>
+    <div class="row">
+        <div class="col-sm-6">
+            <?= $form->field($modelCustomer, 'scholar_id')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-sm-6">
+            <?= $form->field($modelCustomer, 'allowance_allowance_area')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-sm-6">
+            <?= $form->field($modelCustomer, 'school_school_id')->textInput(['maxlength' => true]) ?>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><h4><i class="glyphicon glyphicon-envelope"></i> Addresses</h4></div>
+        <div class="panel-body">
+             <?php DynamicFormWidget::begin([
                 'widgetContainer' => 'dynamicform_wrapper', // required: only alphanumeric characters plus "_" [A-Za-z0-9_]
                 'widgetBody' => '.container-items', // required: css class selector
                 'widgetItem' => '.item', // required: css class
@@ -21,11 +34,13 @@ use wbraganca\dynamicform\DynamicFormWidget;
                 'formId' => 'dynamic-form',
                 'formFields' => [
                     'grade_id',
-					'subject_subject_id',
-					'subject_scholar_scholar_id',
+                    'subject_subject_id',
+                    'subject_scholar_scholar_id',
+                    'subject_scholar_school_school_id',
                 ],
             ]); ?>
-<div class="container-items"><!-- widgetContainer -->
+
+            <div class="container-items"><!-- widgetContainer -->
             <?php foreach ($modelsAddress as $i => $modelAddress): ?>
                 <div class="item panel panel-default"><!-- widgetBody -->
                     <div class="panel-heading">
@@ -52,17 +67,23 @@ use wbraganca\dynamicform\DynamicFormWidget;
                                 <?= $form->field($modelAddress, "[{$i}]subject_scholar_scholar_id")->textInput(['maxlength' => true]) ?>
                             </div>
                         </div><!-- .row -->
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <?= $form->field($modelAddress, "[{$i}]subject_scholar_school_school_id")->textInput(['maxlength' => true]) ?>
+                            </div>
+                        </div><!-- .row -->
                     </div>
                 </div>
             <?php endforeach; ?>
             </div>
             <?php DynamicFormWidget::end(); ?>
-			<?= Html::submitButton($modelAddress->isNewRecord ? 'Create' : 'Update', ['class' => 'btn btn-primary']) ?>
         </div>
     </div>
 
     <div class="form-group">
-        
+        <?= Html::submitButton($modelAddress->isNewRecord ? 'Create' : 'Update', ['class' => 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
+
+</div>
