@@ -91,7 +91,7 @@ $this->params['breadcrumbs'][] = $this->title;
     	},
     'columns' => $gridColumns,
 	'toolbar'=> [
-        ['content'=>Html::a('Create Grade', ['create'], ['class' => 'btn btn-success'])
+        ['content'=>Html::a('Create Grade', ['groupcreate'], ['class' => 'btn btn-success'])
         ],
         //'{export}',
         '{toggleData}',
