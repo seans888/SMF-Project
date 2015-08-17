@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
+use common\models\Scholar;
 use common\models\SchoolSearch;
 use common\models\Grade;
 use common\models\GradeSearch;
@@ -89,9 +90,9 @@ class GradeController extends Controller
 	
 	public function actionGroupcreate()
     {
-        // $modelCustomer = new Customer;
+        $modelCustomer = new Scholar;
         $modelsAddress = [new Grade];
-        // if ($modelAddress->load(Yii::$app->request->post())) {
+        if ($modelCustomer->load(Yii::$app->request->post())) {
 
             $modelsAddress = GroupGrade::createMultiple(Grade::classname());
             GroupGrade::loadMultiple($modelsAddress, Yii::$app->request->post());
@@ -106,34 +107,34 @@ class GradeController extends Controller
             }
 
             // validate all models
-            // $valid = $modelCustomer->validate();
-            // $valid = GroupGrade::validateMultiple($modelsAddress) && $valid;
+            $valid = $modelCustomer->validate();
+            $valid = GroupGrade::validateMultiple($modelsAddress) && $valid;
 
-            // if ($valid) {
-                // $transaction = \Yii::$app->db->beginTransaction();
-                // try {
-                    // if ($flag = $modelAddress->save(false)) {
-                        // foreach ($modelsAddress as $modelAddress) {
-                            // $modelAddress->customer_id = $modelCustomer->id;
-                            // if (! ($flag = $modelAddress->save(false))) {
-                                // $transaction->rollBack();
-                                // break;
-                            // }
-                        // }
-                    // }
-                    // if ($flag) {
-                        // $transaction->commit();
-                        // return $this->redirect(['view', 'id' => $modelCustomer->id]);
-                    // }
-                // } catch (Exception $e) {
-                    // $transaction->rollBack();
-                // }
-            // }
-        // }
+            if ($valid) {
+                $transaction = \Yii::$app->db->beginTransaction();
+                try {
+                    
+                        foreach ($modelsAddress as $modelAddress) {
+                            $modelAddress->subject_scholar_scholar_id = $modelCustomer->scholar_id;
+                            if (! ($flag = $modelAddress->save(false))) {
+                                $transaction->rollBack();
+                                break;
+                            }
+                        }
+                    
+                    if ($flag) {
+                        $transaction->commit();
+                        return $this->redirect(['index']);
+                    }
+                } catch (Exception $e) {
+                    $transaction->rollBack();
+                }
+            }
+        }
 
         return $this->render('groupcreate', [
-            // 'modelCustomer' => $modelCustomer,
-            'modelsAddress' => (empty($modelAddress)) ? [new Grade] : $modelsAddres
+            'modelCustomer' => $modelCustomer,
+            'modelsAddress' => (empty($modelsAddress)) ? [new Grade] : $modelsAddress
         ]);
     }
 	
