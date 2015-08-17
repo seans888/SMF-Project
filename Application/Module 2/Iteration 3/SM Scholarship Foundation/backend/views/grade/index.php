@@ -5,16 +5,6 @@ use kartik\grid\GridView;
 use kartik\export\ExportMenu;
 use common\models\GradeSearch;
 
-// $exportedValues =
-// [
-            // 'school_id',
-            // 'school_name',
-            // 'school_area',
-            // 'school_address',
-            // 'school_contact_emails:email',
-            // 'school_contact_numbers',
-            // 'school_vendor_code',
-// ];
 $gridColumns = [
 		[
 				'class' => 'kartik\grid\ExpandRowColumn',
@@ -42,20 +32,41 @@ $gridColumns = [
 
             ['class' => 'yii\grid\ActionColumn'],
 ];
-// echo ExportMenu::widget([
-		// 'dataProvider' => $dataProvider,
-        // 'columns' => $exportedValues,
-        // 'columnSelectorOptions'=>[
-            // 'label' => 'Columns',
-            // 'class' => 'btn btn-danger'
-        // ],
+$exportedValues =
+[
+	['class' => 'kartik\grid\SerialColumn'],
+	[
+		'attribute'=>'grade_id',
+		'pageSummary'=>'Total'
+	],
+	'subject_subject_id',
+	[
+		'attribute'=>'subject_scholar_scholar_id',
+		'pageSummary'=>true
+	],
+	'subject_scholar_school_school_id',
+	'grade_school_year_start',
+	'grade_school_year_end',
+	'grade_raw_grade',
+	'grade_approval_status',
+	'grade_approved_by',
+];
+$searchModel3 = new GradeSearch();
+$dataProvider3 = $searchModel3->search(Yii::$app->request->queryParams);
+$export = ExportMenu::widget([
+		'dataProvider' => $dataProvider3,
+        'columns' => $exportedValues,
+        'columnSelectorOptions'=>[
+            'label' => 'Columns',
+            'class' => 'btn btn-danger'
+        ],
 
-        // 'fontAwesome' => true,
-        // 'dropdownOptions' => [
-            // 'label' => 'Export All',
-            // 'class' => 'btn btn-success'
-        // ]
-	// ]);
+        'fontAwesome' => true,
+        'dropdownOptions' => [
+            'label' => 'Export All',
+            'class' => 'btn btn-success'
+        ]
+	]);
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\SchoolSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -77,18 +88,20 @@ $this->params['breadcrumbs'][] = $this->title;
     		}
     	},
     'columns' => $gridColumns,
-'toolbar'=> [
+	'toolbar'=> [
         ['content'=>Html::a('Create Grade', ['create'], ['class' => 'btn btn-success'])
         ],
-  //      '{export}',
+        //'{export}',
         '{toggleData}',
-    ],
+		$export
+		],
     // set export properties
-    // 'export'=>[
-        // 'fontAwesome'=>true,
-		// 'label' => 'Export',
-    // ],
-	'panel'=>[
+    'export'=>[
+        'fontAwesome'=>true,
+		'label' => 'Export All',
+		'target' => '_blank'
+    ],
+		'panel'=>[
         'type'=>GridView::TYPE_PRIMARY,
         'heading'=>'Grade List',
     ],
