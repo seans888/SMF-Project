@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <?php
 $exportedValues = 
 [            
-	['class' => 'yii\grid\SerialColumn'],
+	['class' => 'kartik\grid\SerialColumn'],
 
 	'school_id',
 	'school_name',
@@ -31,7 +31,7 @@ $exportedValues =
 	'school_contact_numbers',
 	'school_vendor_code',
 
-	['class' => 'yii\grid\ActionColumn'],
+	['class' => 'kartik\grid\ActionColumn'],
 ];
 
 $export = ExportMenu::widget([
