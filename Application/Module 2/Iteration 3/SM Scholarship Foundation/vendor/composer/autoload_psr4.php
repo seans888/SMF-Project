@@ -16,6 +16,7 @@ return array(
     'yii\\bootstrap\\' => array($vendorDir . '/yiisoft/yii2-bootstrap'),
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
     'yii2fullcalendar\\' => array($vendorDir . '/philippfrenzel/yii2fullcalendar'),
+    'wbraganca\\dynamicform\\' => array($vendorDir . '/wbraganca/yii2-dynamicform'),
     'reportico\\reportico\\' => array($vendorDir . '/reportico/yii2-reportico'),
     'kartik\\typeahead\\' => array($vendorDir . '/kartik-v/yii2-widget-typeahead'),
     'kartik\\tabs\\' => array($vendorDir . '/kartik-v/yii2-tabs-x'),
@@ -32,5 +33,7 @@ return array(
     'dosamigos\\fileinput\\' => array($vendorDir . '/2amigos/yii2-file-input-widget/src'),
     'dosamigos\\datepicker\\' => array($vendorDir . '/2amigos/yii2-date-picker-widget/src'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
+    'Symfony\\Component\\DomCrawler\\' => array($vendorDir . '/symfony/dom-crawler'),
+    'Symfony\\Component\\CssSelector\\' => array($vendorDir . '/symfony/css-selector'),
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
 );
