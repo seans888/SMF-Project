@@ -19974,3 +19974,2102 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1439816722.977
     'REQUEST_TIME' => 1439816722
 ]
+2015-08-17 17:22:11 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'backend\controllers\Address' not found' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php:92
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-08-17 17:22:11 [::1][-][-][info][application] $_GET = [
+    'r' => 'grade/groupcreate'
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '52461'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=grade%2Fgroupcreate'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439824931.086
+    'REQUEST_TIME' => 1439824931
+]
+2015-08-17 17:22:22 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function load() on a non-object' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php:93
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-08-17 17:22:22 [::1][-][-][info][application] $_GET = [
+    'r' => 'grade/groupcreate'
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '52466'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=grade%2Fgroupcreate'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439824942.412
+    'REQUEST_TIME' => 1439824942
+]
+2015-08-17 17:24:48 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'backend\controllers\Scholar' not found' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php:92
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-08-17 17:24:48 [::1][-][-][info][application] $_GET = [
+    'r' => 'grade/groupcreate'
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '52502'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=grade%2Fgroupcreate'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439825088.123
+    'REQUEST_TIME' => 1439825088
+]
+2015-08-17 17:29:51 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: model' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\views\grade\create.php:18
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\views\grade\create.php(18): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\Users\Syam\s...', 18, Array)
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(325): require('C:\Users\Syam\s...')
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\Users\Syam\s...', Array)
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\Users\Syam\s...', Array, Object(backend\controllers\GradeController))
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('create', Array, Object(backend\controllers\GradeController))
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(138): yii\base\Controller->render('create', Array)
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('groupcreate', Array)
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('grade/groupcrea...', Array)
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2015-08-17 17:29:51 [::1][-][-][info][application] $_GET = [
+    'r' => 'grade/groupcreate'
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '52516'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=grade%2Fgroupcreate'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439825391.733
+    'REQUEST_TIME' => 1439825391
+]
+2015-08-17 17:30:20 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: model' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\views\grade\create.php:18
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\views\grade\create.php(18): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\Users\Syam\s...', 18, Array)
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(325): require('C:\Users\Syam\s...')
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\Users\Syam\s...', Array)
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\Users\Syam\s...', Array, Object(backend\controllers\GradeController))
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('create', Array, Object(backend\controllers\GradeController))
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(138): yii\base\Controller->render('create', Array)
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('groupcreate', Array)
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('grade/groupcrea...', Array)
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2015-08-17 17:30:20 [::1][-][-][info][application] $_GET = [
+    'r' => 'grade/groupcreate'
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '52517'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=grade%2Fgroupcreate'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439825420.233
+    'REQUEST_TIME' => 1439825420
+]
+2015-08-17 17:33:35 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: model' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\views\grade\create.php:18
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\views\grade\create.php(18): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\Users\Syam\s...', 18, Array)
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(325): require('C:\Users\Syam\s...')
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\Users\Syam\s...', Array)
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\Users\Syam\s...', Array, Object(backend\controllers\GradeController))
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('create', Array, Object(backend\controllers\GradeController))
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(138): yii\base\Controller->render('create', Array)
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('groupcreate', Array)
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('grade/groupcrea...', Array)
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2015-08-17 17:33:35 [::1][-][-][info][application] $_GET = [
+    'r' => 'grade/groupcreate'
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '52534'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=grade%2Fgroupcreate'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439825615.932
+    'REQUEST_TIME' => 1439825615
+]
+2015-08-17 17:35:07 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Scholar::first_name' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('first_name')
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\helpers\BaseHtml.php(2029): yii\db\BaseActiveRecord->__get('first_name')
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\helpers\BaseHtml.php(1208): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\Scholar), 'first_name')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\helpers\BaseHtml.php(1257): yii\helpers\BaseHtml::activeInput('text', Object(common\models\Scholar), 'first_name', Array)
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\widgets\ActiveField.php(358): yii\helpers\BaseHtml::activeTextInput(Object(common\models\Scholar), 'first_name', Array)
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\views\grade\groupcreate.php(12): yii\widgets\ActiveField->textInput(Array)
+#6 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(325): require('C:\Users\Syam\s...')
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\Users\Syam\s...', Array)
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\Users\Syam\s...', Array, Object(backend\controllers\GradeController))
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('groupcreate', Array, Object(backend\controllers\GradeController))
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(138): yii\base\Controller->render('groupcreate', Array)
+#11 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#14 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('groupcreate', Array)
+#15 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('grade/groupcrea...', Array)
+#16 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#18 {main}
+2015-08-17 17:35:06 [::1][-][-][info][application] $_GET = [
+    'r' => 'grade/groupcreate'
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '52539'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=grade%2Fgroupcreate'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439825706.062
+    'REQUEST_TIME' => 1439825706
+]
+2015-08-17 17:40:37 [::1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`smfoundation`.`scholar`, CONSTRAINT `fk_scholar_school` FOREIGN KEY (`school_school_id`) REFERENCES `school` (`school_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php:781
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(781): PDOStatement->execute()
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(116): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`smfoundation`.`scholar`, CONSTRAINT `fk_scholar_school` FOREIGN KEY (`school_school_id`) REFERENCES `school` (`school_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+The SQL being executed was: INSERT INTO `scholar` (`scholar_id`, `school_school_id`) VALUES (1, 1)' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(791): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `sc...')
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(116): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1452
+    [2] => Cannot add or update a child row: a foreign key constraint fails (`smfoundation`.`scholar`, CONSTRAINT `fk_scholar_school` FOREIGN KEY (`school_school_id`) REFERENCES `school` (`school_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+)
+
+2015-08-17 17:40:35 [::1][-][-][info][application] $_GET = [
+    'r' => 'grade/groupcreate'
+]
+
+$_POST = [
+    '_csrf' => 'Z0hIeHV1VkkoKzhKBgEiLAQifSkRJSx7LiFwARMaPHgLDw8BBxMCLg=='
+    'Scholar' => [
+        'scholar_id' => '1'
+        'school_school_id' => '1'
+    ]
+    'Grade' => [
+        0 => [
+            'grade_id' => '1'
+            'subject_subject_id' => '1'
+            'subject_scholar_scholar_id' => '1'
+            'subject_scholar_school_school_id' => '1'
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '292'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '52649'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=grade%2Fgroupcreate'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439826035.915
+    'REQUEST_TIME' => 1439826035
+]
+2015-08-17 17:41:30 [::1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`smfoundation`.`scholar`, CONSTRAINT `fk_scholar_school` FOREIGN KEY (`school_school_id`) REFERENCES `school` (`school_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php:781
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(781): PDOStatement->execute()
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(116): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`smfoundation`.`scholar`, CONSTRAINT `fk_scholar_school` FOREIGN KEY (`school_school_id`) REFERENCES `school` (`school_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+The SQL being executed was: INSERT INTO `scholar` (`scholar_id`, `allowance_allowance_area`, `school_school_id`) VALUES (1, 'NCR', 1)' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(791): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `sc...')
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(116): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1452
+    [2] => Cannot add or update a child row: a foreign key constraint fails (`smfoundation`.`scholar`, CONSTRAINT `fk_scholar_school` FOREIGN KEY (`school_school_id`) REFERENCES `school` (`school_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+)
+
+2015-08-17 17:41:29 [::1][-][-][info][application] $_GET = [
+    'r' => 'grade/groupcreate'
+]
+
+$_POST = [
+    '_csrf' => 'ajRETURxaUUlVzR/NwUdIAlecRwgIRN3I118NCIeA3QGcwM0Nhc9Ig=='
+    'Scholar' => [
+        'scholar_id' => '1'
+        'allowance_allowance_area' => 'NCR'
+        'school_school_id' => '1'
+    ]
+    'Grade' => [
+        0 => [
+            'grade_id' => '1'
+            'subject_subject_id' => '1'
+            'subject_scholar_scholar_id' => '1'
+            'subject_scholar_school_school_id' => '1'
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '336'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '52665'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=grade%2Fgroupcreate'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439826089.028
+    'REQUEST_TIME' => 1439826089
+]
+2015-08-17 17:42:33 [::1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`smfoundation`.`grade`, CONSTRAINT `fk_grade_subject1` FOREIGN KEY (`subject_subject_id`, `subject_scholar_scholar_id`, `subject_scholar_school_school_id`) REFERENCES `subject` (`subject_id`, )' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php:781
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(781): PDOStatement->execute()
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(119): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`smfoundation`.`grade`, CONSTRAINT `fk_grade_subject1` FOREIGN KEY (`subject_subject_id`, `subject_scholar_scholar_id`, `subject_scholar_school_school_id`) REFERENCES `subject` (`subject_id`, )
+The SQL being executed was: INSERT INTO `grade` (`grade_id`, `subject_subject_id`, `subject_scholar_scholar_id`, `subject_scholar_school_school_id`) VALUES (1, 1, 1, 1)' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(791): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `gr...')
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(119): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1452
+    [2] => Cannot add or update a child row: a foreign key constraint fails (`smfoundation`.`grade`, CONSTRAINT `fk_grade_subject1` FOREIGN KEY (`subject_subject_id`, `subject_scholar_scholar_id`, `subject_scholar_school_school_id`) REFERENCES `subject` (`subject_id`, )
+)
+
+2015-08-17 17:42:32 [::1][-][-][info][application] $_GET = [
+    'r' => 'grade/groupcreate'
+]
+
+$_POST = [
+    '_csrf' => 'ejZ5RlJULW81VQl0ISBZChlcTBc2BFddM19BPzQ7R14WcT4/IDJ5CA=='
+    'Scholar' => [
+        'scholar_id' => '1'
+        'allowance_allowance_area' => '1'
+        'school_school_id' => '1'
+    ]
+    'Grade' => [
+        0 => [
+            'grade_id' => '1'
+            'subject_subject_id' => '1'
+            'subject_scholar_scholar_id' => '1'
+            'subject_scholar_school_school_id' => '1'
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '334'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '52681'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=grade%2Fgroupcreate'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439826152.925
+    'REQUEST_TIME' => 1439826152
+]
+2015-08-17 17:42:41 [::1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`smfoundation`.`grade`, CONSTRAINT `fk_grade_subject1` FOREIGN KEY (`subject_subject_id`, `subject_scholar_scholar_id`, `subject_scholar_school_school_id`) REFERENCES `subject` (`subject_id`, )' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php:781
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(781): PDOStatement->execute()
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(119): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`smfoundation`.`grade`, CONSTRAINT `fk_grade_subject1` FOREIGN KEY (`subject_subject_id`, `subject_scholar_scholar_id`, `subject_scholar_school_school_id`) REFERENCES `subject` (`subject_id`, )
+The SQL being executed was: INSERT INTO `grade` (`grade_id`, `subject_subject_id`, `subject_scholar_scholar_id`, `subject_scholar_school_school_id`) VALUES (1, 1, 1, 1)' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(791): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `gr...')
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(119): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1452
+    [2] => Cannot add or update a child row: a foreign key constraint fails (`smfoundation`.`grade`, CONSTRAINT `fk_grade_subject1` FOREIGN KEY (`subject_subject_id`, `subject_scholar_scholar_id`, `subject_scholar_school_school_id`) REFERENCES `subject` (`subject_id`, )
+)
+
+2015-08-17 17:42:40 [::1][-][-][info][application] $_GET = [
+    'r' => 'grade/groupcreate'
+]
+
+$_POST = [
+    '_csrf' => 'NVZTVXFSVXZ6NSNnAiYhE1Y8ZgQVAi9EfD9rLBc9P0dZERQsAzQBEQ=='
+    'Scholar' => [
+        'scholar_id' => '1'
+        'allowance_allowance_area' => 'NCR'
+        'school_school_id' => '1'
+    ]
+    'Grade' => [
+        0 => [
+            'grade_id' => '1'
+            'subject_subject_id' => '1'
+            'subject_scholar_scholar_id' => '1'
+            'subject_scholar_school_school_id' => '1'
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '334'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '52684'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=grade%2Fgroupcreate'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439826160.401
+    'REQUEST_TIME' => 1439826160
+]
+2015-08-17 17:46:48 [::1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-1-NCR' for key 'PRIMARY'' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php:781
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(781): PDOStatement->execute()
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(116): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-1-NCR' for key 'PRIMARY'
+The SQL being executed was: INSERT INTO `scholar` (`scholar_id`, `allowance_allowance_area`, `school_school_id`) VALUES (1, 'NCR', 1)' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(791): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `sc...')
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(116): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry '1-1-NCR' for key 'PRIMARY'
+)
+
+2015-08-17 17:46:47 [::1][-][-][info][application] $_GET = [
+    'r' => 'grade/groupcreate'
+]
+
+$_POST = [
+    '_csrf' => 'OXRzeElybkZ2FwNKOgYaI1oeRiktIhR0cB1LAS8dBHdVMzQBOxQ6IQ=='
+    'Scholar' => [
+        'scholar_id' => '1'
+        'allowance_allowance_area' => 'NCR'
+        'school_school_id' => '1'
+    ]
+    'Grade' => [
+        0 => [
+            'grade_id' => '1'
+            'subject_subject_id' => '1'
+            'subject_scholar_scholar_id' => '1'
+            'subject_scholar_school_school_id' => '1'
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '334'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '52963'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=grade%2Fgroupcreate'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439826407.882
+    'REQUEST_TIME' => 1439826407
+]
+2015-08-17 17:47:01 [::1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`smfoundation`.`grade`, CONSTRAINT `fk_grade_subject1` FOREIGN KEY (`subject_subject_id`, `subject_scholar_scholar_id`, `subject_scholar_school_school_id`) REFERENCES `subject` (`subject_id`, )' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php:781
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(781): PDOStatement->execute()
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(119): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`smfoundation`.`grade`, CONSTRAINT `fk_grade_subject1` FOREIGN KEY (`subject_subject_id`, `subject_scholar_scholar_id`, `subject_scholar_school_school_id`) REFERENCES `subject` (`subject_id`, )
+The SQL being executed was: INSERT INTO `grade` (`grade_id`, `subject_subject_id`, `subject_scholar_scholar_id`, `subject_scholar_school_school_id`) VALUES (1, 1, 2, 1)' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(791): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `gr...')
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(119): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1452
+    [2] => Cannot add or update a child row: a foreign key constraint fails (`smfoundation`.`grade`, CONSTRAINT `fk_grade_subject1` FOREIGN KEY (`subject_subject_id`, `subject_scholar_scholar_id`, `subject_scholar_school_school_id`) REFERENCES `subject` (`subject_id`, )
+)
+
+2015-08-17 17:47:00 [::1][-][-][info][application] $_GET = [
+    'r' => 'grade/groupcreate'
+]
+
+$_POST = [
+    '_csrf' => 'Y3FCRDVfNEcsEjJ2RitAIgAbdxVRD051Khh6PVMwXnYPNgU9RzlgIA=='
+    'Scholar' => [
+        'scholar_id' => '2'
+        'allowance_allowance_area' => 'NCR'
+        'school_school_id' => '1'
+    ]
+    'Grade' => [
+        0 => [
+            'grade_id' => '1'
+            'subject_subject_id' => '1'
+            'subject_scholar_scholar_id' => '1'
+            'subject_scholar_school_school_id' => '1'
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '334'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '52975'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=grade%2Fgroupcreate'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439826420.303
+    'REQUEST_TIME' => 1439826420
+]
+2015-08-17 17:47:12 [::1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-1-NCR' for key 'PRIMARY'' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php:781
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(781): PDOStatement->execute()
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(116): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-1-NCR' for key 'PRIMARY'
+The SQL being executed was: INSERT INTO `scholar` (`scholar_id`, `allowance_allowance_area`, `school_school_id`) VALUES (1, 'NCR', 1)' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(791): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `sc...')
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(116): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry '1-1-NCR' for key 'PRIMARY'
+)
+
+2015-08-17 17:47:11 [::1][-][-][info][application] $_GET = [
+    'r' => 'grade/groupcreate'
+]
+
+$_POST = [
+    '_csrf' => 'YTBNelREN1EuUz1IJzBDNAJaeCswFE1jKFl1AzIrXWANdwoDJiJjNg=='
+    'Scholar' => [
+        'scholar_id' => '1'
+        'allowance_allowance_area' => 'NCR'
+        'school_school_id' => '1'
+    ]
+    'Grade' => [
+        0 => [
+            'grade_id' => '1'
+            'subject_subject_id' => '1'
+            'subject_scholar_scholar_id' => '1'
+            'subject_scholar_school_school_id' => '1'
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '334'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '52980'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=grade%2Fgroupcreate'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439826431.906
+    'REQUEST_TIME' => 1439826431
+]
+2015-08-17 17:47:39 [::1][1][rkp9cgqc3gg88bco0defp34d87][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Missing required parameters: grade_id, subject_subject_id, subject_scholar_scholar_id, subject_scholar_school_school_id' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Controller.php:93
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(49): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('grade/view', Array)
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#6 {main}
+2015-08-17 17:47:39 [::1][1][rkp9cgqc3gg88bco0defp34d87][info][application] $_GET = [
+    'r' => 'grade/view'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/iteration3/backend/web/'
+    '__id' => 1
+    'reportico' => [
+        'awaiting_initial_defaults' => false
+        'firsttimeIn' => true
+        'execute_mode' => 'PREPARE'
+        'project' => 'foundationreports'
+        'target_menu' => false
+        'project_path' => 'C:\\Users\\Syam\\smGithub2\\SMF-Project\\Application\\Module 2\\Iteration 3\\SM Scholarship Foundation\\backend\\runtime/reportico/projects/foundationreports'
+        'reportico_language' => 'en_gb'
+        'external_user' => 1
+        'external_param1' => false
+        'external_param2' => false
+        'external_param3' => false
+        'user_parameters' => []
+        'dropdown_menu' => false
+        'static_menu' => false
+        'charting_engine' => 'PCHART'
+        'charting_engine_html' => 'NVD3'
+        'output_template_parameters' => [
+            'show_hide_navigation_menu' => 'show'
+            'show_hide_dropdown_menu' => 'show'
+            'show_hide_report_output_title' => 'show'
+            'show_hide_prepare_section_boxes' => 'show'
+            'show_hide_prepare_pdf_button' => 'show'
+            'show_hide_prepare_html_button' => 'show'
+            'show_hide_prepare_print_html_button' => 'show'
+            'show_hide_prepare_csv_button' => 'show'
+            'show_hide_prepare_page_style' => 'show'
+        ]
+        'dynamic_grids' => false
+        'dynamic_grids_sortable' => true
+        'dynamic_grids_searchable' => true
+        'dynamic_grids_paging' => false
+        'dynamic_grids_page_size' => 10
+        'framework_parent' => 'yii'
+        'access_mode' => 'ONEREPORT'
+        'progress_text' => 'Ready'
+        'progress_status' => 'READY'
+        'firstTimeIn' => true
+        'target_format' => 'HTML'
+        'latestRequest' => ''
+        'reporticourl' => '../../vendor/reportico/yii2-reportico/components'
+        'reportico_ajax_script_url' => '/iteration3/backend/web/index.php'
+        'forward_url_get_parameters' => 'r=reportico/reportico/ajax'
+        'forward_url_get_parameters_graph' => 'reportico/graph'
+        'forward_url_get_parameters_dbimage' => 'reportico/dbimage'
+        'bootstrap_styles' => '3'
+        'force_reportico_mini_maintains' => true
+        'url_path_to_assets' => '/iteration3/backend/web/assets/6935d32e'
+        'jquery_preloaded' => false
+        'bootstrap_preloaded' => true
+        'loggedin' => true
+        'database' => null
+        'hostname' => null
+        'driver' => 'mysql'
+        'server' => null
+        'protocol' => null
+        'xmlin' => 'Grades_Report'
+        'xmlout' => 'Grades_Report'
+        'reportico_template' => false
+        'show_print_button' => true
+        'target_show_detail' => true
+        'target_show_graph' => true
+        'target_show_group_headers' => true
+        'target_show_group_trailers' => true
+        'target_show_column_headers' => true
+        'target_show_criteria' => true
+        'target_style' => 'TABLE'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '52987'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=grade%2Fview&id=1'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fview&id=1'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439826459.747
+    'REQUEST_TIME' => 1439826459
+]
+2015-08-17 17:47:55 [::1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-1-1-1' for key 'PRIMARY'' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php:781
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(781): PDOStatement->execute()
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(119): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-1-1-1' for key 'PRIMARY'
+The SQL being executed was: INSERT INTO `grade` (`grade_id`, `subject_subject_id`, `subject_scholar_scholar_id`, `subject_scholar_school_school_id`) VALUES (1, 1, 1, 1)' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(791): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `gr...')
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(119): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry '1-1-1-1' for key 'PRIMARY'
+)
+
+2015-08-17 17:47:54 [::1][-][-][info][application] $_GET = [
+    'r' => 'grade/groupcreate'
+]
+
+$_POST = [
+    '_csrf' => 'ZjhOMFJteWMpWz4CIRkNBgVSe2E2PQNRL1F2STQCE1IKfwlJIAstBA=='
+    'Scholar' => [
+        'scholar_id' => '1'
+        'allowance_allowance_area' => 'NCR'
+        'school_school_id' => '1'
+    ]
+    'Grade' => [
+        0 => [
+            'grade_id' => '1'
+            'subject_subject_id' => '1'
+            'subject_scholar_scholar_id' => '1'
+            'subject_scholar_school_school_id' => '1'
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '334'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '52996'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=grade%2Fgroupcreate'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439826474.525
+    'REQUEST_TIME' => 1439826474
+]
+2015-08-17 17:48:04 [::1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-1-1-1' for key 'PRIMARY'' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php:781
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(781): PDOStatement->execute()
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(119): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-1-1-1' for key 'PRIMARY'
+The SQL being executed was: INSERT INTO `grade` (`grade_id`, `subject_subject_id`, `subject_scholar_scholar_id`, `subject_scholar_school_school_id`) VALUES (1, 1, 1, 1)' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(791): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `gr...')
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(119): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 [internal function]: backend\controllers\GradeController->actionGroupcreate()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry '1-1-1-1' for key 'PRIMARY'
+)
+
+2015-08-17 17:48:03 [::1][-][-][info][application] $_GET = [
+    'r' => 'grade/groupcreate'
+]
+
+$_POST = [
+    '_csrf' => 'RmRQRXZZSVgJByB3BS09PSUOZRQSCTNqDw1oPBA2I2kqIxc8BD8dPw=='
+    'Scholar' => [
+        'scholar_id' => '1'
+        'allowance_allowance_area' => 'NCR'
+        'school_school_id' => '1'
+    ]
+    'Grade' => [
+        0 => [
+            'grade_id' => '1'
+            'subject_subject_id' => '1'
+            'subject_scholar_scholar_id' => '1'
+            'subject_scholar_school_school_id' => '1'
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '334'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '52997'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=grade%2Fgroupcreate'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439826483.688
+    'REQUEST_TIME' => 1439826483
+]
+2015-08-17 17:48:19 [::1][1][rkp9cgqc3gg88bco0defp34d87][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Missing required parameters: grade_id, subject_subject_id, subject_scholar_scholar_id, subject_scholar_school_school_id' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Controller.php:93
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(49): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('grade/view', Array)
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#6 {main}
+2015-08-17 17:48:19 [::1][1][rkp9cgqc3gg88bco0defp34d87][info][application] $_GET = [
+    'r' => 'grade/view'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/iteration3/backend/web/'
+    '__id' => 1
+    'reportico' => [
+        'awaiting_initial_defaults' => false
+        'firsttimeIn' => true
+        'execute_mode' => 'PREPARE'
+        'project' => 'foundationreports'
+        'target_menu' => false
+        'project_path' => 'C:\\Users\\Syam\\smGithub2\\SMF-Project\\Application\\Module 2\\Iteration 3\\SM Scholarship Foundation\\backend\\runtime/reportico/projects/foundationreports'
+        'reportico_language' => 'en_gb'
+        'external_user' => 1
+        'external_param1' => false
+        'external_param2' => false
+        'external_param3' => false
+        'user_parameters' => []
+        'dropdown_menu' => false
+        'static_menu' => false
+        'charting_engine' => 'PCHART'
+        'charting_engine_html' => 'NVD3'
+        'output_template_parameters' => [
+            'show_hide_navigation_menu' => 'show'
+            'show_hide_dropdown_menu' => 'show'
+            'show_hide_report_output_title' => 'show'
+            'show_hide_prepare_section_boxes' => 'show'
+            'show_hide_prepare_pdf_button' => 'show'
+            'show_hide_prepare_html_button' => 'show'
+            'show_hide_prepare_print_html_button' => 'show'
+            'show_hide_prepare_csv_button' => 'show'
+            'show_hide_prepare_page_style' => 'show'
+        ]
+        'dynamic_grids' => false
+        'dynamic_grids_sortable' => true
+        'dynamic_grids_searchable' => true
+        'dynamic_grids_paging' => false
+        'dynamic_grids_page_size' => 10
+        'framework_parent' => 'yii'
+        'access_mode' => 'ONEREPORT'
+        'progress_text' => 'Ready'
+        'progress_status' => 'READY'
+        'firstTimeIn' => true
+        'target_format' => 'HTML'
+        'latestRequest' => ''
+        'reporticourl' => '../../vendor/reportico/yii2-reportico/components'
+        'reportico_ajax_script_url' => '/iteration3/backend/web/index.php'
+        'forward_url_get_parameters' => 'r=reportico/reportico/ajax'
+        'forward_url_get_parameters_graph' => 'reportico/graph'
+        'forward_url_get_parameters_dbimage' => 'reportico/dbimage'
+        'bootstrap_styles' => '3'
+        'force_reportico_mini_maintains' => true
+        'url_path_to_assets' => '/iteration3/backend/web/assets/6935d32e'
+        'jquery_preloaded' => false
+        'bootstrap_preloaded' => true
+        'loggedin' => true
+        'database' => null
+        'hostname' => null
+        'driver' => 'mysql'
+        'server' => null
+        'protocol' => null
+        'xmlin' => 'Grades_Report'
+        'xmlout' => 'Grades_Report'
+        'reportico_template' => false
+        'show_print_button' => true
+        'target_show_detail' => true
+        'target_show_graph' => true
+        'target_show_group_headers' => true
+        'target_show_group_trailers' => true
+        'target_show_column_headers' => true
+        'target_show_criteria' => true
+        'target_style' => 'TABLE'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '53015'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=grade%2Fview&id=1'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fview&id=1'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439826499.572
+    'REQUEST_TIME' => 1439826499
+]
+2015-08-17 17:49:16 [::1][1][rkp9cgqc3gg88bco0defp34d87][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Missing required parameters: grade_id, subject_subject_id, subject_scholar_scholar_id, subject_scholar_school_school_id' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Controller.php:93
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(49): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('grade/view', Array)
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#6 {main}
+2015-08-17 17:49:16 [::1][1][rkp9cgqc3gg88bco0defp34d87][info][application] $_GET = [
+    'r' => 'grade/view'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/iteration3/backend/web/'
+    '__id' => 1
+    'reportico' => [
+        'awaiting_initial_defaults' => false
+        'firsttimeIn' => true
+        'execute_mode' => 'PREPARE'
+        'project' => 'foundationreports'
+        'target_menu' => false
+        'project_path' => 'C:\\Users\\Syam\\smGithub2\\SMF-Project\\Application\\Module 2\\Iteration 3\\SM Scholarship Foundation\\backend\\runtime/reportico/projects/foundationreports'
+        'reportico_language' => 'en_gb'
+        'external_user' => 1
+        'external_param1' => false
+        'external_param2' => false
+        'external_param3' => false
+        'user_parameters' => []
+        'dropdown_menu' => false
+        'static_menu' => false
+        'charting_engine' => 'PCHART'
+        'charting_engine_html' => 'NVD3'
+        'output_template_parameters' => [
+            'show_hide_navigation_menu' => 'show'
+            'show_hide_dropdown_menu' => 'show'
+            'show_hide_report_output_title' => 'show'
+            'show_hide_prepare_section_boxes' => 'show'
+            'show_hide_prepare_pdf_button' => 'show'
+            'show_hide_prepare_html_button' => 'show'
+            'show_hide_prepare_print_html_button' => 'show'
+            'show_hide_prepare_csv_button' => 'show'
+            'show_hide_prepare_page_style' => 'show'
+        ]
+        'dynamic_grids' => false
+        'dynamic_grids_sortable' => true
+        'dynamic_grids_searchable' => true
+        'dynamic_grids_paging' => false
+        'dynamic_grids_page_size' => 10
+        'framework_parent' => 'yii'
+        'access_mode' => 'ONEREPORT'
+        'progress_text' => 'Ready'
+        'progress_status' => 'READY'
+        'firstTimeIn' => true
+        'target_format' => 'HTML'
+        'latestRequest' => ''
+        'reporticourl' => '../../vendor/reportico/yii2-reportico/components'
+        'reportico_ajax_script_url' => '/iteration3/backend/web/index.php'
+        'forward_url_get_parameters' => 'r=reportico/reportico/ajax'
+        'forward_url_get_parameters_graph' => 'reportico/graph'
+        'forward_url_get_parameters_dbimage' => 'reportico/dbimage'
+        'bootstrap_styles' => '3'
+        'force_reportico_mini_maintains' => true
+        'url_path_to_assets' => '/iteration3/backend/web/assets/6935d32e'
+        'jquery_preloaded' => false
+        'bootstrap_preloaded' => true
+        'loggedin' => true
+        'database' => null
+        'hostname' => null
+        'driver' => 'mysql'
+        'server' => null
+        'protocol' => null
+        'xmlin' => 'Grades_Report'
+        'xmlout' => 'Grades_Report'
+        'reportico_template' => false
+        'show_print_button' => true
+        'target_show_detail' => true
+        'target_show_graph' => true
+        'target_show_group_headers' => true
+        'target_show_group_trailers' => true
+        'target_show_column_headers' => true
+        'target_show_criteria' => true
+        'target_style' => 'TABLE'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Fgroupcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '53069'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=grade%2Fview&id=1'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fview&id=1'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439826556.903
+    'REQUEST_TIME' => 1439826556
+]
+2015-08-17 17:50:10 [::1][1][rkp9cgqc3gg88bco0defp34d87][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'The requested page does not exist.' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php:194
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\GradeController.php(174): backend\controllers\GradeController->findModel('1', '1', '1', '1')
+#1 [internal function]: backend\controllers\GradeController->actionDelete('1', '1', '1', '1')
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('delete', Array)
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('grade/delete', Array)
+#6 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2015-08-17 17:50:09 [::1][1][rkp9cgqc3gg88bco0defp34d87][info][application] $_GET = [
+    'r' => 'grade/delete'
+    'grade_id' => '1'
+    'subject_subject_id' => '1'
+    'subject_scholar_scholar_id' => '1'
+    'subject_scholar_school_school_id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'SGwxQjhoT1kHD0FwSxw7PCsGBBNcODVrAQUJO14HJWgkK3Y7Sg4bPg=='
+]
+
+$_COOKIE = [
+    '_csrf' => '0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg\";}'
+    'PHPSESSID' => 'rkp9cgqc3gg88bco0defp34d87'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/iteration3/backend/web/'
+    '__id' => 1
+    'reportico' => [
+        'awaiting_initial_defaults' => false
+        'firsttimeIn' => true
+        'execute_mode' => 'PREPARE'
+        'project' => 'foundationreports'
+        'target_menu' => false
+        'project_path' => 'C:\\Users\\Syam\\smGithub2\\SMF-Project\\Application\\Module 2\\Iteration 3\\SM Scholarship Foundation\\backend\\runtime/reportico/projects/foundationreports'
+        'reportico_language' => 'en_gb'
+        'external_user' => 1
+        'external_param1' => false
+        'external_param2' => false
+        'external_param3' => false
+        'user_parameters' => []
+        'dropdown_menu' => false
+        'static_menu' => false
+        'charting_engine' => 'PCHART'
+        'charting_engine_html' => 'NVD3'
+        'output_template_parameters' => [
+            'show_hide_navigation_menu' => 'show'
+            'show_hide_dropdown_menu' => 'show'
+            'show_hide_report_output_title' => 'show'
+            'show_hide_prepare_section_boxes' => 'show'
+            'show_hide_prepare_pdf_button' => 'show'
+            'show_hide_prepare_html_button' => 'show'
+            'show_hide_prepare_print_html_button' => 'show'
+            'show_hide_prepare_csv_button' => 'show'
+            'show_hide_prepare_page_style' => 'show'
+        ]
+        'dynamic_grids' => false
+        'dynamic_grids_sortable' => true
+        'dynamic_grids_searchable' => true
+        'dynamic_grids_paging' => false
+        'dynamic_grids_page_size' => 10
+        'framework_parent' => 'yii'
+        'access_mode' => 'ONEREPORT'
+        'progress_text' => 'Ready'
+        'progress_status' => 'READY'
+        'firstTimeIn' => true
+        'target_format' => 'HTML'
+        'latestRequest' => ''
+        'reporticourl' => '../../vendor/reportico/yii2-reportico/components'
+        'reportico_ajax_script_url' => '/iteration3/backend/web/index.php'
+        'forward_url_get_parameters' => 'r=reportico/reportico/ajax'
+        'forward_url_get_parameters_graph' => 'reportico/graph'
+        'forward_url_get_parameters_dbimage' => 'reportico/dbimage'
+        'bootstrap_styles' => '3'
+        'force_reportico_mini_maintains' => true
+        'url_path_to_assets' => '/iteration3/backend/web/assets/6935d32e'
+        'jquery_preloaded' => false
+        'bootstrap_preloaded' => true
+        'loggedin' => true
+        'database' => null
+        'hostname' => null
+        'driver' => 'mysql'
+        'server' => null
+        'protocol' => null
+        'xmlin' => 'Grades_Report'
+        'xmlout' => 'Grades_Report'
+        'reportico_template' => false
+        'show_print_button' => true
+        'target_show_detail' => true
+        'target_show_graph' => true
+        'target_show_group_headers' => true
+        'target_show_group_trailers' => true
+        'target_show_column_headers' => true
+        'target_show_criteria' => true
+        'target_style' => 'TABLE'
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '66'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=grade%2Findex2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_csrf=0358866ca8c75258611b1aabdae6753ef4d0db58b0063a6d283b1a2f4f830cf0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ocp2sttecj5QdPz2Ii8yfoj1lGGyrfTg%22%3B%7D; PHPSESSID=rkp9cgqc3gg88bco0defp34d87; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '53096'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=grade%2Fdelete&grade_id=1&subject_subject_id=1&subject_scholar_scholar_id=1&subject_scholar_school_school_id=1'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?r=grade%2Fdelete&grade_id=1&subject_subject_id=1&subject_scholar_scholar_id=1&subject_scholar_school_school_id=1'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1439826609.458
+    'REQUEST_TIME' => 1439826609
+]
