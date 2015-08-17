@@ -37,13 +37,12 @@ $exportedValues =
 $export = ExportMenu::widget([
 		'dataProvider' => $dataProvider,
         'columns' => $exportedValues,
-		'disabledColumns'=>[0],
-		'hiddenColumns'=>[8],
+		'noExportColumns'=>[8],
         'columnSelectorOptions'=>[
             'label' => 'Columns',
             'class' => 'btn btn-danger'
         ],
-
+		'target' => '_blank',
         'fontAwesome' => true,
         'dropdownOptions' => [
             'label' => 'Export',
