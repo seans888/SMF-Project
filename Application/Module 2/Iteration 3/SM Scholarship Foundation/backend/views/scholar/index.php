@@ -3,28 +3,86 @@
 use yii\helpers\Html;
 use kartik\grid\GridView;
 use kartik\export\ExportMenu;
-
+use yii\helpers\ArrayHelper;
+use kartik\select2\Select2;
+use common\models\School;
 $exportedValues = 
 [            
 	['class' => 'kartik\grid\SerialColumn'],
-
-		'scholar_id',
-		'school_school_id',
-		'scholar_first_name',
-		'scholar_middle_name',
-		'scholar_last_name',
-		'scholar_gender',
-		// 'scholar_address',
-		'scholar_course',
-		'scholar_graduate_status',
-		'scholar_year_level',
-		// 'scholar_contact_email:email',
-		// 'scholar_contact_number',
-		'scholar_allowance_status',
-		// 'scholar_cash_card_number',
-		'scholar_type',
-		// 'scholar_sponsor',
-		'allowance_allowance_area',
+	'scholar_id',
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'scholar_first_name',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'scholar_middle_name',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'scholar_last_name',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'scholar_gender',
+		'editableOptions' => [
+			'inputType' => 'dropDownList',
+			'pluginOptions'=>['allowClear'=>true],
+			'data' => ["Male"=>"Male","Female"=>"Female"],
+			'widgetClass'=> 'kartik\select2\Select2',
+		],
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'scholar_course',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute'=>'school_school_id',
+		'editableOptions' => [
+			'inputType' => '\kartik\select2\Select2',
+			'options'=>
+			[
+				'data' => ArrayHelper::map(School::find()->all(),'school_id','school_name'),
+			],
+		],
+		'value'=>'schoolSchool.school_name',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'scholar_year_level',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'scholar_graduate_status',
+		'editableOptions' => [
+			'inputType' => 'dropDownList',
+			'pluginOptions'=>['allowClear'=>true],
+			'data' => ["Not Graduated"=>"Not Graduated","Graduated"=>"Graduated"],
+			'widgetClass'=> 'kartik\select2\Select2',
+		],
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'scholar_allowance_status',
+		'editableOptions' => [
+			'inputType' => 'dropDownList',
+			'pluginOptions'=>['allowClear'=>true],
+			'data' => ["Granting"=>"Granting","Withheld"=>"Withheld"],
+			'widgetClass'=> 'kartik\select2\Select2',
+		],
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'scholar_type',
+		'editableOptions' => [
+			'inputType' => 'dropDownList',
+			'pluginOptions'=>['allowClear'=>true],
+			'data' => ["SMFI"=>"SMFI","My Scholar A"=>"My Scholar A","Kabayan Scholar"=>"Kabayan Scholar",
+			"Kabayan Scholar"=>"Kabayan Scholar","My Scholar B"=>"My Scholar B","ICA Grant Scholar"=>"ICA Grant Scholar"],
+			'widgetClass'=> 'kartik\select2\Select2',
+		],
+	],
 
 	['class' => 'kartik\grid\ActionColumn'],
 ];
