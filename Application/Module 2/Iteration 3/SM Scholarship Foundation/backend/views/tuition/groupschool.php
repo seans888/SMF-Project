@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use kartik\grid\GridView;
 use kartik\export\ExportMenu;
-
+use common\models\TuitionSearch;
 $gridColumns = [
 		[
 				'class' => 'kartik\grid\ExpandRowColumn',
@@ -11,8 +11,8 @@ $gridColumns = [
 					return GridView::ROW_COLLAPSED;
 				},
 				'detail' => function ($model, $key, $index, $column){
-					$searchModel2 = new GradeSearch();
-					$searchModel2 -> subject_scholar_school_school_id = $model->school_id;
+					$searchModel2 = new TuitionSearch();
+					$searchModel2 -> scholar_school_school_id = $model->school_id;
 					$dataProvider2 = $searchModel2->search(Yii::$app->request->queryParams);
 					
 					return Yii::$app->controller->renderPartial('index',[
