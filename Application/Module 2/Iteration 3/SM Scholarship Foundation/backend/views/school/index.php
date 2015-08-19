@@ -80,6 +80,11 @@ $export = ExportMenu::widget([
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+		'pjax' => true,
+		'pjaxSettings' => 
+		[
+			'neverTimeout' => true
+		],
     	'rowOptions'=>function($model){
     		if(strcasecmp($model->school_area, 'NCR') != 0)
     		{
