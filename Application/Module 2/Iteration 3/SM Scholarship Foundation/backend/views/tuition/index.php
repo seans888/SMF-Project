@@ -46,11 +46,6 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tuition-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-<?= Html::a('Group By School', ['index'], ['class' => 'btn btn-success']) ?>
-<?= Html::a('Show Only Tuition Records', ['index2'], ['class' => 'btn btn-success']) ?>
-
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
