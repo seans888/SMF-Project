@@ -16,11 +16,11 @@ $exportedValues =
 	'scholar_school_school_id',
 	'tuition_term',
 	'tuition_school_year_start',
-	// 'tuition_school_year_end',
-	// 'tuition_enrollment_date',
-	// 'tuition_amount',
-	// 'tuition_paid_status',
-	// 'tuition_payment_date',
+	'tuition_school_year_end',
+	'tuition_enrollment_date',
+	'tuition_amount',
+	'tuition_paid_status',
+	'tuition_payment_date',
 
 	['class' => 'yii\grid\ActionColumn'],
 ];
@@ -28,7 +28,7 @@ $exportedValues =
 $export = ExportMenu::widget([
 		'dataProvider' => $dataProvider,
         'columns' => $exportedValues,
-		'noExportColumns'=>[8],
+		'noExportColumns'=>[11],
         'columnSelectorOptions'=>[
             'label' => 'Columns',
             'class' => 'btn btn-danger'
@@ -48,10 +48,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Tuition', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+<?= Html::a('Group By School', ['index'], ['class' => 'btn btn-success']) ?>
+<?= Html::a('Show Only Tuition Records', ['index2'], ['class' => 'btn btn-success']) ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
