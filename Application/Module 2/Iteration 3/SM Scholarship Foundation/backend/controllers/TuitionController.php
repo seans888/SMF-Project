@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
+use common\models\SchoolSearch;
 use common\models\Tuition;
 use common\models\TuitionSearch;
 use yii\web\Controller;
@@ -32,15 +33,26 @@ class TuitionController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new TuitionSearch();
+        $searchModel = new SchoolSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('index', [
+        return $this->render('groupschool', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
 
+	public function actionIndex2()
+    {
+        $searchModel = new TuitionSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('index2', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+	
     /**
      * Displays a single Tuition model.
      * @param integer $tuition_id
