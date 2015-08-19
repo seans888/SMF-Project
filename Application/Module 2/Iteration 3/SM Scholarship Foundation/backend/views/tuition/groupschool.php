@@ -79,7 +79,8 @@ $export = ExportMenu::widget([
 	]);
 
 ?>
-	
+<?= Html::a('Group By School', ['index'], ['class' => 'btn btn-success']) ?>
+<?= Html::a('Show Only Tuition Records', ['index2'], ['class' => 'btn btn-success']) ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
