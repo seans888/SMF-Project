@@ -3,7 +3,8 @@
 use yii\helpers\Html;
 use kartik\grid\GridView;
 use kartik\export\ExportMenu;
-
+use yii\helpers\ArrayHelper;
+use kartik\select2\Select2;
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\SchoolSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -22,14 +23,38 @@ $this->params['breadcrumbs'][] = $this->title;
 $exportedValues = 
 [            
 	['class' => 'kartik\grid\SerialColumn'],
-
 	'school_id',
-	'school_name',
-	'school_area',
-	'school_address',
-	'school_contact_emails:email',
-	'school_contact_numbers',
-	'school_vendor_code',
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'school_name',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'school_area',
+		'editableOptions' => [
+			'inputType' => '\kartik\select2\Select2',
+			'options'=>
+			[
+				'data' => ['NCR'=>'NCR','Davao'=>'Davao'],
+			],
+		],
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'school_address',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'school_contact_emails',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'school_contact_numbers',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'school_vendor_code',
+	],
 
 	['class' => 'kartik\grid\ActionColumn'],
 ];
@@ -55,6 +80,11 @@ $export = ExportMenu::widget([
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+		'pjax' => true,
+		'pjaxSettings' => 
+		[
+			'neverTimeout' => true
+		],
     	'rowOptions'=>function($model){
     		if(strcasecmp($model->school_area, 'NCR') != 0)
     		{
