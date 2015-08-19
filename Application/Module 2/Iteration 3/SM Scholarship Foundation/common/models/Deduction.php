@@ -15,6 +15,8 @@ use Yii;
  * @property string $deduction_remark
  *
  * @property Scholar $scholarScholar
+ * @property Scholar $scholarSchoolSchool
+ * @property Scholar $scholarScholar0
  */
 class Deduction extends \yii\db\ActiveRecord
 {
@@ -59,6 +61,22 @@ class Deduction extends \yii\db\ActiveRecord
      * @return \yii\db\ActiveQuery
      */
     public function getScholarScholar()
+    {
+        return $this->hasOne(Scholar::className(), ['scholar_id' => 'scholar_scholar_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getScholarSchoolSchool()
+    {
+        return $this->hasOne(Scholar::className(), ['school_school_id' => 'scholar_school_school_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getScholarScholar0()
     {
         return $this->hasOne(Scholar::className(), ['scholar_id' => 'scholar_scholar_id', 'school_school_id' => 'scholar_school_school_id']);
     }
