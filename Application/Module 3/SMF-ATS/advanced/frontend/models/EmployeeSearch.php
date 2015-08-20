@@ -5,10 +5,10 @@ namespace frontend\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Employee;
+use frontend\models\Employee;
 
 /**
- * EmployeeSearch represents the model behind the search form about `app\models\Employee`.
+ * EmployeeSearch represents the model behind the search form about `frontend\models\Employee`.
  */
 class EmployeeSearch extends Employee
 {
@@ -18,7 +18,7 @@ class EmployeeSearch extends Employee
     public function rules()
     {
         return [
-            [['employee_id', 'user_user_id', 'user_user_id1', 'user_id'], 'integer'],
+            [['employee_id', 'user_id'], 'integer'],
             [['emp_firstname', 'emp_lastname', 'emp_midname', 'emp_position', 'emp_department'], 'safe'],
         ];
     }
@@ -57,8 +57,6 @@ class EmployeeSearch extends Employee
 
         $query->andFilterWhere([
             'employee_id' => $this->employee_id,
-            'user_user_id' => $this->user_user_id,
-            'user_user_id1' => $this->user_user_id1,
             'user_id' => $this->user_id,
         ]);
 

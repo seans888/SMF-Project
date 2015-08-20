@@ -1,10 +1,17 @@
 <?php
+
+
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use frontend\widgets\Alert;
+use frontend\models\Alumni;
+use yii\helpers\ArrayHelper;
+use frontend\models\User;
+use frontend\models\Employee;
+//use frontend\models\Alumni;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -24,6 +31,8 @@ AppAsset::register($this);
 <body>
     <?php $this->beginBody() ?>
     <div class="wrap">
+	
+	
         <?php
             NavBar::begin([
                 'brandLabel' => 'SM Foundation',
@@ -46,15 +55,17 @@ AppAsset::register($this);
 
 
 			$roles = Yii::$app->user->identity->user_type;
-			if ($roles == 'admin' || $roles == 'employee'){
+			if ($roles == 'admin'){
 			
 			 $menuItems =[
 				['label' => 'Home', 'url' => ['/site/index']],
 				['label' => 'Alumni', 'url' => ['/alumni/index']],
+				['label' => 'Course', 'url' => ['/course/index']],
+				['label' => 'School', 'url' => ['/school/index']],
 				['label' => 'Employee', 'url' => ['/employee/index']],
                 ['label' => 'Event', 'url' => ['/event/index']],
-				['label' => 'Logs', 'url' => ['/logs/index']],
-				//['label' => 'Migration', 'url' => ['/migration/index']],
+				//['label' => 'Logs', 'url' => ['/logs/index']],
+				['label' => 'Migration', 'url' => ['/migrated-alumni/index']],
 				['label' => 'Testimonials', 'url' => ['/testimonials/index']],
 				['label' => 'Users', 'url' => ['/user/index']],
 				[ 
@@ -67,15 +78,25 @@ AppAsset::register($this);
 					
                 ];
 				
-			}else{
-
+			}else if ($roles == 'user'){
+			$userid = ArrayHelper::getValue(User::find()->where(['username' => Yii::$app->user->identity->username])->one(), 'id');
+			$employeeid = ArrayHelper::getValue(Employee::find()->where(['user_id' => $userid])->one(), 'employee_id');
 
 			
                 $menuItems =[
 				['label' => 'Home', 'url' => ['/site/index']],
 				['label' => 'Alumni', 'url' => ['/alumni/index']],
+				//['label' => 'City', 'url' => ['/city/index']],
+				['label' => 'Course', 'url' => ['/course/index']],
+				['label' => 'School', 'url' => ['/school/index']],
+				['label' => 'Province', 'url' => ['/province/index']],
+				['label' => 'Region', 'url' => ['/region/index']],
+				['label' => 'Employee', 'url' => ['/employee/view', 'id' => $employeeid]],
                 ['label' => 'Event', 'url' => ['/event/index']],
+				['label' => 'Logs', 'url' => ['/logs/index']],
+				//['label' => 'Migration', 'url' => ['/migration/index']],
 				['label' => 'Testimonials', 'url' => ['/testimonials/index']],
+				//['label' => 'Users', 'url' => ['/user/index']],
 				[ 
                     'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
                     'url' => ['/site/logout'],
@@ -85,8 +106,30 @@ AppAsset::register($this);
 					
 					
                 ];
+				}else if ($roles == 'alumni'){
+				$userid = ArrayHelper::getValue(User::find()->where(['username' => Yii::$app->user->identity->username])->one(), 'id');
+				$alumniid = ArrayHelper::getValue(Alumni::find()->where(['user_id' => $userid])->one(), 'alumni_id');
+				
+				$menuItems =[
+				['label' => 'Home', 'url' => ['/site/index']],
+				['label' => 'Alumni', 'url' => ['/alumni/view', 'id' => $alumniid]],
+				['label' => 'Event', 'url' => ['/event/index']],
+				['label' => 'Testimonials', 'url' => ['/testimonials/index']],
+				
+				[ 
+                    'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+                    'url' => ['/site/logout'],
+                    'linkOptions' => ['data-method' => 'post']],
+					
+               
+					
+					
+                ];
+				
 				}
 			}
+			
+			
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => $menuItems,

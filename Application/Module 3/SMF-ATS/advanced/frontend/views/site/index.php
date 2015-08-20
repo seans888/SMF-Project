@@ -21,7 +21,7 @@ $this->title = 'SM Foundation Alumni Tracking System';
 					or university. Commonly, but not always, the word refers to a graduate of the educational institute in question. An alumnus can 
 					also be a former member, employee, contributor, or inmate, as well as a former student.</p>
 
-                <p><a class="btn btn-default" href="http://localhost/SMF_Alumni/SMF-Project/Application/Module%203/SMF-ATS/advanced/frontend/web/index.php?r=alumni%2Findex">View Details &raquo;</a></p>
+                <p><a class="btn btn-default" href="">View Details &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Alumni News</h2>
@@ -40,7 +40,7 @@ $this->title = 'SM Foundation Alumni Tracking System';
 				   or without the participation of human agents. It may be a part of a chain of occurrences as an effect of a 
 				   preceding occurrence and as the cause of a succeeding occurrence.</p>
 
-                <p><a class="btn btn-default" href="http://localhost/SMF_Alumni/SMF-Project/Application/Module%203/SMF-ATS/advanced/frontend/web/index.php?r=event%2Findex">View Details &raquo;</a></p>
+                <p><a class="btn btn-default" href="">View Details &raquo;</a></p>
             </div>
         </div>
 

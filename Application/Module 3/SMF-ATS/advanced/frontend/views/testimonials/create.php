@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Testimonials */
+/* @var $model frontend\models\Testimonials */
 
 $this->title = 'Create Testimonials';
 $this->params['breadcrumbs'][] = ['label' => 'Testimonials', 'url' => ['index']];

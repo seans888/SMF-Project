@@ -26,8 +26,6 @@ $this->params['breadcrumbs'][] = $this->title;
 	<br>given a chance to experience summer/Christmas break jobs at SM Malls and, 
 	<br>after their graduation, will be offered exclusive job opportunities by the SM Group.</p>
 	
-	<div style="position: absolute; top:150px; right:650px; width:0px; height:0px">
-    <img src="http://davaopromos.com/site_media/media1/photos/photos/1512521_713763125324061_1774022914_n_promo_image.jpg" 
-   alt="inquiry">
+
 </div>
 

@@ -15,23 +15,39 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
+    <?= $form->field($model, 'id') ?>
+
     <?= $form->field($model, 'alumni_id') ?>
 
     <?= $form->field($model, 'alumni_firstname') ?>
 
     <?= $form->field($model, 'alumni_lastname') ?>
 
-    <?= $form->field($model, 'alumni_midname') ?>
+    <?= $form->field($model, 'alumni_midinit') ?>
 
-    <?= $form->field($model, 'alumni_course') ?>
+    <?php // echo $form->field($model, 'alumni_gender') ?>
 
-    <?php // echo $form->field($model, 'alumni_school') ?>
+    <?php // echo $form->field($model, 'alumni_address') ?>
+
+    <?php // echo $form->field($model, 'alumni_contactno') ?>
+
+    <?php // echo $form->field($model, 'alumni_remarks') ?>
+
+    <?php // echo $form->field($model, 'alumni_office_local_no') ?>
+
+    <?php // echo $form->field($model, 'alumni_email') ?>
 
     <?php // echo $form->field($model, 'alumni_year_graduated') ?>
 
+    <?php // echo $form->field($model, 'alumni_course') ?>
+
+    <?php // echo $form->field($model, 'alumni_school') ?>
+
+    <?php // echo $form->field($model, 'alumni_company') ?>
+
     <?php // echo $form->field($model, 'alumni_status') ?>
 
-    <?php // echo $form->field($model, 'alumni_email') ?>
+    <?php // echo $form->field($model, 'alumni_area') ?>
 
     <?php // echo $form->field($model, 'alumni_cur_work') ?>
 
@@ -39,7 +55,9 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'alumni_further_study') ?>
 
-    <?php // echo $form->field($model, 'user_user_id') ?>
+    <?php // echo $form->field($model, 'alumni_achievements') ?>
+
+    <?php // echo $form->field($model, 'alumni_legends') ?>
 
     <?php // echo $form->field($model, 'user_id') ?>
 

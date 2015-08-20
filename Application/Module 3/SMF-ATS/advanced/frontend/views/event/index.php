@@ -16,13 +16,34 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Event', ['create'], ['class' => 'btn btn-success']) ?>
-		<?= Html::a('View Event', ['calendar'], ['class' => 'btn btn-success']) ?>
-    </p>
-	
-	<p>
         
     </p>
+	
+		<?php	$roles = Yii::$app->user->identity->user_type;
+			if ($roles == 'admin'){ ?>
+			
+	<?= Html::a('Create Event', ['create'], ['class' => 'btn btn-success']) ?>
+	<?= Html::a('View Event', ['calendar'], ['class' => 'btn btn-success']) ?>
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'event_id',
+            'event_title',
+            'event_descript',
+            'event_date',
+            'event_place',
+            // 'employee_employee_id',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
+	
+	<?php	} else if ($roles == 'user'){ ?>
+	<?= Html::a('Create Event', ['create'], ['class' => 'btn btn-success']) ?>
+	<?= Html::a('View Event', ['calendar'], ['class' => 'btn btn-success']) ?>
 	
 	<?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -35,13 +56,35 @@ $this->params['breadcrumbs'][] = $this->title;
             'event_descript',
             'event_date',
             'event_place',
-			'employee_employee_id',
-            'employee_user_user_id',
+            // 'employee_employee_id',
 
-            ['class' => 'yii\grid\ActionColumn'],
+           	['class' => 'yii\grid\ActionColumn','template'=>'{view}'], 
+            ['class' => 'yii\grid\ActionColumn','template'=>'{update}'],
         ],
     ]); ?>
+	
+	<?php }else{ ?>
+	<?= Html::a('View Event', ['calendar'], ['class' => 'btn btn-success']) ?>
+	<?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
 
+            'event_id',
+            'event_title',
+            'event_descript',
+            'event_date',
+            'event_place',
+            // 'employee_employee_id',
 
+           	['class' => 'yii\grid\ActionColumn','template'=>'{view}'], 
+        ],
+    ]); ?>
+	
+	
+	
+	<?php } ?>
+	
 
 </div>

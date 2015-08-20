@@ -16,6 +16,10 @@ use Yii;
  *
  * @property Scholar $scholarScholar
  * @property Scholar $scholarSchoolSchool
+<<<<<<< HEAD
+=======
+ * @property Scholar $scholarScholar0
+>>>>>>> 08583c20015e1e5dbee7ec6ff0fe0b12366fe05a
  */
 class Deduction extends \yii\db\ActiveRecord
 {
@@ -70,5 +74,16 @@ class Deduction extends \yii\db\ActiveRecord
     public function getScholarSchoolSchool()
     {
         return $this->hasOne(Scholar::className(), ['school_school_id' => 'scholar_school_school_id']);
+<<<<<<< HEAD
+=======
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getScholarScholar0()
+    {
+        return $this->hasOne(Scholar::className(), ['scholar_id' => 'scholar_scholar_id', 'school_school_id' => 'scholar_school_school_id']);
+>>>>>>> 08583c20015e1e5dbee7ec6ff0fe0b12366fe05a
     }
 }

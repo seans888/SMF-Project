@@ -4,10 +4,10 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Alumni */
+/* @var $model frontend\models\Alumni */
 
-$this->title = $model->FullName;
-$this->params['breadcrumbs'][] = ['label' => 'Alumnae', 'url' => ['index']];
+$this->title = $model->alumni_lastname.',' .$model->alumni_firstname;
+$this->params['breadcrumbs'][] = ['label' => 'Alumni', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="alumni-view">
@@ -15,34 +15,125 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->alumni_id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->alumni_id], [
+        
+    </p>
+	
+	<?php	$roles = Yii::$app->user->identity->user_type;
+			if ($roles == 'admin'){ ?>
+			
+			<?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
                 'method' => 'post',
             ],
         ]) ?>
-    </p>
 
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
+            'id',
             'alumni_id',
             'alumni_firstname',
             'alumni_lastname',
-            'alumni_midname',
+            'alumni_midinit',
+            'alumni_gender',
+            'alumni_address',
+            'alumni_contactno',
+            'alumni_remarks',
+            'alumni_office_local_no',
+            'alumni_email:email',
+            'alumni_year_graduated',
             'alumni_course',
             'alumni_school',
-            'alumni_year_graduated',
+            'alumni_company',
             'alumni_status',
-            'alumni_email:email',
+            'alumni_area',
             'alumni_cur_work',
             'alumni_prev_work',
             'alumni_further_study',
-           // 'user_user_id',
+            'alumni_achievements',
+            'alumni_legends',
             'user_id',
         ],
     ]) ?>
+	
+	<?php	} else if ($roles == 'user'){ ?>
+	
+	<?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+            'class' => 'btn btn-danger',
+            'data' => [
+                'confirm' => 'Are you sure you want to delete this item?',
+                'method' => 'post',
+            ],
+        ]) ?>
+		
+		
+
+<?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            'id',
+            'alumni_id',
+            'alumni_firstname',
+            'alumni_lastname',
+            'alumni_midinit',
+            'alumni_gender',
+            'alumni_address',
+            'alumni_contactno',
+            'alumni_remarks',
+            'alumni_office_local_no',
+            'alumni_email:email',
+            'alumni_year_graduated',
+            'alumni_course',
+            'alumni_school',
+            'alumni_company',
+            'alumni_status',
+            'alumni_area',
+            'alumni_cur_work',
+            'alumni_prev_work',
+            'alumni_further_study',
+            'alumni_achievements',
+            'alumni_legends',
+            'user_id',
+        ],
+    ]) ?>
+	
+	<?php }else{ ?>
+	
+	<?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+	
+<?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            'id',
+            'alumni_id',
+            'alumni_firstname',
+            'alumni_lastname',
+            'alumni_midinit',
+            'alumni_gender',
+            'alumni_address',
+            'alumni_contactno',
+            'alumni_remarks',
+            'alumni_office_local_no',
+            'alumni_email:email',
+            'alumni_year_graduated',
+            'alumni_course',
+            'alumni_school',
+            'alumni_company',
+            'alumni_status',
+            'alumni_area',
+            'alumni_cur_work',
+            'alumni_prev_work',
+            'alumni_further_study',
+            'alumni_achievements',
+            'alumni_legends',
+            'user_id',
+        ],
+    ]) ?>
+	
+	<?php } ?>
 
 </div>
