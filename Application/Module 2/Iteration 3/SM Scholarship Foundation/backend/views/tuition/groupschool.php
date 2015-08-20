@@ -11,13 +11,13 @@ $gridColumns = [
 					return GridView::ROW_COLLAPSED;
 				},
 				'detail' => function ($model, $key, $index, $column){
-					$searchModel2 = new TuitionSearch();
-					$searchModel2 -> scholar_school_school_id = $model->school_id;
-					$dataProvider2 = $searchModel2->search(Yii::$app->request->queryParams);
+					$searchModel = new TuitionSearch();
+					$searchModel -> scholar_school_school_id = $model->school_id;
+					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 					
 					return Yii::$app->controller->renderPartial('index',[
-						'searchModel2' => $searchModel2,
-						'dataProvider2' => $dataProvider2,
+						'searchModel' => $searchModel,
+						'dataProvider' => $dataProvider,
 					]);
 				},
 		],
@@ -96,7 +96,7 @@ $export = ExportMenu::widget([
     	},
         'columns' => $gridColumns,
 		'toolbar'=> [
-        ['content'=>Html::a('Create School', ['create'], ['class' => 'btn btn-success'])
+        ['content'=>Html::a('Create Tuition', ['create'], ['class' => 'btn btn-success'])
         ],
   //      '{export}',
         '{toggleData}',
