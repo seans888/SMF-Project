@@ -14,7 +14,10 @@ $exportedValues =
 	'tuition_id',
 	'scholar_scholar_id',
 	'scholar_school_school_id',
-	'tuition_term',
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'tuition_term',
+	],
 	'tuition_school_year_start',
 	'tuition_school_year_end',
 	'tuition_enrollment_date',
@@ -26,7 +29,7 @@ $exportedValues =
 ];
 
 $export = ExportMenu::widget([
-		'dataProvider' => $dataProvider2,
+		'dataProvider' => $dataProvider,
         'columns' => $exportedValues,
 		'noExportColumns'=>[11],
         'columnSelectorOptions'=>[
@@ -47,8 +50,8 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="tuition-index">
 
     <?= GridView::widget([
-        'dataProvider' => $dataProvider2,
-        'filterModel' => $searchModel2,
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
         'columns' => $exportedValues,
 		'toolbar'=> [
         ['content'=>Html::a('Create Tuition', ['create'], ['class' => 'btn btn-success'])

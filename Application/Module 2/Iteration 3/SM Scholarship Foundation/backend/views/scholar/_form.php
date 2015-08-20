@@ -14,8 +14,6 @@ use kartik\select2\Select2;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'scholar_id')->textInput() ?>
-
 	<?= $form->field($model,'school_school_id')->widget(Select2::classname(),
 		[
 			'data'=>ArrayHelper::map(School::find()->all(),'school_id','school_name'),

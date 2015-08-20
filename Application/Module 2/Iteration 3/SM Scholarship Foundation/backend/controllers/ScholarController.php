@@ -3,11 +3,15 @@
 namespace backend\controllers;
 
 use Yii;
+use yii\helpers\Json;
+use yii\helpers\ArrayHelper;
+use common\models\School;
 use common\models\Scholar;
 use common\models\ScholarSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\ForbiddenHttpException;
 
 /**
  * ScholarController implements the CRUD actions for Scholar model.
@@ -34,7 +38,25 @@ class ScholarController extends Controller
     {
         $searchModel = new ScholarSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$scholarId = Yii::$app->request->post('editableKey');
+			$scholar = Scholar::findOne($scholarId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Scholar']);
+			$post['Scholar'] = $posted;
+			
+			if($scholar->load($post))
+			{
+				$scholar->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
