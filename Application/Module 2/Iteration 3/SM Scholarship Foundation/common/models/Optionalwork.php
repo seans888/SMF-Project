@@ -15,6 +15,7 @@ use Yii;
  * @property string $optionalwork_end_date
  *
  * @property Scholar $scholarScholar
+ * @property Scholar $scholarSchoolSchool
  */
 class Optionalwork extends \yii\db\ActiveRecord
 {
@@ -32,8 +33,8 @@ class Optionalwork extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['optionalwork_id', 'scholar_scholar_id', 'scholar_school_school_id'], 'required'],
-            [['optionalwork_id', 'scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
+            [['scholar_scholar_id', 'scholar_school_school_id'], 'required'],
+            [['scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
             [['optionalwork_start_date', 'optionalwork_end_date'], 'safe'],
             [['optionalwork_location'], 'string', 'max' => 100]
         ];
@@ -59,6 +60,14 @@ class Optionalwork extends \yii\db\ActiveRecord
      */
     public function getScholarScholar()
     {
-        return $this->hasOne(Scholar::className(), ['scholar_id' => 'scholar_scholar_id', 'school_school_id' => 'scholar_school_school_id']);
+        return $this->hasOne(Scholar::className(), ['scholar_id' => 'scholar_scholar_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getScholarSchoolSchool()
+    {
+        return $this->hasOne(Scholar::className(), ['school_school_id' => 'scholar_school_school_id']);
     }
 }

@@ -15,6 +15,7 @@ use Yii;
  * @property string $deduction_remark
  *
  * @property Scholar $scholarScholar
+ * @property Scholar $scholarSchoolSchool
  */
 class Deduction extends \yii\db\ActiveRecord
 {
@@ -32,8 +33,8 @@ class Deduction extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['deduction_id', 'scholar_scholar_id', 'scholar_school_school_id'], 'required'],
-            [['deduction_id', 'scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
+            [['scholar_scholar_id', 'scholar_school_school_id'], 'required'],
+            [['scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
             [['deduction_date'], 'safe'],
             [['deduction_amount'], 'number'],
             [['deduction_remark'], 'string', 'max' => 255]
@@ -60,6 +61,14 @@ class Deduction extends \yii\db\ActiveRecord
      */
     public function getScholarScholar()
     {
-        return $this->hasOne(Scholar::className(), ['scholar_id' => 'scholar_scholar_id', 'school_school_id' => 'scholar_school_school_id']);
+        return $this->hasOne(Scholar::className(), ['scholar_id' => 'scholar_scholar_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getScholarSchoolSchool()
+    {
+        return $this->hasOne(Scholar::className(), ['school_school_id' => 'scholar_school_school_id']);
     }
 }

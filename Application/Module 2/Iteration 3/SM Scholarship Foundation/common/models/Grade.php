@@ -18,6 +18,8 @@ use Yii;
  * @property string $grade_approved_by
  *
  * @property Subject $subjectSubject
+ * @property Subject $subjectScholarScholar
+ * @property Subject $subjectScholarSchoolSchool
  */
 class Grade extends \yii\db\ActiveRecord
 {
@@ -35,8 +37,8 @@ class Grade extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['grade_id', 'subject_subject_id', 'subject_scholar_scholar_id', 'subject_scholar_school_school_id'], 'required'],
-            [['grade_id', 'subject_subject_id', 'subject_scholar_scholar_id', 'subject_scholar_school_school_id', 'grade_school_year_start', 'grade_school_year_end'], 'integer'],
+            [['subject_subject_id', 'subject_scholar_scholar_id', 'subject_scholar_school_school_id', 'grade_approval_status'], 'required'],
+            [['subject_subject_id', 'subject_scholar_scholar_id', 'subject_scholar_school_school_id', 'grade_school_year_start', 'grade_school_year_end'], 'integer'],
             [['grade_approval_status'], 'string'],
             [['grade_raw_grade'], 'string', 'max' => 45],
             [['grade_approved_by'], 'string', 'max' => 100]
@@ -64,4 +66,24 @@ class Grade extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
+    public function getSubjectSubject()
+    {
+        return $this->hasOne(Subject::className(), ['subject_id' => 'subject_subject_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSubjectScholarScholar()
+    {
+        return $this->hasOne(Subject::className(), ['scholar_scholar_id' => 'subject_scholar_scholar_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSubjectScholarSchoolSchool()
+    {
+        return $this->hasOne(Subject::className(), ['scholar_school_school_id' => 'subject_scholar_school_school_id']);
+    }
 }

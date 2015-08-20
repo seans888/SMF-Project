@@ -34,13 +34,10 @@ class School extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['school_id'], 'required'],
-            [['school_id'], 'integer'],
             [['school_name', 'school_contact_emails', 'school_contact_numbers'], 'string', 'max' => 100],
             [['school_area'], 'string', 'max' => 45],
             [['school_address'], 'string', 'max' => 255],
-            [['school_vendor_code'], 'string', 'max' => 10],
-			[['school_contact_emails'], 'email']
+            [['school_vendor_code'], 'string', 'max' => 10]
         ];
     }
 

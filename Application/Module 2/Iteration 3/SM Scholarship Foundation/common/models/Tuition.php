@@ -19,6 +19,7 @@ use Yii;
  * @property string $tuition_payment_date
  *
  * @property Scholar $scholarScholar
+ * @property Scholar $scholarSchoolSchool
  */
 class Tuition extends \yii\db\ActiveRecord
 {
@@ -36,8 +37,8 @@ class Tuition extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['tuition_id', 'scholar_scholar_id', 'scholar_school_school_id'], 'required'],
-            [['tuition_id', 'scholar_scholar_id', 'scholar_school_school_id', 'tuition_term', 'tuition_school_year_start', 'tuition_school_year_end'], 'integer'],
+            [['scholar_scholar_id', 'scholar_school_school_id'], 'required'],
+            [['scholar_scholar_id', 'scholar_school_school_id', 'tuition_term', 'tuition_school_year_start', 'tuition_school_year_end'], 'integer'],
             [['tuition_enrollment_date', 'tuition_payment_date'], 'safe'],
             [['tuition_amount'], 'number'],
             [['tuition_paid_status'], 'string']
@@ -68,6 +69,14 @@ class Tuition extends \yii\db\ActiveRecord
      */
     public function getScholarScholar()
     {
-        return $this->hasOne(Scholar::className(), ['scholar_id' => 'scholar_scholar_id', 'school_school_id' => 'scholar_school_school_id']);
+        return $this->hasOne(Scholar::className(), ['scholar_id' => 'scholar_scholar_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getScholarSchoolSchool()
+    {
+        return $this->hasOne(Scholar::className(), ['school_school_id' => 'scholar_school_school_id']);
     }
 }
