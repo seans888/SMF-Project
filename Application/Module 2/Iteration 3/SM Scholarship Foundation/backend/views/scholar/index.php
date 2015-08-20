@@ -6,6 +6,23 @@ use kartik\export\ExportMenu;
 use yii\helpers\ArrayHelper;
 use kartik\select2\Select2;
 use common\models\School;
+
+/* @var $this yii\web\View */
+/* @var $searchModel common\models\ScholarSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = 'Scholars';
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="scholar-index">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+
+    <p>
+        <?= Html::a('Create Scholar', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
+<?php
 $exportedValues = 
 [            
 	['class' => 'kartik\grid\SerialColumn'],
@@ -102,41 +119,26 @@ $export = ExportMenu::widget([
             'class' => 'btn btn-success'
         ]
 	]);
-
-/* @var $this yii\web\View */
-/* @var $searchModel common\models\ScholarSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
-
-$this->title = 'Scholars';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="scholar-index">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Scholar', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+		'pjax' => true,
         'columns' => $exportedValues,
 		'toolbar'=> [
 			[
 				'content'=>Html::a('Create Scholar', ['create'], ['class' => 'btn btn-success'])
 			],
-  //      	'{export}',
+  //     	'{export}',
 			'{toggleData}',
 			$export
 		],
-    // set export properties
-    // 'export'=>[
-        // 'fontAwesome'=>true,
-		// 'label' => 'Export',
-		// 'target' => '_blank'
-    // ],
+ //   set export properties
+    'export'=>[
+        'fontAwesome'=>true,
+		'label' => 'Export',
+		'target' => '_blank'
+    ],
 		'panel'=>[
         'type'=>GridView::TYPE_PRIMARY,
         'heading'=>'Scholar List',
