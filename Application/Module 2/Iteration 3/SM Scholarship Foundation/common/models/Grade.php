@@ -37,7 +37,7 @@ class Grade extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['subject_subject_id', 'subject_scholar_scholar_id', 'subject_scholar_school_school_id', 'grade_approval_status'], 'required'],
+            // [['subject_subject_id', 'subject_scholar_scholar_id', 'subject_scholar_school_school_id', 'grade_approval_status'], 'required'],
             [['subject_subject_id', 'subject_scholar_scholar_id', 'subject_scholar_school_school_id', 'grade_school_year_start', 'grade_school_year_end'], 'integer'],
             [['grade_approval_status'], 'string'],
             [['grade_raw_grade'], 'string', 'max' => 45],
