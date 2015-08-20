@@ -9,7 +9,7 @@ use common\models\TuitionSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\helpers\Json;
 /**
  * TuitionController implements the CRUD actions for Tuition model.
  */
@@ -35,7 +35,25 @@ class TuitionController extends Controller
     {
         $searchModel = new SchoolSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$scholarId = Yii::$app->request->post('editableKey');
+			$scholar = Tuition::findOne($scholarId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Tuition']);
+			$post['Tuition'] = $posted;
+			
+			if($scholar->load($post))
+			{
+				$scholar->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('groupschool', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
