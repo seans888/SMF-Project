@@ -8,10 +8,10 @@ use common\models\CompileSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use common\models\Grades;
+use common\models\Grade;
 use common\models\User;
-use common\models\Scholars;
-use common\models\Schools;
+use common\models\Scholar;
+use common\models\School;
 use frontend\models\Tuition;
 use common\models\Allowance;
 use common\models\Benefit;
@@ -40,12 +40,12 @@ class CompileController extends Controller
     public function actionIndex()
     {
 		
-		$schools = Schools::find()->all();
+		$schools = School::find()->all();
 		$users = User::find()->all();
-		$scholars = Scholars::find()->all();
+		$scholars = Scholar::find()->all();
 		$allowances = Allowance::find()->all();
 		
-		$grades = Grades::find()->all();
+		$grades = Grade::find()->all();
 		return $this->render('index',array('users'=>$users,'scholars'=>$scholars,'schools'=>$schools,'allowances'=>$allowances,'grades'=>$grades));
 		
     }
