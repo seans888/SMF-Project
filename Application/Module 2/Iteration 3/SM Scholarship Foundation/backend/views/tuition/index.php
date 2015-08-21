@@ -15,6 +15,10 @@ $gridColumn =
 		'pageSummary' => 'Total'
 	],
 	[
+		'attribute' => 'firstName',
+		'value' => 'scholarScholar.scholar_first_name'
+	],
+	[
 		'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'tuition_term',
 	],
