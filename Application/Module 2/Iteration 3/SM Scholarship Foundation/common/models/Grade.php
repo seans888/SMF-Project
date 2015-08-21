@@ -88,8 +88,8 @@ class Grade extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getSubjectScholarSchoolSchool()
+    public function getSchoolSchool()
     {
-        return $this->hasOne(Subject::className(), ['scholar_school_school_id' => 'subject_scholar_school_school_id']);
+        return $this->hasOne(School::className(), ['school_id' => 'subject_scholar_school_school_id']);
     }
 }
