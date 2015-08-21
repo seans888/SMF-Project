@@ -37,7 +37,7 @@ class Tuition extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['scholar_scholar_id', 'scholar_school_school_id'], 'required'],
+            [['scholar_scholar_id'], 'required'],
             [['scholar_scholar_id', 'scholar_school_school_id', 'tuition_term', 'tuition_school_year_start', 'tuition_school_year_end'], 'integer'],
             [['tuition_enrollment_date', 'tuition_payment_date'], 'safe'],
             [['tuition_amount'], 'number'],
