@@ -54,7 +54,6 @@ class GradeController extends Controller
 		{
 			$gradeId = Yii::$app->request->post('editableKey');
 			$grade = Grade::findOne($gradeId);
-
 			$out = Json::encode(['output'=>'','message'=>'']);
 			$post = [];
 			$posted = current($_POST['Grade']);
