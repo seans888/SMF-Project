@@ -90,7 +90,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
         //'{export}',
         '{toggleData}',
-		$export
+		//$export
 		],
     // set export properties
     'export'=>[
