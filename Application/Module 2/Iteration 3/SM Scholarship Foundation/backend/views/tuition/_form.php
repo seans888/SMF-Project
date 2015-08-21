@@ -22,8 +22,6 @@ use common\models\Scholar;
 			'pluginOptions'=>['allowClear'=>true],
 		]) ?>
 
-    <?= $form->field($model, 'scholar_school_school_id')->textInput() ?>
-
     <?= $form->field($model, 'tuition_term')->textInput() ?>
 
     <?= $form->field($model, 'tuition_school_year_start')->textInput() ?>
