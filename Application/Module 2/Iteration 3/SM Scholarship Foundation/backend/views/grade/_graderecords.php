@@ -6,16 +6,14 @@ use kartik\export\ExportMenu;
 $exportedValues2 =
 [
 	['class' => 'kartik\grid\SerialColumn'],
-	[
-		'attribute'=>'grade_id',
-		'pageSummary'=>'Total'
-	],
-	'subject_subject_id',
+	// [
+		// 'attribute'=>'grade_id',
+		// 'pageSummary'=>'Total'
+	// ],
 	[
 		'attribute'=>'subject_scholar_scholar_id',
-		'pageSummary'=>true
+		'value'=>'subjectSubject.subject_name',
 	],
-	'subject_scholar_school_school_id',
 	'grade_school_year_start',
 	'grade_school_year_end',
 	'grade_raw_grade',
