@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use kartik\grid\GridView;
 use kartik\export\ExportMenu;
+
 $exportedValues2 =
 [
 	['class' => 'kartik\grid\SerialColumn'],
@@ -10,9 +11,7 @@ $exportedValues2 =
 		// 'attribute'=>'grade_id',
 		// 'pageSummary'=>'Total'
 	// ],
-	[
-		'attribute'=>'subject_scholar_scholar_id',
-	],
+	'subject_scholar_scholar_id',
 	[
 		'attribute'=>'firstName',
 		'value'=>'scholarScholar.scholar_first_name'
