@@ -11,6 +11,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use common\models\GroupGrade;
+use yii\helpers\ArrayHelper;
 
 /**
  * GradeController implements the CRUD actions for Grade model.
@@ -116,6 +117,11 @@ class GradeController extends Controller
                     
                         foreach ($modelsAddress as $modelAddress) {
                             $modelAddress->subject_scholar_scholar_id = $modelCustomer->scholar_id;
+							$selectSchool = ArrayHelper::map(Scholar::find()
+							->where(['scholar_id'=>$modelCustomer->scholar_id])
+							->all(),'school_school_id','school_school_id');
+							$schoolID = array_values($selectSchool)[0];
+							$modelAddress->subject_scholar_school_school_id = $schoolID;
                             if (! ($flag = $modelAddress->save(false))) {
                                 $transaction->rollBack();
                                 break;

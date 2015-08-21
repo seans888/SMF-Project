@@ -26,6 +26,9 @@ class Grade extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+	public $firstName;
+	public $middleName;
+	public $lastName;
     public static function tableName()
     {
         return 'grade';
@@ -37,9 +40,9 @@ class Grade extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['subject_subject_id', 'subject_scholar_scholar_id', 'subject_scholar_school_school_id', 'grade_approval_status'], 'required'],
+            // [['subject_subject_id', 'subject_scholar_scholar_id', 'subject_scholar_school_school_id', 'grade_approval_status'], 'required'],
             [['subject_subject_id', 'subject_scholar_scholar_id', 'subject_scholar_school_school_id', 'grade_school_year_start', 'grade_school_year_end'], 'integer'],
-            [['grade_approval_status'], 'string'],
+            [['firstName','middleName','lastName','grade_approval_status'], 'string'],
             [['grade_raw_grade'], 'string', 'max' => 45],
             [['grade_approved_by'], 'string', 'max' => 100]
         ];
@@ -51,7 +54,10 @@ class Grade extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'grade_id' => 'Grade ID',
+			'firstName' => 'First Name',
+            'middleName' => 'Middle Name',
+			'lastName' => 'Last Name',
+			'grade_id' => 'Grade ID',
             'subject_subject_id' => 'Subject Subject ID',
             'subject_scholar_scholar_id' => 'Subject Scholar Scholar ID',
             'subject_scholar_school_school_id' => 'Subject Scholar School School ID',
@@ -74,9 +80,9 @@ class Grade extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getSubjectScholarScholar()
+    public function getScholarScholar()
     {
-        return $this->hasOne(Subject::className(), ['scholar_scholar_id' => 'subject_scholar_scholar_id']);
+        return $this->hasOne(Scholar::className(), ['scholar_id' => 'subject_scholar_scholar_id']);
     }
 
     /**

@@ -12,11 +12,11 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\Scholars;
-use common\models\Schools;
+use common\models\Scholar;
+use common\models\School;
 use common\models\User;
-use common\models\Grades;
-use frontend\models\Tuition;
+use common\models\Grade;
+use common\models\Tuition;
 
 /**
  * Site controller
@@ -71,10 +71,10 @@ class SiteController extends Controller
     public function actionIndex()
     {
 		
-		$grades = Grades::find()->all();
-		$schools = Schools::find()->all();
+		$grades = Grade::find()->all();
+		$schools = School::find()->all();
 		$users = User::find()->all();
-		$scholars = Scholars::find()->all();
+		$scholars = Scholar::find()->all();
 		$tuitions = Tuition::find()->all();
 		return $this->render('index',array('users'=>$users,'scholars'=>$scholars,'schools'=>$schools,'grades'=>$grades,'tuition'=>$tuitions));
     }

@@ -22,15 +22,8 @@ $gridColumns = [
 					]);
 				},
 		],
-            'school_id',
             'school_name',
             'school_area',
-            'school_address',
-            'school_contact_emails:email',
-            // 'school_contact_numbers',
-            // 'school_vendor_code',
-
-            ['class' => 'yii\grid\ActionColumn'],
 ];
 $exportedValues =
 [
@@ -79,6 +72,8 @@ $this->params['breadcrumbs'][] = $this->title;
 	<?= GridView::widget([
     'dataProvider' => $dataProvider,
     'filterModel' => $searchModel,
+	'pjax' => true,
+	'pjaxSettings' => ['neverTimeout' => true],
 	'rowOptions'=>function($model){
     		if(strcasecmp($model->school_area, 'NCR') != 0)
     		{
