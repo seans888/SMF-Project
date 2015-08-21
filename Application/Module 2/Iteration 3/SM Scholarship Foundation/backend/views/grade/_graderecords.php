@@ -12,6 +12,9 @@ $exportedValues2 =
 	// ],
 	[
 		'attribute'=>'subject_scholar_scholar_id',
+	],
+	[
+		'attribute'=>'subject_subject_id',
 		'value'=>'subjectSubject.subject_name',
 	],
 	'grade_school_year_start',
