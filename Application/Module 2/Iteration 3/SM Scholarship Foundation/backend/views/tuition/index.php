@@ -2,12 +2,12 @@
 
 use yii\helpers\Html;
 use kartik\grid\GridView;
-use kartik\export\ExportMenu;
+
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\TuitionSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$exportedValues = 
+$gridColumn = 
 [            
 	['class' => 'yii\grid\SerialColumn'],
 	'scholar_scholar_id',
@@ -25,21 +25,6 @@ $exportedValues =
 	['class' => 'yii\grid\ActionColumn'],
 ];
 
-$export = ExportMenu::widget([
-		'dataProvider' => $dataProvider,
-        'columns' => $exportedValues,
-		'noExportColumns'=>[11],
-        'columnSelectorOptions'=>[
-            'label' => 'Columns',
-            'class' => 'btn btn-danger'
-        ],
-		'target' => '_blank',
-        'fontAwesome' => true,
-        'dropdownOptions' => [
-            'label' => 'Export',
-            'class' => 'btn btn-success'
-        ]
-	]);
 
 $this->title = 'Tuitions';
 $this->params['breadcrumbs'][] = $this->title;
@@ -49,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-        'columns' => $exportedValues,
+        'columns' => $gridColumn,
 		'toolbar'=> [
         [
 			'content'=>Html::a('Create Tuition', ['create'], ['class' => 'btn btn-success'])
