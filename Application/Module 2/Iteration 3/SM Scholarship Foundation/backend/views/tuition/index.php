@@ -10,10 +10,7 @@ use kartik\export\ExportMenu;
 $exportedValues = 
 [            
 	['class' => 'yii\grid\SerialColumn'],
-
-	'tuition_id',
 	'scholar_scholar_id',
-	'scholar_school_school_id',
 	[
 		'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'tuition_term',
@@ -54,22 +51,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => $exportedValues,
 		'toolbar'=> [
-        ['content'=>Html::a('Create Tuition', ['create'], ['class' => 'btn btn-success'])
+        [
+			'content'=>Html::a('Create Tuition', ['create'], ['class' => 'btn btn-success'])
         ],
   //      '{export}',
         '{toggleData}',
-		$export
+		// $export
 		],
-    // set export properties
-    // 'export'=>[
-        // 'fontAwesome'=>true,
-		// 'label' => 'Export',
-		// 'target' => '_blank'
-    // ],
-		'panel'=>[
-        'type'=>GridView::TYPE_PRIMARY,
-        'heading'=>'School List',
-		]
     ]); ?>
 
 </div>
