@@ -29,7 +29,7 @@ class Tuition extends \yii\db\ActiveRecord
 	public $firstName;
 	public $middleName;
 	public $lastName;
-	public $schoolName
+	public $schoolName;
     public static function tableName()
     {
         return 'tuition';
