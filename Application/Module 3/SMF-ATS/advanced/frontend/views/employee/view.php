@@ -4,9 +4,9 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Employee */
+/* @var $model frontend\models\Employee */
 
-$this->title = $model->EmpFullName;
+$this->title = $model->employee_id;
 $this->params['breadcrumbs'][] = ['label' => 'Employees', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'employee_id' => $model->employee_id, 'user_user_id' => $model->user_user_id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'employee_id' => $model->employee_id, 'user_user_id' => $model->user_user_id], [
+        <?= Html::a('Update', ['update', 'id' => $model->employee_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->employee_id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -34,9 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'emp_midname',
             'emp_position',
             'emp_department',
-           // 'user_user_id',
-           // 'user_user_id1',
-           // 'user_id',
+            'user_id',
         ],
     ]) ?>
 

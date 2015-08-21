@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\User */
+/* @var $model frontend\models\User */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -14,6 +14,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'user_type')->dropDownList([ 'admin' => 'admin', 'user' => 'user', 'alumni',
+	], ['prompt' => 'Select User Type']) ?>
+
     <?= $form->field($model, 'auth_key')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'password_hash')->textInput(['maxlength' => true]) ?>
@@ -21,8 +24,6 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'password_reset_token')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'user_type')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'status')->textInput() ?>
 

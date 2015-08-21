@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace frontend\models;
 
 use Yii;
 
@@ -13,7 +13,6 @@ use Yii;
  * @property string $event_date
  * @property string $event_place
  * @property integer $employee_employee_id
- * @property integer $employee_user_user_id
  *
  * @property Employee $employeeEmployee
  */
@@ -33,9 +32,9 @@ class Event extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [[ 'event_title', 'event_descript', 'event_date', 'event_place', 'employee_employee_id', 'employee_user_user_id'], 'required'],
-            [[ 'employee_employee_id', 'employee_user_user_id'], 'integer'],
+            [['event_title', 'event_descript', 'event_date', 'event_place', 'employee_employee_id'], 'required'],
             [['event_date'], 'safe'],
+            [['employee_employee_id'], 'integer'],
             [['event_title', 'event_descript', 'event_place'], 'string', 'max' => 45]
         ];
     }
@@ -52,7 +51,6 @@ class Event extends \yii\db\ActiveRecord
             'event_date' => 'Event Date',
             'event_place' => 'Event Place',
             'employee_employee_id' => 'Employee Employee ID',
-            'employee_user_user_id' => 'Employee User User ID',
         ];
     }
 
@@ -61,6 +59,6 @@ class Event extends \yii\db\ActiveRecord
      */
     public function getEmployeeEmployee()
     {
-        return $this->hasOne(Employee::className(), ['employee_id' => 'employee_employee_id', 'user_user_id' => 'employee_user_user_id']);
+        return $this->hasOne(Employee::className(), ['employee_id' => 'employee_employee_id']);
     }
 }

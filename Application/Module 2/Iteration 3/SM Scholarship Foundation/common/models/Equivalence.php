@@ -34,8 +34,8 @@ class Equivalence extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['equivalence_id', 'school_school_id'], 'required'],
-            [['equivalence_id', 'school_school_id'], 'integer'],
+            [['school_school_id'], 'required'],
+            [['school_school_id'], 'integer'],
             [['equivalence_numerical_grade', 'equivalence_percentile_lower', 'equivalence_percentile_upper'], 'number'],
             [['equivalence_foundation_rating'], 'string'],
             [['equivalence_letter_grade'], 'string', 'max' => 10],

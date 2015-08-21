@@ -16,6 +16,8 @@ use Yii;
  * @property string $incentive_date
  *
  * @property Scholar $scholarScholar
+ * @property Scholar $scholarSchoolSchool
+ * @property Scholar $scholarAllowanceAllowanceArea
  */
 class Incentive extends \yii\db\ActiveRecord
 {
@@ -33,8 +35,8 @@ class Incentive extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['incentive_id', 'scholar_scholar_id', 'scholar_school_school_id', 'scholar_allowance_allowance_area'], 'required'],
-            [['incentive_id', 'scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
+            [['scholar_scholar_id', 'scholar_school_school_id', 'scholar_allowance_allowance_area'], 'required'],
+            [['scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
             [['scholar_allowance_allowance_area'], 'string'],
             [['incentive_amount'], 'number'],
             [['incentive_date'], 'safe'],
@@ -63,6 +65,22 @@ class Incentive extends \yii\db\ActiveRecord
      */
     public function getScholarScholar()
     {
-        return $this->hasOne(Scholar::className(), ['scholar_id' => 'scholar_scholar_id', 'school_school_id' => 'scholar_school_school_id', 'allowance_allowance_area' => 'scholar_allowance_allowance_area']);
+        return $this->hasOne(Scholar::className(), ['scholar_id' => 'scholar_scholar_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getScholarSchoolSchool()
+    {
+        return $this->hasOne(Scholar::className(), ['school_school_id' => 'scholar_school_school_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getScholarAllowanceAllowanceArea()
+    {
+        return $this->hasOne(Scholar::className(), ['allowance_allowance_area' => 'scholar_allowance_allowance_area']);
     }
 }

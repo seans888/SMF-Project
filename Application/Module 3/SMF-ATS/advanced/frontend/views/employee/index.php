@@ -18,6 +18,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Create Employee', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
+	
+	<?php	$roles = Yii::$app->user->identity->user_type;
+			if ($roles == 'admin'){ ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -31,12 +34,53 @@ $this->params['breadcrumbs'][] = $this->title;
             'emp_midname',
             'emp_position',
             // 'emp_department',
-            // 'user_user_id',
-            // 'user_user_id1',
             // 'user_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
+	
+	<?php	} else if ($roles == 'user'){ ?>
+	
+	<?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'employee_id',
+            'emp_firstname',
+            'emp_lastname',
+            'emp_midname',
+            'emp_position',
+            // 'emp_department',
+            // 'user_id',
+
+            ['class' => 'yii\grid\ActionColumn','template'=>'{view}'], 
+            ['class' => 'yii\grid\ActionColumn','template'=>'{update}'],
+        ],
+    ]); ?>
+	
+		<?php }else{ ?>
+		
+		<?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'employee_id',
+            'emp_firstname',
+            'emp_lastname',
+            'emp_midname',
+            'emp_position',
+            // 'emp_department',
+            // 'user_id',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
+		
+		<?php } ?>
 
 </div>

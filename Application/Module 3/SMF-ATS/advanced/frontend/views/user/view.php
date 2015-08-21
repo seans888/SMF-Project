@@ -4,9 +4,9 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\User */
+/* @var $model frontend\models\User */
 
-$this->title = $model->username;
+$this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -30,11 +30,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'username',
+            'user_type',
             'auth_key',
             'password_hash',
             'password_reset_token',
             'email:email',
-            'user_type',
             'status',
             'created_at',
             'updated_at',

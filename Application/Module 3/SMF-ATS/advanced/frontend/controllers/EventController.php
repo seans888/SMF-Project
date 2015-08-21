@@ -3,7 +3,7 @@
 namespace frontend\controllers;
 
 use Yii;
-use app\models\Event;
+use frontend\models\Event;
 use frontend\models\EventSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -30,7 +30,7 @@ class EventController extends Controller
      * Lists all Event models.
      * @return mixed
      */
-	public function actionIndex()
+    public function actionIndex()
     {
         $searchModel = new EventSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -52,6 +52,7 @@ class EventController extends Controller
             'model' => $this->findModel($id),
         ]);
     }
+	
 	
 	public function actionCalendar()
     {

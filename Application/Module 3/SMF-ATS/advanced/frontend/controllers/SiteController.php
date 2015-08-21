@@ -67,27 +67,14 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-		//$role = User::find()->where(['user_type' => Yii::$app->user->identity->user_type])->one();
-	//	if ($role->roles == 'admin' || $role->roles == 'employee'){
         return $this->render('index');
-    }//else{
-	//	return $this->render('about');
-	//}
-	//}
+    }
 
     public function actionLogin()
     {
-	
-	$usertype = Yii::$app->user->id;
-			if($usertype == 'admin'){
-
-			 // return $this->goHome();
-			} 	
-			
-	
-      //  if (!\Yii::$app->user->isGuest) {
-      //      return $this->goHome();
-       // }
+        if (!\Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
@@ -123,11 +110,6 @@ class SiteController extends Controller
             ]);
         }
     }
-	
-	public function actionOperations()
-	{
-		return $this->render('operations');
-	}
 
     public function actionAbout()
     {
@@ -139,9 +121,9 @@ class SiteController extends Controller
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
-            
-                    return $this->redirect(['/user/index']);
-                
+                if (Yii::$app->getUser()->login($user)) {
+                    return $this->goHome();
+                }
             }
         }
 

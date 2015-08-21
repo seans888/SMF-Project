@@ -27,10 +27,6 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'emp_department') ?>
 
-    <?php // echo $form->field($model, 'user_user_id') ?>
-
-    <?php // echo $form->field($model, 'user_user_id1') ?>
-
     <?php // echo $form->field($model, 'user_id') ?>
 
     <div class="form-group">

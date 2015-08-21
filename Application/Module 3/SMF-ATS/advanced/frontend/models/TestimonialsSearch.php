@@ -5,10 +5,10 @@ namespace frontend\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Testimonials;
+use frontend\models\Testimonials;
 
 /**
- * TestimonialsSearch represents the model behind the search form about `app\models\Testimonials`.
+ * TestimonialsSearch represents the model behind the search form about `frontend\models\Testimonials`.
  */
 class TestimonialsSearch extends Testimonials
 {
@@ -18,8 +18,8 @@ class TestimonialsSearch extends Testimonials
     public function rules()
     {
         return [
-            [['testimonial_id'], 'integer'],
-            [['testimonial_name', 'testimonial_description', 'testiomonial_date'], 'safe'],
+            [['id'], 'integer'],
+            [['testimonial_name', 'testimonial_description'], 'safe'],
         ];
     }
 
@@ -56,8 +56,7 @@ class TestimonialsSearch extends Testimonials
         }
 
         $query->andFilterWhere([
-            'testimonial_id' => $this->testimonial_id,
-            'testiomonial_date' => $this->testiomonial_date,
+            'id' => $this->id,
         ]);
 
         $query->andFilterWhere(['like', 'testimonial_name', $this->testimonial_name])

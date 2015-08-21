@@ -3,12 +3,11 @@
 namespace frontend\controllers;
 
 use Yii;
-use app\models\Alumni;
+use frontend\models\Alumni;
 use frontend\models\AlumniSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
 
 /**
  * AlumniController implements the CRUD actions for Alumni model.
@@ -18,16 +17,6 @@ class AlumniController extends Controller
     public function behaviors()
     {
         return [
-			'access' => [
-				'class' => AccessControl::classname(),
-				'only' => ['create', 'update'],
-				'rules' => [
-					[
-						'allow' => true,
-						'roles' => ['@']
-					]
-				]
-			],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -74,7 +63,7 @@ class AlumniController extends Controller
         $model = new Alumni();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->alumni_id]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -93,7 +82,7 @@ class AlumniController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->alumni_id]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,

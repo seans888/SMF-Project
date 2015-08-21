@@ -3,7 +3,7 @@
 namespace frontend\controllers;
 
 use Yii;
-use app\models\Employee;
+use frontend\models\Employee;
 use frontend\models\EmployeeSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -30,14 +30,6 @@ class EmployeeController extends Controller
      * Lists all Employee models.
      * @return mixed
      */
-	 
-	
-
-	/**
-	 * Displays a particular model.
-	 * @param integer $id the ID of the model to be displayed
-	 */
-	 
     public function actionIndex()
     {
         $searchModel = new EmployeeSearch();
@@ -51,14 +43,13 @@ class EmployeeController extends Controller
 
     /**
      * Displays a single Employee model.
-     * @param integer $employee_id
-     * @param integer $user_user_id
+     * @param integer $id
      * @return mixed
      */
-    public function actionView($employee_id, $user_user_id)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($employee_id, $user_user_id),
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -72,7 +63,7 @@ class EmployeeController extends Controller
         $model = new Employee();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'employee_id' => $model->employee_id, 'user_user_id' => $model->user_user_id]);
+            return $this->redirect(['view', 'id' => $model->employee_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -83,16 +74,15 @@ class EmployeeController extends Controller
     /**
      * Updates an existing Employee model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $employee_id
-     * @param integer $user_user_id
+     * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($employee_id, $user_user_id)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($employee_id, $user_user_id);
+        $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'employee_id' => $model->employee_id, 'user_user_id' => $model->user_user_id]);
+            return $this->redirect(['view', 'id' => $model->employee_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -103,13 +93,12 @@ class EmployeeController extends Controller
     /**
      * Deletes an existing Employee model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $employee_id
-     * @param integer $user_user_id
+     * @param integer $id
      * @return mixed
      */
-    public function actionDelete($employee_id, $user_user_id)
+    public function actionDelete($id)
     {
-        $this->findModel($employee_id, $user_user_id)->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
@@ -117,14 +106,13 @@ class EmployeeController extends Controller
     /**
      * Finds the Employee model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $employee_id
-     * @param integer $user_user_id
+     * @param integer $id
      * @return Employee the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($employee_id, $user_user_id)
+    protected function findModel($id)
     {
-        if (($model = Employee::findOne(['employee_id' => $employee_id, 'user_user_id' => $user_user_id])) !== null) {
+        if (($model = Employee::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

@@ -3,7 +3,7 @@
 namespace frontend\controllers;
 
 use Yii;
-use app\models\Testimonials;
+use frontend\models\Testimonials;
 use frontend\models\TestimonialsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -63,13 +63,7 @@ class TestimonialsController extends Controller
         $model = new Testimonials();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-		
-		//get the instance of the uploaded file
-		$imageName = $model->testimonial_name;
-		$model->file = UploadedFile::getInstance($model, 'file');
-		$model->file->saveAs('uploads/', $imageName. '.' .$model->file->extension);
-		
-            return $this->redirect(['view', 'id' => $model->testimonial_id]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -88,7 +82,7 @@ class TestimonialsController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->testimonial_id]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,

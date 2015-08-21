@@ -5,10 +5,10 @@ namespace frontend\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Event;
+use frontend\models\Event;
 
 /**
- * EventSearch represents the model behind the search form about `app\models\Event`.
+ * EventSearch represents the model behind the search form about `frontend\models\Event`.
  */
 class EventSearch extends Event
 {
@@ -18,7 +18,7 @@ class EventSearch extends Event
     public function rules()
     {
         return [
-            [['event_id', 'employee_employee_id', 'employee_user_user_id'], 'integer'],
+            [['event_id', 'employee_employee_id'], 'integer'],
             [['event_title', 'event_descript', 'event_date', 'event_place'], 'safe'],
         ];
     }
@@ -59,7 +59,6 @@ class EventSearch extends Event
             'event_id' => $this->event_id,
             'event_date' => $this->event_date,
             'employee_employee_id' => $this->employee_employee_id,
-            'employee_user_user_id' => $this->employee_user_user_id,
         ]);
 
         $query->andFilterWhere(['like', 'event_title', $this->event_title])

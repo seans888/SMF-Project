@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use kartik\grid\GridView;
 use kartik\export\ExportMenu;
-
+use common\models\TuitionSearch;
 $gridColumns = [
 		[
 				'class' => 'kartik\grid\ExpandRowColumn',
@@ -11,23 +11,18 @@ $gridColumns = [
 					return GridView::ROW_COLLAPSED;
 				},
 				'detail' => function ($model, $key, $index, $column){
-					$searchModel2 = new GradeSearch();
-					$searchModel2 -> subject_scholar_school_school_id = $model->school_id;
-					$dataProvider2 = $searchModel2->search(Yii::$app->request->queryParams);
+					$searchModel = new TuitionSearch();
+					$searchModel -> scholar_school_school_id = $model->school_id;
+					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 					
 					return Yii::$app->controller->renderPartial('index',[
-						'searchModel2' => $searchModel2,
-						'dataProvider2' => $dataProvider2,
+						'searchModel' => $searchModel,
+						'dataProvider' => $dataProvider,
 					]);
 				},
 		],
-            'school_id',
             'school_name',
             'school_area',
-            'school_address',
-            'school_contact_emails:email',
-            // 'school_contact_numbers',
-            // 'school_vendor_code',
 
             ['class' => 'yii\grid\ActionColumn'],
 ];
@@ -84,6 +79,8 @@ $export = ExportMenu::widget([
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+		'pjax' => true,
+		'pjaxSettings' => ['neverTimeout' => true],
     	'rowOptions'=>function($model){
     		if(strcasecmp($model->school_area, 'NCR') != 0)
     		{
@@ -96,11 +93,11 @@ $export = ExportMenu::widget([
     	},
         'columns' => $gridColumns,
 		'toolbar'=> [
-        ['content'=>Html::a('Create School', ['create'], ['class' => 'btn btn-success'])
+        ['content'=>Html::a('Create Tuition', ['create'], ['class' => 'btn btn-success'])
         ],
   //      '{export}',
         '{toggleData}',
-		$export
+	//	$export
 		],
     // set export properties
     // 'export'=>[

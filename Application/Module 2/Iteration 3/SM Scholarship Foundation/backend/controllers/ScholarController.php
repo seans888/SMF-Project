@@ -3,11 +3,15 @@
 namespace backend\controllers;
 
 use Yii;
+use yii\helpers\Json;
+use yii\helpers\ArrayHelper;
+use common\models\School;
 use common\models\Scholar;
 use common\models\ScholarSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\ForbiddenHttpException;
 
 /**
  * ScholarController implements the CRUD actions for Scholar model.
@@ -34,7 +38,25 @@ class ScholarController extends Controller
     {
         $searchModel = new ScholarSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$scholarId = Yii::$app->request->post('editableKey');
+			$scholar = Scholar::findOne($scholarId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Scholar']);
+			$post['Scholar'] = $posted;
+			
+			if($scholar->load($post))
+			{
+				$scholar->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -48,10 +70,10 @@ class ScholarController extends Controller
      * @param string $allowance_allowance_area
      * @return mixed
      */
-    public function actionView($scholar_id, $school_school_id, $allowance_allowance_area)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($scholar_id, $school_school_id, $allowance_allowance_area),
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -118,9 +140,9 @@ class ScholarController extends Controller
      * @return Scholar the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($scholar_id, $school_school_id, $allowance_allowance_area)
+    protected function findModel($id)
     {
-        if (($model = Scholar::findOne(['scholar_id' => $scholar_id, 'school_school_id' => $school_school_id, 'allowance_allowance_area' => $allowance_allowance_area])) !== null) {
+        if (($model = Scholar::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

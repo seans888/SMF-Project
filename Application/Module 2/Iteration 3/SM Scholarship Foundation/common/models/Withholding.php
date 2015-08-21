@@ -16,6 +16,8 @@ use Yii;
  * @property string $withholding_remark
  *
  * @property Scholar $scholarScholar
+ * @property Scholar $scholarSchoolSchool
+ * @property Scholar $scholarAllowanceAllowanceArea
  */
 class Withholding extends \yii\db\ActiveRecord
 {
@@ -33,8 +35,8 @@ class Withholding extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['withholding_id', 'scholar_scholar_id', 'scholar_school_school_id', 'scholar_allowance_allowance_area'], 'required'],
-            [['withholding_id', 'scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
+            [['scholar_scholar_id', 'scholar_school_school_id', 'scholar_allowance_allowance_area'], 'required'],
+            [['scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
             [['scholar_allowance_allowance_area'], 'string'],
             [['withholding_start_date', 'withholding_end_date'], 'safe'],
             [['withholding_remark'], 'string', 'max' => 255]
@@ -62,6 +64,22 @@ class Withholding extends \yii\db\ActiveRecord
      */
     public function getScholarScholar()
     {
-        return $this->hasOne(Scholar::className(), ['scholar_id' => 'scholar_scholar_id', 'school_school_id' => 'scholar_school_school_id', 'allowance_allowance_area' => 'scholar_allowance_allowance_area']);
+        return $this->hasOne(Scholar::className(), ['scholar_id' => 'scholar_scholar_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getScholarSchoolSchool()
+    {
+        return $this->hasOne(Scholar::className(), ['school_school_id' => 'scholar_school_school_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getScholarAllowanceAllowanceArea()
+    {
+        return $this->hasOne(Scholar::className(), ['allowance_allowance_area' => 'scholar_allowance_allowance_area']);
     }
 }

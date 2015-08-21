@@ -2,44 +2,47 @@
 
 use yii\helpers\Html;
 use kartik\grid\GridView;
-use kartik\export\ExportMenu;
+
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\TuitionSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$exportedValues = 
+$gridColumn = 
 [            
-	['class' => 'yii\grid\SerialColumn'],
-
-	'tuition_id',
-	'scholar_scholar_id',
-	'scholar_school_school_id',
-	'tuition_term',
+	['class' => 'kartik\grid\SerialColumn'],
+	[
+		'attribute' => 'scholar_scholar_id',
+		'pageSummary' => 'Total'
+	],
+	[
+		'attribute' => 'firstName',
+		'value' => 'scholarScholar.scholar_first_name'
+	],
+	[
+		'attribute' => 'middleName',
+		'value' => 'scholarScholar.scholar_middle_name'
+	],
+	[
+		'attribute' => 'lastName',
+		'value' => 'scholarScholar.scholar_last_name'
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'tuition_term',
+	],
 	'tuition_school_year_start',
 	'tuition_school_year_end',
 	'tuition_enrollment_date',
-	'tuition_amount',
+	[
+		'attribute' => 'tuition_amount',
+		'pageSummary' => true
+	],
 	'tuition_paid_status',
 	'tuition_payment_date',
 
-	['class' => 'yii\grid\ActionColumn'],
+	['class' => 'kartik\grid\ActionColumn'],
 ];
 
-$export = ExportMenu::widget([
-		'dataProvider' => $dataProvider,
-        'columns' => $exportedValues,
-		'noExportColumns'=>[11],
-        'columnSelectorOptions'=>[
-            'label' => 'Columns',
-            'class' => 'btn btn-danger'
-        ],
-		'target' => '_blank',
-        'fontAwesome' => true,
-        'dropdownOptions' => [
-            'label' => 'Export',
-            'class' => 'btn btn-success'
-        ]
-	]);
 
 $this->title = 'Tuitions';
 $this->params['breadcrumbs'][] = $this->title;
@@ -49,24 +52,18 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-        'columns' => $exportedValues,
+		'pjax' => true,
+		'pjaxSettings' => ['neverTimeout' => true],
+        'columns' => $gridColumn,
 		'toolbar'=> [
-        ['content'=>Html::a('Create Tuition', ['create'], ['class' => 'btn btn-success'])
+        [
+			'content'=>Html::a('Create Tuition', ['create'], ['class' => 'btn btn-success'])
         ],
   //      '{export}',
         '{toggleData}',
-		$export
+		// $export
 		],
-    // set export properties
-    // 'export'=>[
-        // 'fontAwesome'=>true,
-		// 'label' => 'Export',
-		// 'target' => '_blank'
-    // ],
-		'panel'=>[
-        'type'=>GridView::TYPE_PRIMARY,
-        'heading'=>'School List',
-		]
+		'showPageSummary' => true
     ]); ?>
 
 </div>

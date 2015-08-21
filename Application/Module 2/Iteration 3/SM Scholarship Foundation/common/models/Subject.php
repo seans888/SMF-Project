@@ -18,7 +18,10 @@ use Yii;
  * @property string $subject_approved_by
  *
  * @property Grade[] $grades
+ * @property Grade[] $grades0
+ * @property Grade[] $grades1
  * @property Scholar $scholarScholar
+ * @property Scholar $scholarSchoolSchool
  */
 class Subject extends \yii\db\ActiveRecord
 {
@@ -36,8 +39,8 @@ class Subject extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['subject_id', 'scholar_scholar_id', 'scholar_school_school_id'], 'required'],
-            [['subject_id', 'scholar_scholar_id', 'scholar_school_school_id', 'subject_term'], 'integer'],
+            [['scholar_scholar_id', 'scholar_school_school_id'], 'required'],
+            [['scholar_scholar_id', 'scholar_school_school_id', 'subject_term'], 'integer'],
             [['subject_units'], 'number'],
             [['subject_taken_status', 'subject_approval_status'], 'string'],
             [['subject_name', 'subject_approved_by'], 'string', 'max' => 100]
@@ -67,7 +70,23 @@ class Subject extends \yii\db\ActiveRecord
      */
     public function getGrades()
     {
-        return $this->hasMany(Grade::className(), ['subject_subject_id' => 'subject_id', 'subject_scholar_scholar_id' => 'scholar_scholar_id', 'subject_scholar_school_school_id' => 'scholar_school_school_id']);
+        return $this->hasMany(Grade::className(), ['subject_subject_id' => 'subject_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getGrades0()
+    {
+        return $this->hasMany(Grade::className(), ['subject_scholar_scholar_id' => 'scholar_scholar_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getGrades1()
+    {
+        return $this->hasMany(Grade::className(), ['subject_scholar_school_school_id' => 'scholar_school_school_id']);
     }
 
     /**
@@ -75,6 +94,14 @@ class Subject extends \yii\db\ActiveRecord
      */
     public function getScholarScholar()
     {
-        return $this->hasOne(Scholar::className(), ['scholar_id' => 'scholar_scholar_id', 'school_school_id' => 'scholar_school_school_id']);
+        return $this->hasOne(Scholar::className(), ['scholar_id' => 'scholar_scholar_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getScholarSchoolSchool()
+    {
+        return $this->hasOne(Scholar::className(), ['school_school_id' => 'scholar_school_school_id']);
     }
 }

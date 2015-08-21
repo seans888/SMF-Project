@@ -5,10 +5,10 @@ namespace frontend\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Alumni;
+use frontend\models\Alumni;
 
 /**
- * AlumniSearch represents the model behind the search form about `app\models\Alumni`.
+ * AlumniSearch represents the model behind the search form about `frontend\models\Alumni`.
  */
 class AlumniSearch extends Alumni
 {
@@ -18,8 +18,8 @@ class AlumniSearch extends Alumni
     public function rules()
     {
         return [
-            [['alumni_id', 'user_user_id', 'user_id'], 'integer'],
-            [['alumni_firstname', 'alumni_lastname', 'alumni_midname', 'alumni_course', 'alumni_school', 'alumni_year_graduated', 'alumni_status', 'alumni_email', 'alumni_cur_work', 'alumni_prev_work', 'alumni_further_study'], 'safe'],
+            [['id', 'user_id'], 'integer'],
+            [['alumni_id', 'alumni_firstname', 'alumni_lastname', 'alumni_midinit', 'alumni_gender', 'alumni_address', 'alumni_contactno', 'alumni_remarks', 'alumni_office_local_no', 'alumni_email', 'alumni_year_graduated', 'alumni_course', 'alumni_school', 'alumni_company', 'alumni_status', 'alumni_area', 'alumni_cur_work', 'alumni_prev_work', 'alumni_further_study', 'alumni_achievements', 'alumni_legends'], 'safe'],
         ];
     }
 
@@ -56,22 +56,31 @@ class AlumniSearch extends Alumni
         }
 
         $query->andFilterWhere([
-            'alumni_id' => $this->alumni_id,
+            'id' => $this->id,
             'alumni_year_graduated' => $this->alumni_year_graduated,
-            'user_user_id' => $this->user_user_id,
             'user_id' => $this->user_id,
         ]);
 
-        $query->andFilterWhere(['like', 'alumni_firstname', $this->alumni_firstname])
+        $query->andFilterWhere(['like', 'alumni_id', $this->alumni_id])
+            ->andFilterWhere(['like', 'alumni_firstname', $this->alumni_firstname])
             ->andFilterWhere(['like', 'alumni_lastname', $this->alumni_lastname])
-            ->andFilterWhere(['like', 'alumni_midname', $this->alumni_midname])
+            ->andFilterWhere(['like', 'alumni_midinit', $this->alumni_midinit])
+            ->andFilterWhere(['like', 'alumni_gender', $this->alumni_gender])
+            ->andFilterWhere(['like', 'alumni_address', $this->alumni_address])
+            ->andFilterWhere(['like', 'alumni_contactno', $this->alumni_contactno])
+            ->andFilterWhere(['like', 'alumni_remarks', $this->alumni_remarks])
+            ->andFilterWhere(['like', 'alumni_office_local_no', $this->alumni_office_local_no])
+            ->andFilterWhere(['like', 'alumni_email', $this->alumni_email])
             ->andFilterWhere(['like', 'alumni_course', $this->alumni_course])
             ->andFilterWhere(['like', 'alumni_school', $this->alumni_school])
+            ->andFilterWhere(['like', 'alumni_company', $this->alumni_company])
             ->andFilterWhere(['like', 'alumni_status', $this->alumni_status])
-            ->andFilterWhere(['like', 'alumni_email', $this->alumni_email])
+            ->andFilterWhere(['like', 'alumni_area', $this->alumni_area])
             ->andFilterWhere(['like', 'alumni_cur_work', $this->alumni_cur_work])
             ->andFilterWhere(['like', 'alumni_prev_work', $this->alumni_prev_work])
-            ->andFilterWhere(['like', 'alumni_further_study', $this->alumni_further_study]);
+            ->andFilterWhere(['like', 'alumni_further_study', $this->alumni_further_study])
+            ->andFilterWhere(['like', 'alumni_achievements', $this->alumni_achievements])
+            ->andFilterWhere(['like', 'alumni_legends', $this->alumni_legends]);
 
         return $dataProvider;
     }

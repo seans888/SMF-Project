@@ -14,10 +14,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
+	<?php	$roles = Yii::$app->user->identity->user_type;
+			if ($roles == 'admin'){ ?>
     <p>
         <?= Html::a('Create Event', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
+	<?php } ?>
 
     <?= \yii2fullcalendar\yii2fullcalendar::widget(array(
       'events'=> $events,
