@@ -24,7 +24,10 @@ $exportedValues =
 		'attribute' => 'lastName',
 		'value' => 'scholarScholar.scholar_last_name'
 	],
-	'schoolSchool.school_name',
+	[
+		'attribute' => 'schoolName',
+		'value' => 'schoolSchool.school_name'
+	],
 	'tuition_term',
 	'tuition_school_year_start',
 	'tuition_school_year_end',
