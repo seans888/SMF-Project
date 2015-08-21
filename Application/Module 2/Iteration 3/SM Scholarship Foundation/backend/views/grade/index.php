@@ -22,15 +22,8 @@ $gridColumns = [
 					]);
 				},
 		],
-            'school_id',
             'school_name',
             'school_area',
-            'school_address',
-            'school_contact_emails:email',
-            // 'school_contact_numbers',
-            // 'school_vendor_code',
-
-            ['class' => 'yii\grid\ActionColumn'],
 ];
 $exportedValues =
 [
