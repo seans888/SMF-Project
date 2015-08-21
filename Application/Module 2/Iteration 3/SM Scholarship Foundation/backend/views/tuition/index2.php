@@ -12,7 +12,7 @@ $exportedValues =
 	['class' => 'yii\grid\SerialColumn'],
 
 	'scholar_scholar_id',
-	'scholar_school_school_id',
+	'schoolSchool.school_name',
 	'tuition_term',
 	'tuition_school_year_start',
 	'tuition_school_year_end',
