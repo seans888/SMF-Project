@@ -100,7 +100,7 @@ $export = ExportMenu::widget([
         ],
   //      '{export}',
         '{toggleData}',
-		$export
+	//	$export
 		],
     // set export properties
     // 'export'=>[
