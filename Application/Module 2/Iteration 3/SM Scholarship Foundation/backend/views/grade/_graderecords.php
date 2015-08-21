@@ -14,6 +14,18 @@ $exportedValues2 =
 		'attribute'=>'subject_scholar_scholar_id',
 	],
 	[
+		'attribute'=>'firstName',
+		'value'=>'scholarScholar.scholar_first_name'
+	],
+	[
+		'attribute'=>'middleName',
+		'value'=>'scholarScholar.scholar_middle_name'
+	],
+	[
+		'attribute'=>'lastName',
+		'value'=>'scholarScholar.scholar_last_name'
+	],
+	[
 		'attribute'=>'subject_subject_id',
 		'value'=>'subjectSubject.subject_name',
 	],
