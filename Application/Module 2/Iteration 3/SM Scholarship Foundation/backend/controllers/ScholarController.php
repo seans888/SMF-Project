@@ -70,10 +70,10 @@ class ScholarController extends Controller
      * @param string $allowance_allowance_area
      * @return mixed
      */
-    public function actionView($scholar_id, $school_school_id, $allowance_allowance_area)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($scholar_id, $school_school_id, $allowance_allowance_area),
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -140,9 +140,9 @@ class ScholarController extends Controller
      * @return Scholar the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($scholar_id, $school_school_id, $allowance_allowance_area)
+    protected function findModel($id)
     {
-        if (($model = Scholar::findOne(['scholar_id' => $scholar_id, 'school_school_id' => $school_school_id, 'allowance_allowance_area' => $allowance_allowance_area])) !== null) {
+        if (($model = Scholar::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
