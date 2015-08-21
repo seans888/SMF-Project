@@ -29,6 +29,7 @@ class Tuition extends \yii\db\ActiveRecord
 	public $firstName;
 	public $middleName;
 	public $lastName;
+	public $schoolName
     public static function tableName()
     {
         return 'tuition';
@@ -44,7 +45,7 @@ class Tuition extends \yii\db\ActiveRecord
             [['scholar_scholar_id', 'scholar_school_school_id', 'tuition_term', 'tuition_school_year_start', 'tuition_school_year_end'], 'integer'],
             [['tuition_enrollment_date', 'tuition_payment_date'], 'safe'],
             [['tuition_amount'], 'number'],
-            [['firstName','middleName','lastName','tuition_paid_status'], 'string']
+            [['schoolName','firstName','middleName','lastName','tuition_paid_status'], 'string']
         ];
     }
 
@@ -54,6 +55,7 @@ class Tuition extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
+			'schoolName' => 'School Name',
 			'firstName' => 'First Name',
             'middleName' => 'Middle Name',
 			'lastName' => 'Last Name',
