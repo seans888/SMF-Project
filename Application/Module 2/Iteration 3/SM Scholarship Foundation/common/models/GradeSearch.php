@@ -69,7 +69,9 @@ class GradeSearch extends Grade
         $query->andFilterWhere(['like', 'grade_raw_grade', $this->grade_raw_grade])
             ->andFilterWhere(['like', 'grade_approval_status', $this->grade_approval_status])
             ->andFilterWhere(['like', 'grade_approved_by', $this->grade_approved_by])
-			->andFilterWhere(['like', 'scholar.scholar_first_name', $this->firstName]);
+			->andFilterWhere(['like', 'scholar.scholar_first_name', $this->firstName])
+			->andFilterWhere(['like', 'scholar.scholar_middle_name', $this->middleName])
+			->andFilterWhere(['like', 'scholar.scholar_last_name', $this->lastName]);
 
         return $dataProvider;
     }
