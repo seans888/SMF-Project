@@ -61,6 +61,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider2,
         'filterModel' => $searchModel2,
+		'pjax' => true,
+		'pjaxSettings' => ['neverTimeout' => true],
         'columns' => $exportedValues2,
 		'showPageSummary'=>true
     ]); ?>
