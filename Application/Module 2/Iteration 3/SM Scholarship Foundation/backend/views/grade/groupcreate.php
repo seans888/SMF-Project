@@ -14,12 +14,18 @@ use common\models\Subject;
     <?php $form = ActiveForm::begin(['id' => 'dynamic-form']); ?>
     <div class="row">
         <div class="col-sm-6">
-            <?= $form->field($modelCustomer, 'scholar_id')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($modelCustomer,'scholar_id')->widget(Select2::classname(),
+		[
+			'data'=>ArrayHelper::map(Scholar::find()->all(),'scholar_id','scholar_last_name','scholar_id'),
+			'language'=>'en',
+			'options'=>['placeholder'=>'Select Scholar ID'],
+			'pluginOptions'=>['allowClear'=>true],
+		]) ?>
         </div>
     </div>
 
     <div class="panel panel-default">
-        <div class="panel-heading"><h4><i class="glyphicon glyphicon-envelope"></i> Addresses</h4></div>
+        <div class="panel-heading"><h4><i class="glyphicon glyphicon-envelope"></i> Grades</h4></div>
         <div class="panel-body">
              <?php DynamicFormWidget::begin([
                 'widgetContainer' => 'dynamicform_wrapper', // required: only alphanumeric characters plus "_" [A-Za-z0-9_]
@@ -43,7 +49,7 @@ use common\models\Subject;
             <?php foreach ($modelsAddress as $i => $modelAddress): ?>
                 <div class="item panel panel-default"><!-- widgetBody -->
                     <div class="panel-heading">
-                        <h3 class="panel-title pull-left">Grades</h3>
+                        <h3 class="panel-title pull-left">Subject</h3>
                         <div class="pull-right">
                             <button type="button" class="add-item btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
                             <button type="button" class="remove-item btn btn-danger btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
@@ -59,9 +65,9 @@ use common\models\Subject;
                         ?>
                         <div class="row">
                             <div class="col-sm-6">
-                                <?= $form->field($modelAddress,'subject_subject_id')->dropDownList
-								(
-									ArrayHelper::map(Subject::find()->all(),'subject_id','subject_name')
+
+								<?= $form->field($modelAddress,"[{$i}]subject_subject_id")->dropDownList(
+								ArrayHelper::map(Subject::find()->all(),'subject_id','subject_name')
 								)
 								?>
                             </div>
