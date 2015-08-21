@@ -12,7 +12,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use common\models\GroupGrade;
 use yii\helpers\ArrayHelper;
-
+use yii\helpers\Json;
 /**
  * GradeController implements the CRUD actions for Grade model.
  */
@@ -38,7 +38,7 @@ class GradeController extends Controller
     {
         $searchModel = new SchoolSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+		
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -49,7 +49,25 @@ class GradeController extends Controller
     {
         $searchModel = new GradeSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$gradeId = Yii::$app->request->post('editableKey');
+			$grade = Grade::findOne($gradeId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Grade']);
+			$post['Grade'] = $posted;
+			
+			if($grade->load($post))
+			{
+				$grade->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('index2', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
