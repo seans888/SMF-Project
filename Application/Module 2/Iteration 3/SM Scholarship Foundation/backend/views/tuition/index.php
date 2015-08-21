@@ -9,8 +9,11 @@ use kartik\grid\GridView;
 
 $gridColumn = 
 [            
-	['class' => 'yii\grid\SerialColumn'],
-	'scholar_scholar_id',
+	['class' => 'kartik\grid\SerialColumn'],
+	[
+		'attribute' => 'scholar_scholar_id',
+		'pageSummary' => 'Total'
+	],
 	[
 		'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'tuition_term',
@@ -18,11 +21,14 @@ $gridColumn =
 	'tuition_school_year_start',
 	'tuition_school_year_end',
 	'tuition_enrollment_date',
-	'tuition_amount',
+	[
+		'attribute' => 'tuition_amount',
+		'pageSummary' => true
+	],
 	'tuition_paid_status',
 	'tuition_payment_date',
 
-	['class' => 'yii\grid\ActionColumn'],
+	['class' => 'kartik\grid\ActionColumn'],
 ];
 
 
@@ -43,6 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
         '{toggleData}',
 		// $export
 		],
+		'showPageSummary' => true
     ]); ?>
 
 </div>
