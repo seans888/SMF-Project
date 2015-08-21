@@ -75,8 +75,8 @@ class Tuition extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getScholarSchoolSchool()
+    public function getSchoolSchool()
     {
-        return $this->hasOne(Scholar::className(), ['school_school_id' => 'scholar_school_school_id']);
+        return $this->hasOne(Scholar::className(), ['school_id' => 'scholar_school_school_id']);
     }
 }
