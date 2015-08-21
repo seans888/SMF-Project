@@ -2,7 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use kartik\select2\Select2;
+use yii\helpers\ArrayHelper;
+use common\models\Scholar;
 /* @var $this yii\web\View */
 /* @var $model common\models\Tuition */
 /* @var $form yii\widgets\ActiveForm */
@@ -12,9 +14,13 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'tuition_id')->textInput() ?>
-
-    <?= $form->field($model, 'scholar_scholar_id')->textInput() ?>
+	<?= $form->field($model,'scholar_scholar_id')->widget(Select2::classname(),
+		[
+			'data'=>ArrayHelper::map(Scholar::find()->all(),'scholar_id','scholar_last_name','scholar_id'),
+			'language'=>'en',
+			'options'=>['placeholder'=>'Select Scholar ID'],
+			'pluginOptions'=>['allowClear'=>true],
+		]) ?>
 
     <?= $form->field($model, 'scholar_school_school_id')->textInput() ?>
 
