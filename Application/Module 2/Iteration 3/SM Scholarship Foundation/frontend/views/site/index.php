@@ -7,7 +7,7 @@ foreach($users as $ctr){
 		foreach($scholars as $scholarctr){
 			foreach($schools as $school){
 				
-		if($scholarctr->scholar_user_id==$ctr->id && $scholarctr->scholar_school_id==$school->School_id ){
+		if($scholarctr->scholar_user_id==$ctr->id && $scholarctr->school_school_id==$school->school_id ){
 			echo '
 			<center><img style="float:right;margin-right:430px; margin-top:150px;" src="img/portfolio/logo.jpg" ></img></center>
 			<div class="site-index">
@@ -16,7 +16,7 @@ foreach($users as $ctr){
             <div class="intro-text">
 				
                 <div class="intro-lead-in" style="color:#000000;margin-top:100px;">Welcome Scholar!</div>
-                <div class="intro-heading" style="color:#000000;">'.$scholarctr->scholar_firstName." ".$scholarctr->scholar_lastName.'</h2><h3>'.$school->school_name.'<br>'.$scholarctr->scholar_email.'</div>
+                <div class="intro-heading" style="color:#000000;">'.$scholarctr->scholar_first_name." ".$scholarctr->scholar_last_name.'</h2><h3>'.$school->school_name.'<br>'.$scholarctr->scholar_contact_email.'</div>
                 
 				</div>
 				</div>
