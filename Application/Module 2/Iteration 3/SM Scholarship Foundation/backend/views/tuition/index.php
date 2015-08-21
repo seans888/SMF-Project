@@ -19,6 +19,14 @@ $gridColumn =
 		'value' => 'scholarScholar.scholar_first_name'
 	],
 	[
+		'attribute' => 'middleName',
+		'value' => 'scholarScholar.scholar_middle_name'
+	],
+	[
+		'attribute' => 'lastName',
+		'value' => 'scholarScholar.scholar_last_name'
+	],
+	[
 		'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'tuition_term',
 	],
