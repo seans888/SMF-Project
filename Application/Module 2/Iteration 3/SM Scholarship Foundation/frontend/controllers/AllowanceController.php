@@ -13,6 +13,7 @@ use common\models\Scholar;
 use common\models\School;
 use common\models\Deduction;
 
+
 /**
  * AllowanceController implements the CRUD actions for Allowance model.
  */
@@ -37,19 +38,12 @@ class AllowanceController extends Controller
     public function actionIndex()
     {
 		
-		$username=Yii::$app->user->identity->username;
-		$users = User::find()->all();
-		$scholars = Scholar::find()->all();
-		$deductions = Deduction::find()->all();
 		
 		$model = new Allowance();
 		
-		foreach($users as $user){
-			foreach($scholars as $scholar){
-				foreach($deductions as $deduction){
-					foreach($refunds as $refund){
-				if($user->username==$username&&$user->id==$scholar->scholar_id){
-					$model->allowance_scholar_id=$scholar->scholar_id;
+					
+				
+					
 					
 					$searchModel = new AllowanceSearch($model);
 					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -57,12 +51,9 @@ class AllowanceController extends Controller
 					'searchModel' => $searchModel,
 					'dataProvider' => $dataProvider,
 					]);
-				}
-				}
-				}
-
-			}
-		}
+				
+				
+		
     }
 
     /**

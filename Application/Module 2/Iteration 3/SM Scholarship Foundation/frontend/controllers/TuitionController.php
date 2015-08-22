@@ -45,9 +45,9 @@ class TuitionController extends Controller
 		foreach($users as $user){
 			foreach($scholars as $scholar){
 				if($user->username==$username&&$user->id==$scholar->scholar_id){
-					$model->tuitionfee_scholar_id=$scholar->scholar_id;
+					$model->scholar_scholar_id=$scholar->scholar_id;
 					
-					$searchModel = new TuitionfeesSearch($model);
+					$searchModel = new TuitionSearch($model);
 					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 					return $this->render('index', [
 					'searchModel' => $searchModel,
