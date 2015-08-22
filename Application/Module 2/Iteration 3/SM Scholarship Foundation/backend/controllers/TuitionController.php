@@ -1,8 +1,10 @@
 <?php
 
 namespace backend\controllers;
-
+use common\models\Scholar;
+use yii\helpers\ArrayHelper;
 use Yii;
+use common\models\School;
 use common\models\SchoolSearch;
 use common\models\Tuition;
 use common\models\TuitionSearch;
@@ -10,6 +12,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\helpers\Json;
+use common\models\GroupGrade;
 /**
  * TuitionController implements the CRUD actions for Tuition model.
  */
@@ -94,7 +97,13 @@ class TuitionController extends Controller
     {
         $model = new Tuition();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+			$selectSchool = ArrayHelper::map(Scholar::find()
+			->where(['scholar_id'=>$model->scholar_scholar_id])
+			->all(),'school_school_id','school_school_id');
+			$schoolID = array_values($selectSchool)[0];
+			$model->scholar_school_school_id = $schoolID;
+			$model->save();
             return $this->redirect(['view', 'tuition_id' => $model->tuition_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id]);
         } else {
             return $this->render('create', [
@@ -102,7 +111,61 @@ class TuitionController extends Controller
             ]);
         }
     }
+	
+	public function actionGroupcreate()
+    {
+        $modelCustomer = new School;
+        $modelsAddress = [new Tuition];
+        if ($modelCustomer->load(Yii::$app->request->post())) {
 
+            $modelsAddress = GroupGrade::createMultiple(Tuition::classname());
+            GroupGrade::loadMultiple($modelsAddress, Yii::$app->request->post());
+
+            // ajax validation
+            if (Yii::$app->request->isAjax) {
+                Yii::$app->response->format = Response::FORMAT_JSON;
+                return ArrayHelper::merge(
+                    ActiveForm::validateMultiple($modelsAddress),
+                    ActiveForm::validate($modelCustomer)
+                );
+            }
+
+            // validate all models
+            $valid = $modelCustomer->validate();
+            $valid = GroupGrade::validateMultiple($modelsAddress) && $valid;
+
+            if ($valid) {
+                $transaction = \Yii::$app->db->beginTransaction();
+                try {
+                    
+                        foreach ($modelsAddress as $modelAddress) {
+							$selectSchool = ArrayHelper::map(Scholar::find()
+							->where(['scholar_id'=>$modelAddress->scholar_scholar_id])
+							->all(),'school_school_id','school_school_id');
+							$schoolID = array_values($selectSchool)[0];
+							$modelAddress->scholar_school_school_id = $schoolID;
+                            if (! ($flag = $modelAddress->save(false))) {
+                                $transaction->rollBack();
+                                break;
+                            }
+                        }
+                    
+                    if ($flag) {
+                        $transaction->commit();
+                        return $this->redirect(['index']);
+                    }
+                } catch (Exception $e) {
+                    $transaction->rollBack();
+                }
+            }
+        }
+
+        return $this->render('groupcreate', [
+            'modelCustomer' => $modelCustomer,
+            'modelsAddress' => (empty($modelsAddress)) ? [new Tuition] : $modelsAddress
+        ]);
+    }
+	
     /**
      * Updates an existing Tuition model.
      * If update is successful, the browser will be redirected to the 'view' page.

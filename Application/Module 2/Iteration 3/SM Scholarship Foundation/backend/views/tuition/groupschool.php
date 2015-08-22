@@ -21,15 +21,8 @@ $gridColumns = [
 					]);
 				},
 		],
-            'school_id',
             'school_name',
             'school_area',
-            'school_address',
-            'school_contact_emails:email',
-            // 'school_contact_numbers',
-            // 'school_vendor_code',
-
-            ['class' => 'yii\grid\ActionColumn'],
 ];
 
 /* @var $this yii\web\View */
@@ -84,6 +77,8 @@ $export = ExportMenu::widget([
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+		'pjax' => true,
+		'pjaxSettings' => ['neverTimeout' => true],
     	'rowOptions'=>function($model){
     		if(strcasecmp($model->school_area, 'NCR') != 0)
     		{
@@ -96,11 +91,11 @@ $export = ExportMenu::widget([
     	},
         'columns' => $gridColumns,
 		'toolbar'=> [
-        ['content'=>Html::a('Create Tuition', ['create'], ['class' => 'btn btn-success'])
+        ['content'=>Html::a('Create Tuition', ['groupcreate'], ['class' => 'btn btn-success'])
         ],
   //      '{export}',
         '{toggleData}',
-		$export
+	//	$export
 		],
     // set export properties
     // 'export'=>[

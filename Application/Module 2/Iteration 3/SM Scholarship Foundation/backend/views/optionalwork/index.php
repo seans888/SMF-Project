@@ -15,9 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Create Optionalwork', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -28,11 +26,27 @@ $this->params['breadcrumbs'][] = $this->title;
             'optionalwork_id',
             'scholar_scholar_id',
             'scholar_school_school_id',
+			//my edit
+			[
+				
+				'attribute' => 'firstName',
+				'value' => 'scholarScholar.scholar_first_name'
+			],
+			[
+				'attribute' => 'middleName',
+				'value' => 'scholarScholar.scholar_middle_name'
+			],
+			[
+				'attribute' => 'lastName',
+				'value' => 'scholarScholar.scholar_last_name'
+			],
+			//my edit
             'optionalwork_location',
             'optionalwork_start_date',
-            // 'optionalwork_end_date',
+            'optionalwork_end_date',
+			
 
-            ['class' => 'yii\grid\ActionColumn'],
+
         ],
     ]); ?>
 

@@ -26,6 +26,10 @@ class Tuition extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+	public $firstName;
+	public $middleName;
+	public $lastName;
+	public $schoolName;
     public static function tableName()
     {
         return 'tuition';
@@ -37,11 +41,11 @@ class Tuition extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['scholar_scholar_id', 'scholar_school_school_id'], 'required'],
+            [['scholar_scholar_id'], 'required'],
             [['scholar_scholar_id', 'scholar_school_school_id', 'tuition_term', 'tuition_school_year_start', 'tuition_school_year_end'], 'integer'],
             [['tuition_enrollment_date', 'tuition_payment_date'], 'safe'],
             [['tuition_amount'], 'number'],
-            [['tuition_paid_status'], 'string']
+            [['schoolName','firstName','middleName','lastName','tuition_paid_status'], 'string']
         ];
     }
 
@@ -51,7 +55,11 @@ class Tuition extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'tuition_id' => 'Tuition ID',
+			'schoolName' => 'School Name',
+			'firstName' => 'First Name',
+            'middleName' => 'Middle Name',
+			'lastName' => 'Last Name',
+			'tuition_id' => 'Tuition ID',
             'scholar_scholar_id' => 'Scholar Scholar ID',
             'scholar_school_school_id' => 'Scholar School School ID',
             'tuition_term' => 'Tuition Term',
@@ -75,8 +83,8 @@ class Tuition extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getScholarSchoolSchool()
+    public function getSchoolSchool()
     {
-        return $this->hasOne(Scholar::className(), ['school_school_id' => 'scholar_school_school_id']);
+        return $this->hasOne(School::className(), ['school_id' => 'scholar_school_school_id']);
     }
 }

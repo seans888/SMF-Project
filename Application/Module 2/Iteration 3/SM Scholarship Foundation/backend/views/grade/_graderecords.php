@@ -3,19 +3,31 @@
 use yii\helpers\Html;
 use kartik\grid\GridView;
 use kartik\export\ExportMenu;
+
 $exportedValues2 =
 [
 	['class' => 'kartik\grid\SerialColumn'],
+	// [
+		// 'attribute'=>'grade_id',
+		// 'pageSummary'=>'Total'
+	// ],
+	'subject_scholar_scholar_id',
 	[
-		'attribute'=>'grade_id',
-		'pageSummary'=>'Total'
+		'attribute'=>'firstName',
+		'value'=>'scholarScholar.scholar_first_name'
 	],
-	'subject_subject_id',
 	[
-		'attribute'=>'subject_scholar_scholar_id',
-		'pageSummary'=>true
+		'attribute'=>'middleName',
+		'value'=>'scholarScholar.scholar_middle_name'
 	],
-	'subject_scholar_school_school_id',
+	[
+		'attribute'=>'lastName',
+		'value'=>'scholarScholar.scholar_last_name'
+	],
+	[
+		'attribute'=>'subject_subject_id',
+		'value'=>'subjectSubject.subject_name',
+	],
 	'grade_school_year_start',
 	'grade_school_year_end',
 	'grade_raw_grade',
@@ -48,6 +60,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider2,
         'filterModel' => $searchModel2,
+		'pjax' => true,
+		'pjaxSettings' => ['neverTimeout' => true],
         'columns' => $exportedValues2,
 		'showPageSummary'=>true
     ]); ?>

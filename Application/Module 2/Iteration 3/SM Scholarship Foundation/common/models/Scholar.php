@@ -60,7 +60,10 @@ class Scholar extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['school_school_id', 'scholar_first_name', 'scholar_middle_name', 'scholar_last_name', 'scholar_gender', 'scholar_address', 'scholar_course', 'scholar_graduate_status', 'scholar_year_level', 'scholar_contact_email', 'scholar_contact_number', 'scholar_allowance_status', 'scholar_cash_card_number', 'scholar_type', 'scholar_sponsor', 'allowance_allowance_area'], 'required'],
+            // [['school_school_id', 'scholar_first_name', 'scholar_middle_name', 'scholar_last_name', 'scholar_gender', 
+			// 'scholar_address', 'scholar_course', 'scholar_graduate_status', 'scholar_year_level', 
+			// 'scholar_contact_email', 'scholar_contact_number', 'scholar_allowance_status', 
+			// 'scholar_cash_card_number', 'scholar_type', 'scholar_sponsor', 'allowance_allowance_area'], 'required'],
             [['school_school_id', 'scholar_year_level'], 'integer'],
             [['scholar_gender', 'scholar_graduate_status', 'scholar_allowance_status', 'scholar_type', 'allowance_allowance_area'], 'string'],
             [['scholar_first_name', 'scholar_middle_name', 'scholar_last_name', 'scholar_course', 'scholar_contact_email', 'scholar_contact_number', 'scholar_sponsor'], 'string', 'max' => 100],

@@ -1,7 +1,8 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+use kartik\grid\GridView;
+use kartik\export\ExportMenu;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\AllowanceSearch */
@@ -10,26 +11,58 @@ use yii\grid\GridView;
 $this->title = 'Allowances';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?php // echo $this->render('_search', ['model' => $searchModel]);
+$exportedValues =
+	[
+		['class' => 'yii\grid\SerialColumn'],
+		
+		'allowance_area',
+		'allowance_amount',
+		
+		['class' => 'yii\grid\ActionColumn'],
+	];
+	
+	$export = ExportMenu::widget([
+			'dataProvider' => $dataProvider,
+			'columns' => $exportedValues,
+			'noExportColumns' => [0,3],
+			'columnSelectorOptions'=>[
+				'label' => 'Columns',
+				'class' => 'btn btn-danger'
+				],
+				'target' => '_blank',
+				'fontAwesome' => true,
+				'dropdownOptions' => [
+					'label' => 'Export',
+					'class' => 'btn btn-success'
+					]
+				]);
+				
+?>
+				
 <div class="allowance-index">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Allowance', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+	
+	<h1><?= Html::encode($this->title) ?></h1>
+	<?php ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'allowance_area',
-            'allowance_amount',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
+        'columns' => $exportedValues,
+		'toolbar'=> [
+		[
+			'content'=>html::a('Create Allowance', ['create'], ['class' => 'btn btn-success'])
+		],
+		
+		'{toggleData}',
+		$export
+		],
+		'panel'=>
+		[
+			'type'=>GridView::TYPE_PRIMARY,
+			'heading'=>'Allowance Table',
+		]
+    ]); 
+	?>
 
 </div>

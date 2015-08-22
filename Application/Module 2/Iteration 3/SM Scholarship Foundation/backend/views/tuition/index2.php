@@ -11,9 +11,23 @@ $exportedValues =
 [            
 	['class' => 'yii\grid\SerialColumn'],
 
-	'tuition_id',
 	'scholar_scholar_id',
-	'scholar_school_school_id',
+	[
+		'attribute' => 'firstName',
+		'value' => 'scholarScholar.scholar_first_name'
+	],
+	[
+		'attribute' => 'middleName',
+		'value' => 'scholarScholar.scholar_middle_name'
+	],
+	[
+		'attribute' => 'lastName',
+		'value' => 'scholarScholar.scholar_last_name'
+	],
+	[
+		'attribute' => 'schoolName',
+		'value' => 'schoolSchool.school_name'
+	],
 	'tuition_term',
 	'tuition_school_year_start',
 	'tuition_school_year_end',
