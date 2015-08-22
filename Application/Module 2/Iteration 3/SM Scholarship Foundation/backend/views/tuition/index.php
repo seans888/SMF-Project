@@ -27,7 +27,6 @@ $gridColumn =
 		'value' => 'scholarScholar.scholar_last_name'
 	],
 	[
-		'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'tuition_term',
 	],
 	'tuition_school_year_start',
