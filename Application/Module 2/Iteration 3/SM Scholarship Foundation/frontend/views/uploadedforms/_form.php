@@ -13,10 +13,10 @@ use dosamigos\fileinput\FileInput;
 
      <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
 	 
-	<?= $form->field($model, 'fileName')->dropDownList(['Registration Form'=>'Registration Form','Grades Form'=>'Grades Form'],
+	<?= $form->field($model, 'upload_file_name')->dropDownList(['Registration Form'=>'Registration Form','Grades Form'=>'Grades Form'],
 			['prompt'=>'Select File Type']) ?>
 	
-	<?= $form->field($model, 'file')->widget(\dosamigos\fileinput\BootstrapFileInput::className(), [
+	<?= $form->field($model, 'upload_form')->widget(\dosamigos\fileinput\BootstrapFileInput::className(), [
     'options' => ['multiple' => true],
     'clientOptions' => [
         'previewFileType' => 'text',
