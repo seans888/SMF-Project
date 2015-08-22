@@ -11,6 +11,7 @@ $gridColumn =
 [            
 	['class' => 'kartik\grid\SerialColumn'],
 	[
+		'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'scholar_scholar_id',
 		'pageSummary' => 'Total'
 	],
@@ -27,17 +28,36 @@ $gridColumn =
 		'value' => 'scholarScholar.scholar_last_name'
 	],
 	[
+		'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'tuition_term',
 	],
-	'tuition_school_year_start',
-	'tuition_school_year_end',
-	'tuition_enrollment_date',
 	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'tuition_school_year_start',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'tuition_school_year_end',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'tuition_enrollment_date',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'tuition_amount',
 		'pageSummary' => true
 	],
-	'tuition_paid_status',
-	'tuition_payment_date',
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'tuition_paid_status',
+		'pageSummary' => true
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'tuition_payment_date',
+		'pageSummary' => true
+	],
 
 	['class' => 'kartik\grid\ActionColumn'],
 ];
@@ -56,7 +76,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => $gridColumn,
 		'toolbar'=> [
         [
-			'content'=>Html::a('Create Tuition', ['create'], ['class' => 'btn btn-success'])
+			'content'=>Html::a('Create Tuition', ['groupcreate'], ['class' => 'btn btn-success'])
         ],
   //      '{export}',
         '{toggleData}',
