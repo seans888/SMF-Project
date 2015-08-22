@@ -100,7 +100,7 @@ DashboardAsset::register($this);
             </div>
              <div class="row" >
                 <div class="col-md-4 col-sm-6 portfolio-item" style="margin-left:160px;">
-                    <a href="<?php echo'index.php?r=parttimejobs/index'?>" class="portfolio-link" data-toggle="modal">
+                    <a href="<?php echo'index.php?r=optionalwork/index'?>" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 
