@@ -9,12 +9,9 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use common\models\User;
-use common\models\Scholars;
-use common\models\Schools;
-use frontend\models\Tuition;
-use common\models\Deductions;
-use common\models\Refunds;
-use common\models\Benefit;
+use common\models\Scholar;
+use common\models\School;
+use common\models\Deduction;
 
 /**
  * AllowanceController implements the CRUD actions for Allowance model.
@@ -42,9 +39,9 @@ class AllowanceController extends Controller
 		
 		$username=Yii::$app->user->identity->username;
 		$users = User::find()->all();
-		$scholars = Scholars::find()->all();
-		$deductions = Deductions::find()->all();
-		$refunds = Refunds::find()->all();
+		$scholars = Scholar::find()->all();
+		$deductions = Deduction::find()->all();
+		
 		$model = new Allowance();
 		
 		foreach($users as $user){

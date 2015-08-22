@@ -3,18 +3,17 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\Grades;
-use common\models\GradesSearch;
+use common\models\Grade;
+use common\models\GradeSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\web\UploadedFile;
 use common\models\User;
-use common\models\Scholars;
-use common\models\Schools;
+use common\models\Scholar;
+
 
 /**
- * GradeController implements the CRUD actions for Grades model.
+ * GradeController implements the CRUD actions for Grade model.
  */
 class GradeController extends Controller
 {
@@ -39,15 +38,15 @@ class GradeController extends Controller
     {
 		$username=Yii::$app->user->identity->username;
 		$users = User::find()->all();
-		$scholars = Scholars::find()->all();
-		$model = new Grades();
+		$scholars = Scholar::find()->all();
+		$model = new Grade();
 		
 		foreach($users as $user){
 			foreach($scholars as $scholar){
 				if($user->username==$username&&$user->id==$scholar->scholar_id){
-					$model->grade_scholar_id=$scholar->scholar_id;
+					$model->grade_id=$scholar->scholar_id;
 					
-					$searchModel = new GradesSearch($model);
+					$searchModel = new GradeSearch($model);
 					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 					return $this->render('index', [
 					'searchModel' => $searchModel,
@@ -81,12 +80,13 @@ class GradeController extends Controller
     public function actionCreate()
     {
 	
-        $model = new Grades();
+		
+        $model = new Grade();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->grade_id]);
         } else {
-            return $this->render('gradestab', [
+            return $this->render('index', [
                 'model' => $model,
             ]);
         }

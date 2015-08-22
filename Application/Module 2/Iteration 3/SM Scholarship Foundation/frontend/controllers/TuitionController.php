@@ -3,16 +3,16 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\Tuitionfees;
-use common\models\TuitionfeesSearch;
+use common\models\Tuition;
+use common\models\TuitionSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
 use common\models\User;
-use common\models\Scholars;
-use common\models\Schools;
-use common\models\Grades;
+use common\models\Scholar;
+use common\models\School;
+use common\models\Grade;
 
 /**
  * GradeController implements the CRUD actions for Grades model.
@@ -39,8 +39,8 @@ class TuitionController extends Controller
     {
 		$username=Yii::$app->user->identity->username;
 		$users = User::find()->all();
-		$scholars = Scholars::find()->all();
-		$model = new Tuitionfees();
+		$scholars = Scholar::find()->all();
+		$model = new Tuition();
 		
 		foreach($users as $user){
 			foreach($scholars as $scholar){
