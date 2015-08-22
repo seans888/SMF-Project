@@ -2,20 +2,18 @@
 
 use yii\helpers\Html;
 use kartik\grid\GridView;
-use yii\jui\Tabs;
-use common\models\GradesSearch;
 use kartik\tabs\TabsX;
 use yii\helpers\Url;
 
 
 /* @var $this yii\web\View */
-/* @var $searchModel common\models\GradesSearch */
+/* @var $searchModel common\models\GradeSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Grade Records';
+$this->title = 'Grades';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="grades-index">
+<div class="grade-index">
 
     <center><h1 style="margin-top:100px;"><?= Html::encode($this->title) ?></h1></center><br>
   <?php 
@@ -28,11 +26,9 @@ $this->params['breadcrumbs'][] = $this->title;
 		'showOnEmpty' => false,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            'grade_schoolYear',
-            'grade_Term',
-            'grade_subject',
-            'grade_units',
-			'grade_value',
+            'grade_school_year_start',
+            'grade_school_year_end',
+         
 
             
         ],
@@ -56,10 +52,3 @@ echo TabsX::widget([
 ]);   
    
    ?>
-    
-
-
-
-
-
-</div>
