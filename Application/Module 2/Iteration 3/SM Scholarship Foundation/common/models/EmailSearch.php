@@ -5,12 +5,12 @@ namespace common\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\Emails;
+use common\models\Email;
 
 /**
- * EmailsSearch represents the model behind the search form about `common\models\Emails`.
+ * EmailSearch represents the model behind the search form about `common\models\Email`.
  */
-class EmailsSearch extends Emails
+class EmailSearch extends Email
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class EmailsSearch extends Emails
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['writer_name', 'writer_email', 'subject', 'content'], 'safe'],
+            [['email_id', 'email_scholar_id'], 'integer'],
+            [['subject', 'content'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class EmailsSearch extends Emails
      */
     public function search($params)
     {
-        $query = Emails::find();
+        $query = Email::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -56,12 +56,11 @@ class EmailsSearch extends Emails
         }
 
         $query->andFilterWhere([
-            'id' => $this->id,
+            'email_id' => $this->email_id,
+            'email_scholar_id' => $this->email_scholar_id,
         ]);
 
-        $query->andFilterWhere(['like', 'writer_name', $this->writer_name])
-            ->andFilterWhere(['like', 'writer_email', $this->writer_email])
-            ->andFilterWhere(['like', 'subject', $this->subject])
+        $query->andFilterWhere(['like', 'subject', $this->subject])
             ->andFilterWhere(['like', 'content', $this->content]);
 
         return $dataProvider;
