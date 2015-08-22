@@ -23,8 +23,6 @@ $gridColumns = [
 		],
             'school_name',
             'school_area',
-
-            ['class' => 'yii\grid\ActionColumn'],
 ];
 
 /* @var $this yii\web\View */
