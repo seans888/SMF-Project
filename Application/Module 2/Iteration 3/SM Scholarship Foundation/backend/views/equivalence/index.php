@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+use kartik\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\EquivalenceSearch */
@@ -23,18 +23,18 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            ['class' => 'kartik\grid\SerialColumn'],
 
             'equivalence_id',
             'school_school_id',
             'equivalence_numerical_grade',
             'equivalence_letter_grade',
             'equivalence_percentile_lower',
-            // 'equivalence_percentile_upper',
-            // 'equivalence_school_rating',
-            // 'equivalence_foundation_rating',
+            'equivalence_percentile_upper',
+            'equivalence_school_rating',
+            'equivalence_foundation_rating',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'kartik\grid\ActionColumn'],
         ],
     ]); ?>
 
