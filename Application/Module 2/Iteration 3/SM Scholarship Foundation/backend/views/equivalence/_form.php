@@ -2,7 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use kartik\select2\Select2;
+use yii\helpers\ArrayHelper;
+use common\models\School;
 /* @var $this yii\web\View */
 /* @var $model common\models\Equivalence */
 /* @var $form yii\widgets\ActiveForm */
@@ -12,7 +14,13 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'school_school_id')->textInput() ?>
+	<?= $form->field($model,'school_school_id')->widget(Select2::classname(),
+		[
+			'data'=>ArrayHelper::map(School::find()->all(),'school_id','school_name'),
+			'language'=>'en',
+			'options'=>['placeholder'=>'Select School Name'],
+			'pluginOptions'=>['allowClear'=>true],
+		]) ?>
 
     <?= $form->field($model, 'equivalence_numerical_grade')->textInput(['maxlength' => true]) ?>
 
