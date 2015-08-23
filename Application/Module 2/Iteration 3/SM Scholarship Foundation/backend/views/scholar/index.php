@@ -81,13 +81,7 @@ $exportedValues =
 	],
 	[
 		'class' => 'kartik\grid\EditableColumn',
-		'attribute' => 'scholar_allowance_status',
-		'editableOptions' => [
-			'inputType' => 'dropDownList',
-			'pluginOptions'=>['allowClear'=>true],
-			'data' => ["Granting"=>"Granting","Withheld"=>"Withheld"],
-			'widgetClass'=> 'kartik\select2\Select2',
-		],
+		'attribute' => 'scholar_vendor_code',
 	],
 	[
 		'class' => 'kartik\grid\EditableColumn',

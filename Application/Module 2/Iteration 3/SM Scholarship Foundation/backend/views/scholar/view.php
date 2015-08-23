@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'scholar_id' => $model->scholar_id, 'school_school_id' => $model->school_school_id, 'allowance_allowance_area' => $model->allowance_allowance_area], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'scholar_id' => $model->scholar_id, 'school_school_id' => $model->school_school_id, 'allowance_allowance_area' => $model->allowance_allowance_area], [
+        <?= Html::a('Update', ['update', 'id' => $model->scholar_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->scholar_id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'scholar_year_level',
             'scholar_contact_email:email',
             'scholar_contact_number',
-            'scholar_allowance_status',
+            'scholar_vendor_code',
             'scholar_cash_card_number',
             'scholar_type',
             'scholar_sponsor',
