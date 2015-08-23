@@ -119,6 +119,7 @@ DashboardAsset::register($this);
               </a>
               <ul class="treeview-menu">
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/grade/index'); ?>"><i class="fa fa-graduation-cap"></i> Grade Records</a></li>
+				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/allowance/index'); ?>"><i class="fa fa-credit-card"></i> Grade Equivalence Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/allowance/index'); ?>"><i class="fa fa-credit-card"></i> Subject Records</a></li>
 				</ul>
             </li>
