@@ -11,13 +11,7 @@ $this->title = 'Equivalences';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="equivalence-index">
-
-    <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Equivalence', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -26,7 +20,6 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'kartik\grid\SerialColumn'],
 
             'equivalence_id',
-            'school_school_id',
             'equivalence_numerical_grade',
             'equivalence_letter_grade',
             'equivalence_percentile_lower',
