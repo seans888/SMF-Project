@@ -3,19 +3,16 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\Grade;
-use common\models\GradeSearch;
+use common\models\Email;
+use common\models\EmailSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use common\models\User;
-use common\models\Scholar;
-
 
 /**
- * GradeController implements the CRUD actions for Grade model.
+ * EmailController implements the CRUD actions for Email model.
  */
-class GradeController extends Controller
+class EmailController extends Controller
 {
     public function behaviors()
     {
@@ -30,37 +27,22 @@ class GradeController extends Controller
     }
 
     /**
-     * Lists all Grades models.
+     * Lists all Email models.
      * @return mixed
      */
-	
     public function actionIndex()
     {
-		$username=Yii::$app->user->identity->username;
-		$users = User::find()->all();
-		$scholars = Scholar::find()->all();
-		$model = new Grade();
-		
-		foreach($users as $user){
-			foreach($scholars as $scholar){
-				if($user->username==$username&&$user->id==$scholar->scholar_id){
-					$model->grade_id=$scholar->scholar_id;
-					
-					$searchModel = new GradeSearch($model);
-					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-					return $this->render('index', [
-					'searchModel' => $searchModel,
-					'dataProvider' => $dataProvider,
-					]);
-				}
+        $searchModel = new EmailSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-			}
-		}
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
     }
 
-
     /**
-     * Displays a single Grades model.
+     * Displays a single Email model.
      * @param integer $id
      * @return mixed
      */
@@ -72,57 +54,44 @@ class GradeController extends Controller
     }
 
     /**
-     * Creates a new Grades model.
+     * Creates a new Email model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-	
     public function actionCreate()
     {
-	
-		
-        $model = new Grade();
+        $model = new Email();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->grade_id]);
+            return $this->redirect(['view', 'id' => $model->email_scholar_id]);
         } else {
-            return $this->render('index', [
+            return $this->render('create', [
                 'model' => $model,
             ]);
         }
     }
 
     /**
-     * Updates an existing Grades model.
+     * Updates an existing Email model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
      */
     public function actionUpdate($id)
     {
+        $model = $this->findModel($id);
 
-			if(Yii::$app->user->can('update-grades'))
-		{
-			$model = $this->findModel($id);
-
-			if ($model->load(Yii::$app->request->post())) {
-				$model->updated_by = Yii::$app->user->identity->username;
-				$model->save();
-				return $this->redirect(['view', 'id' => $model->grade_id]);
-			} else {
-				return $this->render('update', [
-					'model' => $model,
-				]);
-			}
-		}
-		else
-		{
-			throw new ForbiddenHttpException;
-		}
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->email_scholar_id]);
+        } else {
+            return $this->render('update', [
+                'model' => $model,
+            ]);
+        }
     }
 
     /**
-     * Deletes an existing Grades model.
+     * Deletes an existing Email model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -135,15 +104,15 @@ class GradeController extends Controller
     }
 
     /**
-     * Finds the Grades model based on its primary key value.
+     * Finds the Email model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Grades the loaded model
+     * @return Email the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Grades::findOne($id)) !== null) {
+        if (($model = Email::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

@@ -108,7 +108,7 @@ AppAsset::register($this);
                 ];
 				}else if ($roles == 'alumni'){
 				$userid = ArrayHelper::getValue(User::find()->where(['username' => Yii::$app->user->identity->username])->one(), 'id');
-				$alumniid = ArrayHelper::getValue(Alumni::find()->where(['user_id' => $userid])->one(), 'alumni_id');
+				$alumniid = ArrayHelper::getValue(Alumni::find()->where(['user_id' => $userid])->one(), 'id');
 				
 				$menuItems =[
 				['label' => 'Home', 'url' => ['/site/index']],

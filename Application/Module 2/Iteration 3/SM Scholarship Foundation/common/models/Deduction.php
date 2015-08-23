@@ -74,8 +74,8 @@ class Deduction extends \yii\db\ActiveRecord
     public function getScholarSchoolSchool()
     {
         return $this->hasOne(Scholar::className(), ['school_school_id' => 'scholar_school_school_id']);
-<<<<<<< HEAD
-=======
+
+
     }
 
     /**
@@ -84,6 +84,6 @@ class Deduction extends \yii\db\ActiveRecord
     public function getScholarScholar0()
     {
         return $this->hasOne(Scholar::className(), ['scholar_id' => 'scholar_scholar_id', 'school_school_id' => 'scholar_school_school_id']);
->>>>>>> 08583c20015e1e5dbee7ec6ff0fe0b12366fe05a
+
     }
 }

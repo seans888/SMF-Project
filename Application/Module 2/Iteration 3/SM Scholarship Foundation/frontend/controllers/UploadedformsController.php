@@ -3,13 +3,13 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\Uploadedforms;
-use common\models\UploadedformsSearch;
+use common\models\Upload;
+use common\models\UploadSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use common\models\User;
-use common\models\Scholars;
+use common\models\Scholar;
 use yii\web\UploadedFile;
 
 /**
@@ -37,14 +37,14 @@ class UploadedformsController extends Controller
     {
        	$username=Yii::$app->user->identity->username;
 		$users = User::find()->all();
-		$scholars = Scholars::find()->all();
-		$model = new Uploadedforms();
+		$scholars = Scholar::find()->all();
+		$model = new Upload();
 		
 		foreach($users as $user){
 			foreach($scholars as $scholar){
 				if($user->username==$username&&$user->id==$scholar->scholar_id){
-					$model->uploaded_scholar_id=$scholar->scholar_id;
-					$searchModel = new UploadedformsSearch($model);
+					$model->scholar_scholar_id=$scholar->scholar_id;
+					$searchModel = new UploadSearch($model);
 					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
 					return $this->render('index', [
@@ -78,19 +78,19 @@ class UploadedformsController extends Controller
     {	
 		$username=Yii::$app->user->identity->username;
 		$users = User::find()->all();
-		$scholars = Scholars::find()->all();
-		$model = new Uploadedforms();
+		$scholars = Scholar::find()->all();
+		$model = new Upload();
 		foreach($users as $user){
 		foreach($scholars as $scholar){
 			if($user->username==$username&&$user->id==$scholar->scholar_id){
-			$model->uploaded_scholar_id=$scholar->scholar_id;
+			$model->scholar_scholar_id=$scholar->scholar_id;
 			if ($model->load(Yii::$app->request->post())) {
-			$fileName = $model->fileName.$model->uploaded_scholar_id;
-			$model->file = UploadedFile::getInstance($model,'file');
-			if($model->file != null)
+			$fileName = $model->upload_file_name.$model->scholar_scholar_id;
+			$model->upload_form = UploadedFile::getInstance($model,'upload_form');
+			if($model->upload_form != null)
 			{
-				$model->file->saveAs('uploads/'.$fileName.'.'.$model->file->extension);	
-				$model->uploadedForm = 'uploads/'.$fileName.'.'.$model->file->extension;	
+				$model->upload_file_name->saveAs('uploads/'.$fileName.'.'.$model->upload_form->extension);	
+				$model->upload_form = 'uploads/'.$fileName.'.'.$model->upload_form->extension;	
 			}			
 			$model->save();
             return $this->redirect(['index', 'id' => $model->id]);

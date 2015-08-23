@@ -7,11 +7,11 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\ParttimejobsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Part Time Jobs';
+$this->title = 'Optional Jobs';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="parttimejobs-index">
-	<center style="margin-top:100px;"><h1>Part-Time Job Request History</h1><br> <p>
+	<center style="margin-top:100px;"><h1>Optional Job Request History</h1><br> <p>
         <?= Html::a('Create Job Request', ['create'], ['class' => 'btn btn-success']) ?>
     </p></center>
 	

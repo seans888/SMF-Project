@@ -2,8 +2,6 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use kartik\select2\Select2;
-use yii\helpers\ArrayHelper;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Alumni */
@@ -12,9 +10,9 @@ use yii\helpers\ArrayHelper;
 
 <div class="alumni-form">
 
-    <?php $form = ActiveForm::begin(); ?>
-	
+		
 	<?php $form = ActiveForm::begin(); ?>
+	
 	<table>
 	<tr><td>
     <?= $form->field($model, 'alumni_id')->textInput(['maxlength' => true]) ?>
@@ -62,10 +60,9 @@ use yii\helpers\ArrayHelper;
     <?= $form->field($model, 'alumni_legends')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'user_id')->textInput() ?>
-</table>
 
-	<?php ActiveForm::end(); ?>
-	
+	</table>
+
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

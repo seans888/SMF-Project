@@ -4,22 +4,20 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\EmailsSearch */
+/* @var $model common\models\EmailSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="emails-search">
+<div class="email-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id') ?>
+    <?= $form->field($model, 'email_id') ?>
 
-    <?= $form->field($model, 'writer_name') ?>
-
-    <?= $form->field($model, 'writer_email') ?>
+    <?= $form->field($model, 'email_scholar_id') ?>
 
     <?= $form->field($model, 'subject') ?>
 

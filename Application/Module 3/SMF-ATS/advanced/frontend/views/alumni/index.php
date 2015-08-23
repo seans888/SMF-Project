@@ -56,9 +56,9 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 	
-		<?php	} else if ($roles == 'user'){ ?>
-		
-		<?= GridView::widget([
+	<?php	} else if ($roles == 'user'){ ?>
+	
+	<?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
@@ -75,9 +75,9 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 	
-		<?php }else{ ?>
-		
-		<?= GridView::widget([
+	<?php }else{ ?>
+	
+	<?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
@@ -94,6 +94,7 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); ?>
 		
 			<?php } ?>
-		
+	
+	
 
 </div>
