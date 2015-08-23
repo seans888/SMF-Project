@@ -211,9 +211,9 @@ class TuitionController extends Controller
      * @return Tuition the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($tuition_id, $scholar_scholar_id, $scholar_school_school_id)
+    protected function findModel($id)
     {
-        if (($model = Tuition::findOne(['tuition_id' => $tuition_id, 'scholar_scholar_id' => $scholar_scholar_id, 'scholar_school_school_id' => $scholar_school_school_id])) !== null) {
+        if (($model = Tuition::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
