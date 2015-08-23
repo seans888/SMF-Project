@@ -22,13 +22,12 @@ $exportedValues =
 			'attribute' => 'allowance_amount',
 		],
 		
-		['class' => 'kartik\grid\ActionColumn'],
 	];
 	
 	$export = ExportMenu::widget([
 			'dataProvider' => $dataProvider,
 			'columns' => $exportedValues,
-			'noExportColumns' => [0,3],
+
 			'columnSelectorOptions'=>[
 				'label' => 'Columns',
 				'class' => 'btn btn-danger'
@@ -53,9 +52,6 @@ $exportedValues =
         'filterModel' => $searchModel,
         'columns' => $exportedValues,
 		'toolbar'=> [
-		[
-			'content'=>html::a('Create Allowance', ['create'], ['class' => 'btn btn-success'])
-		],
 		
 		'{toggleData}',
 		$export
