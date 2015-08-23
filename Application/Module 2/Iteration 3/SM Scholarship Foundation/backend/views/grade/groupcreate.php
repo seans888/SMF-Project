@@ -14,7 +14,7 @@ use common\models\Subject;
     <?php $form = ActiveForm::begin(['id' => 'dynamic-form']); ?>
     <div class="row">
         <div class="col-sm-6">
-            <?= $form->field($modelCustomer,'scholar_id')->widget(Select2::classname(),
+            <?= $form->field($modelCustomer,'subject_scholar_scholar_id')->widget(Select2::classname(),
 		[
 			'data'=>ArrayHelper::map(Scholar::find()->all(),'scholar_id','scholar_last_name','scholar_id'),
 			'language'=>'en',
@@ -38,10 +38,11 @@ use common\models\Subject;
                 'model' => $modelsAddress[0],
                 'formId' => 'dynamic-form',
                 'formFields' => [
-                    'grade_id',
+					'subject_scholar_scholar_id',
                     'subject_subject_id',
-                    'subject_scholar_scholar_id',
-                    'subject_scholar_school_school_id',
+					'grade_raw_grade',
+					'grade_school_year_start',
+					'grade_school_year_end',
                 ],
             ]); ?>
 

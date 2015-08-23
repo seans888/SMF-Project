@@ -6,12 +6,21 @@ use kartik\export\ExportMenu;
 use yii\helpers\ArrayHelper;
 use common\models\Scholar;
 use common\models\School;
+use common\models\Subject;
 $exportedValues =
 [
 	['class' => 'kartik\grid\SerialColumn'],
 	[
-		'attribute'=>'subject_subject_id',
-		'value'=>'subjectSubject.subject_name'
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute'=>'subject_scholar_school_school_id',
+		'editableOptions' => [
+			'inputType' => '\kartik\select2\Select2',
+			'options'=>
+			[
+				'data' => ArrayHelper::map(Subject::find()->all(),'subject_id','subject_name'),
+			],
+		],
+		'value'=>'subjectSubject.subject_name',
 	],
 	[
 		'class' => 'kartik\grid\EditableColumn',
