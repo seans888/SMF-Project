@@ -73,7 +73,7 @@ $export = ExportMenu::widget([
 
 ?>
 <?= Html::a('Group By School', ['index'], ['class' => 'btn btn-success']) ?>
-<?= Html::a('Show Only Tuition Records', ['index2'], ['class' => 'btn btn-success']) ?>
+<?= Html::a('Show Only Equivalences', ['index2'], ['class' => 'btn btn-success']) ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -91,7 +91,7 @@ $export = ExportMenu::widget([
     	},
         'columns' => $gridColumns,
 		'toolbar'=> [
-        ['content'=>Html::a('Create Tuition', ['groupcreate'], ['class' => 'btn btn-success'])
+        ['content'=>Html::a('Create Equivalence Rule', ['groupcreate'], ['class' => 'btn btn-success'])
         ],
   //      '{export}',
         '{toggleData}',
