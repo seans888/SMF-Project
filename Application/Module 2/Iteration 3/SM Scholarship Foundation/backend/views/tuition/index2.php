@@ -9,7 +9,7 @@ use kartik\export\ExportMenu;
 
 $exportedValues = 
 [            
-	['class' => 'yii\grid\SerialColumn'],
+	['class' => 'kartik\grid\SerialColumn'],
 
 	'scholar_scholar_id',
 	[
@@ -36,7 +36,7 @@ $exportedValues =
 	'tuition_paid_status',
 	'tuition_payment_date',
 
-	['class' => 'yii\grid\ActionColumn'],
+	['class' => 'kartik\grid\ActionColumn'],
 ];
 
 $export = ExportMenu::widget([
