@@ -5,6 +5,7 @@ namespace backend\controllers;
 use Yii;
 use common\models\Equivalence;
 use common\models\EquivalenceSearch;
+use common\models\SchoolSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -32,10 +33,10 @@ class EquivalenceController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new EquivalenceSearch();
+        $searchModel = new SchoolSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('index', [
+        return $this->render('groupschool', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
