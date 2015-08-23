@@ -81,10 +81,10 @@ class GradeController extends Controller
      * @param integer $subject_scholar_school_school_id
      * @return mixed
      */
-    public function actionView($grade_id, $subject_subject_id, $subject_scholar_scholar_id, $subject_scholar_school_school_id)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($grade_id, $subject_subject_id, $subject_scholar_scholar_id, $subject_scholar_school_school_id),
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -98,7 +98,7 @@ class GradeController extends Controller
         $model = new Grade();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'grade_id' => $model->grade_id, 'subject_subject_id' => $model->subject_subject_id, 'subject_scholar_scholar_id' => $model->subject_scholar_scholar_id, 'subject_scholar_school_school_id' => $model->subject_scholar_school_school_id]);
+            return $this->redirect(['view', 'id' => $model->grade_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -170,12 +170,12 @@ class GradeController extends Controller
      * @param integer $subject_scholar_school_school_id
      * @return mixed
      */
-    public function actionUpdate($grade_id, $subject_subject_id, $subject_scholar_scholar_id, $subject_scholar_school_school_id)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($grade_id, $subject_subject_id, $subject_scholar_scholar_id, $subject_scholar_school_school_id);
+        $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'grade_id' => $model->grade_id, 'subject_subject_id' => $model->subject_subject_id, 'subject_scholar_scholar_id' => $model->subject_scholar_scholar_id, 'subject_scholar_school_school_id' => $model->subject_scholar_school_school_id]);
+            return $this->redirect(['view', 'id' => $model->grade_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -192,9 +192,9 @@ class GradeController extends Controller
      * @param integer $subject_scholar_school_school_id
      * @return mixed
      */
-    public function actionDelete($grade_id, $subject_subject_id, $subject_scholar_scholar_id, $subject_scholar_school_school_id)
+    public function actionDelete($id)
     {
-        $this->findModel($grade_id, $subject_subject_id, $subject_scholar_scholar_id, $subject_scholar_school_school_id)->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
@@ -209,9 +209,9 @@ class GradeController extends Controller
      * @return Grade the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($grade_id, $subject_subject_id, $subject_scholar_scholar_id, $subject_scholar_school_school_id)
+    protected function findModel($id)
     {
-        if (($model = Grade::findOne(['grade_id' => $grade_id, 'subject_subject_id' => $subject_subject_id, 'subject_scholar_scholar_id' => $subject_scholar_scholar_id, 'subject_scholar_school_school_id' => $subject_scholar_school_school_id])) !== null) {
+        if (($model = Grade::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
