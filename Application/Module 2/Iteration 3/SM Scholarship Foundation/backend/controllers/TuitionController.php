@@ -81,10 +81,10 @@ class TuitionController extends Controller
      * @param integer $scholar_school_school_id
      * @return mixed
      */
-    public function actionView($tuition_id, $scholar_scholar_id, $scholar_school_school_id)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($tuition_id, $scholar_scholar_id, $scholar_school_school_id),
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -104,7 +104,7 @@ class TuitionController extends Controller
 			$schoolID = array_values($selectSchool)[0];
 			$model->scholar_school_school_id = $schoolID;
 			$model->save();
-            return $this->redirect(['view', 'tuition_id' => $model->tuition_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id]);
+            return $this->redirect(['view', 'id' => $model->tuition_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -174,12 +174,12 @@ class TuitionController extends Controller
      * @param integer $scholar_school_school_id
      * @return mixed
      */
-    public function actionUpdate($tuition_id, $scholar_scholar_id, $scholar_school_school_id)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($tuition_id, $scholar_scholar_id, $scholar_school_school_id);
+        $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'tuition_id' => $model->tuition_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id]);
+            return $this->redirect(['view', 'id' => $model->tuition_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -195,9 +195,9 @@ class TuitionController extends Controller
      * @param integer $scholar_school_school_id
      * @return mixed
      */
-    public function actionDelete($tuition_id, $scholar_scholar_id, $scholar_school_school_id)
+    public function actionDelete($id)
     {
-        $this->findModel($tuition_id, $scholar_scholar_id, $scholar_school_school_id)->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
