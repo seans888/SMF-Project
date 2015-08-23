@@ -33,6 +33,7 @@ $exportedValues2 =
 	'grade_raw_grade',
 	'grade_approval_status',
 	'grade_approved_by',
+	['class' => 'kartik\grid\ActionColumn'],
 ];
 
 // echo ExportMenu::widget([
