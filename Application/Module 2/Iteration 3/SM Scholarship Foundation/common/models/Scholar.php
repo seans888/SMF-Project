@@ -65,7 +65,7 @@ class Scholar extends \yii\db\ActiveRecord
 			// 'scholar_contact_email', 'scholar_contact_number', 'scholar_allowance_status', 
 			// 'scholar_cash_card_number', 'scholar_type', 'scholar_sponsor', 'allowance_allowance_area'], 'required'],
             [['school_school_id', 'scholar_year_level'], 'integer'],
-            [['scholar_gender', 'scholar_graduate_status', 'scholar_allowance_status', 'scholar_type', 'allowance_allowance_area'], 'string'],
+            [['scholar_gender', 'scholar_graduate_status', 'scholar_vendor_code', 'scholar_type', 'allowance_allowance_area'], 'string'],
             [['scholar_first_name', 'scholar_middle_name', 'scholar_last_name', 'scholar_course', 'scholar_contact_email', 'scholar_contact_number', 'scholar_sponsor'], 'string', 'max' => 100],
             [['scholar_address'], 'string', 'max' => 255],
             [['scholar_cash_card_number'], 'string', 'max' => 45]
@@ -90,7 +90,7 @@ class Scholar extends \yii\db\ActiveRecord
             'scholar_year_level' => 'Scholar Year Level',
             'scholar_contact_email' => 'Scholar Contact Email',
             'scholar_contact_number' => 'Scholar Contact Number',
-            'scholar_allowance_status' => 'Scholar Allowance Status',
+            'scholar_vendor_code' => 'Scholar Vendor Code',
             'scholar_cash_card_number' => 'Scholar Cash Card Number',
             'scholar_type' => 'Scholar Type',
             'scholar_sponsor' => 'Scholar Sponsor',
