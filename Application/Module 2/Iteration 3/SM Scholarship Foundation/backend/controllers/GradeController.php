@@ -108,7 +108,7 @@ class GradeController extends Controller
 	
 	public function actionGroupcreate()
     {
-        $modelCustomer = new Scholar;
+        $modelCustomer = new Grade;
         $modelsAddress = [new Grade];
         if ($modelCustomer->load(Yii::$app->request->post())) {
 
@@ -131,21 +131,27 @@ class GradeController extends Controller
             if ($valid) {
                 $transaction = \Yii::$app->db->beginTransaction();
                 try {
-                    
+					// if($flag = $modelCustomer->save(false)){
                         foreach ($modelsAddress as $modelAddress) {
-                            $modelAddress->subject_scholar_scholar_id = $modelCustomer->scholar_id;
+                            $modelAddress->subject_scholar_scholar_id = $modelCustomer->subject_scholar_scholar_id;
 							$selectSchool = ArrayHelper::map(Scholar::find()
-							->where(['scholar_id'=>$modelCustomer->scholar_id])
+							->where(['scholar_id'=>$modelAddress->subject_scholar_scholar_id])
 							->all(),'school_school_id','school_school_id');
 							$schoolID = array_values($selectSchool)[0];
 							$modelAddress->subject_scholar_school_school_id = $schoolID;
                             if (! ($flag = $modelAddress->save(false))) {
+								
                                 $transaction->rollBack();
                                 break;
                             }
                         }
-                    
+                    // }
                     if ($flag) {
+			if($modelCustomer->subject_subject_id==null)
+			{
+				$sql = "DELETE FROM grade WHERE subject_subject_id is null;";
+				Yii::$app->db->createCommand($sql)->execute();
+			}
                         $transaction->commit();
                         return $this->redirect(['index']);
                     }
