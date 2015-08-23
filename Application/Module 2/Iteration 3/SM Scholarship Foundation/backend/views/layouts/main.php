@@ -107,14 +107,18 @@ DashboardAsset::register($this);
                 <i class="fa fa-institution"></i> <span>Schools</span>
               </a> 
             </li>
+			<li class="treeview">
+              <a href="<?= Yii::$app->getUrlManager()->createUrl('/tuition/index'); ?>">
+                <i class="fa fa-money"></i> <span>Tuition</span>
+              </a> 
+            </li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-list-ol"></i> <span>Records</span>
+                <i class="fa fa-list-ol"></i> <span>Stipend Records</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/grade/index'); ?>"><i class="fa fa-graduation-cap"></i> Grade Records</a></li>
-				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/tuition/index'); ?>"><i class="fa fa-money"></i> Tuition Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/allowance/index'); ?>"><i class="fa fa-credit-card"></i> Allowance Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/incentive/index'); ?>"><i class="fa fa-thumbs-up"></i> Incentive Records</a></li>
 				<li><a href="<?= Yii::$app->getUrlManager()->createUrl('/deduction/index'); ?>"><i class="fa fa-thumbs-down"></i> Deduction Records</a></li>
