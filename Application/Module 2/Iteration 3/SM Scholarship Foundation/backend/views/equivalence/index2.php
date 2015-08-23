@@ -8,6 +8,10 @@ $exportedValues =
 	['class' => 'kartik\grid\SerialColumn'],
 
 	'equivalence_id',
+	[
+		'attribute' => 'school_school_id',
+		'value' => 'schoolSchool.school_name'
+	],
 	'equivalence_numerical_grade',
 	'equivalence_letter_grade',
 	'equivalence_percentile_lower',
@@ -53,9 +57,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-        'columns' => [
-
-        ],
+        'columns' => $exportedValues,
 		'toolbar'=> [
         ['content'=>Html::a('Create Equivalence Rule', ['create'], ['class' => 'btn btn-success'])
         ],
