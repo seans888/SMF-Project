@@ -14,12 +14,15 @@ $this->params['breadcrumbs'][] = $this->title;
 <?php // echo $this->render('_search', ['model' => $searchModel]);
 $exportedValues =
 	[
-		['class' => 'yii\grid\SerialColumn'],
+		['class' => 'kartik\grid\SerialColumn'],
 		
 		'allowance_area',
-		'allowance_amount',
+		[
+			'class' => 'kartik\grid\EditableColumn',
+			'attribute' => 'allowance_amount',
+		],
 		
-		['class' => 'yii\grid\ActionColumn'],
+		['class' => 'kartik\grid\ActionColumn'],
 	];
 	
 	$export = ExportMenu::widget([
