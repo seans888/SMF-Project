@@ -35,7 +35,7 @@ $exportedValues =
 			'inputType' => '\kartik\select2\Select2',
 			'options'=>
 			[
-				'data' => ['NCR'=>'NCR','Davao'=>'Davao'],
+				'data' => ['NCR'=>'NCR','Provincial'=>'Provincial'],
 			],
 		],
 	],

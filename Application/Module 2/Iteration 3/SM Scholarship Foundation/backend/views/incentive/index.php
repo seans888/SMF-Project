@@ -1,7 +1,8 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+use kartik\grid\GridView;
+use kartik\export\ExportMenu;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\IncentiveSearch */
@@ -10,31 +11,61 @@ use yii\grid\GridView;
 $this->title = 'Incentives';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="incentive-index">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Incentive', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'incentive_id',
+<?php // echo $this->render('_search', ['model' => $searchModel]);
+$exportedValues =
+	[
+		['class' => 'yii\grid\SerialColumn'],
+		
+		'incentive_id',
             'scholar_scholar_id',
             'scholar_school_school_id',
             'scholar_allowance_allowance_area',
             'incentive_amount',
-            // 'incentive_remark',
-            // 'incentive_date',
+		
+		['class' => 'yii\grid\ActionColumn'],
+	];
+	
+	$export = ExportMenu::widget([
+			'dataProvider' => $dataProvider,
+			'columns' => $exportedValues,
+			'noExportColumns' => [0,3],
+			'columnSelectorOptions'=>[
+				'label' => 'Columns',
+				'class' => 'btn btn-danger'
+				],
+				'target' => '_blank',
+				'fontAwesome' => true,
+				'dropdownOptions' => [
+					'label' => 'Export',
+					'class' => 'btn btn-success'
+					]
+				]);
+				
+?>
+				
+<div class="incentive-index">
+	
+	<h1><?= Html::encode($this->title) ?></h1>
+	<?php ?>
 
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => $exportedValues,
+		'toolbar'=> [
+		[
+			'content'=>html::a('Create Incentive', ['create'], ['class' => 'btn btn-success'])
+		],
+		
+		'{toggleData}',
+		$export
+		],
+		'panel'=>
+		[
+			'type'=>GridView::TYPE_PRIMARY,
+			'heading'=>'Incentive Table',
+		]
+    ]); 
+	?>
 
 </div>

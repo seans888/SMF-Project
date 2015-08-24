@@ -1,0 +1,21 @@
+<?php 
+
+$roles = Yii::$app->user->identity->roles;
+if ($roles == 'admin' || $roles == 'employee'){
+	$this->title = 'Home';
+}
+?>
+
+
+
+
+
+$roles = Yii::$app->user->identity->roles;
+
+if ($roles == 'admin'){
+$menuItems[] = ['label' => 'Home', 'url' => ['site/index']];
+}else if ($roles == 'employee'){
+$menuItems[] = ['label' => 'Home', 'url' => ['site/index']];
+}else if ($roles == 'student'){
+$menuItems[] = ['label' => 'Home', 'url' => ['site/index']];
+}

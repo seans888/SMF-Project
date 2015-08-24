@@ -32,7 +32,6 @@ AppAsset::register($this);
     <?php $this->beginBody() ?>
     <div class="wrap">
 	
-	
         <?php
             NavBar::begin([
                 'brandLabel' => 'SM Foundation',
@@ -60,12 +59,12 @@ AppAsset::register($this);
 			 $menuItems =[
 				['label' => 'Home', 'url' => ['/site/index']],
 				['label' => 'Alumni', 'url' => ['/alumni/index']],
-				['label' => 'Course', 'url' => ['/course/index']],
-				['label' => 'School', 'url' => ['/school/index']],
+				//['label' => 'Course', 'url' => ['/course/index']],
+				//['label' => 'School', 'url' => ['/school/index']],
 				['label' => 'Employee', 'url' => ['/employee/index']],
                 ['label' => 'Event', 'url' => ['/event/index']],
 				//['label' => 'Logs', 'url' => ['/logs/index']],
-				['label' => 'Migration', 'url' => ['/migrated-alumni/index']],
+				//['label' => 'Migration', 'url' => ['/migrated-alumni/index']],
 				['label' => 'Testimonials', 'url' => ['/testimonials/index']],
 				['label' => 'Users', 'url' => ['/user/index']],
 				[ 
@@ -87,10 +86,10 @@ AppAsset::register($this);
 				['label' => 'Home', 'url' => ['/site/index']],
 				['label' => 'Alumni', 'url' => ['/alumni/index']],
 				//['label' => 'City', 'url' => ['/city/index']],
-				['label' => 'Course', 'url' => ['/course/index']],
-				['label' => 'School', 'url' => ['/school/index']],
-				['label' => 'Province', 'url' => ['/province/index']],
-				['label' => 'Region', 'url' => ['/region/index']],
+				//['label' => 'Course', 'url' => ['/course/index']],
+				//['label' => 'School', 'url' => ['/school/index']],
+				//['label' => 'Province', 'url' => ['/province/index']],
+				//['label' => 'Region', 'url' => ['/region/index']],
 				['label' => 'Employee', 'url' => ['/employee/view', 'id' => $employeeid]],
                 ['label' => 'Event', 'url' => ['/event/index']],
 				['label' => 'Logs', 'url' => ['/logs/index']],
@@ -108,7 +107,7 @@ AppAsset::register($this);
                 ];
 				}else if ($roles == 'alumni'){
 				$userid = ArrayHelper::getValue(User::find()->where(['username' => Yii::$app->user->identity->username])->one(), 'id');
-				$alumniid = ArrayHelper::getValue(Alumni::find()->where(['user_id' => $userid])->one(), 'alumni_id');
+				$alumniid = ArrayHelper::getValue(Alumni::find()->where(['user_id' => $userid])->one(), 'id');
 				
 				$menuItems =[
 				['label' => 'Home', 'url' => ['/site/index']],

@@ -8,7 +8,7 @@ use common\models\AllowanceSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\helpers\Json;
 /**
  * AllowanceController implements the CRUD actions for Allowance model.
  */
@@ -34,7 +34,25 @@ class AllowanceController extends Controller
     {
         $searchModel = new AllowanceSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$allowanceId = Yii::$app->request->post('editableKey');
+			$allowance = Allowance::findOne($allowanceId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Allowance']);
+			$post['Allowance'] = $posted;
+			
+			if($allowance->load($post))
+			{
+				$allowance->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,

@@ -14,7 +14,7 @@ use common\models\Subject;
     <?php $form = ActiveForm::begin(['id' => 'dynamic-form']); ?>
     <div class="row">
         <div class="col-sm-6">
-            <?= $form->field($modelCustomer,'scholar_id')->widget(Select2::classname(),
+            <?= $form->field($modelCustomer,'subject_scholar_scholar_id')->widget(Select2::classname(),
 		[
 			'data'=>ArrayHelper::map(Scholar::find()->all(),'scholar_id','scholar_last_name','scholar_id'),
 			'language'=>'en',
@@ -23,7 +23,14 @@ use common\models\Subject;
 		]) ?>
         </div>
     </div>
-
+	<div class="row">
+		<div class="col-sm-4">
+			<?= $form->field($modelCustomer, "grade_school_year_start")->textInput(['maxlength' => true]) ?>
+		</div>
+		<div class="col-sm-4">
+			<?= $form->field($modelCustomer, "grade_school_year_end")->textInput(['maxlength' => true]) ?>
+		</div>
+	</div><!-- .row -->
     <div class="panel panel-default">
         <div class="panel-heading"><h4><i class="glyphicon glyphicon-envelope"></i> Grades</h4></div>
         <div class="panel-body">
@@ -38,10 +45,11 @@ use common\models\Subject;
                 'model' => $modelsAddress[0],
                 'formId' => 'dynamic-form',
                 'formFields' => [
-                    'grade_id',
+					'subject_scholar_scholar_id',
                     'subject_subject_id',
-                    'subject_scholar_scholar_id',
-                    'subject_scholar_school_school_id',
+					'grade_raw_grade',
+					'grade_school_year_start',
+					'grade_school_year_end',
                 ],
             ]); ?>
 
@@ -67,7 +75,7 @@ use common\models\Subject;
                             <div class="col-sm-6">
 
 								<?= $form->field($modelAddress,"[{$i}]subject_subject_id")->dropDownList(
-								ArrayHelper::map(Subject::find()->all(),'subject_id','subject_name')
+								ArrayHelper::map(Subject::find()->all(),'subject_id','subject_name','scholar_scholar_id')
 								)
 								?>
                             </div>
@@ -75,22 +83,8 @@ use common\models\Subject;
                                 <?= $form->field($modelAddress, "[{$i}]grade_raw_grade")->textInput(['maxlength' => true]) ?>
                             </div>
                         </div><!-- .row -->
-                        <div class="row">
-                            <div class="col-sm-4">
-								<?= $form->field($modelAddress, "[{$i}]grade_school_year_start")->textInput(['maxlength' => true]) ?>
-                            </div>
-                            <div class="col-sm-4">
-								<?= $form->field($modelAddress, "[{$i}]grade_school_year_end")->textInput(['maxlength' => true]) ?>
-                            </div>
-                        </div><!-- .row -->
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <?= $form->field($modelAddress, "[{$i}]grade_approval_status")->dropDownList(['Not Approved','Approved']) ?>
-                            </div>
-                            <div class="col-sm-4">
-                                <?= $form->field($modelAddress, "[{$i}]grade_approved_by")->textInput(['maxlength' => true]) ?>
-                            </div>
-                        </div><!-- .row -->
+
+
                     </div>
                 </div>
             <?php endforeach; ?>

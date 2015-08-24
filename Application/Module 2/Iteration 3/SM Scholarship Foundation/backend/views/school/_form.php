@@ -16,12 +16,7 @@ use kartik\select2\Select2;
 
 	<?= $form->field($model,'school_area')->widget(Select2::classname(),
 		[
-			'data'=>['NCR'=>'NCR','Abra'=>'Abra','Agusan del Norte','Agusan del Sur','Aklan',
-			'Albay','Antique','Apayao','Aurora','Bataan','Batanes','Batangas','Bohol',
-			'Cagayan','Camarines Norte','Camarines Sur','Cavite','Cebu','Davao','Ifugao',
-			'Ilocos Norte'=>'Ilocos Norte','Ilocos Sur','Iloilo','Laguna','Misamis Oriental',
-			'Mountain Province','Nueva Ecija','Nueva Vizcaya','Palawan','Pangasinan',
-			'Quezon','Quirino','Rizal','Romblon','Sorsogon','Tarlac','Zambales'],
+			'data'=>['NCR'=>'NCR','Provincial'=>'Provincial'],
 			'language'=>'en',
 			'options'=>['placeholder'=>'Select School Area'],
 			'pluginOptions'=>['allowClear'=>true],

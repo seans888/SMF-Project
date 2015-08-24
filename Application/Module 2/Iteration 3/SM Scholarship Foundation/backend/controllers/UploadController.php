@@ -8,7 +8,7 @@ use common\models\UploadSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\web\UploadedFile;
 /**
  * UploadController implements the CRUD actions for Upload model.
  */
@@ -48,10 +48,10 @@ class UploadController extends Controller
      * @param integer $scholar_school_school_id
      * @return mixed
      */
-    public function actionView($upload_id, $scholar_scholar_id, $scholar_school_school_id)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($upload_id, $scholar_scholar_id, $scholar_school_school_id),
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -64,8 +64,18 @@ class UploadController extends Controller
     {
         $model = new Upload();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'upload_id' => $model->upload_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id]);
+        if ($model->load(Yii::$app->request->post())) {
+			$model->file = UploadedFile::getInstance($model,'file');
+				if($model->file != null)
+				{
+					$fileName = md5(time()).$model->upload_file_name." ofScholarID ".$model->scholar_scholar_id." FileName ".$model->file->name;
+					$model->file->saveAs('Forms/'.$fileName);	
+					$model->upload_form = 'Forms/'.$fileName;
+			//		$filePath = 'Forms'.'\'.$fileName.'.'.$model->file->extension;
+				}	
+				$model->save();
+				// return $this->redirect($model->uploadedForm)->send();
+            return $this->redirect(['view', 'id' => $model->upload_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -81,12 +91,12 @@ class UploadController extends Controller
      * @param integer $scholar_school_school_id
      * @return mixed
      */
-    public function actionUpdate($upload_id, $scholar_scholar_id, $scholar_school_school_id)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($upload_id, $scholar_scholar_id, $scholar_school_school_id);
+        $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'upload_id' => $model->upload_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id]);
+            return $this->redirect(['view', 'id' => $model->upload_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -102,13 +112,20 @@ class UploadController extends Controller
      * @param integer $scholar_school_school_id
      * @return mixed
      */
-    public function actionDelete($upload_id, $scholar_scholar_id, $scholar_school_school_id)
+    public function actionDelete($id)
     {
-        $this->findModel($upload_id, $scholar_scholar_id, $scholar_school_school_id)->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
+	
+	public function actionDownload($id)
+    {
+        $model = $this->findModel($id);
 
+		return $this->redirect($model->upload_form)->send();			
+
+    }
     /**
      * Finds the Upload model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
@@ -118,9 +135,9 @@ class UploadController extends Controller
      * @return Upload the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($upload_id, $scholar_scholar_id, $scholar_school_school_id)
+    protected function findModel($id)
     {
-        if (($model = Upload::findOne(['upload_id' => $upload_id, 'scholar_scholar_id' => $scholar_scholar_id, 'scholar_school_school_id' => $scholar_school_school_id])) !== null) {
+        if (($model = Upload::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

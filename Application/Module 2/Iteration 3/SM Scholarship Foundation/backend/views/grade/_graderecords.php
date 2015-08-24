@@ -3,7 +3,8 @@
 use yii\helpers\Html;
 use kartik\grid\GridView;
 use kartik\export\ExportMenu;
-
+use yii\helpers\ArrayHelper;
+use common\models\Scholar;
 $exportedValues2 =
 [
 	['class' => 'kartik\grid\SerialColumn'],
@@ -11,7 +12,17 @@ $exportedValues2 =
 		// 'attribute'=>'grade_id',
 		// 'pageSummary'=>'Total'
 	// ],
-	'subject_scholar_scholar_id',
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute'=>'subject_scholar_scholar_id',
+		'editableOptions' => [
+			'inputType' => '\kartik\select2\Select2',
+			'options'=>
+			[
+				'data' => ArrayHelper::map(Scholar::find()->all(),'scholar_id','scholar_last_name','scholar_id'),
+			],
+		],
+	],
 	[
 		'attribute'=>'firstName',
 		'value'=>'scholarScholar.scholar_first_name'
@@ -28,11 +39,58 @@ $exportedValues2 =
 		'attribute'=>'subject_subject_id',
 		'value'=>'subjectSubject.subject_name',
 	],
-	'grade_school_year_start',
-	'grade_school_year_end',
-	'grade_raw_grade',
-	'grade_approval_status',
+	[
+		'class'=>'kartik\grid\EditableColumn',
+		'attribute'=>'grade_raw_grade',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'takenStatus',
+		'editableOptions' => [
+			'inputType' => 'dropDownList',
+			'pluginOptions'=>['allowClear'=>true],
+			'data' => ["Not Taken"=>"Not Taken","Taken"=>"Taken","Failed"=>"Failed"],
+			'widgetClass'=> 'kartik\select2\Select2',
+		],
+		'value' => 'subjectSubject.subject_taken_status',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'grade_approval_status',
+		'editableOptions' => [
+			'inputType' => 'dropDownList',
+			'pluginOptions'=>['allowClear'=>true],
+			'data' => ["Not Approved"=>"Not Approved","Approved"=>"Approved"],
+			'widgetClass'=> 'kartik\select2\Select2',
+		],
+	],
 	'grade_approved_by',
+	['class' => 'kartik\grid\ActionColumn',
+				  // 'template'=>'{view} {update} {check} {delete}',
+					// 'buttons'=>[
+					  // 'update' => function ($url, $model) {     
+						// return Html::a('<span class="glyphicon glyphicon-pencil"></span>', $url, [
+								// 'title' => Yii::t('yii', 'Update'),
+						// ]);                                
+	
+					  // },
+					  // 'check' => function ($url, $model) {     
+						// return Html::a('<span class="glyphicon glyphicon-check"></span>', $url, [
+								// 'title' => Yii::t('yii', 'Check'),
+						// ]);                                
+	
+					  // },
+					  // 'delete' => function ($url, $model) {     
+						// return Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
+								// 'title' => Yii::t('yii', 'Delete'),
+								// 'data-confirm' => Yii::t('kvgrid', 'Are you sure to delete this item?'),
+								// 'data-method' => 'post',
+								// 'data-pjax' => '0'
+						// ]);                                
+	
+					  // },
+				  // ]                            
+	 ],
 ];
 
 // echo ExportMenu::widget([

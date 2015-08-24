@@ -6,12 +6,32 @@ use kartik\export\ExportMenu;
 use yii\helpers\ArrayHelper;
 use common\models\Scholar;
 use common\models\School;
+use common\models\Subject;
 $exportedValues =
 [
 	['class' => 'kartik\grid\SerialColumn'],
 	[
+		'class' => 'kartik\grid\EditableColumn',
 		'attribute'=>'subject_subject_id',
-		'value'=>'subjectSubject.subject_name'
+		'editableOptions' => [
+			'inputType' => '\kartik\select2\Select2',
+			'options'=>
+			[
+				'data' => ArrayHelper::map(Subject::find()->all(),'subject_id','subject_name'),
+			],
+		],
+		'value'=>'subjectSubject.subject_name',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'takenStatus',
+		'editableOptions' => [
+			'inputType' => 'dropDownList',
+			'pluginOptions'=>['allowClear'=>true],
+			'data' => ["Not Taken"=>"Not Taken","Taken"=>"Taken","Failed"=>"Failed"],
+			'widgetClass'=> 'kartik\select2\Select2',
+		],
+		'value' => 'subjectSubject.subject_taken_status',
 	],
 	[
 		'class' => 'kartik\grid\EditableColumn',
@@ -71,7 +91,7 @@ $exportedValues =
 		],
 	],
 	[
-		'class' => 'kartik\grid\EditableColumn',
+		// 'class' => 'kartik\grid\EditableColumn',
 		'attribute'=>'grade_approved_by',
 	],
 	['class' => 'kartik\grid\ActionColumn']

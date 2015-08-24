@@ -87,7 +87,7 @@ class ScholarController extends Controller
         $model = new Scholar();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'scholar_id' => $model->scholar_id, 'school_school_id' => $model->school_school_id, 'allowance_allowance_area' => $model->allowance_allowance_area]);
+            return $this->redirect(['view', 'id' => $model->scholar_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -103,12 +103,12 @@ class ScholarController extends Controller
      * @param string $allowance_allowance_area
      * @return mixed
      */
-    public function actionUpdate($scholar_id, $school_school_id, $allowance_allowance_area)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($scholar_id, $school_school_id, $allowance_allowance_area);
+        $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'scholar_id' => $model->scholar_id, 'school_school_id' => $model->school_school_id, 'allowance_allowance_area' => $model->allowance_allowance_area]);
+            return $this->redirect(['view', 'id' => $model->scholar_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -124,9 +124,9 @@ class ScholarController extends Controller
      * @param string $allowance_allowance_area
      * @return mixed
      */
-    public function actionDelete($scholar_id, $school_school_id, $allowance_allowance_area)
+    public function actionDelete($id)
     {
-        $this->findModel($scholar_id, $school_school_id, $allowance_allowance_area)->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }

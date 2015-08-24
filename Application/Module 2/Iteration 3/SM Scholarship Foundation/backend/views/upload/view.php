@@ -15,14 +15,16 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'upload_id' => $model->upload_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'upload_id' => $model->upload_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id], [
+        <?= Html::a('Update', ['update', 'id' => $model->upload_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->upload_id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
                 'method' => 'post',
             ],
         ]) ?>
+        <?= Html::a('View List', ['index', 'id' => $model->upload_id], ['class' => 'btn btn-success']) ?>
+		<?= Html::a('View/Download', ['download','id' => $model->upload_id], ['class' => 'btn btn-alert']) ?>
     </p>
 
     <?= DetailView::widget([

@@ -4,6 +4,7 @@ namespace backend\controllers;
 
 use Yii;
 use common\models\Optionalwork;
+use common\models\ScholarSearch;
 use common\models\OptionalworkSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -32,7 +33,7 @@ class OptionalworkController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new OptionalworkSearch();
+        $searchModel = new ScholarSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [

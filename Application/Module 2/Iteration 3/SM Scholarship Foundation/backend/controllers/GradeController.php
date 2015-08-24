@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
+use common\models\Subject;
 use common\models\Scholar;
 use common\models\SchoolSearch;
 use common\models\Grade;
@@ -38,6 +39,39 @@ class GradeController extends Controller
     {
         $searchModel = new SchoolSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$gradeId = Yii::$app->request->post('editableKey');
+			$grade = Grade::findOne($gradeId);
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Grade']);
+			$post['Grade'] = $posted;
+			
+			if($grade->load($post))
+			{
+				if($grade->grade_approval_status=='Approved')
+				{
+					$grade->grade_approved_by = Yii::$app->user->identity->username;
+				}
+				else
+				{
+					$grade->grade_approved_by = null;
+				}
+
+					$subject = Subject::findOne($grade->subject_subject_id);
+					// $subjectTakenStatus = ArrayHelper::map(Subject::find()
+					// ->where(['subject_id'=>$grade->subject_subject_id])
+					// ->all(),'subject_id','subject_taken_status');
+					$subject->subject_taken_status = $grade->takenStatus;
+					$subject->save();
+				
+				$grade->save();
+			}
+			echo $out;
+			return;
+		}
 		
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -54,6 +88,7 @@ class GradeController extends Controller
 		{
 			$gradeId = Yii::$app->request->post('editableKey');
 			$grade = Grade::findOne($gradeId);
+			$subject = Subject::findOne($grade->subject_subject_id);
 			$out = Json::encode(['output'=>'','message'=>'']);
 			$post = [];
 			$posted = current($_POST['Grade']);
@@ -61,6 +96,24 @@ class GradeController extends Controller
 			
 			if($grade->load($post))
 			{
+				if($grade->grade_approval_status=='Approved')
+				{
+					$grade->grade_approved_by = Yii::$app->user->identity->username;
+				}
+				else
+				{
+					$grade->grade_approved_by = null;
+				}
+				if($grade->takenStatus == null)
+				{
+					$grade->takenStatus = 'Not Taken';
+				}
+				// $subjectTakenStatus = ArrayHelper::map(Subject::find()
+				// ->where(['subject_id'=>$grade->subject_subject_id])
+				// ->all(),'subject_id','subject_taken_status');
+				$subject->subject_taken_status = $grade->takenStatus;
+				$subject->save();
+				
 				$grade->save();
 			}
 			echo $out;
@@ -81,10 +134,10 @@ class GradeController extends Controller
      * @param integer $subject_scholar_school_school_id
      * @return mixed
      */
-    public function actionView($grade_id, $subject_subject_id, $subject_scholar_scholar_id, $subject_scholar_school_school_id)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($grade_id, $subject_subject_id, $subject_scholar_scholar_id, $subject_scholar_school_school_id),
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -98,7 +151,7 @@ class GradeController extends Controller
         $model = new Grade();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'grade_id' => $model->grade_id, 'subject_subject_id' => $model->subject_subject_id, 'subject_scholar_scholar_id' => $model->subject_scholar_scholar_id, 'subject_scholar_school_school_id' => $model->subject_scholar_school_school_id]);
+            return $this->redirect(['view', 'id' => $model->grade_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -108,7 +161,7 @@ class GradeController extends Controller
 	
 	public function actionGroupcreate()
     {
-        $modelCustomer = new Scholar;
+        $modelCustomer = new Grade;
         $modelsAddress = [new Grade];
         if ($modelCustomer->load(Yii::$app->request->post())) {
 
@@ -131,21 +184,29 @@ class GradeController extends Controller
             if ($valid) {
                 $transaction = \Yii::$app->db->beginTransaction();
                 try {
-                    
+					// if($flag = $modelCustomer->save(false)){
                         foreach ($modelsAddress as $modelAddress) {
-                            $modelAddress->subject_scholar_scholar_id = $modelCustomer->scholar_id;
+                            $modelAddress->subject_scholar_scholar_id = $modelCustomer->subject_scholar_scholar_id;
+							$modelAddress->grade_school_year_start = $modelCustomer->grade_school_year_start;
+							$modelAddress->grade_school_year_end = $modelCustomer->grade_school_year_end;
 							$selectSchool = ArrayHelper::map(Scholar::find()
-							->where(['scholar_id'=>$modelCustomer->scholar_id])
+							->where(['scholar_id'=>$modelAddress->subject_scholar_scholar_id])
 							->all(),'school_school_id','school_school_id');
 							$schoolID = array_values($selectSchool)[0];
 							$modelAddress->subject_scholar_school_school_id = $schoolID;
                             if (! ($flag = $modelAddress->save(false))) {
+								
                                 $transaction->rollBack();
                                 break;
                             }
                         }
-                    
+                    // }
                     if ($flag) {
+			if($modelCustomer->subject_subject_id==null)
+			{
+				$sql = "DELETE FROM grade WHERE subject_subject_id is null;";
+				Yii::$app->db->createCommand($sql)->execute();
+			}
                         $transaction->commit();
                         return $this->redirect(['index']);
                     }
@@ -170,12 +231,12 @@ class GradeController extends Controller
      * @param integer $subject_scholar_school_school_id
      * @return mixed
      */
-    public function actionUpdate($grade_id, $subject_subject_id, $subject_scholar_scholar_id, $subject_scholar_school_school_id)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($grade_id, $subject_subject_id, $subject_scholar_scholar_id, $subject_scholar_school_school_id);
+        $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'grade_id' => $model->grade_id, 'subject_subject_id' => $model->subject_subject_id, 'subject_scholar_scholar_id' => $model->subject_scholar_scholar_id, 'subject_scholar_school_school_id' => $model->subject_scholar_school_school_id]);
+            return $this->redirect(['view', 'id' => $model->grade_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -192,9 +253,9 @@ class GradeController extends Controller
      * @param integer $subject_scholar_school_school_id
      * @return mixed
      */
-    public function actionDelete($grade_id, $subject_subject_id, $subject_scholar_scholar_id, $subject_scholar_school_school_id)
+    public function actionDelete($id)
     {
-        $this->findModel($grade_id, $subject_subject_id, $subject_scholar_scholar_id, $subject_scholar_school_school_id)->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
@@ -209,9 +270,9 @@ class GradeController extends Controller
      * @return Grade the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($grade_id, $subject_subject_id, $subject_scholar_scholar_id, $subject_scholar_school_school_id)
+    protected function findModel($id)
     {
-        if (($model = Grade::findOne(['grade_id' => $grade_id, 'subject_subject_id' => $subject_subject_id, 'subject_scholar_scholar_id' => $subject_scholar_scholar_id, 'subject_scholar_school_school_id' => $subject_scholar_school_school_id])) !== null) {
+        if (($model = Grade::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
