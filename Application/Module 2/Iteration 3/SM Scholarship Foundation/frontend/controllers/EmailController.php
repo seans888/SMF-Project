@@ -71,21 +71,20 @@ class EmailController extends Controller
 			foreach($scholars as $scholar){
 				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
 					$model->email_scholar_id=$scholar->scholar_id;
-					
 					if ($model->load(Yii::$app->request->post())) {
-			Yii::$app->mailer->compose()
-			->setFrom($scholar->scholar_contact_email)
-			->setTo('kevintvillacorta@gmail.com')
-			->setSubject($model->subject)
-			->setHtmlBody($model->content)
-			->send();
-			$model->save();
-            return $this->redirect(['create', 'id' => $model->email_id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
+					Yii::$app->mailer->compose()
+					->setFrom($scholar->scholar_contact_email)
+					->setTo('kevintvillacorta@gmail.com')
+					->setSubject($model->subject)
+					->setHtmlBody($model->content)
+					->send();
+					$model->save();
+					return $this->redirect(['create', 'id' => $model->email_id]);
+					} else {
+						return $this->render('create', [
+						'model' => $model,
+						]);
+					}
 			
 				}
 			}
