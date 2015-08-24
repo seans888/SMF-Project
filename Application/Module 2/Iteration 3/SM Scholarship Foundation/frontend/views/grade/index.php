@@ -37,8 +37,8 @@ $this->params['breadcrumbs'][] = $this->title;
        
     ],
     [
-        'label'=>'<i class="glyphicon glyphicon-thumbs-down"></i> Low Grade Explanation Form',
-        'content'=>'<p style="color:red"><i>NOTICE:If the computed grade is below 85%, Please answer the question below to be directly submitted to SM Foundation</i>.</p><br>Please explain the reason for attaining a GPA/GWA of 2.5 or 85% below. Explain the effect of the deficiency. Will this affect the length of time you graduate?. Explain how will you correct the deficiency.<br><br><textarea rows=10 cols=150></textarea>
+        'label'=>'<i class="glyphicon glyphicon-thumbs-down"></i> Low/Fail Grade Explanation Form',
+        'content'=>'<p style="color:red"><i>NOTICE:If the computed grade/s is below 85% or below 70% (5.0 or 0.0), Please answer the question below to be directly submitted to SM Foundation</i>.</p><br>Please explain the reason for attaining low or fail grade/s. Explain the effect of the deficiency. Will this affect the length of time you graduate?. Explain how will you correct the deficiency.<br><br><textarea rows=10 cols=150></textarea>
 			<button class="btn btn-success" style="margin-bottom:40px;">Submit</button><br><br><h5><i>The explanation will be reviewed by the SM Foundation. <br>We will inform you for any updates regarding the case. Thank You! </i></h5>',
     ],
     
