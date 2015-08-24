@@ -181,7 +181,7 @@ DashboardAsset::register($this);
               </ul>
             </li>
             <li>
-              <a href="<?= Yii::$app->getUrlManager()->createUrl('#'); ?>">
+              <a href="<?= Yii::$app->getUrlManager()->createUrl('/event/index'); ?>">
                 <i class="fa fa-calendar"></i> <span>Calendar</span>
               </a>
             </li>
