@@ -120,6 +120,11 @@ class SiteController extends Controller
     {
         return $this->render('smgroup');
     }
+	
+	public function actionSmschool()
+	{
+		return $this->render('smschool');
+	}
 
     public function actionSignup()
     {
