@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
+use common\models\Subject;
 use common\models\Scholar;
 use common\models\SchoolSearch;
 use common\models\Grade;
@@ -38,6 +39,40 @@ class GradeController extends Controller
     {
         $searchModel = new SchoolSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$gradeId = Yii::$app->request->post('editableKey');
+			$grade = Grade::findOne($gradeId);
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Grade']);
+			$post['Grade'] = $posted;
+			
+			if($grade->load($post))
+			{
+				if($grade->grade_approval_status=='Approved')
+				{
+					$grade->grade_approved_by = Yii::$app->user->identity->username;
+				}
+				else
+				{
+					$grade->grade_approved_by = null;
+				}
+
+					$subject = Subject::findOne($grade->subject_subject_id);
+					// $subjectTakenStatus = ArrayHelper::map(Subject::find()
+					// ->where(['subject_id'=>$grade->subject_subject_id])
+					// ->all(),'subject_id','subject_taken_status');
+					$subject->subject_taken_status = $grade->takenStatus;
+					$grade->grade_raw_grade = $grade->takenStatus;
+					$subject->save();
+				
+				$grade->save();
+			}
+			echo $out;
+			return;
+		}
 		
         return $this->render('index', [
             'searchModel' => $searchModel,
