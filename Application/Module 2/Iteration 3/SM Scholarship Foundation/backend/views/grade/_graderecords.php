@@ -30,7 +30,10 @@ $exportedValues2 =
 	],
 	'grade_school_year_start',
 	'grade_school_year_end',
-	'grade_raw_grade',
+	[
+		'class'=>'kartik\grid\EditableColumn',
+		'attribute'=>'grade_raw_grade',
+	],
 	[
 		'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'takenStatus',
@@ -40,6 +43,7 @@ $exportedValues2 =
 			'data' => ["Not Taken"=>"Not Taken","Taken"=>"Taken","Failed"=>"Failed"],
 			'widgetClass'=> 'kartik\select2\Select2',
 		],
+		'value' => 'subjectSubject.subject_taken_status',
 	],
 	[
 		'class' => 'kartik\grid\EditableColumn',
