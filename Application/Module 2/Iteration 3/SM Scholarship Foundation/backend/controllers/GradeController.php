@@ -88,6 +88,7 @@ class GradeController extends Controller
 		{
 			$gradeId = Yii::$app->request->post('editableKey');
 			$grade = Grade::findOne($gradeId);
+			$subject = Subject::findOne($grade->subject_subject_id);
 			$out = Json::encode(['output'=>'','message'=>'']);
 			$post = [];
 			$posted = current($_POST['Grade']);
@@ -103,13 +104,15 @@ class GradeController extends Controller
 				{
 					$grade->grade_approved_by = null;
 				}
-
-					$subject = Subject::findOne($grade->subject_subject_id);
-					// $subjectTakenStatus = ArrayHelper::map(Subject::find()
-					// ->where(['subject_id'=>$grade->subject_subject_id])
-					// ->all(),'subject_id','subject_taken_status');
-					$subject->subject_taken_status = $grade->takenStatus;
-					$subject->save();
+				if($grade->takenStatus == null)
+				{
+					$grade->takenStatus = 'Not Taken';
+				}
+				// $subjectTakenStatus = ArrayHelper::map(Subject::find()
+				// ->where(['subject_id'=>$grade->subject_subject_id])
+				// ->all(),'subject_id','subject_taken_status');
+				$subject->subject_taken_status = $grade->takenStatus;
+				$subject->save();
 				
 				$grade->save();
 			}
