@@ -109,12 +109,12 @@ DashboardAsset::register($this);
                         <img src="img/portfolio/parttime.jpg" class="img-responsive" alt="" style="height:250px">
                     </a>
                     <div class="portfolio-caption">
-                        <h4 style="color:black;">Part Time Jobs</h4>
+                        <h4 style="color:black;">Summer or Christmas Jobs</h4>
                         <p class="text-muted" style="color:#005ab2;">Fill Up Form</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item" style="margin-left:80px;">
-                    <a href="<?php echo 'index.php?r=uploadedforms/index'?>" class="portfolio-link" data-toggle="modal" >
+                    <a href="<?php echo 'index.php?r=upload/index'?>" class="portfolio-link" data-toggle="modal" >
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 
