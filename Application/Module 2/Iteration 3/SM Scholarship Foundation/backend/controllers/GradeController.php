@@ -168,6 +168,8 @@ class GradeController extends Controller
 					// if($flag = $modelCustomer->save(false)){
                         foreach ($modelsAddress as $modelAddress) {
                             $modelAddress->subject_scholar_scholar_id = $modelCustomer->subject_scholar_scholar_id;
+							$modelAddress->grade_school_year_start = $modelCustomer->grade_school_year_start;
+							$modelAddress->grade_school_year_end = $modelCustomer->grade_school_year_end;
 							$selectSchool = ArrayHelper::map(Scholar::find()
 							->where(['scholar_id'=>$modelAddress->subject_scholar_scholar_id])
 							->all(),'school_school_id','school_school_id');

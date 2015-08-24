@@ -23,7 +23,14 @@ use common\models\Subject;
 		]) ?>
         </div>
     </div>
-
+	<div class="row">
+		<div class="col-sm-4">
+			<?= $form->field($modelCustomer, "grade_school_year_start")->textInput(['maxlength' => true]) ?>
+		</div>
+		<div class="col-sm-4">
+			<?= $form->field($modelCustomer, "grade_school_year_end")->textInput(['maxlength' => true]) ?>
+		</div>
+	</div><!-- .row -->
     <div class="panel panel-default">
         <div class="panel-heading"><h4><i class="glyphicon glyphicon-envelope"></i> Grades</h4></div>
         <div class="panel-body">
@@ -68,7 +75,7 @@ use common\models\Subject;
                             <div class="col-sm-6">
 
 								<?= $form->field($modelAddress,"[{$i}]subject_subject_id")->dropDownList(
-								ArrayHelper::map(Subject::find()->all(),'subject_id','subject_name')
+								ArrayHelper::map(Subject::find()->all(),'subject_id','subject_name','scholar_scholar_id')
 								)
 								?>
                             </div>
@@ -76,14 +83,7 @@ use common\models\Subject;
                                 <?= $form->field($modelAddress, "[{$i}]grade_raw_grade")->textInput(['maxlength' => true]) ?>
                             </div>
                         </div><!-- .row -->
-                        <div class="row">
-                            <div class="col-sm-4">
-								<?= $form->field($modelAddress, "[{$i}]grade_school_year_start")->textInput(['maxlength' => true]) ?>
-                            </div>
-                            <div class="col-sm-4">
-								<?= $form->field($modelAddress, "[{$i}]grade_school_year_end")->textInput(['maxlength' => true]) ?>
-                            </div>
-                        </div><!-- .row -->
+
 
                     </div>
                 </div>
