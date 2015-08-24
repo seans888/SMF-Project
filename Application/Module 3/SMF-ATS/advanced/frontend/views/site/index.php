@@ -4,7 +4,7 @@ $this->title = 'SM Foundation Alumni Tracking System';
 ?>
 <div class="site-index">
         <center><h1><b>Welcome to SM Foundation Alumni Tracking System</b></h1></center>
-		<center><img src = "images/smf.jpg" height="250px" width="250px"></center>
+		<center><img src = "images/smf2.jpg"></center>
     <div class="jumbotron">
 <img src = "images/alumni.jpg" height="250px" width="1050px">
 </div>
@@ -40,7 +40,7 @@ $this->title = 'SM Foundation Alumni Tracking System';
 				   or without the participation of human agents. It may be a part of a chain of occurrences as an effect of a 
 				   preceding occurrence and as the cause of a succeeding occurrence.</p>
 
-                <p><a class="btn btn-default" href="">View Details &raquo;</a></p>
+                <p><a class="btn btn-default" href="http://localhost/SMF-ATS/frontend/web/index.php?r=site%2Fsmgroup">View Details &raquo;</a></p>
             </div>
         </div>
 
