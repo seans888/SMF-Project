@@ -117,19 +117,26 @@ $this->title = 'SM Foundation Alumni Tracking System';
             <div class="col-lg-4">
                 <h2>Storyland</h2>
 				<img src = "images/smstoryland.jpg" height="150px" width="250px">
-                <p>  </p>
+                <p>Conveniently and strategically located in selected SM Malls, Storyland has 7 theme parks throughout 
+				the nation in the following SM branches: SM By the Bay Amusement Park behind SM Mall of Asia, SM Fairview, SM San Lazaro, 
+				SM Marilao, SM Batangas, SM Cebu and SM Iloilo. Storyland also has around 80 “stand-alone” in-mall rides scattered in 35 SM Centers 
+				& Supermalls across the Philippines.  </p>
 
             </div>
             <div class="col-lg-4">
                 <h2>SM Shoemart</h2>
 				<img src = "images/smshoemart.jpg" height="150px" width="250px">
-                <p> </p>
+                <p>SM is the Philippines' leader in the retail industry. For the last 50 years, 
+				it has been committed in providing quality products and services at reasonable prices and to meet the ever-changing needs of its customers 
+				in a responsible and responsive manner.Its chain of Department Stores spans from Luzon, to Visayas and Mindanao. </p>
 
             </div>
             <div class="col-lg-4">
                 <h2>SM Appliance Center</h2>
 				<img src = "images/smappcenter.jpg" height="150px" width="250px">
-                <p> </p>
+                <p>SM Appliance Center carries one of the widest ranges of home appliances for Filipinos and has built a reputation for value and quality of products and services. 
+				Established in 1991, SM Appliance Center now has over 55 branches nationwide. Our stores are usually located in SM shopping malls, SM Department Store, Hypermarket, 
+				and other non-SM malls such as Rockwell, Harrison Plaza, Virra Mall and Mega Center-Cabanatuan. We also offer convenience to Filipinos here and abroad through our online shopping at www.smappliance.com </p>
 
             </div>
         </div>
@@ -139,19 +146,23 @@ $this->title = 'SM Foundation Alumni Tracking System';
             <div class="col-lg-4">
                 <h2>SM Advantage</h2>
 				<img src = "images/smadvantage.jpg" height="150px" width="250px">
-                <p> </p>
+                <p>SM Advantage is SM's customer loyalty program that rewards members with points every time they shop in The SM Store,
+				SM Supermarket, SM Hypermarket and other SM retail establishments inside and outside SM Supermalls. The points earned can be
+				used to redeem practically anything sold in any of those stores. Aside from reward points, SM Advantage also offers numerous members-only privileges 
+				such as exclusive sales, discounts and freebies inside and outside SM Supermalls.</p>
+				
 
             </div>
             <div class="col-lg-4">
                 <h2>SM Cinema</h2>
 				<img src = "images/smcinema.jpg" height="150px" width="250px">
-                <p> </p>
+                <p>The most convenient and most visited enjoyed theater by the whole family. Visit the nearest SM Cinema to watch the latest flicks nearest you.</p>
 
             </div>
             <div class="col-lg-4">
                 <h2>Megatrade Hall</h2>
 				<img src = "images/megatrade.jpg" height="150px" width="250px">
-                <p> </p>
+                <p>Located at 5th Level, SM Megamall Building B, SM Megamall, Julia Vargas Avenue, Ortigas Center, Mandaluyong, Philippines</p>
 
             </div>
         </div>
@@ -161,13 +172,17 @@ $this->title = 'SM Foundation Alumni Tracking System';
             <div class="col-lg-4">
                 <h2>Toy World</h2>
 				<img src = "images/toyworld.jpg" height="150px" width="250px">
-                <p> </p>
+                <p>Welcome to Toyworld - where the best toys come from! We are Australia’s largest retail chain of specialist toy stores - with the biggest range of toys, games, puzzles, indoor & outdoor activities available!
+				Find out where your nearest Toyworld store is located with our Store Locator feature. Plus you can now sign up to our exclusive ‘Toyworld Club’ and get exclusive toy special offers, great discounts and special 
+				information about upcoming Toyworld promotions. </p>
 
             </div>
             <div class="col-lg-4">
                 <h2>Toy Kingdom</h2>
 				<img src = "images/toykingdom.jpg" height="150px" width="250px">
-                <p> </p>
+                <p>Toy Kingdom operates under International Toyworld Inc. (ITI), an all-Filipino owned company which started its retail operations on September of 1990. 
+				Toy Kingdom makes toy shopping fun, easy, practical and convenient. These zones are as follows: Artist Circle, Active Zone, Cuddly Corner, Discovery Zone, Games Landia, Girls at Play, Glitz and Glamour, IZone, 
+				Party Kingdostam, Rides to Go, Smart Starters, Speed World, Super Heroes and Tween Zone.</p>
 
             </div>
         </div>

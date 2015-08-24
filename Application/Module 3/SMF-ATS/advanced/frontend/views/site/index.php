@@ -40,7 +40,7 @@ $this->title = 'SM Foundation Alumni Tracking System';
 				   or without the participation of human agents. It may be a part of a chain of occurrences as an effect of a 
 				   preceding occurrence and as the cause of a succeeding occurrence.</p>
 
-                <p><a class="btn btn-default" href="http://localhost/SMF_Project/SMF-Project/Application/Module%203/SMF-ATS/advanced/frontend/web/index.php?r=site%2Fsmgroup">View Details &raquo;</a></p>
+                <p><a class="btn btn-default" href="http://localhost/SMF-ATS/frontend/web/index.php?r=site%2Fsmgroup">View Details &raquo;</a></p>
             </div>
         </div>
 
