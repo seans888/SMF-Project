@@ -132,6 +132,16 @@ $export = ExportMenu::widget([
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+    	'rowOptions'=>function($model){
+    		if(strcasecmp($model->allowance_allowance_area, 'NCR') != 0)
+    		{
+    			return['class'=>'provincial-row'];
+    		}
+    		else if(strcasecmp($model->allowance_allowance_area, 'NCR') == 0)
+    		{
+    			return['class'=>'ncr-row'];
+    		}
+    	},
 		'pjax' => true,
         'columns' => $exportedValues,
 		'toolbar'=> [
