@@ -84,14 +84,7 @@ use common\models\Subject;
 								<?= $form->field($modelAddress, "[{$i}]grade_school_year_end")->textInput(['maxlength' => true]) ?>
                             </div>
                         </div><!-- .row -->
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <?= $form->field($modelAddress, "[{$i}]grade_approval_status")->dropDownList(['Not Approved','Approved']) ?>
-                            </div>
-                            <div class="col-sm-4">
-                                <?= $form->field($modelAddress, "[{$i}]grade_approved_by")->textInput(['maxlength' => true]) ?>
-                            </div>
-                        </div><!-- .row -->
+
                     </div>
                 </div>
             <?php endforeach; ?>
