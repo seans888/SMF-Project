@@ -52,19 +52,19 @@ $exportedValues =
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => $exportedValues,
-		'toolbar'=> [
-		[
-			'content'=>html::a('Create Incentive', ['create'], ['class' => 'btn btn-success'])
-		],
+		// 'toolbar'=> [
+		// [
+			// 'content'=>html::a('Create Incentive', ['create'], ['class' => 'btn btn-success'])
+		// ],
 		
-		'{toggleData}',
-		$export
-		],
-		'panel'=>
-		[
-			'type'=>GridView::TYPE_PRIMARY,
-			'heading'=>'Incentive Table',
-		]
+		// '{toggleData}',
+		// $export
+		// ],
+		// 'panel'=>
+		// [
+			// 'type'=>GridView::TYPE_PRIMARY,
+			// 'heading'=>'Incentive Table',
+		// ]
     ]); 
 	?>
 
