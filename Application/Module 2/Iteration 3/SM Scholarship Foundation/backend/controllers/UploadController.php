@@ -8,7 +8,7 @@ use common\models\UploadSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\web\UploadedFile;
 /**
  * UploadController implements the CRUD actions for Upload model.
  */
@@ -64,7 +64,17 @@ class UploadController extends Controller
     {
         $model = new Upload();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+			$model->file = UploadedFile::getInstance($model,'file');
+				if($model->file != null)
+				{
+					$fileName = md5(time()).$model->upload_file_name." ofScholarID ".$model->scholar_scholar_id." FileName ".$model->file->name;
+					$model->file->saveAs('Forms/'.$fileName);	
+					$model->upload_form = 'Forms/'.$fileName;
+			//		$filePath = 'Forms'.'\'.$fileName.'.'.$model->file->extension;
+				}	
+				$model->save();
+				// return $this->redirect($model->uploadedForm)->send();
             return $this->redirect(['view', 'id' => $model->upload_id]);
         } else {
             return $this->render('create', [
@@ -120,7 +130,7 @@ class UploadController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = Uploadedforms::findOne($id)) !== null) {
+        if (($model = Upload::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
