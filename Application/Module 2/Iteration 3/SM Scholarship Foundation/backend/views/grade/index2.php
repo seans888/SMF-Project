@@ -12,7 +12,7 @@ $exportedValues =
 	['class' => 'kartik\grid\SerialColumn'],
 	[
 		'class' => 'kartik\grid\EditableColumn',
-		'attribute'=>'subject_scholar_school_school_id',
+		'attribute'=>'subject_subject_id',
 		'editableOptions' => [
 			'inputType' => '\kartik\select2\Select2',
 			'options'=>
@@ -21,6 +21,17 @@ $exportedValues =
 			],
 		],
 		'value'=>'subjectSubject.subject_name',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'takenStatus',
+		'editableOptions' => [
+			'inputType' => 'dropDownList',
+			'pluginOptions'=>['allowClear'=>true],
+			'data' => ["Not Taken"=>"Not Taken","Taken"=>"Taken","Failed"=>"Failed"],
+			'widgetClass'=> 'kartik\select2\Select2',
+		],
+		'value' => 'subjectSubject.subject_taken_status',
 	],
 	[
 		'class' => 'kartik\grid\EditableColumn',
