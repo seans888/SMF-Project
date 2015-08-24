@@ -6,7 +6,7 @@ use kartik\export\ExportMenu;
 use yii\helpers\ArrayHelper;
 use kartik\select2\Select2;
 use common\models\School;
-use common\models\OptionalworkSearch;
+use common\models\SubjectSearch;
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\ScholarSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -31,7 +31,7 @@ $exportedValues =
 				return GridView::ROW_COLLAPSED;
 			},
 			'detail' => function ($model, $key, $index, $column){
-				$searchModel = new OptionalworkSearch();
+				$searchModel = new SubjectSearch();
 				$searchModel -> scholar_scholar_id = $model->scholar_id;
 				$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 				
