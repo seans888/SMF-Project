@@ -16,11 +16,9 @@ $exportedValues =
 	[
 		['class' => 'yii\grid\SerialColumn'],
 		
-		'incentive_id',
-            'scholar_scholar_id',
-            'scholar_school_school_id',
-            'scholar_allowance_allowance_area',
             'incentive_amount',
+			'incentive_remark',
+			'incentive_date',
 		
 		['class' => 'yii\grid\ActionColumn'],
 	];
