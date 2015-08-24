@@ -91,7 +91,7 @@ $exportedValues =
 		],
 	],
 	[
-		'class' => 'kartik\grid\EditableColumn',
+		// 'class' => 'kartik\grid\EditableColumn',
 		'attribute'=>'grade_approved_by',
 	],
 	['class' => 'kartik\grid\ActionColumn']
