@@ -3,19 +3,18 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\Email;
-use common\models\EmailSearch;
+use common\models\Incentive;
+use common\models\IncentiveSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use common\models\User;
 use common\models\Scholar;
-use yii\swiftmailer\Mailer;
 
 /**
- * EmailController implements the CRUD actions for Email model.
+ * IncentiveController implements the CRUD actions for Incentive model.
  */
-class EmailController extends Controller
+class IncentiveController extends Controller
 {
     public function behaviors()
     {
@@ -30,22 +29,35 @@ class EmailController extends Controller
     }
 
     /**
-     * Lists all Email models.
+     * Lists all Incentive models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new EmailSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $username=Yii::$app->user->identity->username;
+		$users = User::find()->all();
+		$scholars = Scholar::find()->all();
+		$model = new Incentive();
+		
+		foreach($users as $user){
+			foreach($scholars as $scholar){
+				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
+					$model->scholar_scholar_id=$scholar->scholar_id;
+					
+					$searchModel = new IncentiveSearch($model);
+					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+					return $this->render('index', [
+					'searchModel' => $searchModel,
+					'dataProvider' => $dataProvider,
+					]);
+				}
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+			}
+		}
     }
 
     /**
-     * Displays a single Email model.
+     * Displays a single Incentive model.
      * @param integer $id
      * @return mixed
      */
@@ -57,44 +69,25 @@ class EmailController extends Controller
     }
 
     /**
-     * Creates a new Email model.
+     * Creates a new Incentive model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-		$username=Yii::$app->user->identity->username;
-		$users = User::find()->all();
-		$scholars = Scholar::find()->all();
-        $model = new Email();
-		foreach($users as $user){
-			foreach($scholars as $scholar){
-				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
-					$model->email_scholar_id=$scholar->scholar_id;
-					
-					if ($model->load(Yii::$app->request->post())) {
-			Yii::$app->mailer->compose()
-			->setFrom($scholar->scholar_contact_email)
-			->setTo('kevintvillacorta@gmail.com')
-			->setSubject($model->subject)
-			->setHtmlBody($model->content)
-			->send();
-			$model->save();
-            return $this->redirect(['create', 'id' => $model->email_id]);
+        $model = new Incentive();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->incentive_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
             ]);
         }
-			
-				}
-			}
-		}
-		
     }
 
     /**
-     * Updates an existing Email model.
+     * Updates an existing Incentive model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -104,7 +97,7 @@ class EmailController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->email_scholar_id]);
+            return $this->redirect(['view', 'id' => $model->incentive_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -113,7 +106,7 @@ class EmailController extends Controller
     }
 
     /**
-     * Deletes an existing Email model.
+     * Deletes an existing Incentive model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -126,18 +119,18 @@ class EmailController extends Controller
     }
 
     /**
-     * Finds the Email model based on its primary key value.
+     * Finds the Incentive model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Email the loaded model
+     * @return Incentive the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Email::findOne($id)) !== null) {
+        if (($model = Incentive::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
-    }	
+    }
 }

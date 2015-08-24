@@ -20,37 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="allowance-index">
 
     <center><h1 style="margin-top:100px;"><?= Html::encode($this->title) ?></h1></center>
-  
-	
-	 
-<?php
-   $items = [
-    [
-        'label'=>'<i class="glyphicon glyphicon-list-alt"></i> Allowance Records',
-        'content'=> GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-		'showOnEmpty' => false,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-			
-			'allowance_area',
-			'allowance_amount',
-			
-        ],
-    ]), 
-                   'active' => true,
-       
-    ],
-	  
-	];
-	echo TabsX::widget([
-    'items'=>$items,
-    'position'=>TabsX::POS_ABOVE,
-    'encodeLabels'=>false,
 
-]);   
-	?>
 	<?php 
 	 
 	ob_start();
@@ -66,8 +36,8 @@ $this->params['breadcrumbs'][] = $this->title;
 	$TabContent=ob_get_clean();
 	
 	?>
-	<?php 
-	$items2 = [
+  <?php 
+	$items = [
 	[
         'label'=>'<i class="glyphicon glyphicon-thumbs-down"></i> Deductions',
 		  'content'=>$TabContent
@@ -76,10 +46,19 @@ $this->params['breadcrumbs'][] = $this->title;
 		   'active'=>true,
 		
     ],
+		[
+        'label'=>'<i class="glyphicon glyphicon-thumbs-down"></i> Deductions',
+		  'content'=>$TabContent
+			
+	,
+		   'active'=>true,
+		
+    ],
+	
   
 	];
 		echo TabsX::widget([
-    'items'=>$items2,
+    'items'=>$items,
     'position'=>TabsX::POS_ABOVE,
     'encodeLabels'=>false,
 
@@ -88,6 +67,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	
 	
 	?>
+	
 
 	
    

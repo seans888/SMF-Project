@@ -119,12 +119,12 @@ DashboardAsset::register($this);
                     </div>
                 </div>
 				 <div class="col-md-4 col-sm-6 portfolio-item" >
-                    <a href="<?php echo 'index.php?r=allowance/index';?>" class="portfolio-link" data-toggle="modal">
+                    <a href="<?php echo 'index.php?r=deductions/index';?>" class="portfolio-link" data-toggle="modal">
                    
                         <img src="img/portfolio/f.png" class="img-responsive" alt="" style="height:250px;width:400px;">
                     </a>
                     <div class="portfolio-caption">
-                        <h4 style="color:black;">View Stipend, Deductions, and Refunds</h4>
+                        <h4 style="color:black;">View Allowance, Deductions, and Incentives</h4>
                         <p class="text-muted" style="color:#005ab2;">Past-Present</p>
                     </div>
                 </div>

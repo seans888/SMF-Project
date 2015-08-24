@@ -34,14 +34,14 @@ class OptionalworkController extends Controller
      */
     public function actionIndex()
     {
-        	$username=Yii::$app->user->identity->username;
+        $username=Yii::$app->user->identity->username;
 		$users = User::find()->all();
 		$scholars = Scholar::find()->all();
 		$model = new Optionalwork();
 		
 		foreach($users as $user){
 			foreach($scholars as $scholar){
-				if($user->username==$username&&$user->id==$scholar->scholar_id){
+				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
 					$model->scholar_scholar_id=$scholar->scholar_id;
 					 $searchModel = new OptionalworkSearch($model);
 					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -83,11 +83,12 @@ class OptionalworkController extends Controller
 		
 		foreach($users as $user){
 			foreach($scholars as $scholar){
-				if($user->username==$username&&$user->id==$scholar->scholar_id){
+				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
 					$model->scholar_scholar_id=$scholar->scholar_id;
+					$model->scholar_school_school_id=$scholar->school_school_id;
 	
 					if ($model->load(Yii::$app->request->post()) && $model->save()) {
-					return $this->redirect(['index', 'id' => $model->id]);
+					return $this->redirect(['index', 'id' => $model->optionalwork_id]);
 					} else {
 					return $this->render('create', [
 					'model' => $model,
