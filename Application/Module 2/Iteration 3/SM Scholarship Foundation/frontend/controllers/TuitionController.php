@@ -44,7 +44,7 @@ class TuitionController extends Controller
 		
 		foreach($users as $user){
 			foreach($scholars as $scholar){
-				if($user->username==$username&&$user->id==$scholar->scholar_id){
+				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
 					$model->scholar_scholar_id=$scholar->scholar_id;
 					
 					$searchModel = new TuitionSearch($model);

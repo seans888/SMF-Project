@@ -3,14 +3,14 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\Deductions;
-use common\models\DeductionsSearch;
+use common\models\Deduction;
+use common\models\DeductionSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use common\models\User;
-use common\models\Scholars;
-use common\models\Schools;
+use common\models\Scholar;
+use common\models\School;
 
 /**
  * DeductionsController implements the CRUD actions for Deductions model.
@@ -35,17 +35,17 @@ class DeductionsController extends Controller
      */
     public function actionIndex()
     {
-       $username=Yii::$app->user->identity->username;
+		$username=Yii::$app->user->identity->username;
 		$users = User::find()->all();
-		$scholars = Scholars::find()->all();
-		$model = new Deductions();
+		$scholars = Scholar::find()->all();
+		$model = new Deduction();
 		
 		foreach($users as $user){
 			foreach($scholars as $scholar){
-				if($user->username==$username&&$user->id==$scholar->scholar_id){
-					$model->deduction_scholar_id=$scholar->scholar_id;
+				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
+					$model->scholar_scholar_id=$scholar->scholar_id;
 					
-					$searchModel = new DeductionsSearch($model);
+					$searchModel = new DeductionSearch($model);
 					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 					return $this->render('index', [
 					'searchModel' => $searchModel,

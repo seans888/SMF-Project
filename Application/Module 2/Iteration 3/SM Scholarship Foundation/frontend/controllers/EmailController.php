@@ -8,6 +8,9 @@ use common\models\EmailSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use common\models\User;
+use common\models\Scholar;
+use yii\swiftmailer\Mailer;
 
 /**
  * EmailController implements the CRUD actions for Email model.
@@ -60,15 +63,34 @@ class EmailController extends Controller
      */
     public function actionCreate()
     {
+		$username=Yii::$app->user->identity->username;
+		$users = User::find()->all();
+		$scholars = Scholar::find()->all();
         $model = new Email();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->email_scholar_id]);
+		foreach($users as $user){
+			foreach($scholars as $scholar){
+				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
+					$model->email_scholar_id=$scholar->scholar_id;
+					
+					if ($model->load(Yii::$app->request->post())) {
+			Yii::$app->mailer->compose()
+			->setFrom($scholar->scholar_contact_email)
+			->setTo('kevintvillacorta@gmail.com')
+			->setSubject($model->subject)
+			->setHtmlBody($model->content)
+			->send();
+			$model->save();
+            return $this->redirect(['create', 'id' => $model->email_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
             ]);
         }
+			
+				}
+			}
+		}
+		
     }
 
     /**
@@ -117,5 +139,5 @@ class EmailController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
-    }
+    }	
 }
