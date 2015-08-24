@@ -21,6 +21,7 @@ class Upload extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+	public $file;
     public static function tableName()
     {
         return 'upload';
@@ -33,6 +34,7 @@ class Upload extends \yii\db\ActiveRecord
     {
         return [
             [['scholar_scholar_id', 'scholar_school_school_id'], 'required'],
+			[['file'], 'file'],
             [['scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
             [['upload_form', 'upload_file_name'], 'string', 'max' => 100]
         ];
@@ -44,6 +46,7 @@ class Upload extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
+			'file' => 'File',
             'upload_id' => 'Upload ID',
             'scholar_scholar_id' => 'Scholar Scholar ID',
             'scholar_school_school_id' => 'Scholar School School ID',
