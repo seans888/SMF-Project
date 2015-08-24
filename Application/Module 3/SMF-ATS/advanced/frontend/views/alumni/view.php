@@ -20,7 +20,17 @@ $this->params['breadcrumbs'][] = $this->title;
 	
 		<?php	$roles = Yii::$app->user->identity->user_type;
 			if ($roles == 'admin'){ ?>
-
+			
+		<?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+            'class' => 'btn btn-danger',
+            'data' => [
+                'confirm' => 'Are you sure you want to delete this item?',
+                'method' => 'post',
+            ],
+        ]) ?>
+	
+	<h4>Personal Details</h4>
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
@@ -31,24 +41,44 @@ $this->params['breadcrumbs'][] = $this->title;
             'alumni_midinit',
             'alumni_gender',
             'alumni_address',
+			'alumni_email:email',
             'alumni_contactno',
             'alumni_remarks',
-            'alumni_office_local_no',
-            'alumni_email:email',
-            'alumni_year_graduated',
-            'alumni_course',
-            'alumni_school',
-            'alumni_company',
+			'alumni_legends',
+        ],
+    ]) ?>
+	
+	
+	<h4>Work Details</h4>
+	<tr colspan="3"> <td>
+	<?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+			'alumni_company',
+            'alumni_office_local_no',  
             'alumni_status',
             'alumni_area',
             'alumni_cur_work',
             'alumni_prev_work',
-            'alumni_further_study',
-            'alumni_achievements',
-            'alumni_legends',
-            'user_id',
+			'alumni_year_graduated',
+            'alumni_course',
+            'alumni_school',     
+            
         ],
     ]) ?>
+	
+	<h4>Education Details</h4>
+	<?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+			'alumni_further_study',
+            'alumni_achievements',
+            'user_id',  
+        ],
+		
+
+    ]) ?>
+	
 	
 	<?php	} else if ($roles == 'user'){ ?>
 	
@@ -61,7 +91,8 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
 		
-	<?= DetailView::widget([
+	<h4>Personal Details</h4>
+    <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
             'id',
@@ -71,30 +102,49 @@ $this->params['breadcrumbs'][] = $this->title;
             'alumni_midinit',
             'alumni_gender',
             'alumni_address',
+			'alumni_email:email',
             'alumni_contactno',
             'alumni_remarks',
-            'alumni_office_local_no',
-            'alumni_email:email',
-            'alumni_year_graduated',
-            'alumni_course',
-            'alumni_school',
-            'alumni_company',
+			'alumni_legends',
+        ],
+    ]) ?>
+	
+	<h4>Work Details</h4>
+	<tr colspan="3"> <td>
+	<?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+			'alumni_company',
+            'alumni_office_local_no',  
             'alumni_status',
             'alumni_area',
             'alumni_cur_work',
             'alumni_prev_work',
-            'alumni_further_study',
-            'alumni_achievements',
-            'alumni_legends',
-            'user_id',
+			'alumni_year_graduated',
+            'alumni_course',
+            'alumni_school',     
+            
         ],
     ]) ?>
+	
+	<h4>Education Details</h4>
+	<?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+			'alumni_further_study',
+            'alumni_achievements',
+            'user_id',  
+        ],
+    ]) ?>
+	
+	
 
 	<?php }else{ ?>
 	
 	<?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
 	
-	<?= DetailView::widget([
+	<h4>Personal Details</h4>
+    <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
             'id',
@@ -104,22 +154,38 @@ $this->params['breadcrumbs'][] = $this->title;
             'alumni_midinit',
             'alumni_gender',
             'alumni_address',
+			'alumni_email:email',
             'alumni_contactno',
             'alumni_remarks',
-            'alumni_office_local_no',
-            'alumni_email:email',
-            'alumni_year_graduated',
-            'alumni_course',
-            'alumni_school',
-            'alumni_company',
+			'alumni_legends',
+        ],
+    ]) ?>
+	
+	<h4>Work Details</h4>
+	<tr colspan="3"> <td>
+	<?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+			'alumni_company',
+            'alumni_office_local_no',  
             'alumni_status',
             'alumni_area',
             'alumni_cur_work',
             'alumni_prev_work',
-            'alumni_further_study',
+			'alumni_year_graduated',
+            'alumni_course',
+            'alumni_school',     
+            
+        ],
+    ]) ?>
+	
+	<h4>Education Details</h4>
+	<?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+			'alumni_further_study',
             'alumni_achievements',
-            'alumni_legends',
-            'user_id',
+            'user_id',  
         ],
     ]) ?>
 	

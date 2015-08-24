@@ -53,13 +53,16 @@ use kartik\select2\Select2;
 
     <?= $form->field($model, 'alumni_year_graduated')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'alumni_course')->dropDownList([ 'BEED' => 'BEED', 'BSE English-Fil. (Com. Arts)' => 'BSE English-Fil. (Com. Arts)', 'BSIT' => 'BSIT',
+    <?= $form->field($model, 'alumni_course')->dropDownList(['NA' => 'NA', 'BEED' => 'BEED', 'BSE English-Fil. (Com. Arts)' => 'BSE English-Fil. (Com. Arts)', 'BSIT' => 'BSIT',
 	'BSCE' => 'BSCE', 'BSE Biology' => 'BSE Biology', 'BSBAA' => 'BSBAA', 'BSE Biology' => 'BSE Biology', 'BS BA' => 'BS BA',
 	'BS FMA' => 'BS FMA', 'BS Math' => 'BS Math', 'BSIM' => 'BSIM', 'BSE Physics-Math' => 'BSE Physics-Math', 'BSBAMA' => 'BSBAMA', 'BSC Mgt. Acctng' => 'BSC Mgt. Acctng',
 	'BSA' => 'BSA', 'BSCSIT SSE' => 'BSCSIT SSE', 'BSE Math' => 'BSE Math', 'BSCS' => 'BSCS', 'BSE-English' => 'BSE-English', 'BSECE' => 'BSECE', 'BSMA / COMA' => 'BSMA / COMA',
     'BSCOE' => 'BSCOE']) ?>
 
-    <?= $form->field($model, 'alumni_school')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'alumni_school')->widget(Select2::classname(), [ 'data'=>['ANGELES UNIVERSITY FOUNDATION','DE LA SALLE UNIVERSITY INCORPORATED','LICEO DE CAGAYAN UNIVERSITY','UNIVERSITY OF SAN JOSE RECOLETOS CO','NATIONAL UNIVERSITY INC', 'FAR EASTERN UNIVERSITY INCORPORATED','DE LA SALLE LIPA INC','ADAMSON UNIVERSITY','ATENEO DE DAVAO UNIVERSITY','CEBU INSTITUTE OF TECHNOLOGY','CENTRAL PHILIPPINE UNIVERSITY','COLEGIO SAN AGUSTIN','FEU EAST ASIA COLLEGE', 
+	'UNIVERSITY OF THE PHILIPPINES','DON BOSCO TECHNICAL INSTITUTE','PUNLAAN SCHOOL','ATENEO DE NAGA UNIVERSITY INC','DE LA SALLE UNIVERSITY MANILA','UNIVERSITY OF PERPETUAL HELP SYSTEM','CAVITE STATE UNIVERSITY', 'CEBU NORMAL UNIVERSITY','UNIVERSITY OF NUEVA CACERES','PAMANTASAN NG LUNGSOD NG MARIKINA','NATIONAL COLLEGE OF SCIENCE','MOTHER ROSA MEMORIAL FOUNDATION INC', 'DE LA SALLE UNIVERSITY DASMARINAS','ROGATIONIST COLLEGE','LEYTE NORMAL UNIVERSITY','NAGA COLLEGE FOUNDATION INC','UNIVERSITY OF THE CORDILLERAS', 
+	'CAMARINES NORTE STATE COLLEGE','UIC SCHOLARSHIP FOUNDATION INC','LYCEUM NORTHWESTERN UNIVERSITY','TARLAC STATE UNIVERSITY','MINDANAO UNIVERSITY OF SCIENCE','NOTRE DAME OF DADIANGAS UNIVERSITY','MINDANAO STATE UNIVERSITY', 'COLUMBAN COLLEGE INC', 'GORDON COLLEGE', 'UNIVERSIDAD DE STA ISABEL DE NAGA I', 'PARTIDO STATE UNIVERSITY', 'SAINT PAUL SCHOOL OF BUSINESS', 'LAGUNA STATE POLYTECHNIC UNIVERSITY', 'OUR LADY OF THE PILLARS COLLEGE', 'EASTERN VISAYAS STATE UNIVERSITY (E', 'ANIHAN TECHNICAL SCHOOL', 'EAST ASIA COMPUTER CENTER INC', 'PAMANTASAN NG ARAULLO',
+	'BESTLINK COLLEGE OF THE', 'MANILA INSTITUTE FOR CULINARY ARTS', 'ASIA PACIFIC TECHNOLOGY EDUCATIONAL', 'UNIVERSITY OF PERPETUAL HELP SYSTEM', 'TECHNOLOGICAL UNIVERSITY OF THE', 'UNIVERSITY OF SANTO TOMAS', 'ASIA PACIFIC COLLEGE'], 'language'=>'en', 'options'=>['placeholder'=>'Select School'], 'pluginOptions'=>['allowClear'=>true], ]) ?>
 
     <?= $form->field($model, 'alumni_area')->widget(Select2::classname(), [ 'data'=>['NCR','Abra','Agusan del Norte','Agusan del Sur','Aklan', 'Albay','Antique','Apayao','Aurora','Bataan','Batanes','Batangas','Bohol', 
 	'Cagayan','Camarines Norte','Camarines Sur','Cavite','Cebu','Davao','Ifugao', 'Ilocos Norte','Ilocos Sur','Iloilo','Laguna','Misamis Oriental', 'Mountain Province','Nueva Ecija','Nueva Vizcaya','Palawan','Pangasinan', 
