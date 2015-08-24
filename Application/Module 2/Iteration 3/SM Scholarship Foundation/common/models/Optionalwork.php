@@ -34,15 +34,12 @@ class Optionalwork extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-<<<<<<< HEAD
             [['scholar_scholar_id', 'scholar_school_school_id', 'optional_work_company_name'], 'required'],
             [['scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
-=======
             [['scholar_scholar_id', 'scholar_school_school_id'], 'required'],
 			[['firstName','middleName', 
 				'lastName'], 'string', 'max' => 100],	
             [['scholar_scholar_id', 'scholar_school_school_id',], 'integer'],
->>>>>>> e1a0fd3ef68abe2334209107efd6865cd071824b
             [['optionalwork_start_date', 'optionalwork_end_date'], 'safe'],
             [['optionalwork_location', 'optional_work_company_name'], 'string', 'max' => 100]
         ];
