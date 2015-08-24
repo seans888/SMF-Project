@@ -85,15 +85,15 @@ class UploadController extends Controller
 			if($user->username==$username&&$user->id==$scholar->scholar_user_id){
 			$model->scholar_scholar_id=$scholar->scholar_id;
 			$model->scholar_school_school_id=$scholar->school_school_id;
-			if ($model->load(Yii::$app->request->post())&&$model->save()) {
-			$fileName = $model->upload_file_name.$model->scholar_scholar_id;
-			$model->upload_form = UploadedFile::getInstance($model,'upload_form');
-			if($model->upload_form != null)
+			if ($model->load(Yii::$app->request->post())) {
+			$model->file = UploadedFile::getInstance($model,'file');
+			if($model->file != null)
 			{
-				
-				$model->upload_form->saveAs('uploads/'.$fileName.'.'.$model->upload_form->extension);	
-				$model->upload_file_name = 'uploads/'.$fileName.'.'.$model->upload_form->extension;	
+				$fileName = md5(time()).$model->upload_file_name."".$model->scholar_scholar_id."".$model->file->name;
+				$model->file->saveAs('Forms/'.$fileName);	
+				$model->upload_form = 'Forms/'.$fileName;	
 			}			
+			$model->save();
 			
             return $this->redirect(['index', 'id' => $model->upload_id]);
         } else {
