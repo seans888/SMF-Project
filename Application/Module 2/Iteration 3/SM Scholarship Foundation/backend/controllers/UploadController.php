@@ -118,7 +118,14 @@ class UploadController extends Controller
 
         return $this->redirect(['index']);
     }
+	
+	public function actionDownload($id)
+    {
+        $model = $this->findModel($id);
 
+		return $this->redirect($model->upload_form)->send();			
+
+    }
     /**
      * Finds the Upload model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
