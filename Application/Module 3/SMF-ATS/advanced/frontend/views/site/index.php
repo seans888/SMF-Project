@@ -23,20 +23,21 @@ $this->title = 'SM Foundation Alumni Tracking System';
 
             </div>
             <div class="col-lg-4">
-                <h2>Alumni News</h2>
-				<img src = "images/news.jpg" height="150px" width="250px">
-                <p>The English word "news" developed in the 14th century as a special use of the plural form of "new". In Middle English, the equivalent word 
-				was newes, like the French nouvelles and the German neues. Similar developments are found in the Slavic languages—the Czech and Slovak noviny (from nový, "new"), 
-				the cognate Polish nowiny and Russian novosti—and in the Celtic languages: the Welsh newyddion (from newydd) and the Cornish nowodhow (from nowydh)</p>
+                <h2>SM Partner Schools</h2>
+				<img src = "images/school.jpg" height="150px" width="250px">
+                <p>The SM Partner Schools are the ones who are selected to have scholars in having the SM Foundation program. Some partner schools of SM are
+				University of the Philippines, University of Santo Tomas, De La Salle University, University of the East, Far Eastern University, National University,
+				Asia Pacific College, Don Bosco Technical Institue, and many more including the schools in the provinces. </p>
+				
+				<p><a class="btn btn-default" href="http://localhost/SMF_Project/SMF-Project/Application/Module%203/SMF-ATS/advanced/frontend/web/index.php?r=site%2Fsmschool">List of SM School Partners &raquo;</a></p>
 
             </div>
             <div class="col-lg-4">
-                <h2>Events</h2>
-				<img src = "images/calendar.jpg" height="150px" width="250px">
-                <p> The incoming and current events that will happen for SM Foundation students and alumni. It displays
-                   every events in the current month and year. Occurrence happening at a determinable time and place, with 
-				   or without the participation of human agents. It may be a part of a chain of occurrences as an effect of a 
-				   preceding occurrence and as the cause of a succeeding occurrence.</p>
+                <h2>SM Group of Companies</h2>
+				<img src = "images/sm-logo.jpg" height="150px" width="250px">
+                <p> It is the Philippines largest retailer run by Henry Sy. SM Group is a retail giant with 38,600 employees and annual revenues of $1.7 billion. SM is the Philippines'
+				leader in the retail industry. SM Investments Corporation is the holding company of the SM Group. For more than 40 years, it has been committed in providing quality 
+				products and services at reasonable prices</p>
 
                 <p><a class="btn btn-default" href="http://localhost/SMF_Project/SMF-Project/Application/Module%203/SMF-ATS/advanced/frontend/web/index.php?r=site%2Fsmgroup">List of SM Group of Companies &raquo;</a></p>
             </div>
