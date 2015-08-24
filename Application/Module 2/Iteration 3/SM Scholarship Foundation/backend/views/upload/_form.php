@@ -12,8 +12,6 @@ use dosamigos\fileinput\FileInput;
 
     <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
 
-    <?= $form->field($model, 'upload_id')->textInput() ?>
-
     <?= $form->field($model, 'scholar_scholar_id')->textInput() ?>
 
     <?= $form->field($model, 'scholar_school_school_id')->textInput() ?>
