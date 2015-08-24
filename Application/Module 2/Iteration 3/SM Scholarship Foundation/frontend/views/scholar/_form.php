@@ -34,7 +34,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'scholar_contact_number')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'scholar_allowance_status')->dropDownList([ 'Granting' => 'Granting', 'Withheld' => 'Withheld', ], ['prompt' => '']) ?>
+    
 
     <?= $form->field($model, 'scholar_cash_card_number')->textInput(['maxlength' => true]) ?>
 
