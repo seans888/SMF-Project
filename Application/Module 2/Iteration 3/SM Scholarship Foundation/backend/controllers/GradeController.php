@@ -95,6 +95,22 @@ class GradeController extends Controller
 			
 			if($grade->load($post))
 			{
+				if($grade->grade_approval_status=='Approved')
+				{
+					$grade->grade_approved_by = Yii::$app->user->identity->username;
+				}
+				else
+				{
+					$grade->grade_approved_by = null;
+				}
+
+					$subject = Subject::findOne($grade->subject_subject_id);
+					// $subjectTakenStatus = ArrayHelper::map(Subject::find()
+					// ->where(['subject_id'=>$grade->subject_subject_id])
+					// ->all(),'subject_id','subject_taken_status');
+					$subject->subject_taken_status = $grade->takenStatus;
+					$subject->save();
+				
 				$grade->save();
 			}
 			echo $out;
