@@ -19,7 +19,7 @@ class ScholarSearch extends Scholar
     {
         return [
             [['scholar_id', 'school_school_id', 'scholar_year_level'], 'integer'],
-            [['scholar_first_name', 'scholar_middle_name', 'scholar_last_name', 'scholar_gender', 'scholar_address', 'scholar_course', 'scholar_graduate_status', 'scholar_contact_email', 'scholar_contact_number', 'scholar_allowance_status', 'scholar_cash_card_number', 'scholar_type', 'scholar_sponsor', 'allowance_allowance_area'], 'safe'],
+            [['scholar_first_name', 'scholar_middle_name', 'scholar_last_name', 'scholar_gender', 'scholar_address', 'scholar_course', 'scholar_graduate_status', 'scholar_contact_email', 'scholar_contact_number', 'scholar_cash_card_number', 'scholar_type', 'scholar_sponsor', 'allowance_allowance_area'], 'safe'],
         ];
     }
 
@@ -70,7 +70,7 @@ class ScholarSearch extends Scholar
             ->andFilterWhere(['like', 'scholar_graduate_status', $this->scholar_graduate_status])
             ->andFilterWhere(['like', 'scholar_contact_email', $this->scholar_contact_email])
             ->andFilterWhere(['like', 'scholar_contact_number', $this->scholar_contact_number])
-            ->andFilterWhere(['like', 'scholar_allowance_status', $this->scholar_allowance_status])
+        
             ->andFilterWhere(['like', 'scholar_cash_card_number', $this->scholar_cash_card_number])
             ->andFilterWhere(['like', 'scholar_type', $this->scholar_type])
             ->andFilterWhere(['like', 'scholar_sponsor', $this->scholar_sponsor])
