@@ -16,7 +16,8 @@ use dosamigos\fileinput\FileInput;
 	 
 	<?= $form->field($model, 'upload_file_name')->textInput() ?>
 	
-	<?= $form->field($model, 'upload_form')->widget(\dosamigos\fileinput\BootstrapFileInput::className(), [
+	
+	<?= $form->field($model, 'file')->widget(\dosamigos\fileinput\BootstrapFileInput::className(), [
     'options' => ['multiple' => true],
     'clientOptions' => [
         'previewFileType' => 'text',
@@ -26,8 +27,7 @@ use dosamigos\fileinput\FileInput;
         'removeIcon' => '<i class="glyphicon glyphicon-trash"></i> '
     ],
 	
-	])->label('Upload Form')?>
-
+])->label('Upload Form')?>
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

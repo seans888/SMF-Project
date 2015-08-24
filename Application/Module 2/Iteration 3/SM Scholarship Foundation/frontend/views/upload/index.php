@@ -26,12 +26,13 @@ $this->params['breadcrumbs'][] = $this->title;
 		
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
+			'upload_form',
             'upload_file_name',
 			[
             'label'=>'Scanned Document',
             'format'=>'raw',
 				'value' => function($model){
-					$url = 'uploads/'.$model->upload_file_name;
+					$url = $model->upload_form;
 					
 					return Html::a(Html::img($url, ['width'=>'300']),$url);
 				}
