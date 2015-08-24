@@ -57,6 +57,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'alumni_legends',
             'user_id',
         ],
+		
+
     ]) ?>
 	
 	<?php	} else if ($roles == 'user'){ ?>
