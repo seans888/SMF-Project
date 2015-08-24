@@ -115,6 +115,11 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+	
+	public function actionSmgroup()
+    {
+        return $this->render('smgroup');
+    }
 
     public function actionSignup()
     {
