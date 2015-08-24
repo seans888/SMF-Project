@@ -65,7 +65,7 @@ AppAsset::register($this);
 				['label' => 'Employee', 'url' => ['/employee/index']],
                 ['label' => 'Event', 'url' => ['/event/index']],
 				//['label' => 'Logs', 'url' => ['/logs/index']],
-				['label' => 'Migration', 'url' => ['/migrated-alumni/index']],
+				//['label' => 'Migration', 'url' => ['/migrated-alumni/index']],
 				['label' => 'Testimonials', 'url' => ['/testimonials/index']],
 				['label' => 'Users', 'url' => ['/user/index']],
 				[ 
