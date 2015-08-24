@@ -57,15 +57,15 @@ $exportedValues =
 		'value'=>'scholarScholar.scholar_last_name'
 	],
 	[
-		'class' => 'kartik\grid\EditableColumn',
+		// 'class' => 'kartik\grid\EditableColumn',
 		'attribute'=>'subject_scholar_school_school_id',
-		'editableOptions' => [
-			'inputType' => '\kartik\select2\Select2',
-			'options'=>
-			[
-				'data' => ArrayHelper::map(School::find()->all(),'school_id','school_name'),
-			],
-		],
+		// 'editableOptions' => [
+			// 'inputType' => '\kartik\select2\Select2',
+			// 'options'=>
+			// [
+				// 'data' => ArrayHelper::map(School::find()->all(),'school_id','school_name'),
+			// ],
+		// ],
 		'value'=>'schoolSchool.school_name',
 	],
 	[
@@ -91,7 +91,7 @@ $exportedValues =
 		],
 	],
 	[
-		'class' => 'kartik\grid\EditableColumn',
+		// 'class' => 'kartik\grid\EditableColumn',
 		'attribute'=>'grade_approved_by',
 	],
 	['class' => 'kartik\grid\ActionColumn']
