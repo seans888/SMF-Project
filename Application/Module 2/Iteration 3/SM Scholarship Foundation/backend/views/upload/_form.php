@@ -10,7 +10,7 @@ use dosamigos\fileinput\FileInput;
 
 <div class="upload-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
 
     <?= $form->field($model, 'upload_id')->textInput() ?>
 
