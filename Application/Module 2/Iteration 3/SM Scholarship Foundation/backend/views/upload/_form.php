@@ -16,10 +16,16 @@ use dosamigos\fileinput\FileInput;
 
     <?= $form->field($model, 'scholar_school_school_id')->textInput() ?>
 
-    <?= $form->field($model, 'upload_form')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'upload_file_name')->textInput(['maxlength' => true]) ?>
+	
+	<?php
+if ($model->upload_form) {
+    echo 'Overwrite Previous File?<br>'.$model->upload_form.'&nbsp;&nbsp;&nbsp;<img src="'.\Yii::$app->request->BaseUrl.'/'.$model->upload_form.'" width="90px">&nbsp;&nbsp;&nbsp;';
+    
+}
 
+?>
+	
 	<?= $form->field($model, 'file')->widget(\dosamigos\fileinput\BootstrapFileInput::className(), [
     'options' => ['multiple' => true],
     'clientOptions' => [
