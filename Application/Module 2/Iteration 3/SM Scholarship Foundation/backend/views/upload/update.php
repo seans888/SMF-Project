@@ -7,7 +7,7 @@ use yii\helpers\Html;
 
 $this->title = 'Update Upload: ' . ' ' . $model->upload_id;
 $this->params['breadcrumbs'][] = ['label' => 'Uploads', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->upload_id, 'url' => ['view', 'upload_id' => $model->upload_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id]];
+$this->params['breadcrumbs'][] = ['label' => $model->upload_id, 'url' => ['view', 'id' => $model->upload_id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="upload-update">
