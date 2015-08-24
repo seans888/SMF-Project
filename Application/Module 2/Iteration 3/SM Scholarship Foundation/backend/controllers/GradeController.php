@@ -65,7 +65,6 @@ class GradeController extends Controller
 					// ->where(['subject_id'=>$grade->subject_subject_id])
 					// ->all(),'subject_id','subject_taken_status');
 					$subject->subject_taken_status = $grade->takenStatus;
-					$grade->grade_raw_grade = $grade->takenStatus;
 					$subject->save();
 				
 				$grade->save();
