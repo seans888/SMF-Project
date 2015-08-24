@@ -37,9 +37,7 @@ class Optionalwork extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['scholar_scholar_id', 'scholar_school_school_id', 
-				'firstName', 'middleName', 
-				'lastName'], 'required'],
+            [['scholar_scholar_id', 'scholar_school_school_id'], 'required'],
 			[['firstName','middleName', 
 				'lastName'], 'string', 'max' => 100],	
             [['scholar_scholar_id', 'scholar_school_school_id',], 'integer'],
