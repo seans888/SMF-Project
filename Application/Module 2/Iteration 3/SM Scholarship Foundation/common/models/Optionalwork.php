@@ -37,8 +37,7 @@ class Optionalwork extends \yii\db\ActiveRecord
             [['scholar_scholar_id', 'scholar_school_school_id', 'optional_work_company_name'], 'required'],
             [['scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
             [['scholar_scholar_id', 'scholar_school_school_id'], 'required'],
-			[['firstName','middleName', 
-				'lastName'], 'string', 'max' => 100],	
+			
             [['scholar_scholar_id', 'scholar_school_school_id',], 'integer'],
             [['optionalwork_start_date', 'optionalwork_end_date'], 'safe'],
             [['optionalwork_location', 'optional_work_company_name'], 'string', 'max' => 100]

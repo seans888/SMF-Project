@@ -30,7 +30,7 @@ class Email extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['email_id', 'email_scholar_id', 'subject', 'content'], 'required'],
+            [['email_scholar_id', 'subject', 'content'], 'required'],
             [['email_id', 'email_scholar_id'], 'integer'],
             [['content'], 'string'],
             [['subject'], 'string', 'max' => 100]
