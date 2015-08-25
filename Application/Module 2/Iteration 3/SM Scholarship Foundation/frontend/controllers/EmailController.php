@@ -70,6 +70,7 @@ class EmailController extends Controller
 		foreach($users as $user){
 			foreach($scholars as $scholar){
 				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
+					
 					$model->email_scholar_id=$scholar->scholar_id;
 					if ($model->load(Yii::$app->request->post())) {
 					Yii::$app->mailer->compose()
@@ -85,6 +86,7 @@ class EmailController extends Controller
 						'model' => $model,
 						]);
 					}
+					
 			
 				}
 			}
