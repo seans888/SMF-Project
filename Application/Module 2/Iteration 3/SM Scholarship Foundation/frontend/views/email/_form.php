@@ -22,7 +22,6 @@ use yii\widgets\ActiveForm;
 								<?php $form = ActiveForm::begin(); ?>
 								<table width=50% align=center><tr><td>
 								
-
 								<?= $form->field($model, 'subject')->textInput(['maxlength' => true]) ?>
 								</td></tr><tr><td>
 								<?= $form->field($model, 'content')->textarea(['rows' => 6]) ?>
