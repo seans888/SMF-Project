@@ -1,21 +1,18 @@
 <?php
 
-namespace frontend\controllers;
+namespace backend\controllers;
 
 use Yii;
-use common\models\Deduction;
-use common\models\DeductionSearch;
+use backend\models\Event;
+use backend\models\EventSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use common\models\User;
-use common\models\Scholar;
-use common\models\School;
 
 /**
- * DeductionsController implements the CRUD actions for Deductions model.
+ * EventController implements the CRUD actions for Event model.
  */
-class DeductionsController extends Controller
+class EventController extends Controller
 {
     public function behaviors()
     {
@@ -30,35 +27,30 @@ class DeductionsController extends Controller
     }
 
     /**
-     * Lists all Deductions models.
+     * Lists all Event models.
      * @return mixed
      */
     public function actionIndex()
     {
-		$username=Yii::$app->user->identity->username;
-		$users = User::find()->all();
-		$scholars = Scholar::find()->all();
-		$model = new Deduction();
-		
-		foreach($users as $user){
-			foreach($scholars as $scholar){
-				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
-					$model->scholar_scholar_id=$scholar->scholar_id;
-					
-					$searchModel = new DeductionSearch($model);
-					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-					return $this->render('index', [
-					'searchModel' => $searchModel,
-					'dataProvider' => $dataProvider,
-					]);
-				}
-
-			}
+        $events = Event::find()->all();
+		$tasks = [];
+		foreach($events as $eve)
+		{
+			$event = new \yii2fullcalendar\models\Event();
+			$event->id = $eve->id;
+			$event->title = $eve->title;
+			$event->start = $eve->start_date;
+			$event->end = $eve->end_date;
+			$tasks[] = $event;
 		}
+		
+        return $this->render('index', [
+            'events' => $tasks,
+        ]);
     }
 
     /**
-     * Displays a single Deductions model.
+     * Displays a single Event model.
      * @param integer $id
      * @return mixed
      */
@@ -70,25 +62,25 @@ class DeductionsController extends Controller
     }
 
     /**
-     * Creates a new Deductions model.
+     * Creates a new Event model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($date)
     {
-        $model = new Deductions();
-
+        $model = new Event();
+		$model->start_date = $date;
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->deduction_id]);
+            return $this->redirect(['index']);
         } else {
-            return $this->render('create', [
+            return $this->renderAjax('create', [
                 'model' => $model,
             ]);
         }
     }
 
     /**
-     * Updates an existing Deductions model.
+     * Updates an existing Event model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -98,7 +90,7 @@ class DeductionsController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->deduction_id]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -107,7 +99,7 @@ class DeductionsController extends Controller
     }
 
     /**
-     * Deletes an existing Deductions model.
+     * Deletes an existing Event model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -120,15 +112,15 @@ class DeductionsController extends Controller
     }
 
     /**
-     * Finds the Deductions model based on its primary key value.
+     * Finds the Event model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Deductions the loaded model
+     * @return Event the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Deductions::findOne($id)) !== null) {
+        if (($model = Event::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

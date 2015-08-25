@@ -23,13 +23,13 @@ $this->params['breadcrumbs'][] = $this->title;
    <?php 
    $items = [
     [
-        'label'=>'<i class="glyphicon glyphicon-user"></i> Scholar Details',
+        'label'=>'<i class="glyphicon glyphicon-user"></i> <b>Scholar Details</b>',
         'content'=>$this->render('scholartab'),
         'active'=>true,
        
     ],
     [
-        'label'=>'<i class="glyphicon glyphicon-home"></i> School Details',
+        'label'=>'<i class="glyphicon glyphicon-home"></i> <b>School Details',
         'content'=>$this->render('schooltab'),
         
     ],

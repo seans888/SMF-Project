@@ -3,19 +3,18 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\Deduction;
-use common\models\DeductionSearch;
+use common\models\Incentive;
+use common\models\IncentiveSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use common\models\User;
 use common\models\Scholar;
-use common\models\School;
 
 /**
- * DeductionsController implements the CRUD actions for Deductions model.
+ * IncentiveController implements the CRUD actions for Incentive model.
  */
-class DeductionsController extends Controller
+class IncentiveController extends Controller
 {
     public function behaviors()
     {
@@ -30,22 +29,22 @@ class DeductionsController extends Controller
     }
 
     /**
-     * Lists all Deductions models.
+     * Lists all Incentive models.
      * @return mixed
      */
     public function actionIndex()
     {
-		$username=Yii::$app->user->identity->username;
+        $username=Yii::$app->user->identity->username;
 		$users = User::find()->all();
 		$scholars = Scholar::find()->all();
-		$model = new Deduction();
+		$model = new Incentive();
 		
 		foreach($users as $user){
 			foreach($scholars as $scholar){
 				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
 					$model->scholar_scholar_id=$scholar->scholar_id;
 					
-					$searchModel = new DeductionSearch($model);
+					$searchModel = new IncentiveSearch($model);
 					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 					return $this->render('index', [
 					'searchModel' => $searchModel,
@@ -58,7 +57,7 @@ class DeductionsController extends Controller
     }
 
     /**
-     * Displays a single Deductions model.
+     * Displays a single Incentive model.
      * @param integer $id
      * @return mixed
      */
@@ -70,16 +69,16 @@ class DeductionsController extends Controller
     }
 
     /**
-     * Creates a new Deductions model.
+     * Creates a new Incentive model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Deductions();
+        $model = new Incentive();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->deduction_id]);
+            return $this->redirect(['view', 'id' => $model->incentive_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -88,7 +87,7 @@ class DeductionsController extends Controller
     }
 
     /**
-     * Updates an existing Deductions model.
+     * Updates an existing Incentive model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -98,7 +97,7 @@ class DeductionsController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->deduction_id]);
+            return $this->redirect(['view', 'id' => $model->incentive_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -107,7 +106,7 @@ class DeductionsController extends Controller
     }
 
     /**
-     * Deletes an existing Deductions model.
+     * Deletes an existing Incentive model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -120,15 +119,15 @@ class DeductionsController extends Controller
     }
 
     /**
-     * Finds the Deductions model based on its primary key value.
+     * Finds the Incentive model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Deductions the loaded model
+     * @return Incentive the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Deductions::findOne($id)) !== null) {
+        if (($model = Incentive::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

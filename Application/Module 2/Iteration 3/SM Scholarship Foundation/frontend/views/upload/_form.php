@@ -2,10 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+
 use dosamigos\fileinput\FileInput;
-use common\models\Scholar;
-use yii\helpers\ArrayHelper;
-use kartik\select2\Select2;
+
 /* @var $this yii\web\View */
 /* @var $model common\models\Upload */
 /* @var $form yii\widgets\ActiveForm */
@@ -13,27 +12,10 @@ use kartik\select2\Select2;
 
 <div class="upload-form">
 
-    <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
-
-	<?= $form->field($model,'scholar_scholar_id')->widget(Select2::classname(),
-		[
-			'data'=>ArrayHelper::map(Scholar::find()->all(),'scholar_id','scholar_id','scholar_last_name'),
-			'language'=>'en',
-			'options'=>['placeholder'=>'Select Scholar ID'],
-			'pluginOptions'=>['allowClear'=>true],
-		]) ?>
-
-    <?= $form->field($model, 'scholar_school_school_id')->textInput() ?>
-
-    <?= $form->field($model, 'upload_file_name')->textInput(['maxlength' => true]) ?>
+   <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
+	 
+	<?= $form->field($model, 'upload_file_name')->textInput() ?>
 	
-	<?php
-if ($model->upload_form) {
-    echo 'Overwrite Previous File?<br>'.$model->upload_form.'&nbsp;&nbsp;&nbsp;<img src="'.\Yii::$app->request->BaseUrl.'/'.$model->upload_form.'" width="90px">&nbsp;&nbsp;&nbsp;';
-    
-}
-
-?>
 	
 	<?= $form->field($model, 'file')->widget(\dosamigos\fileinput\BootstrapFileInput::className(), [
     'options' => ['multiple' => true],
@@ -46,7 +28,6 @@ if ($model->upload_form) {
     ],
 	
 ])->label('Upload Form')?>
-
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

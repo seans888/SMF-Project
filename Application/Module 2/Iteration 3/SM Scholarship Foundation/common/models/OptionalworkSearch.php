@@ -19,7 +19,7 @@ class OptionalworkSearch extends Optionalwork
     {
         return [
             [['optionalwork_id', 'scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
-            [['optionalwork_location', 'optionalwork_start_date', 'optionalwork_end_date'], 'safe'],
+            [['optionalwork_location', 'optionalwork_start_date', 'optionalwork_end_date', 'optional_work_company_name'], 'safe'],
         ];
     }
 
@@ -63,7 +63,8 @@ class OptionalworkSearch extends Optionalwork
             'optionalwork_end_date' => $this->optionalwork_end_date,
         ]);
 
-        $query->andFilterWhere(['like', 'optionalwork_location', $this->optionalwork_location]);
+        $query->andFilterWhere(['like', 'optionalwork_location', $this->optionalwork_location])
+            ->andFilterWhere(['like', 'optional_work_company_name', $this->optional_work_company_name]);
 
         return $dataProvider;
     }

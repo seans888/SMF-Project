@@ -43,7 +43,7 @@ class GradeController extends Controller
 		
 		foreach($users as $user){
 			foreach($scholars as $scholar){
-				if($user->username==$username&&$user->id==$scholar->scholar_id){
+				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
 					$model->grade_id=$scholar->scholar_id;
 					
 					$searchModel = new GradeSearch($model);

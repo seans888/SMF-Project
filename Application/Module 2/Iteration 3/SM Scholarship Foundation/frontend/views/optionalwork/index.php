@@ -21,10 +21,10 @@ $this->params['breadcrumbs'][] = $this->title;
 		'showOnEmpty' => false,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            'job_location',
-            'job_startDate',
-            'job_endDate',
-            'job_description:ntext',
+            'optional_work_company_name',
+            'optionalwork_location',
+            'optionalwork_start_date',
+            'optionalwork_end_date',
 
             
         ],

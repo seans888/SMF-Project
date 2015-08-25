@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
  <?php 
    $items = [
     [
-        'label'=>'<i class="glyphicon glyphicon-list-alt"></i> Tuition Fee Records',
+        'label'=>'<i class="glyphicon glyphicon-list-alt"></i> <b>Tuition Fee Records',
         'content'=> GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,

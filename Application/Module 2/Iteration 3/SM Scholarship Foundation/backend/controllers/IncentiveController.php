@@ -8,6 +8,7 @@ use common\models\IncentiveSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use common\models\ScholarSearch;
 
 /**
  * IncentiveController implements the CRUD actions for Incentive model.
@@ -32,7 +33,7 @@ class IncentiveController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new IncentiveSearch();
+        $searchModel = new ScholarSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
