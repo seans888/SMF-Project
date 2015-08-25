@@ -10,6 +10,7 @@ use yii\grid\GridView;
 $this->title = 'Users';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
 <div class="user-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
@@ -39,5 +40,6 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
+	
 
 </div>
