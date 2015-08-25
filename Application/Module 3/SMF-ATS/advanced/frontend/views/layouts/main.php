@@ -92,7 +92,7 @@ AppAsset::register($this);
 				//['label' => 'Region', 'url' => ['/region/index']],
 				['label' => 'Employee', 'url' => ['/employee/view', 'id' => $employeeid]],
                 ['label' => 'Event', 'url' => ['/event/index']],
-				['label' => 'Logs', 'url' => ['/logs/index']],
+				//['label' => 'Logs', 'url' => ['/logs/index']],
 				//['label' => 'Migration', 'url' => ['/migration/index']],
 				['label' => 'Testimonials', 'url' => ['/testimonials/index']],
 				//['label' => 'Users', 'url' => ['/user/index']],
