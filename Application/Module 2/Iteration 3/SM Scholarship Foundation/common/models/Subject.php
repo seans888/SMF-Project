@@ -39,7 +39,7 @@ class Subject extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['scholar_scholar_id', 'scholar_school_school_id'], 'required'],
+            // [['scholar_scholar_id', 'scholar_school_school_id'], 'required'],
             [['scholar_scholar_id', 'scholar_school_school_id', 'subject_term'], 'integer'],
             [['subject_units'], 'number'],
             [['subject_taken_status', 'subject_approval_status'], 'string'],
