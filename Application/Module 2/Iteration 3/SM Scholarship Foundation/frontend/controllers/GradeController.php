@@ -3,13 +3,18 @@
 namespace frontend\controllers;
 
 use Yii;
+use common\models\User;
+use common\models\Subject;
+use common\models\Scholar;
+use common\models\SchoolSearch;
 use common\models\Grade;
 use common\models\GradeSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use common\models\User;
-use common\models\Scholar;
+use common\models\GroupGrade;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Json;
 
 
 /**
@@ -91,7 +96,69 @@ class GradeController extends Controller
             ]);
         }
     }
+public function actionGroupcreate()
+    {
+        $modelCustomer = new Grade;
+        $modelsAddress = [new Grade];
+        if ($modelCustomer->load(Yii::$app->request->post())) {
 
+            $modelsAddress = GroupGrade::createMultiple(Grade::classname());
+            GroupGrade::loadMultiple($modelsAddress, Yii::$app->request->post());
+
+            // ajax validation
+            if (Yii::$app->request->isAjax) {
+                Yii::$app->response->format = Response::FORMAT_JSON;
+                return ArrayHelper::merge(
+                    ActiveForm::validateMultiple($modelsAddress),
+                    ActiveForm::validate($modelCustomer)
+                );
+            }
+
+            // validate all models
+            $valid = $modelCustomer->validate();
+            $valid = GroupGrade::validateMultiple($modelsAddress) && $valid;
+
+            if ($valid) {
+                $transaction = \Yii::$app->db->beginTransaction();
+                try {
+					// if($flag = $modelCustomer->save(false)){
+                        foreach ($modelsAddress as $modelAddress) {
+                            $modelAddress->subject_scholar_scholar_id = $modelCustomer->subject_scholar_scholar_id;
+							$modelAddress->grade_school_year_start = $modelCustomer->grade_school_year_start;
+							$modelAddress->grade_school_year_end = $modelCustomer->grade_school_year_end;
+							$selectSchool = ArrayHelper::map(Scholar::find()
+							->where(['scholar_id'=>$modelAddress->subject_scholar_scholar_id])
+							->all(),'school_school_id','school_school_id');
+							$schoolID = array_values($selectSchool)[0];
+							$modelAddress->subject_scholar_school_school_id = $schoolID;
+                            if (! ($flag = $modelAddress->save(false))) {
+								
+                                $transaction->rollBack();
+                                break;
+                            }
+                        }
+                    // }
+                    if ($flag) {
+			if($modelCustomer->subject_subject_id==null)
+			{
+				$sql = "DELETE FROM grade WHERE subject_subject_id is null;";
+				Yii::$app->db->createCommand($sql)->execute();
+			}
+                        $transaction->commit();
+                        return $this->redirect(['index']);
+                    }
+                } catch (Exception $e) {
+                    $transaction->rollBack();
+                }
+            }
+        }
+
+        return $this->render('groupcreate', [
+            'modelCustomer' => $modelCustomer,
+            'modelsAddress' => (empty($modelsAddress)) ? [new Grade] : $modelsAddress
+        ]);
+    }
+	
     /**
      * Updates an existing Grades model.
      * If update is successful, the browser will be redirected to the 'view' page.
