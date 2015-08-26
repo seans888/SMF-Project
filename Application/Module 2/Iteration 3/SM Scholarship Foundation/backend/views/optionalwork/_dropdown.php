@@ -38,7 +38,10 @@ $this->params['breadcrumbs'][] = $this->title;
 			],
 			//my edit
 			*/
-            'optionalwork_location',
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'optionalwork_location',
+			],
             'optionalwork_start_date',
             'optionalwork_end_date',
 			
