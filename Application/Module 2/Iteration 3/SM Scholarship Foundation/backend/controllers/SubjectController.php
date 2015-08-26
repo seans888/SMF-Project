@@ -3,13 +3,15 @@
 namespace backend\controllers;
 
 use Yii;
+use common\models\Scholar;
+use yii\helpers\ArrayHelper;
 use common\models\Subject;
 use common\models\SubjectSearch;
 use common\models\ScholarSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\helpers\Json;
 /**
  * SubjectController implements the CRUD actions for Subject model.
  */
@@ -35,13 +37,79 @@ class SubjectController extends Controller
     {
         $searchModel = new ScholarSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$subjectId = Yii::$app->request->post('editableKey');
+			$subject = Subject::findOne($subjectId);
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Subject']);
+			$post['Subject'] = $posted;
+			
+			if($subject->load($post))
+			{
+				if($subject->subject_approval_status=='Approved')
+				{
+					$subject->subject_approved_by = Yii::$app->user->identity->username;
+				}
+				else
+				{
+					$subject->subject_approved_by = null;
+				}
+				// $grade = Subject::findOne($subject->subject_id);
+				// $grade->takenStatus = $subject->subject_taken_status;
+				// $grade->save();
+				$subject->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
-
+	
+    public function actionIndex2()
+    {
+        $searchModel = new SubjectSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$subjectId = Yii::$app->request->post('editableKey');
+			$subject = Subject::findOne($subjectId);
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Subject']);
+			$post['Subject'] = $posted;
+			
+			if($subject->load($post))
+			{
+				if($subject->subject_approval_status=='Approved')
+				{
+					$subject->subject_approved_by = Yii::$app->user->identity->username;
+				}
+				else
+				{
+					$subject->subject_approved_by = null;
+				}
+				// $grade = Subject::findOne($subject->subject_id);
+				// $grade->takenStatus = $subject->subject_taken_status;
+				// $grade->save();
+				$subject->save();
+			}
+			echo $out;
+			return;
+		}
+		
+        return $this->render('index2', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
     /**
      * Displays a single Subject model.
      * @param integer $subject_id
@@ -49,10 +117,10 @@ class SubjectController extends Controller
      * @param integer $scholar_school_school_id
      * @return mixed
      */
-    public function actionView($subject_id, $scholar_scholar_id, $scholar_school_school_id)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($subject_id, $scholar_scholar_id, $scholar_school_school_id),
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -65,8 +133,15 @@ class SubjectController extends Controller
     {
         $model = new Subject();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'subject_id' => $model->subject_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id]);
+        if ($model->load(Yii::$app->request->post())) {
+		
+			$selectSchool = ArrayHelper::map(Scholar::find()
+							->where(['scholar_id'=>$model->scholar_scholar_id])
+							->all(),'school_school_id','school_school_id');
+							$schoolID = array_values($selectSchool)[0];
+			$model->scholar_school_school_id = $schoolID;
+			$model->save();
+            return $this->redirect(['view', 'id' => $model->subject_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -82,12 +157,12 @@ class SubjectController extends Controller
      * @param integer $scholar_school_school_id
      * @return mixed
      */
-    public function actionUpdate($subject_id, $scholar_scholar_id, $scholar_school_school_id)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($subject_id, $scholar_scholar_id, $scholar_school_school_id);
+        $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'subject_id' => $model->subject_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id]);
+            return $this->redirect(['view', 'id' => $model->subject_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -103,9 +178,9 @@ class SubjectController extends Controller
      * @param integer $scholar_school_school_id
      * @return mixed
      */
-    public function actionDelete($subject_id, $scholar_scholar_id, $scholar_school_school_id)
+    public function actionDelete($id)
     {
-        $this->findModel($subject_id, $scholar_scholar_id, $scholar_school_school_id)->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
@@ -119,9 +194,9 @@ class SubjectController extends Controller
      * @return Subject the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($subject_id, $scholar_scholar_id, $scholar_school_school_id)
+    protected function findModel($id)
     {
-        if (($model = Subject::findOne(['subject_id' => $subject_id, 'scholar_scholar_id' => $scholar_scholar_id, 'scholar_school_school_id' => $scholar_school_school_id])) !== null) {
+        if (($model = Subject::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
