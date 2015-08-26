@@ -50,10 +50,17 @@ class Incentive extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'incentive_id' => 'Incentive ID',
+/*             'incentive_id' => 'Incentive ID',
             'scholar_scholar_id' => 'Scholar Scholar ID',
             'scholar_school_school_id' => 'Scholar School School ID',
             'scholar_allowance_allowance_area' => 'Scholar Allowance Allowance Area',
+            'incentive_amount' => 'Incentive Amount',
+            'incentive_remark' => 'Incentive Remark',
+            'incentive_date' => 'Incentive Date', */
+			'incentive_id' => 'Incentive ID',
+            'scholar_scholar_id' => 'Scholar ID',
+            'scholar_school_school_id' => 'School ID',
+            'scholar_allowance_allowance_area' => 'Allowance Area',
             'incentive_amount' => 'Incentive Amount',
             'incentive_remark' => 'Incentive Remark',
             'incentive_date' => 'Incentive Date',

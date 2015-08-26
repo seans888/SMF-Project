@@ -46,12 +46,19 @@ class Upload extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-			'file' => 'File',
+/* 			'file' => 'File',
             'upload_id' => 'Upload ID',
             'scholar_scholar_id' => 'Scholar Scholar ID',
             'scholar_school_school_id' => 'Scholar School School ID',
             'upload_form' => 'Upload Form',
+            'upload_file_name' => 'Upload File Name', */
+			'file' => 'File',
+            'upload_id' => 'Upload ID',
+            'scholar_scholar_id' => 'Scholar ID',
+            'scholar_school_school_id' => 'School ID',
+            'upload_form' => 'Upload Form',
             'upload_file_name' => 'Upload File Name',
+			
         ];
     }
 

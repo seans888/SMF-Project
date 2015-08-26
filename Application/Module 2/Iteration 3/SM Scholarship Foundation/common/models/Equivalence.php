@@ -50,7 +50,8 @@ class Equivalence extends \yii\db\ActiveRecord
     {
         return [
             'equivalence_id' => 'Equivalence ID',
-            'school_school_id' => 'School School ID',
+            //'school_school_id' => 'School School ID',
+			'school_school_id' => 'School ID',
             'equivalence_numerical_grade' => 'Equivalence Numerical Grade',
             'equivalence_letter_grade' => 'Equivalence Letter Grade',
             'equivalence_percentile_lower' => 'Equivalence Percentile Lower',

@@ -55,7 +55,7 @@ class Tuition extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-			'schoolName' => 'School Name',
+/* 			'schoolName' => 'School Name',
 			'firstName' => 'First Name',
             'middleName' => 'Middle Name',
 			'lastName' => 'Last Name',
@@ -68,7 +68,21 @@ class Tuition extends \yii\db\ActiveRecord
             'tuition_enrollment_date' => 'Tuition Enrollment Date',
             'tuition_amount' => 'Tuition Amount',
             'tuition_paid_status' => 'Tuition Paid Status',
-            'tuition_payment_date' => 'Tuition Payment Date',
+            'tuition_payment_date' => 'Tuition Payment Date', */
+			'schoolName' => 'School Name',
+			'firstName' => 'First Name',
+            'middleName' => 'Middle Name',
+			'lastName' => 'Last Name',
+			'tuition_id' => 'Tuition ID',
+            'scholar_scholar_id' => 'Scholar ID',
+            'scholar_school_school_id' => 'School ID',
+            'tuition_term' => 'Term',
+            'tuition_school_year_start' => 'Year Start',
+            'tuition_school_year_end' => 'Year End',
+            'tuition_enrollment_date' => 'Enrollment Date',
+            'tuition_amount' => 'Tuition Amount',
+            'tuition_paid_status' => 'Paid Status',
+            'tuition_payment_date' => 'Payment Date',
         ];
     }
 

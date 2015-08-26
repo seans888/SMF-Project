@@ -49,13 +49,20 @@ class Withholding extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'withholding_id' => 'Withholding ID',
+/*             'withholding_id' => 'Withholding ID',
             'scholar_scholar_id' => 'Scholar Scholar ID',
             'scholar_school_school_id' => 'Scholar School School ID',
             'scholar_allowance_allowance_area' => 'Scholar Allowance Allowance Area',
             'withholding_start_date' => 'Withholding Start Date',
             'withholding_end_date' => 'Withholding End Date',
-            'withholding_remark' => 'Withholding Remark',
+            'withholding_remark' => 'Withholding Remark', */
+            'withholding_id' => 'Withholding ID',
+            'scholar_scholar_id' => 'Scholar ID',
+            'scholar_school_school_id' => 'School ID',
+            'scholar_allowance_allowance_area' => 'Area',
+            'withholding_start_date' => 'Start Date',
+            'withholding_end_date' => 'End Date',
+            'withholding_remark' => 'Remark',
         ];
     }
 

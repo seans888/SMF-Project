@@ -52,8 +52,10 @@ class Deduction extends \yii\db\ActiveRecord
     {
         return [
             'deduction_id' => 'Deduction ID',
-            'scholar_scholar_id' => 'Scholar Scholar ID',
-            'scholar_school_school_id' => 'Scholar School School ID',
+            //'scholar_scholar_id' => 'Scholar Scholar ID',
+			'scholar_scholar_id' => 'Scholar ID',
+            //'scholar_school_school_id' => 'Scholar School School ID',
+			'scholar_school_school_id' => 'School ID',
             'deduction_date' => 'Deduction Date',
             'deduction_amount' => 'Deduction Amount',
             'deduction_remark' => 'Deduction Remark',
