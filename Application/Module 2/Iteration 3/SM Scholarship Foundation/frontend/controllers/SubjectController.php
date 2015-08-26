@@ -11,7 +11,7 @@ use yii\filters\VerbFilter;
 use common\models\User;
 use common\models\Scholar;
 use common\models\GroupGrade;
-
+use yii\helpers\ArrayHelper;
 /**
  * SubjectController implements the CRUD actions for Subject model.
  */
@@ -134,13 +134,14 @@ class SubjectController extends Controller
 					// if($flag = $modelCustomer->save(false)){
                         foreach ($modelsAddress as $modelAddress) {
                             $modelAddress->scholar_scholar_id = $modelCustomer->scholar_scholar_id;
-							$modelAddress->grade_school_year_start = $modelCustomer->grade_school_year_start;
-							$modelAddress->grade_school_year_end = $modelCustomer->grade_school_year_end;
+							$modelAddress->subject_term = $modelCustomer->subject_term;
+							// $modelAddress->grade_school_year_start = $modelCustomer->grade_school_year_start;
+							// $modelAddress->grade_school_year_end = $modelCustomer->grade_school_year_end;
 							$selectSchool = ArrayHelper::map(Scholar::find()
 							->where(['scholar_id'=>$modelAddress->scholar_scholar_id])
 							->all(),'school_school_id','school_school_id');
 							$schoolID = array_values($selectSchool)[0];
-							$modelAddress->subject_scholar_school_school_id = $schoolID;
+							$modelAddress->scholar_school_school_id = $schoolID;
                             if (! ($flag = $modelAddress->save(false))) {
 								
                                 $transaction->rollBack();
@@ -149,9 +150,9 @@ class SubjectController extends Controller
                         }
                     // }
                     if ($flag) {
-			if($modelCustomer->subject_subject_id==null)
+			if($modelCustomer->subject_name==null)
 			{
-				$sql = "DELETE FROM subject WHERE subject_subject_id is null;";
+				$sql = "DELETE FROM subject WHERE subject_name is null;";
 				Yii::$app->db->createCommand($sql)->execute();
 			}
                         $transaction->commit();
