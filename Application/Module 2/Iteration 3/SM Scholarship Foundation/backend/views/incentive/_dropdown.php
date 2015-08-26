@@ -14,13 +14,13 @@ $this->params['breadcrumbs'][] = $this->title;
 <?php // echo $this->render('_search', ['model' => $searchModel]);
 $exportedValues =
 	[
-		['class' => 'yii\grid\SerialColumn'],
+		['class' => 'kartik\grid\SerialColumn'],
 		
             'incentive_amount',
 			'incentive_remark',
 			'incentive_date',
 		
-		['class' => 'yii\grid\ActionColumn'],
+		['class' => 'kartik\grid\ActionColumn'],
 	];
 	
 	$export = ExportMenu::widget([
@@ -42,13 +42,17 @@ $exportedValues =
 ?>
 				
 <div class="incentive-index">
-	
-	<h1><?= Html::encode($this->title) ?></h1>
+
 	<?php ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+		'pjax' => true,
+		'pjaxSettings' => 
+		[
+			'neverTimeout' => true
+		],
         'columns' => $exportedValues,
 		// 'toolbar'=> [
 		// [
