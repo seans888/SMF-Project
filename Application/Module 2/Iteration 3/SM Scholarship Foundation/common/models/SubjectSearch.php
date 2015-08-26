@@ -15,6 +15,7 @@ class SubjectSearch extends Subject
     /**
      * @inheritdoc
      */
+
     public function rules()
     {
         return [
@@ -55,6 +56,7 @@ class SubjectSearch extends Subject
             // $query->where('0=1');
             return $dataProvider;
         }
+		
 
         $query->andFilterWhere([
             'subject_id' => $this->subject_id,
@@ -68,6 +70,8 @@ class SubjectSearch extends Subject
             ->andFilterWhere(['like', 'subject_taken_status', $this->subject_taken_status])
             ->andFilterWhere(['like', 'subject_approval_status', $this->subject_approval_status])
             ->andFilterWhere(['like', 'subject_approved_by', $this->subject_approved_by]);
+			
+	
 
         return $dataProvider;
     }
