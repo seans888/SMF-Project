@@ -49,7 +49,7 @@ DashboardAsset::register($this);
                         <a class="page-scroll" href="<?php echo 'index.php?r=scholar/index'?>"><font style="color:#e6e600">Profile</font></a>
                     </li>
 					 <li>
-                        <a class="page-scroll" href="<?php echo 'index.php?r=scholar/create'?>"><font style="color:#e6e600">Subject List</font></a>
+                        <a class="page-scroll" href="<?php echo 'index.php?r=subject/subjectcreate'?>"><font style="color:#e6e600">Subject List</font></a>
                     </li>
 					 <li>
                         <a class="page-scroll" href="<?php echo 'index.php?r=scholar/create'?>"><font style="color:#e6e600">Records</font></a>

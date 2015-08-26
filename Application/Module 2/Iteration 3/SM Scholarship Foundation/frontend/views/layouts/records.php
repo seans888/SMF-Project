@@ -49,7 +49,7 @@ DashboardAsset::register($this);
                         <a class="page-scroll" href="<?php echo 'index.php?r=scholar/index'?>"><font style="color:#e6e600">Profile</font></a>
                     </li>
 					 <li>
-                        <a class="page-scroll" href="<?php echo 'index.php?r=scholar/create'?>"><font style="color:#e6e600">Subject List</font></a>
+                        <a class="page-scroll" href="<?php echo 'index.php?r=subject/subjectcreate'?>"><font style="color:#e6e600">Subject List</font></a>
                     </li>
 					 <li>
                         <a class="page-scroll" href="<?php echo 'index.php?r=scholar/create'?>"><font style="color:#e6e600">Records</font></a>
@@ -99,7 +99,7 @@ DashboardAsset::register($this);
             </div>
              <div class="row">
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="<?php echo'index.php?r=grade/index'?>" class="portfolio-link" data-toggle="modal">
+                    <a href="<?php echo'index.php?r=subject/index'?>" class="portfolio-link" data-toggle="modal">
                         
                         <img src="img/portfolio/c.png" class="img-responsive" alt="" style="height:250px">
                     </a>
