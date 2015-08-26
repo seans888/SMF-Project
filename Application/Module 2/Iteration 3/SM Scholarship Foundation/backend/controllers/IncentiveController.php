@@ -41,7 +41,18 @@ class IncentiveController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
+	
+	public function actionIndex2()
+    {
+        $searchModel = new IncentiveSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+        return $this->render('index2', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+	
     /**
      * Displays a single Incentive model.
      * @param integer $incentive_id
