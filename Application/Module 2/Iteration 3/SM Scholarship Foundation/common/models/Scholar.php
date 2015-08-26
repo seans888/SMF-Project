@@ -78,7 +78,7 @@ class Scholar extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'scholar_id' => 'Scholar ID',
+/*             'scholar_id' => 'Scholar ID',
             'school_school_id' => 'School School ID',
             'scholar_first_name' => 'Scholar First Name',
             'scholar_middle_name' => 'Scholar Middle Name',
@@ -92,6 +92,23 @@ class Scholar extends \yii\db\ActiveRecord
             'scholar_contact_number' => 'Scholar Contact Number',
             'scholar_vendor_code' => 'Scholar Vendor Code',
             'scholar_cash_card_number' => 'Scholar Cash Card Number',
+            'scholar_type' => 'Scholar Type',
+            'scholar_sponsor' => 'Scholar Sponsor',
+            'allowance_allowance_area' => 'Allowance Allowance Area', */
+            'scholar_id' => 'Scholar ID',
+            'school_school_id' => 'School ID',
+            'scholar_first_name' => 'First Name',
+            'scholar_middle_name' => 'Middle Name',
+            'scholar_last_name' => 'Last Name',
+            'scholar_gender' => 'Gender',
+            'scholar_address' => 'Address',
+            'scholar_course' => 'Course',
+            'scholar_graduate_status' => 'Graduate Status',
+            'scholar_year_level' => 'Year Level',
+            'scholar_contact_email' => 'Contact Email',
+            'scholar_contact_number' => 'Contact Number',
+            'scholar_vendor_code' => 'Vendor Code',
+            'scholar_cash_card_number' => 'Cash Card Number',
             'scholar_type' => 'Scholar Type',
             'scholar_sponsor' => 'Scholar Sponsor',
             'allowance_allowance_area' => 'Allowance Allowance Area',

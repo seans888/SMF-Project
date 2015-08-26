@@ -48,13 +48,20 @@ class Failures extends \yii\db\ActiveRecord
     {
         return [
             'fail_id' => 'Fail ID',
-            'fail_subject' => 'Fail Subject',
-            'fail_units' => 'Fail Units',
-            'fail_scholar_id' => 'Fail Scholar ID',
-            'fail_school_id' => 'Fail School ID',
-            'failures_scholar_lastName' => 'Failures Scholar Last Name',
+            //'fail_subject' => 'Fail Subject',
+			'fail_subject' => 'Subject Failed',
+            //'fail_units' => 'Fail Units',
+			'fail_units' => '# of Units Failed',
+            //'fail_scholar_id' => 'Fail Scholar ID',
+			'fail_scholar_id' => 'Scholar ID',
+            //'fail_school_id' => 'Fail School ID',
+			'fail_school_id' => 'School ID',
+            /* 'failures_scholar_lastName' => 'Failures Scholar Last Name',
             'failures_scholar_firstName' => 'Failures Scholar First Name',
-            'failures_scholar_middleName' => 'Failures Scholar Middle Name',
+            'failures_scholar_middleName' => 'Failures Scholar Middle Name', */
+			'failures_scholar_lastName' => 'Scholar Last Name',
+            'failures_scholar_firstName' => 'Scholar First Name',
+            'failures_scholar_middleName' => 'Scholar Middle Name',
         ];
     }
 

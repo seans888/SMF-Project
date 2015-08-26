@@ -53,9 +53,18 @@ class Subject extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'subject_id' => 'Subject ID',
+/*             'subject_id' => 'Subject ID',
             'scholar_scholar_id' => 'Scholar Scholar ID',
             'scholar_school_school_id' => 'Scholar School School ID',
+            'subject_term' => 'Subject Term',
+            'subject_name' => 'Subject Name',
+            'subject_units' => 'Subject Units',
+            'subject_taken_status' => 'Subject Taken Status',
+            'subject_approval_status' => 'Subject Approval Status',
+            'subject_approved_by' => 'Subject Approved By', */
+            'subject_id' => 'Subject ID',
+            'scholar_scholar_id' => 'Scholar ID',
+            'scholar_school_school_id' => 'School ID',
             'subject_term' => 'Subject Term',
             'subject_name' => 'Subject Name',
             'subject_units' => 'Subject Units',

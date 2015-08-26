@@ -44,7 +44,8 @@ class Email extends \yii\db\ActiveRecord
     {
         return [
             'email_id' => 'Email ID',
-            'email_scholar_id' => 'Email Scholar ID',
+            //'email_scholar_id' => 'Email Scholar ID',
+			'email_scholar_id' => 'Scholar ID',
             'subject' => 'Subject',
             'content' => 'Content',
         ];

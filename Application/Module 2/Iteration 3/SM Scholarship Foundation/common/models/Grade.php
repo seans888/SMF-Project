@@ -55,7 +55,7 @@ class Grade extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-			'takenStatus' => 'Taken Status',
+/* 			'takenStatus' => 'Taken Status',
 			'firstName' => 'First Name',
             'middleName' => 'Middle Name',
 			'lastName' => 'Last Name',
@@ -67,7 +67,20 @@ class Grade extends \yii\db\ActiveRecord
             'grade_school_year_end' => 'Grade School Year End',
             'grade_raw_grade' => 'Grade Raw Grade',
             'grade_approval_status' => 'Grade Approval Status',
-            'grade_approved_by' => 'Grade Approved By',
+            'grade_approved_by' => 'Grade Approved By', */
+			'takenStatus' => 'Taken Status',
+			'firstName' => 'Scholar First Name',
+            'middleName' => 'Scholar Middle Name',
+			'lastName' => 'Scholar Last Name',
+			'grade_id' => 'Grade ID',
+            'subject_subject_id' => 'Subject ID',
+            'subject_scholar_scholar_id' => 'Scholar ID',
+            'subject_scholar_school_school_id' => 'School ID',
+            'grade_school_year_start' => 'School Year Start',
+            'grade_school_year_end' => 'School Year End',
+            'grade_raw_grade' => 'Raw Grade',
+            'grade_approval_status' => 'Approval Status',
+            'grade_approved_by' => 'Approved By',
         ];
     }
 
