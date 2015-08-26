@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
+use common\models\ScholarSearch;
 use common\models\Deduction;
 use common\models\DeductionSearch;
 use yii\web\Controller;
@@ -32,7 +33,7 @@ class DeductionController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new DeductionSearch();
+        $searchModel = new ScholarSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -40,7 +41,16 @@ class DeductionController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
+    public function actionIndex2()
+    {
+        $searchModel = new DeductionSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+        return $this->render('index2', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
     /**
      * Displays a single Deduction model.
      * @param integer $deduction_id
