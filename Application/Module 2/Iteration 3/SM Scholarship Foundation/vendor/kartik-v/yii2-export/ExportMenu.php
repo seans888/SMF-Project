@@ -874,12 +874,17 @@ class ExportMenu extends GridView
                 'writer' => 'HTML'
             ],
             self::FORMAT_CSV => [
-                'label' => Yii::t('kvexport', 'CSV'),
-                'icon' => $isFa ? 'file-code-o' : 'floppy-open',
-                'iconOptions' => ['class' => 'text-primary'],
+                // 'label' => Yii::t('kvexport', 'CSV'),
+				'label' => Yii::t('kvexport', 'Excel/CSV'),
+                // 'icon' => $isFa ? 'file-code-o' : 'floppy-open',
+				'icon' => $isFa ? 'file-excel-o' : 'floppy-remove',
+                // 'iconOptions' => ['class' => 'text-primary'],
+				'iconOptions' => ['class' => 'text-success'],
                 'linkOptions' => [],
-                'options' => ['title' => Yii::t('kvexport', 'Comma Separated Values')],
-                'alertMsg' => Yii::t('kvexport', 'The CSV export file will be generated for download.'),
+                // 'options' => ['title' => Yii::t('kvexport', 'Comma Separated Values')],
+				'options' => ['title' => Yii::t('kvexport', 'Comma Separated Values(can be opened using Excel)')],
+                // 'alertMsg' => Yii::t('kvexport', 'The CSV export file will be generated for download.'),
+				'alertMsg' => Yii::t('kvexport', 'The CSV/Excel export file will be generated for download.'),
                 'mime' => 'application/csv',
                 'extension' => 'csv',
                 'writer' => 'CSV'
