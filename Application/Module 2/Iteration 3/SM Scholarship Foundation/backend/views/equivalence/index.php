@@ -20,12 +20,40 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'kartik\grid\SerialColumn'],
 
             // 'equivalence_id',
-            'equivalence_numerical_grade',
-            'equivalence_letter_grade',
-            'equivalence_percentile_lower',
-            'equivalence_percentile_upper',
-            'equivalence_school_rating',
-            'equivalence_foundation_rating',
+			// [
+				// 'attribute' => 'school_school_id',
+				// 'value' => 'schoolSchool.school_name'
+			// ],
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'equivalence_numerical_grade',
+			],
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'equivalence_letter_grade',
+			],
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'equivalence_percentile_lower',
+			],
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'equivalence_percentile_upper',
+			],
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'equivalence_school_rating',
+			],
+			[
+				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'equivalence_foundation_rating',
+				'editableOptions' => [
+					'inputType' => 'dropDownList',
+					'pluginOptions'=>['allowClear'=>true],
+					'data' => ["PASS"=>"PASS","FAIL"=>"FAIL"],
+					'widgetClass'=> 'kartik\select2\Select2',
+				],
+			],
 
             ['class' => 'kartik\grid\ActionColumn'],
         ],
