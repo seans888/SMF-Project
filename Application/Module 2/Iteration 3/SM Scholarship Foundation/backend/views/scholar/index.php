@@ -26,7 +26,10 @@ $this->params['breadcrumbs'][] = $this->title;
 $exportedValues = 
 [            
 	['class' => 'kartik\grid\SerialColumn'],
-	'scholar_id',
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'scholar_id',
+	],
 	[
 		'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'scholar_first_name',
@@ -79,10 +82,10 @@ $exportedValues =
 			'widgetClass'=> 'kartik\select2\Select2',
 		],
 	],
-	[
-		'class' => 'kartik\grid\EditableColumn',
-		'attribute' => 'scholar_vendor_code',
-	],
+	// [
+		// 'class' => 'kartik\grid\EditableColumn',
+		// 'attribute' => 'scholar_vendor_code',
+	// ],
 	[
 		'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'scholar_type',
