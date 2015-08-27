@@ -7,7 +7,7 @@ $exportedValues =
 [            
 	['class' => 'kartik\grid\SerialColumn'],
 
-	'equivalence_id',
+	// 'equivalence_id',
 	[
 		'attribute' => 'school_school_id',
 		'value' => 'schoolSchool.school_name'

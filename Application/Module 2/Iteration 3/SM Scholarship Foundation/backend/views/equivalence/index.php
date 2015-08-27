@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'kartik\grid\SerialColumn'],
 
-            'equivalence_id',
+            // 'equivalence_id',
             'equivalence_numerical_grade',
             'equivalence_letter_grade',
             'equivalence_percentile_lower',
