@@ -9,7 +9,7 @@ use common\models\DeductionSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\helpers\Json;
 /**
  * DeductionController implements the CRUD actions for Deduction model.
  */
@@ -35,7 +35,25 @@ class DeductionController extends Controller
     {
         $searchModel = new ScholarSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$deductionId = Yii::$app->request->post('editableKey');
+			$deduction = Deduction::findOne($deductionId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Deduction']);
+			$post['Deduction'] = $posted;
+			
+			if($deduction->load($post))
+			{
+				$deduction->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -45,7 +63,25 @@ class DeductionController extends Controller
     {
         $searchModel = new DeductionSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$deductionId = Yii::$app->request->post('editableKey');
+			$deduction = Deduction::findOne($deductionId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Deduction']);
+			$post['Deduction'] = $posted;
+			
+			if($deduction->load($post))
+			{
+				$deduction->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('index2', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
