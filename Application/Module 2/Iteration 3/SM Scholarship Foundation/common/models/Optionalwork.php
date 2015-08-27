@@ -71,7 +71,7 @@ class Optionalwork extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getScholarSchoolSchool()
+    public function getSchoolSchool()
     {
         return $this->hasOne(School::className(), ['school_id' => 'scholar_school_school_id']);
     }
