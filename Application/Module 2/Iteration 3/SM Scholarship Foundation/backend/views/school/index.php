@@ -58,6 +58,28 @@ $exportedValues =
 
 	['class' => 'kartik\grid\ActionColumn'],
 ];
+$gridColumns = 
+[            
+	['class' => 'kartik\grid\SerialColumn'],
+	'school_id',
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'school_name',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'school_area',
+		'editableOptions' => [
+			'inputType' => '\kartik\select2\Select2',
+			'options'=>
+			[
+				'data' => ['NCR'=>'NCR','Provincial'=>'Provincial'],
+			],
+		],
+	],
+
+	['class' => 'kartik\grid\ActionColumn'],
+];
 
 $export = ExportMenu::widget([
 		'dataProvider' => $dataProvider,
@@ -95,7 +117,7 @@ $export = ExportMenu::widget([
     			return['class'=>'ncr-row'];
     		}
     	},
-        'columns' => $exportedValues,
+        'columns' => $gridColumns,
 		'toolbar'=> [
         ['content'=>Html::a('Create School', ['create'], ['class' => 'btn btn-success'])
         ],
