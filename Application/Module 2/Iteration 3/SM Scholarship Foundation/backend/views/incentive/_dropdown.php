@@ -25,9 +25,22 @@ $exportedValues =
 			'attribute' => 'incentive_remark',
 		],
 		[
-			'class' => 'kartik\grid\EditableColumn',
-			'attribute' => 'incentive_date',
-		],
+				'class' => 'kartik\grid\EditableColumn',
+            	'attribute'=>'incentive_date',
+				'editableOptions' => [
+					'inputType' => 'widget',
+					'options'=>
+					[
+						'model' => $searchModel,
+
+							'clientOptions' => [
+								'autoclose' => true,
+								'format' => 'yyyy-mm-dd',
+							]
+					],
+					'widgetClass'=>'dosamigos\datepicker\DatePicker'
+				],
+            ],
 		
 		['class' => 'kartik\grid\ActionColumn'],
 	];
