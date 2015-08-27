@@ -21,21 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="grade-index">
 
     <center><h1 style="margin-top:100px;"><?= Html::encode($this->title) ?></h1></center><br>
-	<?php 
-	 
-	ob_start();
-			$model = new Subject();
-            $searchModel = new SubjectSearch();
-            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-            echo $this->render('/subject/index',[
-                'model'=>$model,
-                'dataProvider'=>$dataProvider,
-                'searchModel'   =>$searchModel,
-            ]);
- 
-	$TabContent=ob_get_clean();
 	
-	?>
   <?php 
    $items = [
    
@@ -49,9 +35,14 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             
-            'scholar_scholar_id',
-            'subject_term',
-            'subject_name',
+            'subjectSubject.subject_term',
+            
+            'subjectSubject.subject_name',
+			
+			
+            'subjectSubject.subject_units',
+			
+			'grade_raw_grade',
 		
             // 'subject_units',
             // 'subject_taken_status',
