@@ -18,10 +18,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Scholar', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
 <?php
 $exportedValues = 
 [            
