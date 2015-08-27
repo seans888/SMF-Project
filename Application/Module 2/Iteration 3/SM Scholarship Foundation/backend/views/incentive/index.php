@@ -112,11 +112,11 @@ $export = ExportMenu::widget([
         'columns' => $exportedValues,
 		'toolbar'=> [
 			[
-				'content'=>Html::a('Create Scholar', ['create'], ['class' => 'btn btn-success'])
+				'content'=>Html::a('Create Incentive', ['create'], ['class' => 'btn btn-success'])
 			],
   //     	'{export}',
 			'{toggleData}',
-			$export
+			// $export
 		],
  //   set export properties
     'export'=>[
