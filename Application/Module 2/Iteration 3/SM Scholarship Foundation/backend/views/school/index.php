@@ -13,12 +13,8 @@ $this->title = 'Schools';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="school-index">
+<h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-        <br>
-	<p><h3><span style="background-color: #e7bd58"><b>Orange</b> rows are schools from NCR Areas</p></span>
-	<p><h3><span style="background-color: #57dbee"><b>Blue</b> rows are schools from Provincial Areas</span></h3>
-	</p>
-
 <?php
 $exportedValues = 
 [            
@@ -85,6 +81,10 @@ $export = ExportMenu::widget([
 		'dataProvider' => $dataProvider,
         'columns' => $exportedValues,
 		'noExportColumns'=>[8],
+		'exportConfig'=>[
+			'Excel5'=>false,
+			'Excel2007'=>false,
+		],
         'columnSelectorOptions'=>[
             'label' => 'Columns',
             'class' => 'btn btn-danger'
