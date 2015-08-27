@@ -52,12 +52,12 @@ class Equivalence extends \yii\db\ActiveRecord
             'equivalence_id' => 'Equivalence ID',
             //'school_school_id' => 'School School ID',
 			'school_school_id' => 'School ID',
-            'equivalence_numerical_grade' => 'Equivalence Numerical Grade',
-            'equivalence_letter_grade' => 'Equivalence Letter Grade',
-            'equivalence_percentile_lower' => 'Equivalence Percentile Lower',
-            'equivalence_percentile_upper' => 'Equivalence Percentile Upper',
-            'equivalence_school_rating' => 'Equivalence School Rating',
-            'equivalence_foundation_rating' => 'Equivalence Foundation Rating',
+            'equivalence_numerical_grade' => 'Numerical Grade',
+            'equivalence_letter_grade' => 'Letter Grade',
+            'equivalence_percentile_lower' => 'Percentile Lower',
+            'equivalence_percentile_upper' => 'Percentile Upper',
+            'equivalence_school_rating' => 'School Rating',
+            'equivalence_foundation_rating' => 'Foundation Rating',
         ];
     }
 
