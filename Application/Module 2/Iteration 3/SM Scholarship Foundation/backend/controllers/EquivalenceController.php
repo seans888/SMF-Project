@@ -9,7 +9,7 @@ use common\models\SchoolSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\helpers\Json;
 /**
  * EquivalenceController implements the CRUD actions for Equivalence model.
  */
@@ -35,7 +35,25 @@ class EquivalenceController extends Controller
     {
         $searchModel = new SchoolSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$equivalenceId = Yii::$app->request->post('editableKey');
+			$equivalence = Equivalence::findOne($equivalenceId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Equivalence']);
+			$post['Equivalence'] = $posted;
+			
+			if($equivalence->load($post))
+			{
+				$equivalence->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('groupschool', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -45,7 +63,25 @@ class EquivalenceController extends Controller
     {
         $searchModel = new EquivalenceSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$equivalenceId = Yii::$app->request->post('editableKey');
+			$equivalence = Equivalence::findOne($equivalenceId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Equivalence']);
+			$post['Equivalence'] = $posted;
+			
+			if($equivalence->load($post))
+			{
+				$equivalence->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('index2', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
