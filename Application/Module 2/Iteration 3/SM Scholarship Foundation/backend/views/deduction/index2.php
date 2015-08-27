@@ -48,7 +48,7 @@ $exportedValues =
 	<h1><?= Html::encode($this->title) ?></h1>
 	<?php ?>
 <?= Html::a('Group By Scholar', ['index'], ['class' => 'btn btn-success']) ?>
-<?= Html::a('Show Only Incentive Records', ['index2'], ['class' => 'btn btn-success']) ?>
+<?= Html::a('Show Only Deduction Records', ['index2'], ['class' => 'btn btn-success']) ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,

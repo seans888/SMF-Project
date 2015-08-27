@@ -11,7 +11,7 @@ use common\models\DeductionSearch;
 /* @var $searchModel common\models\ScholarSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Incentives';
+$this->title = 'Deductions';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="scholar-index">
@@ -48,28 +48,28 @@ $exportedValues =
 	[
 		'attribute' => 'scholar_last_name',
 	],
-	[
-		'attribute' => 'scholar_gender',
-	],
-	[
-		'attribute' => 'scholar_course',
-	],
-	[
-		'attribute'=>'school_school_id',
-		'value'=>'schoolSchool.school_name',
-	],
-	[
-		'attribute' => 'scholar_year_level',
-	],
-	[
-		'attribute' => 'scholar_graduate_status',
-	],
-	[
-		'attribute' => 'scholar_vendor_code',
-	],
-	[
-		'attribute' => 'scholar_type',
-	],
+	// [
+		// 'attribute' => 'scholar_gender',
+	// ],
+	// [
+		// 'attribute' => 'scholar_course',
+	// ],
+	// [
+		// 'attribute'=>'school_school_id',
+		// 'value'=>'schoolSchool.school_name',
+	// ],
+	// [
+		// 'attribute' => 'scholar_year_level',
+	// ],
+	// [
+		// 'attribute' => 'scholar_graduate_status',
+	// ],
+	// [
+		// 'attribute' => 'scholar_vendor_code',
+	// ],
+	// [
+		// 'attribute' => 'scholar_type',
+	// ],
 ];
 
 $export = ExportMenu::widget([
@@ -89,7 +89,7 @@ $export = ExportMenu::widget([
 	]);
 ?>
 <?= Html::a('Group By Scholar', ['index'], ['class' => 'btn btn-success']) ?>
-<?= Html::a('Show Only Incentive Records', ['index2'], ['class' => 'btn btn-success']) ?>
+<?= Html::a('Show Only Deduction Records', ['index2'], ['class' => 'btn btn-success']) ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -112,11 +112,11 @@ $export = ExportMenu::widget([
         'columns' => $exportedValues,
 		'toolbar'=> [
 			[
-				'content'=>Html::a('Create Scholar', ['create'], ['class' => 'btn btn-success'])
+				'content'=>Html::a('Create Deduction', ['create'], ['class' => 'btn btn-success'])
 			],
   //     	'{export}',
 			'{toggleData}',
-			$export
+			// $export
 		],
  //   set export properties
     'export'=>[
