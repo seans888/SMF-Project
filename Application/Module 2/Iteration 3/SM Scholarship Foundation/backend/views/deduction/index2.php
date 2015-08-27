@@ -16,11 +16,40 @@ $exportedValues =
 	[
 		['class' => 'yii\grid\SerialColumn'],
 		
-			'deduction_id',
-            'scholar_scholar_id',
-            'scholar_school_school_id',
-            'deduction_date',
-            'deduction_amount',
+		[
+			'class' => 'kartik\grid\EditableColumn',
+			'attribute' => 'scholar_scholar_id',
+		],
+		[
+			'class' => 'kartik\grid\EditableColumn',
+			'attribute' => 'scholar_school_school_id',
+			'value' => 'schoolSchool.school_name',
+		],
+		[
+				'class' => 'kartik\grid\EditableColumn',
+            	'attribute'=>'deduction_date',
+				'editableOptions' => [
+					'inputType' => 'widget',
+					'options'=>
+					[
+						'model' => $searchModel,
+
+							'clientOptions' => [
+								'autoclose' => true,
+								'format' => 'yyyy-mm-dd',
+							]
+					],
+					'widgetClass'=>'dosamigos\datepicker\DatePicker'
+				],
+        ],
+		[
+			'class' => 'kartik\grid\EditableColumn',
+			'attribute' => 'deduction_amount',
+		],
+		[
+			'class' => 'kartik\grid\EditableColumn',
+			'attribute' => 'deduction_remark',
+		],
 		
 		['class' => 'yii\grid\ActionColumn'],
 	];
