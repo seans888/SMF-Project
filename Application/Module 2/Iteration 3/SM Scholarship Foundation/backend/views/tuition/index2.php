@@ -108,6 +108,10 @@ $exportedValues =
 $export = ExportMenu::widget([
 		'dataProvider' => $dataProvider,
         'columns' => $exportedValues,
+		'exportConfig'=>[
+			'Excel5'=>false,
+			'Excel2007'=>false,
+		],
 		'noExportColumns'=>[13],
         'columnSelectorOptions'=>[
             'label' => 'Columns',
