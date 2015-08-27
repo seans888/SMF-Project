@@ -25,7 +25,11 @@ $exportedValues =
 $export = ExportMenu::widget([
 		'dataProvider' => $dataProvider,
         'columns' => $exportedValues,
-		// 'noExportColumns'=>[11],
+		'exportConfig'=>[
+			'Excel5'=>false,
+			'Excel2007'=>false,
+		],
+		'noExportColumns'=>[9],
         'columnSelectorOptions'=>[
             'label' => 'Columns',
             'class' => 'btn btn-danger'
