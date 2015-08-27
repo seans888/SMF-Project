@@ -31,14 +31,14 @@ $gridColumn =
 		'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'tuition_term',
 	],
-	[
-		'class' => 'kartik\grid\EditableColumn',
-		'attribute' => 'tuition_school_year_start',
-	],
-	[
-		'class' => 'kartik\grid\EditableColumn',
-		'attribute' => 'tuition_school_year_end',
-	],
+	// [
+		// 'class' => 'kartik\grid\EditableColumn',
+		// 'attribute' => 'tuition_school_year_start',
+	// ],
+	// [
+		// 'class' => 'kartik\grid\EditableColumn',
+		// 'attribute' => 'tuition_school_year_end',
+	// ],
 	[
 		'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'tuition_enrollment_date',
@@ -53,11 +53,11 @@ $gridColumn =
 		'attribute' => 'tuition_paid_status',
 		'pageSummary' => true
 	],
-	[
-		'class' => 'kartik\grid\EditableColumn',
-		'attribute' => 'tuition_payment_date',
-		'pageSummary' => true
-	],
+	// [
+		// 'class' => 'kartik\grid\EditableColumn',
+		// 'attribute' => 'tuition_payment_date',
+		// 'pageSummary' => true
+	// ],
 
 	['class' => 'kartik\grid\ActionColumn'],
 ];
