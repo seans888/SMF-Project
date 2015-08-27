@@ -18,7 +18,7 @@ $exportedValues =
 		
             'deduction_date',
             'deduction_amount',
-		
+			'deduction_remark',
 		['class' => 'kartik\grid\ActionColumn'],
 	];
 	
