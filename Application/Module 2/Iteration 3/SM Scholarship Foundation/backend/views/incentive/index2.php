@@ -39,7 +39,7 @@ $exportedValues =
 					],
 					'widgetClass'=>'dosamigos\datepicker\DatePicker'
 				],
-            ],
+        ],
 		
 		['class' => 'yii\grid\ActionColumn'],
 	];
