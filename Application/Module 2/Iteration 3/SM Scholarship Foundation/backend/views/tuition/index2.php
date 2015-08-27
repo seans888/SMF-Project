@@ -68,6 +68,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+		'pjax' => true,
+		'pjaxSettings' => ['neverTimeout' => true],
         'columns' => $exportedValues,
 		'toolbar'=> [
         ['content'=>Html::a('Create Tuition', ['groupcreate'], ['class' => 'btn btn-success'])
