@@ -13,6 +13,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use common\models\GroupGrade;
+use common\models\SubjectSearch;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 
@@ -44,21 +45,52 @@ class GradeController extends Controller
 		$username=Yii::$app->user->identity->username;
 		$users = User::find()->all();
 		$scholars = Scholar::find()->all();
-		$model = new Grade();
+		
 		
 		foreach($users as $user){
 			foreach($scholars as $scholar){
 				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
-					$model->grade_id=$scholar->scholar_id;
-					
-					$searchModel = new GradeSearch($model);
+					$searchModel = new GradeSearch();
 					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-					return $this->render('index', [
-					'searchModel' => $searchModel,
-					'dataProvider' => $dataProvider,
-					]);
+
+					if(Yii::$app->request->post('hasEditable'))
+				{
+			$gradeId = Yii::$app->request->post('editableKey');
+			$grade = Grade::findOne($gradeId);
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Grade']);
+			$post['Grade'] = $posted;
+			
+			if($grade->load($post))
+			{
+				if($grade->grade_approval_status=='Approved')
+				{
+					$grade->grade_approved_by = Yii::$app->user->identity->username;
+				}
+				else
+				{
+					$grade->grade_approved_by = null;
 				}
 
+					$subject = Subject::findOne($grade->subject_subject_id);
+					// $subjectTakenStatus = ArrayHelper::map(Subject::find()
+					// ->where(['subject_id'=>$grade->subject_subject_id])
+					// ->all(),'subject_id','subject_taken_status');
+					$subject->subject_taken_status = $grade->takenStatus;
+					$subject->save();
+				
+				$grade->save();
+			}
+			echo $out;
+			return;
+		}
+		
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+				}
 			}
 		}
     }

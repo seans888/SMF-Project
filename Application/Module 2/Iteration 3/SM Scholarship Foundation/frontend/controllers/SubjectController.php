@@ -57,6 +57,30 @@ class SubjectController extends Controller
 			}
 		}
     }
+	public function actionIndex2()
+    {
+       $username=Yii::$app->user->identity->username;
+		$users = User::find()->all();
+		$scholars = Scholar::find()->all();
+		$model = new Subject();
+		
+		foreach($users as $user){
+			foreach($scholars as $scholar){
+				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
+					$model->scholar_scholar_id=$scholar->scholar_id;
+					$model->scholar_school_school_id=$scholar->school_school_id;
+					
+					$searchModel = new SubjectSearch($model);
+					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+					return $this->render('index', [
+					'searchModel' => $searchModel,
+					'dataProvider' => $dataProvider,
+					]);
+				}
+
+			}
+		}
+    }
 
     /**
      * Displays a single Subject model.
@@ -147,9 +171,7 @@ class SubjectController extends Controller
                                 $transaction->rollBack();
                                 break;
                             }
-                        }
-                    // }
-                    if ($flag) {
+							if ($flag) {
 			if($modelCustomer->subject_name==null)
 			{
 				$sql = "DELETE FROM subject WHERE subject_name is null;";
@@ -158,6 +180,10 @@ class SubjectController extends Controller
                         $transaction->commit();
                         return $this->redirect(['index']);
                     }
+                        }
+                    // }
+					 
+                   
                 } catch (Exception $e) {
                     $transaction->rollBack();
                 }
@@ -228,6 +254,10 @@ class SubjectController extends Controller
 				$sql = "DELETE FROM grade WHERE subject_subject_id is null;";
 				Yii::$app->db->createCommand($sql)->execute();
 			}
+			if($modelCustomer->grade_raw_grade!=null){
+				$sql = "DELETE FROM grade WHERE grade_id=max(grade_id)-1";
+				Yii::$app->db->createCommand($sql)->execute();
+			}
                         $transaction->commit();
                         return $this->redirect(['index']);
                     }
@@ -255,15 +285,20 @@ class SubjectController extends Controller
      */
     public function actionUpdate($id)
     {
+	
         $model = $this->findModel($id);
-
+		if($model->subject_approval_status=='Not Approved'){
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->subject_id]);
+            return $this->redirect(['index', 'id' => $model->subject_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
             ]);
         }
+		}else{
+			\Yii::$app->getSession()->setFlash('error', 'The record has already been reviewed by the SM Foundation');
+			 return $this->redirect(['index', 'id' => $model->subject_id]);
+		}
     }
 
     /**
@@ -274,9 +309,15 @@ class SubjectController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
-
+		
+        $model=$this->findModel($id);
+		if($model->subject_approval_status=='Not Approved'){
+		$model=$this->findModel($id)->delete();
         return $this->redirect(['index']);
+		}else{
+			\Yii::$app->getSession()->setFlash('error', 'The record has already been reviewed by the SM Foundation');
+			return $this->redirect(['index']);
+		}
     }
 
     /**
