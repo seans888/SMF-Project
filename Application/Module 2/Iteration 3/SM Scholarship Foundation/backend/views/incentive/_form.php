@@ -1,7 +1,8 @@
 <?php
-
+use dosamigos\datepicker\DatePicker;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use common\models\School;
 use common\models\Scholar;
 use yii\helpers\ArrayHelper;
 use kartik\select2\Select2;
@@ -22,7 +23,13 @@ use kartik\select2\Select2;
 			'pluginOptions'=>['allowClear'=>true],
 		]) ?>
 
-    <?= $form->field($model, 'scholar_school_school_id')->textInput() ?>
+    <?= $form->field($model,'scholar_school_school_id')->widget(Select2::classname(),
+		[
+			'data'=>ArrayHelper::map(School::find()->all(),'school_id','school_name'),
+			'language'=>'en',
+			'options'=>['placeholder'=>'Select School'],
+			'pluginOptions'=>['allowClear'=>true],
+		]) ?>
 
     <?= $form->field($model, 'scholar_allowance_allowance_area')->dropDownList([ 'NCR' => 'NCR', 'Provincial' => 'Provincial', ], ['prompt' => '']) ?>
 
@@ -30,7 +37,17 @@ use kartik\select2\Select2;
 
     <?= $form->field($model, 'incentive_remark')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'incentive_date')->textInput() ?>
+    <?= $form->field($model, 'incentive_date')->widget(
+			DatePicker::className(), [
+				// inline too, not bad
+				 'inline' => false, 
+				 // modify template for custom rendering
+			//	'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+				'clientOptions' => [
+					'autoclose' => true,
+					'format' => 'yyyy-mm-dd'
+				]
+			]);?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
