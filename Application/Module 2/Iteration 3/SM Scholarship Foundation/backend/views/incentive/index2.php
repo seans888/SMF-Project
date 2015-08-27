@@ -15,9 +15,31 @@ $this->params['breadcrumbs'][] = $this->title;
 $exportedValues =
 	[
 		['class' => 'yii\grid\SerialColumn'],
-			'incentive_amount',
-            'incentive_remark',
-			'incentive_date',
+		[
+			'class' => 'kartik\grid\EditableColumn',
+			'attribute' => 'incentive_amount',
+		],
+		[
+			'class' => 'kartik\grid\EditableColumn',
+			'attribute' => 'incentive_remark',
+		],
+		[
+				'class' => 'kartik\grid\EditableColumn',
+            	'attribute'=>'incentive_date',
+				'editableOptions' => [
+					'inputType' => 'widget',
+					'options'=>
+					[
+						'model' => $searchModel,
+
+							'clientOptions' => [
+								'autoclose' => true,
+								'format' => 'yyyy-mm-dd',
+							]
+					],
+					'widgetClass'=>'dosamigos\datepicker\DatePicker'
+				],
+            ],
 		
 		['class' => 'yii\grid\ActionColumn'],
 	];
@@ -25,7 +47,11 @@ $exportedValues =
 	$export = ExportMenu::widget([
 			'dataProvider' => $dataProvider,
 			'columns' => $exportedValues,
-			'noExportColumns' => [0,3],
+			'exportConfig'=>[
+			'Excel5'=>false,
+			'Excel2007'=>false,
+		],
+			'noExportColumns' => [4],
 			'columnSelectorOptions'=>[
 				'label' => 'Columns',
 				'class' => 'btn btn-danger'
