@@ -53,7 +53,7 @@ $export = ExportMenu::widget([
 			'Excel5'=>false,
 			'Excel2007'=>false,
 		],
-		'noExportColumns'=>[9],
+		'noExportColumns'=>[8],
         'columnSelectorOptions'=>[
             'label' => 'Columns',
             'class' => 'btn btn-danger'
