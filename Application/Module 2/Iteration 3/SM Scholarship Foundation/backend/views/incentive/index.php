@@ -48,28 +48,28 @@ $exportedValues =
 	[
 		'attribute' => 'scholar_last_name',
 	],
-	[
-		'attribute' => 'scholar_gender',
-	],
-	[
-		'attribute' => 'scholar_course',
-	],
-	[
-		'attribute'=>'school_school_id',
-		'value'=>'schoolSchool.school_name',
-	],
-	[
-		'attribute' => 'scholar_year_level',
-	],
-	[
-		'attribute' => 'scholar_graduate_status',
-	],
-	[
-		'attribute' => 'scholar_vendor_code',
-	],
-	[
-		'attribute' => 'scholar_type',
-	],
+	// [
+		// 'attribute' => 'scholar_gender',
+	// ],
+	// [
+		// 'attribute' => 'scholar_course',
+	// ],
+	// [
+		// 'attribute'=>'school_school_id',
+		// 'value'=>'schoolSchool.school_name',
+	// ],
+	// [
+		// 'attribute' => 'scholar_year_level',
+	// ],
+	// [
+		// 'attribute' => 'scholar_graduate_status',
+	// ],
+	// [
+		// 'attribute' => 'scholar_vendor_code',
+	// ],
+	// [
+		// 'attribute' => 'scholar_type',
+	// ],
 ];
 
 $export = ExportMenu::widget([
