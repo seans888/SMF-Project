@@ -28,6 +28,7 @@ class Subject extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+	 public $rawGrade;
     public static function tableName()
     {
         return 'subject';
@@ -41,7 +42,7 @@ class Subject extends \yii\db\ActiveRecord
         return [
             // [['scholar_scholar_id', 'scholar_school_school_id'], 'required'],
             [['scholar_scholar_id', 'scholar_school_school_id', 'subject_term'], 'integer'],
-            [['subject_units'], 'number'],
+            [['subject_units','rawGrade'], 'number'],
             [['subject_taken_status', 'subject_approval_status'], 'string'],
             [['subject_name', 'subject_approved_by'], 'string', 'max' => 100]
         ];
@@ -71,6 +72,7 @@ class Subject extends \yii\db\ActiveRecord
             'subject_taken_status' => 'Subject Taken Status',
             'subject_approval_status' => 'Subject Approval Status',
             'subject_approved_by' => 'Subject Approved By',
+			'rawGrade'=> 'Raw Grade',
         ];
     }
 
@@ -79,7 +81,7 @@ class Subject extends \yii\db\ActiveRecord
      */
     public function getGrades()
     {
-        return $this->hasMany(Grade::className(), ['subject_subject_id' => 'subject_id']);
+        return $this->hasOne(Grade::className(), ['subject_subject_id' => 'subject_id']);
     }
 
     /**
@@ -89,6 +91,7 @@ class Subject extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Grade::className(), ['subject_scholar_scholar_id' => 'scholar_scholar_id']);
     }
+	
 
     /**
      * @return \yii\db\ActiveQuery

@@ -15,13 +15,13 @@ class SubjectSearch extends Subject
     /**
      * @inheritdoc
      */
-
+	
     public function rules()
     {
         return [
             [['subject_id', 'scholar_scholar_id', 'scholar_school_school_id', 'subject_term'], 'integer'],
             [['subject_name', 'subject_taken_status', 'subject_approval_status', 'subject_approved_by'], 'safe'],
-            [['subject_units'], 'number'],
+            [['subject_units','rawGrade'], 'number'],
         ];
     }
 
@@ -56,7 +56,7 @@ class SubjectSearch extends Subject
             // $query->where('0=1');
             return $dataProvider;
         }
-		
+		$query->joinWith('grades');
 
         $query->andFilterWhere([
             'subject_id' => $this->subject_id,
@@ -69,7 +69,8 @@ class SubjectSearch extends Subject
         $query->andFilterWhere(['like', 'subject_name', $this->subject_name])
             ->andFilterWhere(['like', 'subject_taken_status', $this->subject_taken_status])
             ->andFilterWhere(['like', 'subject_approval_status', $this->subject_approval_status])
-            ->andFilterWhere(['like', 'subject_approved_by', $this->subject_approved_by]);
+            ->andFilterWhere(['like', 'subject_approved_by', $this->subject_approved_by])
+			 ->andFilterWhere(['like', 'grades.grade_raw_grade', $this->rawGrade]);
 			
 	
 

@@ -30,6 +30,9 @@ class Grade extends \yii\db\ActiveRecord
 	public $middleName;
 	public $lastName;
 	public $takenStatus;
+	public $subjectName;
+	public $subjectTerm;
+	public $subjectUnits;
     public static function tableName()
     {
         return 'grade';
@@ -43,7 +46,7 @@ class Grade extends \yii\db\ActiveRecord
         return [
             // [['subject_subject_id', 'subject_scholar_scholar_id', 'subject_scholar_school_school_id', 'grade_approval_status'], 'required'],
             [['subject_subject_id', 'subject_scholar_scholar_id', 'subject_scholar_school_school_id', 'grade_school_year_start', 'grade_school_year_end'], 'integer'],
-            [['takenStatus','firstName','middleName','lastName','grade_approval_status'], 'string'],
+            [['takenStatus','firstName','middleName','lastName','grade_approval_status','subjectName','subjectTerm','subjectUnits'], 'string'],
             [['grade_raw_grade'], 'string', 'max' => 45],
             [['grade_approved_by'], 'string', 'max' => 100]
         ];
@@ -81,6 +84,9 @@ class Grade extends \yii\db\ActiveRecord
             'grade_raw_grade' => 'Raw Grade',
             'grade_approval_status' => 'Approval Status',
             'grade_approved_by' => 'Approved By',
+			'subjectName' =>'Subject Name',
+			'subjectTerm' =>'Subject Term',
+			'subjectUnits' =>'Subject Units',
         ];
     }
 
