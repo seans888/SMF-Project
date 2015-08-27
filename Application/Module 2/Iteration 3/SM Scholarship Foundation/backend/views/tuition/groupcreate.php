@@ -64,7 +64,6 @@ use common\models\Subject;
                         ?>
                         <div class="row">
                             <div class="col-sm-6">
-
 								<?= $form->field($modelAddress,"[{$i}]scholar_scholar_id")->textInput()?>
                             </div>
                             <div class="col-sm-4">
@@ -81,17 +80,21 @@ use common\models\Subject;
                         </div><!-- .row -->
                         <div class="row">
                             <div class="col-sm-4">
-                                <?= $form->field($modelAddress, "[{$i}]tuition_enrollment_date")->dropDownList(['Not Approved','Approved']) ?>
+								Format is yyyy-mm-dd
+                                <?= $form->field($modelAddress, "[{$i}]tuition_enrollment_date")->textInput(['maxlength' => true]) ?>
                             </div>
                             <div class="col-sm-4">
+							<br>
                                 <?= $form->field($modelAddress, "[{$i}]tuition_amount")->textInput(['maxlength' => true]) ?>
                             </div>
                         </div><!-- .row -->
                         <div class="row">
                             <div class="col-sm-4">
-                                <?= $form->field($modelAddress, "[{$i}]tuition_paid_status")->dropDownList(['Not Approved','Approved']) ?>
+							<br>
+                                <?= $form->field($modelAddress, "[{$i}]tuition_paid_status")->dropDownList(['Not Paid','Paid']) ?>
                             </div>
                             <div class="col-sm-4">
+							Format is yyyy-mm-dd
                                 <?= $form->field($modelAddress, "[{$i}]tuition_payment_date")->textInput(['maxlength' => true]) ?>
                             </div>
                         </div><!-- .row -->

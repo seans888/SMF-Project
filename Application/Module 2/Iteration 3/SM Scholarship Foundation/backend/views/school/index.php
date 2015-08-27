@@ -13,12 +13,8 @@ $this->title = 'Schools';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="school-index">
+<h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-        <br>
-	<p><h3><span style="background-color: #e7bd58"><b>Orange</b> rows are schools from NCR Areas</p></span>
-	<p><h3><span style="background-color: #57dbee"><b>Blue</b> rows are schools from Provincial Areas</span></h3>
-	</p>
-
 <?php
 $exportedValues = 
 [            
@@ -58,11 +54,37 @@ $exportedValues =
 
 	['class' => 'kartik\grid\ActionColumn'],
 ];
+$gridColumns = 
+[            
+	['class' => 'kartik\grid\SerialColumn'],
+	'school_id',
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'school_name',
+	],
+	[
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute' => 'school_area',
+		'editableOptions' => [
+			'inputType' => '\kartik\select2\Select2',
+			'options'=>
+			[
+				'data' => ['NCR'=>'NCR','Provincial'=>'Provincial'],
+			],
+		],
+	],
+
+	['class' => 'kartik\grid\ActionColumn'],
+];
 
 $export = ExportMenu::widget([
 		'dataProvider' => $dataProvider,
         'columns' => $exportedValues,
 		'noExportColumns'=>[8],
+		'exportConfig'=>[
+			'Excel5'=>false,
+			'Excel2007'=>false,
+		],
         'columnSelectorOptions'=>[
             'label' => 'Columns',
             'class' => 'btn btn-danger'
@@ -95,7 +117,7 @@ $export = ExportMenu::widget([
     			return['class'=>'ncr-row'];
     		}
     	},
-        'columns' => $exportedValues,
+        'columns' => $gridColumns,
 		'toolbar'=> [
         ['content'=>Html::a('Create School', ['create'], ['class' => 'btn btn-success'])
         ],

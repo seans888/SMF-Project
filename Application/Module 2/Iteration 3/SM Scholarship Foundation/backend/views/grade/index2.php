@@ -100,7 +100,11 @@ $exportedValues =
 $export = ExportMenu::widget([
 		'dataProvider' => $dataProvider,
         'columns' => $exportedValues,
-		'noExportColumns' => [10],
+		'exportConfig'=>[
+			'Excel5'=>false,
+			'Excel2007'=>false,
+		],
+		'noExportColumns' => [13],
 		'target' => '_blank',
         'columnSelectorOptions'=>[
             'label' => 'Columns',
@@ -117,9 +121,10 @@ $export = ExportMenu::widget([
 /* @var $searchModel common\models\SchoolSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Schools';
+$this->title = 'Grades';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<h1><?= Html::encode($this->title) ?></h1>
 <?= Html::a('Group By School', ['index'], ['class' => 'btn btn-success']) ?>
 <?= Html::a('Show Only Grade Records', ['index2'], ['class' => 'btn btn-success']) ?>
 <div class="school-index">
@@ -148,3 +153,12 @@ $this->params['breadcrumbs'][] = $this->title;
     ],
     ]); ?>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

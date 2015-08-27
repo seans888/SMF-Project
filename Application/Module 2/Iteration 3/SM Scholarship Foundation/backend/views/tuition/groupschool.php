@@ -34,10 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="school-index">
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-        <br>
-	<p><h3><span style="background-color: #e7bd58"><b>Orange</b> rows are schools from NCR Areas</p></span>
-	<p><h3><span style="background-color: #57dbee"><b>Blue</b> rows are schools from Provincial Areas</span></h3>
-	</p>
+<h1><?= Html::encode($this->title) ?></h1>
 
 <?php
 $exportedValues = 

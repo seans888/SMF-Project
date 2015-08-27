@@ -9,7 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use common\models\ScholarSearch;
-
+use yii\helpers\Json;
 /**
  * IncentiveController implements the CRUD actions for Incentive model.
  */
@@ -35,13 +35,60 @@ class IncentiveController extends Controller
     {
         $searchModel = new ScholarSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$incentiveId = Yii::$app->request->post('editableKey');
+			$incentive = Incentive::findOne($incentiveId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Incentive']);
+			$post['Incentive'] = $posted;
+			
+			if($incentive->load($post))
+			{
+				$incentive->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
+	
+	public function actionIndex2()
+    {
+        $searchModel = new IncentiveSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$incentiveId = Yii::$app->request->post('editableKey');
+			$incentive = Incentive::findOne($incentiveId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Incentive']);
+			$post['Incentive'] = $posted;
+			
+			if($incentive->load($post))
+			{
+				$incentive->save();
+			}
+			echo $out;
+			return;
+		}
+		
+        return $this->render('index2', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+	
     /**
      * Displays a single Incentive model.
      * @param integer $incentive_id
@@ -50,10 +97,10 @@ class IncentiveController extends Controller
      * @param string $scholar_allowance_allowance_area
      * @return mixed
      */
-    public function actionView($incentive_id, $scholar_scholar_id, $scholar_school_school_id, $scholar_allowance_allowance_area)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($incentive_id, $scholar_scholar_id, $scholar_school_school_id, $scholar_allowance_allowance_area),
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -67,7 +114,7 @@ class IncentiveController extends Controller
         $model = new Incentive();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'incentive_id' => $model->incentive_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id, 'scholar_allowance_allowance_area' => $model->scholar_allowance_allowance_area]);
+            return $this->redirect(['view', 'id' => $model->incentive_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -84,12 +131,12 @@ class IncentiveController extends Controller
      * @param string $scholar_allowance_allowance_area
      * @return mixed
      */
-    public function actionUpdate($incentive_id, $scholar_scholar_id, $scholar_school_school_id, $scholar_allowance_allowance_area)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($incentive_id, $scholar_scholar_id, $scholar_school_school_id, $scholar_allowance_allowance_area);
+        $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'incentive_id' => $model->incentive_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id, 'scholar_allowance_allowance_area' => $model->scholar_allowance_allowance_area]);
+            return $this->redirect(['view', 'id' => $model->incentive_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -106,9 +153,9 @@ class IncentiveController extends Controller
      * @param string $scholar_allowance_allowance_area
      * @return mixed
      */
-    public function actionDelete($incentive_id, $scholar_scholar_id, $scholar_school_school_id, $scholar_allowance_allowance_area)
+    public function actionDelete($id)
     {
-        $this->findModel($incentive_id, $scholar_scholar_id, $scholar_school_school_id, $scholar_allowance_allowance_area)->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
@@ -123,9 +170,9 @@ class IncentiveController extends Controller
      * @return Incentive the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($incentive_id, $scholar_scholar_id, $scholar_school_school_id, $scholar_allowance_allowance_area)
+    protected function findModel($id)
     {
-        if (($model = Incentive::findOne(['incentive_id' => $incentive_id, 'scholar_scholar_id' => $scholar_scholar_id, 'scholar_school_school_id' => $scholar_school_school_id, 'scholar_allowance_allowance_area' => $scholar_allowance_allowance_area])) !== null) {
+        if (($model = Incentive::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

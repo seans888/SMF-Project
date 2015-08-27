@@ -8,25 +8,26 @@ use kartik\export\ExportMenu;
 /* @var $searchModel common\models\IncentiveSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Incentives';
+$this->title = 'Deductions';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <?php // echo $this->render('_search', ['model' => $searchModel]);
 $exportedValues =
 	[
-		['class' => 'kartik\grid\SerialColumn'],
+		['class' => 'yii\grid\SerialColumn'],
 		
 		[
 			'class' => 'kartik\grid\EditableColumn',
-			'attribute' => 'incentive_amount',
+			'attribute' => 'scholar_scholar_id',
 		],
 		[
 			'class' => 'kartik\grid\EditableColumn',
-			'attribute' => 'incentive_remark',
+			'attribute' => 'scholar_school_school_id',
+			'value' => 'schoolSchool.school_name',
 		],
 		[
 				'class' => 'kartik\grid\EditableColumn',
-            	'attribute'=>'incentive_date',
+            	'attribute'=>'deduction_date',
 				'editableOptions' => [
 					'inputType' => 'widget',
 					'options'=>
@@ -40,15 +41,23 @@ $exportedValues =
 					],
 					'widgetClass'=>'dosamigos\datepicker\DatePicker'
 				],
-            ],
+        ],
+		[
+			'class' => 'kartik\grid\EditableColumn',
+			'attribute' => 'deduction_amount',
+		],
+		[
+			'class' => 'kartik\grid\EditableColumn',
+			'attribute' => 'deduction_remark',
+		],
 		
-		['class' => 'kartik\grid\ActionColumn'],
+		['class' => 'yii\grid\ActionColumn'],
 	];
 	
 	$export = ExportMenu::widget([
 			'dataProvider' => $dataProvider,
 			'columns' => $exportedValues,
-			'noExportColumns' => [4],
+			'noExportColumns' => [0,3],
 			'columnSelectorOptions'=>[
 				'label' => 'Columns',
 				'class' => 'btn btn-danger'
@@ -63,32 +72,29 @@ $exportedValues =
 				
 ?>
 				
-<div class="incentive-index">
-
+<div class="deduction-index">
+	
+	<h1><?= Html::encode($this->title) ?></h1>
 	<?php ?>
-
+<?= Html::a('Group By Scholar', ['index'], ['class' => 'btn btn-success']) ?>
+<?= Html::a('Show Only Deduction Records', ['index2'], ['class' => 'btn btn-success']) ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-		'pjax' => true,
-		'pjaxSettings' => 
-		[
-			'neverTimeout' => true
-		],
         'columns' => $exportedValues,
-		// 'toolbar'=> [
-		// [
-			// 'content'=>html::a('Create Incentive', ['create'], ['class' => 'btn btn-success'])
-		// ],
+		'toolbar'=> [
+		[
+			'content'=>html::a('Create Deductions', ['create'], ['class' => 'btn btn-success'])
+		],
 		
-		// '{toggleData}',
-		// $export
-		// ],
-		// 'panel'=>
-		// [
-			// 'type'=>GridView::TYPE_PRIMARY,
-			// 'heading'=>'Incentive Table',
-		// ]
+		'{toggleData}',
+		$export
+		],
+		'panel'=>
+		[
+			'type'=>GridView::TYPE_PRIMARY,
+			'heading'=>'Deductions Table',
+		]
     ]); 
 	?>
 
