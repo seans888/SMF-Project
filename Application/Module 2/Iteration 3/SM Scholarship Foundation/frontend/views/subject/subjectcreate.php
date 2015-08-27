@@ -57,7 +57,7 @@ use common\models\User;
                         <?php
                             // necessary for update action.
                             if (! $modelAddress->isNewRecord) {
-                                echo Html::activeHiddenInput($modelAddress, "[{$i}]grade_id");
+                                echo Html::activeHiddenInput($modelAddress, "[{$i}]subject_id");
                             }
                         ?>
                         <div class="row">

@@ -16,8 +16,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1 style="margin-top:100px;text-align:center"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
+	<font color=red><?= Yii::$app->session->getFlash('error'); ?></font>
     <?php 
+	
    $items = [
    
     
@@ -34,13 +35,24 @@ $this->params['breadcrumbs'][] = $this->title;
             'subject_term',
             'subject_name',
 			'subject_units',
+			[
+		'attribute'=>'rawGrade',
+		'value'=>'grades.grade_raw_grade'
+	],
 	
             // 'subject_units',
             // 'subject_taken_status',
             // 'subject_approval_status',
             // 'subject_approved_by',
 
-            ['class' => 'yii\grid\ActionColumn'],
+          [
+
+            'class' => 'yii\grid\ActionColumn',
+            'header'=>'Action',
+            'headerOptions' => ['width' => '80'],
+            'template' => '{update} {delete}',
+        ],
+
         ],
     ]),
                    'active' => true,

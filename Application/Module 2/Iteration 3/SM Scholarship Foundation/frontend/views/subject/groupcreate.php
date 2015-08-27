@@ -20,7 +20,7 @@ use common\models\User;
 		$username=Yii::$app->user->identity->username;
 		$users = User::find()->all();
 		$scholars = Scholar::find()->all();
-		
+		$model= new Subject();
         $modelCustomer = new Grade;
         $modelsAddress = [new Grade];
 		foreach($users as $user){
@@ -136,7 +136,7 @@ use common\models\User;
                             <div class="col-sm-6">
 
 								<?= $form->field($modelAddress,"[{$i}]subject_subject_id")->dropDownList(
-								ArrayHelper::map(Subject::find()->where(['scholar_scholar_id'=>$scholar->scholar_id])->all(),'subject_id','subject_name','scholar_scholar_id')
+								ArrayHelper::map(Subject::find()->where(['scholar_scholar_id'=>$scholar->scholar_id])->all(),'subject_id','subject_name','subject_term','scholar_scholar_id')
 								)
 								?>
                             </div>
