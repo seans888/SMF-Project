@@ -117,7 +117,7 @@ $export = ExportMenu::widget([
 /* @var $searchModel common\models\SchoolSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Schools';
+$this->title = 'Grades';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <h1><?= Html::encode($this->title) ?></h1>
