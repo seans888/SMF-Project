@@ -100,7 +100,11 @@ $exportedValues =
 $export = ExportMenu::widget([
 		'dataProvider' => $dataProvider,
         'columns' => $exportedValues,
-		'noExportColumns' => [10],
+		'exportConfig'=>[
+			'Excel5'=>false,
+			'Excel2007'=>false,
+		],
+		'noExportColumns' => [13],
 		'target' => '_blank',
         'columnSelectorOptions'=>[
             'label' => 'Columns',
@@ -149,3 +153,12 @@ $this->params['breadcrumbs'][] = $this->title;
     ],
     ]); ?>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
