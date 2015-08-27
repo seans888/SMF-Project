@@ -104,7 +104,7 @@ $exportedValues =
 $export = ExportMenu::widget([
 		'dataProvider' => $dataProvider,
         'columns' => $exportedValues,
-		'noExportColumns'=>[18],
+		'noExportColumns'=>[11],
         'columnSelectorOptions'=>[
             'label' => 'Columns',
             'class' => 'btn btn-danger'
@@ -121,6 +121,16 @@ $export = ExportMenu::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
 		'pjax' => true,
+		'rowOptions'=>function($model){
+					if(strcasecmp($model->allowance_allowance_area, 'NCR') != 0)
+					{
+						return['class'=>'provincial-row'];
+					}
+					else if(strcasecmp($model->allowance_allowance_area, 'NCR') == 0)
+					{
+						return['class'=>'ncr-row'];
+					}
+				},
         'columns' => $exportedValues,
 		'toolbar'=> [
 			[
