@@ -9,7 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use common\models\ScholarSearch;
-
+use yii\helpers\Json;
 /**
  * IncentiveController implements the CRUD actions for Incentive model.
  */
@@ -35,7 +35,25 @@ class IncentiveController extends Controller
     {
         $searchModel = new ScholarSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$incentiveId = Yii::$app->request->post('editableKey');
+			$incentive = Incentive::findOne($incentiveId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Incentive']);
+			$post['Incentive'] = $posted;
+			
+			if($incentive->load($post))
+			{
+				$incentive->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -46,7 +64,25 @@ class IncentiveController extends Controller
     {
         $searchModel = new IncentiveSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$incentiveId = Yii::$app->request->post('editableKey');
+			$incentive = Incentive::findOne($incentiveId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Incentive']);
+			$post['Incentive'] = $posted;
+			
+			if($incentive->load($post))
+			{
+				$incentive->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('index2', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
