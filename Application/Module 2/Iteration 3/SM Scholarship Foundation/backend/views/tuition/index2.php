@@ -70,7 +70,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => $exportedValues,
 		'toolbar'=> [
-        ['content'=>Html::a('Create Tuition', ['create'], ['class' => 'btn btn-success'])
+        ['content'=>Html::a('Create Tuition', ['groupcreate'], ['class' => 'btn btn-success'])
         ],
   //      '{export}',
         '{toggleData}',
