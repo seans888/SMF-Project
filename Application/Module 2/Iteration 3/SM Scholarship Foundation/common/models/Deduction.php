@@ -26,6 +26,9 @@ class Deduction extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $firstName;
+	public $middleName;
+	public $lastName;
     public static function tableName()
     {
         return 'deduction';
@@ -51,6 +54,9 @@ class Deduction extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
+			'firstName' => 'First Name',
+            'middleName' => 'Middle Name',
+			'lastName' => 'Last Name',
             'deduction_id' => 'Deduction ID',
             //'scholar_scholar_id' => 'Scholar Scholar ID',
 			'scholar_scholar_id' => 'Scholar ID',

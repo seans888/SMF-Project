@@ -19,7 +19,7 @@ class DeductionSearch extends Deduction
     {
         return [
             [['deduction_id', 'scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
-            [['deduction_date', 'deduction_remark'], 'safe'],
+            [['firstName','middleName','lastName','deduction_date', 'deduction_remark'], 'safe'],
             [['deduction_amount'], 'number'],
         ];
     }
@@ -55,7 +55,9 @@ class DeductionSearch extends Deduction
             // $query->where('0=1');
             return $dataProvider;
         }
-
+		
+		$query->joinWith('scholarScholar');
+		
         $query->andFilterWhere([
             'deduction_id' => $this->deduction_id,
             'scholar_scholar_id' => $this->scholar_scholar_id,
@@ -64,7 +66,10 @@ class DeductionSearch extends Deduction
             'deduction_amount' => $this->deduction_amount,
         ]);
 
-        $query->andFilterWhere(['like', 'deduction_remark', $this->deduction_remark]);
+        $query->andFilterWhere(['like', 'deduction_remark', $this->deduction_remark])
+			->andFilterWhere(['like', 'scholar.scholar_first_name', $this->firstName])
+			->andFilterWhere(['like', 'scholar.scholar_middle_name', $this->middleName])
+			->andFilterWhere(['like', 'scholar.scholar_last_name', $this->lastName]);
 
         return $dataProvider;
     }
