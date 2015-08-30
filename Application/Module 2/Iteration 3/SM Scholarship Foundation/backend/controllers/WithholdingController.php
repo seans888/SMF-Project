@@ -43,7 +43,7 @@ class WithholdingController extends Controller
     }
 	public function actionIndex2()
     {
-        $searchModel = new ScholarSearch();
+        $searchModel = new WithholdingSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index2', [
