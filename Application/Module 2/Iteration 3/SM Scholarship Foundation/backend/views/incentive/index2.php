@@ -32,6 +32,10 @@ $exportedValues =
 			'value' => 'scholarScholar.scholar_last_name'
 		],
 		[
+			'attribute' => 'scholar_school_school_id',
+			'value' => 'schoolSchool.school_name'
+		],
+		[
 			'class' => 'kartik\grid\EditableColumn',
 			'attribute' => 'incentive_amount',
 		],
