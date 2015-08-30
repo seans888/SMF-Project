@@ -8,7 +8,7 @@ use kartik\export\ExportMenu;
 /* @var $searchModel common\models\IncentiveSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Deductions';
+$this->title = 'Withholding';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <?php // echo $this->render('_search', ['model' => $searchModel]);
@@ -82,7 +82,7 @@ $exportedValues =
 	$export = ExportMenu::widget([
 			'dataProvider' => $dataProvider,
 			'columns' => $exportedValues,
-			'noExportColumns' => [6],
+			'noExportColumns' => [9],
 			'exportConfig'=>[
 			'Excel5'=>false,
 			'Excel2007'=>false,
@@ -122,7 +122,7 @@ $exportedValues =
 		'panel'=>
 		[
 			'type'=>GridView::TYPE_PRIMARY,
-			'heading'=>'Deductions Table',
+			'heading'=>'Withholding Table',
 		]
     ]); 
 	?>
