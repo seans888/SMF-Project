@@ -11,7 +11,7 @@ $exportedValues =
 [
             ['class' => 'kartik\grid\SerialColumn'],
 			[
-				'class' => 'kartik\grid\EditableColumn',
+				// 'class' => 'kartik\grid\EditableColumn',
 				'attribute' => 'scholar_scholar_id',
 			],
 			[
@@ -25,6 +25,10 @@ $exportedValues =
 			[
 				'attribute' => 'lastName',
 				'value' => 'scholarScholar.scholar_last_name'
+			],
+			[
+				'attribute' => 'scholar_school_school_id',
+				'value' => 'schoolSchool.school_name'
 			],
 			[
 				'class' => 'kartik\grid\EditableColumn',
