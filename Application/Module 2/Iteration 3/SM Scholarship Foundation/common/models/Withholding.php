@@ -35,7 +35,7 @@ class Withholding extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['scholar_scholar_id', 'scholar_school_school_id', 'scholar_allowance_allowance_area'], 'required'],
+            [['scholar_scholar_id'], 'required'],
             [['scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
             [['scholar_allowance_allowance_area'], 'string'],
             [['withholding_start_date', 'withholding_end_date'], 'safe'],
