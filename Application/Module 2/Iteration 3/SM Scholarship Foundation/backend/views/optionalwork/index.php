@@ -11,7 +11,7 @@ use common\models\OptionalworkSearch;
 /* @var $searchModel common\models\ScholarSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Scholars';
+$this->title = 'Optional Work';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="scholar-index">

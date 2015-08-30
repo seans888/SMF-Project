@@ -8,7 +8,7 @@ use kartik\export\ExportMenu;
 /* @var $searchModel common\models\IncentiveSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Deductions';
+$this->title = 'Optional Work';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <?php // echo $this->render('_search', ['model' => $searchModel]);
