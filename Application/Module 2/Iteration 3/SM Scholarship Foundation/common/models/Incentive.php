@@ -24,6 +24,9 @@ class Incentive extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+	public $firstName;
+	public $middleName;
+	public $lastName;
     public static function tableName()
     {
         return 'incentive';
@@ -57,6 +60,9 @@ class Incentive extends \yii\db\ActiveRecord
             'incentive_amount' => 'Incentive Amount',
             'incentive_remark' => 'Incentive Remark',
             'incentive_date' => 'Incentive Date', */
+			'firstName' => 'First Name',
+            'middleName' => 'Middle Name',
+			'lastName' => 'Last Name',
 			'incentive_id' => 'Incentive ID',
             'scholar_scholar_id' => 'Scholar ID',
             'scholar_school_school_id' => 'School ID',
