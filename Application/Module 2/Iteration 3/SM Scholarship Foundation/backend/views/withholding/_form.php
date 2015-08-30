@@ -5,6 +5,7 @@ use yii\widgets\ActiveForm;
 use common\models\Scholar;
 use yii\helpers\ArrayHelper;
 use kartik\select2\Select2;
+use dosamigos\datepicker\DatePicker;
 /* @var $this yii\web\View */
 /* @var $model common\models\Withholding */
 /* @var $form yii\widgets\ActiveForm */
@@ -22,9 +23,29 @@ use kartik\select2\Select2;
 			'pluginOptions'=>['allowClear'=>true],
 		]) ?>
 
-    <?= $form->field($model, 'withholding_start_date')->textInput() ?>
+    <?= $form->field($model, 'withholding_start_date')->widget(
+			DatePicker::className(), [
+				// inline too, not bad
+				 'inline' => false, 
+				 // modify template for custom rendering
+			//	'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+				'clientOptions' => [
+					'autoclose' => true,
+					'format' => 'yyyy-mm-dd'
+				]
+			]);?>
 
-    <?= $form->field($model, 'withholding_end_date')->textInput() ?>
+    <?= $form->field($model, 'withholding_end_date')->widget(
+			DatePicker::className(), [
+				// inline too, not bad
+				 'inline' => false, 
+				 // modify template for custom rendering
+			//	'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+				'clientOptions' => [
+					'autoclose' => true,
+					'format' => 'yyyy-mm-dd'
+				]
+			]);?>
 
     <?= $form->field($model, 'withholding_remark')->textInput(['maxlength' => true]) ?>
 
