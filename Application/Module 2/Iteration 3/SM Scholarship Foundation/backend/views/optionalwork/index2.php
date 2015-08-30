@@ -100,7 +100,7 @@ $exportedValues =
         'columns' => $exportedValues,
 		'toolbar'=> [
 		[
-			'content'=>html::a('Create Deductions', ['create'], ['class' => 'btn btn-success'])
+			'content'=>html::a('Create Optional Work', ['create'], ['class' => 'btn btn-success'])
 		],
 		
 		'{toggleData}',
@@ -109,7 +109,7 @@ $exportedValues =
 		'panel'=>
 		[
 			'type'=>GridView::TYPE_PRIMARY,
-			'heading'=>'Deductions Table',
+			'heading'=>'Optional Work Table',
 		]
     ]); 
 	?>
