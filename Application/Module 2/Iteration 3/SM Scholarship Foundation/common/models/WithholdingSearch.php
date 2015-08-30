@@ -54,7 +54,9 @@ class WithholdingSearch extends Withholding
             // $query->where('0=1');
             return $dataProvider;
         }
-
+		
+		$query->joinWith('scholarScholar');
+		
         $query->andFilterWhere([
             'withholding_id' => $this->withholding_id,
             'scholar_scholar_id' => $this->scholar_scholar_id,
