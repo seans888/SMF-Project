@@ -10,6 +10,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\helpers\Json;
+use yii\helpers\ArrayHelper;
+use common\models\Scholar;
 /**
  * OptionalworkController implements the CRUD actions for Optionalwork model.
  */
@@ -110,7 +112,14 @@ class OptionalworkController extends Controller
     {
         $model = new Optionalwork();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+			$selectSchool = ArrayHelper::map(Scholar::find()
+			->where(['scholar_id'=>$model->scholar_scholar_id])
+			->all(),'school_school_id','school_school_id');
+			$schoolID = array_values($selectSchool)[0];
+			$model->scholar_school_school_id = $schoolID;
+			
+			$model->save();
             return $this->redirect(['view', 'id' => $model->optionalwork_id]);
         } else {
             return $this->render('create', [
@@ -131,7 +140,14 @@ class OptionalworkController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+			$selectSchool = ArrayHelper::map(Scholar::find()
+			->where(['scholar_id'=>$model->scholar_scholar_id])
+			->all(),'school_school_id','school_school_id');
+			$schoolID = array_values($selectSchool)[0];
+			$model->scholar_school_school_id = $schoolID;
+			
+			$model->save();
             return $this->redirect(['view', 'id' => $model->optionalwork_id]);
         } else {
             return $this->render('update', [
