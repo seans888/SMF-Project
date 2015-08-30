@@ -23,6 +23,10 @@ class Optionalwork extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+	
+	public $firstName;
+	public $middleName;
+	public $lastName;
     public static function tableName()
     {
         return 'optionalwork';
@@ -36,11 +40,11 @@ class Optionalwork extends \yii\db\ActiveRecord
         return [
             [['scholar_scholar_id', 'scholar_school_school_id', 'optional_work_company_name'], 'required'],
             [['scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
-            [['scholar_scholar_id', 'scholar_school_school_id'], 'required'],
+            [['scholar_scholar_id'], 'required'],
 			
             [['scholar_scholar_id', 'scholar_school_school_id',], 'integer'],
             [['optionalwork_start_date', 'optionalwork_end_date'], 'safe'],
-            [['optionalwork_location', 'optional_work_company_name'], 'string', 'max' => 100]
+            [['firstName','middleName','lastName','optionalwork_location', 'optional_work_company_name'], 'string', 'max' => 100]
         ];
     }
 
@@ -50,7 +54,10 @@ class Optionalwork extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'optionalwork_id' => 'Optionalwork ID',
+			'firstName' => 'First Name',
+            'middleName' => 'Middle Name',
+			'lastName' => 'Last Name',
+			'optionalwork_id' => 'Optionalwork ID',
             'scholar_scholar_id' => 'Scholar Scholar ID',
             'scholar_school_school_id' => 'Scholar School School ID',
             'optionalwork_location' => 'Optionalwork Location',
