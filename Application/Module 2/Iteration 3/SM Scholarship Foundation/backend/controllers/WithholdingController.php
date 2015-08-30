@@ -41,6 +41,16 @@ class WithholdingController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
+	public function actionIndex2()
+    {
+        $searchModel = new ScholarSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('index2', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
 
     /**
      * Displays a single Withholding model.
