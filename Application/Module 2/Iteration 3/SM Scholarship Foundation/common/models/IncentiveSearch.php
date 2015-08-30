@@ -19,7 +19,7 @@ class IncentiveSearch extends Incentive
     {
         return [
             [['incentive_id', 'scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
-            [['firstName','middleName','lastName','firstName','middleName','lastName','scholar_allowance_allowance_area', 'incentive_remark', 'incentive_date'], 'safe'],
+            [['firstName','middleName','lastName','scholar_allowance_allowance_area', 'incentive_remark', 'incentive_date'], 'safe'],
             [['incentive_amount'], 'number'],
         ];
     }
