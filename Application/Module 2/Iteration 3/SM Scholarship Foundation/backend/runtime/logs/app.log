@@ -10602,3 +10602,403 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1440907588.435
     'REQUEST_TIME' => 1440907588
 ]
+2015-08-30 07:19:08 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'ArrayHelper' not found' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\views\optionalwork\index2.php:42
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-08-30 07:19:07 [::1][-][-][info][application] $_GET = [
+    'OptionalworkSearch' => [
+        'scholar_scholar_id' => ''
+        'firstName' => ''
+        'middleName' => ''
+        'lastName' => ''
+        'scholar_school_school_id' => ''
+        'optional_work_company_name' => ''
+        'optionalwork_location' => ''
+        'optionalwork_start_date' => ''
+        'optionalwork_end_date' => ''
+    ]
+    'r' => 'optionalwork/index2'
+]
+
+$_COOKIE = [
+    '_frontendUser' => '112a5250b12624fa4595b3293b7f191f515827574e4feb216daad1ab6b4972f1a:2:{i:0;s:13:\"_frontendUser\";i:1;s:46:\"[2,\"Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld\",2592000]\";}'
+    '_csrf' => 'cf78768c4d8bca08194e0dc1cc241151cb99c19ca84d98ccca39bf809e974829a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JkCcjnrxXxgnaMoW-Dk4fwzieMb5AGpz\";}'
+    'PHPSESSID' => 'tk0h7mi8tgg3bdaflm0kkq29p6'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?OptionalworkSearch%5Bscholar_scholar_id%5D=&OptionalworkSearch%5BfirstName%5D=Sy&OptionalworkSearch%5BmiddleName%5D=&OptionalworkSearch%5BlastName%5D=&OptionalworkSearch%5Bscholar_school_school_id%5D=&OptionalworkSearch%5Boptional_work_company_name%5D=&OptionalworkSearch%5Boptionalwork_location%5D=&OptionalworkSearch%5Boptionalwork_start_date%5D=&OptionalworkSearch%5Boptionalwork_end_date%5D=&r=optionalwork%2Findex2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_frontendUser=112a5250b12624fa4595b3293b7f191f515827574e4feb216daad1ab6b4972f1a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D; _csrf=cf78768c4d8bca08194e0dc1cc241151cb99c19ca84d98ccca39bf809e974829a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JkCcjnrxXxgnaMoW-Dk4fwzieMb5AGpz%22%3B%7D; PHPSESSID=tk0h7mi8tgg3bdaflm0kkq29p6; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '50468'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'OptionalworkSearch%5Bscholar_scholar_id%5D=&OptionalworkSearch%5BfirstName%5D=&OptionalworkSearch%5BmiddleName%5D=&OptionalworkSearch%5BlastName%5D=&OptionalworkSearch%5Bscholar_school_school_id%5D=&OptionalworkSearch%5Boptional_work_company_name%5D=&OptionalworkSearch%5Boptionalwork_location%5D=&OptionalworkSearch%5Boptionalwork_start_date%5D=&OptionalworkSearch%5Boptionalwork_end_date%5D=&r=optionalwork%2Findex2'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?OptionalworkSearch%5Bscholar_scholar_id%5D=&OptionalworkSearch%5BfirstName%5D=&OptionalworkSearch%5BmiddleName%5D=&OptionalworkSearch%5BlastName%5D=&OptionalworkSearch%5Bscholar_school_school_id%5D=&OptionalworkSearch%5Boptional_work_company_name%5D=&OptionalworkSearch%5Boptionalwork_location%5D=&OptionalworkSearch%5Boptionalwork_start_date%5D=&OptionalworkSearch%5Boptionalwork_end_date%5D=&r=optionalwork%2Findex2'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1440911947.086
+    'REQUEST_TIME' => 1440911947
+]
+2015-08-30 07:19:36 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'School' not found' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\views\optionalwork\index2.php:43
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-08-30 07:19:35 [::1][-][-][info][application] $_GET = [
+    'OptionalworkSearch' => [
+        'scholar_scholar_id' => ''
+        'firstName' => ''
+        'middleName' => ''
+        'lastName' => ''
+        'scholar_school_school_id' => ''
+        'optional_work_company_name' => ''
+        'optionalwork_location' => ''
+        'optionalwork_start_date' => ''
+        'optionalwork_end_date' => ''
+    ]
+    'r' => 'optionalwork/index2'
+]
+
+$_COOKIE = [
+    '_frontendUser' => '112a5250b12624fa4595b3293b7f191f515827574e4feb216daad1ab6b4972f1a:2:{i:0;s:13:\"_frontendUser\";i:1;s:46:\"[2,\"Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld\",2592000]\";}'
+    '_csrf' => 'cf78768c4d8bca08194e0dc1cc241151cb99c19ca84d98ccca39bf809e974829a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JkCcjnrxXxgnaMoW-Dk4fwzieMb5AGpz\";}'
+    'PHPSESSID' => 'tk0h7mi8tgg3bdaflm0kkq29p6'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?OptionalworkSearch%5Bscholar_scholar_id%5D=&OptionalworkSearch%5BfirstName%5D=Sy&OptionalworkSearch%5BmiddleName%5D=&OptionalworkSearch%5BlastName%5D=&OptionalworkSearch%5Bscholar_school_school_id%5D=&OptionalworkSearch%5Boptional_work_company_name%5D=&OptionalworkSearch%5Boptionalwork_location%5D=&OptionalworkSearch%5Boptionalwork_start_date%5D=&OptionalworkSearch%5Boptionalwork_end_date%5D=&r=optionalwork%2Findex2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_frontendUser=112a5250b12624fa4595b3293b7f191f515827574e4feb216daad1ab6b4972f1a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D; _csrf=cf78768c4d8bca08194e0dc1cc241151cb99c19ca84d98ccca39bf809e974829a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JkCcjnrxXxgnaMoW-Dk4fwzieMb5AGpz%22%3B%7D; PHPSESSID=tk0h7mi8tgg3bdaflm0kkq29p6; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '50472'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'OptionalworkSearch%5Bscholar_scholar_id%5D=&OptionalworkSearch%5BfirstName%5D=&OptionalworkSearch%5BmiddleName%5D=&OptionalworkSearch%5BlastName%5D=&OptionalworkSearch%5Bscholar_school_school_id%5D=&OptionalworkSearch%5Boptional_work_company_name%5D=&OptionalworkSearch%5Boptionalwork_location%5D=&OptionalworkSearch%5Boptionalwork_start_date%5D=&OptionalworkSearch%5Boptionalwork_end_date%5D=&r=optionalwork%2Findex2'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?OptionalworkSearch%5Bscholar_scholar_id%5D=&OptionalworkSearch%5BfirstName%5D=&OptionalworkSearch%5BmiddleName%5D=&OptionalworkSearch%5BlastName%5D=&OptionalworkSearch%5Bscholar_school_school_id%5D=&OptionalworkSearch%5Boptional_work_company_name%5D=&OptionalworkSearch%5Boptionalwork_location%5D=&OptionalworkSearch%5Boptionalwork_start_date%5D=&OptionalworkSearch%5Boptionalwork_end_date%5D=&r=optionalwork%2Findex2'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1440911975.476
+    'REQUEST_TIME' => 1440911975
+]
+2015-08-30 07:19:44 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Optionalwork::school_school_id' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('school_school_i...')
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\helpers\BaseHtml.php(2029): yii\db\BaseActiveRecord->__get('school_school_i...')
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\kartik-v\yii2-krajee-base\InputWidget.php(145): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\Optionalwork), '[0]school_schoo...')
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\kartik-v\yii2-editable\Editable.php(315): kartik\base\InputWidget->init()
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Object.php(107): kartik\editable\Editable->init()
+#5 [internal function]: yii\base\Object->__construct(Array)
+#6 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('kartik\editable...', Array, Array)
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('kartik\editable...', Array, Array)
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Widget.php(97): yii\BaseYii::createObject(Array)
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\kartik-v\yii2-grid\EditableColumn.php(159): yii\base\Widget::widget(Array)
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\kartik-v\yii2-grid\DataColumn.php(154): kartik\grid\EditableColumn->renderDataCellContent(Object(common\models\Optionalwork), 1, 0)
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\grid\GridView.php(504): kartik\grid\DataColumn->renderDataCell(Object(common\models\Optionalwork), 1, 0)
+#13 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\grid\GridView.php(473): yii\grid\GridView->renderTableRow(Object(common\models\Optionalwork), 1, 0)
+#14 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\kartik-v\yii2-grid\GridView.php(735): yii\grid\GridView->renderTableBody()
+#15 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\grid\GridView.php(344): kartik\grid\GridView->renderTableBody()
+#16 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\widgets\BaseListView.php(151): yii\grid\GridView->renderItems()
+#17 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\grid\GridView.php(313): yii\widgets\BaseListView->renderSection('{items}')
+#18 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{items}')
+#19 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#20 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\w+}/', Object(Closure), '<div class="pan...')
+#21 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\grid\GridView.php(288): yii\widgets\BaseListView->run()
+#22 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\kartik-v\yii2-grid\GridView.php(706): yii\grid\GridView->run()
+#23 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Widget.php(98): kartik\grid\GridView->run()
+#24 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\views\optionalwork\index2.php(139): yii\base\Widget::widget(Array)
+#25 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(325): require('C:\Users\Syam\s...')
+#26 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\Users\Syam\s...', Array)
+#27 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\Users\Syam\s...', Array, Object(backend\controllers\OptionalworkController))
+#28 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index2', Array, Object(backend\controllers\OptionalworkController))
+#29 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\OptionalworkController.php(88): yii\base\Controller->render('index2', Array)
+#30 [internal function]: backend\controllers\OptionalworkController->actionIndex2()
+#31 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#32 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#33 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index2', Array)
+#34 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('optionalwork/in...', Array)
+#35 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#36 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#37 {main}
+2015-08-30 07:19:43 [::1][-][-][info][application] $_GET = [
+    'OptionalworkSearch' => [
+        'scholar_scholar_id' => ''
+        'firstName' => ''
+        'middleName' => ''
+        'lastName' => ''
+        'scholar_school_school_id' => ''
+        'optional_work_company_name' => ''
+        'optionalwork_location' => ''
+        'optionalwork_start_date' => ''
+        'optionalwork_end_date' => ''
+    ]
+    'r' => 'optionalwork/index2'
+]
+
+$_COOKIE = [
+    '_frontendUser' => '112a5250b12624fa4595b3293b7f191f515827574e4feb216daad1ab6b4972f1a:2:{i:0;s:13:\"_frontendUser\";i:1;s:46:\"[2,\"Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld\",2592000]\";}'
+    '_csrf' => 'cf78768c4d8bca08194e0dc1cc241151cb99c19ca84d98ccca39bf809e974829a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JkCcjnrxXxgnaMoW-Dk4fwzieMb5AGpz\";}'
+    'PHPSESSID' => 'tk0h7mi8tgg3bdaflm0kkq29p6'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?OptionalworkSearch%5Bscholar_scholar_id%5D=&OptionalworkSearch%5BfirstName%5D=Sy&OptionalworkSearch%5BmiddleName%5D=&OptionalworkSearch%5BlastName%5D=&OptionalworkSearch%5Bscholar_school_school_id%5D=&OptionalworkSearch%5Boptional_work_company_name%5D=&OptionalworkSearch%5Boptionalwork_location%5D=&OptionalworkSearch%5Boptionalwork_start_date%5D=&OptionalworkSearch%5Boptionalwork_end_date%5D=&r=optionalwork%2Findex2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_frontendUser=112a5250b12624fa4595b3293b7f191f515827574e4feb216daad1ab6b4972f1a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D; _csrf=cf78768c4d8bca08194e0dc1cc241151cb99c19ca84d98ccca39bf809e974829a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JkCcjnrxXxgnaMoW-Dk4fwzieMb5AGpz%22%3B%7D; PHPSESSID=tk0h7mi8tgg3bdaflm0kkq29p6; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '50476'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'OptionalworkSearch%5Bscholar_scholar_id%5D=&OptionalworkSearch%5BfirstName%5D=&OptionalworkSearch%5BmiddleName%5D=&OptionalworkSearch%5BlastName%5D=&OptionalworkSearch%5Bscholar_school_school_id%5D=&OptionalworkSearch%5Boptional_work_company_name%5D=&OptionalworkSearch%5Boptionalwork_location%5D=&OptionalworkSearch%5Boptionalwork_start_date%5D=&OptionalworkSearch%5Boptionalwork_end_date%5D=&r=optionalwork%2Findex2'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?OptionalworkSearch%5Bscholar_scholar_id%5D=&OptionalworkSearch%5BfirstName%5D=&OptionalworkSearch%5BmiddleName%5D=&OptionalworkSearch%5BlastName%5D=&OptionalworkSearch%5Bscholar_school_school_id%5D=&OptionalworkSearch%5Boptional_work_company_name%5D=&OptionalworkSearch%5Boptionalwork_location%5D=&OptionalworkSearch%5Boptionalwork_start_date%5D=&OptionalworkSearch%5Boptionalwork_end_date%5D=&r=optionalwork%2Findex2'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1440911983.173
+    'REQUEST_TIME' => 1440911983
+]
+2015-08-30 07:41:36 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'scholar.scholar_first_name' in 'where clause'' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php:837
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(837): PDOStatement->execute()
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(385): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveQuery.php(339): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Query.php(296): yii\db\ActiveQuery->queryScalar('<span class="st...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('<span class="st...', '<span class="ke...')
+#6 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#13 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\grid\GridView.php(313): yii\widgets\BaseListView->renderSection('<span class="st...')
+#14 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('<span class="st...')
+#15 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}('[<span class="s...')
+#16 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('<span class="st...', Object(Closure), '<span class="st...')
+#17 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\grid\GridView.php(288): yii\widgets\BaseListView->run()
+#18 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\kartik-v\yii2-grid\GridView.php(706): yii\grid\GridView->run()
+#19 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Widget.php(98): kartik\grid\GridView->run()
+#20 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\views\deduction\index2.php(110): yii\base\Widget::widget('[<span class="s...')
+#21 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(325): require('C:\Users\Syam\s...')
+#22 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#23 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(backend\controllers\DeductionController))
+#24 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('<span class="st...', '[<span class="s...', Object(backend\controllers\DeductionController))
+#25 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\DeductionController.php(88): yii\base\Controller->render('<span class="st...', '[<span class="s...')
+#26 [internal function]: backend\controllers\DeductionController->actionIndex2()
+#27 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#28 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#29 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#30 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#31 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#32 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#33 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'scholar.scholar_first_name' in 'where clause'
+The SQL being executed was: SELECT COUNT(*) FROM `deduction` WHERE `scholar`.`scholar_first_name` LIKE '%afd%'' in C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(385): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#3 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveQuery.php(339): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#4 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Query.php(296): yii\db\ActiveQuery->queryScalar('<span class="st...', '<span class="ke...')
+#5 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('<span class="st...', '<span class="ke...')
+#6 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#7 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#8 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#9 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#10 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#11 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#12 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#13 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\grid\GridView.php(313): yii\widgets\BaseListView->renderSection('<span class="st...')
+#14 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('<span class="st...')
+#15 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}('[<span class="s...')
+#16 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('<span class="st...', Object(Closure), '<span class="st...')
+#17 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\grid\GridView.php(288): yii\widgets\BaseListView->run()
+#18 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\kartik-v\yii2-grid\GridView.php(706): yii\grid\GridView->run()
+#19 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Widget.php(98): kartik\grid\GridView->run()
+#20 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\views\deduction\index2.php(110): yii\base\Widget::widget('[<span class="s...')
+#21 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(325): require('C:\Users\Syam\s...')
+#22 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#23 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(backend\controllers\DeductionController))
+#24 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('<span class="st...', '[<span class="s...', Object(backend\controllers\DeductionController))
+#25 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\controllers\DeductionController.php(88): yii\base\Controller->render('<span class="st...', '[<span class="s...')
+#26 [internal function]: backend\controllers\DeductionController->actionIndex2()
+#27 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#28 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#29 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#30 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#31 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#32 C:\Users\Syam\smGithub2\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#33 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'scholar.scholar_first_name' in 'where clause'
+)
+
+2015-08-30 07:41:35 [::1][-][-][info][application] $_GET = [
+    'DeductionSearch' => [
+        'scholar_scholar_id' => ''
+        'firstName' => 'afd'
+        'middleName' => ''
+        'lastName' => ''
+        'scholar_school_school_id' => ''
+        'deduction_date' => ''
+        'deduction_amount' => ''
+        'deduction_remark' => ''
+    ]
+    'r' => 'deduction/index2'
+]
+
+$_COOKIE = [
+    '_frontendUser' => '112a5250b12624fa4595b3293b7f191f515827574e4feb216daad1ab6b4972f1a:2:{i:0;s:13:\"_frontendUser\";i:1;s:46:\"[2,\"Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld\",2592000]\";}'
+    '_csrf' => 'cf78768c4d8bca08194e0dc1cc241151cb99c19ca84d98ccca39bf809e974829a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"JkCcjnrxXxgnaMoW-Dk4fwzieMb5AGpz\";}'
+    'PHPSESSID' => 'tk0h7mi8tgg3bdaflm0kkq29p6'
+    '_identity' => '5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"5ZxLqHr3NrpD96XosPaJvkquMdma2POj\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/iteration3/backend/web/index.php?r=deduction%2Findex2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6'
+    'HTTP_COOKIE' => '_frontendUser=112a5250b12624fa4595b3293b7f191f515827574e4feb216daad1ab6b4972f1a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D; _csrf=cf78768c4d8bca08194e0dc1cc241151cb99c19ca84d98ccca39bf809e974829a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22JkCcjnrxXxgnaMoW-Dk4fwzieMb5AGpz%22%3B%7D; PHPSESSID=tk0h7mi8tgg3bdaflm0kkq29p6; _identity=5957a6ed7b486f8c4662189186475a914c7bda38176c2163e15d81ead17cd06ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225ZxLqHr3NrpD96XosPaJvkquMdma2POj%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/iteration3/backend/web/index.php'
+    'REMOTE_PORT' => '50716'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'DeductionSearch%5Bscholar_scholar_id%5D=&DeductionSearch%5BfirstName%5D=afd&DeductionSearch%5BmiddleName%5D=&DeductionSearch%5BlastName%5D=&DeductionSearch%5Bscholar_school_school_id%5D=&DeductionSearch%5Bdeduction_date%5D=&DeductionSearch%5Bdeduction_amount%5D=&DeductionSearch%5Bdeduction_remark%5D=&r=deduction%2Findex2'
+    'REQUEST_URI' => '/iteration3/backend/web/index.php?DeductionSearch%5Bscholar_scholar_id%5D=&DeductionSearch%5BfirstName%5D=afd&DeductionSearch%5BmiddleName%5D=&DeductionSearch%5BlastName%5D=&DeductionSearch%5Bscholar_school_school_id%5D=&DeductionSearch%5Bdeduction_date%5D=&DeductionSearch%5Bdeduction_amount%5D=&DeductionSearch%5Bdeduction_remark%5D=&r=deduction%2Findex2'
+    'SCRIPT_NAME' => '/iteration3/backend/web/index.php'
+    'PHP_SELF' => '/iteration3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1440913295.449
+    'REQUEST_TIME' => 1440913295
+]
