@@ -24,6 +24,9 @@ class Withholding extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+	public $firstName;
+	public $middleName;
+	public $lastName;
     public static function tableName()
     {
         return 'withholding';
@@ -56,6 +59,9 @@ class Withholding extends \yii\db\ActiveRecord
             'withholding_start_date' => 'Withholding Start Date',
             'withholding_end_date' => 'Withholding End Date',
             'withholding_remark' => 'Withholding Remark', */
+			'firstName' => 'First Name',
+            'middleName' => 'Middle Name',
+			'lastName' => 'Last Name',
             'withholding_id' => 'Withholding ID',
             'scholar_scholar_id' => 'Scholar ID',
             'scholar_school_school_id' => 'School ID',
