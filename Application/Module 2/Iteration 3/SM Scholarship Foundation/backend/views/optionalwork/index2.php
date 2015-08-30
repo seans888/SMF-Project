@@ -16,9 +16,56 @@ $exportedValues =
 	[
 		['class' => 'yii\grid\SerialColumn'],
 		
-            'optionalwork_location',
-            'optionalwork_start_date',
-            'optionalwork_end_date',
+		[
+			'class' => 'kartik\grid\EditableColumn',
+			'attribute' => 'scholar_scholar_id',
+		],
+		[
+			'class' => 'kartik\grid\EditableColumn',
+			'attribute' => 'scholar_school_school_id',
+		],
+		[
+			'class' => 'kartik\grid\EditableColumn',
+			'attribute' => 'optional_work_company_name',
+		],
+		[
+			'class' => 'kartik\grid\EditableColumn',
+			'attribute' => 'optionalwork_location',
+		],
+		[
+			'class' => 'kartik\grid\EditableColumn',
+			'attribute'=>'optionalwork_start_date',
+			'editableOptions' => [
+				'inputType' => 'widget',
+				'options'=>
+				[
+					'model' => $searchModel,
+
+						'clientOptions' => [
+							'autoclose' => true,
+							'format' => 'yyyy-mm-dd',
+						]
+				],
+				'widgetClass'=>'dosamigos\datepicker\DatePicker'
+			],
+		],
+		[
+			'class' => 'kartik\grid\EditableColumn',
+			'attribute'=>'optionalwork_end_date',
+			'editableOptions' => [
+				'inputType' => 'widget',
+				'options'=>
+				[
+					'model' => $searchModel,
+
+						'clientOptions' => [
+							'autoclose' => true,
+							'format' => 'yyyy-mm-dd',
+						]
+				],
+				'widgetClass'=>'dosamigos\datepicker\DatePicker'
+			],
+		],
 		
 		['class' => 'yii\grid\ActionColumn'],
 	];
