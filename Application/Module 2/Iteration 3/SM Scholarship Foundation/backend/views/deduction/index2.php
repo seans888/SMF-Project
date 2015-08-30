@@ -17,7 +17,7 @@ $exportedValues =
 		['class' => 'yii\grid\SerialColumn'],
 		
 		[
-			'class' => 'kartik\grid\EditableColumn',
+			// 'class' => 'kartik\grid\EditableColumn',
 			'attribute' => 'scholar_scholar_id',
 		],
 		[
@@ -33,7 +33,7 @@ $exportedValues =
 			'value' => 'scholarScholar.scholar_last_name'
 		],
 		[
-			'class' => 'kartik\grid\EditableColumn',
+			// 'class' => 'kartik\grid\EditableColumn',
 			'attribute' => 'scholar_school_school_id',
 			'value' => 'schoolSchool.school_name',
 		],
