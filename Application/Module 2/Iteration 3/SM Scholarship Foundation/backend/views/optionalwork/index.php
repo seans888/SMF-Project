@@ -47,6 +47,7 @@ $exportedValues =
 	[
 		'attribute' => 'scholar_last_name',
 	],
+	/*
 	[
 		'attribute' => 'scholar_gender',
 	],
@@ -69,10 +70,11 @@ $exportedValues =
 	[
 		'attribute' => 'scholar_type',
 	],
-
+*/
 	['class' => 'kartik\grid\ActionColumn'],
 ];
 
+/*
 $export = ExportMenu::widget([
 		'dataProvider' => $dataProvider,
         'columns' => $exportedValues,
@@ -87,7 +89,8 @@ $export = ExportMenu::widget([
             'label' => 'Export',
             'class' => 'btn btn-success'
         ]
-	]);
+	])
+*/;
 ?>
 <?= Html::a('Group By Scholar', ['index'], ['class' => 'btn btn-success']) ?>
 <?= Html::a('Show Only Incentive Records', ['index2'], ['class' => 'btn btn-success']) ?>
@@ -112,7 +115,7 @@ $export = ExportMenu::widget([
 			],
   //     	'{export}',
 			'{toggleData}',
-			$export
+			//$export
 		],
  //   set export properties
     'export'=>[
