@@ -9,7 +9,7 @@ use common\models\OptionalworkSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\helpers\Json;
 /**
  * OptionalworkController implements the CRUD actions for Optionalwork model.
  */
@@ -35,7 +35,25 @@ class OptionalworkController extends Controller
     {
         $searchModel = new ScholarSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$optionalWorkId = Yii::$app->request->post('editableKey');
+			$optionalWork = Optionalwork::findOne($optionalWorkId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Optionalwork']);
+			$post['Optionalwork'] = $posted;
+			
+			if($optionalWork->load($post))
+			{
+				$optionalWork->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -45,7 +63,25 @@ class OptionalworkController extends Controller
     {
         $searchModel = new OptionalworkSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$optionalWorkId = Yii::$app->request->post('editableKey');
+			$optionalWork = Optionalwork::findOne($optionalWorkId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Optionalwork']);
+			$post['Optionalwork'] = $posted;
+			
+			if($optionalWork->load($post))
+			{
+				$optionalWork->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('index2', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
