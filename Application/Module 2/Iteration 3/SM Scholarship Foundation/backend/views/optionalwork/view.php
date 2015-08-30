@@ -35,6 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'optionalwork_location',
             'optionalwork_start_date',
             'optionalwork_end_date',
+			'optional_work_company_name'
         ],
     ]) ?>
 
