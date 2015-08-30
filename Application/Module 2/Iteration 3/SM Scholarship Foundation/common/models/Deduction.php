@@ -40,7 +40,7 @@ class Deduction extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['scholar_scholar_id', 'scholar_school_school_id'], 'required'],
+            [['scholar_scholar_id'], 'required'],
             [['scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
             [['deduction_date'], 'safe'],
             [['deduction_amount'], 'number'],
