@@ -5,6 +5,7 @@ namespace backend\controllers;
 use Yii;
 use common\models\Withholding;
 use common\models\WithholdingSearch;
+use common\models\ScholarSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -32,7 +33,7 @@ class WithholdingController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new WithholdingSearch();
+        $searchModel = new ScholarSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
