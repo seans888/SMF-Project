@@ -113,7 +113,7 @@ $exportedValues =
         'columns' => $exportedValues,
 		'toolbar'=> [
 		[
-			'content'=>html::a('Create Deductions', ['create'], ['class' => 'btn btn-success'])
+			'content'=>html::a('Create Withholding Record', ['create'], ['class' => 'btn btn-success'])
 		],
 		
 		'{toggleData}',
