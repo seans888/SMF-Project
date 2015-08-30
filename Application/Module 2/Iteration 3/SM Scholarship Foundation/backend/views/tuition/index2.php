@@ -11,16 +11,19 @@ use yii\helpers\ArrayHelper;
 $gridColumns = 
 [            
 	['class' => 'kartik\grid\SerialColumn'],
+	// [
+		// 'class' => 'kartik\grid\EditableColumn',
+		// 'attribute'=>'scholar_scholar_id',
+		// 'editableOptions' => [
+			// 'inputType' => '\kartik\select2\Select2',
+			// 'options'=>
+			// [
+				// 'data' => ArrayHelper::map(Scholar::find()->all(),'scholar_id','scholar_last_name','scholar_id'),
+			// ],
+		// ],
+	// ],
 	[
-		'class' => 'kartik\grid\EditableColumn',
-		'attribute'=>'scholar_scholar_id',
-		'editableOptions' => [
-			'inputType' => '\kartik\select2\Select2',
-			'options'=>
-			[
-				'data' => ArrayHelper::map(Scholar::find()->all(),'scholar_id','scholar_last_name','scholar_id'),
-			],
-		],
+		'attribute' => 'scholar_scholar_id',
 	],
 	[
 		'attribute' => 'firstName',
@@ -35,6 +38,10 @@ $gridColumns =
 		'value' => 'scholarScholar.scholar_last_name'
 	],
 	[
+			'attribute' => 'scholar_school_school_id',
+			'value' => 'schoolSchool.school_name'
+		],
+	[
 		'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'tuition_term',
 	],
@@ -47,9 +54,22 @@ $gridColumns =
 		// 'attribute' => 'tuition_school_year_end',
 	// ],
 	[
-		'class' => 'kartik\grid\EditableColumn',
-		'attribute' => 'tuition_enrollment_date',
-	],
+				'class' => 'kartik\grid\EditableColumn',
+            	'attribute'=>'tuition_enrollment_date',
+				'editableOptions' => [
+					'inputType' => 'widget',
+					'options'=>
+					[
+						'model' => $searchModel,
+
+							'clientOptions' => [
+								'autoclose' => true,
+								'format' => 'yyyy-mm-dd',
+							]
+					],
+					'widgetClass'=>'dosamigos\datepicker\DatePicker'
+				],
+        ],
 	[
 		'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'tuition_amount',
@@ -65,6 +85,23 @@ $gridColumns =
 			'widgetClass'=> 'kartik\select2\Select2',
 		],
 	],
+	[
+				'class' => 'kartik\grid\EditableColumn',
+            	'attribute'=>'tuition_payment_date',
+				'editableOptions' => [
+					'inputType' => 'widget',
+					'options'=>
+					[
+						'model' => $searchModel,
+
+							'clientOptions' => [
+								'autoclose' => true,
+								'format' => 'yyyy-mm-dd',
+							]
+					],
+					'widgetClass'=>'dosamigos\datepicker\DatePicker'
+				],
+        ],
 	// [
 		// 'class' => 'kartik\grid\EditableColumn',
 		// 'attribute' => 'tuition_payment_date',
