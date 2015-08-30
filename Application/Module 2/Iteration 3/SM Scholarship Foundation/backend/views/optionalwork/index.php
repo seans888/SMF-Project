@@ -93,7 +93,7 @@ $export = ExportMenu::widget([
 */;
 ?>
 <?= Html::a('Group By Scholar', ['index'], ['class' => 'btn btn-success']) ?>
-<?= Html::a('Show Only Incentive Records', ['index2'], ['class' => 'btn btn-success']) ?>
+<?= Html::a('Show Only Optional Work Records', ['index2'], ['class' => 'btn btn-success']) ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -111,7 +111,7 @@ $export = ExportMenu::widget([
         'columns' => $exportedValues,
 		'toolbar'=> [
 			[
-				'content'=>Html::a('Create Scholar', ['create'], ['class' => 'btn btn-success'])
+				'content'=>Html::a('Create Optional Work', ['create'], ['class' => 'btn btn-success'])
 			],
   //     	'{export}',
 			'{toggleData}',
