@@ -9,7 +9,8 @@ use common\models\ScholarSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\helpers\ArrayHelper;
+use common\models\Scholar;
 /**
  * WithholdingController implements the CRUD actions for Withholding model.
  */
@@ -76,7 +77,20 @@ class WithholdingController extends Controller
     {
         $model = new Withholding();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+			$selectSchool = ArrayHelper::map(Scholar::find()
+			->where(['scholar_id'=>$model->scholar_scholar_id])
+			->all(),'school_school_id','school_school_id');
+			$schoolID = array_values($selectSchool)[0];
+			$model->scholar_school_school_id = $schoolID;
+			
+			$selectArea = ArrayHelper::map(Scholar::find()
+			->where(['scholar_id'=>$model->scholar_scholar_id])
+			->all(),'allowance_allowance_area','allowance_allowance_area');
+			$area = array_values($selectArea)[0];
+			$model->scholar_allowance_allowance_area = $area;
+			
+			$model->save();
             return $this->redirect(['view', 'withholding_id' => $model->withholding_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id, 'scholar_allowance_allowance_area' => $model->scholar_allowance_allowance_area]);
         } else {
             return $this->render('create', [
