@@ -11,6 +11,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper;
 use common\models\Scholar;
+use yii\helpers\Json;
 /**
  * WithholdingController implements the CRUD actions for Withholding model.
  */
@@ -36,7 +37,25 @@ class WithholdingController extends Controller
     {
         $searchModel = new ScholarSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$withholdingId = Yii::$app->request->post('editableKey');
+			$withholding = Withholding::findOne($withholdingId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Withholding']);
+			$post['Withholding'] = $posted;
+			
+			if($withholding->load($post))
+			{
+				$withholding->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -46,7 +65,25 @@ class WithholdingController extends Controller
     {
         $searchModel = new WithholdingSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$withholdingId = Yii::$app->request->post('editableKey');
+			$withholding = Withholding::findOne($withholdingId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Withholding']);
+			$post['Withholding'] = $posted;
+			
+			if($withholding->load($post))
+			{
+				$withholding->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('index2', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
