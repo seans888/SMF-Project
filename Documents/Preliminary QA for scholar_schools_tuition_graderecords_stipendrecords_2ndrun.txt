@@ -1,0 +1,99 @@
+*Tabs aren't always followed properly in the exported files
+School
+Create School - PASS
+Create School Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+School record CAN be read
+School record CAN be updated
+School record CAN be deleted
+
+
+Scholar
+Create Scholar - FAIL (issue with foreign key, cannot update child row) (Scholar table and user table) [FIXED by 31/08/2015]
+Create Scholar Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+Scholar record CAN be read
+Scholar record CAN be updated
+Scholar record CANNOT be deleted (editing scholar table before user table)
+	
+	
+Tuition
+Create Tuition - FAIL (Error: Undefined offset: 0) (TuitionController)
+Create Tuition Exports 
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+Tuition edits: Created a Tuition record for Kevin (Scholar ID 3) When user wants to edit straight from the table, Syam's (Scholar ID 1) Information changes instead of Kevin's [EDIT: Removing Syam's record allowed for Kevin's to be edited..must investigate]
+	
+Grade
+Grade record CANNOT be created for 'new' scholars (the scholar user workaround)
+Grade record CAN be read
+Grade record CAN be updated (Note: there is no auto-formatting i.e 4 is 4 not 4.0)
+Grade record CAN be deleted
+
+Grading Equivalence
+Create Equivalence - PASS [EDIT: FAIL - pressing create equivalence rule now leads to a 404 error]
+Create Equivalence Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+Equivalence records CAN be read
+Equivalence records CAN be edited (cannot check for the tuition error though, edit B and A gets edited instead)
+Equivalence records CAN be deleted
+
+Subject Records
+Create Subject - PASS
+*There is no option to set taken or not taken upon creation (though i think i see the point, still pointing it out nonetheless)
+Create Subject Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+*Exports only export subject values regardless of repetition.
+Subject records CAN be read
+Subject records CAN be edited
+Subject records CAN be deleted
+
+Stipends
+Allownace Reference Table
+Note: ALLOWANCE RECORDS CAN BE EDITED
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+
+Withholding records can be read, updated and deleted
+	
+Create Incentives - PASS
+Create Incentives Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+Incentive records CAN be edited but with tuition error (if you edit B or C, A gets edited instead)
+
+Create Deductions - PASS
+Create Deductions Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Excel95 - PASS
+	Excel2007 - PASS
+	Filters - PASS
+Deduction Records CAN be edited but with tuition error (if you edit B or C, A gets edited instead)
