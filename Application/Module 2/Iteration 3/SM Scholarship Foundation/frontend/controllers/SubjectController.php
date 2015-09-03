@@ -289,6 +289,7 @@ class SubjectController extends Controller
 	
         $model = $this->findModel($id);
 		if($model->subject_approval_status=='Not Approved'){
+		
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index', 'id' => $model->subject_id]);
         } else {

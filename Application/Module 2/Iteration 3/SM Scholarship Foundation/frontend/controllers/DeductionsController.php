@@ -5,6 +5,8 @@ namespace frontend\controllers;
 use Yii;
 use common\models\Deduction;
 use common\models\DeductionSearch;
+use common\models\Incentive;
+use common\models\IncentiveSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -39,17 +41,24 @@ class DeductionsController extends Controller
 		$users = User::find()->all();
 		$scholars = Scholar::find()->all();
 		$model = new Deduction();
+		$model2 = new Incentive();
 		
 		foreach($users as $user){
 			foreach($scholars as $scholar){
 				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
 					$model->scholar_scholar_id=$scholar->scholar_id;
+					$model2->scholar_scholar_id=$scholar->scholar_id;
 					
-					$searchModel = new DeductionSearch($model);
+					$searchModel= new DeductionSearch($model);
 					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+					
+					$searchModel2 = new IncentiveSearch($model2);
+					$dataProvider2 = $searchModel2->search(Yii::$app->request->queryParams);
 					return $this->render('index', [
 					'searchModel' => $searchModel,
 					'dataProvider' => $dataProvider,
+					'searchModel' => $searchModel2,
+					'dataProvider' => $dataProvider2,
 					]);
 				}
 
