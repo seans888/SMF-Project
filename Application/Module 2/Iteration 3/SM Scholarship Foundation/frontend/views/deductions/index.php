@@ -48,8 +48,8 @@ $this->params['breadcrumbs'][] = $this->title;
     [
         'label'=>'<i class="glyphicon glyphicon-thumbs-down"></i> Deduction Records',
         'content'=> GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+        'dataProvider' => $dataProvider1,
+        'filterModel' => $searchModel1,
 		'showOnEmpty' => false,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
