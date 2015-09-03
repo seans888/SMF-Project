@@ -171,7 +171,10 @@ class SubjectController extends Controller
                                 $transaction->rollBack();
                                 break;
                             }
-							if ($flag) {
+							
+                        }
+                    // }
+					if ($flag) {
 			if($modelCustomer->subject_name==null)
 			{
 				$sql = "DELETE FROM subject WHERE subject_name is null;";
@@ -180,8 +183,6 @@ class SubjectController extends Controller
                         $transaction->commit();
                         return $this->redirect(['index']);
                     }
-                        }
-                    // }
 					 
                    
                 } catch (Exception $e) {
