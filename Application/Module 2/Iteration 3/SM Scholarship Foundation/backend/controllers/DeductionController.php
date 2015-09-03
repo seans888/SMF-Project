@@ -10,6 +10,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\helpers\Json;
+use common\models\Scholar;
+use yii\helpers\ArrayHelper;
 /**
  * DeductionController implements the CRUD actions for Deduction model.
  */
@@ -94,10 +96,10 @@ class DeductionController extends Controller
      * @param integer $scholar_school_school_id
      * @return mixed
      */
-    public function actionView($deduction_id, $scholar_scholar_id, $scholar_school_school_id)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($deduction_id, $scholar_scholar_id, $scholar_school_school_id),
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -110,8 +112,15 @@ class DeductionController extends Controller
     {
         $model = new Deduction();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'deduction_id' => $model->deduction_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id]);
+        if ($model->load(Yii::$app->request->post())) {
+			$selectSchool = ArrayHelper::map(Scholar::find()
+			->where(['scholar_id'=>$model->scholar_scholar_id])
+			->all(),'school_school_id','school_school_id');
+			$schoolID = array_values($selectSchool)[0];
+			$model->scholar_school_school_id = $schoolID;
+			
+			$model->save();
+            return $this->redirect(['view', 'id' => $model->deduction_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -127,12 +136,19 @@ class DeductionController extends Controller
      * @param integer $scholar_school_school_id
      * @return mixed
      */
-    public function actionUpdate($deduction_id, $scholar_scholar_id, $scholar_school_school_id)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($deduction_id, $scholar_scholar_id, $scholar_school_school_id);
+        $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'deduction_id' => $model->deduction_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id]);
+        if ($model->load(Yii::$app->request->post())) {
+			$selectSchool = ArrayHelper::map(Scholar::find()
+			->where(['scholar_id'=>$model->scholar_scholar_id])
+			->all(),'school_school_id','school_school_id');
+			$schoolID = array_values($selectSchool)[0];
+			$model->scholar_school_school_id = $schoolID;
+			
+			$model->save();
+            return $this->redirect(['view', 'id' => $model->deduction_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -148,9 +164,9 @@ class DeductionController extends Controller
      * @param integer $scholar_school_school_id
      * @return mixed
      */
-    public function actionDelete($deduction_id, $scholar_scholar_id, $scholar_school_school_id)
+    public function actionDelete($id)
     {
-        $this->findModel($deduction_id, $scholar_scholar_id, $scholar_school_school_id)->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
@@ -164,9 +180,9 @@ class DeductionController extends Controller
      * @return Deduction the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($deduction_id, $scholar_scholar_id, $scholar_school_school_id)
+    protected function findModel($id)
     {
-        if (($model = Deduction::findOne(['deduction_id' => $deduction_id, 'scholar_scholar_id' => $scholar_scholar_id, 'scholar_school_school_id' => $scholar_school_school_id])) !== null) {
+        if (($model = Deduction::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

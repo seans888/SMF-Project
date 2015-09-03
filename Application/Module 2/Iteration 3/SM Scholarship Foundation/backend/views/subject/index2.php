@@ -10,7 +10,26 @@ use common\models\Subject;
 $exportedValues =
 [
             ['class' => 'kartik\grid\SerialColumn'],
-			
+			[
+				// 'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'scholar_scholar_id',
+			],
+			[
+				'attribute' => 'firstName',
+				'value' => 'scholarScholar.scholar_first_name'
+			],
+			[
+				'attribute' => 'middleName',
+				'value' => 'scholarScholar.scholar_middle_name'
+			],
+			[
+				'attribute' => 'lastName',
+				'value' => 'scholarScholar.scholar_last_name'
+			],
+			[
+				'attribute' => 'scholar_school_school_id',
+				'value' => 'schoolSchool.school_name'
+			],
 			[
 				'class' => 'kartik\grid\EditableColumn',
 				'attribute' => 'subject_term',
@@ -58,7 +77,7 @@ $exportedValues =
 $export = ExportMenu::widget([
 		'dataProvider' => $dataProvider,
         'columns' => $exportedValues,
-		'noExportColumns' => [7],
+		'noExportColumns' => [12],
 		'exportConfig'=>[
 			'Excel5'=>false,
 			'Excel2007'=>false,

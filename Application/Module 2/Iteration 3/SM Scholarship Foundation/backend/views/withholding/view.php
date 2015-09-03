@@ -15,14 +15,15 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'withholding_id' => $model->withholding_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id, 'scholar_allowance_allowance_area' => $model->scholar_allowance_allowance_area], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'withholding_id' => $model->withholding_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id, 'scholar_allowance_allowance_area' => $model->scholar_allowance_allowance_area], [
+        <?= Html::a('Update', ['update', 'id' => $model->withholding_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->withholding_id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
                 'method' => 'post',
             ],
         ]) ?>
+		<?= Html::a('View List', ['index'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= DetailView::widget([

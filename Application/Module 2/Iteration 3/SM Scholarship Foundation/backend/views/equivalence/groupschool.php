@@ -88,7 +88,7 @@ $export = ExportMenu::widget([
     	},
         'columns' => $gridColumns,
 		'toolbar'=> [
-        ['content'=>Html::a('Create Equivalence Rule', ['groupcreate'], ['class' => 'btn btn-success'])
+        ['content'=>Html::a('Create Equivalence Rule', ['create'], ['class' => 'btn btn-success'])
         ],
   //      '{export}',
         '{toggleData}',

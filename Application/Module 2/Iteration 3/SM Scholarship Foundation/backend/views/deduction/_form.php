@@ -24,14 +24,6 @@ use kartik\select2\Select2;
 			'pluginOptions'=>['allowClear'=>true],
 		]) ?>
 
-    <?= $form->field($model,'scholar_school_school_id')->widget(Select2::classname(),
-		[
-			'data'=>ArrayHelper::map(School::find()->all(),'school_id','school_name'),
-			'language'=>'en',
-			'options'=>['placeholder'=>'Select School'],
-			'pluginOptions'=>['allowClear'=>true],
-		]) ?>
-
     <?= $form->field($model, 'deduction_date')->widget(
 			DatePicker::className(), [
 				// inline too, not bad

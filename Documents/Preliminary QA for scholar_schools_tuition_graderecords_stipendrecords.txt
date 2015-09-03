@@ -1,0 +1,77 @@
+*Tabs aren't always followed properly in the exported files
+School
+Create School - PASS
+Create School Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+
+
+Scholar
+Create Scholar - FAIL (issue with foreign key, cannot update child row) (Scholar table and user table)
+Create Scholar Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+	
+Tuition
+Create Tuition - FAIL (Error: Undefined offset: 0) (TuitionController)
+Create Tuition Exports 
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+	
+Grade
+Errored immediately after clicking Grade Report
+Error Message: syntax error, unexpected '<<'(T_SL), expecting ']'
+Grading Equivalence
+Create Equivalence - PASS
+Create Equivalence Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+Subject Records
+Create Subject - PASS
+*There is no option to set taken or not taken upon creation (though i think i see the point, still pointing it out nonetheless)
+Create Subject Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+*Exports only export subject values regardless of repetition.
+
+Stipends
+Allownace Reference Table
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+	
+Create Incentives - PASS
+Create Incentives Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+
+Create Deductions - PASS
+Create Deductions Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Excel95 - PASS
+	Excel2007 - PASS
+	Filters - PASS
+	

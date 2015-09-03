@@ -40,10 +40,46 @@ $this->params['breadcrumbs'][] = $this->title;
 			*/
 			[
 				'class' => 'kartik\grid\EditableColumn',
+				'attribute' => 'optional_work_company_name',
+			],
+			[
+				'class' => 'kartik\grid\EditableColumn',
 				'attribute' => 'optionalwork_location',
 			],
-            'optionalwork_start_date',
-            'optionalwork_end_date',
+            [
+				'class' => 'kartik\grid\EditableColumn',
+            	'attribute'=>'optionalwork_start_date',
+				'editableOptions' => [
+					'inputType' => 'widget',
+					'options'=>
+					[
+						'model' => $searchModel,
+
+							'clientOptions' => [
+								'autoclose' => true,
+								'format' => 'yyyy-mm-dd',
+							]
+					],
+					'widgetClass'=>'dosamigos\datepicker\DatePicker'
+				],
+			],
+            [
+				'class' => 'kartik\grid\EditableColumn',
+            	'attribute'=>'optionalwork_end_date',
+				'editableOptions' => [
+					'inputType' => 'widget',
+					'options'=>
+					[
+						'model' => $searchModel,
+
+							'clientOptions' => [
+								'autoclose' => true,
+								'format' => 'yyyy-mm-dd',
+							]
+					],
+					'widgetClass'=>'dosamigos\datepicker\DatePicker'
+				],
+			],
 			
 	//this is the edit column
 	['class' => 'yii\grid\ActionColumn'],

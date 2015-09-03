@@ -3,7 +3,10 @@
 use yii\helpers\Html;
 use kartik\grid\GridView;
 use kartik\export\ExportMenu;
-
+use yii\helpers\ArrayHelper;
+use kartik\select2\Select2;
+use common\models\School;
+use common\models\Scholar;
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\IncentiveSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -15,6 +18,48 @@ $this->params['breadcrumbs'][] = $this->title;
 $exportedValues =
 	[
 		['class' => 'yii\grid\SerialColumn'],
+		[
+			'attribute'=>'scholar_scholar_id',
+		],
+		// [
+		// 'class' => 'kartik\grid\EditableColumn',
+		// 'attribute'=>'scholar_scholar_id',
+		// 'editableOptions' => [
+			// 'inputType' => '\kartik\select2\Select2',
+			// 'options'=>
+			// [
+				// 'data' => ArrayHelper::map(Scholar::find()->all(),'scholar_id','scholar_last_name','scholar_id'),
+			// ],
+		// ],
+	// ],
+		[
+			'attribute' => 'firstName',
+			'value' => 'scholarScholar.scholar_first_name'
+		],
+		[
+			'attribute' => 'middleName',
+			'value' => 'scholarScholar.scholar_middle_name'
+		],
+		[
+			'attribute' => 'lastName',
+			'value' => 'scholarScholar.scholar_last_name'
+		],
+		[
+			'attribute' => 'scholar_school_school_id',
+			'value' => 'schoolSchool.school_name'
+		],
+		// [
+		// 'class' => 'kartik\grid\EditableColumn',
+		// 'attribute'=>'scholar_school_school_id',
+		// 'editableOptions' => [
+			// 'inputType' => '\kartik\select2\Select2',
+			// 'options'=>
+			// [
+				// 'data' => ArrayHelper::map(School::find()->all(),'school_id','school_name'),
+			// ],
+		// ],
+		// 'value'=>'schoolSchool.school_name',
+		// ],
 		[
 			'class' => 'kartik\grid\EditableColumn',
 			'attribute' => 'incentive_amount',
@@ -40,7 +85,17 @@ $exportedValues =
 					'widgetClass'=>'dosamigos\datepicker\DatePicker'
 				],
         ],
-		
+		// [
+		// 'class' => 'kartik\grid\EditableColumn',
+		// 'attribute' => 'scholar_allowance_allowance_area',
+		// 'editableOptions' => [
+			// 'inputType' => 'dropDownList',
+			// 'pluginOptions'=>['allowClear'=>true],
+			// 'data' => ["NCR"=>"NCR","Provincial"=>"Provincial"],
+			// 'widgetClass'=> 'kartik\select2\Select2',
+		// ],
+	// ],
+		'scholar_allowance_allowance_area',
 		['class' => 'yii\grid\ActionColumn'],
 	];
 	
@@ -51,7 +106,7 @@ $exportedValues =
 			'Excel5'=>false,
 			'Excel2007'=>false,
 		],
-			'noExportColumns' => [4],
+			'noExportColumns' => [10],
 			'columnSelectorOptions'=>[
 				'label' => 'Columns',
 				'class' => 'btn btn-danger'

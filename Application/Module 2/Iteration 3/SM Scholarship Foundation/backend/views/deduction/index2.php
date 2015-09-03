@@ -17,11 +17,23 @@ $exportedValues =
 		['class' => 'yii\grid\SerialColumn'],
 		
 		[
-			'class' => 'kartik\grid\EditableColumn',
+			// 'class' => 'kartik\grid\EditableColumn',
 			'attribute' => 'scholar_scholar_id',
 		],
 		[
-			'class' => 'kartik\grid\EditableColumn',
+			'attribute' => 'firstName',
+			'value' => 'scholarScholar.scholar_first_name'
+		],
+		[
+			'attribute' => 'middleName',
+			'value' => 'scholarScholar.scholar_middle_name'
+		],
+		[
+			'attribute' => 'lastName',
+			'value' => 'scholarScholar.scholar_last_name'
+		],
+		[
+			// 'class' => 'kartik\grid\EditableColumn',
 			'attribute' => 'scholar_school_school_id',
 			'value' => 'schoolSchool.school_name',
 		],
@@ -57,7 +69,11 @@ $exportedValues =
 	$export = ExportMenu::widget([
 			'dataProvider' => $dataProvider,
 			'columns' => $exportedValues,
-			'noExportColumns' => [0,3],
+			'noExportColumns' => [6],
+			'exportConfig'=>[
+			'Excel5'=>false,
+			'Excel2007'=>false,
+		],
 			'columnSelectorOptions'=>[
 				'label' => 'Columns',
 				'class' => 'btn btn-danger'

@@ -9,7 +9,9 @@ use common\models\OptionalworkSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\helpers\Json;
+use yii\helpers\ArrayHelper;
+use common\models\Scholar;
 /**
  * OptionalworkController implements the CRUD actions for Optionalwork model.
  */
@@ -35,7 +37,25 @@ class OptionalworkController extends Controller
     {
         $searchModel = new ScholarSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$optionalWorkId = Yii::$app->request->post('editableKey');
+			$optionalWork = Optionalwork::findOne($optionalWorkId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Optionalwork']);
+			$post['Optionalwork'] = $posted;
+			
+			if($optionalWork->load($post))
+			{
+				$optionalWork->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -45,7 +65,25 @@ class OptionalworkController extends Controller
     {
         $searchModel = new OptionalworkSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		if(Yii::$app->request->post('hasEditable'))
+		{
+			$optionalWorkId = Yii::$app->request->post('editableKey');
+			$optionalWork = Optionalwork::findOne($optionalWorkId);
 
+			$out = Json::encode(['output'=>'','message'=>'']);
+			$post = [];
+			$posted = current($_POST['Optionalwork']);
+			$post['Optionalwork'] = $posted;
+			
+			if($optionalWork->load($post))
+			{
+				$optionalWork->save();
+			}
+			echo $out;
+			return;
+		}
+		
         return $this->render('index2', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -58,10 +96,10 @@ class OptionalworkController extends Controller
      * @param integer $scholar_school_school_id
      * @return mixed
      */
-    public function actionView($optionalwork_id, $scholar_scholar_id, $scholar_school_school_id)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($optionalwork_id, $scholar_scholar_id, $scholar_school_school_id),
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -74,8 +112,15 @@ class OptionalworkController extends Controller
     {
         $model = new Optionalwork();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'optionalwork_id' => $model->optionalwork_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id]);
+        if ($model->load(Yii::$app->request->post())) {
+			$selectSchool = ArrayHelper::map(Scholar::find()
+			->where(['scholar_id'=>$model->scholar_scholar_id])
+			->all(),'school_school_id','school_school_id');
+			$schoolID = array_values($selectSchool)[0];
+			$model->scholar_school_school_id = $schoolID;
+			
+			$model->save();
+            return $this->redirect(['view', 'id' => $model->optionalwork_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -91,12 +136,19 @@ class OptionalworkController extends Controller
      * @param integer $scholar_school_school_id
      * @return mixed
      */
-    public function actionUpdate($optionalwork_id, $scholar_scholar_id, $scholar_school_school_id)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($optionalwork_id, $scholar_scholar_id, $scholar_school_school_id);
+        $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'optionalwork_id' => $model->optionalwork_id, 'scholar_scholar_id' => $model->scholar_scholar_id, 'scholar_school_school_id' => $model->scholar_school_school_id]);
+        if ($model->load(Yii::$app->request->post())) {
+			$selectSchool = ArrayHelper::map(Scholar::find()
+			->where(['scholar_id'=>$model->scholar_scholar_id])
+			->all(),'school_school_id','school_school_id');
+			$schoolID = array_values($selectSchool)[0];
+			$model->scholar_school_school_id = $schoolID;
+			
+			$model->save();
+            return $this->redirect(['view', 'id' => $model->optionalwork_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -112,9 +164,9 @@ class OptionalworkController extends Controller
      * @param integer $scholar_school_school_id
      * @return mixed
      */
-    public function actionDelete($optionalwork_id, $scholar_scholar_id, $scholar_school_school_id)
+    public function actionDelete($id)
     {
-        $this->findModel($optionalwork_id, $scholar_scholar_id, $scholar_school_school_id)->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
@@ -128,9 +180,9 @@ class OptionalworkController extends Controller
      * @return Optionalwork the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($optionalwork_id, $scholar_scholar_id, $scholar_school_school_id)
+    protected function findModel($id)
     {
-        if (($model = Optionalwork::findOne(['optionalwork_id' => $optionalwork_id, 'scholar_scholar_id' => $scholar_scholar_id, 'scholar_school_school_id' => $scholar_school_school_id])) !== null) {
+        if (($model = Optionalwork::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

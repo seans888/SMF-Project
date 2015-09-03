@@ -13,6 +13,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\helpers\Json;
 use common\models\GroupGrade;
+
 /**
  * TuitionController implements the CRUD actions for Tuition model.
  */
@@ -178,7 +179,14 @@ class TuitionController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+			$selectSchool = ArrayHelper::map(Scholar::find()
+			->where(['scholar_id'=>$model->scholar_scholar_id])
+			->all(),'school_school_id','school_school_id');
+			$schoolID = array_values($selectSchool)[0];
+			$model->scholar_school_school_id = $schoolID;
+			
+			$model->save();
             return $this->redirect(['view', 'id' => $model->tuition_id]);
         } else {
             return $this->render('update', [

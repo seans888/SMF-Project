@@ -48,6 +48,10 @@ $exportedValues =
 	[
 		'attribute' => 'scholar_last_name',
 	],
+	[
+		'attribute' => 'school_school_id',
+		'value' => 'schoolSchool.school_name'
+	],
 	// [
 		// 'attribute' => 'scholar_gender',
 	// ],

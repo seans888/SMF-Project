@@ -11,7 +11,7 @@ use common\models\OptionalworkSearch;
 /* @var $searchModel common\models\ScholarSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Scholars';
+$this->title = 'Optional Work';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="scholar-index">
@@ -47,6 +47,7 @@ $exportedValues =
 	[
 		'attribute' => 'scholar_last_name',
 	],
+	/*
 	[
 		'attribute' => 'scholar_gender',
 	],
@@ -69,10 +70,11 @@ $exportedValues =
 	[
 		'attribute' => 'scholar_type',
 	],
-
+*/
 	['class' => 'kartik\grid\ActionColumn'],
 ];
 
+/*
 $export = ExportMenu::widget([
 		'dataProvider' => $dataProvider,
         'columns' => $exportedValues,
@@ -87,10 +89,11 @@ $export = ExportMenu::widget([
             'label' => 'Export',
             'class' => 'btn btn-success'
         ]
-	]);
+	])
+*/;
 ?>
 <?= Html::a('Group By Scholar', ['index'], ['class' => 'btn btn-success']) ?>
-<?= Html::a('Show Only Incentive Records', ['index2'], ['class' => 'btn btn-success']) ?>
+<?= Html::a('Show Only Optional Work Records', ['index2'], ['class' => 'btn btn-success']) ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -108,11 +111,11 @@ $export = ExportMenu::widget([
         'columns' => $exportedValues,
 		'toolbar'=> [
 			[
-				'content'=>Html::a('Create Scholar', ['create'], ['class' => 'btn btn-success'])
+				'content'=>Html::a('Create Optional Work', ['create'], ['class' => 'btn btn-success'])
 			],
   //     	'{export}',
 			'{toggleData}',
-			$export
+			//$export
 		],
  //   set export properties
     'export'=>[

@@ -19,7 +19,7 @@ class OptionalworkSearch extends Optionalwork
     {
         return [
             [['optionalwork_id', 'scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
-            [['optionalwork_location', 'optionalwork_start_date', 'optionalwork_end_date', 'optional_work_company_name'], 'safe'],
+            [['firstName','middleName','lastName','optionalwork_location', 'optionalwork_start_date', 'optionalwork_end_date', 'optional_work_company_name'], 'safe'],
         ];
     }
 
@@ -54,7 +54,9 @@ class OptionalworkSearch extends Optionalwork
             // $query->where('0=1');
             return $dataProvider;
         }
-
+		
+		$query->joinWith('scholarScholar');
+		
         $query->andFilterWhere([
             'optionalwork_id' => $this->optionalwork_id,
             'scholar_scholar_id' => $this->scholar_scholar_id,
@@ -64,7 +66,10 @@ class OptionalworkSearch extends Optionalwork
         ]);
 
         $query->andFilterWhere(['like', 'optionalwork_location', $this->optionalwork_location])
-            ->andFilterWhere(['like', 'optional_work_company_name', $this->optional_work_company_name]);
+            ->andFilterWhere(['like', 'optional_work_company_name', $this->optional_work_company_name])
+			->andFilterWhere(['like', 'scholar.scholar_first_name', $this->firstName])
+			->andFilterWhere(['like', 'scholar.scholar_middle_name', $this->middleName])
+			->andFilterWhere(['like', 'scholar.scholar_last_name', $this->lastName]);
 
         return $dataProvider;
     }

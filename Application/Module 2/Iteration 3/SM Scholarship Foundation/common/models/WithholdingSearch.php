@@ -19,7 +19,7 @@ class WithholdingSearch extends Withholding
     {
         return [
             [['withholding_id', 'scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
-            [['scholar_allowance_allowance_area', 'withholding_start_date', 'withholding_end_date', 'withholding_remark'], 'safe'],
+            [['firstName','middleName','lastName','scholar_allowance_allowance_area', 'withholding_start_date', 'withholding_end_date', 'withholding_remark'], 'safe'],
         ];
     }
 
@@ -54,7 +54,9 @@ class WithholdingSearch extends Withholding
             // $query->where('0=1');
             return $dataProvider;
         }
-
+		
+		$query->joinWith('scholarScholar');
+		
         $query->andFilterWhere([
             'withholding_id' => $this->withholding_id,
             'scholar_scholar_id' => $this->scholar_scholar_id,
@@ -64,7 +66,10 @@ class WithholdingSearch extends Withholding
         ]);
 
         $query->andFilterWhere(['like', 'scholar_allowance_allowance_area', $this->scholar_allowance_allowance_area])
-            ->andFilterWhere(['like', 'withholding_remark', $this->withholding_remark]);
+            ->andFilterWhere(['like', 'withholding_remark', $this->withholding_remark])
+			->andFilterWhere(['like', 'scholar.scholar_first_name', $this->firstName])
+			->andFilterWhere(['like', 'scholar.scholar_middle_name', $this->middleName])
+			->andFilterWhere(['like', 'scholar.scholar_last_name', $this->lastName]);;
 
         return $dataProvider;
     }

@@ -1,0 +1,232 @@
+<?xml version="1.0"?><Report><ReportQuery><Format><ReportTitle>Allowance Analysis</ReportTitle><ReportDescription></ReportDescription><PageSize>.DEFAULT</PageSize><PageOrientation>.DEFAULT</PageOrientation><TopMargin></TopMargin><BottomMargin></BottomMargin><RightMargin></RightMargin><LeftMargin></LeftMargin><pdfFont></pdfFont><pdfFontSize></pdfFontSize><PreExecuteCode>NONE</PreExecuteCode><formBetweenRows>solidline</formBetweenRows><gridDisplay>.DEFAULT</gridDisplay><gridSortable>.DEFAULT</gridSortable><gridSearchable>.DEFAULT</gridSearchable><gridPageable>.DEFAULT</gridPageable><gridPageSize>.DEFAULT</gridPageSize></Format><Datasource><SourceType>database</SourceType><SourceConnection><DatabaseType>mysql</DatabaseType><DatabaseName></DatabaseName><HostName></HostName><ServiceName></ServiceName><UserName></UserName><Password></Password></SourceConnection></Datasource><EntryForm><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection>all</RowSelection><SQL><QuerySql></QuerySql><SQLRaw>SELECT
+(
+	SELECT DISTINCT scholar_allowance_allowance_area
+	FROM withholding
+	WHERE 1=1
+) Area,
+(
+	SELECT COUNT(scholar_type)
+	FROM scholar
+	WHERE scholar_type = &quot;SMFI&quot;
+) SMFI_Scholars,
+(
+	SELECT COUNT(sc.scholar_type)
+	FROM scholar sc
+	JOIN withholding ON sc.scholar_id = withholding.scholar_scholar_id
+	WHERE scholar_type = &quot;SMFI&quot;
+	[AND YEAR(withholding.withholding_start_date) &lt;= ( {year_select} ) ]
+	[AND MONTH(withholding.withholding_start_date) &lt;= ( {month_select} ) ]
+	[AND NOT YEAR(withholding.withholding_end_date) &lt;= ( {year_select} ) ]
+	[AND NOT MONTH(withholding.withholding_end_date) &lt;= ( {month_select} ) ]
+		
+) SMFI_Allowances_Withheld,
+(
+	SELECT COUNT(sc.scholar_type)
+	FROM scholar sc
+	JOIN withholding ON sc.scholar_id = withholding.scholar_scholar_id
+	WHERE scholar_type = &quot;SMFI&quot;
+	[AND YEAR(withholding.withholding_end_date) = ( {year_select} ) ]
+	[AND MONTH(withholding.withholding_end_date) = ( {month_select} ) ]
+	[AND NOT YEAR(withholding.withholding_start_date) &gt;= ( {year_select} ) ]
+	[AND NOT MONTH(withholding.withholding_start_date) &gt;= ( {month_select} ) ]
+) SMFI_Allowances_Released,
+(
+	SELECT COUNT(scholar_type)
+	FROM scholar
+	WHERE scholar_type = &quot;My Scholar A&quot;
+) My_Scholar_As,
+(
+	SELECT COUNT(sc.scholar_type)
+	FROM scholar sc
+	JOIN withholding ON sc.scholar_id = withholding.scholar_scholar_id
+	WHERE scholar_type = &quot;My Scholar A&quot;
+	[AND YEAR(withholding.withholding_start_date) &lt;= ( {year_select} ) ]
+	[AND MONTH(withholding.withholding_start_date) &lt;= ( {month_select} ) ]
+	[AND NOT YEAR(withholding.withholding_end_date) &lt;= ( {year_select} ) ]
+	[AND NOT MONTH(withholding.withholding_end_date) &lt;= ( {month_select} ) ]
+) My_Scholar_A_Allowances_Withheld,
+(
+	SELECT COUNT(sc.scholar_type)
+	FROM scholar sc
+	JOIN withholding ON sc.scholar_id = withholding.scholar_scholar_id
+	WHERE scholar_type = &quot;My Scholar A&quot;
+	[AND YEAR(withholding.withholding_end_date) = ( {year_select} ) ]
+	[AND MONTH(withholding.withholding_end_date) = ( {month_select} ) ]
+	[AND NOT YEAR(withholding.withholding_start_date) &gt;= ( {year_select} ) ]
+	[AND NOT MONTH(withholding.withholding_start_date) &gt;= ( {month_select} ) ]
+) My_Scholar_A_Allowances_Released,
+(
+	SELECT COUNT(scholar_type)
+	FROM scholar
+	WHERE scholar_type = &quot;My Scholar B&quot;
+) My_Scholar_Bs,
+(
+	SELECT COUNT(scholar_type)
+	FROM scholar
+	WHERE scholar_type = &quot;Kabayan Scholar&quot;
+) Kabayan_Scholars,
+(
+	SELECT COUNT(sc.scholar_type)
+	FROM scholar sc
+	JOIN withholding ON sc.scholar_id = withholding.scholar_scholar_id
+	WHERE scholar_type = &quot;Kabayan Scholar&quot;
+	[AND YEAR(withholding.withholding_start_date) &lt;= ( {year_select} ) ]
+	[AND MONTH(withholding.withholding_start_date) &lt;= ( {month_select} ) ]
+	[AND NOT YEAR(withholding.withholding_end_date) &lt;= ( {year_select} ) ]
+	[AND NOT MONTH(withholding.withholding_end_date) &lt;= ( {month_select} ) ]
+) Kabayan_Scholar_Allowances_Withheld,
+(
+	SELECT COUNT(sc.scholar_type)
+	FROM scholar sc
+	JOIN withholding ON sc.scholar_id = withholding.scholar_scholar_id
+	WHERE scholar_type = &quot;Kabayan Scholar&quot;
+	[AND YEAR(withholding.withholding_end_date) = ( {year_select} ) ]
+	[AND MONTH(withholding.withholding_end_date) = ( {month_select} ) ]
+	[AND NOT YEAR(withholding.withholding_start_date) &gt;= ( {year_select} ) ]
+	[AND NOT MONTH(withholding.withholding_start_date) &gt;= ( {month_select} ) ]
+) Kabayan_Scholar_Allowances_Released,
+(
+	SELECT COUNT(scholar_type)
+	FROM scholar
+	WHERE scholar_type = &quot;Rufus Scholar&quot;
+) Rufus_Scholars,
+(
+	SELECT COUNT(sc.scholar_type)
+	FROM scholar sc
+	JOIN withholding ON sc.scholar_id = withholding.scholar_scholar_id
+	WHERE scholar_type = &quot;Rufus Scholar&quot;
+	[AND YEAR(withholding.withholding_start_date) &lt;= ( {year_select} ) ]
+	[AND MONTH(withholding.withholding_start_date) &lt;= ( {month_select} ) ]
+	[AND NOT YEAR(withholding.withholding_end_date) &lt;= ( {year_select} ) ]
+	[AND NOT MONTH(withholding.withholding_end_date) &lt;= ( {month_select} ) ]
+) Rufus_Scholar_Allowances_Withheld,
+(
+	SELECT COUNT(sc.scholar_type)
+	FROM scholar sc
+	JOIN withholding ON sc.scholar_id = withholding.scholar_scholar_id
+	WHERE scholar_type = &quot;Rufus Scholar&quot;
+	[AND YEAR(withholding.withholding_end_date) = ( {year_select} ) ]
+	[AND MONTH(withholding.withholding_end_date) = ( {month_select} ) ]
+	[AND NOT YEAR(withholding.withholding_start_date) &gt;= ( {year_select} ) ]
+	[AND NOT MONTH(withholding.withholding_start_date) &gt;= ( {month_select} ) ]
+) Rufus_Scholar_Allowances_Released,
+(
+	SELECT COUNT(scholar_type)
+	FROM scholar
+	WHERE scholar_type = &quot;ICA Grant Scholar&quot;
+) ICA_Grant_Scholars,
+(
+	SELECT allowance_amount
+	FROM allowance
+	WHERE allowance_area = withholding.scholar_allowance_allowance_area
+) allowance_amount
+FROM withholding
+WHERE 1=1
+[AND withholding.scholar_allowance_allowance_area IN ( {area_select} ) ]</SQLRaw></SQL><QueryColumns><QueryColumn><Name>Area</Name><TableName></TableName><ColumnName>(
+	SELECT DISTINCT scholar_allowance_allowance_area
+	FROM withholding
+	WHERE 1=1
+)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>SMFI_Scholars</Name><TableName></TableName><ColumnName>(
+	SELECT COUNT(scholar_type)
+	FROM scholar
+	WHERE scholar_type = &quot;SMFI&quot;
+)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>SMFI_Allowances_Withheld</Name><TableName></TableName><ColumnName>(
+	SELECT COUNT(sc.scholar_type)
+	FROM scholar sc
+	JOIN withholding ON sc.scholar_id = withholding.scholar_scholar_id
+	WHERE scholar_type = &quot;SMFI&quot;
+	[AND YEAR(withholding.withholding_start_date) &lt;= ( {year_select} ) ]
+	[AND MONTH(withholding.withholding_start_date) &lt;= ( {month_select} ) ]
+	[AND NOT YEAR(withholding.withholding_end_date) &lt;= ( {year_select} ) ]
+	[AND NOT MONTH(withholding.withholding_end_date) &lt;= ( {month_select} ) ]
+		
+)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>SMFI_Allowances_Released</Name><TableName></TableName><ColumnName>(
+	SELECT COUNT(sc.scholar_type)
+	FROM scholar sc
+	JOIN withholding ON sc.scholar_id = withholding.scholar_scholar_id
+	WHERE scholar_type = &quot;SMFI&quot;
+	[AND YEAR(withholding.withholding_end_date) = ( {year_select} ) ]
+	[AND MONTH(withholding.withholding_end_date) = ( {month_select} ) ]
+	[AND NOT YEAR(withholding.withholding_start_date) &gt;= ( {year_select} ) ]
+	[AND NOT MONTH(withholding.withholding_start_date) &gt;= ( {month_select} ) ]
+)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>My_Scholar_As</Name><TableName></TableName><ColumnName>(
+	SELECT COUNT(scholar_type)
+	FROM scholar
+	WHERE scholar_type = &quot;My Scholar A&quot;
+)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>My_Scholar_A_Allowances_Withheld</Name><TableName></TableName><ColumnName>(
+	SELECT COUNT(sc.scholar_type)
+	FROM scholar sc
+	JOIN withholding ON sc.scholar_id = withholding.scholar_scholar_id
+	WHERE scholar_type = &quot;My Scholar A&quot;
+	[AND YEAR(withholding.withholding_start_date) &lt;= ( {year_select} ) ]
+	[AND MONTH(withholding.withholding_start_date) &lt;= ( {month_select} ) ]
+	[AND NOT YEAR(withholding.withholding_end_date) &lt;= ( {year_select} ) ]
+	[AND NOT MONTH(withholding.withholding_end_date) &lt;= ( {month_select} ) ]
+)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>My_Scholar_A_Allowances_Released</Name><TableName></TableName><ColumnName>(
+	SELECT COUNT(sc.scholar_type)
+	FROM scholar sc
+	JOIN withholding ON sc.scholar_id = withholding.scholar_scholar_id
+	WHERE scholar_type = &quot;My Scholar A&quot;
+	[AND YEAR(withholding.withholding_end_date) = ( {year_select} ) ]
+	[AND MONTH(withholding.withholding_end_date) = ( {month_select} ) ]
+	[AND NOT YEAR(withholding.withholding_start_date) &gt;= ( {year_select} ) ]
+	[AND NOT MONTH(withholding.withholding_start_date) &gt;= ( {month_select} ) ]
+)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>My_Scholar_Bs</Name><TableName></TableName><ColumnName>(
+	SELECT COUNT(scholar_type)
+	FROM scholar
+	WHERE scholar_type = &quot;My Scholar B&quot;
+)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Kabayan_Scholars</Name><TableName></TableName><ColumnName>(
+	SELECT COUNT(scholar_type)
+	FROM scholar
+	WHERE scholar_type = &quot;Kabayan Scholar&quot;
+)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Kabayan_Scholar_Allowances_Withheld</Name><TableName></TableName><ColumnName>(
+	SELECT COUNT(sc.scholar_type)
+	FROM scholar sc
+	JOIN withholding ON sc.scholar_id = withholding.scholar_scholar_id
+	WHERE scholar_type = &quot;Kabayan Scholar&quot;
+	[AND YEAR(withholding.withholding_start_date) &lt;= ( {year_select} ) ]
+	[AND MONTH(withholding.withholding_start_date) &lt;= ( {month_select} ) ]
+	[AND NOT YEAR(withholding.withholding_end_date) &lt;= ( {year_select} ) ]
+	[AND NOT MONTH(withholding.withholding_end_date) &lt;= ( {month_select} ) ]
+)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Kabayan_Scholar_Allowances_Released</Name><TableName></TableName><ColumnName>(
+	SELECT COUNT(sc.scholar_type)
+	FROM scholar sc
+	JOIN withholding ON sc.scholar_id = withholding.scholar_scholar_id
+	WHERE scholar_type = &quot;Kabayan Scholar&quot;
+	[AND YEAR(withholding.withholding_end_date) = ( {year_select} ) ]
+	[AND MONTH(withholding.withholding_end_date) = ( {month_select} ) ]
+	[AND NOT YEAR(withholding.withholding_start_date) &gt;= ( {year_select} ) ]
+	[AND NOT MONTH(withholding.withholding_start_date) &gt;= ( {month_select} ) ]
+)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Rufus_Scholars</Name><TableName></TableName><ColumnName>(
+	SELECT COUNT(scholar_type)
+	FROM scholar
+	WHERE scholar_type = &quot;Rufus Scholar&quot;
+)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Rufus_Scholar_Allowances_Withheld</Name><TableName></TableName><ColumnName>(
+	SELECT COUNT(sc.scholar_type)
+	FROM scholar sc
+	JOIN withholding ON sc.scholar_id = withholding.scholar_scholar_id
+	WHERE scholar_type = &quot;Rufus Scholar&quot;
+	[AND YEAR(withholding.withholding_start_date) &lt;= ( {year_select} ) ]
+	[AND MONTH(withholding.withholding_start_date) &lt;= ( {month_select} ) ]
+	[AND NOT YEAR(withholding.withholding_end_date) &lt;= ( {year_select} ) ]
+	[AND NOT MONTH(withholding.withholding_end_date) &lt;= ( {month_select} ) ]
+)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Rufus_Scholar_Allowances_Released</Name><TableName></TableName><ColumnName>(
+	SELECT COUNT(sc.scholar_type)
+	FROM scholar sc
+	JOIN withholding ON sc.scholar_id = withholding.scholar_scholar_id
+	WHERE scholar_type = &quot;Rufus Scholar&quot;
+	[AND YEAR(withholding.withholding_end_date) = ( {year_select} ) ]
+	[AND MONTH(withholding.withholding_end_date) = ( {month_select} ) ]
+	[AND NOT YEAR(withholding.withholding_start_date) &gt;= ( {year_select} ) ]
+	[AND NOT MONTH(withholding.withholding_start_date) &gt;= ( {month_select} ) ]
+)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>ICA_Grant_Scholars</Name><TableName></TableName><ColumnName>(
+	SELECT COUNT(scholar_type)
+	FROM scholar
+	WHERE scholar_type = &quot;ICA Grant Scholar&quot;
+)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>allowance_amount</Name><TableName></TableName><ColumnName>(
+	SELECT allowance_amount
+	FROM allowance
+	WHERE allowance_area = withholding.scholar_allowance_allowance_area
+)</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>total_scholars</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title>Total Number of Scholars:</column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>total_allowances</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title>Total Allowance Amount:</column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>total_number_withheld</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>total_amount_withheld</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title>Total Amount Withheld:</column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>total_number_released</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>total_amount_released</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title>Total Amount Released:</column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>net_total</Name><TableName></TableName><ColumnName></ColumnName><ColumnType></ColumnType><ColumnLength></ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title>Net Total:</column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><PreSQLS></PreSQLS></Query><Assignments><Assignment><AssignName>total_scholars</AssignName><AssignNameNew></AssignNameNew><Expression>{SMFI_Scholars}+{My_Scholar_As}+{My_Scholar_Bs}+{Kabayan_Scholars}+{Rufus_Scholars}+{ICA_Grant_Scholars}</Expression><Condition></Condition></Assignment><Assignment><AssignName>total_allowances</AssignName><AssignNameNew></AssignNameNew><Expression>({total_scholars}, &quot;Area&quot;)*{allowance_amount}</Expression><Condition></Condition></Assignment><Assignment><AssignName>total_number_withheld</AssignName><AssignNameNew></AssignNameNew><Expression>{SMFI_Allowances_Withheld}+{My_Scholar_A_Allowances_Withheld}+{Kabayan_Scholar_Allowances_Withheld}+{Rufus_Scholar_Allowances_Withheld}</Expression><Condition></Condition></Assignment><Assignment><AssignName>total_amount_withheld</AssignName><AssignNameNew></AssignNameNew><Expression>({total_number_withheld}, &quot;Area&quot;)*{allowance_amount}</Expression><Condition></Condition></Assignment><Assignment><AssignName>total_number_released</AssignName><AssignNameNew></AssignNameNew><Expression>{SMFI_Allowances_Released}+{My_Scholar_A_Allowances_Released}+{Kabayan_Scholar_Allowances_Released}+{Rufus_Scholar_Allowances_Released}</Expression><Condition></Condition></Assignment><Assignment><AssignName>total_amount_released</AssignName><AssignNameNew></AssignNameNew><Expression>({total_number_released}, &quot;Area&quot;)*{allowance_amount}</Expression><Condition></Condition></Assignment><Assignment><AssignName>net_total</AssignName><AssignNameNew></AssignNameNew><Expression>({total_allowances}, &quot;Area&quot;)+({total_amount_released}, &quot;Area&quot;)-({total_amount_withheld}, &quot;Area&quot;)</Expression><Condition></Condition></Assignment></Assignments><Criteria><CriteriaItem><Name>year_select</Name><Title>Year</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>TEXTFIELD</CriteriaType><CriteriaDisplay>TEXTFIELD</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn></ReturnColumn><DisplayColumn></DisplayColumn><OverviewColumn></OverviewColumn><MatchColumn></MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw></SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>month_select</Name><Title>Month</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>TEXTFIELD</CriteriaType><CriteriaDisplay>TEXTFIELD</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn></ReturnColumn><DisplayColumn></DisplayColumn><OverviewColumn></OverviewColumn><MatchColumn></MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw></SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem><CriteriaItem><Name>area_select</Name><Title>Area</Title><QueryTableName></QueryTableName><QueryColumnName></QueryColumnName><CriteriaType>LOOKUP</CriteriaType><CriteriaDisplay>CHECKBOX</CriteriaDisplay><ExpandDisplay>NOINPUT</ExpandDisplay><ReturnColumn>school_area</ReturnColumn><DisplayColumn>school_area</DisplayColumn><OverviewColumn>school_area</OverviewColumn><MatchColumn>school_area</MatchColumn><CriteriaDefaults></CriteriaDefaults><CriteriaList></CriteriaList><Query><TableSql></TableSql><WhereSql></WhereSql><GroupSql></GroupSql><RowSelection></RowSelection><SQLRaw>SELECT DISTINCT school_area
+FROM  school
+WHERE 1 = 1  </SQLRaw><SQL><QuerySql></QuerySql></SQL><QueryColumns><QueryColumn><Name>school_area</Name><TableName></TableName><ColumnName>DISTINCT</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><justify>left</justify></Format></QueryColumn></QueryColumns><OrderColumns></OrderColumns><Assignments></Assignments></Query><CriteriaLinks></CriteriaLinks></CriteriaItem></Criteria><Output><PageHeaders><PageHeader><LineNumber>1</LineNumber><HeaderText>{REPORT_TITLE}{STYLE border-width: 1 0 1 0; margin: 15px 0px 0px 0px; border-color: #000000; font-size: 18; border-style: solid;padding:5px 0px 5px 0px; height:1cm; background-color: #000000; color: #ffffff; text-align: center}</HeaderText><Format><ColumnStartPDF></ColumnStartPDF><justify>center</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageHeader><PageHeader><LineNumber>1</LineNumber><HeaderText>Time: date('Y-m-d H:i:s'){STYLE font-size: 10; text-align: right; font-style: italic;}</HeaderText><Format><ColumnStartPDF></ColumnStartPDF><justify>right</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageHeader></PageHeaders><PageFooters><PageFooter><LineNumber>2</LineNumber><FooterText>Page: {PAGE}{STYLE border-width: 1 0 0 0; margin: 40 0 0 0; font-style: italic; }</FooterText><Format><ColumnStartPDF></ColumnStartPDF><justify>center</justify><ColumnWidthPDF></ColumnWidthPDF><ShowInPDF>yes</ShowInPDF><ShowInHTML>no</ShowInHTML></Format></PageFooter></PageFooters><DisplayOrders><DisplayOrder><ColumnName>Area</ColumnName><OrderNumber>1</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>SMFI_Scholars</ColumnName><OrderNumber>2</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>SMFI_Allowances_Withheld</ColumnName><OrderNumber>3</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>SMFI_Allowances_Released</ColumnName><OrderNumber>4</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>My_Scholar_As</ColumnName><OrderNumber>5</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>My_Scholar_A_Allowances_Withheld</ColumnName><OrderNumber>6</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>My_Scholar_A_Allowances_Released</ColumnName><OrderNumber>7</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>My_Scholar_Bs</ColumnName><OrderNumber>8</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Kabayan_Scholars</ColumnName><OrderNumber>9</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Kabayan_Scholar_Allowances_Withheld</ColumnName><OrderNumber>10</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Kabayan_Scholar_Allowances_Released</ColumnName><OrderNumber>11</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Rufus_Scholars</ColumnName><OrderNumber>12</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Rufus_Scholar_Allowances_Withheld</ColumnName><OrderNumber>13</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>Rufus_Scholar_Allowances_Released</ColumnName><OrderNumber>14</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>ICA_Grant_Scholars</ColumnName><OrderNumber>15</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>total_scholars</ColumnName><OrderNumber>16</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>allowance_amount</ColumnName><OrderNumber>17</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>total_allowances</ColumnName><OrderNumber>18</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>total_number_withheld</ColumnName><OrderNumber>19</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>total_amount_withheld</ColumnName><OrderNumber>20</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>total_number_released</ColumnName><OrderNumber>21</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>total_amount_released</ColumnName><OrderNumber>22</OrderNumber></DisplayOrder><DisplayOrder><ColumnName>net_total</ColumnName><OrderNumber>23</OrderNumber></DisplayOrder></DisplayOrders><Groups><Group><GroupName>Area</GroupName><BeforeGroupHeader>blankline</BeforeGroupHeader><AfterGroupHeader>blankline</AfterGroupHeader><BeforeGroupTrailer>blankline</BeforeGroupTrailer><AfterGroupTrailer>blankline</AfterGroupTrailer><GroupHeaders></GroupHeaders><GroupTrailers><GroupTrailer><GroupTrailerDisplayColumn>Area</GroupTrailerDisplayColumn><GroupTrailerValueColumn>total_scholars</GroupTrailerValueColumn><GroupTrailerCustom></GroupTrailerCustom></GroupTrailer><GroupTrailer><GroupTrailerDisplayColumn>Area</GroupTrailerDisplayColumn><GroupTrailerValueColumn>total_allowances</GroupTrailerValueColumn><GroupTrailerCustom></GroupTrailerCustom></GroupTrailer><GroupTrailer><GroupTrailerDisplayColumn>Area</GroupTrailerDisplayColumn><GroupTrailerValueColumn>total_amount_withheld</GroupTrailerValueColumn><GroupTrailerCustom></GroupTrailerCustom></GroupTrailer><GroupTrailer><GroupTrailerDisplayColumn>Area</GroupTrailerDisplayColumn><GroupTrailerValueColumn>total_amount_released</GroupTrailerValueColumn><GroupTrailerCustom></GroupTrailerCustom></GroupTrailer><GroupTrailer><GroupTrailerDisplayColumn>Area</GroupTrailerDisplayColumn><GroupTrailerValueColumn>net_total</GroupTrailerValueColumn><GroupTrailerCustom></GroupTrailerCustom></GroupTrailer></GroupTrailers></Group></Groups><Graphs></Graphs></Output></EntryForm></ReportQuery></Report>

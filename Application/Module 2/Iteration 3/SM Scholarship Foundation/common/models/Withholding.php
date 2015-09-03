@@ -24,6 +24,9 @@ class Withholding extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+	public $firstName;
+	public $middleName;
+	public $lastName;
     public static function tableName()
     {
         return 'withholding';
@@ -35,7 +38,7 @@ class Withholding extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['scholar_scholar_id', 'scholar_school_school_id', 'scholar_allowance_allowance_area'], 'required'],
+            [['scholar_scholar_id'], 'required'],
             [['scholar_scholar_id', 'scholar_school_school_id'], 'integer'],
             [['scholar_allowance_allowance_area'], 'string'],
             [['withholding_start_date', 'withholding_end_date'], 'safe'],
@@ -56,6 +59,9 @@ class Withholding extends \yii\db\ActiveRecord
             'withholding_start_date' => 'Withholding Start Date',
             'withholding_end_date' => 'Withholding End Date',
             'withholding_remark' => 'Withholding Remark', */
+			'firstName' => 'First Name',
+            'middleName' => 'Middle Name',
+			'lastName' => 'Last Name',
             'withholding_id' => 'Withholding ID',
             'scholar_scholar_id' => 'Scholar ID',
             'scholar_school_school_id' => 'School ID',
@@ -77,9 +83,9 @@ class Withholding extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getScholarSchoolSchool()
+    public function getSchoolSchool()
     {
-        return $this->hasOne(Scholar::className(), ['school_school_id' => 'scholar_school_school_id']);
+        return $this->hasOne(School::className(), ['school_id' => 'scholar_school_school_id']);
     }
 
     /**
