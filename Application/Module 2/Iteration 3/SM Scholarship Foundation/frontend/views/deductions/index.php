@@ -6,8 +6,8 @@ use kartik\tabs\TabsX;
 use common\models\Allowance;
 use common\models\Scholar;
 use common\models\User;
-use common\models\Incentive;
-use common\models\IncentiveSearch;
+
+
 
 
 /* @var $this yii\web\View */
@@ -17,21 +17,21 @@ use common\models\IncentiveSearch;
 $this->title = 'Deductions';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<?php 
-		$username=Yii::$app->user->identity->username;
+
+<div class="deductions-index">
+	
+	<?php 
+	$username=Yii::$app->user->identity->username;
 		$users = User::find()->all();
 		$scholars = Scholar::find()->all();
 		$allowances= Allowance::find()->all();
 		
-
-?>
-<div class="deductions-index">
-	
-	<?php 
 	foreach($users as $user){
 			foreach($scholars as $scholar){
 				foreach($allowances as $allowance){
 				if($user->username==$username&&$user->id==$scholar->scholar_user_id&&$allowance->allowance_area==$scholar->allowance_allowance_area){
+					
+				
 					echo '<strong><h3 style="margin-top:150px">Current Allowance Received:  Php <strong>'.$allowance->allowance_amount.'</h3><strong><h3>Current School Location: <strong>'.$allowance->allowance_area.'</h3><br><br>';
 				}
 				}
@@ -42,19 +42,6 @@ $this->params['breadcrumbs'][] = $this->title;
 	?>
 	
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-<?php 
-	ob_start();
-			$model = new Incentive();
-            $searchModel = new IncentiveSearch();
-            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-            echo $this->render('/incentive/index',[
-                'model'=>$model,
-                'dataProvider'=>$dataProvider,
-                'searchModel'   =>$searchModel,
-            ]);
- 
-	$TabContent=ob_get_clean();
-	?>
 	<?php
 
    $items = [
@@ -79,7 +66,21 @@ $this->params['breadcrumbs'][] = $this->title;
     ],
 	[
         'label'=>'<i class="glyphicon glyphicon-thumbs-up"></i> Incentive Records',
-        'content'=> $TabContent, 
+        'content'=> GridView::widget([
+        'dataProvider' => $dataProvider2,
+        'filterModel' => $searchModel2,
+		'showOnEmpty' => false,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+			'scholar_allowance_allowance_area',
+            'incentive_amount',
+            'incentive_remark',
+            'incentive_date',
+            
+			
+        ],
+		
+    ]), 
                    'active' => false,
        
     ],
