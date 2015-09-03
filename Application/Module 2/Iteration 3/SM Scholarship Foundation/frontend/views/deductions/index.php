@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
 				if($user->username==$username&&$user->id==$scholar->scholar_user_id&&$allowance->allowance_area==$scholar->allowance_allowance_area){
 					
 				
-					echo '<strong><h3 style="margin-top:150px">Current Allowance Received:  Php <strong>'.$allowance->allowance_amount.'</h3><strong><h3>Current School Location: <strong>'.$allowance->allowance_area.'</h3><br><br>';
+					echo '<strong><h3 style="margin-top:150px">Current Allowance Received:  Php <strong>'.$allowance->allowance_amount.'</h3><strong><h3>Current School Location: <strong>'.$allowance->allowance_area.'</h3><br><br></strong>';
 				}
 				}
 			}

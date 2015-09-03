@@ -13,14 +13,14 @@ use common\models\Subject;
 <div class="subject-form">
 
     <?php $form = ActiveForm::begin(); ?>
-
+	
     <?= $form->field($model, 'subject_term')->textInput() ?>
 
     <?= $form->field($model, 'subject_name')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'subject_units')->textInput(['maxlength' => true]) ?>
 	
-
+	
 	
 
 
