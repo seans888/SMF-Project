@@ -27,6 +27,8 @@ return [
         ],
 		   'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
+			
+       
         ],
         'session' => [
             'name' => 'PHPFRONTSESSID',
