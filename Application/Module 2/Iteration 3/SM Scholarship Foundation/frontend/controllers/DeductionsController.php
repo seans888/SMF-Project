@@ -49,16 +49,16 @@ class DeductionsController extends Controller
 					$model->scholar_scholar_id=$scholar->scholar_id;
 					$model2->scholar_scholar_id=$scholar->scholar_id;
 					
-					$searchModel= new DeductionSearch($model);
-					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+					$searchModel1= new DeductionSearch($model);
+					$dataProvider1 = $searchModel1->search(Yii::$app->request->queryParams);
 					
 					$searchModel2 = new IncentiveSearch($model2);
 					$dataProvider2 = $searchModel2->search(Yii::$app->request->queryParams);
 					return $this->render('index', [
-					'searchModel' => $searchModel,
-					'dataProvider' => $dataProvider,
-					'searchModel' => $searchModel2,
-					'dataProvider' => $dataProvider2,
+					'searchModel1' => $searchModel1,
+					'dataProvider1' => $dataProvider1,
+					'searchModel2' => $searchModel2,
+					'dataProvider2' => $dataProvider2,
 					]);
 				}
 
