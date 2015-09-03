@@ -66,7 +66,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		'showOnEmpty' => false,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-			  'deduction_date',
+			'deduction_date',
             'deduction_amount',
             'deduction_remark',
             
