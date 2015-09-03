@@ -136,7 +136,7 @@ use common\models\User;
                             <div class="col-sm-6">
 
 								<?= $form->field($modelAddress,"[{$i}]subject_subject_id")->dropDownList(
-								ArrayHelper::map(Subject::find()->where(['scholar_scholar_id'=>$scholar->scholar_id])->all(),'subject_id','subject_name','subject_term','scholar_scholar_id')
+								ArrayHelper::map(Subject::find()->where(['scholar_scholar_id'=>$modelCustomer->subject_scholar_scholar_id])->all(),'subject_id','subject_name','subject_term','scholar_scholar_id')
 								)
 								?>
                             </div>
