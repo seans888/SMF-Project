@@ -25,34 +25,34 @@ $this->params['breadcrumbs'][] = $this->title;
 				// 'value' => 'schoolSchool.school_name'
 			// ],
 			[
-				'class' => 'kartik\grid\EditableColumn',
+				// 'class' => 'kartik\grid\EditableColumn',
 				'attribute' => 'equivalence_numerical_grade',
 			],
 			[
-				'class' => 'kartik\grid\EditableColumn',
+				// 'class' => 'kartik\grid\EditableColumn',
 				'attribute' => 'equivalence_letter_grade',
 			],
 			[
-				'class' => 'kartik\grid\EditableColumn',
+				// 'class' => 'kartik\grid\EditableColumn',
 				'attribute' => 'equivalence_percentile_lower',
 			],
 			[
-				'class' => 'kartik\grid\EditableColumn',
+				// 'class' => 'kartik\grid\EditableColumn',
 				'attribute' => 'equivalence_percentile_upper',
 			],
 			[
-				'class' => 'kartik\grid\EditableColumn',
+				// 'class' => 'kartik\grid\EditableColumn',
 				'attribute' => 'equivalence_school_rating',
 			],
 			[
-				'class' => 'kartik\grid\EditableColumn',
+				// 'class' => 'kartik\grid\EditableColumn',
 				'attribute' => 'equivalence_foundation_rating',
-				'editableOptions' => [
-					'inputType' => 'dropDownList',
-					'pluginOptions'=>['allowClear'=>true],
-					'data' => ["PASS"=>"PASS","FAIL"=>"FAIL"],
-					'widgetClass'=> 'kartik\select2\Select2',
-				],
+				// 'editableOptions' => [
+					// 'inputType' => 'dropDownList',
+					// 'pluginOptions'=>['allowClear'=>true],
+					// 'data' => ["PASS"=>"PASS","FAIL"=>"FAIL"],
+					// 'widgetClass'=> 'kartik\select2\Select2',
+				// ],
 			],
 
             ['class' => 'kartik\grid\ActionColumn'],
