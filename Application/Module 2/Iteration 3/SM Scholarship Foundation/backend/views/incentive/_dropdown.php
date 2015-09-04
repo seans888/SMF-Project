@@ -17,29 +17,29 @@ $exportedValues =
 		['class' => 'kartik\grid\SerialColumn'],
 		
 		[
-			'class' => 'kartik\grid\EditableColumn',
+			// 'class' => 'kartik\grid\EditableColumn',
 			'attribute' => 'incentive_amount',
 		],
 		[
-			'class' => 'kartik\grid\EditableColumn',
+			// 'class' => 'kartik\grid\EditableColumn',
 			'attribute' => 'incentive_remark',
 		],
 		[
-				'class' => 'kartik\grid\EditableColumn',
+				// 'class' => 'kartik\grid\EditableColumn',
             	'attribute'=>'incentive_date',
-				'editableOptions' => [
-					'inputType' => 'widget',
-					'options'=>
-					[
-						'model' => $searchModel,
+				// 'editableOptions' => [
+					// 'inputType' => 'widget',
+					// 'options'=>
+					// [
+						// 'model' => $searchModel,
 
-							'clientOptions' => [
-								'autoclose' => true,
-								'format' => 'yyyy-mm-dd',
-							]
-					],
-					'widgetClass'=>'dosamigos\datepicker\DatePicker'
-				],
+							// 'clientOptions' => [
+								// 'autoclose' => true,
+								// 'format' => 'yyyy-mm-dd',
+							// ]
+					// ],
+					// 'widgetClass'=>'dosamigos\datepicker\DatePicker'
+				// ],
             ],
 		
 		['class' => 'kartik\grid\ActionColumn'],
