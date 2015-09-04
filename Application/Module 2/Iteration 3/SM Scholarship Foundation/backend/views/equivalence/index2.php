@@ -3,14 +3,24 @@
 use yii\helpers\Html;
 use kartik\grid\GridView;
 use kartik\export\ExportMenu;
+use yii\helpers\ArrayHelper;
+use common\models\School;
 $exportedValues = 
 [            
 	['class' => 'kartik\grid\SerialColumn'],
 
 	// 'equivalence_id',
 	[
-		'attribute' => 'school_school_id',
-		'value' => 'schoolSchool.school_name'
+		'class' => 'kartik\grid\EditableColumn',
+		'attribute'=>'school_school_id',
+		'editableOptions' => [
+			'inputType' => '\kartik\select2\Select2',
+			'options'=>
+			[
+				'data' => ArrayHelper::map(School::find()->all(),'school_id','school_name'),
+			],
+		],
+		'value'=>'schoolSchool.school_name',
 	],
 	[
 		'class' => 'kartik\grid\EditableColumn',
