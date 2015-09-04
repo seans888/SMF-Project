@@ -12,15 +12,15 @@ $gridColumn =
 [            
 	['class' => 'kartik\grid\SerialColumn'],
 	[
-		'class' => 'kartik\grid\EditableColumn',
+		// 'class' => 'kartik\grid\EditableColumn',
 		'attribute'=>'scholar_scholar_id',
-		'editableOptions' => [
-			'inputType' => '\kartik\select2\Select2',
-			'options'=>
-			[
-				'data' => ArrayHelper::map(Scholar::find()->all(),'scholar_id','scholar_last_name','scholar_id'),
-			],
-		],
+		// 'editableOptions' => [
+			// 'inputType' => '\kartik\select2\Select2',
+			// 'options'=>
+			// [
+				// 'data' => ArrayHelper::map(Scholar::find()->all(),'scholar_id','scholar_last_name','scholar_id'),
+			// ],
+		// ],
 	],
 	[
 		'attribute' => 'firstName',
@@ -35,7 +35,7 @@ $gridColumn =
 		'value' => 'scholarScholar.scholar_last_name'
 	],
 	[
-		'class' => 'kartik\grid\EditableColumn',
+		// 'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'tuition_term',
 	],
 	// [
@@ -47,23 +47,23 @@ $gridColumn =
 		// 'attribute' => 'tuition_school_year_end',
 	// ],
 	[
-		'class' => 'kartik\grid\EditableColumn',
+		// 'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'tuition_enrollment_date',
 	],
 	[
-		'class' => 'kartik\grid\EditableColumn',
+		// 'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'tuition_amount',
 		'pageSummary' => true
 	],
 	[
-		'class' => 'kartik\grid\EditableColumn',
+		// 'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'tuition_paid_status',
-		'editableOptions' => [
-			'inputType' => 'dropDownList',
-			'pluginOptions'=>['allowClear'=>true],
-			'data' => ["Not Paid"=>"Not Paid","Paid"=>"Paid"],
-			'widgetClass'=> 'kartik\select2\Select2',
-		],
+		// 'editableOptions' => [
+			// 'inputType' => 'dropDownList',
+			// 'pluginOptions'=>['allowClear'=>true],
+			// 'data' => ["Not Paid"=>"Not Paid","Paid"=>"Paid"],
+			// 'widgetClass'=> 'kartik\select2\Select2',
+		// ],
 	],
 	// [
 		// 'class' => 'kartik\grid\EditableColumn',
