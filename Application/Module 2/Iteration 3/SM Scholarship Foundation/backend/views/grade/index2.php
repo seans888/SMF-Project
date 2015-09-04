@@ -11,6 +11,17 @@ $exportedValues =
 [
 	['class' => 'kartik\grid\SerialColumn'],
 	[
+		// 'class' => 'kartik\grid\EditableColumn',
+		'attribute'=>'subject_scholar_scholar_id',
+		// 'editableOptions' => [
+			// 'inputType' => '\kartik\select2\Select2',
+			// 'options'=>
+			// [
+				// 'data' => ArrayHelper::map(Scholar::find()->all(),'scholar_id','scholar_last_name','scholar_id'),
+			// ],
+		// ],
+	],
+	[
 		'class' => 'kartik\grid\EditableColumn',
 		'attribute'=>'subject_subject_id',
 		'editableOptions' => [
@@ -32,17 +43,6 @@ $exportedValues =
 			'widgetClass'=> 'kartik\select2\Select2',
 		],
 		'value' => 'subjectSubject.subject_taken_status',
-	],
-	[
-		'class' => 'kartik\grid\EditableColumn',
-		'attribute'=>'subject_scholar_scholar_id',
-		'editableOptions' => [
-			'inputType' => '\kartik\select2\Select2',
-			'options'=>
-			[
-				'data' => ArrayHelper::map(Scholar::find()->all(),'scholar_id','scholar_last_name','scholar_id'),
-			],
-		],
 	],
 	[
 		'attribute'=>'firstName',
