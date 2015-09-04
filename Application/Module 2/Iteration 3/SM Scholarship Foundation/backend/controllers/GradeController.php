@@ -237,10 +237,10 @@ class GradeController extends Controller
 
         if ($model->load(Yii::$app->request->post())) {
 			$selectSchool = ArrayHelper::map(Scholar::find()
-			->where(['scholar_id'=>$model->scholar_scholar_id])
+			->where(['scholar_id'=>$model->subject_scholar_scholar_id])
 			->all(),'school_school_id','school_school_id');
 			$schoolID = array_values($selectSchool)[0];
-			$model->scholar_school_school_id = $schoolID;
+			$model->subject_scholar_school_school_id = $schoolID;
 			
 			$model->save();
             return $this->redirect(['view', 'id' => $model->grade_id]);
