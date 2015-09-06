@@ -96,7 +96,8 @@ class Scholar extends \yii\db\ActiveRecord
             'scholar_sponsor' => 'Scholar Sponsor',
             'allowance_allowance_area' => 'Allowance Allowance Area', */
             'scholar_id' => 'Scholar ID',
-            'school_school_id' => 'School ID',
+            //'school_school_id' => 'School ID',
+			'school_school_id' => 'School Name',
             'scholar_first_name' => 'First Name',
             'scholar_middle_name' => 'Middle Name',
             'scholar_last_name' => 'Last Name',

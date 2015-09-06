@@ -15923,3 +15923,116 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1441522820.446
     'REQUEST_TIME' => 1441522820
 ]
+2015-09-06 12:34:26 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#6 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(373): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#8 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveQuery.php(300): yii\db\Query->one('<span class="ke...')
+#9 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#10 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\common\models\Admin.php(63): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#11 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\User.php(295): common\models\Admin::findIdentity('<span class="nu...')
+#12 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\User.php(631): yii\web\User->loginByCookie()
+#13 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\User.php(176): yii\web\User->renewAuthStatus()
+#14 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\User.php(346): yii\web\User->getIdentity()
+#15 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\filters\AccessRule.php(149): yii\web\User->getIsGuest()
+#16 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\filters\AccessRule.php(104): yii\filters\AccessRule->matchRole(Object(yii\web\User))
+#17 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\filters\AccessControl.php(118): yii\filters\AccessRule->allows(Object(yii\base\InlineAction), Object(yii\web\User), Object(yii\web\Request))
+#18 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#19 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#20 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Component.php(541): call_user_func('[<span class="t...', Object(yii\base\ActionEvent))
+#21 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(263): yii\base\Component->trigger('<span class="st...', Object(yii\base\ActionEvent))
+#22 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#23 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(149): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#24 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#25 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#26 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#28 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#4 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Command.php(373): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#6 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\ActiveQuery.php(300): yii\db\Query->one('<span class="ke...')
+#7 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#8 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\common\models\Admin.php(63): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#9 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\User.php(295): common\models\Admin::findIdentity('<span class="nu...')
+#10 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\User.php(631): yii\web\User->loginByCookie()
+#11 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\User.php(176): yii\web\User->renewAuthStatus()
+#12 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\User.php(346): yii\web\User->getIdentity()
+#13 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\filters\AccessRule.php(149): yii\web\User->getIsGuest()
+#14 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\filters\AccessRule.php(104): yii\filters\AccessRule->matchRole(Object(yii\web\User))
+#15 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\filters\AccessControl.php(118): yii\filters\AccessRule->allows(Object(yii\base\InlineAction), Object(yii\web\User), Object(yii\web\Request))
+#16 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\ActionFilter.php(71): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#17 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#18 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Component.php(541): call_user_func('[<span class="t...', Object(yii\base\ActionEvent))
+#19 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(263): yii\base\Component->trigger('<span class="st...', Object(yii\base\ActionEvent))
+#20 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#21 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Controller.php(149): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#22 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#23 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#24 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 C:\Users\JL\Documents\GitHub\SMF-Project\Application\Module 2\Iteration 3\SM Scholarship Foundation\backend\web\index.php(18): yii\base\Application->run()
+#26 {main}
+Additional Information:
+
+2015-09-06 12:34:09 [::1][-][-][info][application] $_COOKIE = [
+    '_frontendUser' => '112a5250b12624fa4595b3293b7f191f515827574e4feb216daad1ab6b4972f1a:2:{i:0;s:13:\"_frontendUser\";i:1;s:46:\"[2,\"Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld\",2592000]\";}'
+    '_identity' => '1cdf55aeabe1265be1b2ea709287a4105708792b846e800b956b09567e5724c7a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[6,\"jSgB2sVXDLf6ATZXfvdWbgOJwwhVvrw2\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-PH,en;q=0.7,fil-Latn;q=0.3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_frontendUser=112a5250b12624fa4595b3293b7f191f515827574e4feb216daad1ab6b4972f1a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22Y_OYGTahIQ0tqFf0o5a4jjDSeXEofOld%22%2C2592000%5D%22%3B%7D; _identity=1cdf55aeabe1265be1b2ea709287a4105708792b846e800b956b09567e5724c7a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B6%2C%22jSgB2sVXDLf6ATZXfvdWbgOJwwhVvrw2%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\Program Files\\TortoiseGit\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\CloudFoundry;C:\\Program Files\\Windows Live\\Shared'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/Iteration_3/backend/web/index.php'
+    'REMOTE_PORT' => '63531'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/iteration_3/backend/web/index.php'
+    'SCRIPT_NAME' => '/iteration_3/backend/web/index.php'
+    'PHP_SELF' => '/iteration_3/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1441535646.267
+    'REQUEST_TIME' => 1441535646
+]
