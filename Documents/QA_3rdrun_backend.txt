@@ -1,0 +1,133 @@
+*Tabs still aren't always followed properly in the exported files
+
+QA 3rd run
+*The Main Dashboard buttons 
+	Upload - Error 404
+	Make Report - Links to GPA Report
+	Add - Error 404
+	Check Calendar - Error 404
+	
+	
+School
+Create School - PASS
+Create School Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+School record CAN be read
+School record CAN be updated
+School record CAN be deleted
+
+
+Scholar
+Create Scholar - FAIL (issue with foreign key, cannot update child row) (Scholar table and user table) [FIXED by 31/08/2015]
+Create Scholar Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+Scholar record CAN be read
+Scholar record CAN be updated
+Scholar record CANNOT be deleted (editing scholar table before user table) (EDIT: this is the whole workaround thing right? anyway it's still here, the integrityException)
+	
+	
+Tuition
+Create Tuition - FAIL (Error: Undefined offset: 0) (TuitionController)
+Create Tuition Exports 
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+Tuition edits: Created a Tuition record for Kevin (Scholar ID 3) When user wants to edit straight from the table, Syam's (Scholar ID 1) Information changes instead of Kevin's [EDIT: Removing Syam's record allowed for Kevin's to be edited..must investigate]
+[QA3 EDIT: The ability to edit from the table was removed 'fixing' this problem]
+
+	
+Grade
+Grade record CANNOT be created for 'new' scholars (the scholar user workaround)
+Grade record CAN be read
+Grade record CAN be updated (Note: there is no auto-formatting i.e 4 is 4 not 4.0)
+Grade record CAN be deleted
+QA3 How will the subject be approved? (How will Approved by be edited?)
+QA3 Scholar can have grade records of different subjects even if it isn't created in Subject records
+
+Grading Equivalence
+Create Equivalence - PASS [EDIT: FAIL - pressing create equivalence rule now leads to a 404 error] 
+QA3 - PASS
+Create Equivalence Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+Equivalence records CAN be read
+Equivalence records CAN be edited (cannot check for the tuition error though, edit B and A gets edited instead)
+QA3 Edit: - PASS
+Equivalence records CAN be deleted
+
+Subject Records
+Create Subject - PASS
+*There is no option to set taken or not taken upon creation (though i think i see the point, still pointing it out nonetheless)
+Create Subject Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+*Exports only export subject values regardless of repetition.
+Subject records CAN be read
+Subject records CAN be edited
+Subject records CAN be deleted
+QA3 Edit: How can Approved By be edited
+
+Stipends
+Allownace Reference Table
+Note: ALLOWANCE RECORDS CAN BE EDITED
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+
+Withholding records can be read, updated and deleted
+QA3 Table editing disabled (noted)
+	
+Create Incentives - PASS
+Create Incentives Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+Incentive records CAN be edited but with tuition error (if you edit B or C, A gets edited instead)
+QA3 Edit: Table editing was removed to 'fix'
+
+Create Deductions - PASS
+Create Deductions Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Excel95 - PASS *REMOVED as of QA3
+	Excel2007 - PASS *REMOVED as of QA3
+	Filters - PASS
+Deduction Records CAN be edited but with tuition error (if you edit B or C, A gets edited instead)
+QA3 Edit: Table editing was removed to 'fix'
+
+Optional Work
+Create Optional Work - PASS
+Create Optional Work Exports
+	HTML	- PASS
+	CSV		- PASS
+	TEXT	- PASS
+	PDF		- PASS
+	Filters - PASS
+CAN be read
+CAN be edited
+CAN be Deleted
+
+Images can be uploaded from Upload Forms button (no validation for Scholar ID and School ID match just sayin no hatin)
+
