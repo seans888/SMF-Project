@@ -11,6 +11,7 @@ use yii\filters\VerbFilter;
 use common\models\User;
 use common\models\Scholar;
 use common\models\GroupGrade;
+use common\models\Email;
 use yii\helpers\ArrayHelper;
 /**
  * SubjectController implements the CRUD actions for Subject model.
@@ -39,18 +40,20 @@ class SubjectController extends Controller
 		$users = User::find()->all();
 		$scholars = Scholar::find()->all();
 		$model = new Subject();
+		$model2= new Email();
 		
 		foreach($users as $user){
 			foreach($scholars as $scholar){
 				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
 					$model->scholar_scholar_id=$scholar->scholar_id;
 					$model->scholar_school_school_id=$scholar->school_school_id;
-					
+					$TabContent=$this->render('/email/create2',['model2'=>$model2]);
 					$searchModel = new SubjectSearch($model);
 					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 					return $this->render('index', [
 					'searchModel' => $searchModel,
 					'dataProvider' => $dataProvider,
+					'TabContent'=>$TabContent
 					]);
 				}
 

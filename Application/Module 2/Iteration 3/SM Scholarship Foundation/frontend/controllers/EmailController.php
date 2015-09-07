@@ -63,6 +63,7 @@ class EmailController extends Controller
      */
     public function actionCreate()
     {
+	
 		$username=Yii::$app->user->identity->username;
 		$users = User::find()->all();
 		$scholars = Scholar::find()->all();
@@ -73,16 +74,60 @@ class EmailController extends Controller
 					
 					$model->email_scholar_id=$scholar->scholar_id;
 					if ($model->load(Yii::$app->request->post())) {
-					Yii::$app->mailer->compose()
-					->setFrom($scholar->scholar_contact_email)
-					->setTo('kevintvillacorta@gmail.com')
-					->setSubject($model->subject)
-					->setHtmlBody($model->content)
-					->send();
-					$model->save();
+ 								$to = "root@localhost.com"; 
+								$subject = $model->subject; 
+								$body = $model->content."\nfrom:".$scholar->scholar_contact_email .PHP_EOL;			
+								$headers = "from: root@localhost";  
+								if (mail($to, $subject, $body, $headers)) 
+								{
+								echo 'Message has been sent';
+					
+								} else { 
+								echo 'Message delivery failed';	
+								}								
+							
 					return $this->redirect(['create', 'id' => $model->email_id]);
 					} else {
 						return $this->render('create', [
+						'model' => $model,
+						]);
+					}
+					
+			
+				}
+			}
+		}
+		
+    }
+	 public function actionCreate2()
+    {
+	
+		$username=Yii::$app->user->identity->username;
+		$users = User::find()->all();
+		$scholars = Scholar::find()->all();
+        $model = new Email();
+		foreach($users as $user){
+			foreach($scholars as $scholar){
+				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
+					
+					$model->email_scholar_id=$scholar->scholar_id;
+					$model->subject="Low/Fail Grade";
+					if ($model->load(Yii::$app->request->post())) {
+ 								$to = "root@localhost.com"; 
+								$subject = "Low/Fail Grade"; 
+								$body = $model->content."\nfrom:".$scholar->scholar_contact_email .PHP_EOL;			
+								$headers = "from: root@localhost";  
+								if (mail($to, $subject, $body, $headers)) 
+								{
+								echo 'Message has been sent';
+					
+								} else { 
+								echo 'Message delivery failed';	
+								}								
+							
+					return $this->redirect(['subject/index', 'id' => $model->email_id]);
+					} else {
+						return $this->render('create2', [
 						'model' => $model,
 						]);
 					}
