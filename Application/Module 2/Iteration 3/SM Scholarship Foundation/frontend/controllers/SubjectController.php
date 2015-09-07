@@ -13,6 +13,7 @@ use common\models\Scholar;
 use common\models\GroupGrade;
 use common\models\Email;
 use yii\helpers\ArrayHelper;
+
 /**
  * SubjectController implements the CRUD actions for Subject model.
  */
@@ -53,7 +54,8 @@ class SubjectController extends Controller
 					return $this->render('index', [
 					'searchModel' => $searchModel,
 					'dataProvider' => $dataProvider,
-					'TabContent'=>$TabContent
+					'TabContent'=>$TabContent,
+					'model2'=>$model2,
 					]);
 				}
 
