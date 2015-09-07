@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="upload-update">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1 style="margin-top:100px;"><?= Html::encode($this->title) ?></h1>
 
     <?= $this->render('_form', [
         'model' => $model,
