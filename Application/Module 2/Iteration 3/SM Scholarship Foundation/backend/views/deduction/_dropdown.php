@@ -16,28 +16,28 @@ $exportedValues =
 	[
 		['class' => 'kartik\grid\SerialColumn'],
 		[
-				'class' => 'kartik\grid\EditableColumn',
+				// 'class' => 'kartik\grid\EditableColumn',
             	'attribute'=>'deduction_date',
-				'editableOptions' => [
-					'inputType' => 'widget',
-					'options'=>
-					[
-						'model' => $searchModel,
+				// 'editableOptions' => [
+					// 'inputType' => 'widget',
+					// 'options'=>
+					// [
+						// 'model' => $searchModel,
 
-							'clientOptions' => [
-								'autoclose' => true,
-								'format' => 'yyyy-mm-dd',
-							]
-					],
-					'widgetClass'=>'dosamigos\datepicker\DatePicker'
-				],
+							// 'clientOptions' => [
+								// 'autoclose' => true,
+								// 'format' => 'yyyy-mm-dd',
+							// ]
+					// ],
+					// 'widgetClass'=>'dosamigos\datepicker\DatePicker'
+				// ],
         ],
 		[
-			'class' => 'kartik\grid\EditableColumn',
+			// 'class' => 'kartik\grid\EditableColumn',
 			'attribute' => 'deduction_amount',
 		],
 		[
-			'class' => 'kartik\grid\EditableColumn',
+			// 'class' => 'kartik\grid\EditableColumn',
 			'attribute' => 'deduction_remark',
 		],
 		['class' => 'kartik\grid\ActionColumn'],

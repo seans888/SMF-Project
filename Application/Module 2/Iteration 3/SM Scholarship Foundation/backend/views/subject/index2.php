@@ -126,7 +126,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		],
 		'panel'=>[
         'type'=>GridView::TYPE_PRIMARY,
-        'heading'=>'Grade List',
+        'heading'=>'Subject List',
     ],
     ]); ?>
 </div>

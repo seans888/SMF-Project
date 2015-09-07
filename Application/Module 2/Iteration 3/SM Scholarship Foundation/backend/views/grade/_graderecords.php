@@ -13,15 +13,15 @@ $exportedValues2 =
 		// 'pageSummary'=>'Total'
 	// ],
 	[
-		'class' => 'kartik\grid\EditableColumn',
+		// 'class' => 'kartik\grid\EditableColumn',
 		'attribute'=>'subject_scholar_scholar_id',
-		'editableOptions' => [
-			'inputType' => '\kartik\select2\Select2',
-			'options'=>
-			[
-				'data' => ArrayHelper::map(Scholar::find()->all(),'scholar_id','scholar_last_name','scholar_id'),
-			],
-		],
+		// 'editableOptions' => [
+			// 'inputType' => '\kartik\select2\Select2',
+			// 'options'=>
+			// [
+				// 'data' => ArrayHelper::map(Scholar::find()->all(),'scholar_id','scholar_last_name','scholar_id'),
+			// ],
+		// ],
 	],
 	[
 		'attribute'=>'firstName',
@@ -40,29 +40,29 @@ $exportedValues2 =
 		'value'=>'subjectSubject.subject_name',
 	],
 	[
-		'class'=>'kartik\grid\EditableColumn',
+		// 'class'=>'kartik\grid\EditableColumn',
 		'attribute'=>'grade_raw_grade',
 	],
 	[
-		'class' => 'kartik\grid\EditableColumn',
+		// 'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'takenStatus',
-		'editableOptions' => [
-			'inputType' => 'dropDownList',
-			'pluginOptions'=>['allowClear'=>true],
-			'data' => ["Not Taken"=>"Not Taken","Taken"=>"Taken","Failed"=>"Failed"],
-			'widgetClass'=> 'kartik\select2\Select2',
-		],
-		'value' => 'subjectSubject.subject_taken_status',
+		// 'editableOptions' => [
+			// 'inputType' => 'dropDownList',
+			// 'pluginOptions'=>['allowClear'=>true],
+			// 'data' => ["Not Taken"=>"Not Taken","Taken"=>"Taken","Failed"=>"Failed"],
+			// 'widgetClass'=> 'kartik\select2\Select2',
+		// ],
+		// 'value' => 'subjectSubject.subject_taken_status',
 	],
 	[
-		'class' => 'kartik\grid\EditableColumn',
+		// 'class' => 'kartik\grid\EditableColumn',
 		'attribute' => 'grade_approval_status',
-		'editableOptions' => [
-			'inputType' => 'dropDownList',
-			'pluginOptions'=>['allowClear'=>true],
-			'data' => ["Not Approved"=>"Not Approved","Approved"=>"Approved"],
-			'widgetClass'=> 'kartik\select2\Select2',
-		],
+		// 'editableOptions' => [
+			// 'inputType' => 'dropDownList',
+			// 'pluginOptions'=>['allowClear'=>true],
+			// 'data' => ["Not Approved"=>"Not Approved","Approved"=>"Approved"],
+			// 'widgetClass'=> 'kartik\select2\Select2',
+		// ],
 	],
 	'grade_approved_by',
 	['class' => 'kartik\grid\ActionColumn',

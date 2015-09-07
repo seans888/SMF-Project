@@ -16,41 +16,41 @@ $exportedValues =
 	[
 		['class' => 'kartik\grid\SerialColumn'],
 		[
-				'class' => 'kartik\grid\EditableColumn',
+				// 'class' => 'kartik\grid\EditableColumn',
             	'attribute'=>'withholding_start_date',
-				'editableOptions' => [
-					'inputType' => 'widget',
-					'options'=>
-					[
-						'model' => $searchModel,
+				// 'editableOptions' => [
+					// 'inputType' => 'widget',
+					// 'options'=>
+					// [
+						// 'model' => $searchModel,
 
-							'clientOptions' => [
-								'autoclose' => true,
-								'format' => 'yyyy-mm-dd',
-							]
-					],
-					'widgetClass'=>'dosamigos\datepicker\DatePicker'
-				],
+							// 'clientOptions' => [
+								// 'autoclose' => true,
+								// 'format' => 'yyyy-mm-dd',
+							// ]
+					// ],
+					// 'widgetClass'=>'dosamigos\datepicker\DatePicker'
+				// ],
         ],
 		[
-				'class' => 'kartik\grid\EditableColumn',
+				// 'class' => 'kartik\grid\EditableColumn',
             	'attribute'=>'withholding_end_date',
-				'editableOptions' => [
-					'inputType' => 'widget',
-					'options'=>
-					[
-						'model' => $searchModel,
+				// 'editableOptions' => [
+					// 'inputType' => 'widget',
+					// 'options'=>
+					// [
+						// 'model' => $searchModel,
 
-							'clientOptions' => [
-								'autoclose' => true,
-								'format' => 'yyyy-mm-dd',
-							]
-					],
-					'widgetClass'=>'dosamigos\datepicker\DatePicker'
-				],
+							// 'clientOptions' => [
+								// 'autoclose' => true,
+								// 'format' => 'yyyy-mm-dd',
+							// ]
+					// ],
+					// 'widgetClass'=>'dosamigos\datepicker\DatePicker'
+				// ],
         ],
 		[
-			'class' => 'kartik\grid\EditableColumn',
+			// 'class' => 'kartik\grid\EditableColumn',
 			'attribute' => 'withholding_remark',
 		],
 		['class' => 'kartik\grid\ActionColumn'],
