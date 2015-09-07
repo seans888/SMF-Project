@@ -16,9 +16,9 @@ use dosamigos\fileinput\FileInput;
 
    <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
 	
-    <?= $form->field($model, 'grade_schoolYear')->textInput() ?>
+    <?= $form->field($model2, 'grade_raw_grade')->textInput() ?>
 
-    <?= $form->field($model, 'grade_Term')->textInput() ?>
+    
 
   
 	
