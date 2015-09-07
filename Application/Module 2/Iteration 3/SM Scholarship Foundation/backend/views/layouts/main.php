@@ -189,14 +189,10 @@ DashboardAsset::register($this);
                 <i class="fa fa-calendar"></i> <span>Calendar</span>
               </a>
             </li>
-            <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+
             <li class="header">Area(legend)</li>
             <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>NCR</span></a></li>
             <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Provincial</span></a></li>
-            <li class="header">Payment(legend)</li>
-            <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Unpayed</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-green"></i> <span>Payed</span></a></li>
-			<li></li>
 			<li><</li>
           </ul>
         </section>
