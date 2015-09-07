@@ -199,15 +199,15 @@ public function actionGroupcreate()
      */
     public function actionUpdate($id)
     {
-
+	
 			if(Yii::$app->user->can('update-grades'))
 		{
-			$model = $this->findModel($id);
+			$model2 = $this->findModel($id);
 
-			if ($model->load(Yii::$app->request->post())) {
-				$model->updated_by = Yii::$app->user->identity->username;
-				$model->save();
-				return $this->redirect(['view', 'id' => $model->grade_id]);
+			if ($model2->load(Yii::$app->request->post())) {
+				$model2->updated_by = Yii::$app->user->identity->username;
+				$model2->save();
+				return $this->redirect(['view', 'id' => $model2->grade_id]);
 			} else {
 				return $this->render('update', [
 					'model' => $model,

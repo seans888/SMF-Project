@@ -12,6 +12,7 @@ use common\models\User;
 use common\models\Scholar;
 use common\models\GroupGrade;
 use common\models\Email;
+use common\models\Grade;
 use yii\helpers\ArrayHelper;
 
 /**
@@ -297,7 +298,8 @@ class SubjectController extends Controller
 		if($model->subject_approval_status=='Not Approved'){
 			
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index', 'id' => $model->subject_id]);
+			
+            return $this->redirect(['update', 'id' => $model->subject_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
