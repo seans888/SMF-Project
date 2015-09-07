@@ -15,7 +15,7 @@ use kartik\select2\Select2;
 	<?php $form = ActiveForm::begin(); ?>
 	
 	<table>
-	<tr><td>
+	<tr> <td>
     <?= $form->field($model, 'alumni_id')->textInput(['maxlength' => true]) ?>
     </td> </tr> 
 	<h3> Personal Details </h3>
