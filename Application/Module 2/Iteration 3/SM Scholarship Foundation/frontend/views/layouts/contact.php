@@ -6,6 +6,7 @@ use yii\widgets\Breadcrumbs;
 use frontend\assets\DashboardAsset;
 use frontend\widgets\Alert;
 use frontend\controllers\EventController;
+use yii\bootstrap\ActiveForm;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -103,31 +104,27 @@ DashboardAsset::register($this);
                 <div class="col-lg-12">
                     <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
-                                <div id="success"></div>
-                                <button type="submit" class="btn btn-primary">Send Message</button>
-                            </div>
+                             <form name="contact" method="GET" action="testmail.php" >
+                              
+							  <div class="form-group">
+                                <input type="text" class="form-control" id="user_name" name="username" placeholder="Name">
+                              </div>
+                              <div class="form-group">
+                                <input type="email" class="form-control" id="your_email" name="youremail" placeholder="Email">
+                              </div>
+							  <div class="form-group">
+                                <input type="text" class="form-control" id="your_subject" name="yoursubject" placeholder="Subject">
+                              </div>
+                              <div class="form-group">
+                                <textarea name="InputMessage" id="user_message"  placeholder="message" class="form-control" rows="5" required></textarea>
+                              </div>
+
+                              <button type="submit" name="send" class="btn medium">Submit
+								</button>
+															  
+													
+												</form>
+								
                         </div>
                     </form>
                 </div>
