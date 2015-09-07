@@ -80,10 +80,10 @@ class EmailController extends Controller
 								$headers = "from: root@localhost";  
 								if (mail($to, $subject, $body, $headers)) 
 								{
-								echo 'Message has been sent';
+								\Yii::$app->getSession()->setFlash('error', 'The message is delivered');
 					
 								} else { 
-								echo 'Message delivery failed';	
+								\Yii::$app->getSession()->setFlash('error', 'Message failed');	
 								}								
 							
 					return $this->redirect(['create', 'id' => $model->email_id]);
@@ -105,30 +105,30 @@ class EmailController extends Controller
 		$username=Yii::$app->user->identity->username;
 		$users = User::find()->all();
 		$scholars = Scholar::find()->all();
-        $model = new Email();
+        $model2 = new Email();
 		foreach($users as $user){
 			foreach($scholars as $scholar){
 				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
 					
-					$model->email_scholar_id=$scholar->scholar_id;
-					$model->subject="Low/Fail Grade";
+					$model2->email_scholar_id=$scholar->scholar_id;
+					$model2->subject="Low/Fail Grade";
 					if ($model->load(Yii::$app->request->post())) {
  								$to = "root@localhost.com"; 
 								$subject = "Low/Fail Grade"; 
-								$body = $model->content."\nfrom:".$scholar->scholar_contact_email .PHP_EOL;			
+								$body = $model2->content."\nfrom:".$scholar->scholar_contact_email .PHP_EOL;			
 								$headers = "from: root@localhost";  
 								if (mail($to, $subject, $body, $headers)) 
 								{
-								echo 'Message has been sent';
+								\Yii::$app->getSession()->setFlash('error', 'The message is delivered');
 					
 								} else { 
-								echo 'Message delivery failed';	
+								\Yii::$app->getSession()->setFlash('error', 'Message failed');	
 								}								
 							
-					return $this->redirect(['subject/index', 'id' => $model->email_id]);
+					return $this->redirect(['create2', 'id' => $model2->email_id]);
 					} else {
 						return $this->render('create2', [
-						'model' => $model,
+						'model2' => $model2,
 						]);
 					}
 					
