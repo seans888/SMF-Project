@@ -29,6 +29,7 @@ use yii\widgets\ActiveForm;
 								</td></tr></table>
 								<center><?= Html::submitButton($model->isNewRecord ? 'Send Email' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-primary' : 'btn btn-primary']) ?></center>
 							</div>
+					
 
 							<?php ActiveForm::end(); ?>
 
