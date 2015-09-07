@@ -12,11 +12,12 @@ use dosamigos\datepicker\DatePicker;
 <div class="event-form">
 
     <?php $form = ActiveForm::begin(); ?>
-
+	<table width=600px;>
+	<tr> <td style ="padding-right:300px;">
     <?= $form->field($model, 'event_title')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'event_descript')->textInput(['maxlength' => true]) ?>
-
+	<tr> <td>
+    <?= $form->field($model, 'event_descript')->textArea(['maxlength' => true]) ?>
+	<tr> <td>
     <?= $form->field($model, 'event_date')->widget(
     DatePicker::className(), [
         // inline too, not bad
@@ -28,15 +29,16 @@ use dosamigos\datepicker\DatePicker;
             'format' => 'yyyy-m-d'
         ]
 	]);?>
-
-    <?= $form->field($model, 'event_place')->textInput(['maxlength' => true]) ?>
-
+	<tr> <td>
+	<?= $form->field($model, 'event_place')->textInput(['maxlength' => true]) ?>
+	<tr> <td>
     <?= $form->field($model, 'employee_employee_id')->textInput() ?>
-
-    <div class="form-group">
+	<tr> <td>
+   <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
-
+	
+	</table>
     <?php ActiveForm::end(); ?>
 
 </div>

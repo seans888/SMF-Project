@@ -38,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'event_descript',
             'event_date',
             'event_place',
-            'employee_employee_id',
+            //'employee_employee_id',
         ],
     ]) ?>
 	
