@@ -23,20 +23,20 @@ $this->title = 'My Yii Application';
                 <div class="icon">
                   <i class="fa fa-file-o"></i>
                 </div>
-                <a href="<?= Yii::$app->getUrlManager()->createUrl('/uploadedforms/create'); ?>" class="small-box-footer">Upload Now<i class="fa fa-arrow-circle-right"></i></a>
+                <a href="<?= Yii::$app->getUrlManager()->createUrl('/upload/create'); ?>" class="small-box-footer">Upload Now<i class="fa fa-arrow-circle-right"></i></a>
               </div>
             </div><!-- ./col -->
             <div class="col-lg-3 col-xs-6">
               <!-- small box -->
               <div class="small-box bg-green">
                 <div class="inner">
-                  <h3>Make Report</h3>
-                  <p>List of Reports</p>
+                  <h3>Add</h3>
+                  <p>Add School</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="<?= Yii::$app->getUrlManager()->createUrl('/gpa_report/index'); ?>" class="small-box-footer">Select a Report to Create<i class="fa fa-arrow-circle-right"></i></a>
+                <a href="<?= Yii::$app->getUrlManager()->createUrl('/school/create'); ?>" class="small-box-footer">Select a Report to Create<i class="fa fa-arrow-circle-right"></i></a>
               </div>
             </div><!-- ./col -->
             <div class="col-lg-3 col-xs-6">
@@ -49,7 +49,7 @@ $this->title = 'My Yii Application';
                 <div class="icon">
                   <i class="ion ion-person-add"></i>
                 </div>
-                <a href="<?= Yii::$app->getUrlManager()->createUrl('/scholars/create'); ?>" class="small-box-footer">Add a Scholar Record Now<i class="fa fa-arrow-circle-right"></i></a>
+                <a href="<?= Yii::$app->getUrlManager()->createUrl('/scholar/create'); ?>" class="small-box-footer">Add a Scholar Record Now<i class="fa fa-arrow-circle-right"></i></a>
               </div>
             </div><!-- ./col -->
             <div class="col-lg-3 col-xs-6">
@@ -62,7 +62,7 @@ $this->title = 'My Yii Application';
                 <div class="icon">
                   <i class="fa fa-calendar"></i>
                 </div>
-                <a href="<?= Yii::$app->getUrlManager()->createUrl('#'); ?>" class="small-box-footer">Check Calendar Now<i class="fa fa-arrow-circle-right"></i></a>
+                <a href="<?= Yii::$app->getUrlManager()->createUrl('/event/index'); ?>" class="small-box-footer">Check Calendar Now<i class="fa fa-arrow-circle-right"></i></a>
               </div>
             </div><!-- ./col -->
           </div><!-- /.row -->
