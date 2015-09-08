@@ -26,7 +26,7 @@ use kartik\select2\Select2;
 	</td> <td style="padding-left:50px;">
     <?= $form->field($model, 'alumni_lastname')->textInput(['maxlength' => true]) ?>
     </td>  <td style="padding-left:50px;">
-	<?= $form->field($model, 'alumni_gender')->dropDownList([ 'Male' => 'Male', 'Female' => 'Female', ], ['prompt' => 'Select Gender']) ?>
+	<?= $form->field($model, 'alumni_gender')->dropDownList([ 'Male' => 'MALE', 'Female' => 'FEMALE', ], ['prompt' => 'Select Gender']) ?>
 	</td> </tr> <td colspan="3", style="padding-right:70px"> 
     <?= $form->field($model, 'alumni_address')->textInput(['maxlength' => true]) ?>
 	</td> <td colspan="4"> 

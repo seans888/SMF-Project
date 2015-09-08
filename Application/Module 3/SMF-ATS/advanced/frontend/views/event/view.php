@@ -68,7 +68,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	
 	<?php }else{ ?>
 	
-	<?= Html::a('Update', ['update', 'id' => $model->event_id], ['class' => 'btn btn-primary']) ?>
+		
 	
 	<?= DetailView::widget([
         'model' => $model,
