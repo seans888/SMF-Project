@@ -47,7 +47,7 @@ class SubjectController extends Controller
 				if($user->username==$username&&$user->id==$scholar->scholar_user_id){
 					$model->scholar_scholar_id=$scholar->scholar_id;
 					$model->scholar_school_school_id=$scholar->school_school_id;
-					$TabContent=$this->render('/email/create2',['model2'=>$model2]);
+					$TabContent=$this->renderPartial('/email/create2',['model2'=>$model2]);
 					$searchModel = new SubjectSearch($model);
 					$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 					return $this->render('index', [
