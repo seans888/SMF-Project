@@ -47,11 +47,11 @@ FROM grade
 JOIN equivalence on (grade.grade_raw_grade = equivalence.equivalence_numerical_grade OR grade.grade_raw_grade = equivalence.equivalence_letter_grade) AND grade.subject_scholar_school_school_id = equivalence.school_school_id
 WHERE 1 = 1
 [AND grade.subject_scholar_scholar_id IN ( {scholar_select, VALUE} ) ]
-[AND Scholar_Last_Name IN ( {scholar_last_name_select, VALUE} ) ]
-[AND Scholar_First_Name IN ( {scholar_first_name_select, VALUE} ) ]
+[AND {Scholar_Last_Name} IN ( {scholar_last_name_select, VALUE} ) ]
+[AND {Scholar_First_Name} IN ( {scholar_first_name_select, VALUE} ) ]
 [AND grade.grade_school_year_start IN ( {school_year_start_select, VALUE})]
 [AND grade.grade_school_year_end IN ( {school_year_end_select, VALUE})]
-[AND Term IN ( {school_term_select, VALUE})]
+[AND {Term} IN ( {school_term_select, VALUE})]
 [AND equivalence.equivalence_foundation_rating IN ({foundation_rating_select, VALUE})]
 ORDER BY Scholar_ID</SQLRaw></SQL><QueryColumns><QueryColumn><Name>Scholar_ID</Name><TableName></TableName><ColumnName>subject_scholar_scholar_id</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>hide</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Scholar_Last_Name</Name><TableName></TableName><ColumnName>(
 	SELECT n.scholar_last_name

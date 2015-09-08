@@ -45,13 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	<?php	} else if ($roles == 'user'){ ?>
 	
 	<?= Html::a('Update', ['update', 'id' => $model->event_id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->event_id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
+
 		
 	<?= DetailView::widget([
         'model' => $model,

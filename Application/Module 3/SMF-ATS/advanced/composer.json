@@ -20,7 +20,8 @@
         "yiisoft/yii2-swiftmailer": "*",
 		"philippfrenzel/yii2fullcalendar":"*",
         "2amigos/yii2-date-picker-widget": "~1.0",
-        "kartik-v/yii2-widget-select2": "@dev"
+        "kartik-v/yii2-widget-select2": "@dev",
+		"phpoffice/phpexcel": "dev-develop"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

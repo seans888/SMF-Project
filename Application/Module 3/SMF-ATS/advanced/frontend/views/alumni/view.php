@@ -30,6 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+	
 	<h4>Personal Details</h4>
     <?= DetailView::widget([
         'model' => $model,
@@ -50,6 +51,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	
 	
 	<h4>Work Details</h4>
+	<tr colspan="3"> <td>
 	<?= DetailView::widget([
         'model' => $model,
         'attributes' => [
@@ -78,16 +80,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
     ]) ?>
 	
+	
 	<?php	} else if ($roles == 'user'){ ?>
 	
 	<?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
 		
 	<h4>Personal Details</h4>
     <?= DetailView::widget([
