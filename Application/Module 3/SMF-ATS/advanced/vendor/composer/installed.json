@@ -1115,57 +1115,6 @@
         ]
     },
     {
-        "name": "philippfrenzel/yii2fullcalendar",
-        "version": "2.3.2",
-        "version_normalized": "2.3.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/philippfrenzel/yii2fullcalendar.git",
-            "reference": "6bee6a8961827244262ea4b51d44b85aa314d0a4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/philippfrenzel/yii2fullcalendar/zipball/6bee6a8961827244262ea4b51d44b85aa314d0a4",
-            "reference": "6bee6a8961827244262ea4b51d44b85aa314d0a4",
-            "shasum": ""
-        },
-        "require": {
-            "bower-asset/fullcalendar": "2.3.* | 2.2.* | 2.1.*",
-            "php": ">=5.4.0",
-            "yiisoft/yii2": "*",
-            "yiisoft/yii2-jui": "*"
-        },
-        "require-dev": {
-            "codeception/codeception": "*"
-        },
-        "time": "2015-06-16 09:15:47",
-        "type": "yii2-extension",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "yii2fullcalendar\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Philipp Frenzel",
-                "email": "philipp@frenzel.net",
-                "homepage": "http://www.frenzel.net/",
-                "role": "Developer"
-            }
-        ],
-        "description": "Yii2 fullcalendar Widgets",
-        "homepage": "http://www.frenzel.net/",
-        "keywords": [
-            "fullcalendar",
-            "yii2"
-        ]
-    },
-    {
         "name": "bower-asset/bootstrap-datepicker",
         "version": "v1.4.0",
         "version_normalized": "1.4.0.0",
@@ -1310,24 +1259,137 @@
         ]
     },
     {
+        "name": "philippfrenzel/yii2fullcalendar",
+        "version": "2.3.3",
+        "version_normalized": "2.3.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/philippfrenzel/yii2fullcalendar.git",
+            "reference": "04bfbb722d97e67435c8648232e27eece0fef232"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/philippfrenzel/yii2fullcalendar/zipball/04bfbb722d97e67435c8648232e27eece0fef232",
+            "reference": "04bfbb722d97e67435c8648232e27eece0fef232",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/fullcalendar": "2.3.* | 2.2.* | 2.1.*",
+            "php": ">=5.4.0",
+            "yiisoft/yii2": "*",
+            "yiisoft/yii2-jui": "*"
+        },
+        "require-dev": {
+            "codeception/codeception": "*"
+        },
+        "time": "2015-08-26 09:19:52",
+        "type": "yii2-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "yii2fullcalendar\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Philipp Frenzel",
+                "email": "philipp@frenzel.net",
+                "homepage": "http://www.frenzel.net/",
+                "role": "Developer"
+            }
+        ],
+        "description": "Yii2 fullcalendar Widgets",
+        "homepage": "http://www.frenzel.net/",
+        "keywords": [
+            "fullcalendar",
+            "yii2"
+        ]
+    },
+    {
+        "name": "phpoffice/phpexcel",
+        "version": "dev-develop",
+        "version_normalized": "dev-develop",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PHPOffice/PHPExcel.git",
+            "reference": "4f6d009ba5fad66cdbc48c26fe984858db34e138"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PHPOffice/PHPExcel/zipball/4f6d009ba5fad66cdbc48c26fe984858db34e138",
+            "reference": "4f6d009ba5fad66cdbc48c26fe984858db34e138",
+            "shasum": ""
+        },
+        "require": {
+            "ext-xml": "*",
+            "ext-xmlwriter": "*",
+            "php": ">=5.2.0"
+        },
+        "require-dev": {
+            "squizlabs/php_codesniffer": "2.*"
+        },
+        "time": "2015-05-24 13:16:04",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "PHPExcel": "Classes/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL"
+        ],
+        "authors": [
+            {
+                "name": "Maarten Balliauw",
+                "homepage": "http://blog.maartenballiauw.be"
+            },
+            {
+                "name": "Mark Baker"
+            },
+            {
+                "name": "Erik Tilt"
+            },
+            {
+                "name": "Franck Lefevre",
+                "homepage": "http://rootslabs.net"
+            }
+        ],
+        "description": "PHPExcel - OpenXML - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine",
+        "homepage": "http://phpexcel.codeplex.com",
+        "keywords": [
+            "OpenXML",
+            "excel",
+            "php",
+            "spreadsheet",
+            "xls",
+            "xlsx"
+        ]
+    },
+    {
         "name": "kartik-v/yii2-widget-select2",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/kartik-v/yii2-widget-select2.git",
-            "reference": "8792234070aaa759a71879fff4e53c315742b8e4"
+            "reference": "8899c9062e9111583bdbfe070f60e4075fd45a44"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/kartik-v/yii2-widget-select2/zipball/8792234070aaa759a71879fff4e53c315742b8e4",
-            "reference": "8792234070aaa759a71879fff4e53c315742b8e4",
+            "url": "https://api.github.com/repos/kartik-v/yii2-widget-select2/zipball/8899c9062e9111583bdbfe070f60e4075fd45a44",
+            "reference": "8899c9062e9111583bdbfe070f60e4075fd45a44",
             "shasum": ""
         },
         "require": {
             "kartik-v/yii2-krajee-base": "~1.7"
         },
-        "time": "2015-08-19 19:03:22",
+        "time": "2015-08-30 13:38:14",
         "type": "yii2-extension",
         "installation-source": "dist",
         "autoload": {

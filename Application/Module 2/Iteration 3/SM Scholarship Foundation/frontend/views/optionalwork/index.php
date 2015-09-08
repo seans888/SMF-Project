@@ -18,16 +18,24 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-		'showOnEmpty' => false,
+		
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'optional_work_company_name',
             'optionalwork_location',
             'optionalwork_start_date',
             'optionalwork_end_date',
+			[
+
+            'class' => 'yii\grid\ActionColumn',
+            'header'=>'Action',
+            'headerOptions' => ['width' => '80'],
+            'template' => '{update}',
+        ],
 
             
         ],
+		
     ]); ?>
 
 </div>

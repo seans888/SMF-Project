@@ -38,20 +38,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'event_descript',
             'event_date',
             'event_place',
-            'employee_employee_id',
+            //'employee_employee_id',
         ],
     ]) ?>
 	
 	<?php	} else if ($roles == 'user'){ ?>
 	
 	<?= Html::a('Update', ['update', 'id' => $model->event_id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->event_id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
+
 		
 	<?= DetailView::widget([
         'model' => $model,

@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
                 <div class="col-lg-12 text-center" style="margin-top:60px;">
 						<img  src="img/portfolio/icon.jpg" style="height:110px;width:110px;" ></img>
                     <h2 class="section-heading" style="color:black;">Contact Us</h2>
-                   
+                   <center><font color=red><?= Yii::$app->session->getFlash('error'); ?></font></center>
 				
                 </div>
             </div>
