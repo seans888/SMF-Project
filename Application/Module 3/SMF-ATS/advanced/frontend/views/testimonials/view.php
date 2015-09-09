@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Testimonials */
 
-$this->title = $model->id;
+$this->title = $model->testimonial_name;
 $this->params['breadcrumbs'][] = ['label' => 'Testimonials', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -55,8 +55,6 @@ $this->params['breadcrumbs'][] = $this->title;
 	
 	
 	<?php }else{ ?>
-
-	<?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
 	
 	
 	<?= DetailView::widget([

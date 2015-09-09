@@ -42,8 +42,8 @@ tuition_amount Tuition_Amount,
 ) Sponsor
 FROM tuition
 WHERE 1 = 1
-[AND School_Year_Start IN ( {school_year_start_select} ) ]
-[AND School_Year_End IN ( {school_year_end_select} ) ]
+[AND {School_Year_Start} IN ( {school_year_start_select} ) ]
+[AND {School_Year_End} IN ( {school_year_end_select} ) ]
 [AND tuition.tuition_term IN ( {school_term_select} ) ]
 ORDER BY Scholar_Last_Name</SQLRaw></SQL><QueryColumns><QueryColumn><Name>Scholar_ID</Name><TableName></TableName><ColumnName>scholar_scholar_id</ColumnName><ColumnType>char</ColumnType><ColumnLength>30</ColumnLength><Format><column_display>show</column_display><content_type>plain</content_type><ColumnStartPDF></ColumnStartPDF><justify>left</justify><ColumnWidthPDF></ColumnWidthPDF><ColumnWidthHTML></ColumnWidthHTML><column_title></column_title><tooltip></tooltip><group_header_label>0</group_header_label><group_header_label_xpos></group_header_label_xpos><group_header_data_xpos></group_header_data_xpos><group_trailer_label>0</group_trailer_label></Format></QueryColumn><QueryColumn><Name>Scholar_Last_Name</Name><TableName></TableName><ColumnName>(
 	SELECT n.scholar_last_name
