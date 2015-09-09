@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'content'=> GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-		'showOnEmpty' => false,
+		
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'tuition_amount',
