@@ -300,8 +300,10 @@ class SubjectController extends Controller
 		if($model2->grade_approval_status=='Not Approved'){
 			
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-			
-            return $this->redirect(['update', 'id' => $model->subject_id]);
+			if($model2->load(Yii::$app->request->post()) &&$model2->save()){
+				return $this->redirect(['index', 'id' => $model2->grade_id]);
+			}
+            return $this->redirect(['index', 'id' => $model->subject_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
