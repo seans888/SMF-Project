@@ -50,7 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'content'=> GridView::widget([
         'dataProvider' => $dataProvider1,
         'filterModel' => $searchModel1,
-		'showOnEmpty' => false,
+		
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 			'deduction_date',
