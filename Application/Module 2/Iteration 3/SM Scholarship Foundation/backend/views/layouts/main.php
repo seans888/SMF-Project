@@ -175,13 +175,16 @@ DashboardAsset::register($this);
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
 			  <ul class="treeview-menu">
-                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/interface_scholars_allowance/index'); ?>"><i class="fa fa-bar-chart"></i> Scholar Allowance</a></li>
+                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/interface_scholars_allowance/index'); ?>"><i class="fa fa-bar-chart"></i> Scholars' Allowance</a></li>
               </ul>
 			  <ul class="treeview-menu">
-                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/interface_incentive/index'); ?>"><i class="fa fa-bar-chart"></i>Incentive</a></li>
+                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/interface_incentive/index'); ?>"><i class="fa fa-bar-chart"></i>Other payments to scholars</a></li>
               </ul>
 			  <ul class="treeview-menu">
-                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/interface_deductions/index'); ?>"><i class="fa fa-bar-chart"></i>Deduction</a></li>
+                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/interface_deductions/index'); ?>"><i class="fa fa-bar-chart"></i>Deductions</a></li>
+              </ul>
+			  <ul class="treeview-menu">
+                <li><a href="<?= Yii::$app->getUrlManager()->createUrl('/interface_deductions/index'); ?>"><i class="fa fa-bar-chart"></i>Payment to schools for tuition</a></li>
               </ul>
             </li>
             <li>
